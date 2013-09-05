@@ -1,0 +1,26 @@
+#! /bin/bash
+#
+# Runs the ninjs validation example program
+#
+# You must pass filenames to process. To run the included sample files:
+#
+# ./validate ../resources/ninjs_example_simple.json ../resources/ninjs_example_invalid.json
+#
+
+# Add the project jar to classpath
+cd ../../../target
+CLASSPATH="`pwd`/`ls *.jar`"
+
+# Add libs to classpath
+LIBDIR="`pwd`/lib"
+for jar in $(ls -1 $LIBDIR); do
+  CLASSPATH="$CLASSPATH:$LIBDIR/$jar"
+done
+
+# Execute Validator, passing command line arguments
+java -cp $CLASSPATH org.iptc.ninjs.validation.ValidatorMain $*
+
+if [ "$?" != "0" ]; then
+  echo ""
+  echo "Usage: validate file1 [file2 file3 ...]"
+fi

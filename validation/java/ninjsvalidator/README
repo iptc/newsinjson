@@ -1,0 +1,61 @@
+/*
+ * Copyright 2013 IPTC - International Press Telecommunications Council - www.iptc.org
+ * 25 Southampton Buildings, London WC2A 1AL, United Kingdom
+ *
+ * This file is published under the Creative Commons Attribution 3.0 license - see the full
+ * license agreement at http://creativecommons.org/licenses/by/3.0/.
+ *
+ * By obtaining, using and/or copying this file, you (the licensee) agree that you have
+ * read, understood, and will comply with the terms and conditions of the license.
+ */
+
+This example program shows how to use the json-schema-validator library (https://github.com/fge/json-schema-validator)
+to validate ninjs documents.
+
+BUILDING
+========
+ninjsvalidator is built using Maven. Just execute the package goal:
+
+mvn package
+
+
+RUNNING
+=======
+You can use the provided script to execute the program:
+cd src/main/scripts
+./validator file1...
+
+
+CLASSES
+=======
+ValidatorMain is the main class.
+
+Validator is the class where validation is done. To use Validator in your own programs:
+
+Validator validator = new Validator();
+ProcessingReport report = validator.validate(new File(filename));
+if (report.isSuccess()) {
+	// successful
+} else {
+	// failed to validate
+}
+
+You can also pass URL's and entire ninjs documents to the Validator instance for validation.
+
+
+TESTS
+=====
+The src/test/java directory contains JUnit tests. These tests check that a valid document passes
+validation, and that an invalid document fails validation. The JUnit tests are used to test the
+code when changes are made. You probably don't need to worry about them if you are just trying
+to validate ninjs documents.
+
+
+CHANGES
+=======
+Version 1.1
+	Add a Main class and a script
+	Add README
+
+
+
