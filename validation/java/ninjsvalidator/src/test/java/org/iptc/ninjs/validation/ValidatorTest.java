@@ -16,6 +16,7 @@ import org.junit.Test;
 import java.net.URL;
 
 import static junit.framework.Assert.assertFalse;
+import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
 
 /**
@@ -26,19 +27,38 @@ import static junit.framework.Assert.assertTrue;
 public class ValidatorTest {
 
 	/**
-	 * Run validation against a valid ninjs document.
+	 * Run validation against a valid simple ninjs document.
 	 *
 	 * This junit test is designed to verify that a valid document is reported as valid.
 	 *
 	 * @throws Exception
 	 */
 	@Test
-	public void testValidate() throws Exception {
+	public void testSimple() throws Exception {
 		Validator validator = new Validator();
 		URL resource = ValidatorTest.class.getResource("/ninjs_example_simple.json");
 		ProcessingReport report = validator.validate(resource);
-		assertTrue(report.isSuccess());
+		assertNotNull(report);
 		System.out.println(report.toString());
+		assertTrue(report.isSuccess());
+	}
+
+
+	/**
+	 * Run validation against a valid complex ninjs document.
+	 *
+	 * This junit test is designed to verify that a valid document is reported as valid.
+	 *
+	 * @throws Exception
+	 */
+	@Test
+	public void testComplex() throws Exception {
+		Validator validator = new Validator();
+		URL resource = ValidatorTest.class.getResource("/ninjs_example_complex.json");
+		ProcessingReport report = validator.validate(resource);
+		assertNotNull(report);
+		System.out.println(report.toString());
+		assertTrue(report.isSuccess());
 	}
 
 
