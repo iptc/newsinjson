@@ -53,6 +53,11 @@ to validate ninjs documents.
 
 CHANGES
 =======
+Version 1.2
+	Use latest schema
+	Updated examples
+	Added test for complex example
+
 Version 1.1
 	Add a Main class and a script
 	Add README
