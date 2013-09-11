@@ -27,7 +27,7 @@ import java.net.URL;
  */
 public class Validator {
 
-	private static final String NINJS_SCHEMA_URL = "http://www.iptc.org/std-dev/ninjs/ninjs-schema_201307a.json";
+	private static final String NINJS_SCHEMA_URL = "http://www.iptc.org/std/ninjs/ninjs-schema_1.0.json";
 
 	private JsonSchema ninjsSchema;
 
