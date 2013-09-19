@@ -82,4 +82,15 @@ public class ValidatorTest {
 		assertFalse(report.isSuccess());
 		System.out.println(report.toString());
 	}
+
+
+	@Test
+		public void testPhoto() throws Exception {
+			Validator validator = new Validator();
+
+			URL resource = ValidatorTest.class.getResource("/ninjs_example_photo.json");
+			ProcessingReport report = validator.validate(resource);
+			assertTrue(report.isSuccess());
+			System.out.println(report.toString());
+		}
 }
