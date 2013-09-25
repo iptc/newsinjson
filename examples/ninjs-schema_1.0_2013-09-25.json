@@ -3,14 +3,14 @@
 	"id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.0.json#",
 	"type" : "object",
 	"title" : "IPTC ninjs - News in JSON - version DRAFT 1.0",
-	"description" : "A news item as JSON object -- copyright 2013 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 3.0 license, see  http://creativecommons.org/licenses/by/3.0/  $$comment: as of 2013-09-04, edited by MS for the IPTC ninjs-dev group ",
+	"description" : "A news item as JSON object -- copyright 2013 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 3.0 license, see  http://creativecommons.org/licenses/by/3.0/  $$comment: as of 2013-09-25, edited by MS for the IPTC ninjs-dev group ",
 	"additionalProperties" : false,
 	"patternProperties" : {
-		"^description_[a-z0-9]+" : {
+		"^description_[a-zA-Z0-9_]+" : {
 		"description" : "A free-form textual description of the content of the item",
 		"type" : "string"
 		},
-		"^body_[a-z0-9]+" : {
+		"^body_[a-zA-Z0-9_]+" : {
 		"description" : "The textual content of the news object",
 		"type" : "string"
 		}
@@ -263,7 +263,7 @@
 			"type" : "object",
 			"additionalProperties" : false,
 			"patternProperties" : {
-				"^[a-z0-9]+" : {
+				"^[a-zA-Z0-9]+" : {
 					"description" : "A specific rendition of a non-textual content of the news object",
 					"type" : "object",
   				"additionalProperties" : false,
@@ -302,7 +302,7 @@
 			"type" : "object",
 			"additionalProperties" : false,
 			"patternProperties" : {
-				"^[a-z0-9]+" :  { "$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.0.json#" }
+				"^[a-zA-Z0-9]+" :  { "$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.0.json#" }
 			}
 		}
 	}
