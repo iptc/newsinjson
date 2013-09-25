@@ -20,10 +20,11 @@
    "body_xhtml": "\n                    <a rel=\"nofollow\" href=\"http://www.dell.com\" >Dell</a> today announced an expanded and stronger <a rel=\"nofollow\" href=\"http://www.dell.com/Learn/us/en/04/campaigns/dell-precision-workstations?c=us&l=en&s=bsd\" >Dell\n                      Precision workstation</a> portfolio that includes the smallest tower workstation chassis in its class, the Dell Precision T1700 small form-factor, and the worldâ€™s most powerful rack workstation, the Dell Precision R7610. In\n                    addition, the Dell Precision family features a more powerful and reliable Dell Precision T1700 Mini-Tower rounding out a workstation portfolio that offers increased performance, dependability and smart design for entry-level and\n                    high-end workstation users. ", 
 
    "associations": {
-      "uri":"http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
-      "type":"graphic",
-      "versioncreated": "2013-05-16T04:01.00.00Z",
+
       "logo": {
+        "uri":"http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
+        "type":"graphic",
+        "versioncreated": "2013-05-16T04:01.00.00Z",
         "thumbnail": {
           "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/2/dell_blue_rgb.jpg",
           "mimetype": "image/jpeg",
@@ -53,10 +54,11 @@
           "sizeinbytes": 33116
         }
       },
-      "uri":"http://mms.businesswire.com/media/newsItemId/en/369394/3/0025lf.jpg",
-      "type":"picture",
-      "versioncreated": "2013-05-16T04:01.00.00Z",
+
       "photo": {
+        "uri":"http://mms.businesswire.com/media/newsItemId/en/369394/3/0025lf.jpg",
+        "type":"picture",
+        "versioncreated": "2013-05-16T04:01.00.00Z",
         "thumbnail": {
           "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/2/0025lf.jpg",
           "mimetype": "image/jpeg",
@@ -87,10 +89,10 @@
         }
       },
 
-      "uri":"http://mms.businesswire.com/media/newsItemId/en/369395/3/00095.jpg",
-      "type":"picture",
-      "versioncreated": "2013-05-16T04:01.00.00Z",
       "photo_2": {
+        "uri":"http://mms.businesswire.com/media/newsItemId/en/369395/3/00095.jpg",
+        "type":"picture",
+        "versioncreated": "2013-05-16T04:01.00.00Z",
         "thumbnail": {
           "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/2/00095.jpg",
           "mimetype": "image/jpeg",

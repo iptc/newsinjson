@@ -21,10 +21,11 @@
    "body_xhtml": "\n      With more Applebee’s<sup >®</sup> Lunch Combos than ever – enough to try \n      a new combination every workday for a year – America’s favorite \n      neighborhood grill and bar this week unveiled a stronger, longer-lasting \n      Industrial Strength Lunch Decoy that is 20 percent thicker than the \n      original, which sold out in weeks last summer.\n    ", 
 
    "associations": {
-      "uri":"http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
-      "type":"graphic",
-      "versioncreated": "2013-07-31T15:32.00.00Z",
+
       "logo": {
+        "uri":"http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
+        "type":"graphic",
+        "versioncreated": "2013-07-31T15:32.00.00Z",
         "thumbnail": {
           "href":  "http://mms.businesswire.com/media/newsItemId/en/372964/2/AB_LOGO_thumbnail.jpg",
           "mimetype": "image/jpeg",
@@ -47,10 +48,11 @@
           "sizeinbytes": 17930
         }
       },
-      "uri":"http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg",
-      "type":"Video",
-      "versioncreated": "2013-07-31T15:32.00.00Z",
+
       "video": {
+        "uri":"http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg",
+        "type":"video",
+        "versioncreated": "2013-07-31T15:32.00.00Z",
         "thumbnail": {
           "href":  "http://mms.businesswire.com/media/newsItemId/en/377719/2/Applebees-72.jpg",
           "mimetype": "image/jpeg",
