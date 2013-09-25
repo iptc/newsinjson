@@ -1,0 +1,426 @@
+
+<NewsML Version="1.2">
+   <Catalog Href="http://www.businesswire.com/schema/newsml/BusinesswireNewsMLCatalog.xml"/>
+   <NewsEnvelope>
+      <SentFrom>
+         <Party FormalName="Business Wire">
+            <Property FormalName="ProviderProfile" Value="BusinessWireProfile"/>
+            <Property FormalName="ProviderProfileVersion" Value="1.18"/>
+         </Party>
+      </SentFrom>
+      <DateAndTime>20130731T153200+0000</DateAndTime>
+      <NewsService FormalName="Business Wire"/>
+      <NewsProduct FormalName="BUSINESS WIRE"/>
+   </NewsEnvelope>
+   <NewsItem>
+      <Identification>
+         <NewsIdentifier>
+            <ProviderId>businesswire.com</ProviderId>
+            <DateId>20010714</DateId>
+            <NewsItemId>20130731006140</NewsItemId>
+            <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+            <PublicIdentifier>urn:newsml:businesswire.com:20010714:20130731006140:1</PublicIdentifier>
+         </NewsIdentifier>
+      </Identification>
+      <NewsManagement>
+         <NewsItemType FormalName="News"/>
+         <FirstCreated>20130731T153200+0000</FirstCreated>
+         <ThisRevisionCreated>20130731T153200+0000</ThisRevisionCreated>
+         <Status FormalName="Usable"/>
+         <AssociatedWith NewsItem="businesswire.com:20010714:10000001"/>
+      </NewsManagement>
+      <NewsComponent>
+         <BasisForChoice Rank="1">./NewsComponent/DescriptiveMetadata/Language</BasisForChoice>
+         <NewsLines>
+            <CopyrightLine>Copyright Business Wire 2013</CopyrightLine>
+            <NewsLine>
+               <NewsLineType FormalName="Multimedia Gallery URL"/>
+               <NewsLineText>http://www.businesswire.com/cgi-bin/mmg.cgi?eid=50682075&amp;lang=en</NewsLineText>
+            </NewsLine>
+         </NewsLines>
+         <AdministrativeMetadata>
+            <Source>
+               <Party FormalName="Applebee’s"/>
+            </Source>
+            <Contributor>
+               <Comment FormalName="BWoffices">LA</Comment>
+               <Party FormalName="MTB" Scheme="BWEditor"/>
+            </Contributor>
+         </AdministrativeMetadata>
+         <DescriptiveMetadata>
+            <Language FormalName="en"/>
+            <Genre FormalName="Release"/>
+            <OfInterestTo FormalName="Restaurant Writers" Importance="1"/>
+            <OfInterestTo FormalName="Business Editors" Importance="2"/>
+         </DescriptiveMetadata>
+         <Metadata>
+            <MetadataType FormalName="BWKeywords"/>
+            <Property FormalName="BWIndustryKeywords" Value="Other Consumer"/>
+            <Property FormalName="BWCountryKeywords" Value="United States"/>
+            <Property FormalName="BWRegionKeywords" Value="North America"/>
+            <Property FormalName="BWIndustryKeywords" Value="Restaurant/Bar"/>
+            <Property FormalName="BWCategoryKeywords" Value="Product/Service"/>
+            <Property FormalName="BWCategoryKeywords" Value="Photo/Multimedia"/>
+            <Property FormalName="BWStateKeywords" Value="Missouri"/>
+            <Property FormalName="BWIndustryKeywords" Value="Retail"/>
+            <Property FormalName="BWIndustryKeywords" Value="Food/Beverage"/>
+            <Property FormalName="BWIndustryKeywords" Value="Consumer"/>
+         </Metadata>
+         <Metadata>
+            <MetadataType FormalName="Securities Identifier"/>
+            <Property FormalName="Ticker Symbol" Value="DIN"/>
+            <Property FormalName="Exchange" Value="NYSE"/>
+            <Property FormalName="SlugLine Display Order" Value="1"/>
+         </Metadata>
+         <NewsComponent>
+            <BasisForChoice Rank="1">./NewsComponent/Role</BasisForChoice>
+            <NewsLines>
+               <HeadLine>Lunch Taking a Toll? Let Applebee’s® Industrial Strength Lunch Decoy Stand In</HeadLine>
+               <DateLine>KANSAS CITY, Mo.</DateLine>
+               <SlugLine>MO-APPLEBEE’S</SlugLine>
+            </NewsLines>
+            <DescriptiveMetadata>
+               <Language FormalName="en"/>
+            </DescriptiveMetadata>
+            <NewsComponent>
+               <Role FormalName="Video"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <BasisForChoice Rank="2">./ContentItem/MimeType</BasisForChoice>
+               <BasisForChoice Rank="3">./ContentItem/Characteristics/Property</BasisForChoice>
+               <NewsLines>
+                  <HeadLine>Now that Applebee's has over 200 lunch combos you're going to need a stronger decoy. Introducing Applebee's New Industrial Strength Inflatable Lunch Decoy.</HeadLine>
+               </NewsLines>
+               <DescriptiveMetadata>
+                  <Language FormalName="en"/>
+                  <Property FormalName="Rank" Value="1"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49932413" Href="http://mms.businesswire.com/media/newsItemId/en/377719/2/Applebees-72.jpg">
+                  <Format FormalName="JPEG Baseline"/>
+                  <MimeType FormalName="image/jpeg"/>
+                  <Characteristics>
+                     <SizeInBytes>28094</SizeInBytes>
+                     <Property FormalName="ImageUse" Value="Thumbnail"/>
+                     <Property FormalName="PixelWidth" Value="72"/>
+                     <Property FormalName="PixelHeight" Value="41"/>
+                  </Characteristics>
+               </ContentItem>
+               <ContentItem Duid="c49932414" Href="http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg">
+                  <Format FormalName="JPEG Baseline"/>
+                  <MimeType FormalName="image/jpeg"/>
+                  <Characteristics>
+                     <SizeInBytes>42098</SizeInBytes>
+                     <Property FormalName="ImageUse" Value="Viewimage"/>
+                     <Property FormalName="PixelWidth" Value="144"/>
+                     <Property FormalName="PixelHeight" Value="81"/>
+                  </Characteristics>
+               </ContentItem>
+               <ContentItem Duid="c49932415" Href="http://mms.businesswire.com/media/newsItemId/en/377719/5/Applebees-640.jpg">
+                  <Format FormalName="JPEG Baseline"/>
+                  <MimeType FormalName="image/jpeg"/>
+                  <Characteristics>
+                     <SizeInBytes>197827</SizeInBytes>
+                     <Property FormalName="ImageUse" Value="Highres"/>
+                     <Property FormalName="PixelWidth" Value="640"/>
+                     <Property FormalName="PixelHeight" Value="360"/>
+                  </Characteristics>
+               </ContentItem>
+               <ContentItem Duid="c49932416" Href="http://mms.businesswire.com/media/newsItemId/en/377719/11/1730461_Lunch_Decoy_Extended_WMV+1Mbps.wmv">
+                  <Format FormalName="Windows Media Video"/>
+                  <MimeType FormalName="video/x-ms-wmv"/>
+                  <Characteristics>
+                     <SizeInBytes>14390033</SizeInBytes>
+                     <Property FormalName="MultiMediaUse" Value="Broadband"/>
+                  </Characteristics>
+               </ContentItem>
+               <ContentItem Duid="c49932417" Href="http://mms.businesswire.com/media/newsItemId/en/377719/13/1730461_Lunch_Decoy_Extended_QT+360p+%2816x9%29.mov">
+                  <Format FormalName="Quicktime"/>
+                  <MimeType FormalName="video/quicktime"/>
+                  <Characteristics>
+                     <SizeInBytes>13462929</SizeInBytes>
+                     <Property FormalName="MultiMediaUse" Value="Broadband"/>
+                  </Characteristics>
+               </ContentItem>
+               <ContentItem Duid="c49932418" Href="http://mms.businesswire.com/media/newsItemId/en/377719/19/1730461_Lunch_Decoy_Extended_MP4+1Mbps+import.mp4">
+                  <Format FormalName="MPEG-4 Video"/>
+                  <MimeType FormalName="video/mp4"/>
+                  <Characteristics>
+                     <SizeInBytes>12673045</SizeInBytes>
+                     <Property FormalName="MultiMediaUse" Value="Broadband"/>
+                  </Characteristics>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="StyleSheet"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="en"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49931172">
+                  <Format FormalName="CSS"/>
+                  <MimeType FormalName="text/css"/>
+                  <DataContent>
+.bwalignc {text-align: center}
+.bwlistitemmargb {margin-bottom: 10.0px}
+.bwuline {text-decoration: underline}</DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="SubHeadLine"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="en"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49931169">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p class="bwalignc">
+                              <i>With a Year’s Worth of Lunch Combos Starting at $6.99, New 62-Inch, 
+      12-Gauge Vinyl Model Built to Endure Even More Mundane Work Situations</i>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="HeadLine"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="en"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49931167">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p class="bwalignc">
+                              <b>Lunch Taking a Toll?</b>
+                              <b>Let Applebee’s</b>
+                              <sup>
+                                 <b>® </b>
+                              </sup>
+                              <b>Industrial 
+      Strength Lunch Decoy Stand In</b>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Contact"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="en"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49931171">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p>
+      Crossroads<br/>Chase Wagner, 816-877-5219<br/>
+                              <a href="mailto:cwagner@crossroads.us">
+                                 <b>cwagner@crossroads.us</b>
+                              </a>
+                              <br/>or<br/>Applebee’s<br/>Dan 
+      Smith, 913-890-0370<br/>
+                              <a href="mailto:dan.smith@applebees.com">
+                                 <b>dan.smith@applebees.com</b>
+                              </a>
+                           </p>
+                           <p/>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Logo"/>
+               <BasisForChoice Rank="1">./ContentItem/Characteristics/Property</BasisForChoice>
+               <BasisForChoice Rank="2">./ContentItem/Format</BasisForChoice>
+               <NewsLines>
+                  <NewsLine>
+                     <NewsLineType FormalName="ClickThru URL"/>
+                     <NewsLineText>http://applebees.com/</NewsLineText>
+                  </NewsLine>
+               </NewsLines>
+               <DescriptiveMetadata>
+                  <Language FormalName="en"/>
+                  <Property FormalName="Rank" Value="2"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49932420" Href="http://mms.businesswire.com/media/newsItemId/en/372964/2/AB_LOGO_thumbnail.jpg">
+                  <Format FormalName="JPEG Baseline"/>
+                  <MimeType FormalName="image/jpeg"/>
+                  <Characteristics>
+                     <SizeInBytes>6753</SizeInBytes>
+                     <Property FormalName="ImageUse" Value="Thumbnail"/>
+                     <Property FormalName="PixelWidth" Value="107"/>
+                     <Property FormalName="PixelHeight" Value="70"/>
+                  </Characteristics>
+               </ContentItem>
+               <ContentItem Duid="c49932421" Href="http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg">
+                  <Format FormalName="JPEG Baseline"/>
+                  <MimeType FormalName="image/jpeg"/>
+                  <Characteristics>
+                     <SizeInBytes>10330</SizeInBytes>
+                     <Property FormalName="ImageUse" Value="Viewimage"/>
+                     <Property FormalName="PixelWidth" Value="144"/>
+                     <Property FormalName="PixelHeight" Value="94"/>
+                  </Characteristics>
+               </ContentItem>
+               <ContentItem Duid="c49932422" Href="http://mms.businesswire.com/media/newsItemId/en/372964/4/AB_LOGO_webready.jpg">
+                  <Format FormalName="JPEG Baseline"/>
+                  <MimeType FormalName="image/jpeg"/>
+                  <Characteristics>
+                     <SizeInBytes>17930</SizeInBytes>
+                     <Property FormalName="ImageUse" Value="Lowres"/>
+                     <Property FormalName="PixelWidth" Value="216"/>
+                     <Property FormalName="PixelHeight" Value="141"/>
+                  </Characteristics>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Body"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="en"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49931170">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p>
+      With more Applebee’s<sup>®</sup> Lunch Combos than ever – enough to try 
+      a new combination every workday for a year – America’s favorite 
+      neighborhood grill and bar this week unveiled a stronger, longer-lasting 
+      Industrial Strength Lunch Decoy that is 20 percent thicker than the 
+      original, which sold out in weeks last summer.
+    </p>
+                           <p>
+      Built with 12-gauge vinyl material carefully designed to endure several 
+      hundred pounds and virtually any workplace scenario, Applebee’s 
+      Industrial Strength Lunch Decoy is tough enough to fool annoying 
+      co-workers, no matter the line of work.
+    </p>
+                           <p>
+      “With more than 200 Lunch Combos starting at $6.99 – far more than when 
+      we first offered Lunch Decoy as a way to ditch your desk for Applebee’s 
+      – we knew we had to make an adjustment,” said Applebee’s President Mike 
+      Archer. “Industrial Strength Lunch Decoy was born out of that necessity. 
+      The original Lunch Decoy wouldn’t stand-up to everyday use for a year, 
+      but Industrial Strength Lunch Decoy is built to make lunch at Applebee’s 
+      an everyday possibility.”
+    </p>
+                           <p>
+      Like the original decoy, the Applebee’s Industrial Strength Lunch Decoy 
+      is available in six models – Multi-Tasker, Cubicle Queen, Overachiever, 
+      Self-Starter, Go-Getter and Executive – to effectively stand in for 
+      anything from the most challenging to the most mundane (C’mon, a status 
+      meeting at 11:45? Those are never over before noon!) work tasks.
+    </p>
+                           <p>
+      The Industrial Strength Lunch Decoy, available for $6.99 at <a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.applebees.com%2Flunch-decoy&amp;esheet=50682075&amp;newsitemid=0&amp;lan=en-US&amp;anchor=www.applebees.com%2Flunch-decoy&amp;index=1&amp;md5=c94a48ca5b5cca7758b0fe486eed594f">
+                                 <b>www.applebees.com/lunch-decoy</b>
+                              </a> 
+      comes with a Bonus Customization Kit (a $1 value!), with accessories to 
+      make your inflatable you a true doppelganger.
+    </p>
+                           <p>
+      “For weeks last summer, no one was the wiser. Lunch Decoy had done its 
+      job admirably,” Archer said. “But then, slowly, the office buzzkills 
+      began to catch on. All of the sudden, Jan stopped wearing her earrings, 
+      or Jim suddenly shaved his beard. We’ve solved for that with the 
+      Industrial Strength Lunch Decoy customization package.”
+    </p>
+                           <p>
+      With Lunch Decoy and Applebee’s new Lunch Combos Starting at $6.99, 
+      guests can mix and match from more than 20 craveable Classic and 
+      Signature soups, salads, sandwiches and entrees, including four new 
+      sandwiches:
+    </p>
+                           <ul>
+                              <li class="bwlistitemmargb">
+        The<b>
+                                    <span class="bwuline">Classic Turkey Breast Sandwich</span>
+                                 </b> 
+        is thick slices of slow-cooked turkey breast, crisp romaine lettuce, 
+        sliced tomatoes and smoky mayo on a toasted ciabatta bun.
+      </li>
+                              <li class="bwlistitemmargb">
+        The<b>
+                                    <span class="bwuline">American BLT Sandwich</span>
+                                 </b> is six 
+        slices of crisp Applewood smoked bacon piled high and smothered with 
+        melted American cheese on toasted Tuscan bread with smoky mayo, fresh 
+        iceberg lettuce and tomato slices.
+      </li>
+                              <li class="bwlistitemmargb">
+        The<b>
+                                    <span class="bwuline">Four Cheese Grille Sandwich</span>
+                                 </b> is 
+        a blend of classic sharp cheddar, aged white cheddar, Asiago and 
+        Parmesan cheeses, melted to perfection on toasted Tuscan bread, and 
+        served with a bowl of tomato basil soup.
+      </li>
+                              <li class="bwlistitemmargb">
+        The<b>
+                                    <span class="bwuline">Turkey Bacon Avocado Sandwich</span>
+                                 </b> 
+        is stacked with thick-sliced, slow-cooked turkey breast piled on 
+        ciabatta bread and topped with ripe, creamy sliced avocado, Jack 
+        cheese, red ripe tomatoes, fresh lettuce, crispy bacon and green 
+        goddess dressing.
+      </li>
+                           </ul>
+                           <p>
+                              <b>Applebee's Industrial Strength Lunch Decoy Digital Ad</b>
+                           </p>
+                           <p>
+      View the digital ad for Applebee's Industrial Strength Lunch Decoy <a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Ftinyurl.com%2Fl3g85jx&amp;esheet=50682075&amp;newsitemid=0&amp;lan=en-US&amp;anchor=here&amp;index=2&amp;md5=69fef968810e8885b7cec168a8b8e121">here</a>.
+    </p>
+                           <p>
+                              <b>About Applebee’s International, Inc.</b>
+                           </p>
+                           <p>
+      Applebee’s Neighborhood Grill and Bar<sup>®</sup> (<a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.applebees.com%2F&amp;esheet=50682075&amp;newsitemid=0&amp;lan=en-US&amp;anchor=www.applebees.com&amp;index=3&amp;md5=3ee3ccd2c6928428f37d6c673820a008">www.applebees.com</a>) 
+      is the world’s largest casual dining chain, with approximately 2,000 
+      locations in 49 states, 15 countries and one U.S. territory. Based in 
+      Kansas City, Mo., Applebee’s takes pride in providing a welcoming, 
+      neighborhood environment where everyone can enjoy the dining experience. 
+      Applebee’s Neighborhood Grill &amp; Bar® is a DineEquity, Inc. (NYSE: DIN) 
+      brand, and is franchised and operated by Applebee’s International, Inc. 
+      and its affiliates.
+    </p>
+                           <p/>
+                           <p>
+                              <span class="bwct31415"/>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+         </NewsComponent>
+      </NewsComponent>
+   </NewsItem>
+</NewsML>

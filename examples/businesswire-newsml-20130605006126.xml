@@ -1,0 +1,237 @@
+
+<NewsML Version="1.2">
+   <Catalog Href="http://www.businesswire.com/schema/newsml/BusinesswireNewsMLCatalog.xml"/>
+   <NewsEnvelope>
+      <SentFrom>
+         <Party FormalName="Business Wire">
+            <Property FormalName="ProviderProfile" Value="BusinessWireProfile"/>
+            <Property FormalName="ProviderProfileVersion" Value="1.18"/>
+         </Party>
+      </SentFrom>
+      <DateAndTime>20130605T210000+0000</DateAndTime>
+      <NewsService FormalName="Business Wire"/>
+      <NewsProduct FormalName="BUSINESS WIRE"/>
+   </NewsEnvelope>
+   <NewsItem>
+      <Identification>
+         <NewsIdentifier>
+            <ProviderId>businesswire.com</ProviderId>
+            <DateId>20010714</DateId>
+            <NewsItemId>20130605006126</NewsItemId>
+            <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+            <PublicIdentifier>urn:newsml:businesswire.com:20010714:20130605006126:1</PublicIdentifier>
+         </NewsIdentifier>
+      </Identification>
+      <NewsManagement>
+         <NewsItemType FormalName="News"/>
+         <FirstCreated>20130605T210000+0000</FirstCreated>
+         <ThisRevisionCreated>20130605T210000+0000</ThisRevisionCreated>
+         <Status FormalName="Usable"/>
+         <AssociatedWith NewsItem="businesswire.com:20010714:10000001"/>
+      </NewsManagement>
+      <NewsComponent>
+         <BasisForChoice Rank="1">./NewsComponent/DescriptiveMetadata/Language</BasisForChoice>
+         <NewsLines>
+            <CopyrightLine>Copyright Business Wire 2013</CopyrightLine>
+         </NewsLines>
+         <AdministrativeMetadata>
+            <Source>
+               <Party FormalName="Cambrios Technologies"/>
+            </Source>
+            <Contributor>
+               <Comment FormalName="BWoffices">SF</Comment>
+               <Party FormalName="KB" Scheme="BWEditor"/>
+            </Contributor>
+         </AdministrativeMetadata>
+         <DescriptiveMetadata>
+            <Language FormalName="zh"/>
+            <Genre FormalName="Release"/>
+            <OfInterestTo FormalName="Business Editors" Importance="1"/>
+            <OfInterestTo FormalName="Technology Editors" Importance="2"/>
+         </DescriptiveMetadata>
+         <Metadata>
+            <MetadataType FormalName="BWKeywords"/>
+            <Property FormalName="BWCountryKeywords" Value="United States"/>
+            <Property FormalName="BWIndustryKeywords" Value="Technology"/>
+            <Property FormalName="BWIndustryKeywords" Value="Consumer Electronics"/>
+            <Property FormalName="BWRegionKeywords" Value="North America"/>
+            <Property FormalName="BWIndustryKeywords" Value="Hardware"/>
+            <Property FormalName="BWIndustryKeywords" Value="Audio/Video"/>
+            <Property FormalName="BWIndustryKeywords" Value="Nanotechnology"/>
+            <Property FormalName="BWIndustryKeywords" Value="Semiconductor"/>
+            <Property FormalName="BWStateKeywords" Value="California"/>
+            <Property FormalName="BWCategoryKeywords" Value="Award"/>
+            <Property FormalName="BWIndustryKeywords" Value="Manufacturing"/>
+            <Property FormalName="BWIndustryKeywords" Value="Chemicals/Plastics"/>
+            <Property FormalName="BWIndustryKeywords" Value="Engineering"/>
+         </Metadata>
+         <NewsComponent>
+            <BasisForChoice Rank="1">./NewsComponent/Role</BasisForChoice>
+            <NewsLines>
+               <HeadLine>Cambrios被Gartner評選為「最酷供應商」</HeadLine>
+               <DateLine>加州桑尼維爾</DateLine>
+               <SlugLine>CA-CAMBRIOS-TECHNOLOGIES</SlugLine>
+            </NewsLines>
+            <DescriptiveMetadata>
+               <Language FormalName="zh"/>
+            </DescriptiveMetadata>
+            <NewsComponent>
+               <Role FormalName="StyleSheet"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c48972753">
+                  <Format FormalName="CSS"/>
+                  <MimeType FormalName="text/css"/>
+                  <DataContent>
+.bwalignc {text-align: center}</DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="HeadLine"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c48972664">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p class="bwalignc">
+                              <b>Cambrios被Gartner評選為「最酷供應商」</b>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Logo"/>
+               <BasisForChoice Rank="1">./ContentItem/Characteristics/Property</BasisForChoice>
+               <BasisForChoice Rank="2">./ContentItem/Format</BasisForChoice>
+               <NewsLines>
+                  <NewsLine>
+                     <NewsLineType FormalName="ClickThru URL"/>
+                     <NewsLineText>http://www.cambrios.com</NewsLineText>
+                  </NewsLine>
+               </NewsLines>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+                  <Property FormalName="Rank" Value="1"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49012312" Href="http://mms.businesswire.com/media/newsItemId/zh/352685/2/CambriosLogoFinal.jpg">
+                  <Format FormalName="JPEG Baseline"/>
+                  <MimeType FormalName="image/jpeg"/>
+                  <Characteristics>
+                     <SizeInBytes>7520</SizeInBytes>
+                     <Property FormalName="ImageUse" Value="Thumbnail"/>
+                     <Property FormalName="PixelWidth" Value="120"/>
+                     <Property FormalName="PixelHeight" Value="40"/>
+                  </Characteristics>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Contact"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c48972667">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p>
+      代表Cambrios Technologies<br/>Monica Smith, 415-397-7600<br/>
+                              <a href="mailto:cambrios@stearnsjohnson.com">cambrios@stearnsjohnson.com</a>
+                           </p>
+                           <p/>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Body"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c48972666">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p>
+      (美國商業資訊)--為透明及軟性導體市場提供銀奈米線解決方案的領導廠商Cambrios Technologies 
+      Corporation今天宣布，該公司最近被Gartner評選為「最酷供應商」(Cool Vendor)。
+    </p>
+                           <p>
+      Gartner的研究報告《<a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.gartner.com%2FDisplayDocument%3Fdoc_cd%3D250335%26ref%3Dg_noreg&amp;esheet=50644388&amp;newsitemid=0&amp;lan=zh-TW&amp;anchor=Cool+Vendors+in+Touch+and+Gesture+Control%2C+2013&amp;index=1&amp;md5=7d98860112da88f78e8832f8e810fd85">Cool 
+      Vendors in Touch and Gesture Control, 2013</a>》（2013年觸控和手勢控制領域最酷供應商）<sup>1</sup>對Cambrios的ClearOhm<sup>TM</sup>塗層材料相對於絲網的生產和成本優勢進行了評論。該報告還對ClearOhm材料與銦錫氧化物(ITO)等競爭產品相比具有的其他優勢進行了評估，其中包括更快的設計修改、降低最終產品成本的潛力以及ClearOhm墨水所使用的銀及其他材料可靠的可得性。
+    </p>
+                           <p>
+      Cambrios的ClearOhm材料是透明導體市場領先的ITO替代材料，支援從每平方&lt;10至300歐姆(Ohms/square)的高導透明薄膜。與現有技術相比，採用ClearOhm墨水的觸控感測器提供回應更快的觸控介面，更具成本效益，刺激了支援觸控操作的平板電腦、筆記型電腦、Ultrabook和All-in-One電腦的大規模採用。其他競爭技術仍在開發階段，而採用ClearOhm技術的產品已開始透過Cambrios的世界級合作夥伴全球供應鏈發售。
+    </p>
+                           <p>
+      在6月5日（週三）中午12:10至12:50舉行的台北國際電腦展<a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.cambrios.com%2Fnews%2Freleases%2Fcambrios-to-highlight-benefits-of-silver-nanowire-technology-at-computex-taipei%2F&amp;esheet=50644388&amp;newsitemid=0&amp;lan=zh-TW&amp;anchor=DigiTimes%E6%B6%88%E8%B2%BB%E9%9B%BB%E5%AD%90%E6%8A%80%E8%A1%93%E8%88%87%E8%A8%AD%E8%A8%88%E8%AB%96%E5%A3%87&amp;index=2&amp;md5=f9c6030facd2f4bfb10497a2bba6dfcb">DigiTimes消費電子技術與設計論壇</a>上，Cambrios總裁兼執行長John 
+      LeMoncheck將在他的演講<b>《It’s Good to be in Touch》</b>（觸控技術讓產品體驗更美好）中提供有關Cambrios 
+      ClearOhm材料的更多資訊。他將特別重點介紹用於智慧手機、觸控筆記型電腦和其他行動應用的ClearOhm導電薄膜和墨水的優勢。
+    </p>
+                           <p>
+      Cambrios行銷長Sri 
+      Peruvemba表示：「我們認為，Cambrios入選Gartner的『最酷供應商』報告以及我們在大尺寸觸控式螢幕領域的持續成功證明，銀奈米線技術是ITO的最佳替代技術，能夠為消費者帶來更好的觸控體驗。」
+    </p>
+                           <p>
+      除了觸控板外，Cambrios ClearOhm材料還將支援OLED照明、OPV和軟性顯示器領域的更多應用。
+    </p>
+                           <p>
+                              <b>關於Cambrios</b>
+                           </p>
+                           <p>
+      Cambrios領先業界，提供採用奈米技術打造的創新解決方案。其突破性銀奈米線透明導體可簡化電子設備的製造流程，並可降低電子設備的終端產品成本，提高其性能。該公司的ClearOhm™產品是一種透明導體，其光學和電學性能遠遠高於傳統材料和方法。ClearOhm的應用包括觸控式螢幕、電磁干擾遮罩、LCD、電子紙、OLED照明設備以及薄膜光電設備。
+    </p>
+                           <p>
+      Cambrios總部位於加州桑尼維爾，並在日本和臺灣設有辦事處。
+    </p>
+                           <p>
+      ClearOhm™是Cambrios Technologies Corporation的註冊商標。
+    </p>
+                           <p>
+                              <i>Gartner並非認可其研究出版物中所提及的任何廠商、產品或服務，也不建議技術用戶只選擇評等最高的廠商。Gartner研究出版物包含Gartner研究機構的觀點，因此不應被理解為是對事實的陳述。Gartner對本研究不作任何明示或暗示的擔保，包括任何適售性或特定用途的適用性。</i>
+                           </p>
+                           <p>
+                              <sup>1</sup>Gartner《Cool Vendors in Touch and Gesture Control, 
+      2013》報告，作者：Jim Tully、John Girard、Tuong Huy Nguyen、Dean Freeman、Ganesh 
+      Ramamoorthy、Angela McIntyre、CK Lu、Brian Blau，2013年5月2日
+    </p>
+                           <p>
+      免責聲明：本公告之原文版本乃官方授權版本。譯文僅供方便瞭解之用，煩請參照原文，原文版本乃唯一具法律效力之版本。
+    </p>
+                           <p/>
+                           <p>
+                              <span class="bwct31415"/>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+         </NewsComponent>
+      </NewsComponent>
+   </NewsItem>
+</NewsML>
