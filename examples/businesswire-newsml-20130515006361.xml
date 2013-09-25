@@ -1,0 +1,468 @@
+
+<NewsML Version="1.2">
+  <Catalog Href="http://www.businesswire.com/schema/newsml/BusinesswireNewsMLCatalog.xml"/>
+  <NewsEnvelope>
+    <SentFrom>
+      <Party FormalName="Business Wire">
+        <Property FormalName="ProviderProfile" Value="BusinessWireProfile"/>
+        <Property FormalName="ProviderProfileVersion" Value="1.18"/>
+      </Party>
+    </SentFrom>
+    <DateAndTime>20130516T040100+0000</DateAndTime>
+    <NewsService FormalName="Business Wire"/>
+    <NewsProduct FormalName="BUSINESS WIRE"/>
+  </NewsEnvelope>
+  <NewsItem>
+    <Identification>
+      <NewsIdentifier>
+        <ProviderId>businesswire.com</ProviderId>
+        <DateId>20010714</DateId>
+        <NewsItemId>20130515006361</NewsItemId>
+        <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+        <PublicIdentifier>urn:newsml:businesswire.com:20010714:20130515006361:1</PublicIdentifier>
+      </NewsIdentifier>
+    </Identification>
+    <NewsManagement>
+      <NewsItemType FormalName="News"/>
+      <FirstCreated>20130516T040100+0000</FirstCreated>
+      <ThisRevisionCreated>20130516T040100+0000</ThisRevisionCreated>
+      <Status FormalName="Usable"/>
+      <AssociatedWith NewsItem="businesswire.com:20010714:10000001"/>
+    </NewsManagement>
+    <NewsComponent>
+      <BasisForChoice Rank="1">./NewsComponent/DescriptiveMetadata/Language</BasisForChoice>
+      <NewsLines>
+        <CopyrightLine>Copyright Business Wire 2013</CopyrightLine>
+        <NewsLine>
+          <NewsLineType FormalName="Multimedia Gallery URL"/>
+          <NewsLineText>http://www.businesswire.com/cgi-bin/mmg.cgi?eid=50633323&amp;lang=en</NewsLineText>
+        </NewsLine>
+      </NewsLines>
+      <AdministrativeMetadata>
+        <Source>
+          <Party FormalName="Dell Inc."/>
+        </Source>
+        <Contributor>
+          <Comment FormalName="BWoffices">DA</Comment>
+          <Party FormalName="AH" Scheme="BWEditor"/>
+        </Contributor>
+      </AdministrativeMetadata>
+      <DescriptiveMetadata>
+        <Language FormalName="en"/>
+        <Genre FormalName="Release"/>
+        <OfInterestTo FormalName="Business Editors" Importance="1"/>
+        <OfInterestTo FormalName="Technology Writers" Importance="2"/>
+      </DescriptiveMetadata>
+      <Metadata>
+        <MetadataType FormalName="BWKeywords"/>
+        <Property FormalName="BWCountryKeywords" Value="United States"/>
+        <Property FormalName="BWIndustryKeywords" Value="Technology"/>
+        <Property FormalName="BWIndustryKeywords" Value="Data Management"/>
+        <Property FormalName="BWRegionKeywords" Value="North America"/>
+        <Property FormalName="BWIndustryKeywords" Value="Hardware"/>
+        <Property FormalName="BWIndustryKeywords" Value="Software"/>
+        <Property FormalName="BWCategoryKeywords" Value="Product/Service"/>
+        <Property FormalName="BWCategoryKeywords" Value="Photo/Multimedia"/>
+        <Property FormalName="BWStateKeywords" Value="Texas"/>
+      </Metadata>
+      <Metadata>
+        <MetadataType FormalName="Securities Identifier"/>
+        <Property FormalName="Ticker Symbol" Value="DELL"/>
+        <Property FormalName="Exchange" Value="NASDAQ"/>
+        <Property FormalName="SlugLine Display Order" Value="1"/>
+      </Metadata>
+      <NewsComponent>
+        <BasisForChoice Rank="1">./NewsComponent/Role</BasisForChoice>
+        <NewsLines>
+          <HeadLine>Dell Redefines Workstation Computing Boundaries with Smallest Tower and Most Powerful Rack Workstations</HeadLine>
+          <DateLine>ROUND ROCK, Texas</DateLine>
+          <SlugLine>TX-DELL</SlugLine>
+        </NewsLines>
+        <DescriptiveMetadata>
+          <Language FormalName="en"/>
+        </DescriptiveMetadata>
+        <NewsComponent>
+          <Role FormalName="StyleSheet"/>
+          <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+          <DescriptiveMetadata>
+            <Language FormalName="en"/>
+          </DescriptiveMetadata>
+          <ContentItem Duid="c48647702">
+            <Format FormalName="CSS"/>
+            <MimeType FormalName="text/css"/>
+            <DataContent> .bwlistitemmargb {margin-bottom: 10.0px} .bwuline {text-decoration: underline}</DataContent>
+          </ContentItem>
+        </NewsComponent>
+        <NewsComponent>
+          <Role FormalName="SubHeadLine"/>
+          <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+          <DescriptiveMetadata>
+            <Language FormalName="en"/>
+          </DescriptiveMetadata>
+          <ContentItem Duid="c48647699">
+            <Format FormalName="XHTML"/>
+            <MimeType FormalName="text/xhtml"/>
+            <DataContent>
+              <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+                  <title/>
+                </head>
+                <body>
+                  <ul>
+                    <li class="bwlistitemmargb"> Offering powerful workstation performance at near desktop PC prices, the new Dell Precision T1700 Small-Form Factor and Mini-Tower are the smallest workstations in their class </li>
+                    <li class="bwlistitemmargb"> Dell Precision rack workstation delivers new virtualization capabilities, increased performance and enhanced remote accessibility </li>
+                    <li class="bwlistitemmargb"> Updated workstation portfolio further reinforces Dellâ€™s leadership in providing secure, manageable and reliable commercial PC solutions </li>
+                  </ul>
+                </body>
+              </html>
+            </DataContent>
+          </ContentItem>
+        </NewsComponent>
+        <NewsComponent>
+          <Role FormalName="HeadLine"/>
+          <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+          <DescriptiveMetadata>
+            <Language FormalName="en"/>
+          </DescriptiveMetadata>
+          <ContentItem Duid="c48647697">
+            <Format FormalName="XHTML"/>
+            <MimeType FormalName="text/xhtml"/>
+            <DataContent>
+              <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+                  <title/>
+                </head>
+                <body>
+                  <p>
+                    <b>Dell Redefines Workstation Computing Boundaries with Smallest Tower and Most Powerful Rack Workstations</b>
+                  </p>
+                </body>
+              </html>
+            </DataContent>
+          </ContentItem>
+        </NewsComponent>
+        <NewsComponent>
+          <Role FormalName="Contact"/>
+          <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+          <DescriptiveMetadata>
+            <Language FormalName="en"/>
+          </DescriptiveMetadata>
+          <ContentItem Duid="c48647701">
+            <Format FormalName="XHTML"/>
+            <MimeType FormalName="text/xhtml"/>
+            <DataContent>
+              <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+                  <title/>
+                </head>
+                <body>
+                  <p> Dell<br/>Lauren Mauro, 512-300-3066<br/><a href="mailto:lauren_mauro@dell.com">lauren_mauro@dell.com</a><br/>or<br/>WPP Team Dell<br/>Rebecca Wolfe, 212-798-9880<br/><a href="mailto:rebecca.wolfe@WPPTeamDell.com"
+                      >rebecca.wolfe@WPPTeamDell.com</a>
+                  </p>
+                  <p> </p>
+                </body>
+              </html>
+            </DataContent>
+          </ContentItem>
+        </NewsComponent>
+        <NewsComponent>
+          <Role FormalName="Logo"/>
+          <BasisForChoice Rank="1">./ContentItem/Characteristics/Property</BasisForChoice>
+          <BasisForChoice Rank="2">./ContentItem/Format</BasisForChoice>
+          <NewsLines>
+            <NewsLine>
+              <NewsLineType FormalName="ClickThru URL"/>
+              <NewsLineText>http://www.dell.com</NewsLineText>
+            </NewsLine>
+          </NewsLines>
+          <DescriptiveMetadata>
+            <Language FormalName="en"/>
+            <Property FormalName="Rank" Value="3"/>
+          </DescriptiveMetadata>
+          <ContentItem Duid="c48651272" Href="http://mms.businesswire.com/media/newsItemId/en/221373/2/dell_blue_rgb.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>4380</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Thumbnail"/>
+              <Property FormalName="PixelWidth" Value="70"/>
+              <Property FormalName="PixelHeight" Value="70"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651273" Href="http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>9891</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Viewimage"/>
+              <Property FormalName="PixelWidth" Value="144"/>
+              <Property FormalName="PixelHeight" Value="144"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651274" Href="http://mms.businesswire.com/media/newsItemId/en/221373/4/dell_blue_rgb.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>25475</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Lowres"/>
+              <Property FormalName="PixelWidth" Value="300"/>
+              <Property FormalName="PixelHeight" Value="300"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651275" Href="http://mms.businesswire.com/media/newsItemId/en/221373/5/dell_blue_rgb.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>33116</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Highres"/>
+              <Property FormalName="PixelWidth" Value="432"/>
+              <Property FormalName="PixelHeight" Value="432"/>
+            </Characteristics>
+          </ContentItem>
+        </NewsComponent>
+        <NewsComponent>
+          <Role FormalName="Photo"/>
+          <BasisForChoice Rank="1">./ContentItem/Characteristics/Property</BasisForChoice>
+          <BasisForChoice Rank="2">./ContentItem/Format</BasisForChoice>
+          <NewsLines>
+            <HeadLine>The next generation Dell Precision R7610 rack workstation has been updated with significantly more power, an enhanced remote experience and new virtualization capabilities for engineers, designers and other professional users who
+              demand the best. The intelligently designed 2U rack form-factor enables customers to centralize, secure and manage data, leverage their worldwide talent pool, and share resources for improved cost effectiveness. (Photo: Business
+              Wire)</HeadLine>
+          </NewsLines>
+          <DescriptiveMetadata>
+            <Language FormalName="en"/>
+            <Property FormalName="IptcScene" Value="011000"/>
+            <Property FormalName="Rank" Value="2"/>
+          </DescriptiveMetadata>
+          <ContentItem Duid="c48651267" Href="http://mms.businesswire.com/media/newsItemId/en/369395/2/00095.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>1002</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Thumbnail"/>
+              <Property FormalName="PixelWidth" Value="72"/>
+              <Property FormalName="PixelHeight" Value="24"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651268" Href="http://mms.businesswire.com/media/newsItemId/en/369395/3/00095.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>2238</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Viewimage"/>
+              <Property FormalName="PixelWidth" Value="144"/>
+              <Property FormalName="PixelHeight" Value="49"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651269" Href="http://mms.businesswire.com/media/newsItemId/en/369395/4/00095.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>12418</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Lowres"/>
+              <Property FormalName="PixelWidth" Value="480"/>
+              <Property FormalName="PixelHeight" Value="162"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651270" Href="http://mms.businesswire.com/media/newsItemId/en/369395/5/00095.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>286164</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Highres"/>
+              <Property FormalName="PixelWidth" Value="2962"/>
+              <Property FormalName="PixelHeight" Value="1000"/>
+            </Characteristics>
+          </ContentItem>
+        </NewsComponent>
+        <NewsComponent>
+          <Role FormalName="Photo"/>
+          <BasisForChoice Rank="1">./ContentItem/Characteristics/Property</BasisForChoice>
+          <BasisForChoice Rank="2">./ContentItem/Format</BasisForChoice>
+          <NewsLines>
+            <HeadLine>Offering powerful workstation performance at about desktop PC prices, the new Dell Precision T1700 Small Form-Factor and Mini-Tower are the smallest workstations in their class allowing IT to easily deploy an Independent Software
+              Vendor (ISV) certified workstation almost anywhere, regardless of space constraints. (Photo: Business Wire)</HeadLine>
+          </NewsLines>
+          <DescriptiveMetadata>
+            <Language FormalName="en"/>
+            <Property FormalName="IptcScene" Value="011000"/>
+            <Property FormalName="Rank" Value="1"/>
+          </DescriptiveMetadata>
+          <ContentItem Duid="c48651262" Href="http://mms.businesswire.com/media/newsItemId/en/369394/2/0025lf.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>1682</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Thumbnail"/>
+              <Property FormalName="PixelWidth" Value="72"/>
+              <Property FormalName="PixelHeight" Value="72"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651263" Href="http://mms.businesswire.com/media/newsItemId/en/369394/3/0025lf.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>4749</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Viewimage"/>
+              <Property FormalName="PixelWidth" Value="143"/>
+              <Property FormalName="PixelHeight" Value="144"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651264" Href="http://mms.businesswire.com/media/newsItemId/en/369394/4/0025lf.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>34502</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Lowres"/>
+              <Property FormalName="PixelWidth" Value="478"/>
+              <Property FormalName="PixelHeight" Value="480"/>
+            </Characteristics>
+          </ContentItem>
+          <ContentItem Duid="c48651265" Href="http://mms.businesswire.com/media/newsItemId/en/369394/5/0025lf.jpg">
+            <Format FormalName="JPEG Baseline"/>
+            <MimeType FormalName="image/jpeg"/>
+            <Characteristics>
+              <SizeInBytes>483923</SizeInBytes>
+              <Property FormalName="ImageUse" Value="Highres"/>
+              <Property FormalName="PixelWidth" Value="2055"/>
+              <Property FormalName="PixelHeight" Value="2064"/>
+            </Characteristics>
+          </ContentItem>
+        </NewsComponent>
+        <NewsComponent>
+          <Role FormalName="Body"/>
+          <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+          <DescriptiveMetadata>
+            <Language FormalName="en"/>
+          </DescriptiveMetadata>
+          <ContentItem Duid="c48647700">
+            <Format FormalName="XHTML"/>
+            <MimeType FormalName="text/xhtml"/>
+            <DataContent>
+              <html xmlns="http://www.w3.org/1999/xhtml">
+                <head>
+                  <title/>
+                </head>
+                <body>
+                  <p>
+                    <a rel="nofollow" href="http://www.dell.com">Dell</a> today announced an expanded and stronger <a rel="nofollow" href="http://www.dell.com/Learn/us/en/04/campaigns/dell-precision-workstations?c=us&amp;l=en&amp;s=bsd">Dell
+                      Precision workstation</a> portfolio that includes the smallest tower workstation chassis in its class, the Dell Precision T1700 small form-factor, and the worldâ€™s most powerful rack workstation, the Dell Precision R7610. In
+                    addition, the Dell Precision family features a more powerful and reliable Dell Precision T1700 Mini-Tower rounding out a workstation portfolio that offers increased performance, dependability and smart design for entry-level and
+                    high-end workstation users. </p>
+                  <div id="bwbodyimg" style="width:478px; float:left; padding-left:0px; padding-right:20px;  padding-top:0px; padding-bottom:0px;">
+                    <img alt="Offering powerful workstation performance at about desktop PC prices, the new Dell Precision T1700 S ... " src="http://mms.businesswire.com/media/newsItemId/en/369394/4/0025lf.jpg"/>
+                    <p style="font-size:85%; ">Offering powerful workstation performance at about desktop PC prices, the new Dell Precision T1700 Small Form-Factor and Mini-Tower are the smallest workstations in their class allowing IT to easily deploy an
+                      Independent Software Vendor (ISV) certified workstation almost anywhere, regardless of space constraints. (Photo: Business Wire) </p>
+                  </div>
+
+                  <p>
+                    <b>Industryâ€™s Smallest Entry-Level Tower Workstations</b>
+                  </p>
+                  <p> Offering powerful workstation performance at near desktop PC prices, the new Dell Precision T1700 small form-factor (SFF) is the smallest, approximately 30 percent smaller than competitive systems, and lightestÂ¹ workstation in its
+                    class allowing IT to easily deploy an <a rel="nofollow" href="http://www.dell.com/wspartners">Independent Software Vendor (ISV) certified</a> workstation almost anywhere, regardless of space constraints. The T1700 SFF and the Dell
+                    Precision T1700 Mini-Tower (MT) are designed and certified for engineering, architecture and finance professionals. The workstations also are ideal for higher education and high-school students working with 2D, entry-level 3D simulation
+                    or multitasking with demanding applications. </p>
+                  <p> Both the T1700 SFF and T1700 MT offer next generation Intel workstation-class processors, NVIDIA and AMD professional-grade graphics with PCIx x16 Gen 3 slots and expanded ISV certifications to help accomplish more in less time. The
+                    T1700 SFF is the only entry-level workstation to offer two front USB 3.0 ports to help move data faster and enable easy connectivity to external media and accessories. </p>
+                  <p> And for crystal clear high definition resolution, Dell recommends dual <a rel="nofollow" href="http://www.dell.com/ed/business/p/dell-u2312h/pd">Dell UltraSharp U2312HM</a> displays and the <a rel="nofollow"
+                      href="http://accessories.us.dell.com/sna/productdetail.aspx?c=us&amp;l=en&amp;s=bsd&amp;cs=04&amp;sku=332-1236">Dell Dual Monitor Stand MDS14</a> to maximize viewing real-estate and productivity for T1700 workstations. </p>
+                  <p>
+                    <b>New Rack Workstation Offers Ultimate Performance and Dependability for Remote &amp; Virtualized Environments</b>
+                  </p>
+                  <p> Dell, the industry leader in rack workstationsÂ¹, is announcing updates to its <a rel="nofollow" href="http://www.dell.com/us/business/p/precision-r5500/pd">rack workstation</a> including significantly more power, an enhanced remote
+                    experience and new virtualization capabilities for engineers, designers and other professional users who demand the best. The new Dell Precision R7610 now packs the power of Dellâ€™s flagship <a rel="nofollow"
+                      href="http://www.dell.com/us/business/p/precision-t7600/pd">T7600 tower workstation</a> in an intelligently designed 2U rack form-factor thatâ€™s ideal for datacenters or <a rel="nofollow" href="http://www.dell.com/oem">OEM embedded
+                      solutions</a>. The Dell Precision R7610 enables customers to centralize, secure and manage data, leverage their worldwide talent pool, and share resources for improved cost effectiveness. </p>
+                  <p> Organizations using the R7610 rack workstation can improve ROI through increased access and better utilization of their assets as a single workstation can be used by four users without sacrificing performance. The new R7610 achieves
+                    this via GPU pass-through and certifications with Citrix XenServerÂ® 6.1.0 using Citrix XenDesktopÂ® HDXâ„¢ 3D Pro, which allows all the resources of a dedicated discrete graphics card to be uniquely shared with multiple users in a
+                    hosted-shared environment or made available to a single user or virtual machine in a virtualized environment. The R7610 can support up to four single wide graphics cards such as the <a rel="nofollow"
+                      href="http://www.nvidia.com/object/workstation-solutions.html">NVIDIA Quadro</a> K2000 and <a rel="nofollow" href="http://www.amd.com/us/products/workstation/graphics/ati-firepro-3d/Pages/ati-firepro-3d.aspx">AMD FireProâ„¢</a> W5000
+                    mainstream cards, and high-performance NVIDIA Quadro K4000 cards, or up to three double-wide NVIDIA Quadro K5000 cards. Expanded capabilities, including <a rel="nofollow" href="http://www.nvidia.com/object/grid-boards.html">NVIDIA
+                      GRID</a> with virtualized graphics, will be available later this year. </p>
+                  <p> Among other options, users can connect to the R7610 1:1 via <a rel="nofollow" href="http://www.teradici.com/pcoip-solutions/zero-clients/overview.php">TeradiciÂ® Tera2 PCoIP</a> from <a rel="nofollow"
+                      href="http://www.wyse.com/products/cloud-clients/zero-clients/P25">Dell Wyse P25 zero client</a>, paired with dual <a rel="nofollow"
+                      href="http://accessories.us.dell.com/sna/productdetail.aspx?c=us&amp;cs=04&amp;l=en&amp;s=bsd&amp;sku=320-9567&amp;redirect=1">Dell UltraSharp U2413 displays with PremierColor</a> and the <a rel="nofollow"
+                      href="http://accessories.us.dell.com/sna/productdetail.aspx?c=us&amp;l=en&amp;s=bsd&amp;cs=04&amp;sku=332-1236">Dell Dual Monitor Stand MDS14</a>. Alternatively, customers can remotely connect through other Dell and
+                    non-Dell computing devices including thin clients, laptops, desktops or other mobile devices with Citrix Receiverâ„¢. </p>
+                  <p> Further increasing Dellâ€™s industry-leading reliability, the R7610 now comes with the exclusive <a rel="nofollow"
+                      href="http://www.dell.com/Learn/us/en/555/shared-content~data-sheets~en/Documents~Dell-Precision-workstation-Reliable-memory-technology-whitepaper.pdf?c=us&amp;l=en&amp;s=biz">Reliable Memory Technology</a>, a Dell patented
+                    code programmed at the BIOS level that eliminates virtually all memory errors and therefore the need for extensive full memory tests, IT support calls and memory DIMM replacement. The R7610 also is designed, tested and certified for a
+                    broad selection of applications for confident, reliable performance. In addition, the memory has been expanded to four channels with up to 256GBÂ² in 16 DIMM slots, with future availability of 512GBÂ², an integrated 6 GB/s LSI2308
+                    SATA/SAS controller and available dual <a rel="nofollow" href="http://ark.intel.com/products/64582/">Intel E5-2687W</a> 150 watt 8 core processors. </p>
+                  <p>
+                    <b>Pricing &amp; Availability:</b>
+                  </p>
+                  <p> The Dell Precision R7610 rack workstation will be available on May 21 starting at $2,179 and the Dell Precision T1700 Mini-Tower and Small Form-Factor are available on June 4 worldwide<sup>Â³</sup>. Pricing for both T1700 workstations
+                    will be released on June 4. </p>
+                  <p>
+                    <b>Quotes:</b>
+                  </p>
+                  <p> &quot;<a rel="nofollow" href="http://www.academyart.edu/">Academy of Art University</a> teaches aspiring students the skills they need to become professional artists and designers, across many disciplines including Architecture,
+                    Animation, Industrial Design and Fashion,â€ said Dr. Elisa Stephens, president of the Academy of Art University.&#160;â€œThese fields require students to work in demanding, performance-critical applications and we rely on Dell
+                    Precision to meet their high-performance computing needs. Dell Precision workstations are packed with the power and graphics capabilities necessary for our students to produce their best work. We find that the most dynamic learning
+                    environment is one where the classroom matches the caliber of the professional marketplace.â€ </p>
+                  <p> â€œDell continues to build on our heritage of developing innovative, cutting edge workstation technology by adding the smallest tower and most powerful rack workstation to our Dell Precision portfolio,â€ said Neil Hand, vice
+                    president, Tablet and Performance PCs, Dell. â€œWith increased power, reliability and new virtualization capabilities, these workstations deliver uncompromising performance, dependability and smart design that engineers and other
+                    high-end application users need to be successful.â€ </p>
+                  <p> â€œDell continues to revolutionize the workstation space by packaging powerful AMD FireProâ„¢ graphic cards with Dell Precision systems. AMD FireProâ„¢ graphics is designed for professionals looking for a seamless workstation
+                    experience that maximize their productivity in todayâ€™s latest applications,â€ said David Cummings, general manager, professional graphics, AMD. â€œIn collaboration with Dell, AMD FireProâ„¢ technology continues to meet demanding
+                    graphics requirements and deliver exceptional performance in a wide range of Dell Precision systems, from small form factor to full size tower and mobile workstations.â€ </p>
+                  <p> â€œThe new<i><b> </b></i>compact and powerful Dell Precision T1700 and R7610 models based on Intel Xeon processors will help to prove that great things can be done with Intel technology when a series of small things are brought
+                    together,â€ said Frank Soqui, General Manager Technical Computing Workstation Group, Intel Corporation. â€œThe new IntelÂ® HD Graphics P4600 offered in the Dell Precision T1700s represents a new high-end offering of processor-based
+                    graphics for entry-level workstations â€“ this combination of processor and graphics performance is ideal for engineers and other professionals engaged in final integration and design activities. It helps to provide them the resiliency
+                    and reliability found in workstations at near desktop prices.â€ </p>
+                  <p> â€œNVIDIA's close collaboration with Dell offers creative and engineering professionals new possibilities across a range of workstation models,â€ said Sandeep Gupte, senior director of Quadro Product Marketing, NVIDIA. â€œWith the
+                    world-class graphics performance and capabilities of NVIDIA Quadro cards, customers can enjoy unprecedented visual performance in the incredibly small and affordable Precision T1700, and breakthrough performance and hardware
+                    centralization with the Dell Precision R7610.â€ </p>
+                  <p>
+                    <b>Additional Information:</b>
+                  </p>
+                  <ul>
+                    <li class="bwlistitemmargb">
+                      <a rel="nofollow" href="http://en.community.dell.com/dell-blogs/direct2dell/b/direct2dell/archive/2013/05/16/introducing-the-smallest-tower-and-most-powerful-rack-workstation.aspx">Dell Precision Blog on Direct2Dell</a>
+                    </li>
+                    <li class="bwlistitemmargb">
+                      <a rel="nofollow" href="http://www.twitter.com/dell">Dell on Twitter</a>
+                    </li>
+                    <li class="bwlistitemmargb">
+                      <a rel="nofollow" href="http://www.dell.com/us/business/p/precision-desktops">Dell Precision</a>
+                    </li>
+                    <li class="bwlistitemmargb">
+                      <a rel="nofollow" href="http://www.dell.com/Learn/us/en/uscorp1/corp-comm/image-gallery-precision">
+                        <span class="bwuline">Dell Precision Image Gallery</span>
+                      </a>
+                    </li>
+                    <li class="bwlistitemmargb">
+                      <a rel="nofollow" href="http://www.dell.com/Learn/us/en/04/campaigns/precision-dppo?c=us&amp;l=en&amp;s=bsd">Dell Precision Performance Optimizer</a>
+                    </li>
+                  </ul>
+                  <p>
+                    <b>About Dell:</b>
+                  </p>
+                  <p> Dell Inc. (NASDAQ: DELL) listens to customers and delivers innovative technology and services that give them the power to do more. For more information, visit <a rel="nofollow" href="http://www.dell.com/">www.dell.com</a>. </p>
+                  <p>
+                    <i>Dell and Dell Precision are trademarks of Dell Inc. Dell disclaims any proprietary interest in the marks and names of others.</i>
+                  </p>
+                  <p>
+                    <i>Â¹ Q1 CY13 IDC report: Dell had 60 percent of Rack / Blade workstation share worldwide</i>
+                    <br/>
+                    <i>Â² GB means 1 billion bytes and TB equals 1 trillion bytes; significant system memory may be used to support graphics, depending on system memory size and other factor</i>
+                    <br/>
+                    <sup>
+                      <i>Â³</i>
+                    </sup>
+                    <i>Availability of Dell Precision T1700s in Argentina in the coming months</i>
+                  </p>
+                  <p> </p>
+                  <p>
+                    <span class="bwct31415"/>
+                  </p>
+                </body>
+              </html>
+            </DataContent>
+          </ContentItem>
+        </NewsComponent>
+      </NewsComponent>
+    </NewsComponent>
+  </NewsItem>
+</NewsML>

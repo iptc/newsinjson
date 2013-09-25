@@ -1,0 +1,295 @@
+
+<NewsML Version="1.2">
+   <Catalog Href="http://www.businesswire.com/schema/newsml/BusinesswireNewsMLCatalog.xml"/>
+   <NewsEnvelope>
+      <SentFrom>
+         <Party FormalName="Business Wire">
+            <Property FormalName="ProviderProfile" Value="BusinessWireProfile"/>
+            <Property FormalName="ProviderProfileVersion" Value="1.18"/>
+         </Party>
+      </SentFrom>
+      <DateAndTime>20130612T152900+0000</DateAndTime>
+      <NewsService FormalName="Business Wire"/>
+      <NewsProduct FormalName="BUSINESS WIRE"/>
+   </NewsEnvelope>
+   <NewsItem>
+      <Identification>
+         <NewsIdentifier>
+            <ProviderId>businesswire.com</ProviderId>
+            <DateId>20010714</DateId>
+            <NewsItemId>20130612006110</NewsItemId>
+            <RevisionId PreviousRevision="0" Update="N">1</RevisionId>
+            <PublicIdentifier>urn:newsml:businesswire.com:20010714:20130612006110:1</PublicIdentifier>
+         </NewsIdentifier>
+      </Identification>
+      <NewsManagement>
+         <NewsItemType FormalName="News"/>
+         <FirstCreated>20130612T152900+0000</FirstCreated>
+         <ThisRevisionCreated>20130612T152900+0000</ThisRevisionCreated>
+         <Status FormalName="Usable"/>
+         <AssociatedWith NewsItem="businesswire.com:20010714:10000001"/>
+      </NewsManagement>
+      <NewsComponent>
+         <BasisForChoice Rank="1">./NewsComponent/DescriptiveMetadata/Language</BasisForChoice>
+         <NewsLines>
+            <CopyrightLine>Copyright Business Wire 2013</CopyrightLine>
+         </NewsLines>
+         <AdministrativeMetadata>
+            <Source>
+               <Party FormalName="Asia Pulp &amp; Paper Group"/>
+            </Source>
+            <Contributor>
+               <Comment FormalName="BWoffices">DA</Comment>
+               <Party FormalName="SS" Scheme="BWEditor"/>
+            </Contributor>
+         </AdministrativeMetadata>
+         <DescriptiveMetadata>
+            <Language FormalName="zh"/>
+            <Genre FormalName="Release"/>
+            <OfInterestTo FormalName="Business Editors" Importance="1"/>
+            <OfInterestTo FormalName="Environment Writers" Importance="2"/>
+         </DescriptiveMetadata>
+         <Metadata>
+            <MetadataType FormalName="BWKeywords"/>
+            <Property FormalName="BWCountryKeywords" Value="United States"/>
+            <Property FormalName="BWRegionKeywords" Value="Asia Pacific"/>
+            <Property FormalName="BWRegionKeywords" Value="North America"/>
+            <Property FormalName="BWCategoryKeywords" Value="Advisory"/>
+            <Property FormalName="BWIndustryKeywords" Value="Manufacturing"/>
+            <Property FormalName="BWIndustryKeywords" Value="Packaging"/>
+            <Property FormalName="BWIndustryKeywords" Value="Other Manufacturing"/>
+            <Property FormalName="BWIndustryKeywords" Value="Natural Resources"/>
+            <Property FormalName="BWIndustryKeywords" Value="Forest Products"/>
+            <Property FormalName="BWStateKeywords" Value="New York"/>
+            <Property FormalName="BWIndustryKeywords" Value="Environment"/>
+            <Property FormalName="BWCountryKeywords" Value="Indonesia"/>
+         </Metadata>
+         <NewsComponent>
+            <BasisForChoice Rank="1">./NewsComponent/Role</BasisForChoice>
+            <NewsLines>
+               <HeadLine>APP发布“2020 可持续发展路线图”第三次工作进展报告，并将继续落实森林保护政策</HeadLine>
+               <DateLine>印尼雅加达</DateLine>
+               <SlugLine>ASIA-PULP-&amp;-PAPER-GROUP</SlugLine>
+            </NewsLines>
+            <DescriptiveMetadata>
+               <Language FormalName="zh"/>
+            </DescriptiveMetadata>
+            <NewsComponent>
+               <Role FormalName="StyleSheet"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49137962">
+                  <Format FormalName="CSS"/>
+                  <MimeType FormalName="text/css"/>
+                  <DataContent>
+.bwalignc {text-align: center}
+.bwlistitemmargb {margin-bottom: 10.0px}</DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="SubHeadLine"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <BasisForChoice Rank="2">./ContentItem/MimeType</BasisForChoice>
+               <BasisForChoice Rank="3">./ContentItem/Characteristics/Property</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49137959">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p class="bwalignc">
+                              <i>旗下浆纸厂将于2013年8月全面停止接收天然林木材</i>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="HeadLine"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <BasisForChoice Rank="2">./ContentItem/MimeType</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49137957">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p class="bwalignc">
+                              <b>APP发布“2020 可持续发展路线图”第三次工作进展报告，并将继续落实森林保护政策</b>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Logo"/>
+               <BasisForChoice Rank="1">./ContentItem/Characteristics/Property</BasisForChoice>
+               <BasisForChoice Rank="2">./ContentItem/Format</BasisForChoice>
+               <NewsLines>
+                  <NewsLine>
+                     <NewsLineType FormalName="ClickThru URL"/>
+                     <NewsLineText>http://www.asiapulppaper.com/</NewsLineText>
+                  </NewsLine>
+               </NewsLines>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+                  <Property FormalName="Rank" Value="1"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49138075" Href="http://mms.businesswire.com/media/newsItemId/zh/259518/2/app_logo_new.jpg">
+                  <Format FormalName="JPEG Baseline"/>
+                  <MimeType FormalName="image/jpeg"/>
+                  <Characteristics>
+                     <SizeInBytes>4194</SizeInBytes>
+                     <Property FormalName="ImageUse" Value="Thumbnail"/>
+                     <Property FormalName="PixelWidth" Value="120"/>
+                     <Property FormalName="PixelHeight" Value="45"/>
+                  </Characteristics>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Contact"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49137961">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p>
+      姜晓峰\周心怡<br/>诺恒咨询有限公司<br/>电话: (86 10) 51309901分机101、288<br/>电子邮件: <a href="mailto:xfjiang@northheadcomms.com">xfjiang@northheadcomms.com</a>
+                              <br/>
+                              <a href="mailto:dzhou@northheadcomms.com">dzhou@northheadcomms.com</a>
+                              <br/>或<br/>钱姗姗<br/>APP(中国)<br/>电话: 
+      (86 21) 63352222分机264<br/>电子邮件: <a href="mailto:qianshanshan@app.com.cn">qianshanshan@app.com.cn</a>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+            <NewsComponent>
+               <Role FormalName="Body"/>
+               <BasisForChoice Rank="1">./ContentItem/Format</BasisForChoice>
+               <DescriptiveMetadata>
+                  <Language FormalName="zh"/>
+               </DescriptiveMetadata>
+               <ContentItem Duid="c49137960">
+                  <Format FormalName="XHTML"/>
+                  <MimeType FormalName="text/xhtml"/>
+                  <DataContent>
+                     <html xmlns="http://www.w3.org/1999/xhtml">
+                        <head>
+                           <title/>
+                        </head>
+                        <body>
+                           <p>
+      亚洲浆纸业有限公司（Asia Pulp &amp; Paper, 以下简称 
+      APP）近日发布其“2020可持续发展路线图”第三次工作进展报告，称集团在供应链中停止所有涉及天然林相关作业的举措正对印尼当地热带雨林保护工作起到积极作用。
+    </p>
+                           <p>
+      APP于今年2月5日正式颁布新的森林保护政策，旨在确保其供应链内不存在任何涉及天然林的作业。目前，森林协会（TFT）及其他第三方高保护价值（HCV）评估员正一同对印尼境内与APP相关的林地开展高保护价值（HCV）和高碳储量（HCS）评估，以甄别APP供应商辖下林地中的天然林区并对其予以妥善保护。
+    </p>
+                           <p>
+      同时，APP明确声称旗下浆纸厂将于2013年8月31日起全面停止接收于今年2月1日前所砍伐的天然林木材，这也意味着这个日期后天然林木材将无法进入APP的供应链。
+    </p>
+                           <p>
+      APP可持续发展董事总经理Aida Greenbury 
+      女士表示：“我们正不断推进围绕‘2020可持续发展路线图’的相关工作，并会付诸长期的努力让APP成为真正可持续发展的企业，这样也会为我们日后的商贸发展带来更多的机遇。”
+    </p>
+                           <p>
+      “明确全面停止接收天然林木材的时间这一举措是我们与利益相关方积极沟通协作的很好例证。非政府组织曾向我们指出确定这个时间节点的必要性，而现在这已成为了我们承诺的一部分。”
+    </p>
+                           <p>
+      APP还同时发布了可显示森林保护政策实施过程中最新技术数据的在线监控系统测试版。该系统是由森林协会基于SURE技术开发而成，可以帮助利益相关方掌握项目落地的最新近况，查看森林保护区域地图，了解高保护价值森林评估及高碳储量研究的进展、监督及验证情况，并可查阅森林保护政策相关条例。APP将与各利益相关方进一步沟通在线监控系统的格式与内容，并于下半年正式发布最终版本。
+    </p>
+                           <p>
+      森林协会执行董事Scott Poynton补充道: 
+      “森林协会与APP的合作正如预期地那样进展顺利，虽然期间难免有些小摩擦，但最重要的是我们从中也收获了很多有价值的经验。我们会在非政府组织的帮助下继续推进这个项目。”
+    </p>
+                           <p>
+      “这次的任务艰巨，会有100多名工作人员涉足遍布印尼各地的38个林地开展调查，但我们坚定地相信，当前开展的这些评估将为APP未来的长期发展打下坚实基础。”
+    </p>
+                           <p>
+      在过去的三个月，部分非政府组织曾出具报告，单方面称APP可能存在违反其森林保护政策的行为。对此，Aida Greenbury 表示：
+    </p>
+                           <p>
+      “我们承诺会深入调查每一项来自非政府组织的指控并如实公布调查结果，以不断完善我们的森林保护举措。”
+    </p>
+                           <p>
+      “目前我们仍处于施行森林保护政策的初级阶段，相关机制还未完善，而且由于牵涉到大面积的林地作业，项目推进伊始也会遇到诸多挑战。但是我在此重申，APP自今年2月1日起全面停止涉及天然林作业的承诺不会更改。我们会尽力确保没有意外发生，但如果真的在这个过程中出现错误，我们也会从中汲取经验教训以不断改善我们的系统。”
+    </p>
+                           <p>
+      这次报告中还提及了其他几个要点：
+    </p>
+                           <ul>
+                              <li class="bwlistitemmargb">
+        APP在印尼的38个供应商都会接受第三方高保护价值森林评估。项目第一阶段计划于2013年第四季度完成对11个林区的评估；第二阶段将于2014年第二季度完成对剩余27个林区的评估。
+      </li>
+                              <li class="bwlistitemmargb">
+        森林协会和APP技术部门已合作完成高碳储量研究中的卫星数据分析，并已成立实地考察小组。
+      </li>
+                              <li class="bwlistitemmargb">
+        APP 已组建了一个风险评估项目团队，负责识别、报告并解决在森林保护政策实施过程中可能遇到的问题。该团队将会与APP 
+        焦点小组的成员分享所有发现，并在集团能力所及范围内，经实地考察及利益相关方沟通后对这些问题予以妥善解决。
+      </li>
+                           </ul>
+                           <p>
+      如欲了解关于APP “2020可持续发展路线图”、森林保护政策以及在线监控系统相关信息，请访问<a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.asiapulppaper.com&amp;esheet=50645499&amp;newsitemid=0&amp;lan=zh-CN&amp;anchor=www.asiapulppaper.com&amp;index=1&amp;md5=74a7dc55645c7882e7c69a8d8296331b">www.asiapulppaper.com</a>
+                           </p>
+                           <p>
+                              <b>关于APP</b>
+                           </p>
+                           <p>
+      亚洲浆纸业有限公司(APP)是全球领先的浆纸业生产商，在印尼和中国设有总部。APP集团是全球最大的浆纸业公司之一，每年生产1,800万吨浆纸及相关纸制品。APP印尼和中国的产品销往全球6大洲120多个国家，旗下大部分工厂都拥有SVLK, 
+      LEI和PEFC颁发的产销监管链认证。
+    </p>
+                           <p>
+      APP于2012年6月发布了“2020可持续发展路线图”，并于2013年2月发布了“森林保护政策”，旨在进一步为护生物多样性、稀有生态系统及当地社区权益作出贡献。
+    </p>
+                           <p>
+      如欲了解更多关于APP “2020可持续发展路线图”信息，请查看<a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.rainforestrealities.com&amp;esheet=50645499&amp;newsitemid=0&amp;lan=zh-CN&amp;anchor=www.rainforestrealities.com&amp;index=2&amp;md5=1904457d14cdf6636cf0cda534ee7e30">www.rainforestrealities.com</a> 
+      或<a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.asiapulppaper.com&amp;esheet=50645499&amp;newsitemid=0&amp;lan=zh-CN&amp;anchor=www.asiapulppaper.com&amp;index=3&amp;md5=c7071f9dd018ee32e63c2d27fe75fa0a">www.asiapulppaper.com</a>，如欲了解APP 
+      “森林保护政策”，请查看<a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.asiapulppaper.com&amp;esheet=50645499&amp;newsitemid=0&amp;lan=zh-CN&amp;anchor=www.asiapulppaper.com&amp;index=4&amp;md5=10edc638e6fb63d4adc7a27088bb3c8e">www.asiapulppaper.com</a>
+                           </p>
+                           <p>
+                              <b>关于TFT</b>
+                           </p>
+                           <p>
+      成立于1999年的森林协会TFT是一家帮助企业向市场输送负责任产品的全球性非盈利机构，旨在改善人们生活水平，并降低产品生命周期各个阶段对环境的影响。通过合理应对各类社会和环境议题，TFT帮助全球超过90个会员企业建立了可持续发展的供应链。TFT在木材供应链改善上取得了非常显著的成绩，并在着力开拓棕榈油、皮革和矿石行业。TFT在15个国家设有办事处，足迹遍布全球，具体信息可查看 
+      <a rel="nofollow" href="http://cts.businesswire.com/ct/CT?id=smartlink&amp;url=http%3A%2F%2Fwww.tft-forests.org&amp;esheet=50645499&amp;newsitemid=0&amp;lan=zh-CN&amp;anchor=www.tft-forests.org&amp;index=5&amp;md5=6d91ca13e5c8cc4cd7cb5932110ce7c9">www.tft-forests.org</a>。
+    </p>
+                           <p/>
+                           <p>
+                              <span class="bwct31415"/>
+                           </p>
+                        </body>
+                     </html>
+                  </DataContent>
+               </ContentItem>
+            </NewsComponent>
+         </NewsComponent>
+      </NewsComponent>
+   </NewsItem>
+</NewsML>
