@@ -24,7 +24,6 @@
       "logo": {
         "uri":"http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
         "type":"graphic",
-<<<<<<< HEAD
         "versioncreated": "2013-05-16T04:01:00Z",
 
         "renditions": {
@@ -60,43 +59,12 @@
             "width": 432,
             "sizeinbytes": 33116
           }
-=======
-        "versioncreated": "2013-05-16T04:01.00.00Z",
-        "thumbnail": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/2/dell_blue_rgb.jpg",
-          "mimetype": "image/jpeg",
-          "height": 70,
-          "width": 70,
-          "sizeinbytes": 4380
-        },
-        "viewimage": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
-          "mimetype": "image/jpeg",
-          "height": 144,
-          "width": 144,
-          "sizeinbytes": 9891
-        },
-        "lowres": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/4/dell_blue_rgb.jpg",
-          "mimetype": "image/jpeg",
-          "height": 300,
-          "width": 300,
-          "sizeinbytes": 25475
-        },
-        "highres": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/5/dell_blue_rgb.jpg",
-          "mimetype": "image/jpeg",
-          "height": 432,
-          "width": 432,
-          "sizeinbytes": 33116
->>>>>>> b9f52a98f358c38e93d186233b6d87dd054beada
         }
       },
 
       "photo": {
         "uri":"http://mms.businesswire.com/media/newsItemId/en/369394/3/0025lf.jpg",
         "type":"picture",
-<<<<<<< HEAD
         "versioncreated": "2013-05-16T04:01:00Z",
 
         "renditions": {
@@ -132,43 +100,12 @@
             "width": 2055,
             "sizeinbytes": 483923
           }
-=======
-        "versioncreated": "2013-05-16T04:01.00.00Z",
-        "thumbnail": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/2/0025lf.jpg",
-          "mimetype": "image/jpeg",
-          "height": 72,
-          "width": 72,
-          "sizeinbytes": 1682
-        },
-        "viewimage": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/3/0025lf.jpg",
-          "mimetype": "image/jpeg",
-          "height": 144,
-          "width": 143,
-          "sizeinbytes": 4749
-        },
-        "lowres": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/4/0025lf.jpg",
-          "mimetype": "image/jpeg",
-          "height": 480,
-          "width": 478,
-          "sizeinbytes": 34502
-        },
-        "highres": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/5/0025lf.jpg",
-          "mimetype": "image/jpeg",
-          "height": 2064,
-          "width": 2055,
-          "sizeinbytes": 483923
->>>>>>> b9f52a98f358c38e93d186233b6d87dd054beada
         }
       },
 
       "photo_2": {
         "uri":"http://mms.businesswire.com/media/newsItemId/en/369395/3/00095.jpg",
         "type":"picture",
-<<<<<<< HEAD
         "versioncreated": "2013-05-16T04:01:00Z",
 
         "renditions": {
@@ -204,36 +141,6 @@
             "width": 2962,
             "sizeinbytes": 286164
           }
-=======
-        "versioncreated": "2013-05-16T04:01.00.00Z",
-        "thumbnail": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/2/00095.jpg",
-          "mimetype": "image/jpeg",
-          "height": 24,
-          "width": 72,
-          "sizeinbytes": 1002
-        },
-        "viewimage": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/3/00095.jpg",
-          "mimetype": "image/jpeg",
-          "height": 49,
-          "width": 144,
-          "sizeinbytes": 2238
-        },
-        "lowres": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/4/00095.jpg",
-          "mimetype": "image/jpeg",
-          "height": 162,
-          "width": 480,
-          "sizeinbytes": 12418
-        },
-        "highres": {
-          "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/5/00095.jpg",
-          "mimetype": "image/jpeg",
-          "height": 1000,
-          "width": 2962,
-          "sizeinbytes": 286164
->>>>>>> b9f52a98f358c38e93d186233b6d87dd054beada
         }
       }
   }
