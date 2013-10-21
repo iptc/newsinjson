@@ -28,7 +28,7 @@ public class ValidatorTest {
 
 	/**
 	 * Run validation against a valid simple ninjs document.
-	 *
+	 * <p/>
 	 * This junit test is designed to verify that a valid document is reported as valid.
 	 *
 	 * @throws Exception
@@ -46,7 +46,7 @@ public class ValidatorTest {
 
 	/**
 	 * Run validation against a valid complex ninjs document.
-	 *
+	 * <p/>
 	 * This junit test is designed to verify that a valid document is reported as valid.
 	 *
 	 * @throws Exception
@@ -64,10 +64,10 @@ public class ValidatorTest {
 
 	/**
 	 * Run validation against an invalid ninjs document.
-	 *
+	 * <p/>
 	 * This junit test is designed to verify that an invalid document is reported as invalid.
 	 * A "success" on this test means that the invalid document was correctly detected as invalid.
-	 *
+	 * <p/>
 	 * The invalid document contains an invalid property.
 	 * The printed report should indicate the name of the invalid property.
 	 *
@@ -84,13 +84,20 @@ public class ValidatorTest {
 	}
 
 
+	/**
+	 * Run validation against a valid simple photo ninjs document.
+	 * <p/>
+	 * This junit test is designed to verify that a valid document is reported as valid.
+	 *
+	 * @throws Exception
+	 */
 	@Test
-		public void testPhoto() throws Exception {
-			Validator validator = new Validator();
+	public void testPhoto() throws Exception {
+		Validator validator = new Validator();
 
-			URL resource = ValidatorTest.class.getResource("/ninjs_example_photo.json");
-			ProcessingReport report = validator.validate(resource);
-			assertTrue(report.isSuccess());
-			System.out.println(report.toString());
-		}
+		URL resource = ValidatorTest.class.getResource("/ninjs_example_photo.json");
+		ProcessingReport report = validator.validate(resource);
+		assertTrue(report.isSuccess());
+		System.out.println(report.toString());
+	}
 }
