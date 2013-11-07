@@ -1,7 +1,10 @@
 # Validation
 ninjs documents can be validated using [JSON Schema](http://json-schema.org).
 
-The IPTC maintains a schema for each release of the ninjs standard. IPTC ninjs schemas can be found [here](http://www.iptc.org/std-dev/ninjs/).
+The IPTC maintains a schema for each release of the ninjs standard. IPTC ninjs schemas can be found [here](http://www.iptc.org/std/ninjs/).
+
+The most recent ninjs specification file is available at
+http://www.iptc.org/std/ninjs/ninjs-schema_1.0.json
 
 
 # Examples
