@@ -1,4 +1,4 @@
-= image:iptc_sv_gradient_70x70.jpg[IPTC logo] NinJS Guidelines
+= image:iptc_sv_gradient_70x70.jpg[IPTC logo] NinJS User Guide
 keywords: iptc, news, story, article, media, json, javascript, markup, schema, metadata,
 :doctype: book
 :imagesdir: ./images
@@ -10,12 +10,14 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :icons: font
 :author: IPTC News in JSON Working Group
 :email: office@iptc.org
-:version-label: Standard Version
+:version-label: Covers version
 :revnumber: 1.1
 :revremark: Revised 2019-08-27
 :toc: left
+:toc-title: ninjs User Guide
 :toclevels: 2
 :nofooter:
+:sectnums:
 :sectnumlevels: 3
 
 == Introduction: ninjs is News in JSON
@@ -63,7 +65,7 @@ suitable for use in JSON-native engines, such as
 http://www.mongodb.org/[MongoDB] or
 http://www.elasticsearch.org/[Elasticsearch].
 
-=== ninjs Data Model in a nutshell
+=== ninjs data model in a nutshell
 
 As the below diagram shows, every ninjs object describes a *News Item*. All
 ninjs items have a unique ID given by a *URI*. They can have administrative
@@ -78,11 +80,11 @@ means of linking news items together.
 
 image:ninjsScope-w800.jpg[ninjs Data Model diagram]
 
-=== ninjs Object Building Blocks
+=== ninjs object building blocks
 
 image:ninjs_blocks_callouts.jpg[ninjs Object Building Blocks diagram]
 
-=== A Simple Example
+=== A simple example
 
 ninjs can be very simple. This is an example of something that might be returned
 by an API call.
@@ -109,7 +111,7 @@ by an API call.
   Giglio, took on water and capsized. Schettino has denied wrongdoing."
 }
 
-=== ninjs and Other Standards
+=== ninjs and other standards
 
 JSON is an increasingly popular
 http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/[alternative to]
@@ -118,13 +120,13 @@ http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/[re
 for]) XML. ninjs is designed to be used alongside other https://iptc.org/standards/[IPTC formats], including https://iptc.org/standards/newsml-g2/[NewsML-G2],
 https://iptc.org/standards/iptc-7901/[IPTC7901] and https://iptc.org/standards/rnews/[rNews].
 
-== About the IPTC ninjs Guidelines
+== About the IPTC ninjs User Guide
 
 === Copyright
 
 Copyright © 2019 IPTC, International Press Telecommunications Council.
 
-The IPTC ninjs Guidelines document is published under the 
+The IPTC ninjs User Guide document is published under the 
 http://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 license]
 - see the full license agreement at http://creativecommons.org/licenses/by/4.0/.
 
@@ -139,12 +141,15 @@ Working Group of the International Press Telecommunications Council (IPTC), with
 input and assistance from other contributors.
 
 Contributors to this document include (in alphabetical order):
-Michael Steidl (IPTC),
-Brendan Quinn (IPTC).
+Johan Lindgren (TT),
+Brendan Quinn (IPTC),
+Michael Steidl (IPTC).
 
 === How to contact IPTC
 
 Join the public IPTC ninjs discussion group: https://groups.io/g/iptc-ninjs/
+
+Raise an issue on our GitHub repository: https://github.com/iptc/newsinjson/issues
 
 Submit a message on our website: https://iptc.org/about-iptc/contact-us/
 
@@ -172,6 +177,412 @@ Business address:
  25 Southampton Buildings
  London WC2A 1AL
  United Kingdom
+
+== ninjs in Detail
+
+Here we document each property in a ninjs object. Only the "uri" property is
+required, all others are optional.
+
+=== Administrative properties
+
+These properties concern the structure, type and creation details of the content.
+
+[%autowidth,options="header"]
+|===
+|Property|Description|Data type
+
+|uri
+|The identifier for this news object
+|URI
+
+|type
+|The generic news type of this news object
+| One of: +
+`text` +
+`audio` +
+`video` +
+`picture` +
+`graphic` +
+`composite`
+
+|mimetype
+|A MIME type which applies to this news object
+|string
+
+|representationtype|Indicates the completeness of this representation of a news
+item|
+One of: +
+`complete` +
+`incomplete`
+
+|profile
+|An identifier for the kind of content of this news object. This can be any
+string but we suggest something identifying the content such as "text-only"
+or "text-photo"
+|string
+
+|version|The version of the news object which is identified by the uri property
+|string
+
+|versioncreated
+|The date and time when this version of the news object was created
+|date-time
+
+|embargoed
+|The date and time before which all versions of the news object are embargoed.
+If absent, this object is not embargoed.
+|date-time
+
+|pubstatus
+|The publishing status of the news object, its value is *usable* by default.
+|One of: +
+`usable` +
+`withheld` +
+`canceled`
+
+|urgency
+|The editorial urgency of the content from 1 to 9. 1 represents the highest
+urgency, 9 the lowest
+|number
+
+|language
+|The human language used by the content. The value should follow IETF BCP47
+|string
+
+|===
+
+=== Rights properties
+
+[%autowidth,options="header"]
+|===
+|Property|Description|Data type
+
+|copyrightholder
+|The person or organisation claiming the intellectual property for the content.
+|string
+
+|copyrightnotice
+|Any necessary copyright notice for claiming the intellectual property for the
+content.
+|string
+
+|usageterms
+|A natural-language statement about the usage terms pertaining to the content.
+|string
+|===
+
+=== Editorial properties
+
+Properties representing the actual story that will be shown to the audience.
+
+[%autowidth,options="header"]
+|===
+|Property|Description|Data type
+
+|headline
+|A brief and snappy introduction to the content, designed to catch the reader's attention
+|string
+
+|byline
+|The name(s) of the creator(s) of the content
+|string
+
+|body___<type>__
+|The textual content of the news object. (The string appended to body_ in the property name should reflect the format of the text) +
+Multiple body_* properties are allowed.
+|string
+
+|description___<type>__
+|A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format of the text) +
+Multiple description_* properties are allowed.
+|string
+|===
+
+=== Metadata properties
+
+ninjs allows content to be marked up with one simple string-based metadata
+property `located`, plus several rich metadata properties that can link to
+pre-defined controlled vocabularies describing people, organisations, places
+subjects, objects and events.
+
+[cols="1,3a,1",options="header"]
+|===
+|Property name|Description|Data type
+
+|located
+|The name of the location from which the content originates
+|string
+
+|person
+|An individual human being. +
+This property is an array of sets of the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of a person
+!string
+
+!rel
+!The relationship of the content of the news object to the person
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the person
+!URI
+
+!code
+!The code for the person in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+|organisation
+|An administrative and functional structure which may act as as a business, as a political party or not-for-profit party +
+This property is an array of sets of the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the organisation
+!string
+
+!rel
+!The relationship of the content of the news object to the organisation
+!string
+
+!scheme
+!The identifier of a scheme (= controlled vocabulary) which includes a code for the organisation
+!URI
+
+!code
+!The code for the organisation in a scheme (= controlled vocabulary) which is identified by the scheme property
+!string
+
+!symbols
+!Symbols used for a finanical instrument linked to the organisation at a specific market place. +
+Array of objects with the properties: +
+`ticker`: Ticker symbol used for the financial instrument (string)
+`exchange`: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)
+!===
+|array
+
+|place
+|A named location. +
+This property is an array of sets of the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the place
+!string
+
+!rel
+!The relationship of the content of the news object to the place
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the place
+!URI
+
+!code
+!The code for the place in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+
+!geometry___<type>__
+!An object holding geo data of this place. Could be of any relevant geo data JSON object definition.
+!object
+
+!===
+
+|array
+
+|subject
+|A concept with a relationship to the content. +
+This property is an array of sets of the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the subject
+!string
+
+!rel
+!The relationship of the content of the news object to the subject
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the subject
+!URI
+
+!code
+!The code for the subject in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+|event
+|Something which happens in a planned or unplanned manner. +
+This property is an array of sets of the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the event
+!string
+
+!rel
+!The relationship of the content of the news object to the event
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the event
+!URI
+
+!code
+!The code for the event in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+|object
+|Something material, excluding persons +
+This property is an array of sets of the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the object
+!string
+
+!rel
+!The relationship of the content of the news object to the object
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the object
+!URI
+
+!code
+!The code for the object in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+|===
+
+=== Renditions
+
+The `renditions` property is a wrapper for different renditions of non-textual
+content of the news object, such as images, videos or PDF documents.
+
+It contains a set of one or more keys, each with a name and an object as the
+value. The name can be any text or numbers, and should represent a given
+rendition type such as "thumbnail" or "preview". The object should include the
+below properties.
+
+==== Properties of renditions
+
+[%autowidth,options="header"]
+|===
+|Property name|Description|Data type
+|href|The URL for accessing the rendition as a resource|URI
+|mimetype|A MIME type which applies to the rendition|string
+|title|A title for the link to the rendition resource|string
+|height|For still and moving images: the height of the display area measured in pixels|number
+|width|For still and moving images: the width of the display area measured in pixels|number
+|sizeinbytes|The size of the rendition resource in bytes|number
+|===
+
+==== Renditions example
+
+[source,json]
+  ...
+  "renditions": {
+    "thumbnail": {
+      "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/2/dell_blue_rgb.jpg",
+      "mimetype": "image/jpeg",
+      "height": 70,
+      "width": 70,
+      "sizeinbytes": 4380
+    },
+    "highres": {
+      "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/5/dell_blue_rgb.jpg",
+      "mimetype": "image/jpeg",
+      "height": 432,
+      "width": 432,
+      "sizeinbytes": 33116
+    }
+
+=== Associations
+
+The `associations` property contains a set of key/value pairs where the key is
+the name of the association and the value is any valid ninjs object.
+
+This can be used to link news items together, or to associate images with a text
+story, for example.
+
+==== Associations example
+
+This example shows a press release. The body of the story is in the `body_xhtml`
+property. A logo and an image are associated to the story. Both the logo and the
+image have two renditions, a "thumbnail" and a "highres" version.
+
+[source,json]
+{
+  "uri": "http://www.businesswire.com/news/home/20130515006361/en",
+  "type":"composite",
+  "mimetype": "application/x-resource+json;level=composite",
+  "version": "1",
+  "versioncreated": "2013-05-16T04:01:00Z",
+  [ ... ]
+  "headline": "Dell Redefines Workstation Computing Boundaries with Smallest Tower and Most Powerful Rack Workstations",
+  "body_xhtml": " [ ... ]",
+  "associations": {
+    "logo": {
+      "uri":"http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
+      "type":"graphic",
+      "versioncreated": "2013-05-16T04:01:00Z",
+      "renditions": {
+        "thumbnail": {
+          [ ... ]
+        },
+        "highres": {
+          [ ... ]
+        }
+      }
+    },
+    "photo": {
+      "uri":"http://mms.businesswire.com/media/newsItemId/en/369394/3/0025lf.jpg",
+      "type":"picture",
+      "versioncreated": "2013-05-16T04:01:00Z",
+      "renditions": {
+        "thumbnail": {
+          [ ... ]
+        },
+        "highres": {
+          [ ... ]
+        }
+      }
+    }
+  }
+}
 
 == ninjs Examples
 
@@ -300,8 +711,9 @@ Key features:
 
 ==== More Examples on Github
 
-You can find more examples of ninjs representations of news releases hosted on
-https://github.com/iptc/newsinjson/tree/master/examples[the ninjs Github
+You can find more examples of ninjs representations of text-based news releases
+in the
+https://github.com/iptc/newsinjson/tree/master/examples[ninjs Github
 repository].
 
 === Photo-only example
@@ -761,4 +1173,44 @@ this online validator. It is built on the json-schema-validator library:
 
 http://json-schema-validator.herokuapp.com
 
+== Mapping between ninjs and NewsML-G2
+
+ninjs and NewsML-G2 are not intended to be equivalent to each other, but they
+both adhere to the IPTC News Architecture, so they share many properties.
+
+Here is a summary of the properties shared in both ninjs and NewsML-G2:
+
+[%autowidth,options="header"]
+|===
+|ninjs property name|NewsML-G2 equivalent
+|uri|nar:newsItem@guid
+|version|nar:newsItem@version
+|copyrightholder|nar:copyrightHolder
+|copyrightnotice|nar:copyrightnotice
+|usageterms|nar:usageTerms
+|type|nar:itemClass
+|versioncreated|nar:versionCreated
+|embargoed|nar:embargoed
+|pubstatus|nar:pubStatus
+|profile|nar:profile
+|associations|nar:link
+|urgency|nar:urgency
+|located|nar:located
+|infosources|nar:infoSource
+|byline|nar:creator
+|language|nar:language
+|subject|nar:subject
+|person|nar:subject
+|place|nar:subject
+|object|nar:subject
+|headline|nar:headline
+|byline|nar:by
+|description_*|nar:description
+|@contenttype|nar:inlineData
+|renditions|nar:remoteContent
+|renditions@href|nar:remoteContent@ref
+|renditions@mimetype|nar:remoteContent@contenttype
+|renditions@height|nar:remoteContent@height
+|renditions@width|nar:remoteContent@width
+|===
 
