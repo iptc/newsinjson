@@ -315,7 +315,7 @@ subjects, objects and events.
 
 |person
 |An individual human being. +
-This property is an array of sets of the following properties:
+This property is an array of objects with the following properties:
 
 [cols="3"]
 !===
@@ -342,7 +342,7 @@ This property is an array of sets of the following properties:
 
 |organisation
 |An administrative and functional structure which may act as as a business, as a political party or not-for-profit party +
-This property is an array of sets of the following properties:
+This property is an array of objects with the following properties:
 
 [cols="3"]
 !===
@@ -374,7 +374,7 @@ Array of objects with the properties: +
 
 |place
 |A named location. +
-This property is an array of sets of the following properties:
+This property is an array of objects with the following properties:
 
 [cols="3"]
 !===
@@ -406,7 +406,7 @@ This property is an array of sets of the following properties:
 
 |subject
 |A concept with a relationship to the content. +
-This property is an array of sets of the following properties:
+This property is an array of objects with the following properties:
 
 [cols="3"]
 !===
@@ -433,7 +433,7 @@ This property is an array of sets of the following properties:
 
 |event
 |Something which happens in a planned or unplanned manner. +
-This property is an array of sets of the following properties:
+This property is an array of objects with the following properties:
 
 [cols="3"]
 !===
@@ -460,7 +460,7 @@ This property is an array of sets of the following properties:
 
 |object
 |Something material, excluding persons +
-This property is an array of sets of the following properties:
+This property is an array of objects with the following properties:
 
 [cols="3"]
 !===
@@ -588,13 +588,15 @@ image have two renditions, a "thumbnail" and a "highres" version.
 
 === Text-only examples
 
-==== A simple text.  
+==== A simple text article
 
 Key features:
 
-* A "uri" must be present "type" indicates that the generic content type is 'a
-* text' "byline" and "headline" are typical text news metadata The text news as
-* such is represented by "body" - in two format variants: plain text and HTML.
+* A `uri` must be present as an identifier for this content
+* `type` indicates that the generic content type is 'text'
+* `byline` and `headline` are typical text news metadata
+* The text of article itself is represented by `body`, in two format variants:
+plain text (`body_text`) and HTML (`body_html`).
 
 [source,json]
 {
@@ -634,10 +636,10 @@ Key features:
 
 ==== A more complex example
 
-* Metadata about the content are added to the example above.  "person", "place",
-* "organisation" employ a structure which provides human readable names for the
-* entity but also machine readable identifiers by the "scheme" and "code"
-* properties. 
+* Metadata about the content are added to the example above.
+* `person`, `place` and `organisation` employ a structure which provides human
+readable names for the entity but also machine readable identifiers by the
+`scheme` and `code` properties. 
 
 [source,json]
 {
@@ -1028,15 +1030,17 @@ the ASCII character set.
 
 === How to escape XML content for inclusion in JSON objects
 
-JSON String values cannot contain characters: ", \, and various control
-characters like tabs.  Therefore, we need to escape these characters in our
-content when marshaling data into JSON objects. The XSL below shows how to
-do this using XSL.
+JSON string values cannot contain characters: `"`, `\`, and various control
+characters like tabs. Therefore, we need to escape these characters in our
+content when marshaling data into JSON objects. We have provided an XSL
+stylesheet to do this using XSL.
 
-The XSL Template at [...] extracts the body of an NITF document (samples
-available here: https://iptc.org/standards/nitf/using-nitf/) and creates a
-simple JSON object. The resulting object is not yet a valid ninjs object,
-however it will be valid JSON.
+The XSL Template at
+https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt
+extracts the body of an NITF document (NITF samples are available from
+https://iptc.org/standards/nitf/using-nitf/) and creates a simple JSON object.
+The resulting object is not yet a valid ninjs object, however it will be valid
+JSON.
 
 === How to create provider-specific extensions
 
@@ -1178,7 +1182,7 @@ http://json-schema-validator.herokuapp.com
 ninjs and NewsML-G2 are not intended to be equivalent to each other, but they
 both adhere to the IPTC News Architecture, so they share many properties.
 
-Here is a summary of the properties shared in both ninjs and NewsML-G2:
+Here is a summary of the properties shared by ninjs and NewsML-G2:
 
 [%autowidth,options="header"]
 |===

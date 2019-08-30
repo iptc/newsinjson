@@ -926,7 +926,7 @@ subjects, objects and events.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">person</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An individual human being.<br>
-This property is an array of sets of the following properties:</p>
+This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -970,7 +970,7 @@ This property is an array of sets of the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">organisation</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An administrative and functional structure which may act as as a business, as a political party or not-for-profit party<br>
-This property is an array of sets of the following properties:</p>
+This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1014,7 +1014,7 @@ This property is an array of sets of the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">place</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>A named location.<br>
-This property is an array of sets of the following properties:</p>
+This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1063,7 +1063,7 @@ This property is an array of sets of the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">subject</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>A concept with a relationship to the content.<br>
-This property is an array of sets of the following properties:</p>
+This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1107,7 +1107,7 @@ This property is an array of sets of the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">event</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Something which happens in a planned or unplanned manner.<br>
-This property is an array of sets of the following properties:</p>
+This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1151,7 +1151,7 @@ This property is an array of sets of the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Something material, excluding persons<br>
-This property is an array of sets of the following properties:</p>
+This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1348,20 +1348,24 @@ image have two renditions, a "thumbnail" and a "highres" version.</p>
 <div class="sect2">
 <h3 id="_text_only_examples">4.1. Text-only examples</h3>
 <div class="sect3">
-<h4 id="_a_simple_text">4.1.1. A simple text.</h4>
+<h4 id="_a_simple_text_article">4.1.1. A simple text article</h4>
 <div class="paragraph">
 <p>Key features:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>A "uri" must be present "type" indicates that the generic content type is 'a</p>
+<p>A <code>uri</code> must be present as an identifier for this content</p>
 </li>
 <li>
-<p>text' "byline" and "headline" are typical text news metadata The text news as</p>
+<p><code>type</code> indicates that the generic content type is 'text'</p>
 </li>
 <li>
-<p>such is represented by "body" - in two format variants: plain text and HTML.</p>
+<p><code>byline</code> and <code>headline</code> are typical text news metadata</p>
+</li>
+<li>
+<p>The text of article itself is represented by <code>body</code>, in two format variants:
+plain text (<code>body_text</code>) and HTML (<code>body_html</code>).</p>
 </li>
 </ul>
 </div>
@@ -1409,16 +1413,12 @@ image have two renditions, a "thumbnail" and a "highres" version.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Metadata about the content are added to the example above.  "person", "place",</p>
+<p>Metadata about the content are added to the example above.</p>
 </li>
 <li>
-<p>"organisation" employ a structure which provides human readable names for the</p>
-</li>
-<li>
-<p>entity but also machine readable identifiers by the "scheme" and "code"</p>
-</li>
-<li>
-<p>properties.</p>
+<p><code>person</code>, <code>place</code> and <code>organisation</code> employ a structure which provides human
+readable names for the entity but also machine readable identifiers by the
+<code>scheme</code> and <code>code</code> properties.</p>
 </li>
 </ul>
 </div>
@@ -1882,16 +1882,18 @@ the ASCII character set.</p>
 <div class="sect2">
 <h3 id="_how_to_escape_xml_content_for_inclusion_in_json_objects">5.2. How to escape XML content for inclusion in JSON objects</h3>
 <div class="paragraph">
-<p>JSON String values cannot contain characters: ", \, and various control
-characters like tabs.  Therefore, we need to escape these characters in our
-content when marshaling data into JSON objects. The XSL below shows how to
-do this using XSL.</p>
+<p>JSON string values cannot contain characters: <code>"</code>, <code>\</code>, and various control
+characters like tabs. Therefore, we need to escape these characters in our
+content when marshaling data into JSON objects. We have provided an XSL
+stylesheet to do this using XSL.</p>
 </div>
 <div class="paragraph">
-<p>The XSL Template at [&#8230;&#8203;] extracts the body of an NITF document (samples
-available here: <a href="https://iptc.org/standards/nitf/using-nitf/" class="bare">https://iptc.org/standards/nitf/using-nitf/</a>) and creates a
-simple JSON object. The resulting object is not yet a valid ninjs object,
-however it will be valid JSON.</p>
+<p>The XSL Template at
+<a href="https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt" class="bare">https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt</a>
+extracts the body of an NITF document (NITF samples are available from
+<a href="https://iptc.org/standards/nitf/using-nitf/" class="bare">https://iptc.org/standards/nitf/using-nitf/</a>) and creates a simple JSON object.
+The resulting object is not yet a valid ninjs object, however it will be valid
+JSON.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2081,7 +2083,7 @@ this online validator. It is built on the json-schema-validator library:</p>
 both adhere to the IPTC News Architecture, so they share many properties.</p>
 </div>
 <div class="paragraph">
-<p>Here is a summary of the properties shared in both ninjs and NewsML-G2:</p>
+<p>Here is a summary of the properties shared by ninjs and NewsML-G2:</p>
 </div>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
