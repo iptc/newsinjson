@@ -280,7 +280,8 @@ Properties representing the actual story that will be shown to the audience.
 |Property|Description|Data type
 
 |headline
-|A brief and snappy introduction to the content, designed to catch the reader's attention
+|A brief and snappy introduction to the content, designed to catch the reader's
+attention
 |string
 
 |byline
@@ -288,12 +289,16 @@ Properties representing the actual story that will be shown to the audience.
 |string
 
 |body___<type>__
-|The textual content of the news object. (The string appended to body_ in the property name should reflect the format of the text) +
+|The textual content of the news object. The string appended to body_ in the
+property name should reflect the format of the text, for example `body_text` or
+`body_html`. +
 Multiple body_* properties are allowed.
 |string
 
 |description___<type>__
-|A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format of the text) +
+|A free-form textual description of the content of the item. The string appended
+to description_ in the property name should reflect the format of the text, for
+example `description_text` or `description_html`. +
 Multiple description_* properties are allowed.
 |string
 |===
