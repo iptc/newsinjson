@@ -1,0 +1,883 @@
+= image:iptc_sv_gradient_70x70.jpg[IPTC logo] NinJS User Guide
+keywords: iptc, news, story, article, media, json, javascript, markup, schema, metadata,
+:doctype: html5
+:imagesdir: ./images
+:includedir: ./includes
+:stylesdir: stylesheets/
+:stylesheet: asciidoctor-iptc-stds-02.css
+:source-highlighter: highlight.js
+:source-language: asciidoc
+:icons: font
+:author: IPTC News in JSON Working Group
+:email: office@iptc.org
+:version-label: Covers version
+:revnumber: 1.1
+:revremark: Revised 2019-09-09
+:toc: left
+:toc-title: ninjs User Guide
+:toclevels: 2
+:nofooter:
+:sectnums:
+:sectnumlevels: 3
+
+== Introduction: ninjs is News in JSON
+
+ninjs standardises the representation of news content in JSON, a lightweight,
+easy-to-parse data interchange format. 
+
+We have identified key properties and structures required to represent news and
+publishing information, and crafted JSON representations that are designed to
+result in lightweight instance documents. And we've built a JSON schema for
+ninjs to help you <<How to validate objects,validate your ninjs
+implementation>>.
+
+https://iptc.org/std/ninjs/ninjs-schema_1.0.json[Version 1.0 of the ninjs
+schema] was approved by the IPTC Standards Committee on 23 October 2013.
+
+https://iptc.org/std/ninjs/ninjs-schema_1.1.json[Version 1.1 of the ninjs
+schema] was made available in March 2014 and an error was corrected in September
+2017.
+
+The IPTC welcomes your feedback on how to improve the standard via the
+https://groups.io/g/iptc-ninjs[public ninjs discussion group].
+
+Staff from IPTC Member organisations are welcome to join the 
+https://groups.io/g/iptc-news-in-json-dev[members-only discussion list for the
+ninjs development team].
+
+=== Built for both APIs and data at rest
+
+In creating ninjs, we focused on two main use cases:
+
+. *Data interchange - such as via APIs*
+* ninjs documents can be very concise, allowing for the inclusion of just the
+most important properties - such as byline, headline, and body text - as
+determined by a given provider.
+*  ninjs allows the provider to indicate whether there are more properties
+available, if the recipient would like to request more.
+footnote:[The provider can indicate that more properties are available using the `representationtype: "incomplete"` construct.]
+. *Data at rest - such as in search engines or content management systems*
+* ninjs documents can convey a rich set of news publishing properties, such as
+information that is necessary for the pre-publishing workflow or custom
+properties that a particular provider wants to express in a standard way.
+* ninjs is designed to be customisable by a particular provider, so that they
+can express just what they require, without unnecessary overhead ninjs is
+suitable for use in JSON-native engines, such as
+http://www.mongodb.org/[MongoDB] or
+http://www.elasticsearch.org/[Elasticsearch].
+
+=== ninjs data model in a nutshell
+
+As the below diagram shows, every ninjs object describes a *News Item*. All
+ninjs items have a unique ID given by a *URI*. They can have administrative
+metadata, describing who created the news item and when,  descriptive metadata
+describing *people*, *places*, *subjects*, *organisations* and *events* related
+to the news item.
+
+The content itself can be a *body*, containing text, HTML or other
+representation of the text of a news item, *renditions* of the news item as
+images, videos or multimedia, or both body and renditions. *Associations* are a
+means of linking news items together.
+
+image:ninjsScope-w800.jpg[ninjs Data Model diagram]
+
+=== ninjs object building blocks
+
+image:ninjs_blocks_callouts.jpg[ninjs Object Building Blocks diagram]
+
+=== A simple example
+
+ninjs can be very simple. This is an example of something that might be returned
+by an API call.
+
+[source,json]
+----
+include::includes/examples/001_simple_example.json[]
+----
+
+=== ninjs and other standards
+
+JSON is an increasingly popular
+http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/[alternative to]
+(or
+http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/[replacement
+for]) XML. ninjs is designed to be used alongside other https://iptc.org/standards/[IPTC formats], including https://iptc.org/standards/newsml-g2/[NewsML-G2],
+https://iptc.org/standards/iptc-7901/[IPTC7901] and https://iptc.org/standards/rnews/[rNews].
+
+== About the IPTC ninjs User Guide
+
+=== Copyright
+
+Copyright © 2019 IPTC, International Press Telecommunications Council.
+
+The IPTC ninjs User Guide document is published under the 
+http://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 license]
+- see the full license agreement at http://creativecommons.org/licenses/by/4.0/.
+
+By obtaining, using and/or copying this document, you (the licensee) agree that you have read, understood, and will comply with the terms and conditions of the license.
+
+Materials used in this guide are either in the public domain or are available with the permission of their respective copyright holders. All materials of this IPTC standard covered by copyright shall be licensable at no charge.
+
+=== Acknowledgements
+
+This document is the result of a team effort by members of the News in JSON
+Working Group of the International Press Telecommunications Council (IPTC), with
+input and assistance from other contributors.
+
+Contributors to this document include (in alphabetical order):
+Johan Lindgren (TT),
+Brendan Quinn (IPTC),
+Michael Steidl (IPTC).
+
+=== How to contact IPTC
+
+Join the public IPTC ninjs discussion group: https://groups.io/g/iptc-ninjs/
+
+Raise an issue on our GitHub repository: https://github.com/iptc/newsinjson/issues
+
+Submit a message on our website: https://iptc.org/about-iptc/contact-us/
+
+Visit IPTC's website: https://iptc.org/standards/ninjs/
+
+Follow IPTC on Twitter: http://www.twitter.com/IPTC/[@IPTC]
+
+=== About IPTC
+
+The IPTC, based in London, brings together the world’s leading news agencies,
+publishers and industry vendors. It develops and promotes efficient technical
+standards to improve the management and exchange of information between content
+providers, intermediaries and consumers. The standards enable easy,
+cost-effective and rapid innovation and include the IPTC Photo Metadata
+standard, the Video Metadata Hub, the news exchange formats NewsML-G2, ninjs,
+SportsML-G2 and NITF, rNews for marking up online news, the rights expression
+language RightsML, and NewsCodes taxonomies for categorising news.
+
+IPTC is a not-for-profit membership organisation registered in England.
+https://iptc.org/participate/[Find more about membership].
+
+Business address:
+
+ IPTC International Press Telecommunications Council
+ 25 Southampton Buildings
+ London WC2A 1AL
+ United Kingdom
+
+== ninjs in Detail
+
+Here we document each property in a ninjs object. Only the "uri" property is
+required, all others are optional.
+
+=== Administrative properties
+
+These properties concern the structure, type and creation details of the content.
+
+[%autowidth,options="header"]
+|===
+|Property|Description|Data type
+
+|uri
+|The identifier for this news object
+|URI
+
+|type
+|The generic news type of this news object
+| One of: +
+`text` +
+`audio` +
+`video` +
+`picture` +
+`graphic` +
+`composite`
+
+|mimetype
+|A MIME type which applies to this news object
+|string
+
+|representationtype
+|Indicates the completeness of this representation of a news item.
+For a full document representation, the value should be `complete`. For a partial
+representation, for example a short extract provided as the results of an API
+call, the value `incomplete` should be used.
+|
+One of: +
+`complete` +
+`incomplete`
+
+|profile
+|An identifier for the kind of content of this news object. This can be any
+string but we suggest something identifying the content such as `"text-only"`
+or `"text-photo"`
+|string
+
+|version
+|The version of the news object which is identified by the uri property.
+|string
+
+|versioncreated
+|The date and time when this version of the news object was created.
+|date-time
+
+|embargoed
+|The date and time before which all versions of the news object are embargoed.
+If absent, this object is not embargoed.
+|date-time
+
+|pubstatus
+|The publishing status of the news object, its value is `usable` by default.
+|One of: +
+`usable` +
+`withheld` +
+`canceled`
+
+|urgency
+|The editorial urgency of the content from 1 to 9. 1 represents the highest
+urgency, 9 the lowest
+|number
+
+|language
+|The human language used by the content. The value should follow IETF BCP47
+|string
+
+|===
+
+=== Rights properties
+
+[%autowidth,options="header"]
+|===
+|Property|Description|Data type
+
+|copyrightholder
+|The person or organisation claiming the intellectual property for the content.
+|string
+
+|copyrightnotice
+|Any necessary copyright notice for claiming the intellectual property for the
+content.
+|string
+
+|usageterms
+|A natural-language statement about the usage terms pertaining to the content.
+|string
+|===
+
+=== Editorial properties
+
+Properties representing the actual story that will be shown to the audience.
+
+[%autowidth,options="header"]
+|===
+|Property|Description|Data type
+
+|headline
+|A brief and snappy introduction to the content, designed to catch the reader's
+attention
+|string
+
+|byline
+|The name(s) of the creator(s) of the content
+|string
+
+|body___<type>__
+|The textual content of the news object. The string appended to body_ in the
+property name should reflect the format of the text, for example `body_text` or
+`body_html`. +
+Multiple body_* properties are allowed.
+|string
+
+|description___<type>__
+|A free-form textual description of the content of the item. The string appended
+to description_ in the property name should reflect the format of the text, for
+example `description_text` or `description_html`. +
+Multiple description_* properties are allowed.
+|string
+|===
+
+=== Metadata properties
+
+ninjs allows content to be marked up with one simple string-based metadata
+property `located`, plus several rich metadata properties that can link to
+pre-defined controlled vocabularies describing people, organisations, places
+subjects, objects and events.
+
+[cols="1,3a,1",options="header"]
+|===
+|Property name|Description|Data type
+
+|located
+|The name of the location from which the content originates
+|string
+
+|person
+|An individual human being. +
+This property is an array of objects with the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of a person
+!string
+
+!rel
+!The relationship of the content of the news object to the person
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the person
+!URI
+
+!code
+!The code for the person in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+|organisation
+|An administrative and functional structure which may act as as a business, as a political party or not-for-profit party +
+This property is an array of objects with the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the organisation
+!string
+
+!rel
+!The relationship of the content of the news object to the organisation
+!string
+
+!scheme
+!The identifier of a scheme (= controlled vocabulary) which includes a code for the organisation
+!URI
+
+!code
+!The code for the organisation in a scheme (= controlled vocabulary) which is identified by the scheme property
+!string
+
+!symbols
+!Symbols used for a finanical instrument linked to the organisation at a specific market place. +
+Array of objects with the properties: +
+`ticker`: Ticker symbol used for the financial instrument (string)
+`exchange`: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)
+!===
+|array
+
+|place
+|A named location. +
+This property is an array of objects with the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the place
+!string
+
+!rel
+!The relationship of the content of the news object to the place
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the place
+!URI
+
+!code
+!The code for the place in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+
+!geometry___<type>__
+!An object holding geo data of this place. Could be of any relevant geo data JSON object definition.
+!object
+
+!===
+
+|array
+
+|subject
+|A concept with a relationship to the content. +
+This property is an array of objects with the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the subject
+!string
+
+!rel
+!The relationship of the content of the news object to the subject
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the subject
+!URI
+
+!code
+!The code for the subject in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+|event
+|Something which happens in a planned or unplanned manner. +
+This property is an array of objects with the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the event
+!string
+
+!rel
+!The relationship of the content of the news object to the event
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the event
+!URI
+
+!code
+!The code for the event in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+|object
+|Something material, excluding persons +
+This property is an array of objects with the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the object
+!string
+
+!rel
+!The relationship of the content of the news object to the object
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the object
+!URI
+
+!code
+!The code for the object in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+|===
+
+=== Renditions
+
+The `renditions` property is a wrapper for different renditions of non-textual
+content of the news object, such as images, videos or PDF documents.
+
+It contains a set of one or more keys, each with a name and an object as the
+value. The name can be any text or numbers, and should represent a given
+rendition type such as "thumbnail" or "preview". The object should include the
+below properties.
+
+==== Properties of renditions
+
+[%autowidth,options="header"]
+|===
+|Property name|Description|Data type
+|href|The URL for accessing the rendition as a resource|URI
+|mimetype|A MIME type which applies to the rendition|string
+|title|A title for the link to the rendition resource|string
+|height|For still and moving images: the height of the display area measured in pixels|number
+|width|For still and moving images: the width of the display area measured in pixels|number
+|sizeinbytes|The size of the rendition resource in bytes|number
+|===
+
+==== Renditions example
+
+[source,json]
+----
+include::includes/examples/002_renditions_example.json[]
+----
+
+=== Associations
+
+The `associations` property contains a set of key/value pairs where the key is
+the name of the association and the value is any valid ninjs object.
+
+This can be used to link news items together, or to associate images with a text
+story, for example.
+
+==== Associations example
+
+This example shows a press release. The body of the story is in the `body_xhtml`
+property. A logo and an image are associated to the story. Both the logo and the
+image have two renditions, a "thumbnail" and a "highres" version.
+
+[source,json]
+----
+include::includes/examples/003_associations_example.json[]
+----
+
+== ninjs Examples
+
+=== Text-only examples
+
+==== A simple text article
+
+Key features:
+
+* A `uri` must be present as an identifier for this content
+* `type` indicates that the generic content type is 'text'
+* `byline` and `headline` are typical text news metadata
+* The text of article itself is represented by `body`, in two format variants:
+plain text (`body_text`) and HTML (`body_html`).
+
+[source,json]
+----
+include::includes/examples/004_simple_text_article.json[]
+----
+
+==== A more complex example
+
+* Metadata about the content are added to the example above.
+* `person`, `place` and `organisation` employ a structure which provides human
+readable names for the entity but also machine readable identifiers by the
+`scheme` and `code` properties. 
+
+[source,json]
+----
+include::includes/examples/005_complex_text_article.json[]
+----
+
+==== More Examples on Github
+
+You can find more examples of ninjs representations of text-based news releases
+in the
+https://github.com/iptc/newsinjson/tree/master/examples[ninjs Github
+repository].
+
+=== Photo-only example
+
+A simple photo-only example.
+
+Key features:
+
+* A "uri" must be present
+* "type" indicates that the generic content type is 'a picture'
+* "byline", "headline", "description" (in plain text and HTML format) are
+typical photo metadata
+* The image itself is represented by "renditions". Two are available in this
+example: a main version and a small version.
+
+[source,json]
+----
+include::includes/examples/006_photo_only.json[]
+----
+
+=== Multimedia example
+
+Example for multimedia content.
+
+The ninjs object includes:
+
+* text news as main object
+* a main picture illustrating the text news (in ninjs terms: associated with the text news)
+* a portrait of a person the text news is about (also: associated)
+
+[source,json]
+----
+include::includes/examples/007_multimedia.json[]
+----
+
+== ninjs Best Practices and How Tos
+
+Here we describe some best practices for working with ninjs in your own organisation.
+
+=== Best Practice for Naming of Properties
+
+ninjs allows users to create their own names of extensible properties. Here we
+describe some best practices for choosing your own names.
+
+body_::
+The body is the main text of the news release. The ninjs document can
+contain multiple body elements, each representing the same text but in different
+formats. Body elements always begin with the name "`body_`", with a tag appended
+to the name. This tag should describe the format of the text in the element.
++
+* You should always include a plain text body element, including the body text
+stripped of all formatting: `body_text`
+* For additional body elements, choose names that can be easily recognised by
+automated processors, such as `body_html` and `body_xhtml`
+WARNING: You should *avoid* body element names that do not describe the format of the
+body text being represented, such as `body_format1` or `body_0`.
+
+description_::
+A description is a free-form textual description of the content of
+the item. For example, a description can be used to add additional information
+about a headline associated with a photograph. Multiple description elements can
+be used to represent the same description in different formats.
++
+Description elements always begin with the name "`description_`", with a tag
+appended to the name. This tag should describe the format of the text in the
+element.
++
+When using the description_ element:
++
+* Always include a plain text description element: `description_text`
+* For additional description elements, choose names that can be easily recognised
+by automated processors, such as `description_html` and `description_xhtml`
+* You should *avoid* description element names that do not describe the format of the
+description text being represented, such as `description_myformat` or
+`description_0 renditions`.
+
+renditions::
+The renditions object is a wrapper for different versions of non-textual content
+of the news object. This is where photographs and multimedia items will be
+found.
++
+Each object in the renditions object is named. Any name can be chosen for these
+objects, but the name must contain only alphanumeric characters of the ASCII
+character set. 
+
+// TODO: more guidance on a naming strategy reflecting e.g. ranking and more.
+
+associations::
+The associations object is a wrapper which contains news objects (other ninjs
+documents) that are associated with this news object. Any name can be chosen
+for these objects, but the name must contain only alphanumeric characters of
+the ASCII character set.
+
+=== How to escape XML content for inclusion in JSON objects
+
+JSON string values cannot contain characters: `"`, `\`, and various control
+characters like tabs. Therefore, we need to escape these characters in our
+content when marshaling data into JSON objects. We have provided an XSL
+stylesheet to do this using XSL.
+
+The XSL Template at
+https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt
+extracts the body of an NITF document (NITF samples are available from
+https://iptc.org/standards/nitf/using-nitf/) and creates a simple JSON object.
+The resulting object is not yet a valid ninjs object, however it will be valid
+JSON.
+
+=== How to create provider-specific extensions
+
+In some cases, your news releases may have content that does not fit into the
+objects that are defined in the ninjs standard. In these cases, you should
+extend (and rename) the IPTC ninjs schema.
+
+To do this, do the following:
+
+. make a copy of the schema file
+. change the URL of the "id" property of IPTC's ninjs 1.0 ...
++
+[source,json]
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.1.json#",
+  "type" : "object",
+  ...
++
+... to your example.com-ninjs 0.1
++
+[source,json]
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
+  "type" : "object",
+  ... 
++
+. add your own properties to your copy of the schema. For example, to add a
+sub-headline:
++
+[source,json]
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
+  "type" : "object",
+  ...
+  "headline" : {
+    "description" : "A brief and snappy introduction to the content, designed to
+    catch the reader's attention",
+    "type" : "string"
+  },
+  "subhead" : {
+    "description" : "An additional line supporting the snappy introduction to
+    the content",
+    "type" : "string"
+  },
+  ...
++
+. change the reference from the "associations" property definition
+(`"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.1.json#"`) to point to
+your new schema:
+[source,json]
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
+  "type" : "object",
+  ...
+  "associations" : {
+    "description" : "Content of news objects which are associated
+    with this news object",
+    "type" : "object",
+    "additionalProperties" : false,
+    "patternProperties" : {
+      "^[a-zA-Z0-9]+" :  {
+        "$ref": "http://www.example.com/e-ninjs-schema_0.1.json#"
+      }
+    }
+  }
+  ...
+}
++
+. save your new schema to a location where users of the schema can access it,
+which should be the same URL used for the "id" property and the "$ref" property
+of the "associations" definition (this is used for validating that an associated
+object is a complete ninjs document and this is how the schema knows to
+recursively validate associated objects):
++
+[source,json]
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
+  "type" : "object",
+  ...
+}
++
+the file should be saved to: http://www.example.com/e-ninjs-schema_0.1.json
+
+This is an example ninjs document that includes a sub-headline in an extended
+ninjs document:
+
+[source,json]
+----
+include::includes/examples/008_extension.json[]
+----
+
+=== How to validate objects
+
+==== Validating a ninjs document
+
+JSON Schema is the de-facto standard for validating JSON documents. The IPTC
+maintains schemas for each version of the ninjs standard. These schemas can be
+used to validate ninjs documents. 
+
+This is the latest IPTC ninjs schema available for download:
+https://iptc.org/std/ninjs/ninjs-schema_1.1.json
+
+==== Sample Code
+
+Sample code demonstrating how to validate ninjs documents, along with example
+ninjs documents, can be found in the https://github.com/iptc/newsinjson[IPTC newsinjson github repository].
+
+==== Online Validator
+
+You can also validate ninjs documents by pasting the schema and document into
+this online validator, which is built on the json-schema-validator library:
+
+http://json-schema-validator.herokuapp.com
+
+== Mapping between ninjs and NewsML-G2
+
+ninjs and NewsML-G2 are not intended to be equivalent to each other, but they
+both adhere to the IPTC News Architecture, so they share many properties.
+
+Here is a summary of the properties shared by ninjs and NewsML-G2:
+
+[%autowidth,options="header"]
+|===
+|ninjs property name|NewsML-G2 equivalent
+|uri|nar:newsItem@guid
+|version|nar:newsItem@version
+|copyrightholder|nar:copyrightHolder
+|copyrightnotice|nar:copyrightnotice
+|usageterms|nar:usageTerms
+|type|nar:itemClass
+|versioncreated|nar:versionCreated
+|embargoed|nar:embargoed
+|pubstatus|nar:pubStatus
+|profile|nar:profile
+|associations|nar:link
+|urgency|nar:urgency
+|located|nar:located
+|infosources|nar:infoSource
+|byline|nar:creator
+|language|nar:language
+|subject|nar:subject
+|person|nar:subject
+|place|nar:subject
+|object|nar:subject
+|headline|nar:headline
+|byline|nar:by
+|description_*|nar:description
+|@contenttype|nar:inlineData
+|renditions|nar:remoteContent
+|renditions@href|nar:remoteContent@ref
+|renditions@mimetype|nar:remoteContent@contenttype
+|renditions@height|nar:remoteContent@height
+|renditions@width|nar:remoteContent@width
+|===
+
+== ninjs Revision History
+
+=== ninjs 1.0
+
+https://iptc.org/std/ninjs/ninjs-schema_1.0.json[Version 1.0 of the ninjs
+schema] was approved by the IPTC Standards Committee on 23 October 2013.
+
+=== ninjs 1.1
+
+https://iptc.org/std/ninjs/ninjs-schema_1.1.json[Version 1.1 of the ninjs
+schema] was made available in March 2014.
+
+Version 1.1 moved to JSON Schema version 4, and added the `urgency`,
+`usageterms` and `geometry_*` properties.
+
+An error in the association reference URI was corrected in September 2017.
+
+== Additional Resources
+
+=== On the Web
+
+The IPTC web site www.iptc.org has a wealth of resources for implementers. The
+page www.iptc.org/standards summarises all of the IPTC's standards and provides
+links to further resources for each, including ninjs, NewsML-G2, SportsML-G2 and
+RightsML.
+
+There are also user groups at Groups.io for all those seeking answers to
+questions about ninjs or other IPTC standards, and for those who would like to
+participate in development work:
+
+https://groups.io/g/iptc-ninjs/ is the public group for discussing ninjs and
+other representations of news content in the JSON format.
+
+https://groups.io/g/iptc-newsml-g2/ is the public group for NewsML-G2 and Events in NewsML-G2 topics.
+
+Staff from IPTC Member organisations are welcome to join the 
+https://groups.io/g/iptc-news-in-json-dev[members-only discussion list for the
+ninjs development team].
+
+=== Join the IPTC
+
+The IPTC welcomes new members. Membership is the backbone of the IPTC, and
+levels vary for both organisations and individuals. Additionally, several
+"working parties" and "working groups" focus on specific topic areas and
+standards. IPTC also hosts two face-to-face meetings a year around the globe,
+where its working parties discuss and develop their ideas to support information
+exchange and the rapid innovation of media.
+
+To find out more, visit https://www.iptc.org/participate
