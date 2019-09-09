@@ -427,14 +427,14 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="book toc2 toc-left">
+<body class="html5 toc2 toc-left">
 <div id="header">
 <h1><span class="image"><img src="./images/iptc_sv_gradient_70x70.jpg" alt="IPTC logo"></span> NinJS User Guide</h1>
 <div class="details">
 <span id="author" class="author">IPTC News in JSON Working Group</span><br>
 <span id="email" class="email"><a href="mailto:office@iptc.org">office@iptc.org</a></span><br>
 <span id="revnumber">covers version 1.1</span>
-<br><span id="revremark">Revised 2019-08-27</span>
+<br><span id="revremark">Revised 2019-09-09</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">ninjs User Guide</div>
@@ -482,6 +482,18 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 </ul>
 </li>
 <li><a href="#_mapping_between_ninjs_and_newsml_g2">6. Mapping between ninjs and NewsML-G2</a></li>
+<li><a href="#_ninjs_revision_history">7. ninjs Revision History</a>
+<ul class="sectlevel2">
+<li><a href="#_ninjs_1_0">7.1. ninjs 1.0</a></li>
+<li><a href="#_ninjs_1_1">7.2. ninjs 1.1</a></li>
+</ul>
+</li>
+<li><a href="#_additional_resources">8. Additional Resources</a>
+<ul class="sectlevel2">
+<li><a href="#_on_the_web">8.1. On the Web</a></li>
+<li><a href="#_join_the_iptc">8.2. Join the IPTC</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -526,7 +538,7 @@ ninjs development team</a>.</p>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Data interchange - such as via APIs</p>
+<p><strong>Data interchange - such as via APIs</strong></p>
 <div class="ulist">
 <ul>
 <li>
@@ -536,13 +548,14 @@ determined by a given provider.</p>
 </li>
 <li>
 <p>ninjs allows the provider to indicate whether there are more properties
-available, if the recipient would like to request more.</p>
+available, if the recipient would like to request more.
+<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Data at rest - such as in search engines or content management systems</p>
+<p><strong>Data at rest - such as in search engines or content management systems</strong></p>
 <div class="ulist">
 <ul>
 <li>
@@ -602,19 +615,7 @@ by an API call.</p>
   "versioncreated" : "2013-07-09T10:37:00Z",
   "byline" : "Paulo Santalucia and Frances d'Emilio",
   "headline" : "Captain of wrecked cruise ship on trial in Italy",
-  "body_text" : "GROSSETO, Italy (AP) -- The trial of the captain of the
-  shipwrecked Costa Concordia cruise liner has begun in a theater converted into
-  a courtroom in Tuscany to accommodate all the survivors and relatives of the
-  32 victims who want to see justice carried out in the 2012 tragedy. The sole
-  defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping
-  into a back door, made no comment to reporters as he arrived for his trial
-  Tuesday on charges of multiple manslaughter, abandoning ship and causing the
-  shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters
-  that, as expected, the judge was postponing the hearing due to an eight-day
-  nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to
-  eventually testify. Many of them are expected to be from among the 4,200
-  passengers and crew aboard the ship that struck a jagged reef off Giglio, took
-  on water and capsized. Schettino has denied wrongdoing."
+  "body_text" : "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing."
 }</code></pre>
 </div>
 </div>
@@ -763,8 +764,10 @@ required, all others are optional.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">representationtype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the completeness of this representation of a news
-item</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the completeness of this representation of a news item.
+For a full document representation, the value should be <code>complete</code>. For a partial
+representation, for example a short extract provided as the results of an API
+call, the value <code>incomplete</code> should be used.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>complete</code><br>
 <code>incomplete</code></p></td>
@@ -772,18 +775,18 @@ item</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for the kind of content of this news object. This can be any
-string but we suggest something identifying the content such as "text-only"
-or "text-photo"</p></td>
+string but we suggest something identifying the content such as <code>"text-only"</code>
+or <code>"text-photo"</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the news object which is identified by the uri property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the news object which is identified by the uri property.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">versioncreated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date and time when this version of the news object was created</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The date and time when this version of the news object was created.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
 </tr>
 <tr>
@@ -794,7 +797,7 @@ If absent, this object is not embargoed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pubstatus</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The publishing status of the news object, its value is <strong>usable</strong> by default.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The publishing status of the news object, its value is <code>usable</code> by default.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>usable</code><br>
 <code>withheld</code><br>
@@ -1264,7 +1267,9 @@ below properties.</p>
 <h4 id="_renditions_example">3.5.2. Renditions example</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">  ...
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "uri": "renditions-example",
+  "body_text": "...",
   "renditions": {
     "thumbnail": {
       "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/2/dell_blue_rgb.jpg",
@@ -1279,7 +1284,9 @@ below properties.</p>
       "height": 432,
       "width": 432,
       "sizeinbytes": 33116
-    }</code></pre>
+    }
+  }
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1309,7 +1316,6 @@ image have two renditions, a "thumbnail" and a "highres" version.</p>
   "mimetype": "application/x-resource+json;level=composite",
   "version": "1",
   "versioncreated": "2013-05-16T04:01:00Z",
-  [ ... ]
   "headline": "Dell Redefines Workstation Computing Boundaries with Smallest Tower and Most Powerful Rack Workstations",
   "body_xhtml": " [ ... ]",
   "associations": {
@@ -1319,10 +1325,8 @@ image have two renditions, a "thumbnail" and a "highres" version.</p>
       "versioncreated": "2013-05-16T04:01:00Z",
       "renditions": {
         "thumbnail": {
-          [ ... ]
         },
         "highres": {
-          [ ... ]
         }
       }
     },
@@ -1332,10 +1336,8 @@ image have two renditions, a "thumbnail" and a "highres" version.</p>
       "versioncreated": "2013-05-16T04:01:00Z",
       "renditions": {
         "thumbnail": {
-          [ ... ]
         },
         "highres": {
-          [ ... ]
         }
       }
     }
@@ -1382,33 +1384,8 @@ plain text (<code>body_text</code>) and HTML (<code>body_html</code>).</p>
   "versioncreated" : "2013-07-09T10:37:00Z",
   "byline" : "Paulo Santalucia and Frances d'Emilio",
   "headline" : "Captain of wrecked cruise ship on trial in Italy",
-  "body_text" : "GROSSETO, Italy (AP) -- The trial of the captain of the
-  shipwrecked Costa Concordia cruise liner has begun in a theater converted into
-  a courtroom in Tuscany to accommodate all the survivors and relatives of the
-  32 victims who want to see justice carried out in the 2012 tragedy. The sole
-  defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into
-  a back door, made no comment to reporters as he arrived for his trial Tuesday
-  on charges of multiple manslaughter, abandoning ship and causing the shipwreck
-  near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as
-  expected, the judge was postponing the hearing due to an eight-day nationwide
-  lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually
-  testify. Many of them are expected to be from among the 4,200 passengers and
-  crew aboard the ship that struck a jagged reef off Giglio, took on water and
-  capsized. Schettino has denied wrongdoing.",
-  "body_xhtml" : "&lt;p&gt;GROSSETO, Italy (AP) -- The trial of the captain of the
-  shipwrecked Costa Concordia cruise liner has begun in a theater converted into
-  a courtroom in Tuscany to accommodate all the survivors and relatives of the
-  32 victims who want to see justice carried out in the 2012 tragedy.&lt;/p&gt;
-  &lt;p&gt;The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and
-  slipping into a back door, made no comment to reporters as he arrived for his
-  trial Tuesday on charges of multiple manslaughter, abandoning ship and causing
-  the shipwreck near the island of Giglio.&lt;/p&gt;
-  &lt;p&gt;His lawyer, Domenico Pepe, told reporters that, as expected, the judge was
-  postponing the hearing due to an eight-day nationwide lawyers' strike.&lt;/p&gt;
-  &lt;p&gt;Pepe said some 1,000 witnesses are expected to eventually testify. Many of
-  them are expected to be from among the 4,200 passengers and crew aboard the
-  ship that struck a jagged reef off Giglio, took on water and capsized.
-  Schettino has denied wrongdoing.&lt;/p&gt;"
+  "body_text" : "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.",
+  "body_xhtml" : "&lt;p&gt;GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.&lt;/p&gt; &lt;p&gt;The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.&lt;/p&gt; &lt;p&gt;His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.&lt;/p&gt; &lt;p&gt;Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized.  Schettino has denied wrongdoing.&lt;/p&gt;"
 }</code></pre>
 </div>
 </div>
@@ -1469,33 +1446,8 @@ readable names for the entity but also machine readable identifiers by the
   "byline" : "Paulo Santalucia and Frances d'Emilio",
   "located" : "Grossetto, Italy",
   "headline" : "Captain of wrecked cruise ship on trial in Italy",
-  "body_text" : "GROSSETO, Italy (AP) -- The trial of the captain of the
-  shipwrecked Costa Concordia cruise liner has begun in a theater converted into
-  a courtroom in Tuscany to accommodate all the survivors and relatives of the
-  32 victims who want to see justice carried out in the 2012 tragedy. The sole
-  defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping
-  into a back door, made no comment to reporters as he arrived for his trial
-  Tuesday on charges of multiple manslaughter, abandoning ship and causing the
-  shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters
-  that, as expected, the judge was postponing the hearing due to an eight-day
-  nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to
-  eventually testify. Many of them are expected to be from among the 4,200
-  passengers and crew aboard the ship that struck a jagged reef off Giglio, took
-  on water and capsized. Schettino has denied wrongdoing.",
-  "body_xhtml" : "&lt;p&gt;GROSSETO, Italy (AP) -- The trial of the captain of the
-  shipwrecked Costa Concordia cruise liner has begun in a theater converted into
-  a courtroom in Tuscany to accommodate all the survivors and relatives of the
-  32 victims who want to see justice carried out in the 2012 tragedy.&lt;/p&gt;
-  &lt;p&gt;The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and
-  slipping into a back door, made no comment to reporters as he arrived for his
-  trial Tuesday on charges of multiple manslaughter, abandoning ship and causing
-  the shipwreck near the island of Giglio.&lt;/p&gt;
-  &lt;p&gt;His lawyer, Domenico Pepe, told reporters that, as expected, the judge was
-  postponing the hearing due to an eight-day nationwide lawyers' strike.&lt;/p&gt;
-  &lt;p&gt;Pepe said some 1,000 witnesses are expected to eventually testify. Many of
-  them are expected to be from among the 4,200 passengers and crew aboard the
-  ship that struck a jagged reef off Giglio, took on water and capsized.
-  Schettino has denied wrongdoing.&lt;/p&gt;"
+  "body_text" : "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.",
+  "body_xhtml" : "&lt;p&gt;GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.&lt;/p&gt; &lt;p&gt;The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.&lt;/p&gt; &lt;p&gt;His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.&lt;/p&gt; &lt;p&gt;Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.&lt;/p&gt;"
 }</code></pre>
 </div>
 </div>
@@ -1544,17 +1496,8 @@ example: a main version and a small version.</p>
   "versioncreated" : "2013-07-08T08:12:00Z",
   "byline" : "Paulo Santalucia",
   "headline" : "Costa Concordia cruise ship",
-  "description_text": "The Costa Concordia cruise ship lies on its side in the
-  waters of the Tuscan island of Giglio, Italy, Monday, July 8, 2013. The luxury
-  cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending
-  water pouring in through a 160-foot (50-meter) gash in the hull and forcing
-  the evacuation of some 4,200 people from the listing vessel early.",
-  "description_xhtml": "&lt;p&gt;The Costa Concordia cruise ship lies on its side in
-  the waters of the Tuscan island of Giglio, Italy,&lt;br /&gt;
-  Monday, July 8, 2013. The luxury cruise ship ran aground off the coast of
-  Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot
-  (50-meter) gash in the hull and forcing the evacuation of some 4,200 people
-  from the listing vessel early.&lt;/p&gt;",
+  "description_text": "The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy, Monday, July 8, 2013. The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early.",
+  "description_xhtml": "&lt;p&gt;The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy,&lt;br /&gt; Monday, July 8, 2013. The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early.&lt;/p&gt;",
   "renditions" : {
     "main" : {
       "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904edbb3a-big.jpg",
@@ -1638,33 +1581,8 @@ example: a main version and a small version.</p>
   "byline" : "Paulo Santalucia and Frances d'Emilio",
   "located" : "Grossetto, Italy",
   "headline" : "Captain of wrecked cruise ship on trial in Italy",
-  "body_text" : "GROSSETO, Italy (AP) -- The trial of the captain of the
-  shipwrecked Costa Concordia cruise liner has begun in a theater converted into
-  a courtroom in Tuscany to accommodate all the survivors and relatives of the
-  32 victims who want to see justice carried out in the 2012 tragedy. The sole
-  defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping
-  into a back door, made no comment to reporters as he arrived for his trial
-  Tuesday on charges of multiple manslaughter, abandoning ship and causing the
-  shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters
-  that, as expected, the judge was postponing the hearing due to an eight-day
-  nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to
-  eventually testify. Many of them are expected to be from among the 4,200
-  passengers and crew aboard the ship that struck a jagged reef off Giglio, took
-  on water and capsized. Schettino has denied wrongdoing.",
-  "body_xhtml" : "&lt;p&gt;GROSSETO, Italy (AP) -- The trial of the captain of the
-  shipwrecked Costa Concordia cruise liner has begun in a theater converted into
-  a courtroom in Tuscany to accommodate all the survivors and relatives of the
-  32 victims who want to see justice carried out in the 2012 tragedy.&lt;/p&gt;
-  &lt;p&gt;The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and
-  slipping into a back door, made no comment to reporters as he arrived for his
-  trial Tuesday on charges of multiple manslaughter, abandoning ship and causing
-  the shipwreck near the island of Giglio.&lt;/p&gt;
-  &lt;p&gt;His lawyer, Domenico Pepe, told reporters that, as expected, the judge was
-  postponing the hearing due to an eight-day nationwide lawyers' strike.&lt;/p&gt;
-  &lt;p&gt;Pepe said some 1,000 witnesses are expected to eventually testify. Many of
-  them are expected to be from among the 4,200 passengers and crew aboard the
-  ship that struck a jagged reef off Giglio, took on water and capsized.
-  Schettino has denied wrongdoing.&lt;/p&gt;",
+  "body_text" : "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.",
+  "body_xhtml" : "&lt;p&gt;GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.&lt;/p&gt; &lt;p&gt;The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.&lt;/p&gt; &lt;p&gt;His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.&lt;/p&gt; &lt;p&gt;Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.&lt;/p&gt;",
   "associations" : {
     "mainpic" : {
       "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
@@ -1703,18 +1621,8 @@ example: a main version and a small version.</p>
       ],
       "byline" : "Paulo Santalucia",
       "headline" : "Costa Concordia cruise ship",
-      "description_text": "The Costa Concordia cruise ship lies on its side in
-      the waters of the Tuscan island of Giglio, Italy, Monday, July 8, 2013.
-      The luxury cruise ship ran aground off the coast of Tuscany on Jan 13,
-      2012, sending water pouring in through a 160-foot (50-meter) gash in the
-      hull and forcing the evacuation of some 4,200 people from the listing
-      vessel early.",
-      "description_xhtml": "&lt;p&gt;The Costa Concordia cruise ship lies on its side
-      in the waters of the Tuscan island of Giglio, Italy,&lt;/ br&gt; Monday, July 8,
-      2013. The luxury cruise ship ran aground off the coast of Tuscany on Jan
-      13, 2012, sending water pouring in through a 160-foot (50-meter) gash in
-      the hull and forcing the evacuation of some 4,200 people from the listing
-      vessel early. &lt;/p&gt;",
+      "description_text": "The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy, Monday, July 8, 2013.  The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early.",
+      "description_xhtml": "&lt;p&gt;The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy,&lt;/ br&gt; Monday, July 8, 2013. The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early. &lt;/p&gt;",
       "renditions" : {
         "main" : {
           "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904edbb3a-big.jpg",
@@ -1768,8 +1676,7 @@ example: a main version and a small version.</p>
         }
       ],
       "byline" : "Paulo Santalucia", "headline" : "Francesco Schettino at court",
-      "description_text" : "Francesco Schettino the captain of the Costa
-      Concordia cruise ship at court in Grossetto, Italy, on 9 July 2013",
+      "description_text" : "Francesco Schettino the captain of the Costa Concordia cruise ship at court in Grossetto, Italy, on 9 July 2013",
       "renditions" : {
         "main" : {
           "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904xyz000-big.jpg",
@@ -1870,10 +1777,11 @@ found.</p>
 objects, but the name must contain only alphanumeric characters of the ASCII
 character set.</p>
 </div>
-<div class="paragraph">
-<p>TODO: more guidance on a naming strategy reflecting e.g. ranking and more.</p>
-</div>
 </dd>
+</dl>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">associations</dt>
 <dd>
 <p>The associations object is a wrapper which contains news objects (other ninjs
@@ -1921,8 +1829,8 @@ extend (and rename) the IPTC ninjs schema.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-03/schema#",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.0.json#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.1.json#",
   "type" : "object",
   ...</code></pre>
 </div>
@@ -1934,7 +1842,7 @@ extend (and rename) the IPTC ninjs schema.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-03/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
   ...</code></pre>
@@ -1950,7 +1858,7 @@ sub-headline:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-03/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
   ...
@@ -1970,12 +1878,12 @@ sub-headline:</p>
 </li>
 <li>
 <p>change the reference from the "associations" property definition
-(<code>"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.0.json#"</code>) to point to
+(<code>"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.1.json#"</code>) to point to
 your new schema:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-03/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
   ...
@@ -2004,7 +1912,7 @@ recursively validate associated objects):</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-03/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
   ...
@@ -2030,19 +1938,7 @@ ninjs document:</p>
   "byline": "Paulo Santalucia and Frances d'Emilio",
   "headline": "Captain of wrecked cruise ship on trial in Italy",
   "subhead": "Stranded passengers watch with interest",
-  "body_text": "GROSSETO, Italy (AP) -- The trial of the captain of the
-  shipwrecked Costa Concordia cruise liner has begun in a theater converted into
-  a courtroom in Tuscany to accommodate all the survivors and relatives of the
-  32 victims who want to see justice carried out in the 2012 tragedy. The sole
-  defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping
-  into a back door, made no comment to reporters as he arrived for his trial
-  Tuesday on charges of multiple manslaughter, abandoning ship and causing the
-  shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters
-  that, as expected, the judge was postponing the hearing due to an eight-day
-  nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to
-  eventually testify. Many of them are expected to be from among the 4,200
-  passengers and crew aboard the ship that struck a jagged reef off Giglio, took
-  on water and capsized. Schettino has denied wrongdoing."
+  "body_text": "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing."
 }</code></pre>
 </div>
 </div>
@@ -2057,21 +1953,22 @@ maintains schemas for each version of the ninjs standard. These schemas can be
 used to validate ninjs documents.</p>
 </div>
 <div class="paragraph">
-<p>This is the latest IPTC ninjs schema available for download.</p>
+<p>This is the latest IPTC ninjs schema available for download:
+<a href="https://iptc.org/std/ninjs/ninjs-schema_1.1.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.1.json</a></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_sample_code">5.4.2. Sample Code</h4>
 <div class="paragraph">
 <p>Sample code demonstrating how to validate ninjs documents, along with example
-ninjs documents, can be found in the IPTC newsinjson github repository.</p>
+ninjs documents, can be found in the <a href="https://github.com/iptc/newsinjson">IPTC newsinjson github repository</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_online_validator">5.4.3. Online Validator</h4>
 <div class="paragraph">
 <p>You can also validate ninjs documents by pasting the schema and document into
-this online validator. It is built on the json-schema-validator library:</p>
+this online validator, which is built on the json-schema-validator library:</p>
 </div>
 <div class="paragraph">
 <p><a href="http://json-schema-validator.herokuapp.com" class="bare">http://json-schema-validator.herokuapp.com</a></p>
@@ -2221,6 +2118,83 @@ both adhere to the IPTC News Architecture, so they share many properties.</p>
 </tbody>
 </table>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_ninjs_revision_history">7. ninjs Revision History</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_ninjs_1_0">7.1. ninjs 1.0</h3>
+<div class="paragraph">
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.0.json">Version 1.0 of the ninjs
+schema</a> was approved by the IPTC Standards Committee on 23 October 2013.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ninjs_1_1">7.2. ninjs 1.1</h3>
+<div class="paragraph">
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.1.json">Version 1.1 of the ninjs
+schema</a> was made available in March 2014.</p>
+</div>
+<div class="paragraph">
+<p>Version 1.1 moved to JSON Schema version 4, and added the <code>urgency</code>,
+<code>usageterms</code> and <code>geometry_*</code> properties.</p>
+</div>
+<div class="paragraph">
+<p>An error in the association reference URI was corrected in September 2017.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_additional_resources">8. Additional Resources</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_on_the_web">8.1. On the Web</h3>
+<div class="paragraph">
+<p>The IPTC web site www.iptc.org has a wealth of resources for implementers. The
+page www.iptc.org/standards summarises all of the IPTC&#8217;s standards and provides
+links to further resources for each, including ninjs, NewsML-G2, SportsML-G2 and
+RightsML.</p>
+</div>
+<div class="paragraph">
+<p>There are also user groups at Groups.io for all those seeking answers to
+questions about ninjs or other IPTC standards, and for those who would like to
+participate in development work:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://groups.io/g/iptc-ninjs/" class="bare">https://groups.io/g/iptc-ninjs/</a> is the public group for discussing ninjs and
+other representations of news content in the JSON format.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://groups.io/g/iptc-newsml-g2/" class="bare">https://groups.io/g/iptc-newsml-g2/</a> is the public group for NewsML-G2 and Events in NewsML-G2 topics.</p>
+</div>
+<div class="paragraph">
+<p>Staff from IPTC Member organisations are welcome to join the
+<a href="https://groups.io/g/iptc-news-in-json-dev">members-only discussion list for the
+ninjs development team</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_join_the_iptc">8.2. Join the IPTC</h3>
+<div class="paragraph">
+<p>The IPTC welcomes new members. Membership is the backbone of the IPTC, and
+levels vary for both organisations and individuals. Additionally, several
+"working parties" and "working groups" focus on specific topic areas and
+standards. IPTC also hosts two face-to-face meetings a year around the globe,
+where its working parties discuss and develop their ideas to support information
+exchange and the rapid innovation of media.</p>
+</div>
+<div class="paragraph">
+<p>To find out more, visit <a href="https://www.iptc.org/participate" class="bare">https://www.iptc.org/participate</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. The provider can indicate that more properties are available using the <code>representationtype: "incomplete"</code> construct.
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">

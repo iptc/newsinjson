@@ -1,0 +1,25 @@
+{
+  "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
+  "type" : "picture",
+  "versioncreated" : "2013-07-08T08:12:00Z",
+  "byline" : "Paulo Santalucia",
+  "headline" : "Costa Concordia cruise ship",
+  "description_text": "The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy, Monday, July 8, 2013. The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early.",
+  "description_xhtml": "<p>The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy,<br /> Monday, July 8, 2013. The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early.</p>",
+  "renditions" : {
+    "main" : {
+      "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904edbb3a-big.jpg",
+      "mimetype": "image/jpg",
+      "title" : "Mid Resolution",
+      "height" : 281,
+      "width" : 429
+    },
+    "small" : {
+      "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904edbb3a-small.jpg",
+      "mimetype": "image/jpg",
+      "title" : "Low Resolution",
+      "height" : 117,
+      "width" : 179
+    }
+  }
+}
