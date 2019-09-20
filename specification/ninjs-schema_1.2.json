@@ -115,7 +115,7 @@
         },
         "ednote": {
             "title": "Editorial note",
-            "description": "A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user. (Added in version 1.2 from issue #6.)",
+            "description": "A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user. (Added in version 1.2 from issue #6.) . ednote: nar:edNote",
             "format": "string"
         },
         "language": {
@@ -343,8 +343,8 @@
             }
         },
         "infosource": {
-             "title": "Info source",
-            "description": "A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. (Added in version 1.2 according to issue #15.)",
+            "title": "Info source",
+            "description": "A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. (Added in version 1.2 according to issue #15.) .    infosource:  nar:infoSource",
             "type": "array",
             "items": {
                 "type": "object",
