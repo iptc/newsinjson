@@ -65,7 +65,7 @@
         },
         "firstcreated": {
             "title": "First created",
-            "description": "Indicates when the first version of the item was created. (Added in version 1.2 from issue #5)",
+            "description": "Indicates when the first version of the item was created. (Added in version 1.2 from issue #5). nar:firstCreated",
             "type": "string",
             "format": "date-time"
         },
