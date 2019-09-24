@@ -1,0 +1,17 @@
+{
+    "uri": "043_person_multiple",
+    "person": [
+        {
+            "name" : "Francesco Schettino",
+            "rel" : "about",
+            "scheme" : "http://www.wikidata.org/entity/",
+            "code" : "Q4421821"
+        },
+        {
+            "name" : "Francesca Schiavone",
+            "rel" : "about",
+            "scheme" : "http://www.wikidata.org/entity/",
+            "code" : "Q188107"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "uri": "body_must_be_string",
+    "body_text": "Some text here is fine",
+    "body_html": "<p>HTML here is okay too</p>",
+    "body_invalid": {
+        "newprop1": "Any body property that isn't a string won't work"
+        "newprop2": 42
+    }
+}

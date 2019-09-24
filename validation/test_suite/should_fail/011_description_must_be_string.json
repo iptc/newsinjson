@@ -1,0 +1,9 @@
+{
+    "uri": "011_description_must_be_string",
+    "description_text": "Some text here is fine",
+    "description_html": "<p>HTML here is okay too</p>",
+    "description_invalid": {
+        "newprop1": "Any body property that isn't a string won't work"
+        "newprop2": 42
+    }
+}
