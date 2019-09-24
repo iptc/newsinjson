@@ -376,7 +376,7 @@
         },
         "title": {
             "title": "Title",
-            "description": "A short natural-language name for the item. (Added in version 1.2 according to issue #9). nar:?",
+            "description": "A short natural-language name for the item. (Added in version 1.2 according to issue #9). nar:itemMeta/title",
             "format": "string"
         },
         "byline": {
