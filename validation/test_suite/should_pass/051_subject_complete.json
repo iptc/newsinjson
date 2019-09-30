@@ -1,0 +1,11 @@
+{
+    "uri": "051_subject_complete",
+    "subject": [
+        {
+            "name" : "medical research",
+            "rel" : "about",
+            "scheme" : "http://cv.iptc.org/newscodes/mediatopic/",
+            "code" : "20000737"
+        }
+    ]
+}

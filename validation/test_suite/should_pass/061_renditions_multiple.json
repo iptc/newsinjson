@@ -1,0 +1,22 @@
+{
+  "uri": "061_renditions_multiple",
+  "description_text": "Description of image here",
+  "renditions": {
+    "thumbnail": {
+      "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/2/dell_blue_rgb.jpg",
+      "mimetype": "image/jpeg",
+      "title": "Thumbnail version of image",
+      "height": 70,
+      "width": 70,
+      "sizeinbytes": 4380
+    },
+    "highres": {
+      "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/5/dell_blue_rgb.jpg",
+      "mimetype": "image/jpeg",
+      "title": "High resolution version of image",
+      "height": 432,
+      "width": 432,
+      "sizeinbytes": 33116
+    }
+  }
+}
