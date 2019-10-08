@@ -402,12 +402,12 @@
         "charcount": {
             "title": "Character count",
             "description": "The total character count in the article excluding figure captions. (Added in version 1.2 according to issue #27.). nar:charcount",
-            "format": "number"
+            "type": "number"
         },
         "wordcount": {
             "title": "Word count",
             "description": "The total number of words in the article excluding figure captions. (Added in version 1.2 according to issue #27.). nar:wordcount",
-            "format": "number"
+            "type": "number"
         },
         "renditions": {
             "title": "Renditions",
