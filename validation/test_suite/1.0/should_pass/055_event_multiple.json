@@ -1,0 +1,13 @@
+{
+    "uri": "055_event_multiple",
+    "event": [
+        {
+            "name" : "IPTC Autumn Meeting 2019",
+            "rel" : "about"
+        },
+        {
+            "name" : "IPTC Spring Meeting 2020",
+            "rel" : "about"
+        }
+    ]
+}

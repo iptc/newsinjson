@@ -1,0 +1,4 @@
+{
+    "uri": "035_body_new",
+    "body_new": "We aren't limited to just text and HTML, we can have any property starting with body_ as long as it contains a string."
+}

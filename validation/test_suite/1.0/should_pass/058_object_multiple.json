@@ -1,0 +1,17 @@
+{
+    "uri": "058_object_multiple",
+    "object": [
+        {
+            "name" : "War and Peace (Tolstoy)",
+            "rel" : "about",
+            "scheme" : "http://id.loc.gov/resources/works/",
+            "code" : "15360937"
+        },
+        {
+            "name" : "A Tale of Two Cities (Dickens)",
+            "rel" : "about",
+            "scheme" : "https://lccn.loc.gov/",
+            "code" : "2011008636"
+        }
+    ]
+}

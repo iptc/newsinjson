@@ -1,0 +1,17 @@
+{
+    "uri": "049_place_multiple",
+    "place": [
+        {
+            "name" : "Ljubljana",
+            "rel" : "about",
+            "scheme" : "http://sws.geonames.org",
+            "code" : "3196359"
+        },
+        {
+            "name" : "Tallinn",
+            "rel" : "about",
+            "scheme" : "http://sws.geonames.org",
+            "code": "588409"
+        }
+    ]
+}

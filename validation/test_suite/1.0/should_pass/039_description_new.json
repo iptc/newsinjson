@@ -1,0 +1,6 @@
+{
+    "uri": "039_description_new",
+    "description_text": "Any text can go here",
+    "description_html": "<p>any HTML is fine even if it's invalid</b>",
+    "description_new": "Any other kind of description can go here"
+}

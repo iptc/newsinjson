@@ -1,0 +1,17 @@
+{
+    "uri": "046_organisation_multiple",
+    "organisation": [
+        {
+            "name" : "IPTC",
+            "rel" : "about",
+            "scheme" : "https://www.wikidata.org/entity/",
+            "code" : "Q1571780"
+        },
+        {
+            "name" : "World Wide Web Consortium",
+            "rel" : "about",
+            "scheme" : "http://www.wikidata.org/entity/",
+            "code" : "Q37033"
+        }
+    ]
+}

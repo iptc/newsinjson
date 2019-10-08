@@ -1,0 +1,11 @@
+{
+    "uri": "045_organisation_complete",
+    "organisation": [
+        {
+            "name" : "IPTC",
+            "rel" : "about",
+            "scheme" : "https://www.wikidata.org/entity/",
+            "code" : "Q1571780"
+        }
+    ]
+}
