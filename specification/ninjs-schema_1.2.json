@@ -40,12 +40,12 @@
             ]
         },
         "mimetype": {
-            "title": "Mimetype",
+            "title": "MIME type",
             "description": "A MIME type which applies to this news object. nar:contentType",
             "type": "string"
         },
         "representationtype": {
-            "title": "Representationtype",
+            "title": "Representation type",
             "description": "Indicates how complete this representation of a news item is. No mapping to nar. Specific for ninjs.",
             "type": "string",
             "enum": [
@@ -411,7 +411,7 @@
         },
         "renditions": {
             "title": "Renditions",
-            "description": "Wrapper for different renditions of non-textual content of the news object. nar:remoteContent",
+            "description": "Wrapper for different renditions of the news object. nar:remoteContent",
             "type": "object",
             "additionalProperties": false,
             "patternProperties": {
