@@ -1,0 +1,17 @@
+{
+    "uri": "052_subject_multiple",
+    "subject": [
+        {
+            "name" : "medical research",
+            "rel" : "about",
+            "scheme" : "http://cv.iptc.org/newscodes/mediatopic/",
+            "code" : "20000737"
+        },
+        {
+            "name" : "medical research",
+            "rel" : "about",
+            "scheme" : "http://www.wikidata.org/entity/",
+            "code" : "Q2752427"
+        }
+    ]
+}

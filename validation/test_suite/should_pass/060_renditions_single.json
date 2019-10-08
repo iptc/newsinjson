@@ -1,0 +1,13 @@
+{
+  "uri": "060_renditions_single",
+  "description_text": "Description of image here",
+  "renditions": {
+    "highres": {
+      "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/5/dell_blue_rgb.jpg",
+      "mimetype": "image/jpeg",
+      "height": 432,
+      "width": 432,
+      "sizeinbytes": 33116
+    }
+  }
+}
