@@ -2,7 +2,7 @@
 
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2018 International Press Telecommunications Council (IPTC)
+# Copyright (c) 2019 International Press Telecommunications Council (IPTC)
 #
 # The MIT License
 #
@@ -48,12 +48,12 @@ class TestNinJSSchema(unittest.TestCase):
         """
         import os
         self.current_path = os.path.dirname(os.path.realpath(__file__))
-        ninjs12_schema_filename = os.path.join(
+        ninjs10_schema_filename = os.path.join(
             self.current_path,
             '..',
             '..',
             'specification',
-            'ninjs-schema_1.2.json'
+            'ninjs-schema_1.0.json'
         )
         ninjs11_schema_filename = os.path.join(
             self.current_path,
@@ -62,32 +62,24 @@ class TestNinJSSchema(unittest.TestCase):
             'specification',
             'ninjs-schema_1.1.json'
         )
-        with open(ninjs12_schema_filename) as schemafile:
-            self.ninjs12_schema = json.load(schemafile)
+        with open(ninjs10_schema_filename) as schemafile:
+            self.ninjs10_schema = json.load(schemafile)
         with open(ninjs11_schema_filename) as schemafile:
             self.ninjs11_schema = json.load(schemafile)
         return super(TestNinJSSchema, self).__init__(*args, **kwargs)
 
-    def test_simplest_instance_ninjs11(self):
-        """
-        jsonschema.validate returns None if valid, raises an exception for
-        schema validation errors. So we use assertIsNone.
-        """
-        self.assertIsNone(jsonschema.validate({"uri": "test11"}, self.ninjs11_schema))
-
-    def test_simplest_instance_ninjs12(self):
-        """
-        jsonschema.validate returns None if valid, raises an exception for
-        schema validation errors. So we use assertIsNone.
-        """
-        self.assertIsNone(jsonschema.validate({"uri": "test12"}, self.ninjs12_schema))
+    # HELPER FUNCTIONS
 
     def get_files_in_folder(self, folder_name):
         folder_name = os.path.join(
                         self.current_path,
                         folder_name
                     )
-        return [os.path.join(folder_name, file) for file in os.listdir(folder_name) if file.endswith('.json')]
+        return [
+            os.path.join(folder_name, file)
+            for file in os.listdir(folder_name)
+            if file.endswith('.json')
+        ]
 
     def get_test_files_in_folder(self, test_folder_name):
         return self.get_files_in_folder(
@@ -134,37 +126,78 @@ class TestNinJSSchema(unittest.TestCase):
                         )
                     )
 
+    # TESTS START HERE
 
-    def test_all_passing_unit_test_files_against_strict_schema(self):
+    def test_simplest_instance_ninjs10(self):
         """
-        Run all files in TEST_FILES_FOLDER/should_pass against the schema.
+        jsonschema.validate returns None if valid, raises an exception for
+        schema validation errors. So we use assertIsNone.
+        """
+        self.assertIsNone(jsonschema.validate({"uri": "test10"}, self.ninjs10_schema))
+
+    def test_simplest_instance_ninjs11(self):
+        """
+        jsonschema.validate returns None if valid, raises an exception for
+        schema validation errors. So we use assertIsNone.
+        """
+        self.assertIsNone(jsonschema.validate({"uri": "test11"}, self.ninjs11_schema))
+
+    def test_all_passing_unit_test_files_against_10_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/should_pass against the 1.0 schema.
         They should all pass (ie they are all valid against the schema).
 
         We use "subTest" so we can see which file failed in test output.
         """
         self.folder_should_pass(
-            schema=self.ninjs12_schema,
-            folder_name='should_pass'
-        )
-        self.folder_should_pass(
-            schema=self.ninjs11_schema,
-            folder_name='should_pass'
+            schema=self.ninjs10_schema,
+            folder_name=os.path.join('1.0', 'should_pass')
         )
 
-    def test_failing_unit_test_files_against_strict_schema(self):
+    def test_failing_unit_test_files_against_10_schema(self):
         """
-        Run all files in TEST_FILES_FOLDER/should_fail against the schema.
+        Run files in TEST_FILES_FOLDER/should_fail against the 1.0 schema.
         They should all fail (ie they are all invalid in some way).
 
         We use "subTest" so we can see which file failed in test output.
         """
         self.folder_should_fail(
-            schema=self.ninjs12_schema,
-            folder_name='should_fail'
+            schema=self.ninjs10_schema,
+            folder_name=os.path.join('1.0', 'should_fail')
         )
+
+    def test_all_passing_unit_test_files_against_11_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/1.1/should_pass against the 1.1 schema.
+        They should all pass (ie they are all valid against the schema).
+
+        We use "subTest" so we can see which file failed in test output.
+        """
+        self.folder_should_pass(
+            schema=self.ninjs11_schema,
+            folder_name=os.path.join('1.1', 'should_pass')
+        )
+
+    def test_failing_unit_test_files_against_11_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/1.1/should_fail against the 1.0 schema.
+        They should all fail (ie they are all invalid in some way).
+
+        We use "subTest" so we can see which file failed in test output.
+        """
         self.folder_should_fail(
             schema=self.ninjs11_schema,
-            folder_name='should_fail'
+            folder_name=os.path.join('1.1', 'should_fail')
+        )
+
+    def test_example_files_against_1_1_schema(self):
+        """
+        Run all files in EXAMPLE_FILES_FOLDER against the latest schema.
+        They should all pass.
+        """
+        self.folder_should_pass(
+            schema=self.ninjs11_schema,
+            folder_name=EXAMPLE_FILES_FOLDER
         )
 
 if __name__ == '__main__':

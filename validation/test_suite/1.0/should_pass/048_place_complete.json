@@ -1,0 +1,11 @@
+{
+    "uri": "048_place_complete",
+    "place": [
+        {
+            "name" : "Ljubljana",
+            "rel" : "about",
+            "scheme" : "http://sws.geonames.org",
+            "code" : "3196359"
+        }
+    ]
+}
