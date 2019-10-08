@@ -20,7 +20,7 @@
     },
     "properties": {
         "uri": {
-            "title": "Title",
+            "title": "Uniform Resource Identifier",
             "description": "The identifier for this news object. nar:newsItem@guid",
             "type": "string",
             "format": "uri"
@@ -377,7 +377,7 @@
         "title": {
             "title": "Title",
             "description": "A short natural-language name for the item. (Added in version 1.2 according to issue #9). nar:itemMeta/title",
-            "format": "string"
+            "type": "string"
         },
         "byline": {
             "title": "Byline",
