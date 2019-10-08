@@ -1,0 +1,11 @@
+{
+    "uri": "010_infosource_full",
+    "infosource": [
+        {
+            "name": "Susan Smith",
+            "rel": "Interview source",
+            "scheme": "http://cv.iptc.org/newscodes/contentprodpartyrole/",
+            "code": "interviewee"
+        }
+    ] 
+}

@@ -1,0 +1,14 @@
+{
+    "uri": "004_infosource_bad_type",
+    "infosource": [
+        {
+            "name": "Susan Smith",
+            "rel": "Interview source",
+            "scheme": {
+                "URI": "http://cv.iptc.org/newscodes/contentprodpartyrole/",
+                "qcode": "newscodes:cpprole"
+            },
+            "code": "interviewee"
+        }
+    ] 
+}

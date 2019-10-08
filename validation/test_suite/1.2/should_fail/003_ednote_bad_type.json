@@ -1,0 +1,7 @@
+{
+    "uri": "003_ednote_bad_type",
+    "ednote": {
+        "creator": "Joe Smith",
+        "text": "A more descriptive editorial note will fail because the datatype is string."
+    }
+}
