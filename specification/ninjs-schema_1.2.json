@@ -116,7 +116,7 @@
         "ednote": {
             "title": "Editorial note",
             "description": "A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user. (Added in version 1.2 from issue #6.) . ednote: nar:edNote",
-            "format": "string"
+            "type": "string"
         },
         "language": {
             "title": "Language",
