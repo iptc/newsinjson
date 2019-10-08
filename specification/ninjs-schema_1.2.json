@@ -116,7 +116,7 @@
         "ednote": {
             "title": "Editorial note",
             "description": "A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user. (Added in version 1.2 from issue #6.) . ednote: nar:edNote",
-            "format": "string"
+            "type": "string"
         },
         "language": {
             "title": "Language",
@@ -402,12 +402,12 @@
         "charcount": {
             "title": "Character count",
             "description": "The total character count in the article excluding figure captions. (Added in version 1.2 according to issue #27.). nar:charcount",
-            "format": "number"
+            "type": "number"
         },
         "wordcount": {
             "title": "Word count",
             "description": "The total number of words in the article excluding figure captions. (Added in version 1.2 according to issue #27.). nar:wordcount",
-            "format": "number"
+            "type": "number"
         },
         "renditions": {
             "title": "Renditions",
