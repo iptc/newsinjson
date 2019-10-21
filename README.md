@@ -21,7 +21,8 @@ equivalents in ninjs.
 Unit tests
 ----------
 
-To run unit tests for the ninjs 1.1 schema (currently being updated to
-ninjs 1.2), run the following on the command line:
+To run unit tests in the `validation/test_suite` folder against each
+of the ninjs 1.0, 1.1 and 1.2 schemas, run the following tool in a
+command/terminal window:
 
     validation/python/runtests.py 

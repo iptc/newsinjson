@@ -11,8 +11,8 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :author: IPTC News in JSON Working Group
 :email: office@iptc.org
 :version-label: Covers version
-:revnumber: 1.1
-:revremark: Revised 2019-09-09
+:revnumber: 1.2
+:revremark: Revised 2019-10-21
 :toc: left
 :toc-title: ninjs User Guide
 :toclevels: 2
@@ -31,12 +31,17 @@ result in lightweight instance documents. And we've built a JSON schema for
 ninjs to help you <<How to validate objects,validate your ninjs
 implementation>>.
 
+The latest version of the standard is 1.2.
+
 https://iptc.org/std/ninjs/ninjs-schema_1.0.json[Version 1.0 of the ninjs
 schema] was approved by the IPTC Standards Committee on 23 October 2013.
 
 https://iptc.org/std/ninjs/ninjs-schema_1.1.json[Version 1.1 of the ninjs
 schema] was made available in March 2014 and an error was corrected in September
 2017.
+
+https://iptc.org/std/ninjs/ninjs-schema_1.2.json[Version 1.2 of the ninjs
+schema] was made available in October 2019.
 
 The IPTC welcomes your feedback on how to improve the standard via the
 https://groups.io/g/iptc-ninjs[public ninjs discussion group].
@@ -187,7 +192,8 @@ These properties concern the structure, type and creation details of the content
 `video` +
 `picture` +
 `graphic` +
-`composite`
+`composite` +
+`component`
 
 |mimetype
 |A MIME type which applies to this news object
@@ -213,6 +219,10 @@ or `"text-photo"`
 |The version of the news object which is identified by the uri property.
 |string
 
+|firstcreated
+|Indicates when the first version of the item was created.
+|date-time
+
 |versioncreated
 |The date and time when this version of the news object was created.
 |date-time
@@ -232,6 +242,19 @@ If absent, this object is not embargoed.
 |urgency
 |The editorial urgency of the content from 1 to 9. 1 represents the highest
 urgency, 9 the lowest
+|number
+
+|ednote
+|A note that is intended to be read by internal staff at the receiving
+organisation, but not published to the end-user.
+|string
+
+|charcount
+|The total character count in the article excluding figure captions.
+|number
+
+|wordcount
+|The total number of words in the article excluding figure captions.
 |number
 
 |language
@@ -271,6 +294,10 @@ Properties representing the actual story that will be shown to the audience.
 |headline
 |A brief and snappy introduction to the content, designed to catch the reader's
 attention
+|string
+
+|slugline
+|A human-readable identifier for the item.
 |string
 
 |byline
@@ -453,7 +480,7 @@ This property is an array of objects with the following properties:
 |array
 
 |object
-|Something material, excluding persons +
+|Something material, excluding persons. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -479,12 +506,40 @@ This property is an array of objects with the following properties:
 
 |array
 
+|infosource
+|A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. +
+This property is an array of objects with the following properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the infosource
+!string
+
+!rel
+!The relationship of the content of the news object to the infosource
+!string
+
+!scheme
+!The identifier of a scheme/controlled vocabulary which includes a code for the infosource
+!URI
+
+!code
+!The code for the infosource in a scheme/controlled vocabulary which is identified by the scheme property
+!string
+!===
+
+|array
+
+
 |===
 
 === Renditions
 
-The `renditions` property is a wrapper for different renditions of non-textual
-content of the news object, such as images, videos or PDF documents.
+The `renditions` property is a wrapper for different renditions of content of
+the news object, such as articles, images, videos or PDF documents.
 
 It contains a set of one or more keys, each with a name and an object as the
 value. The name can be any text or numbers, and should represent a given
@@ -502,6 +557,8 @@ below properties.
 |height|For still and moving images: the height of the display area measured in pixels|number
 |width|For still and moving images: the width of the display area measured in pixels|number
 |sizeinbytes|The size of the rendition resource in bytes|number
+|duration|The total time duration of the content in seconds|number
+|format|Binary format name|string
 |===
 
 ==== Renditions example
