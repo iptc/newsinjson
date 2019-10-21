@@ -1,0 +1,5 @@
+{
+    "uri": "001_type_component",
+    "headline": "This was added in 1.2, should not work in 1.1",
+    "type": "component"
+}

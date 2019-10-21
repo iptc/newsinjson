@@ -1,0 +1,5 @@
+{
+    "uri": "015_pubstatus_commissioned",
+    "headline": "commissioned is a 1.2 value, should not be valid under 1.0",
+    "pubstatus": "commissioned"
+}
