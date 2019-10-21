@@ -83,14 +83,12 @@
         },
         "pubstatus": {
             "title": "Publication status",
-            "description": "The publishing status of the news object, its value is *usable* by default. (replaced and commissioned added in version 1.2). nar:pubStatus",
+            "description": "The publishing status of the news object, its value is *usable* by default. nar:pubStatus",
             "type": "string",
             "enum": [
                 "usable",
                 "withheld",
-                "canceled",
-                "replaced",
-                "commissioned"
+                "canceled"
             ]
         },
         "urgency": {
