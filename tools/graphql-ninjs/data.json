@@ -1,5 +1,642 @@
 [
     {
+        "uri": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0?qt=H1Kdh42orF&et=0a1aza3c0",
+        "version": "0",
+        "type": "picture",
+        "urgency": 5,
+        "language": "en",
+        "versioncreated": "2019-11-15T14:39:44Z",
+        "firstcreated": "2019-11-15T13:39:59Z",
+        "pubstatus": "usable",
+        "ednote": "TURKEY OUT  NOV. 11, 2019 FILE PHOTO",
+        "title": "Turkey Islamic State",
+        "headline": "Turkey Islamic State",
+        "slugline": "Turkey Islamic State",
+        "description_creditline": "ASSOCIATED PRESS",
+        "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
+        "provider": "AP",
+        "infosource": [
+          {
+            "name": "DHA"
+          }
+        ],
+        "subject": [
+          {
+            "code": "i",
+            "name": "International News"
+          },
+          {
+            "code": "file",
+            "name": "File photo"
+          },
+          {
+            "code": "86aad5207dac100488ecba7fa5283c3e",
+            "name": "Government and politics",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "organisation": [
+          {
+            "code": "84de12052c9c4e3ebca80df389e66fc3",
+            "name": "Islamic State group",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "5f36c12adb1447fa971c2f6d4d272333",
+            "name": "Turkey government",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "place": [
+          {
+            "code": "661e09b87d5b10048287c076b8e3055c",
+            "name": "Turkey",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                35,
+                39
+              ]
+            }
+          },
+          {
+            "code": "6618c9f87d5b10048202c076b8e3055c",
+            "name": "Western Europe",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "661850e07d5b100481f4c076b8e3055c",
+            "name": "Europe",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                9.14062,
+                48.69096
+              ]
+            }
+          },
+          {
+            "code": "661850e07d5b100481f6c076b8e3055c",
+            "name": "Middle East",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "661e48387d5b10048291c076b8e3055c",
+            "name": "United States",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                -98.5,
+                39.76
+              ]
+            }
+          },
+          {
+            "code": "661850e07d5b100481f7c076b8e3055c",
+            "name": "North America",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                -100.54688,
+                46.07323
+              ]
+            }
+          }
+        ],
+        "description_caption": "FILE - In this Monday, Nov. 11, 2019 file photo, a man identified by Turkish media as 39-year-old Muhammad Darwis B., a U.S. citizen of Jordanian origin, stands in a no man's land between Turkey and Greece near Pazarkule border gate, Edirne, Turkey. Turkey's Interior Minister Suleyman Soylu said Friday Nov, 15, 2019 that the an American Islamic State group member has been deported to the United States. (DHA via AP, File)",
+        "renditions": {
+          "main": {
+            "title": "Full Resolution (JPG)",
+            "format": "JPEG Baseline",
+            "href": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0.0/download?role=main&qt=H1Kdh42orF&cid=ad53e3cd73934bbabd38e8bf9c6aff4a&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
+            "sizeinbytes": 4764958,
+            "width": 3000,
+            "height": 2208,
+            "mimetype": "image/jpeg"
+          },
+          "preview": {
+            "title": "Preview (JPG)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/b2b6c3f4642f46deac7509d4db315ca0.0/preview/preview.jpg?nfe=true&s=512&app=MPK&tag=iid~b2b6c3f4642f46deac7509d4db315ca0!rsn~0!cid~5b8a7db244c14125b3caa243bd8bb961!ofn~Turkey_Islamic_State_46506.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~photo!fmt~JPEG%20Baseline",
+            "sizeinbytes": 120321,
+            "width": 512,
+            "height": 377,
+            "mimetype": "image/jpeg"
+          },
+          "thumbnail": {
+            "title": "Thumbnail (JPG)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/b2b6c3f4642f46deac7509d4db315ca0.0/thumbnail/thumbnail.jpg?nfe=true&app=MPK&tag=iid~b2b6c3f4642f46deac7509d4db315ca0!rsn~0!cid~47c49ccfc46f4c538892e6379baae111!ofn~Turkey_Islamic_State_46506.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~photo!fmt~JPEG%20Baseline",
+            "sizeinbytes": 27098,
+            "width": 125,
+            "height": 92,
+            "mimetype": "image/jpeg"
+          },
+          "caption_nitf": {
+            "title": "NITF Caption Download",
+            "format": "IIM",
+            "mimetype": "text/xml",
+            "href": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62"
+          }
+        }
+      },
+      {
+        "uri": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62?qt=H1Kdh42orF&et=3a7aza0c0",
+        "version": "3",
+        "type": "text",
+        "urgency": 4,
+        "profile": "Spot Development",
+        "language": "en",
+        "versioncreated": "2019-11-15T14:42:10Z",
+        "firstcreated": "2019-11-15T09:49:57Z",
+        "pubstatus": "usable",
+        "ednote": "Eds: Updates with details. Updates photos. With AP Photos.",
+        "title": "Turkey-Islamic State",
+        "headline": "American IS suspect repatriated from Turkish-Greek border",
+        "slugline": "AP-EU--Turkey-Islamic State, 3rd Ld-Writethru",
+        "description_summary": "Turkey’s interior minister says an American Islamic State group suspect who was stranded in a no man’s land between Greece and Turkey has been deported to the United States. Suleyman Soylu said Friday the man was put on a plane from Istanbul.",
+        "located": "ANKARA, Turkey",
+        "copyrightnotice": "Copyright 2019 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+        "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
+        "provider": "AP",
+        "infosource": [
+          {
+            "name": "AP"
+          }
+        ],
+        "person": [
+          {
+            "code": "630ab2288d9e10048e17a55c96277d3e",
+            "name": "Recep Tayyip Erdogan",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "subject": [
+          {
+            "code": "i",
+            "name": "i"
+          },
+          {
+            "code": "f25af2d07e4e100484f5df092526b43e",
+            "name": "General news",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "86aad5207dac100488ecba7fa5283c3e",
+            "name": "Government and politics",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "organisation": [
+          {
+            "code": "84de12052c9c4e3ebca80df389e66fc3",
+            "name": "Islamic State group",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "5f36c12adb1447fa971c2f6d4d272333",
+            "name": "Turkey government",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "place": [
+          {
+            "code": "661e48387d5b10048291c076b8e3055c",
+            "name": "United States",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                -98.5,
+                39.76
+              ]
+            }
+          },
+          {
+            "code": "661850e07d5b100481f7c076b8e3055c",
+            "name": "North America",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                -100.54688,
+                46.07323
+              ]
+            }
+          },
+          {
+            "code": "661e09b87d5b10048287c076b8e3055c",
+            "name": "Turkey",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                35,
+                39
+              ]
+            }
+          },
+          {
+            "code": "6618c9f87d5b10048202c076b8e3055c",
+            "name": "Western Europe",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "661850e07d5b100481f4c076b8e3055c",
+            "name": "Europe",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                9.14062,
+                48.69096
+              ]
+            }
+          },
+          {
+            "code": "661850e07d5b100481f6c076b8e3055c",
+            "name": "Middle East",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "61743ec081be10048549df092526b43e",
+            "name": "Ankara",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                32.85427,
+                39.91987
+              ]
+            }
+          },
+          {
+            "code": "6620e8187d5b100482d4c076b8e3055c",
+            "name": "Germany",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "6620e8187d5b100482d5c076b8e3055c",
+            "name": "Greece",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                22,
+                39
+              ]
+            }
+          },
+          {
+            "code": "661e09b87d5b10048286c076b8e3055c",
+            "name": "Syria",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                38,
+                35
+              ]
+            }
+          },
+          {
+            "code": "6436ae6881be10048550df092526b43e",
+            "name": "Istanbul",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                28.94966,
+                41.01384
+              ]
+            }
+          }
+        ],
+        "associations": {
+          "1": {
+            "uri": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0?qt=H1Kdh42orF&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
+            "version": "0",
+            "type": "picture",
+            "headline": "Turkey Islamic State"
+          },
+          "2": {
+            "uri": "http://api.ap.org/media/v/content/c69aad13fe8b47f39efe0f7bb37e0dbc?qt=H1Kdh42orF&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
+            "version": "0",
+            "type": "picture",
+            "headline": "Germany Turkey Islamic State"
+          }
+        },
+        "renditions": {
+          "nitf": {
+            "title": "NITF Story Download",
+            "format": "IIM",
+            "mimetype": "text/xml",
+            "href": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62.3/download?type=text&format=NITF&rid=9aabe4b41e3e4ababb66ccaefbb3821c&cid=0&fid=73c4871d1efd4262b76dcf9df91ced1f&trf=NAM0116&qt=H1Kdh42orF&dt=SyE9hV2ir&ai=2cc1cee3495f548653f5d38130750408&et=3a7aza0c0"
+          },
+          "anpa": {
+            "title": "ANPA Story Download",
+            "format": "ANPA1312",
+            "mimetype": "application/octet-stream",
+            "href": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62.3/download?type=text&format=ANPA&rid=9aabe4b41e3e4ababb66ccaefbb3821c&cid=0&fid=73c4871d1efd4262b76dcf9df91ced1f&trf=NAM0116&qt=H1Kdh42orF&dt=SyE9hV2ir&ai=2cc1cee3495f548653f5d38130750408&et=3a7aza0c0"
+          }
+        }
+      },
+
+      {
+        "uri": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74?qt=H1Kdh42orF&et=0a3aza2c0",
+        "version": "0",
+        "type": "audio",
+        "urgency": 4,
+        "profile": "Actuality",
+        "language": "en",
+        "versioncreated": "2019-11-14T16:17:53Z",
+        "firstcreated": "2019-11-14T16:17:53Z",
+        "pubstatus": "usable",
+        "title": "Trump Impeachment What s Next-Pelosi 1",
+        "headline": "Next up in impeachment hearings: A parade of key witnesses",
+        "located": "CAPITOL HILL",
+        "copyrightnotice": "Copyright 2019 The Associated Press, though the copyright in some contents and materials incorporated herein may be owned by third parties where so indicated. All rights reserved. This material may not be published, broadcast, rewritten or redistributed without permission.",
+        "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
+        "provider": "AP",
+        "infosource": [
+          {
+            "name": "ASSOCIATED PRESS"
+          }
+        ],
+        "person": [
+          {
+            "code": "850c8ab4e24d4c128250621e377c83dd",
+            "name": "Nancy Pelosi",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "subject": [
+          {
+            "code": "p",
+            "name": "Political News"
+          },
+          {
+            "code": "86aad5207dac100488ecba7fa5283c3e",
+            "name": "Government and politics",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "86c17a007dac1004898fba7fa5283c3e",
+            "name": "Impeachments",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "86bc3e287dac1004895dba7fa5283c3e",
+            "name": "Political issues",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "17092930618f41079a063c02851881a1",
+            "name": "Trump impeachment inquiry",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "description_caption": "House Speaker Nancy Pelosi says the president committed an impeachable offense. ",
+        "renditions": {
+          "main": {
+            "title": "Full Resolution (MP3)",
+            "format": "MP3",
+            "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?role=main&qt=H1Kdh42orF&cid=62000ab669e047b2b00b5faa1d08f41d&pt=NXw3Njg5NXwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+            "sizeinbytes": 189504,
+            "duration": 7896,
+            "mimetype": "audio/mpeg"
+          },
+          "main-1": {
+            "title": "Full Resolution (MPG)",
+            "format": "MPEG",
+            "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?role=main&qt=H1Kdh42orF&cid=c5bf75e74985448daab6cc615757195b&pt=NXw3Njg5NXwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+            "sizeinbytes": 189504,
+            "duration": 7896,
+            "mimetype": "audio/mpeg"
+          },
+          "caption_nitf": {
+            "title": "NITF Caption Download",
+            "format": "IIM",
+            "mimetype": "text/xml",
+            "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza2c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
+          }
+        }
+      },
+      {
+        "uri": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4?qt=H1Kdh42orF&et=0a3aza9c0",
+        "version": "0",
+        "type": "video",
+        "language": "en",
+        "versioncreated": "2019-11-14T18:50:57Z",
+        "firstcreated": "2019-11-14T18:50:56Z",
+        "pubstatus": "usable",
+        "ednote": "APWhollyOwned",
+        "title": "US Pelosi McCarthy (CR)",
+        "headline": "House leaders double down on impeachment positions",
+        "slugline": "US Pelosi McCarthy (CR)",
+        "located": "Washington",
+        "copyrightnotice": "Copyright 2019 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+        "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required. International: AP Clients Only | US: AP Clients Only / This video may not be edited",
+        "provider": "AP",
+        "infosource": [
+          {
+            "name": "ASSOCIATED PRESS"
+          }
+        ],
+        "person": [
+          {
+            "code": "850c8ab4e24d4c128250621e377c83dd",
+            "name": "Nancy Pelosi",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "42fcd5108d2610048a34f7ae5e3ffd3e",
+            "name": "Joe Biden",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "a6331b54c46e4ca8b79fa40fada95db5",
+            "name": "Donald Trump",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "subject": [
+          {
+            "code": "a",
+            "name": "National"
+          },
+          {
+            "code": "9c0bd01cd7c84527bad1319c99abb3ea",
+            "name": "Bribery, graft and conflicts of interest",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "48612b807c2b4b93bbbacbf54f547ad5",
+            "name": "Crime",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "f25af2d07e4e100484f5df092526b43e",
+            "name": "General news",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "6e70a850885f10048d0dcb8225d5863e",
+            "name": "Military legal affairs",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "3b7438807d7010048477ba7fa5283c3e",
+            "name": "Military and defense",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "86aad5207dac100488ecba7fa5283c3e",
+            "name": "Government and politics",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "b6559a30872a10048eadd7c656897a02",
+            "name": "Political corruption",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "86bc3e287dac1004895dba7fa5283c3e",
+            "name": "Political issues",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "86c17a007dac1004898fba7fa5283c3e",
+            "name": "Impeachments",
+            "scheme": "http://cv.ap.org/id/"
+          }
+        ],
+        "place": [
+          {
+            "code": "661cd9087d5b10048265c076b8e3055c",
+            "name": "Ukraine",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                32,
+                49
+              ]
+            }
+          },
+          {
+            "code": "6618c9f87d5b10048200c076b8e3055c",
+            "name": "Eastern Europe",
+            "scheme": "http://cv.ap.org/id/"
+          },
+          {
+            "code": "661850e07d5b100481f4c076b8e3055c",
+            "name": "Europe",
+            "scheme": "http://cv.ap.org/id/",
+            "geometry_geojson": {
+              "type": "Point",
+              "coordinates": [
+                9.14062,
+                48.69096
+              ]
+            }
+          }
+        ],
+        "description_caption": "As the Trump impeachment hearings go public, House Democrats are refining the case against the president to a simple allegation: Bribery. Meanwhile, Republicans are dismissing the testimony so far as hearsay, at best second-hand information. (Nov. 14)",
+        "renditions": {
+          "main": {
+            "title": "Full Resolution (MP4 640x360)",
+            "format": "MPEG",
+            "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?role=main&qt=H1Kdh42orF&cid=e2da4d19d5dc4378a17ab6157e83f906&pt=Nnw3NDAyNHwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+            "sizeinbytes": 1880522908,
+            "width": 640,
+            "height": 360,
+            "duration": 128929,
+            "mimetype": "video/mpeg"
+          },
+          "main_1080_29": {
+            "title": "Full Resolution (MP4 1920x1080)",
+            "format": "MPEG",
+            "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?role=main&qt=H1Kdh42orF&cid=714e0b23feed42318f07705982a533dd&pt=Nnw3NDAyNHwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+            "sizeinbytes": 1880522908,
+            "width": 1920,
+            "height": 1080,
+            "mimetype": "video/mpeg"
+          },
+          "preview": {
+            "title": "Preview (JPG 1920x1080)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/preview/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_1920x1080.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~030addea5c734b8f8126a1e391db7872!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_1920x1080.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 1920,
+            "height": 1080,
+            "mimetype": "image/jpeg"
+          },
+          "preview_300": {
+            "title": "Preview (JPG 400x300)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/preview/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_400x300.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~c262fedd77294a1d89edabe9134f9206!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_400x300.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 400,
+            "height": 300,
+            "mimetype": "image/jpeg"
+          },
+          "thumbnail": {
+            "title": "Thumbnail (JPG 105x70)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~e4c4b7d20ebd4179a6bde4e48fb42c58!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 105,
+            "height": 70,
+            "mimetype": "image/jpeg"
+          },
+          "thumbnail_69": {
+            "title": "Thumbnail (JPG 92x69)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_092x069.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~12f5743ecd7a42ecb02fb0de33bfce16!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_092x069.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 92,
+            "height": 69,
+            "mimetype": "image/jpeg"
+          },
+          "thumbnail_70": {
+            "title": "Thumbnail (JPG 105x70)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_105x070.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~41474a970b234153b091dbf998388b98!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_105x070.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 105,
+            "height": 70,
+            "mimetype": "image/jpeg"
+          },
+          "thumbnail_135": {
+            "title": "Thumbnail (JPG 180x135)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_180x135.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~ccc561499bc849a9b8bd6aea5b1e1c67!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_180x135.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 180,
+            "height": 135,
+            "mimetype": "image/jpeg"
+          },
+          "caption_nitf": {
+            "title": "NITF Caption Download",
+            "format": "IIM",
+            "mimetype": "text/xml",
+            "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
+          },
+          "script_nitf": {
+            "title": "NITF Script Download",
+            "format": "IIM",
+            "mimetype": "text/xml",
+            "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=script&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
+          }
+        }
+      },
+
+    {
         "uri": "http://tt.se/media/text/191008-malmomordfrsk-1078821",
         "type": "text",
         "charcount": 3739,
