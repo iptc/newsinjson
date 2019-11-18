@@ -56,7 +56,7 @@ In creating ninjs, we focused on two main use cases:
 footnote:[The provider can indicate that more properties are available using the `representationtype: "incomplete"` construct.]
 . *Data at rest - such as in search engines or content management systems*
 * ninjs documents can convey a rich set of news publishing properties, such as information that is necessary for the pre-publishing workflow or custom properties that a particular provider wants to express in a standard way.
-* ninjs is designed to be customisable by a particular provider, so that they can express just what they require, without unnecessary overhead. Ninjs is suitable for use in JSON-native engines, such ashttp://www.mongodb.org/[MongoDB] or
+* ninjs is designed to be customisable by a particular provider, so that they can express just what they require, without unnecessary overhead. Ninjs is suitable for use in JSON-native engines, such as http://www.mongodb.org/[MongoDB] or
 http://www.elasticsearch.org/[Elasticsearch].
 
 === ninjs data model in a nutshell
@@ -347,8 +347,9 @@ This property is an array of objects with the following properties:
 !symbols
 !Symbols used for a financial instrument linked to the organisation at a specific market place. +
 Array of objects with the properties: +
-`ticker`: Ticker symbol used for the financial instrument (string)
+`ticker`: Ticker symbol used for the financial instrument (string) +
 `exchange`: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)
+!array
 
 !===
 
