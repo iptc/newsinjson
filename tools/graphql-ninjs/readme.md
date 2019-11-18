@@ -16,26 +16,26 @@ In a more realistic setup you would need to add support to connect to the databa
 3) If it all worked you should see a testing interface for graphQL
 
 ## Testing graphQL
-1) Start with {ninjs {uri}} and press the round RUN-button with the arrow. You should see a list of uri's from ninjs-items.
+1) Start with `{ninjs {uri}}` and press the round RUN-button with the arrow. You should see a list of uri's from ninjs-items.
 2) You can try to add other properties. The screen has some intellisense and uses the schema to show possible choises as you type.
 3) Add more properties to your search:
-{ninjs {
+`{ninjs {
   uri
   pubstatus
   language
   headline
 }
-}
+}`
 Will show these four properties for each ninjs item.
 
 4) If you want to filter the result you can add that in parenteses after ninjs:
-{ninjs (pubstatus: "usable", language: "sv") {
+`{ninjs (pubstatus: "usable", language: "sv") {
   uri
   pubstatus
   language
   headline
 }
-}
+}`
 Will only show the usable items that is in Swedish.
 
 
