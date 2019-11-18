@@ -10,13 +10,12 @@ In a more realistic setup you would need to add support to connect to the databa
 4) Type npm run dev 
 5) and you should get this line: "Running GraphQL on localhost:4001/graphql"
 
-
-##Open graphQL testscreen
+## Open graphQL testscreen
 1) Open a browser
 2) Go to http://localhost:4001/graphql
 3) If it all worked you should see a testing interface for graphQL
 
-##Testing graphQL
+## Testing graphQL
 1) Start with {ninjs {uri}} and press the round RUN-button with the arrow. You should see a list of uri's from ninjs-items.
 2) You can try to add other properties. The screen has some intellisense and uses the schema to show possible choises as you type.
 3) Add more properties to your search:
@@ -43,9 +42,9 @@ Will only show the usable items that is in Swedish.
 
 
 
+The samples in the data.json come from TT, NTB, DPA and AP. They have been adapted to fit the ninjs 1.2 schema. 
 
 
 
-
-Johan Lindgren October 2019
+Johan Lindgren November 2019
 
