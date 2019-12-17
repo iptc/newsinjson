@@ -1,0 +1,27 @@
+{
+    "uri": "003_advice_anyvalue.json",
+    "title": "An advice object showing that values are not validated and can be anything",
+    "advice": [
+        {
+            "role": "publish",
+            "environment": [
+                {
+                    "code": "asdufgalsdfgalsdfglasf",
+                    "scheme": "http://asdfasdf.asdasdf/asdavkaygv/"
+                },
+                {
+                    "code": "asdfliuahsdlfuahsdlfahsldf",
+                    "scheme": "http://asdvkasuvgka.asdasdf/asdasdva/"
+                }
+            ],
+            "importance": {
+                "code": "asdfasdfgasdfa",
+                "scheme": "http://asdvadfv.asdfaf/asdvadfv/"
+            },
+            "lifetime": {
+                "code": "asfkasudvkaysgdvl",
+                "scheme": "http://asdasv.asaf/asdvadfvsdfv/"
+            }
+        }
+    ]
+}
