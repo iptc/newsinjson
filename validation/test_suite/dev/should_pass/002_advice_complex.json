@@ -6,11 +6,11 @@
             "role": "publish",
             "environment": [
                 {
-                    "code": "",
+                    "code": "EFE",
                     "scheme": "http://cv.iptc.org/newscodes/newsprovider/"
                 },
                 {
-                    "code": "",
+                    "code": "GLOBE",
                     "scheme": "http://cv.iptc.org/newscodes/newsprovider/"
                 }
             ],
@@ -27,7 +27,7 @@
             "role": "publish",
             "environment": [
                 {
-                    "code": "",
+                    "code": "SPX",
                     "scheme": "http://cv.iptc.org/newscodes/newsprovider/"
                 }
             ],
