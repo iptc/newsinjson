@@ -471,10 +471,10 @@
                 "^[a-zA-Z0-9]+": {"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.1_v1.2.json#"}
             }
         },
-        "advices": {
+        "advice": {
             "type": "array",
             "title": "Advices",
-            "description": "Objects with properties with editorial advice to the receiver",
+            "description": "Editorial advice to the receiver of the news object. Only in dev so far. Tests with the C-POP project.",
             "additionalProperties": false,
             "items": {
                 "description": "One advice item",
@@ -504,37 +504,39 @@
                             }   
                         },
                     "importance": {
-                      "type": "array",
+                      "type": "object",
+                      "description": "Advice regarding the importance of the content from an emotional perspective. Experimental vocabulary, part of the C-POP project.",
                       "additionalProperties": false,
-                      "items": {
-                          "type": "object",
                           "properties": {
                               "code": {
-                              "type": "string"
+                              "type": "string",
+                              "description": "Present values are: essential, useful and entertaining."
                               },
                               "scheme": { 
                                "type": "string",
-                                "format": "uri"
+                                "format": "uri",
+                                "description": "http://cv.iptc.org/newscodes/advice-importance"
                                     }
-                                }
+                                    
                             }   
                         },
 
                     "lifetime": {
-                      "type": "array",
+                      "type": "object",
+                      "description": "Advice regarding the length of time that the content is considered to be relevant. Experimental vocabulary, part of the C-POP project.",
                       "additionalProperties": false,
-                      "items": {
-                          "type": "object",
                           "properties": {
                               "code": {
-                              "type": "string"
+                              "type": "string",
+                              "description": "Present values are: short, medium, long and evergreen."
                               },
                               "scheme": { 
                                "type": "string",
-                                "format": "uri"
+                                "format": "uri",
+                                "description": "http://cv.iptc.org/newscodes/advice-lifetime"
                                     }
-                                }
-                            }   
+
+}   
                         }
                 }
 
