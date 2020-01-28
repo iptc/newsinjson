@@ -541,6 +541,70 @@
                 }
 
             }
+        },
+        "altids": {
+            "title": "Alternative id",
+            "description": "Alternative id's of the item. It is up to the individual provider to name and set type on the alternative id's they like to use.",
+            "type": "object",
+            "additionalProperties": true
+        },
+        "trustindicator": {
+            "title": "Trust indicator",
+            "description": "An array of objects to allow links to documents about trust indicators. (nar:link)",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": {
+                        "title": "Title",
+                        "description": "The title of the resource being referenced.",
+                        "type": "string"
+                    },
+                    "scheme": {
+                        "title": "Scheme",
+                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the trust indicator",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "code": {
+                        "title": "Code",
+                        "description": "The code for the trust indicator in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                        "type": "string"
+                    },
+                    "href": {
+                        "title": "href", 
+                        "description": "The URL for accessing the trust indicator resource.",
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            }
+        },
+        "$standard": {
+            "title": "Standard",
+            "type": "object",
+            "description": "An object with information about standard, version and schema this instance is valid against. nar:standard, nar:standardversion and xml:schema",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Name of standard. ",
+                    "description": "For example ninjs. nar:standard"
+                },
+                "version": {
+                    "type": "string",
+                    "title": "Version of standard. ",
+                    "description": "For example 1.2. nar:standardversion"
+                },
+                "schema": {
+                    "type": "string",
+                    "format": "uri",
+                    "title": "Schema",
+                    "description": "The uri of the json schema to use for validation."
+                }
+            }
+            
         }
     }
 }
