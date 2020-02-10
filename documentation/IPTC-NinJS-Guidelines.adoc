@@ -12,7 +12,7 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :email: office@iptc.org
 :version-label: Covers version
 :revnumber: 1.2
-:revremark: Revised 2019-10-21
+:revremark: Revised 2020-02-10
 :toc: left
 :toc-title: ninjs User Guide
 :toclevels: 2
@@ -22,29 +22,32 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 
 == Introduction: ninjs is News in JSON
 
-ninjs standardises the representation of news content in JSON, a lightweight, easy-to-parse data interchange format. 
+ninjs standardises the representation of news content in JSON, a lightweight,
+easy-to-parse data interchange format. 
 
-We have identified key properties and structures required to represent news and publishing information, and crafted JSON representations that are designed to result in lightweight instance documents. And we've built a JSON schema for ninjs to help you <<How to validate objects,validate your ninjs implementation>>.
+We have identified key properties and structures required to represent news and
+publishing information, and crafted JSON representations that are designed to
+result in lightweight instance documents. While keeping it simple, we have been
+careful to map ninjs concepts to the IPTC News Architecture, so you can rest
+assured that ninjs concepts can interoperate with other markup languages such
+as https://iptc.org/standards/newsml-g2/[NewsML-G2].
 
-The latest version of the standard is 1.2.
+To help get you started, we have created a
+https://www.iptc.org/std/ninjs/generator/[simple ninjs generator] so you can see
+how simple a real ninjs document can be. We have also built a JSON schema for
+ninjs to help you <<How to validate objects,validate your ninjs implementation>>.
 
-https://iptc.org/std/ninjs/ninjs-schema_1.2.json[Version 1.2 of the ninjs schema] was made available in October 2019.
+The latest version of the standard is 1.2: 
+https://iptc.org/std/ninjs/ninjs-schema_1.2.json[Version 1.2 of the ninjs
+schema] was made available in October 2019.
 
-Revision history:
-
-https://iptc.org/std/ninjs/ninjs-schema_1.1.json[Version 1.1 of the ninjs schema] was made available in March 2014 and an error was corrected in September 2017.
-
-https://iptc.org/std/ninjs/ninjs-schema_1.0.json[Version 1.0 of the ninjs schema] was approved by the IPTC Standards Committee on 23 October 2013.
-
-Development:
-
-The IPTC welcomes your feedback on how to improve the standard via the https://groups.io/g/iptc-ninjs[public ninjs discussion group].
-
-You can also add and comment on issues in the
-https://github.com/iptc/newsinjson[news in json github repository].
-
-Staff from IPTC Member organisations are welcome to join the 
-https://groups.io/g/iptc-news-in-json-dev[members-only discussion list for the ninjs development team].
+The IPTC welcomes your feedback on how to improve the standard via the
+https://groups.io/g/iptc-ninjs[public ninjs discussion group]. You can also add
+and comment on issues in the
+https://github.com/iptc/newsinjson[news in json github repository]. Staff from
+IPTC Member organisations are welcome to join the 
+https://groups.io/g/iptc-news-in-json-dev[members-only discussion list for the
+ninjs development team].
 
 === Built for both APIs and data at rest
 
@@ -81,6 +84,9 @@ ninjs can be very simple. This is an example of something that might be returned
 include::includes/examples/001_simple_example.json[]
 ----
 
+You can make your own simple ninjs document using the
+https://www.iptc.org/std/ninjs/generator/[ninjs generator tool on iptc.org].
+
 === ninjs and other standards
 
 JSON is an increasingly popular
@@ -93,7 +99,7 @@ https://iptc.org/standards/iptc-7901/[IPTC7901] and https://iptc.org/standards/r
 
 === Copyright
 
-Copyright © 2019 IPTC, International Press Telecommunications Council.
+Copyright © 2020 IPTC, International Press Telecommunications Council.
 
 The IPTC ninjs User Guide document is published under the 
 http://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 license]
@@ -108,6 +114,7 @@ Materials used in this guide are either in the public domain or are available wi
 This document is the result of a team effort by members of the News in JSON Working Group of the International Press Telecommunications Council (IPTC), with input and assistance from other contributors.
 
 Contributors to this document include:
+Paul Harman (Bloomberg),
 Johan Lindgren (TT),
 Brendan Quinn (IPTC),
 Michael Steidl (IPTC),
@@ -206,6 +213,7 @@ One of: +
 `withheld` +
 `canceled`
 
+[[urgency]]
 |urgency
 |The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest
 |number
@@ -817,11 +825,11 @@ https://iptc.org/std/ninjs/ninjs-schema_1.1.json[Version 1.1 of the ninjs schema
 
 Version 1.1 moved to JSON Schema version 4, and added the `urgency`, `usageterms` and `geometry_*` properties.
 
-An error in the association reference URI was corrected in September 2017.
+An error in the association reference URI in the version 1.1 JSON Schema document was corrected in September 2017.
 
 === ninjs 1.2
 
-https://iptc.org/std/ninjs/ninjs-schema_1.2.json[Version 1.2 of the ninjs schema] was made available in October 2019.
+https://iptc.org/std/ninjs/ninjs-schema_1.2.json[Version 1.2 of the ninjs schema] was approved by the IPTC Standards Committee and made available in October 2019.
 
 Version 1.2 added the `firstcreated`, `charcount`, `wordcount`, `slugline`, `ednote`, `infosource`, `title` and `slugline` properties. It also added the value `component` under type. It changed the description of the `renditions` property and added sub-properties `duration` and `format`.
 

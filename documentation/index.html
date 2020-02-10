@@ -434,7 +434,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <span id="author" class="author">IPTC News in JSON Working Group</span><br>
 <span id="email" class="email"><a href="mailto:office@iptc.org">office@iptc.org</a></span><br>
 <span id="revnumber">covers version 1.2</span>
-<br><span id="revremark">Revised 2019-10-21</span>
+<br><span id="revremark">Revised 2020-02-10</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">ninjs User Guide</div>
@@ -486,6 +486,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <ul class="sectlevel2">
 <li><a href="#_ninjs_1_0">7.1. ninjs 1.0</a></li>
 <li><a href="#_ninjs_1_1">7.2. ninjs 1.1</a></li>
+<li><a href="#_ninjs_1_2">7.3. ninjs 1.2</a></li>
 </ul>
 </li>
 <li><a href="#_additional_resources">8. Additional Resources</a>
@@ -508,32 +509,28 @@ easy-to-parse data interchange format.</p>
 <div class="paragraph">
 <p>We have identified key properties and structures required to represent news and
 publishing information, and crafted JSON representations that are designed to
-result in lightweight instance documents. And we&#8217;ve built a JSON schema for
-ninjs to help you <a href="#_how_to_validate_objects">validate your ninjs
-implementation</a>.</p>
+result in lightweight instance documents. While keeping it simple, we have been
+careful to map ninjs concepts to the IPTC News Architecture, so you can rest
+assured that ninjs concepts can interoperate with other markup languages such
+as <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>.</p>
 </div>
 <div class="paragraph">
-<p>The latest version of the standard is 1.2.</p>
+<p>To help get you started, we have created a
+<a href="https://www.iptc.org/std/ninjs/generator/">simple ninjs generator</a> so you can see
+how simple a real ninjs document can be. We have also built a JSON schema for
+ninjs to help you <a href="#_how_to_validate_objects">validate your ninjs implementation</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.0.json">Version 1.0 of the ninjs
-schema</a> was approved by the IPTC Standards Committee on 23 October 2013.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.1.json">Version 1.1 of the ninjs
-schema</a> was made available in March 2014 and an error was corrected in September
-2017.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.2.json">Version 1.2 of the ninjs
+<p>The latest version of the standard is 1.2:
+<a href="https://iptc.org/std/ninjs/ninjs-schema_1.2.json">Version 1.2 of the ninjs
 schema</a> was made available in October 2019.</p>
 </div>
 <div class="paragraph">
 <p>The IPTC welcomes your feedback on how to improve the standard via the
-<a href="https://groups.io/g/iptc-ninjs">public ninjs discussion group</a>.</p>
-</div>
-<div class="paragraph">
-<p>Staff from IPTC Member organisations are welcome to join the
+<a href="https://groups.io/g/iptc-ninjs">public ninjs discussion group</a>. You can also add
+and comment on issues in the
+<a href="https://github.com/iptc/newsinjson">news in json github repository</a>. Staff from
+IPTC Member organisations are welcome to join the
 <a href="https://groups.io/g/iptc-news-in-json-dev">members-only discussion list for the
 ninjs development team</a>.</p>
 </div>
@@ -549,13 +546,10 @@ ninjs development team</a>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>ninjs documents can be very concise, allowing for the inclusion of just the
-most important properties - such as byline, headline, and body text - as
-determined by a given provider.</p>
+<p>ninjs documents can be very concise, allowing for the inclusion of just the most important properties - such as byline, headline, and body text - as determined by a given provider.</p>
 </li>
 <li>
-<p>ninjs allows the provider to indicate whether there are more properties
-available, if the recipient would like to request more.
+<p>ninjs allows the provider to indicate whether there are more properties available, if the recipient would like to request more.
 <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </li>
 </ul>
@@ -566,15 +560,10 @@ available, if the recipient would like to request more.
 <div class="ulist">
 <ul>
 <li>
-<p>ninjs documents can convey a rich set of news publishing properties, such as
-information that is necessary for the pre-publishing workflow or custom
-properties that a particular provider wants to express in a standard way.</p>
+<p>ninjs documents can convey a rich set of news publishing properties, such as information that is necessary for the pre-publishing workflow or custom properties that a particular provider wants to express in a standard way.</p>
 </li>
 <li>
-<p>ninjs is designed to be customisable by a particular provider, so that they
-can express just what they require, without unnecessary overhead ninjs is
-suitable for use in JSON-native engines, such as
-<a href="http://www.mongodb.org/">MongoDB</a> or
+<p>ninjs is designed to be customisable by a particular provider, so that they can express just what they require, without unnecessary overhead. Ninjs is suitable for use in JSON-native engines, such as <a href="http://www.mongodb.org/">MongoDB</a> or
 <a href="http://www.elasticsearch.org/">Elasticsearch</a>.</p>
 </li>
 </ul>
@@ -586,17 +575,11 @@ suitable for use in JSON-native engines, such as
 <div class="sect2">
 <h3 id="_ninjs_data_model_in_a_nutshell">1.2. ninjs data model in a nutshell</h3>
 <div class="paragraph">
-<p>As the below diagram shows, every ninjs object describes a <strong>News Item</strong>. All
-ninjs items have a unique ID given by a <strong>URI</strong>. They can have administrative
-metadata, describing who created the news item and when,  descriptive metadata
-describing <strong>people</strong>, <strong>places</strong>, <strong>subjects</strong>, <strong>organisations</strong> and <strong>events</strong> related
+<p>As the below diagram shows, every ninjs object describes a <strong>News Item</strong>. All ninjs items must have a unique ID given by a <strong>URI</strong>. They can have administrative metadata, describing who created the news item and when, descriptive metadata describing <strong>people</strong>, <strong>places</strong>, <strong>subjects</strong>, <strong>organisations</strong> and <strong>events</strong> related
 to the news item.</p>
 </div>
 <div class="paragraph">
-<p>The content itself can be a <strong>body</strong>, containing text, HTML or other
-representation of the text of a news item, <strong>renditions</strong> of the news item as
-images, videos or multimedia, or both body and renditions. <strong>Associations</strong> are a
-means of linking news items together.</p>
+<p>The content itself can be a <strong>body</strong>, containing text, HTML or other representation of the text of a news item, <strong>renditions</strong> of the news item as images, videos or multimedia, or both body and renditions. <strong>Associations</strong> are a means of linking news items together.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/ninjsScope-w800.jpg" alt="ninjs Data Model diagram"></span></p>
@@ -611,8 +594,7 @@ means of linking news items together.</p>
 <div class="sect2">
 <h3 id="_a_simple_example">1.4. A simple example</h3>
 <div class="paragraph">
-<p>ninjs can be very simple. This is an example of something that might be returned
-by an API call.</p>
+<p>ninjs can be very simple. This is an example of something that might be returned by an API call.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -626,6 +608,10 @@ by an API call.</p>
 }</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>You can make your own simple ninjs document using the
+<a href="https://www.iptc.org/std/ninjs/generator/">ninjs generator tool on iptc.org</a>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_ninjs_and_other_standards">1.5. ninjs and other standards</h3>
@@ -633,8 +619,7 @@ by an API call.</p>
 <p>JSON is an increasingly popular
 <a href="http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/">alternative to</a>
 (or
-<a href="http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/">replacement
-for</a>) XML. ninjs is designed to be used alongside other <a href="https://iptc.org/standards/">IPTC formats</a>, including <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>,
+<a href="http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/">replacement for</a>) XML. ninjs is designed to be used alongside other <a href="https://iptc.org/standards/">IPTC formats</a>, including <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>,
 <a href="https://iptc.org/standards/iptc-7901/">IPTC7901</a> and <a href="https://iptc.org/standards/rnews/">rNews</a>.</p>
 </div>
 </div>
@@ -646,7 +631,7 @@ for</a>) XML. ninjs is designed to be used alongside other <a href="https://iptc
 <div class="sect2">
 <h3 id="_copyright">2.1. Copyright</h3>
 <div class="paragraph">
-<p>Copyright © 2019 IPTC, International Press Telecommunications Council.</p>
+<p>Copyright © 2020 IPTC, International Press Telecommunications Council.</p>
 </div>
 <div class="paragraph">
 <p>The IPTC ninjs User Guide document is published under the
@@ -663,15 +648,16 @@ for</a>) XML. ninjs is designed to be used alongside other <a href="https://iptc
 <div class="sect2">
 <h3 id="_acknowledgements">2.2. Acknowledgements</h3>
 <div class="paragraph">
-<p>This document is the result of a team effort by members of the News in JSON
-Working Group of the International Press Telecommunications Council (IPTC), with
-input and assistance from other contributors.</p>
+<p>This document is the result of a team effort by members of the News in JSON Working Group of the International Press Telecommunications Council (IPTC), with input and assistance from other contributors.</p>
 </div>
 <div class="paragraph">
-<p>Contributors to this document include (in alphabetical order):
+<p>Contributors to this document include:
+Paul Harman (Bloomberg),
 Johan Lindgren (TT),
 Brendan Quinn (IPTC),
-Michael Steidl (IPTC).</p>
+Michael Steidl (IPTC),
+Stuart Myles (ex-AP),
+Evan Sandhaus (ex-NYT).</p>
 </div>
 </div>
 <div class="sect2">
@@ -695,18 +681,11 @@ Michael Steidl (IPTC).</p>
 <div class="sect2">
 <h3 id="_about_iptc">2.4. About IPTC</h3>
 <div class="paragraph">
-<p>The IPTC, based in London, brings together the world’s leading news agencies,
-publishers and industry vendors. It develops and promotes efficient technical
-standards to improve the management and exchange of information between content
-providers, intermediaries and consumers. The standards enable easy,
-cost-effective and rapid innovation and include the IPTC Photo Metadata
-standard, the Video Metadata Hub, the news exchange formats NewsML-G2, ninjs,
-SportsML-G2 and NITF, rNews for marking up online news, the rights expression
-language RightsML, and NewsCodes taxonomies for categorising news.</p>
+<p>The IPTC, based in London, brings together the world’s leading news agencies, publishers and industry vendors. It develops and promotes efficient technical standards to improve the management and exchange of information between content providers, intermediaries and consumers. The standards enable easy,
+cost-effective and rapid innovation and include the IPTC Photo Metadata standard, the Video Metadata Hub, the news exchange formats NewsML-G2, ninjs, SportsML-G2 and NITF, rNews for marking up online news, the rights expression language RightsML, and NewsCodes taxonomies for categorising news.</p>
 </div>
 <div class="paragraph">
-<p>IPTC is a not-for-profit membership organisation registered in England.
-<a href="https://iptc.org/participate/">Find more about membership</a>.</p>
+<p>IPTC is a not-for-profit membership organisation registered in England. <a href="https://iptc.org/participate/">Find more about membership</a>.</p>
 </div>
 <div class="paragraph">
 <p>Business address:</p>
@@ -726,8 +705,7 @@ United Kingdom</pre>
 <h2 id="_ninjs_in_detail">3. ninjs in Detail</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Here we document each property in a ninjs object. Only the "uri" property is
-required, all others are optional.</p>
+<p>Here we document each property in a ninjs object. Only the "uri" property is required, all others are optional.</p>
 </div>
 <div class="sect2">
 <h3 id="_administrative_properties">3.1. Administrative properties</h3>
@@ -773,18 +751,14 @@ required, all others are optional.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">representationtype</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the completeness of this representation of a news item.
-For a full document representation, the value should be <code>complete</code>. For a partial
-representation, for example a short extract provided as the results of an API
-call, the value <code>incomplete</code> should be used.</p></td>
+For a full document representation, the value should be <code>complete</code>. For a partial representation, for example a short extract provided as the results of an API call, the value <code>incomplete</code> should be used.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>complete</code><br>
 <code>incomplete</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for the kind of content of this news object. This can be any
-string but we suggest something identifying the content such as <code>"text-only"</code>
-or <code>"text-photo"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for the kind of content of this news object. This can be any string but we suggest something identifying the content such as <code>"text-only"</code> or <code>"text-photo"</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -804,8 +778,7 @@ or <code>"text-photo"</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date and time before which all versions of the news object are embargoed.
-If absent, this object is not embargoed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
 </tr>
 <tr>
@@ -814,18 +787,17 @@ If absent, this object is not embargoed.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>usable</code><br>
 <code>withheld</code><br>
-<code>canceled</code></p></td>
+<code>canceled</code></p>
+<p class="tableblock"><a id="urgency"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">urgency</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The editorial urgency of the content from 1 to 9. 1 represents the highest
-urgency, 9 the lowest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ednote</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A note that is intended to be read by internal staff at the receiving
-organisation, but not published to the end-user.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -869,8 +841,7 @@ organisation, but not published to the end-user.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">copyrightnotice</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any necessary copyright notice for claiming the intellectual property for the
-content.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any necessary copyright notice for claiming the intellectual property for the content.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -902,8 +873,7 @@ content.</p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">headline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A brief and snappy introduction to the content, designed to catch the reader&#8217;s
-attention</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A brief and snappy introduction to the content, designed to catch the reader&#8217;s attention</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -926,9 +896,7 @@ Multiple body_* properties are allowed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">description<em>_&lt;type&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A free-form textual description of the content of the item. The string appended
-to description_ in the property name should reflect the format of the text, for
-example <code>description_text</code> or <code>description_html</code>.<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A free-form textual description of the content of the item. The string appended to description_ in the property name should reflect the format of the text, for example <code>description_text</code> or <code>description_html</code>.<br>
 Multiple description_* properties are allowed.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
@@ -938,10 +906,7 @@ Multiple description_* properties are allowed.</p></td>
 <div class="sect2">
 <h3 id="_metadata_properties">3.4. Metadata properties</h3>
 <div class="paragraph">
-<p>ninjs allows content to be marked up with one simple string-based metadata
-property <code>located</code>, plus several rich metadata properties that can link to
-pre-defined controlled vocabularies describing people, organisations, places
-subjects, objects and events.</p>
+<p>ninjs allows content to be marked up with one simple string-based metadata property <code>located</code>, plus several rich metadata properties that can link to pre-defined controlled vocabularies describing people, organisations, places subjects, objects and events.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1047,6 +1012,14 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The code for the organisation in a scheme (= controlled vocabulary) which is identified by the scheme property</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">symbols</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Symbols used for a financial instrument linked to the organisation at a specific market place.<br>
+Array of objects with the properties:<br>
+<code>ticker</code>: Ticker symbol used for the financial instrument (string)<br>
+<code>exchange</code>: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -1283,14 +1256,10 @@ This property is an array of objects with the following properties:</p>
 <div class="sect2">
 <h3 id="_renditions">3.5. Renditions</h3>
 <div class="paragraph">
-<p>The <code>renditions</code> property is a wrapper for different renditions of content of
-the news object, such as articles, images, videos or PDF documents.</p>
+<p>The <code>renditions</code> property is a wrapper for different renditions of content of the news object, such as articles, images, videos or PDF documents.</p>
 </div>
 <div class="paragraph">
-<p>It contains a set of one or more keys, each with a name and an object as the
-value. The name can be any text or numbers, and should represent a given
-rendition type such as "thumbnail" or "preview". The object should include the
-below properties.</p>
+<p>It contains a set of one or more keys, each with a name and an object as the value. The name can be any text or numbers, and should represent a given rendition type such as "thumbnail" or "preview". The object should include the below properties.</p>
 </div>
 <div class="sect3">
 <h4 id="_properties_of_renditions">3.5.1. Properties of renditions</h4>
@@ -1382,19 +1351,15 @@ below properties.</p>
 <div class="sect2">
 <h3 id="_associations">3.6. Associations</h3>
 <div class="paragraph">
-<p>The <code>associations</code> property contains a set of key/value pairs where the key is
-the name of the association and the value is any valid ninjs object.</p>
+<p>The <code>associations</code> property contains a set of key/value pairs where the key is the name of the association and the value is any valid ninjs object.</p>
 </div>
 <div class="paragraph">
-<p>This can be used to link news items together, or to associate images with a text
-story, for example.</p>
+<p>This can be used to link news items together, or to associate images with a text story, for example.</p>
 </div>
 <div class="sect3">
 <h4 id="_associations_example">3.6.1. Associations example</h4>
 <div class="paragraph">
-<p>This example shows a press release. The body of the story is in the <code>body_xhtml</code>
-property. A logo and an image are associated to the story. Both the logo and the
-image have two renditions, a "thumbnail" and a "highres" version.</p>
+<p>This example shows a press release. The body of the story is in the <code>body_xhtml</code> property. A logo and an image are associated to the story. Both the logo and the image have two renditions, a "thumbnail" and a "highres" version.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1459,8 +1424,7 @@ image have two renditions, a "thumbnail" and a "highres" version.</p>
 <p><code>byline</code> and <code>headline</code> are typical text news metadata</p>
 </li>
 <li>
-<p>The text of article itself is represented by <code>body</code>, in two format variants:
-plain text (<code>body_text</code>) and HTML (<code>body_html</code>).</p>
+<p>The text of article itself is represented by <code>body</code>, in two format variants: plain text (<code>body_text</code>) and HTML (<code>body_html</code>).</p>
 </li>
 </ul>
 </div>
@@ -1486,9 +1450,7 @@ plain text (<code>body_text</code>) and HTML (<code>body_html</code>).</p>
 <p>Metadata about the content are added to the example above.</p>
 </li>
 <li>
-<p><code>person</code>, <code>place</code> and <code>organisation</code> employ a structure which provides human
-readable names for the entity but also machine readable identifiers by the
-<code>scheme</code> and <code>code</code> properties.</p>
+<p><code>person</code>, <code>place</code> and <code>organisation</code> employ a structure which provides human readable names for the entity but also machine readable identifiers by the <code>scheme</code> and <code>code</code> properties.</p>
 </li>
 </ul>
 </div>
@@ -1543,9 +1505,7 @@ readable names for the entity but also machine readable identifiers by the
 <div class="sect3">
 <h4 id="_more_examples_on_github">4.1.3. More Examples on Github</h4>
 <div class="paragraph">
-<p>You can find more examples of ninjs representations of text-based news releases
-in the
-<a href="https://github.com/iptc/newsinjson/tree/master/examples">ninjs Github
+<p>You can find more examples of ninjs representations of text-based news releases in the <a href="https://github.com/iptc/newsinjson/tree/master/examples">ninjs Github
 repository</a>.</p>
 </div>
 </div>
@@ -1567,12 +1527,10 @@ repository</a>.</p>
 <p>"type" indicates that the generic content type is 'a picture'</p>
 </li>
 <li>
-<p>"byline", "headline", "description" (in plain text and HTML format) are
-typical photo metadata</p>
+<p>"byline", "headline", "description" (in plain text and HTML format) are typical photo metadata</p>
 </li>
 <li>
-<p>The image itself is represented by "renditions". Two are available in this
-example: a main version and a small version.</p>
+<p>The image itself is represented by "renditions". Two are available in this example: a main version and a small version.</p>
 </li>
 </ul>
 </div>
@@ -1798,42 +1756,30 @@ example: a main version and a small version.</p>
 <div class="sect2">
 <h3 id="_best_practice_for_naming_of_properties">5.1. Best Practice for Naming of Properties</h3>
 <div class="paragraph">
-<p>ninjs allows users to create their own names of extensible properties. Here we
-describe some best practices for choosing your own names.</p>
+<p>ninjs allows users to create their own names of extensible properties. Here we describe some best practices for choosing your own names.</p>
 </div>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">body_</dt>
 <dd>
-<p>The body is the main text of the news release. The ninjs document can
-contain multiple body elements, each representing the same text but in different
-formats. Body elements always begin with the name &#8220;body_&#8221;, with a tag appended
-to the name. This tag should describe the format of the text in the element.</p>
+<p>The body is the main text of the news release. The ninjs document can contain multiple body elements, each representing the same text but in different formats. Body elements always begin with the name &#8220;body_&#8221;, with a tag appended to the name. This tag should describe the format of the text in the element.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>You should always include a plain text body element, including the body text
-stripped of all formatting: <code>body_text</code></p>
+<p>You should always include a plain text body element, including the body text stripped of all formatting: <code>body_text</code></p>
 </li>
 <li>
-<p>For additional body elements, choose names that can be easily recognised by
-automated processors, such as <code>body_html</code> and <code>body_xhtml</code>
-WARNING: You should <strong>avoid</strong> body element names that do not describe the format of the
-body text being represented, such as <code>body_format1</code> or <code>body_0</code>.</p>
+<p>For additional body elements, choose names that can be easily recognised by automated processors, such as <code>body_html</code> and <code>body_xhtml</code>
+WARNING: You should <strong>avoid</strong> body element names that do not describe the format of the body text being represented, such as <code>body_format1</code> or <code>body_0</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
 <dt class="hdlist1">description_</dt>
 <dd>
-<p>A description is a free-form textual description of the content of
-the item. For example, a description can be used to add additional information
-about a headline associated with a photograph. Multiple description elements can
-be used to represent the same description in different formats.</p>
+<p>A description is a free-form textual description of the content of the item. For example, a description can be used to add additional information about a headline associated with a photograph. Multiple description elements can be used to represent the same description in different formats.</p>
 <div class="paragraph">
-<p>Description elements always begin with the name &#8220;description_&#8221;, with a tag
-appended to the name. This tag should describe the format of the text in the
-element.</p>
+<p>Description elements always begin with the name &#8220;description_&#8221;, with a tag appended to the name. This tag should describe the format of the text in the element.</p>
 </div>
 <div class="paragraph">
 <p>When using the description_ element:</p>
@@ -1844,26 +1790,19 @@ element.</p>
 <p>Always include a plain text description element: <code>description_text</code></p>
 </li>
 <li>
-<p>For additional description elements, choose names that can be easily recognised
-by automated processors, such as <code>description_html</code> and <code>description_xhtml</code></p>
+<p>For additional description elements, choose names that can be easily recognised by automated processors, such as <code>description_html</code> and <code>description_xhtml</code></p>
 </li>
 <li>
-<p>You should <strong>avoid</strong> description element names that do not describe the format of the
-description text being represented, such as <code>description_myformat</code> or
-<code>description_0 renditions</code>.</p>
+<p>You should <strong>avoid</strong> description element names that do not describe the format of the description text being represented, such as <code>description_myformat</code> or <code>description_0 renditions</code>.</p>
 </li>
 </ul>
 </div>
 </dd>
 <dt class="hdlist1">renditions</dt>
 <dd>
-<p>The renditions object is a wrapper for different versions of non-textual content
-of the news object. This is where photographs and multimedia items will be
-found.</p>
+<p>The renditions object is a wrapper for different versions of the content of the news object. This is where photographs and multimedia items will be found. Or other textual variants.</p>
 <div class="paragraph">
-<p>Each object in the renditions object is named. Any name can be chosen for these
-objects, but the name must contain only alphanumeric characters of the ASCII
-character set.</p>
+<p>Each object in the renditions object is named. Any name can be chosen for these objects, but the name must contain only alphanumeric characters of the ASCII character set.</p>
 </div>
 </dd>
 </dl>
@@ -1872,10 +1811,7 @@ character set.</p>
 <dl>
 <dt class="hdlist1">associations</dt>
 <dd>
-<p>The associations object is a wrapper which contains news objects (other ninjs
-documents) that are associated with this news object. Any name can be chosen
-for these objects, but the name must contain only alphanumeric characters of
-the ASCII character set.</p>
+<p>The associations object is a wrapper which contains news objects (other ninjs documents) that are associated with this news object. Any name can be chosen for these objects, but the name must contain only alphanumeric characters of the ASCII character set.</p>
 </dd>
 </dl>
 </div>
@@ -1883,26 +1819,19 @@ the ASCII character set.</p>
 <div class="sect2">
 <h3 id="_how_to_escape_xml_content_for_inclusion_in_json_objects">5.2. How to escape XML content for inclusion in JSON objects</h3>
 <div class="paragraph">
-<p>JSON string values cannot contain characters: <code>"</code>, <code>\</code>, and various control
-characters like tabs. Therefore, we need to escape these characters in our
-content when marshaling data into JSON objects. We have provided an XSL
-stylesheet to do this using XSL.</p>
+<p>JSON string values cannot contain characters: <code>"</code>, <code>\</code>, and various control characters like tabs. Therefore, we need to escape these characters in our content when marshaling data into JSON objects. We have provided an XSL stylesheet to do this using XSL.</p>
 </div>
 <div class="paragraph">
 <p>The XSL Template at
 <a href="https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt" class="bare">https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt</a>
-extracts the body of an NITF document (NITF samples are available from
-<a href="https://iptc.org/standards/nitf/using-nitf/" class="bare">https://iptc.org/standards/nitf/using-nitf/</a>) and creates a simple JSON object.
-The resulting object is not yet a valid ninjs object, however it will be valid
-JSON.</p>
+extracts the body of an NITF document (NITF samples are available from <a href="https://iptc.org/standards/nitf/using-nitf/" class="bare">https://iptc.org/standards/nitf/using-nitf/</a>) and creates a simple JSON object.
+The resulting object is not yet a valid ninjs object, however it will be valid JSON.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_how_to_create_provider_specific_extensions">5.3. How to create provider-specific extensions</h3>
 <div class="paragraph">
-<p>In some cases, your news releases may have content that does not fit into the
-objects that are defined in the ninjs standard. In these cases, you should
-extend (and rename) the IPTC ninjs schema.</p>
+<p>In some cases, your news releases may have content that does not fit into the objects that are defined in the ninjs standard. In these cases, you should extend (and rename) the IPTC ninjs schema.</p>
 </div>
 <div class="paragraph">
 <p>To do this, do the following:</p>
@@ -1917,8 +1846,8 @@ extend (and rename) the IPTC ninjs schema.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.1.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.2.json#",
   "type" : "object",
   ...</code></pre>
 </div>
@@ -1930,7 +1859,7 @@ extend (and rename) the IPTC ninjs schema.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
   ...</code></pre>
@@ -1941,12 +1870,11 @@ extend (and rename) the IPTC ninjs schema.</p>
 </div>
 </li>
 <li>
-<p>add your own properties to your copy of the schema. For example, to add a
-sub-headline:</p>
+<p>add your own properties to your copy of the schema. For example, to add a sub-headline:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
   ...
@@ -1956,8 +1884,7 @@ sub-headline:</p>
     "type" : "string"
   },
   "subhead" : {
-    "description" : "An additional line supporting the snappy introduction to
-    the content",
+    "description" : "An additional line supporting the snappy introduction to the content",
     "type" : "string"
   },
   ...</code></pre>
@@ -1966,12 +1893,12 @@ sub-headline:</p>
 </li>
 <li>
 <p>change the reference from the "associations" property definition
-(<code>"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.1.json#"</code>) to point to
+(<code>"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.2.json#"</code>) to point to
 your new schema:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
   ...
@@ -1992,15 +1919,12 @@ your new schema:</p>
 </div>
 </li>
 <li>
-<p>save your new schema to a location where users of the schema can access it,
-which should be the same URL used for the "id" property and the "$ref" property
-of the "associations" definition (this is used for validating that an associated
-object is a complete ninjs document and this is how the schema knows to
-recursively validate associated objects):</p>
+<p>save your new schema to a location where users of the schema can access it, which should be the same URL used for the "id" property and the "$ref" property of the "associations" definition (this is used for validating that an associated
+object is a complete ninjs document and this is how the schema knows to recursively validate associated objects):</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
   ...
@@ -2014,8 +1938,7 @@ recursively validate associated objects):</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>This is an example ninjs document that includes a sub-headline in an extended
-ninjs document:</p>
+<p>This is an example ninjs document that includes a sub-headline in an extended ninjs document:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2036,27 +1959,23 @@ ninjs document:</p>
 <div class="sect3">
 <h4 id="_validating_a_ninjs_document">5.4.1. Validating a ninjs document</h4>
 <div class="paragraph">
-<p>JSON Schema is the de-facto standard for validating JSON documents. The IPTC
-maintains schemas for each version of the ninjs standard. These schemas can be
-used to validate ninjs documents.</p>
+<p>JSON Schema is the de-facto standard for validating JSON documents. The IPTC maintains schemas for each version of the ninjs standard. These schemas can be used to validate ninjs documents.</p>
 </div>
 <div class="paragraph">
 <p>This is the latest IPTC ninjs schema available for download:
-<a href="https://iptc.org/std/ninjs/ninjs-schema_1.1.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.1.json</a></p>
+<a href="https://iptc.org/std/ninjs/ninjs-schema_1.2.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.2.json</a></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_sample_code">5.4.2. Sample Code</h4>
 <div class="paragraph">
-<p>Sample code demonstrating how to validate ninjs documents, along with example
-ninjs documents, can be found in the <a href="https://github.com/iptc/newsinjson">IPTC newsinjson github repository</a>.</p>
+<p>Sample code demonstrating how to validate ninjs documents, along with example ninjs documents, can be found in the <a href="https://github.com/iptc/newsinjson">IPTC newsinjson github repository</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_online_validator">5.4.3. Online Validator</h4>
 <div class="paragraph">
-<p>You can also validate ninjs documents by pasting the schema and document into
-this online validator, which is built on the json-schema-validator library:</p>
+<p>You can also validate ninjs documents by pasting the schema and document into this online validator, which is built on the json-schema-validator library:</p>
 </div>
 <div class="paragraph">
 <p><a href="http://json-schema-validator.herokuapp.com" class="bare">http://json-schema-validator.herokuapp.com</a></p>
@@ -2069,8 +1988,7 @@ this online validator, which is built on the json-schema-validator library:</p>
 <h2 id="_mapping_between_ninjs_and_newsml_g2">6. Mapping between ninjs and NewsML-G2</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ninjs and NewsML-G2 are not intended to be equivalent to each other, but they
-both adhere to the IPTC News Architecture, so they share many properties.</p>
+<p>ninjs and NewsML-G2 are not intended to be equivalent to each other, but they both adhere to the IPTC News Architecture, so they share many properties.</p>
 </div>
 <div class="paragraph">
 <p>Here is a summary of the properties shared by ninjs and NewsML-G2:</p>
@@ -2112,8 +2030,20 @@ both adhere to the IPTC News Architecture, so they share many properties.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:itemClass</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">firstcreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:firstCreated</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">versioncreated</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:versionCreated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">charcount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:charcount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wordcount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:wordcount</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
@@ -2168,12 +2098,28 @@ both adhere to the IPTC News Architecture, so they share many properties.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:subject</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">infosource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:infoSource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:itemMeta/title</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">headline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:headline</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">slugline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:slugline</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">byline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:by</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ednote</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:edNote</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">description_*</p></td>
@@ -2203,6 +2149,14 @@ both adhere to the IPTC News Architecture, so they share many properties.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">renditions@width</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:remoteContent@width</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renditions@format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:remoteContent@format</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renditions@duration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:remoteContent@duration</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -2213,22 +2167,28 @@ both adhere to the IPTC News Architecture, so they share many properties.</p>
 <div class="sect2">
 <h3 id="_ninjs_1_0">7.1. ninjs 1.0</h3>
 <div class="paragraph">
-<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.0.json">Version 1.0 of the ninjs
-schema</a> was approved by the IPTC Standards Committee on 23 October 2013.</p>
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.0.json">Version 1.0 of the ninjs schema</a> was approved by the IPTC Standards Committee on 23 October 2013.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_ninjs_1_1">7.2. ninjs 1.1</h3>
 <div class="paragraph">
-<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.1.json">Version 1.1 of the ninjs
-schema</a> was made available in March 2014.</p>
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.1.json">Version 1.1 of the ninjs schema</a> was made available in March 2014.</p>
 </div>
 <div class="paragraph">
-<p>Version 1.1 moved to JSON Schema version 4, and added the <code>urgency</code>,
-<code>usageterms</code> and <code>geometry_*</code> properties.</p>
+<p>Version 1.1 moved to JSON Schema version 4, and added the <code>urgency</code>, <code>usageterms</code> and <code>geometry_*</code> properties.</p>
 </div>
 <div class="paragraph">
-<p>An error in the association reference URI was corrected in September 2017.</p>
+<p>An error in the association reference URI in the version 1.1 JSON Schema document was corrected in September 2017.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ninjs_1_2">7.3. ninjs 1.2</h3>
+<div class="paragraph">
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.2.json">Version 1.2 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in October 2019.</p>
+</div>
+<div class="paragraph">
+<p>Version 1.2 added the <code>firstcreated</code>, <code>charcount</code>, <code>wordcount</code>, <code>slugline</code>, <code>ednote</code>, <code>infosource</code>, <code>title</code> and <code>slugline</code> properties. It also added the value <code>component</code> under type. It changed the description of the <code>renditions</code> property and added sub-properties <code>duration</code> and <code>format</code>.</p>
 </div>
 </div>
 </div>
@@ -2239,38 +2199,26 @@ schema</a> was made available in March 2014.</p>
 <div class="sect2">
 <h3 id="_on_the_web">8.1. On the Web</h3>
 <div class="paragraph">
-<p>The IPTC web site www.iptc.org has a wealth of resources for implementers. The
-page www.iptc.org/standards summarises all of the IPTC&#8217;s standards and provides
-links to further resources for each, including ninjs, NewsML-G2, SportsML-G2 and
-RightsML.</p>
+<p>The IPTC web site www.iptc.org has a wealth of resources for implementers. The page www.iptc.org/standards summarises all of the IPTC&#8217;s standards and provides links to further resources for each, including ninjs, NewsML-G2, SportsML-G2 and RightsML.</p>
 </div>
 <div class="paragraph">
-<p>There are also user groups at Groups.io for all those seeking answers to
-questions about ninjs or other IPTC standards, and for those who would like to
-participate in development work:</p>
+<p>There are also user groups at Groups.io for all those seeking answers to questions about ninjs or other IPTC standards, and for those who would like to participate in development work:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://groups.io/g/iptc-ninjs/" class="bare">https://groups.io/g/iptc-ninjs/</a> is the public group for discussing ninjs and
-other representations of news content in the JSON format.</p>
+<p><a href="https://groups.io/g/iptc-ninjs/" class="bare">https://groups.io/g/iptc-ninjs/</a> is the public group for discussing ninjs and other representations of news content in the JSON format.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://groups.io/g/iptc-newsml-g2/" class="bare">https://groups.io/g/iptc-newsml-g2/</a> is the public group for NewsML-G2 and Events in NewsML-G2 topics.</p>
 </div>
 <div class="paragraph">
 <p>Staff from IPTC Member organisations are welcome to join the
-<a href="https://groups.io/g/iptc-news-in-json-dev">members-only discussion list for the
-ninjs development team</a>.</p>
+<a href="https://groups.io/g/iptc-news-in-json-dev">members-only discussion list for the ninjs development team</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_join_the_iptc">8.2. Join the IPTC</h3>
 <div class="paragraph">
-<p>The IPTC welcomes new members. Membership is the backbone of the IPTC, and
-levels vary for both organisations and individuals. Additionally, several
-"working parties" and "working groups" focus on specific topic areas and
-standards. IPTC also hosts two face-to-face meetings a year around the globe,
-where its working parties discuss and develop their ideas to support information
-exchange and the rapid innovation of media.</p>
+<p>The IPTC welcomes new members. Membership is the backbone of the IPTC, and levels vary for both organisations and individuals. Additionally, several "working parties" and "working groups" focus on specific topic areas and standards. IPTC also hosts two face-to-face meetings a year around the globe, where its working parties discuss and develop their ideas to support information exchange and the rapid innovation of media.</p>
 </div>
 <div class="paragraph">
 <p>To find out more, visit <a href="https://www.iptc.org/participate" class="bare">https://www.iptc.org/participate</a></p>
