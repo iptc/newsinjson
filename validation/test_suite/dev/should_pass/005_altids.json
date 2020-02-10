@@ -1,0 +1,9 @@
+{
+    "uri": "005_altids.json",
+    "headline": "my new article",
+    "altids": {
+        "mySystem": "A12345",
+        "anything": "any id",
+        "there are no restrictions": "on what keys and values we can use"
+    }
+}
