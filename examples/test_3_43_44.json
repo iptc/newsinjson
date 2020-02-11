@@ -1,0 +1,32 @@
+{
+	"$standard": {
+	    "name": "ninjs",
+	    "version": "dev_0.1_v1.2",
+	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.1_v1.2.json"
+	},
+	"uri": "iptc.org/dev/test_3_43_44",
+	"headline": "Test of three new properties",
+	"headline_test_text": "Meeting test",
+	"description_caption_xhtml": "xyz",
+	"altids": {
+	    "itemid": "(ap):f40b0304-0454-4ba2-a84d-686378279ba4",
+	    "etag": "(ap):686897696a7c876b7e",
+	    "friendlykey": "(ap)",
+	    "videoid": "(ap)",
+	    "transref": "(ap)",
+	    "iid": "(reuters)",
+	    "otr": "(reuters)",
+	    "tpcid": "(reuters)",
+	    "sid": "(reuters)",
+	    "tpguid": "(reuters)",
+	    "rpid": "(reuters)"
+	},
+    "trustindicator": [
+	 {
+        "scheme" : "http://cv.iptc.org/newscodes/trustindicator/",
+        "code" : "editorialPolicy",
+        "title" : "The BBC's Editorial Standards",
+        "href": "https://www.bbc.com/editorialguidelines/guidelines/editorial-standards"
+     }
+   ]
+}

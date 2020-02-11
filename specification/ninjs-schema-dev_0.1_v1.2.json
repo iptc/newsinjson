@@ -9,16 +9,23 @@
     "patternProperties": {
         "^description_[a-zA-Z0-9_]+": {
             "title": "Description",
-            "description": "A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format of the text). nar:description",
+            "description_old": "A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format of the text). nar:description",
+            "description": "A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format and/or the purpose of the text, separating the parts with _). nar:description",
             "type": "string"
         },
         "^body_[a-zA-Z0-9_]+": {
             "title": "Body",
-            "description": "The textual content of the news object. (The string appended to body_ in the property name should reflect the format of the text). nar:inlineData or nar:inlineXML",
+            "description": "The textual content of the news object. (The string appended to body_ in the property name should reflect the format and/or the purpose of the text, separating the parts with _). nar:inlineData or nar:inlineXML",
+            "type": "string"
+        },
+        "^headline_[a-zA-Z0-9_]+": {
+            "title": "Extra headlines",
+            "description": "Additional headlines or strings of that type can be handled here. This is not replacing the main headline-property in ninjs. (The string appended to headline_ in the property name should reflect the format and/or the purpose of the text, separating the parts with _) nar:headline with roles issue #13",
             "type": "string"
         }
     },
     "properties": {
+
         "uri": {
             "title": "Uniform Resource Identifier",
             "description": "The identifier for this news object. nar:newsItem@guid",
@@ -544,23 +551,18 @@
         },
         "altids": {
             "title": "Alternative id",
-            "description": "Alternative id's of the item. It is up to the individual provider to name and set type on the alternative id's they like to use.",
+            "description": "Alternative id's of the item. It is up to the individual provider to name and set type on the alternative id's they like to use. nar:altId issue #3",
             "type": "object",
             "additionalProperties": true
         },
         "trustindicator": {
             "title": "Trust indicator",
-            "description": "An array of objects to allow links to documents about trust indicators. (nar:link)",
+            "description": "An array of objects to allow links to documents about trust indicators. (nar:link) issue #44",
             "type": "array",
             "items": {
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "title": {
-                        "title": "Title",
-                        "description": "The title of the resource being referenced.",
-                        "type": "string"
-                    },
                     "scheme": {
                         "title": "Scheme",
                         "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the trust indicator",
@@ -570,6 +572,11 @@
                     "code": {
                         "title": "Code",
                         "description": "The code for the trust indicator in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                        "type": "string"
+                    },
+                    "title": {
+                        "title": "Title",
+                        "description": "The title of the resource being referenced.",
                         "type": "string"
                     },
                     "href": {
@@ -584,7 +591,7 @@
         "$standard": {
             "title": "Standard",
             "type": "object",
-            "description": "An object with information about standard, version and schema this instance is valid against. nar:standard, nar:standardversion and xml:schema",
+            "description": "An object with information about standard, version and schema this instance is valid against. nar:standard, nar:standardversion and xml:schema issue #43",
             "additionalProperties": false,
             "properties": {
                 "name": {
