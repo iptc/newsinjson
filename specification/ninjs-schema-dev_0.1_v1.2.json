@@ -612,6 +612,33 @@
                 }
             }
             
+        },
+        "genre": {
+            "title": "Genre",
+            "description": "A nature, intellectual or journalistic form of the content. nar:genre",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "description": "The name of the genre",
+                        "type": "string"
+                    },      
+                    "scheme": {
+                        "title": "Scheme",
+                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the genre. Normally  http://cv.iptc.org/newscodes/genre/",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "code": {
+                        "title": "Code",
+                        "description": "The code for the genre in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                        "type": "string"
+                    }
+                }
+            }
         }
     }
 }
