@@ -478,77 +478,6 @@
                 "^[a-zA-Z0-9]+": {"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.1_v1.2.json#"}
             }
         },
-        "advice": {
-            "type": "array",
-            "title": "Advices",
-            "description": "Editorial advice to the receiver of the news object. Only in dev so far. Tests with the C-POP project.",
-            "additionalProperties": false,
-            "items": {
-                "description": "One advice item",
-                "type": "object",
-                "additionalProperties": false,
-                "properties": {
-                    "role": {
-                        "title": "Role",
-                        "description": "Role of this advice.",
-                        "type": "string",
-                        "enum": ["publish"]
-                        },
-                    "environment": {
-                      "type": "array",
-                      "additionalProperties": false,
-                      "items": {
-                          "type": "object",
-                          "properties": {
-                              "code": {
-                              "type": "string"
-                              },
-                              "scheme": { 
-                               "type": "string",
-                                "format": "uri"
-                                    }
-                                }
-                            }   
-                        },
-                    "importance": {
-                      "type": "object",
-                      "description": "Advice regarding the importance of the content from an emotional perspective. Experimental vocabulary, part of the C-POP project.",
-                      "additionalProperties": false,
-                          "properties": {
-                              "code": {
-                              "type": "string",
-                              "description": "Present values are: essential, useful and entertaining."
-                              },
-                              "scheme": { 
-                               "type": "string",
-                                "format": "uri",
-                                "description": "http://cv.iptc.org/newscodes/advice-importance"
-                                    }
-                                    
-                            }   
-                        },
-
-                    "lifetime": {
-                      "type": "object",
-                      "description": "Advice regarding the length of time that the content is considered to be relevant. Experimental vocabulary, part of the C-POP project.",
-                      "additionalProperties": false,
-                          "properties": {
-                              "code": {
-                              "type": "string",
-                              "description": "Present values are: short, medium, long and evergreen."
-                              },
-                              "scheme": { 
-                               "type": "string",
-                                "format": "uri",
-                                "description": "http://cv.iptc.org/newscodes/advice-lifetime"
-                                    }
-
-}   
-                        }
-                }
-
-            }
-        },
         "altids": {
             "title": "Alternative id",
             "description": "Alternative id's of the item. It is up to the individual provider to name and set type on the alternative id's they like to use. nar:altId issue #3",
@@ -637,6 +566,102 @@
                         "description": "The code for the genre in a scheme (= controlled vocabulary) which is identified by the scheme property",
                         "type": "string"
                     }
+                }
+            }
+        },
+        "advice": {
+            "type": "array",
+            "title": "Advices",
+            "description": "Editorial advice to the receiver of the news object. Only in dev so far. Tests with the C-POP project.",
+            "additionalProperties": false,
+            "items": {
+                "description": "One advice item",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "role": {
+                        "title": "Role",
+                        "description": "Role of this advice.",
+                        "type": "string",
+                        "enum": ["publish"]
+                        },
+                    "environment": {
+                      "type": "array",
+                      "additionalProperties": false,
+                      "items": {
+                          "type": "object",
+                          "properties": {
+                              "code": {
+                              "type": "string"
+                              },
+                              "scheme": { 
+                               "type": "string",
+                                "format": "uri"
+                                    }
+                                }
+                            }   
+                        },
+                    "importance": {
+                      "type": "object",
+                      "description": "Advice regarding the importance of the content from an emotional perspective. Experimental vocabulary, part of the C-POP project.",
+                      "additionalProperties": false,
+                          "properties": {
+                              "code": {
+                              "type": "string",
+                              "description": "Present values are: essential, useful and entertaining."
+                              },
+                              "scheme": { 
+                               "type": "string",
+                                "format": "uri",
+                                "description": "http://cv.iptc.org/newscodes/advice-importance"
+                                    }
+                                    
+                            }   
+                        },
+
+                    "lifetime": {
+                      "type": "object",
+                      "description": "Advice regarding the length of time that the content is considered to be relevant. Experimental vocabulary, part of the C-POP project.",
+                      "additionalProperties": false,
+                          "properties": {
+                              "code": {
+                              "type": "string",
+                              "description": "Present values are: short, medium, long and evergreen."
+                              },
+                              "scheme": { 
+                               "type": "string",
+                                "format": "uri",
+                                "description": "http://cv.iptc.org/newscodes/advice-lifetime"
+                                    }
+
+}   
+                        }
+                }
+
+            }
+        },
+        "linkedRights": {
+            "title": "Linked rights",
+            "type": "string",
+            "description": "A link from the current Item to Web resource with rights related information. nar:link",
+            "format": "uri"
+        },
+        "encodedRights": {
+            "title": "Encoded Rights",
+            "additionalProperties": false,
+            "type": "object",
+            "description": "",
+            "properties": {
+                "langid": {
+                    "type": "string",
+                    "title": "Language id",
+                    "description": "Identifier for the used Rights Expression language. nar:@langid",
+                    "format": "uri"
+                },
+                "^rightsExpression_[a-zA-Z0-9_]+": {
+                    "title": "Rights expression",
+                    "description": "Contains a rights expression as defined by a Rights Expression Language. (The string appended to body_ in the property name should reflect the format and/or the purpose of the expression, separating the parts with _). nar:rightsExpressionXML or nar:rightsExpressionData",
+                    "type": "string"
                 }
             }
         }
