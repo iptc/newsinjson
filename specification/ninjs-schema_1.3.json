@@ -61,7 +61,7 @@
         },
         "profile": {
             "title": "Profile",
-            "description": "An identifier for the kind of content of this news object. This can be any string but we suggest something identifying the content such as 'text-only' or 'text-photo'. (Investigate if this align with NewsML nar:profile or not.)",
+            "description": "An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as 'text-only' or 'text-photo'. Profiles are typically provider-specific. nar:profile",
             "type": "string"
         },
         "version": {
@@ -479,7 +479,7 @@
         },
         "altids": {
             "title": "Alternative id",
-            "description": "Alternative id's of the item. It is up to the individual provider to name and set type on the alternative id's they like to use. nar:altId issue #3. (Added in version 1.3)",
+            "description": "Alternative identifiers of the item. It is up to the individual provider to name and set type on the alternative identifiers they like to use. nar:altId issue #3. (Added in version 1.3)",
             "type": "object",
             "additionalProperties": true
         },
