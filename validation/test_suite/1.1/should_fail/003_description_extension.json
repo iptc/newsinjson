@@ -1,0 +1,4 @@
+{
+    "uri": "017_description_extension",
+    "description_*&^%": "This description should fail due to bad characters"
+}
