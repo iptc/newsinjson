@@ -433,8 +433,8 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <div class="details">
 <span id="author" class="author">IPTC News in JSON Working Group</span><br>
 <span id="email" class="email"><a href="mailto:office@iptc.org">office@iptc.org</a></span><br>
-<span id="revnumber">covers version 1.2</span>
-<br><span id="revremark">Revised 2020-02-10</span>
+<span id="revnumber">covers version 1.3</span>
+<br><span id="revremark">Revised 2020-05-04</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">ninjs User Guide</div>
@@ -521,9 +521,9 @@ how simple a real ninjs document can be. We have also built a JSON schema for
 ninjs to help you <a href="#_how_to_validate_objects">validate your ninjs implementation</a>.</p>
 </div>
 <div class="paragraph">
-<p>The latest version of the standard is 1.2:
-<a href="https://iptc.org/std/ninjs/ninjs-schema_1.2.json">Version 1.2 of the ninjs
-schema</a> was made available in October 2019.</p>
+<p>The latest version of the standard is 1.3:
+<a href="https://iptc.org/std/ninjs/ninjs-schema_1.3.json">Version 1.3 of the ninjs
+schema</a> was made available in May 2020.</p>
 </div>
 <div class="paragraph">
 <p>The IPTC welcomes your feedback on how to improve the standard via the
@@ -744,8 +744,37 @@ United Kingdom</pre>
 <code>component</code></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$standard</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An object with information about standard, version and schema this instance is valid against.<br>
+Added in ninjs 1.3.<br>
+This property is an object with the following child properties:</p>
+<p class="tableblock">[cols="3"]
+!===
+!Property name!Description!Data type</p>
+<p class="tableblock">!name
+!The name of the standard, such as "ninjs".
+!string</p>
+<p class="tableblock">!version
+!The version of the standard used, such as "1.3".
+!string</p>
+<p class="tableblock">!schema
+!The uri of the json schema to use for validation, such as "https://www.iptc.org/std/ninjs/ninjs-schema_1.3.json".
+!URI</p>
+<p class="tableblock">!===</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">altids_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternative identifiers for the item. It is up to the individual provider to
+name and set type on the alternative identifiers they like to use.<br>
+This property is an array of objects with no restrictions on key or value.<br>
+Added in ninjs 1.3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array of unrestricted key/value pairs</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">mimetype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A MIME type which applies to this news object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The [<a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="bare">https://www.iana.org/assignments/media-types/media-types.xhtml</a>](MIME type)
+which applies to this news object</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -877,6 +906,15 @@ For a full document representation, the value should be <code>complete</code>. F
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headline<em>_&lt;type&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Additional headlines or strings of that type can be handled here. This does not
+replace the above headline property, but enables users to add additional headlines
+for specific purposes such as teasers, other languages.<br>
+Multiple headline_* properties are allowed.<br>
+Added in ninjs 1.3.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">slugline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A human-readable identifier for the item.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
@@ -928,6 +966,48 @@ Multiple description_* properties are allowed.</p></td>
 <p>The name of the location from which the content originates</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">genre</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The nature, intellectual or journalistic form of the content.<br>
+Added in ninjs 1.3.<br>
+This property is an array of objects with the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The human-readable name of the genre, such as "Press Release".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the
+genre, such as "http://cv.iptc.org/newscodes/genre/"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the person in the scheme/controlled vocabulary which is identified
+by the scheme property, such as "Press_Release".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+</tbody>
+</table></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">person</p></td>
@@ -1244,6 +1324,53 @@ This property is an array of objects with the following properties:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The code for the infosource in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+</tbody>
+</table></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trustindicator</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An array of objects to allow links to documents about trust indicators, intended to show
+the trustworthiness of the news provider.<br>
+Added in ninjs 1.3.<br>
+This property is an array of objects with the following properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the resource being referenced, such as "BBC Editorial Guidelines"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">href</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URL for accessing the trust indicator resource, such as <a href="https://www.bbc.com/editorialguidelines/" class="bare">https://www.bbc.com/editorialguidelines/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the infosource, typically
+<a href="http://cv.iptc.org/newscodes/trustindicator/" class="bare">http://cv.iptc.org/newscodes/trustindicator/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the infosource in a scheme/controlled vocabulary which is identified by the scheme property, such as <code>editorialPolicy</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1842,12 +1969,12 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>make a copy of the schema file</p>
 </li>
 <li>
-<p>change the URL of the "id" property of IPTC&#8217;s ninjs 1.0 &#8230;&#8203;</p>
+<p>change the URL of the "id" property of IPTC&#8217;s ninjs 1.3 &#8230;&#8203;</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.2.json#",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.3.json#",
   "type" : "object",
   ...</code></pre>
 </div>
@@ -1908,7 +2035,7 @@ your new schema:</p>
     "type" : "object",
     "additionalProperties" : false,
     "patternProperties" : {
-      "^[a-zA-Z0-9]+" :  {
+      "^[a-zA-Z0-9]+$" :  {
         "$ref": "http://www.example.com/e-ninjs-schema_0.1.json#"
       }
     }
