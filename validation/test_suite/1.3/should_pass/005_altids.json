@@ -23,7 +23,7 @@
         "orArrays": [
             "because",
             "altids",
-            "has",
+            "has"
         ],
         "additionalProperties": true
 	}

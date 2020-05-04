@@ -13,10 +13,10 @@
             "code": "From_the_Scene"
         },
         {
-            "name": "Fact Check",
+            "name": "Fact Check"
         },
         {
-            "code": "genre:Opinion",
+            "code": "notrecommended:but-punctuation-is-allowed"
         }
     ]
 }
