@@ -174,8 +174,13 @@ These properties concern the structure, type and creation details of the content
 `composite` +
 `component`
 
+|title
+|A short natural-language name for the item. +
+Added in ninjs 1.2.
+|string
+
 |$standard
-|An object with information about standard, version and schema this instance is valid against. +
+a|An object with information about standard, version and schema this instance is valid against. +
 Added in ninjs 1.3. +
 This property is an object with the following child properties:
 
@@ -184,15 +189,15 @@ This property is an object with the following child properties:
 !Property name!Description!Data type
 
 !name
-!The name of the standard, such as "ninjs".
+!The name of the standard, such as `ninjs`.
 !string
 
 !version
-!The version of the standard used, such as "1.3".
+!The version of the standard used, such as `1.3`.
 !string
 
 !schema
-!The uri of the json schema to use for validation, such as "https://www.iptc.org/std/ninjs/ninjs-schema_1.3.json".
+!The uri of the json schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_1.3.json`
 !URI
 
 !===
@@ -207,13 +212,14 @@ Added in ninjs 1.3.
 |array of unrestricted key/value pairs
 
 |mimetype
-|The [https://www.iana.org/assignments/media-types/media-types.xhtml](MIME type)
-which applies to this news object
+|The https://www.iana.org/assignments/media-types/media-types.xhtml[MIME type]
+which applies to this news object.
 |string
 
 |representationtype
-|Indicates the completeness of this representation of a news item.
-For a full document representation, the value should be `complete`. For a partial representation, for example a short extract provided as the results of an API call, the value `incomplete` should be used.
+|Indicates the completeness of this representation of a news item. +
+For a full document representation, the value should be `complete`. +
+For a partial representation, for example a short extract provided as the results of an API call, the value `incomplete` should be used.
 |
 One of: +
 `complete` +
@@ -264,7 +270,7 @@ One of: +
 |number
 
 |language
-|The human language used by the content. The value should follow IETF BCP47
+|The human language used by the content. The value should follow https://tools.ietf.org/html/bcp47[IETF BCP47] format.
 |string
 
 |===
@@ -351,17 +357,17 @@ This property is an array of objects with the following properties:
 !Property name!Description!Data type
 
 !name
-!The human-readable name of the genre, such as "Press Release".
+!The human-readable name of the genre, such as `Press Release`.
 !string
 
 !scheme
 !The identifier of a scheme/controlled vocabulary which includes a code for the
-genre, such as "http://cv.iptc.org/newscodes/genre/"
+genre, such as `http://cv.iptc.org/newscodes/genre/`
 !URI
 
 !code
 !The code for the person in the scheme/controlled vocabulary which is identified
-by the scheme property, such as "Press_Release".
+by the scheme property, such as `Press_Release`.
 !string
 
 !===
@@ -413,18 +419,19 @@ This property is an array of objects with the following properties:
 !string
 
 !scheme
-!The identifier of a scheme (= controlled vocabulary) which includes a code for the organisation
+!The identifier of a scheme/controlled vocabulary which includes a code for the organisation
 !URI
 
 !code
-!The code for the organisation in a scheme (= controlled vocabulary) which is identified by the scheme property
+!The code for the organisation in a scheme/controlled vocabulary which is identified by the scheme property
 !string
 
 !symbols
-!Symbols used for a financial instrument linked to the organisation at a specific market place. +
-Array of objects with the properties: +
-`ticker`: Ticker symbol used for the financial instrument (string) +
-`exchange`: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)
+a!Symbols used for a financial instrument linked to the organisation at a specific market place. +
+Array of objects with the properties:
+
+* `ticker`: Ticker symbol used for the financial instrument (string) +
+* `exchange`: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)
 !array
 
 !===
@@ -582,16 +589,16 @@ This property is an array of objects with the following properties:
 !Property name!Description!Data type
 
 !title
-!The name of the resource being referenced, such as "BBC Editorial Guidelines"
+!The name of the resource being referenced, such as `BBC Editorial Guidelines`
 !string
 
 !href
-!The URL for accessing the trust indicator resource, such as https://www.bbc.com/editorialguidelines/
+!The URL for accessing the trust indicator resource, such as `https://www.bbc.com/editorialguidelines/`
 !string
 
 !scheme
 !The identifier of a scheme/controlled vocabulary which includes a code for the infosource, typically
-http://cv.iptc.org/newscodes/trustindicator/
+`http://cv.iptc.org/newscodes/trustindicator/`
 !URI
 
 !code
@@ -675,9 +682,9 @@ include::includes/examples/004_simple_text_article.json[]
 include::includes/examples/005_complex_text_article.json[]
 ----
 
-==== More Examples on Github
+==== More Examples on GitHub
 
-You can find more examples of ninjs representations of text-based news releases in the https://github.com/iptc/newsinjson/tree/master/examples[ninjs Github
+You can find more examples of ninjs representations of text-based news releases in the https://github.com/iptc/newsinjson/tree/master/examples[ninjs GitHub
 repository].
 
 === Photo-only example
@@ -752,7 +759,7 @@ The associations object is a wrapper which contains news objects (other ninjs do
 JSON string values cannot contain characters: `"`, `\`, and various control characters like tabs. Therefore, we need to escape these characters in our content when marshaling data into JSON objects. We have provided an XSL stylesheet to do this using XSL.
 
 The XSL Template at
-https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt
+https://raw.githubusercontent.com/iptc/newsinjson/master/tools/xslt/nitf-to-json.xslt
 extracts the body of an NITF document (NITF samples are available from https://iptc.org/standards/nitf/using-nitf/) and creates a simple JSON object.
 The resulting object is not yet a valid ninjs object, however it will be valid JSON.
 
@@ -872,36 +879,39 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |===
 |ninjs property name|NewsML-G2 equivalent
 |uri|nar:newsItem@guid
+|type|nar:itemClass
+|title|nar:itemMeta/title
+|altids|nar:altId
+|mimetype|nar:contentType
+|profile|nar:profile
 |version|nar:newsItem@version
+|firstcreated|nar:firstCreated
+|versioncreated|nar:versionCreated
+|embargoed|nar:embargoed
+|pubstatus|nar:pubStatus
+|urgency|nar:urgency
+|ednote|nar:edNote
+|charcount|nar:charcount
+|wordcount|nar:wordcount
+|language|nar:language
 |copyrightholder|nar:copyrightHolder
 |copyrightnotice|nar:copyrightnotice
 |usageterms|nar:usageTerms
-|type|nar:itemClass
-|firstcreated|nar:firstCreated
-|versioncreated|nar:versionCreated
-|charcount|nar:charcount
-|wordcount|nar:wordcount
-|embargoed|nar:embargoed
-|pubstatus|nar:pubStatus
-|profile|nar:profile
-|associations|nar:link
-|urgency|nar:urgency
-|located|nar:located
-|infosources|nar:infoSource
+|headline|nar:headline
+|headline_|nar:headline with @role
+|slugline|nar:slugline
 |byline|nar:creator
-|language|nar:language
-|subject|nar:subject
+|body_|nar:data or nar:inlineXML
+|description_|nar:description
+|located|nar:located
+|genre|nar:genre
 |person|nar:subject
+|organisation|nar:subject
 |place|nar:subject
+|subject|nar:subject
 |object|nar:subject
 |infosource|nar:infoSource
-|title|nar:itemMeta/title
-|headline|nar:headline
-|slugline|nar:slugline
-|byline|nar:by
-|ednote|nar:edNote
-|description_*|nar:description
-|@contenttype|nar:inlineData
+|trustindicator|nar:link with @rel
 |renditions|nar:remoteContent
 |renditions@href|nar:remoteContent@ref
 |renditions@mimetype|nar:remoteContent@contenttype
@@ -909,6 +919,7 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |renditions@width|nar:remoteContent@width
 |renditions@format|nar:remoteContent@format
 |renditions@duration|nar:remoteContent@duration
+|associations|nar:link
 |===
 
 == ninjs Revision History
@@ -930,6 +941,12 @@ An error in the association reference URI in the version 1.1 JSON Schema documen
 https://iptc.org/std/ninjs/ninjs-schema_1.2.json[Version 1.2 of the ninjs schema] was approved by the IPTC Standards Committee and made available in October 2019.
 
 Version 1.2 added the `firstcreated`, `charcount`, `wordcount`, `slugline`, `ednote`, `infosource`, `title` and `slugline` properties. It also added the value `component` under type. It changed the description of the `renditions` property and added sub-properties `duration` and `format`.
+
+=== ninjs 1.3
+
+https://iptc.org/std/ninjs/ninjs-schema_1.3.json[Version 1.3 of the ninjs schema] was approved by the IPTC Standards Committee and made available in May 2020.
+
+Version 1.3 added the `headline_`, `altids`, `trustindicator`, `$standard` and `genre` properties. It also changed the regular expression used for patternProperties used in `description_`, `body_`, `place`, `renditions`, `associations`, `geometry_` to ensure that the full string is being checked.
 
 == Additional Resources
 

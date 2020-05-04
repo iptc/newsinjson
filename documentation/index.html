@@ -487,6 +487,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <li><a href="#_ninjs_1_0">7.1. ninjs 1.0</a></li>
 <li><a href="#_ninjs_1_1">7.2. ninjs 1.1</a></li>
 <li><a href="#_ninjs_1_2">7.3. ninjs 1.2</a></li>
+<li><a href="#_ninjs_1_3">7.4. ninjs 1.3</a></li>
 </ul>
 </li>
 <li><a href="#_additional_resources">8. Additional Resources</a>
@@ -744,23 +745,49 @@ United Kingdom</pre>
 <code>component</code></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A short natural-language name for the item.<br>
+Added in ninjs 1.2.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">$standard</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An object with information about standard, version and schema this instance is valid against.<br>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An object with information about standard, version and schema this instance is valid against.<br>
 Added in ninjs 1.3.<br>
 This property is an object with the following child properties:</p>
-<p class="tableblock">[cols="3"]
-!===
-!Property name!Description!Data type</p>
-<p class="tableblock">!name
-!The name of the standard, such as "ninjs".
-!string</p>
-<p class="tableblock">!version
-!The version of the standard used, such as "1.3".
-!string</p>
-<p class="tableblock">!schema
-!The uri of the json schema to use for validation, such as "https://www.iptc.org/std/ninjs/ninjs-schema_1.3.json".
-!URI</p>
-<p class="tableblock">!===</p></td>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the standard, such as <code>ninjs</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the standard used, such as <code>1.3</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">schema</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the json schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_1.3.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_1.3.json</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+</tr>
+</tbody>
+</table></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
 </tr>
 <tr>
@@ -773,14 +800,15 @@ Added in ninjs 1.3.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">mimetype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The [<a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="bare">https://www.iana.org/assignments/media-types/media-types.xhtml</a>](MIME type)
-which applies to this news object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">MIME type</a>
+which applies to this news object.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">representationtype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the completeness of this representation of a news item.
-For a full document representation, the value should be <code>complete</code>. For a partial representation, for example a short extract provided as the results of an API call, the value <code>incomplete</code> should be used.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the completeness of this representation of a news item.<br>
+For a full document representation, the value should be <code>complete</code>.<br>
+For a partial representation, for example a short extract provided as the results of an API call, the value <code>incomplete</code> should be used.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>complete</code><br>
 <code>incomplete</code></p></td>
@@ -841,7 +869,7 @@ For a full document representation, the value should be <code>complete</code>. F
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The human language used by the content. The value should follow IETF BCP47</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The human language used by the content. The value should follow <a href="https://tools.ietf.org/html/bcp47">IETF BCP47</a> format.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -990,19 +1018,19 @@ This property is an array of objects with the following properties:</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The human-readable name of the genre, such as "Press Release".</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The human-readable name of the genre, such as <code>Press Release</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the
-genre, such as "http://cv.iptc.org/newscodes/genre/"</p></td>
+genre, such as <code><a href="http://cv.iptc.org/newscodes/genre/" class="bare">http://cv.iptc.org/newscodes/genre/</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The code for the person in the scheme/controlled vocabulary which is identified
-by the scheme property, such as "Press_Release".</p></td>
+by the scheme property, such as <code>Press_Release</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1085,20 +1113,30 @@ This property is an array of objects with the following properties:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme (= controlled vocabulary) which includes a code for the organisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the organisation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the organisation in a scheme (= controlled vocabulary) which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the organisation in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">symbols</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Symbols used for a financial instrument linked to the organisation at a specific market place.<br>
-Array of objects with the properties:<br>
-<code>ticker</code>: Ticker symbol used for the financial instrument (string)<br>
-<code>exchange</code>: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Symbols used for a financial instrument linked to the organisation at a specific market place.<br>
+Array of objects with the properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ticker</code>: Ticker symbol used for the financial instrument (string)<br></p>
+</li>
+<li>
+<p><code>exchange</code>: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)</p>
+</li>
+</ul>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 </tbody>
@@ -1354,18 +1392,18 @@ This property is an array of objects with the following properties:</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the resource being referenced, such as "BBC Editorial Guidelines"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the resource being referenced, such as <code>BBC Editorial Guidelines</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">href</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URL for accessing the trust indicator resource, such as <a href="https://www.bbc.com/editorialguidelines/" class="bare">https://www.bbc.com/editorialguidelines/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The URL for accessing the trust indicator resource, such as <code><a href="https://www.bbc.com/editorialguidelines/" class="bare">https://www.bbc.com/editorialguidelines/</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the infosource, typically
-<a href="http://cv.iptc.org/newscodes/trustindicator/" class="bare">http://cv.iptc.org/newscodes/trustindicator/</a></p></td>
+<code><a href="http://cv.iptc.org/newscodes/trustindicator/" class="bare">http://cv.iptc.org/newscodes/trustindicator/</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
@@ -1630,9 +1668,9 @@ This property is an array of objects with the following properties:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_more_examples_on_github">4.1.3. More Examples on Github</h4>
+<h4 id="_more_examples_on_github">4.1.3. More Examples on GitHub</h4>
 <div class="paragraph">
-<p>You can find more examples of ninjs representations of text-based news releases in the <a href="https://github.com/iptc/newsinjson/tree/master/examples">ninjs Github
+<p>You can find more examples of ninjs representations of text-based news releases in the <a href="https://github.com/iptc/newsinjson/tree/master/examples">ninjs GitHub
 repository</a>.</p>
 </div>
 </div>
@@ -1950,7 +1988,7 @@ WARNING: You should <strong>avoid</strong> body element names that do not descri
 </div>
 <div class="paragraph">
 <p>The XSL Template at
-<a href="https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt" class="bare">https://github.com/iptc/newsinjson/tools/xslt/nitf-to-json.xslt</a>
+<a href="https://raw.githubusercontent.com/iptc/newsinjson/master/tools/xslt/nitf-to-json.xslt" class="bare">https://raw.githubusercontent.com/iptc/newsinjson/master/tools/xslt/nitf-to-json.xslt</a>
 extracts the body of an NITF document (NITF samples are available from <a href="https://iptc.org/standards/nitf/using-nitf/" class="bare">https://iptc.org/standards/nitf/using-nitf/</a>) and creates a simple JSON object.
 The resulting object is not yet a valid ninjs object, however it will be valid JSON.</p>
 </div>
@@ -2137,8 +2175,64 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:newsItem@guid</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:itemClass</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:itemMeta/title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">altids</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:altId</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mimetype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:profile</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:newsItem@version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">firstcreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:firstCreated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">versioncreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:versionCreated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:embargoed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pubstatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:pubStatus</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">urgency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:urgency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ednote</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:edNote</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">charcount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:charcount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wordcount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:wordcount</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:language</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">copyrightholder</p></td>
@@ -2153,71 +2247,51 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:usageTerms</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:itemClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:headline</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">firstcreated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:firstCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headline_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:headline with @role</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">versioncreated</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:versionCreated</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">charcount</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:charcount</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">wordcount</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:wordcount</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:embargoed</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">pubstatus</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:pubStatus</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:profile</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">associations</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:link</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">urgency</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:urgency</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">located</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:located</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">infosources</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:infoSource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">slugline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:slugline</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">byline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:creator</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">body_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:data or nar:inlineXML</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">subject</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:subject</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">description_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">located</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:located</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">genre</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:genre</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">person</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:subject</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">organisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:subject</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">place</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:subject</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subject</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:subject</p></td>
 </tr>
 <tr>
@@ -2229,32 +2303,8 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:infoSource</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:itemMeta/title</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">headline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:headline</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">slugline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:slugline</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">byline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:by</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ednote</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:edNote</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">description_*</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">@contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:inlineData</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trustindicator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:link with @rel</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">renditions</p></td>
@@ -2283,6 +2333,10 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">renditions@duration</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:remoteContent@duration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">associations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:link</p></td>
 </tr>
 </tbody>
 </table>
@@ -2316,6 +2370,15 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 </div>
 <div class="paragraph">
 <p>Version 1.2 added the <code>firstcreated</code>, <code>charcount</code>, <code>wordcount</code>, <code>slugline</code>, <code>ednote</code>, <code>infosource</code>, <code>title</code> and <code>slugline</code> properties. It also added the value <code>component</code> under type. It changed the description of the <code>renditions</code> property and added sub-properties <code>duration</code> and <code>format</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ninjs_1_3">7.4. ninjs 1.3</h3>
+<div class="paragraph">
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.3.json">Version 1.3 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in May 2020.</p>
+</div>
+<div class="paragraph">
+<p>Version 1.3 added the <code>headline_</code>, <code>altids</code>, <code>trustindicator</code>, <code>$standard</code> and <code>genre</code> properties. It also changed the regular expression used for patternProperties used in <code>description_</code>, <code>body_</code>, <code>place</code>, <code>renditions</code>, <code>associations</code>, <code>geometry_</code> to ensure that the full string is being checked.</p>
 </div>
 </div>
 </div>
