@@ -2058,7 +2058,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </li>
 <li>
 <p>change the reference from the "associations" property definition
-(<code>"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.2.json#"</code>) to point to
+(<code>"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.3.json#"</code>) to point to
 your new schema:</p>
 <div class="listingblock">
 <div class="content">
@@ -2073,7 +2073,7 @@ your new schema:</p>
     "type" : "object",
     "additionalProperties" : false,
     "patternProperties" : {
-      "^[a-zA-Z0-9]+$" :  {
+      "^[a-zA-Z0-9_]+": {
         "$ref": "http://www.example.com/e-ninjs-schema_0.1.json#"
       }
     }
@@ -2128,7 +2128,7 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 </div>
 <div class="paragraph">
 <p>This is the latest IPTC ninjs schema available for download:
-<a href="https://iptc.org/std/ninjs/ninjs-schema_1.2.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.2.json</a></p>
+<a href="https://iptc.org/std/ninjs/ninjs-schema_1.3.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.3.json</a></p>
 </div>
 </div>
 <div class="sect3">

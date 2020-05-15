@@ -35,6 +35,7 @@ import os
 
 TEST_FILES_FOLDER = os.path.join('..', 'test_suite')
 EXAMPLE_FILES_FOLDER = os.path.join('..', '..', 'examples')
+DOCUMENTATION_EXAMPLES_FOLDER = os.path.join('..', '..', 'documentation', 'includes', 'examples')
 
 class TestNinJSSchema(unittest.TestCase):
     ninjs_schema = None
@@ -319,6 +320,17 @@ class TestNinJSSchema(unittest.TestCase):
         self.folder_should_pass(
             schema=self.ninjs13_schema,
             folder_name=EXAMPLE_FILES_FOLDER
+        )
+
+    def test_documentation_examples_against_1_3_schema(self):
+        """
+        Run all files in EXAMPLE_FILES_FOLDER against the latest schema.
+        They should all pass. (They will not all pass against old versions
+        of the schema, as the examples use the latest features of ninjs)
+        """
+        self.folder_should_pass(
+            schema=self.ninjs13_schema,
+            folder_name=DOCUMENTATION_EXAMPLES_FOLDER
         )
 
     def test_all_passing_unit_test_files_against_dev_schema(self):

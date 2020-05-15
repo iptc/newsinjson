@@ -808,7 +808,7 @@ To do this, do the following:
   ...
 +
 . change the reference from the "associations" property definition
-(`"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.2.json#"`) to point to
+(`"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_1.3.json#"`) to point to
 your new schema:
 [source,json]
 {
@@ -822,7 +822,7 @@ your new schema:
     "type" : "object",
     "additionalProperties" : false,
     "patternProperties" : {
-      "^[a-zA-Z0-9]+$" :  {
+      "^[a-zA-Z0-9_]+": {
         "$ref": "http://www.example.com/e-ninjs-schema_0.1.json#"
       }
     }
@@ -847,7 +847,7 @@ This is an example ninjs document that includes a sub-headline in an extended ni
 
 [source,json]
 ----
-include::includes/examples/008_extension.json[]
+include::includes/examples/not-valid/008_extension.json[]
 ----
 
 === How to validate objects
@@ -857,7 +857,7 @@ include::includes/examples/008_extension.json[]
 JSON Schema is the de-facto standard for validating JSON documents. The IPTC maintains schemas for each version of the ninjs standard. These schemas can be used to validate ninjs documents. 
 
 This is the latest IPTC ninjs schema available for download:
-https://iptc.org/std/ninjs/ninjs-schema_1.2.json
+https://iptc.org/std/ninjs/ninjs-schema_1.3.json
 
 ==== Sample Code
 
