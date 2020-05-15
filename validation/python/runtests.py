@@ -72,7 +72,7 @@ class TestNinJSSchema(unittest.TestCase):
         )
         ninjsdev_schema_filename = os.path.join(
             specification_path,
-            'ninjs-schema-dev_0.1_v1.2.json'
+            'ninjs-schema-dev_0.2_v1.3.json'
         )
         with open(ninjs10_schema_filename) as schemafile:
             self.ninjs10_schema = json.load(schemafile)

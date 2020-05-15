@@ -1,7 +1,7 @@
 {
   "uri": "008_encoded_rights.json",
   "title": "Title of my ninjs dev image which is protected by dataco restrictions",
-  "encodedRights": {
+  "encodedrights": {
     "langid": "a-rights-lang-id-uri",
     "rightsExpression_dataco": "rights expression"
   }
