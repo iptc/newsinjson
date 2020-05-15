@@ -1,0 +1,9 @@
+{
+  "uri": "009_combined_rights.json",
+  "title": "Title of my ninjs dev image which is protected by dataco restrictions",
+  "linkedRights": "https://www.football-dataco.com/",
+  "encodedRights": {
+    "langid": "https://rights-lang-location",
+    "rightsExpression_dataco": "rights expression"
+  }
+}

@@ -657,8 +657,10 @@
                     "title": "Language id",
                     "description": "Identifier for the used Rights Expression language. nar:@langid",
                     "format": "uri"
-                },
-                "^rightsExpression_[a-zA-Z0-9_]+": {
+                }
+            },
+            "patternProperties": {
+                "^rightsExpression_[a-zA-Z0-9_]+$": {
                     "title": "Rights expression",
                     "description": "Contains a rights expression as defined by a Rights Expression Language. (The string appended to rightsExpression_ in the property name should reflect the format and/or the purpose of the expression, separating the parts with _). nar:rightsExpressionXML or nar:rightsExpressionData",
                     "type": "string"
