@@ -2,7 +2,7 @@
 
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2019 International Press Telecommunications Council (IPTC)
+# Copyright (c) 2020 International Press Telecommunications Council (IPTC)
 #
 # The MIT License
 #
@@ -35,6 +35,7 @@ import os
 
 TEST_FILES_FOLDER = os.path.join('..', 'test_suite')
 EXAMPLE_FILES_FOLDER = os.path.join('..', '..', 'examples')
+DOCUMENTATION_EXAMPLES_FOLDER = os.path.join('..', '..', 'documentation', 'includes', 'examples')
 
 class TestNinJSSchema(unittest.TestCase):
     ninjs_schema = None
@@ -66,9 +67,13 @@ class TestNinJSSchema(unittest.TestCase):
             specification_path,
             'ninjs-schema_1.2.json'
         )
+        ninjs13_schema_filename = os.path.join(
+            specification_path,
+            'ninjs-schema_1.3.json'
+        )
         ninjsdev_schema_filename = os.path.join(
             specification_path,
-            'ninjs-schema-dev_0.1_v1.2.json'
+            'ninjs-schema-dev_0.2_v1.3.json'
         )
         with open(ninjs10_schema_filename) as schemafile:
             self.ninjs10_schema = json.load(schemafile)
@@ -76,6 +81,8 @@ class TestNinJSSchema(unittest.TestCase):
             self.ninjs11_schema = json.load(schemafile)
         with open(ninjs12_schema_filename) as schemafile:
             self.ninjs12_schema = json.load(schemafile)
+        with open(ninjs13_schema_filename) as schemafile:
+            self.ninjs13_schema = json.load(schemafile)
         with open(ninjsdev_schema_filename) as schemafile:
             self.ninjsdev_schema = json.load(schemafile)
         return super(TestNinJSSchema, self).__init__(*args, **kwargs)
@@ -161,12 +168,19 @@ class TestNinJSSchema(unittest.TestCase):
         """
         self.assertIsNone(jsonschema.validate({"uri": "test12"}, self.ninjs12_schema))
 
+    def test_simplest_instance_ninjs13(self):
+        """
+        jsonschema.validate returns None if valid, raises an exception for
+        schema validation errors. So we use assertIsNone.
+        """
+        self.assertIsNone(jsonschema.validate({"uri": "test13"}, self.ninjs13_schema))
+
     def test_simplest_instance_ninjsdev(self):
         """
         jsonschema.validate returns None if valid, raises an exception for
         schema validation errors. So we use assertIsNone.
         """
-        self.assertIsNone(jsonschema.validate({"uri": "test12"}, self.ninjsdev_schema))
+        self.assertIsNone(jsonschema.validate({"uri": "test-dev"}, self.ninjsdev_schema))
 
     def test_all_passing_unit_test_files_against_10_schema(self):
         """
@@ -258,14 +272,65 @@ class TestNinJSSchema(unittest.TestCase):
             folder_name=os.path.join('1.2', 'should_fail')
         )
 
-    def test_example_files_against_1_2_schema(self):
+    def test_all_passing_unit_test_files_against_1_3_schema(self):
         """
-        Run all files in EXAMPLE_FILES_FOLDER against the latest schema.
-        They should all pass.
+        Run files in TEST_FILES_FOLDER/1.3/should_pass against the 1.3 schema.
+        They should all pass (ie they are all valid against the schema).
+
+        Also run 1.0, 1.1 and 1.2/should_pass against the 1.3
+        schema, because it should be backwards compatible.
+
+        We use "subTest" so we can see which file failed in test output.
         """
         self.folder_should_pass(
-            schema=self.ninjs12_schema,
+            schema=self.ninjs13_schema,
+            folder_name=os.path.join('1.0', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs13_schema,
+            folder_name=os.path.join('1.1', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs13_schema,
+            folder_name=os.path.join('1.2', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs13_schema,
+            folder_name=os.path.join('1.3', 'should_pass')
+        )
+
+    def test_failing_unit_test_files_against_1_3_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/1.3/should_fail against the 1.3 schema.
+        They should all fail (ie they are all invalid in some way).
+
+        We use "subTest" so we can see which file failed in test output.
+        """
+        self.folder_should_fail(
+            schema=self.ninjs13_schema,
+            folder_name=os.path.join('1.3', 'should_fail')
+        )
+
+    def test_example_files_against_1_3_schema(self):
+        """
+        Run all files in EXAMPLE_FILES_FOLDER against the latest schema.
+        They should all pass. (They will not all pass against old versions
+        of the schema, as the examples use the latest features of ninjs)
+        """
+        self.folder_should_pass(
+            schema=self.ninjs13_schema,
             folder_name=EXAMPLE_FILES_FOLDER
+        )
+
+    def test_documentation_examples_against_1_3_schema(self):
+        """
+        Run all files in EXAMPLE_FILES_FOLDER against the latest schema.
+        They should all pass. (They will not all pass against old versions
+        of the schema, as the examples use the latest features of ninjs)
+        """
+        self.folder_should_pass(
+            schema=self.ninjs13_schema,
+            folder_name=DOCUMENTATION_EXAMPLES_FOLDER
         )
 
     def test_all_passing_unit_test_files_against_dev_schema(self):
@@ -273,7 +338,7 @@ class TestNinJSSchema(unittest.TestCase):
         Run files in TEST_FILES_FOLDER/dev/should_pass against the dev schema.
         They should all pass (ie they are all valid against the schema).
 
-        Also run 1.0, 1.1 and 1.2 tests against the dev 
+        Also run 1.0, 1.1, 1.2 and 1.3 tests against the dev 
         schema, because it should be backwards compatible.
 
         We use "subTest" so we can see which file failed in test output.

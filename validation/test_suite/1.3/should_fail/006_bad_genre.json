@@ -1,0 +1,12 @@
+{
+    "uri": "006_genre",
+    "headline": "test headline",
+    "genre": [
+        {
+            "name": "Current",
+            "scheme": "http://cv.iptc.org/newscodes/genre/",
+            "code": "Current",
+            "uri": http://cv.iptc.org/newscodes/genre/Current"
+        }
+    ]
+}

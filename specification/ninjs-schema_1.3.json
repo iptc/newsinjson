@@ -1,15 +1,14 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.1_v1.2.json#",
+    "id": "http://www.iptc.org/std/ninjs/ninjs-schema_v1.3.json#",
     "type": "object",
-    "title": "IPTC ninjs - News in JSON - dev 0.1 - based on version 1.2 ",
-    "description": "A news item as JSON object -- copyright 2019 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/  THIS is a development version to test possible solutions to new additions. ",
+    "title": "IPTC ninjs - News in JSON - 1.3 ",
+    "description": "A news item as JSON object -- copyright 2020 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
     "additionalProperties": false,
     "required": ["uri"],
     "patternProperties": {
         "^description_[a-zA-Z0-9_]+": {
             "title": "Description",
-            "description_old": "A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format of the text). nar:description",
             "description": "A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format and/or the purpose of the text, separating the parts with _). nar:description",
             "type": "string"
         },
@@ -20,7 +19,7 @@
         },
         "^headline_[a-zA-Z0-9_]+": {
             "title": "Extra headlines",
-            "description": "Additional headlines or strings of that type can be handled here. This is not replacing the main headline-property in ninjs. (The string appended to headline_ in the property name should reflect the format and/or the purpose of the text, separating the parts with _) nar:headline with roles issue #13",
+            "description": "Additional headlines or strings of that type can be handled here. This is not replacing the main headline-property in ninjs. (The string appended to headline_ in the property name should reflect the format and/or the purpose of the text, separating the parts with _) nar:headline with roles issue #13. (Added in 1.3)",
             "type": "string"
         }
     },
@@ -62,7 +61,7 @@
         },
         "profile": {
             "title": "Profile",
-            "description": "An identifier for the kind of content of this news object. This can be any string but we suggest something identifying the content such as 'text-only' or 'text-photo'. (Investigate if this align with NewsML nar:profile or not.)",
+            "description": "An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as 'text-only' or 'text-photo'. Profiles are typically provider-specific. nar:profile",
             "type": "string"
         },
         "version": {
@@ -420,7 +419,7 @@
             "type": "object",
             "additionalProperties": false,
             "patternProperties": {
-                "^[a-zA-Z0-9]+": {
+                "^[a-zA-Z0-9_]+": {
                     "description": "A specific rendition of the content of the news object. (Description changed in version 1.2 according to issue #17.)",
                     "type": "object",
                     "additionalProperties": false,
@@ -475,18 +474,18 @@
             "type": "object",
             "additionalProperties": false,
             "patternProperties": {
-                "^[a-zA-Z0-9]+": {"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.1_v1.2.json#"}
+                "^[a-zA-Z0-9_]+": {"$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_v1.3.json#"}
             }
         },
         "altids": {
             "title": "Alternative id",
-            "description": "Alternative id's of the item. It is up to the individual provider to name and set type on the alternative id's they like to use. nar:altId issue #3",
+            "description": "Alternative identifiers of the item. It is up to the individual provider to name and set type on the alternative identifiers they like to use. nar:altId issue #3. (Added in version 1.3)",
             "type": "object",
             "additionalProperties": true
         },
         "trustindicator": {
             "title": "Trust indicator",
-            "description": "An array of objects to allow links to documents about trust indicators. (nar:link) issue #44",
+            "description": "An array of objects to allow links to documents about trust indicators. (nar:link) issue #44. (Added in version 1.3)",
             "type": "array",
             "items": {
                 "type": "object",
@@ -520,18 +519,18 @@
         "$standard": {
             "title": "Standard",
             "type": "object",
-            "description": "An object with information about standard, version and schema this instance is valid against. nar:standard, nar:standardversion and xml:schema issue #43",
+            "description": "An object with information about standard, version and schema this instance is valid against. nar:standard, nar:standardversion and xml:schema issue #43. (Added in version 1.3)",
             "additionalProperties": false,
             "properties": {
                 "name": {
                     "type": "string",
-                    "title": "Name of standard. ",
+                    "title": "Name of standard.",
                     "description": "For example ninjs. nar:standard"
                 },
                 "version": {
                     "type": "string",
-                    "title": "Version of standard. ",
-                    "description": "For example 1.2. nar:standardversion"
+                    "title": "Version of standard.",
+                    "description": "For example 1.3. nar:standardversion"
                 },
                 "schema": {
                     "type": "string",
@@ -544,7 +543,7 @@
         },
         "genre": {
             "title": "Genre",
-            "description": "A nature, intellectual or journalistic form of the content. nar:genre",
+            "description": "A nature, intellectual or journalistic form of the content. nar:genre. (Added in version 1.3)",
             "type": "array",
             "items": {
                 "type": "object",
@@ -566,102 +565,6 @@
                         "description": "The code for the genre in a scheme (= controlled vocabulary) which is identified by the scheme property",
                         "type": "string"
                     }
-                }
-            }
-        },
-        "advice": {
-            "type": "array",
-            "title": "Advices",
-            "description": "Editorial advice to the receiver of the news object. Only in dev so far. Tests with the C-POP project.",
-            "additionalProperties": false,
-            "items": {
-                "description": "One advice item",
-                "type": "object",
-                "additionalProperties": false,
-                "properties": {
-                    "role": {
-                        "title": "Role",
-                        "description": "Role of this advice.",
-                        "type": "string",
-                        "enum": ["publish"]
-                        },
-                    "environment": {
-                      "type": "array",
-                      "additionalProperties": false,
-                      "items": {
-                          "type": "object",
-                          "properties": {
-                              "code": {
-                              "type": "string"
-                              },
-                              "scheme": { 
-                               "type": "string",
-                                "format": "uri"
-                                    }
-                                }
-                            }   
-                        },
-                    "importance": {
-                      "type": "object",
-                      "description": "Advice regarding the importance of the content from an emotional perspective. Experimental vocabulary, part of the C-POP project.",
-                      "additionalProperties": false,
-                          "properties": {
-                              "code": {
-                              "type": "string",
-                              "description": "Present values are: essential, useful and entertaining."
-                              },
-                              "scheme": { 
-                               "type": "string",
-                                "format": "uri",
-                                "description": "http://cv.iptc.org/newscodes/advice-importance"
-                                    }
-                                    
-                            }   
-                        },
-
-                    "lifetime": {
-                      "type": "object",
-                      "description": "Advice regarding the length of time that the content is considered to be relevant. Experimental vocabulary, part of the C-POP project.",
-                      "additionalProperties": false,
-                          "properties": {
-                              "code": {
-                              "type": "string",
-                              "description": "Present values are: short, medium, long and evergreen."
-                              },
-                              "scheme": { 
-                               "type": "string",
-                                "format": "uri",
-                                "description": "http://cv.iptc.org/newscodes/advice-lifetime"
-                                    }
-
-}   
-                        }
-                }
-
-            }
-        },
-        "linkedRights": {
-            "title": "Linked rights",
-            "type": "string",
-            "description": "A link from the current Item to Web resource with rights related information. nar:link",
-            "format": "uri"
-        },
-        "encodedRights": {
-            "title": "Encoded Rights",
-            "additionalProperties": false,
-            "type": "object",
-            "description": "",
-            "properties": {
-                "langid": {
-                    "type": "string",
-                    "title": "Language id",
-                    "description": "Identifier for the used Rights Expression language. nar:@langid",
-                    "format": "uri"
-                },
-                "^rightsExpression_[a-zA-Z0-9_]+": {
-                    "title": "Rights expression",
-                    "description": "Contains a rights expression as defined by a Rights Expression Language. (The string appended to body_ in the property name should reflect the format and/or the purpose of the expression, separating the parts with _). nar:rightsExpressionXML or nar:rightsExpressionData",
-                    "type": "string"
                 }
             }
         }

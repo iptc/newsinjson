@@ -13,6 +13,7 @@
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^14.5.8",
+    "lodash": "^4.17.15",
     "nodemon": "^1.19.3",
     "uniqid": "^5.0.3"
   }
