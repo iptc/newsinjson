@@ -129,6 +129,7 @@ var schema = buildSchema(`
             startAfter: String,
             startBefore: String,
             copyrightholder: String,
+            topicid: String,
             filter: String): [NINJS]
     }
 `);
@@ -158,7 +159,13 @@ var getItems = function(args) {
         if (args.startBefore) {
             svaret = svaret.filter(item => item.versioncreated <= args.startBefore);
         } 
-      if (args.filter) {
+        if (args.topicid) {
+            const temp = svaret;
+            svaret = [];
+            _.forEach(temp, function(element, i) 
+            {if (_.find(element.subject,['code',args.topicid])) {svaret.push(element);}});
+        }
+        if (args.filter) {
             svaret = svaret.filter(item => (item.headline.indexOf(args.filter) !== -1) || (item.body_text.indexOf(args.filter) !== -1));
         } 
     }

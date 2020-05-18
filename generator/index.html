@@ -1,6 +1,6 @@
 <HTML> 
 	<HEAD> 
-		<TITLE>ninjs Generator: ninjs 1.2</TITLE> 
+		<TITLE>ninjs Generator: ninjs 1.3</TITLE> 
  
 <style type=text/css> 
 /* Asciidoctor default stylesheet plus IPTC styles | MIT License | http://asciidoctor.org */
@@ -465,12 +465,25 @@ function sendEML (objForm){
     var type = document.indata.type.value;
     var uri = 'http://' + provider + '.com/' + type + '/' + guid;
 	
-	textattvisa = textattvisa + '"uri": "' + uri + '",\n';
+  textattvisa = textattvisa + '"uri": "' + uri + '",\n';
+
+  textattvisa = textattvisa + '"$standard": {\n';
+  textattvisa = textattvisa + '  "name": "NINJS",\n';
+  textattvisa = textattvisa + '  "version": ”1.3”,\n';
+  textattvisa = textattvisa + '  "schema": "ninjs-schema_1.3.json"\n';
+  textattvisa = textattvisa + '}\n';
+  
 	textattvisa = textattvisa + '"type": "' + type + '",\n';
 	textattvisa = textattvisa + '"representationtype": "' + document.indata.reptype.value + '",\n';
     if (document.indata.profile.value != '') {
         textattvisa = textattvisa + '"profile": "' + document.indata.profile.value + '",\n';
     }
+    if (document.indata.genre.value != '') {
+        textattvisa = textattvisa + '"genre": [{"name": "' + document.indata.genre.value + '","code": ' + 
+        document.indata.genre.value.replace('_',' ') + 
+        '","scheme": "http://cv.iptc.org/newscodes/genre/" }],\n';
+    }
+
     var idag = new Date();
 	textattvisa = textattvisa + '"versioncreated": "' + idag.toISOString() + '",\n';
 	textattvisa = textattvisa + '"pubstatus": "' + document.indata.pubstatus.value + '",\n';
@@ -521,7 +534,14 @@ function sendEML (objForm){
         textattvisa = textattvisa + '"located": "' + document.indata.location.value + '",\n';
     }
 	textattvisa = textattvisa + '"headline": "' + document.indata.headline.value + '",\n';
-	textattvisa = textattvisa + '"slugline": "' + document.indata.slugline.value + '"\n';
+	textattvisa = textattvisa + '"headline_subheadline": "' + document.indata.subheadline.value + '",\n';
+  textattvisa = textattvisa + '"slugline": "' + document.indata.slugline.value + '"\n';
+  
+  if (document.indata.altid_name.value != '') {
+        textattvisa = textattvisa + '"altids": {"' + document.indata.altid_name.value + '": "' + 
+        document.indata.altid_value.value +  '"},\n';
+    }
+
     
 	textattvisa = textattvisa + '}';
  
@@ -538,7 +558,7 @@ function sendEML (objForm){
   
 <body class="html5">
 <div id="header">
-    <h1><span class="image"><img src="iptc_sv_gradient_70x70.jpg" alt="IPTC logo"></span> News in JSON Generator: ninjs 1.2</h1>
+    <h1><span class="image"><img src="iptc_sv_gradient_70x70.jpg" alt="IPTC logo"></span> News in JSON Generator: ninjs 1.3</h1>
 <p>Fill in the form, click the button and see the ninjs result.</p>
 <p>For more information about ninjs, see the <a href="https://iptc.org/standards/ninjs/">IPTC ninjs pages</a> or the <a href="https://iptc.org/std/ninjs/userguide/">ninjs User Guide</a>.</p>
 </div>
@@ -558,6 +578,7 @@ function sendEML (objForm){
              <OPTION value="picture"> Picture </OPTION> 
              <OPTION value="graphic"> Graphic </OPTION> 
              <OPTION value="composite"> Composite </OPTION> 
+             <OPTION value="component"> Component </OPTION> 
             </SELECT><br/>Type
             </TD> 
          <TD> 
@@ -570,6 +591,7 @@ function sendEML (objForm){
                <SELECT NAME="pubstatus" SIZE="1" width="3"> 
                 <OPTION value="usable"> Usable </OPTION> 
                 <OPTION value="withheld"> Withheld </OPTION> 
+                <OPTION value="canceled"> Canceled </OPTION> 
                </SELECT><br/>Publication status
                  </TD> 
               <TD> 
@@ -585,7 +607,58 @@ function sendEML (objForm){
                 <OPTION VALUE="9"> 9 </OPTION> 
                </SELECT><br/>Urgency
                  </TD> 
-              <TD> 
+                 <TD> 
+                  <SELECT NAME="genre" SIZE="1" width="3"> 
+                    <OPTION VALUE="Actuality"> Actuality </OPTION> 
+                    <OPTION VALUE="Advice"> Advice </OPTION> 
+                    <OPTION VALUE="Advisory"> Advisory </OPTION> 
+                    <OPTION VALUE="Almanac"> Almanac </OPTION> 
+                    <OPTION VALUE="Analysis"> Analysis </OPTION> 
+                    <OPTION VALUE="Archive_material"> Archive material </OPTION> 
+                    <OPTION VALUE="Background"> Background </OPTION> 
+                    <OPTION VALUE="Biography"> Biography </OPTION> 
+                    <OPTION VALUE="Birth_Announcement"> Birth Announcement </OPTION> 
+                    <OPTION VALUE="Current"> Current </OPTION> 
+                    <OPTION VALUE="Curtain_Raiser"> Curtain Raiser </OPTION> 
+                    <OPTION VALUE="Daybook"> Daybook </OPTION> 
+                    <OPTION VALUE="Exclusive"> Exclusive </OPTION> 
+                    <OPTION VALUE="Feature"> Feature </OPTION> 
+                    <OPTION VALUE="Fixture"> Fixture </OPTION> 
+                    <OPTION VALUE="Forecast"> Forecast </OPTION> 
+                    <OPTION VALUE="From_the_Scene"> From the Scene </OPTION> 
+                    <OPTION VALUE="History">  </OPTION> 
+                    <OPTION VALUE="Horoscope"> Horoscope </OPTION> 
+                    <OPTION VALUE="Interview"> Interview </OPTION> 
+                    <OPTION VALUE="Listing_of_facts"> Listing of facts </OPTION> 
+                    <OPTION VALUE="Music"> Music </OPTION> 
+                    <OPTION VALUE="Obituary"> Obituary </OPTION> 
+                    <OPTION VALUE="Opinion"> Opinion </OPTION> 
+                    <OPTION VALUE="Polls_and_Surveys"> Polls and Surveys </OPTION> 
+                    <OPTION VALUE="Press_Release"> Press Release </OPTION> 
+                    <OPTION VALUE="Press-Digest"> Press-Digest </OPTION> 
+                    <OPTION VALUE="Profile"> Profile </OPTION> 
+                    <OPTION VALUE="Program"> Program </OPTION> 
+                    <OPTION VALUE="Question_and_Answer_Session"> Question and Answer Session </OPTION> 
+                    <OPTION VALUE="Quote"> Quote </OPTION> 
+                    <OPTION VALUE="Raw_Sound"> Raw Sound </OPTION> 
+                    <OPTION VALUE="Response_to_a_Question"> Response to a Question </OPTION> 
+                    <OPTION VALUE="Results_Listings_and_Statistics"> Results Listings and Statistics </OPTION> 
+                    <OPTION VALUE="Retrospective"> Retrospective </OPTION> 
+                    <OPTION VALUE="Review"> Review </OPTION> 
+                    <OPTION VALUE="Scener"> Scener </OPTION> 
+                    <OPTION VALUE="Side_bar_and_supporting_information"> Side bar and supporting information </OPTION> 
+                    <OPTION VALUE="Special_Report"> Special Report </OPTION> 
+                    <OPTION VALUE="Summary"> Summary </OPTION> 
+                    <OPTION VALUE="Synopsis"> Synopsis </OPTION> 
+                    <OPTION VALUE="Text_only"> Text only </OPTION> 
+                    <OPTION VALUE="Transcript_and_Verbatim"> Transcript and Verbatim </OPTION> 
+                    <OPTION VALUE="Update"> Update </OPTION> 
+                    <OPTION VALUE="Voicer"> Voicer </OPTION> 
+                    <OPTION VALUE="Wrap"> Wrap </OPTION> 
+                    <OPTION VALUE="Wrapup"> Wrapup </OPTION>                  
+                  </SELECT><br/>Genre
+                    </TD> 
+                 <TD> 
                <SELECT NAME="lang" SIZE="1" width="3"> 
 <option value="AF">Afrikanns</option>
 <option value="SQ">Albanian</option>
@@ -670,7 +743,7 @@ function sendEML (objForm){
               <TD colspan="2"> 
                <INPUT type="text" name="headline" value="" size="60" title="Headline"><br/>Headline
               </TD> 
-              <TD rowspan="5"> 
+              <TD rowspan="6"> 
                 <SELECT NAME="medtop" SIZE="17" width="25" multiple title="Mark the lines with codes applicable."> 
                 <option value="01000000">Arts, culture, entertainment and media</option> 
                 <option value="02000000">Crime, law and justice</option> 
@@ -692,6 +765,11 @@ function sendEML (objForm){
                 </SELECT><BR/>IPTC Media Topic(s)
               </TD> 
              </TR> 
+             <TR> 
+              <TD colspan="2"> 
+               <INPUT type="text" name="subheadline" value="" size="60" title="Subheadline"><br/>Sub-headline
+              </TD> 
+              </TR>
              <TR> 
               <TD> 
                <INPUT type="text" name="provider" value="" size="25" title="Abbreviation of provider of information."><br/>Provider
@@ -729,6 +807,9 @@ function sendEML (objForm){
              <TR>    
               <TD colspan="2"><INPUT size="60" name="location" title="Location"><br/>Location</TD> 
              </TR> 
+             <TR>    
+              <TD colspan="1"><INPUT size="30" name="altid_name" title="Altid_name"><br/>Alternative id - name</TD> <TD><INPUT size="30" name="altid_value" title="Altid_value"><br/>Alternative id - value</TD>
+             </TR> 
               <TR> 
               <TD colspan="3"> 
                <TEXTAREA name="ednote" rows="5" wrap="virtual" cols="100"></TEXTAREA><BR/>Editorial notes 
@@ -743,7 +824,7 @@ function sendEML (objForm){
 
       <TR> 
        <TD> 
-        <INPUT type="button" onclick="sendEML(this)" value="Show content as ninjs 1.2"> 
+        <INPUT type="button" onclick="sendEML(this)" value="Show content as ninjs 1.3"> 
         </TD> 
       </TR> 
      </TBODY> 
