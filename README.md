@@ -37,3 +37,10 @@ http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.2_v1.3.json
 The dev schema is used to test possible additions to future versions of ninjs.
 It is not guaranteed to be maintained and is subject to change at any time.
 Please do not create production projects based on this schema.
+
+ninjs Generator
+---------------
+
+In the `generator` folder is the source code to the ninjs generator, a
+user-facing tool to generate sample ninjs files,  which is hosted at
+https://www.iptc.org/std/ninjs/generator/. 
