@@ -857,7 +857,7 @@ include::includes/examples/not-valid/008_extension.json[]
 
 ==== Using $standard
 
-With the ninjs 1.3 addition of $standard providers can indicate in each json-file exactly which schema the file is valid against. So for the above example of extending the schema that could be shown like this:
+With the ninjs 1.3 addition of `$standard`, providers can indicate in each JSON file exactly which schema the file is valid against. So the above example of extending the schema could be shown like this:
 
 [source,json]
 {
