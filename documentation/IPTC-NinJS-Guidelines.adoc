@@ -757,7 +757,7 @@ The associations object is a wrapper which contains news objects (other ninjs do
 ==== Pattern properties
 
 Several properties in ninjs is defined through a pattern that can look something like this: `"^[a-zA-Z0-9_]+"` or `"^body_[a-zA-Z0-9_]+"`
-The intention of these patterns is to restrict the naming of property names. But to be complete they should have a trailing $, like `"^body_[a-zA-Z0-9_]+$"`. With that missing it is possible to construct a name that break the intention of the pattern but is still valid. Users of ninjs are encouraged to use the patterns as intended. IPTC will update this in future revisions to ninjs.
+The intention of these patterns is to restrict the naming of property names. But to be complete they should have a trailing $, like `"^body_[a-zA-Z0-9_]+$"`. With that missing it is possible to construct a name that breaks the intention of the pattern but is still valid. Users of ninjs are encouraged to use the patterns as intended. IPTC will update this in future revisions to ninjs.
 
 === How to escape XML content for inclusion in JSON objects
 
