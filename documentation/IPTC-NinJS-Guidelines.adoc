@@ -855,7 +855,7 @@ This is an example ninjs document that includes a sub-headline in an extended ni
 include::includes/examples/not-valid/008_extension.json[]
 ----
 
-==== Using the $standard
+==== Using $standard
 
 With the ninjs 1.3 addition of $standard providers can indicate in each json-file exactly which schema the file is valid against. So for the above example of extending the schema that could be shown like this:
 
