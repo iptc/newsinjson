@@ -204,10 +204,10 @@ This property is an object with the following child properties:
 
 |object
 
-|altids_
+|altids
 |Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use. +
-This property is an array of objects with no restrictions on key or value. +
+This property is an object with no restrictions on key-names or value-types. +
 Added in ninjs 1.3.
 |array of unrestricted key/value pairs
 
@@ -226,7 +226,7 @@ One of: +
 `incomplete`
 
 |profile
-|An identifier for the kind of content of this news object. This can be any string but we suggest something identifying the content such as `"text-only"` or `"text-photo"`
+|An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as `'text-only'` or `'text-photo'`. Profiles are typically provider-specific.
 |string
 
 |version
@@ -552,7 +552,7 @@ This property is an array of objects with the following properties:
 |array
 
 |infosource
-|A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. +
+|A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. Infosource was added in 1.2. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -754,6 +754,11 @@ Each object in the renditions object is named. Any name can be chosen for these 
 associations::
 The associations object is a wrapper which contains news objects (other ninjs documents) that are associated with this news object. Any name can be chosen for these objects, but the name must contain only alphanumeric characters of the ASCII character set.
 
+==== Pattern properties
+
+Several properties in ninjs is defined through a pattern that can look something like this: `"^[a-zA-Z0-9_]+"` or `"^body_[a-zA-Z0-9_]+"`
+The intention of these patterns is to restrict the naming of property names. But to be complete they should have a trailing $, like `"^body_[a-zA-Z0-9_]+$"`. With that missing it is possible to construct a name that breaks the intention of the pattern but is still valid. Users of ninjs are encouraged to use the patterns as intended. IPTC will update this in future revisions to ninjs.
+
 === How to escape XML content for inclusion in JSON objects
 
 JSON string values cannot contain characters: `"`, `\`, and various control characters like tabs. Therefore, we need to escape these characters in our content when marshaling data into JSON objects. We have provided an XSL stylesheet to do this using XSL.
@@ -779,7 +784,7 @@ To do this, do the following:
   "type" : "object",
   ...
 +
-... to your example.com-ninjs 0.1
+to your example.com-ninjs 0.1
 +
 [source,json]
 {
@@ -849,6 +854,26 @@ This is an example ninjs document that includes a sub-headline in an extended ni
 ----
 include::includes/examples/not-valid/008_extension.json[]
 ----
+
+==== Using $standard
+
+With the ninjs 1.3 addition of `$standard`, providers can indicate in each JSON file exactly which schema the file is valid against. So the above example of extending the schema could be shown like this:
+
+[source,json]
+{
+  "uri": "http://ninjs.example.com/newsitems/20130709simp123",
+  "$standard": {
+      "name": "e-ninjs-schema",
+      "schema" : "http://www.example.com/e-ninjs-schema_0.1.json",
+      "version" : "0.1"
+  }
+  "type": "text",
+  "versioncreated": "2013-07-09T10:37:00Z",
+  "byline": "Paulo Santalucia and Frances d'Emilio",
+  "headline": "Captain of wrecked cruise ship on trial in Italy",
+  "subhead": "Stranded passengers watch with interest"
+    ...
+}
 
 === How to validate objects
 
@@ -946,7 +971,7 @@ Version 1.2 added the `firstcreated`, `charcount`, `wordcount`, `slugline`, `edn
 
 https://iptc.org/std/ninjs/ninjs-schema_1.3.json[Version 1.3 of the ninjs schema] was approved by the IPTC Standards Committee and made available in May 2020.
 
-Version 1.3 added the `headline_`, `altids`, `trustindicator`, `$standard` and `genre` properties. It also changed the regular expression used for patternProperties used in `description_`, `body_`, `place`, `renditions`, `associations`, `geometry_` to ensure that the full string is being checked.
+Version 1.3 added the `headline_`, `altids`, `trustindicator`, `$standard` and `genre` properties. 
 
 == Additional Resources
 

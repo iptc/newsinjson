@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.7.1">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="IPTC News in JSON Working Group">
 <title>NinJS User Guide</title>
 <style>
@@ -599,7 +599,7 @@ to the news item.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simp123",
   "type" : "text",
   "versioncreated" : "2013-07-09T10:37:00Z",
@@ -791,10 +791,10 @@ This property is an object with the following child properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">altids_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">altids</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use.<br>
-This property is an array of objects with no restrictions on key or value.<br>
+This property is an object with no restrictions on key-names or value-types.<br>
 Added in ninjs 1.3.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array of unrestricted key/value pairs</p></td>
 </tr>
@@ -815,7 +815,7 @@ For a partial representation, for example a short extract provided as the result
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for the kind of content of this news object. This can be any string but we suggest something identifying the content such as <code>"text-only"</code> or <code>"text-photo"</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as <code>'text-only'</code> or <code>'text-photo'</code>. Profiles are typically provider-specific.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1327,7 +1327,7 @@ This property is an array of objects with the following properties:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">infosource</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content.<br>
+<p>A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. Infosource was added in 1.2.<br>
 This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1489,7 +1489,7 @@ This property is an array of objects with the following properties:</p>
 <h4 id="_renditions_example">3.5.2. Renditions example</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "uri": "renditions-example",
   "body_text": "...",
   "renditions": {
@@ -1528,7 +1528,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "uri": "http://www.businesswire.com/news/home/20130515006361/en",
   "type":"composite",
   "mimetype": "application/x-resource+json;level=composite",
@@ -1595,7 +1595,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simp123",
   "type" : "text",
   "versioncreated" : "2013-07-09T10:37:00Z",
@@ -1621,7 +1621,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "uri" : "http://ninjs.example.com/newsitems/20130709med123",
   "type" : "text",
   "profile" : "text-only",
@@ -1701,7 +1701,7 @@ repository</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
   "type" : "picture",
   "versioncreated" : "2013-07-08T08:12:00Z",
@@ -1752,7 +1752,7 @@ repository</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "uri" : "http://ninjs.example.com/newsitems/20130709cplx456",
   "type" : "composite",
   "profile" : "text-photo",
@@ -1980,6 +1980,13 @@ WARNING: You should <strong>avoid</strong> body element names that do not descri
 </dd>
 </dl>
 </div>
+<div class="sect3">
+<h4 id="_pattern_properties">5.1.1. Pattern properties</h4>
+<div class="paragraph">
+<p>Several properties in ninjs is defined through a pattern that can look something like this: <code>"^[a-zA-Z0-9_]+"</code> or <code>"^body_[a-zA-Z0-9_]+"</code>
+The intention of these patterns is to restrict the naming of property names. But to be complete they should have a trailing $, like <code>"^body_[a-zA-Z0-9_]+$"</code>. With that missing it is possible to construct a name that break the intention of the pattern but is still valid. Users of ninjs are encouraged to use the patterns as intended. IPTC will update this in future revisions to ninjs.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_how_to_escape_xml_content_for_inclusion_in_json_objects">5.2. How to escape XML content for inclusion in JSON objects</h3>
@@ -2010,20 +2017,19 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>change the URL of the "id" property of IPTC&#8217;s ninjs 1.3 &#8230;&#8203;</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_1.3.json#",
   "type" : "object",
   ...</code></pre>
 </div>
 </div>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
+<div class="paragraph">
 <p>to your example.com-ninjs 0.1</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2031,14 +2037,11 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 </div>
 </li>
-</ol>
-</div>
-</li>
 <li>
 <p>add your own properties to your copy of the schema. For example, to add a sub-headline:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2062,7 +2065,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 your new schema:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2088,7 +2091,7 @@ your new schema:</p>
 object is a complete ninjs document and this is how the schema knows to recursively validate associated objects):</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2107,7 +2110,7 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
   "uri": "http://ninjs.example.com/newsitems/20130709simp123",
   "type": "text",
   "versioncreated": "2013-07-09T10:37:00Z",
@@ -2116,6 +2119,30 @@ object is a complete ninjs document and this is how the schema knows to recursiv
   "subhead": "Stranded passengers watch with interest",
   "body_text": "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing."
 }</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_using_the_standard">5.3.1. Using the $standard</h4>
+<div class="paragraph">
+<p>With the ninjs 1.3 addition of $standard providers can indicate in each json-file exactly which schema the file is valid against. So for the above example of extending the schema that could be shown like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+  "uri": "http://ninjs.example.com/newsitems/20130709simp123",
+  "$standard": {
+      "name": "e-ninjs-schema",
+      "schema" : "http://www.example.com/e-ninjs-schema_0.1.json",
+      "version" : "0.1"
+  }
+  "type": "text",
+  "versioncreated": "2013-07-09T10:37:00Z",
+  "byline": "Paulo Santalucia and Frances d'Emilio",
+  "headline": "Captain of wrecked cruise ship on trial in Italy",
+  "subhead": "Stranded passengers watch with interest"
+    ...
+}</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -2378,7 +2405,7 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <p><a href="https://iptc.org/std/ninjs/ninjs-schema_1.3.json">Version 1.3 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in May 2020.</p>
 </div>
 <div class="paragraph">
-<p>Version 1.3 added the <code>headline_</code>, <code>altids</code>, <code>trustindicator</code>, <code>$standard</code> and <code>genre</code> properties. It also changed the regular expression used for patternProperties used in <code>description_</code>, <code>body_</code>, <code>place</code>, <code>renditions</code>, <code>associations</code>, <code>geometry_</code> to ensure that the full string is being checked.</p>
+<p>Version 1.3 added the <code>headline_</code>, <code>altids</code>, <code>trustindicator</code>, <code>$standard</code> and <code>genre</code> properties.</p>
 </div>
 </div>
 </div>
@@ -2423,8 +2450,8 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <a href="#_footnoteref_1">1</a>. The provider can indicate that more properties are available using the <code>representationtype: "incomplete"</code> construct.
 </div>
 </div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
 <script>hljs.initHighlighting()</script>
 </body>
 </html>
