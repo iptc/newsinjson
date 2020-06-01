@@ -866,7 +866,7 @@ With the ninjs 1.3 addition of `$standard`, providers can indicate in each JSON 
       "name": "e-ninjs-schema",
       "schema" : "http://www.example.com/e-ninjs-schema_0.1.json",
       "version" : "0.1"
-  }
+  },
   "type": "text",
   "versioncreated": "2013-07-09T10:37:00Z",
   "byline": "Paulo Santalucia and Frances d'Emilio",
