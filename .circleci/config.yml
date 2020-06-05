@@ -6,15 +6,18 @@ orbs:
 jobs:
   build-and-test:
     executor: python/default
-    working_directory: ./validation/python
     steps:
       - checkout
       - python/load-cache
-      - python/install-deps
+      - run:
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r validators/python/requirements.txt
       - python/save-cache
       - run:
-          command: runtests.py
-          name: Run ninjs unit tests
+          command: validators/python/runtests.py
+          name: Run ninjs unit tests using Python jsonschema
 
 workflows:
   main:
