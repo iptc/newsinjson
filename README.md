@@ -1,6 +1,7 @@
 ninjs - News in JSON
 ====================
 
+
 ninjs is [http://www.iptc.org/](IPTC)'s standard for describing news
 content in JSON format.
 
@@ -26,6 +27,10 @@ of the ninjs 1.0, 1.1, 1.2 and 1.3 schemas, run the following tool in a
 command/terminal window:
 
     validation/python/runtests.py 
+
+We automatically run unit tests on every commit using CircleCI. The current
+status is:
+[![IPTC](https://circleci.com/gh/iptc/newsinjson.svg?style=shield)](https://circleci.com/gh/iptc/newsinjson)
 
 Dev schema
 ----------
