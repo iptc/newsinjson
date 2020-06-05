@@ -13,10 +13,10 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install -r validators/python/requirements.txt
+            pip install -r validation/python/requirements.txt
       - python/save-cache
       - run:
-          command: validators/python/runtests.py
+          command: validation/python/runtests.py
           name: Run ninjs unit tests using Python jsonschema
 
 workflows:
