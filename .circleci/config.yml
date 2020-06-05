@@ -10,6 +10,7 @@ jobs:
       - checkout
       - python/load-cache
       - python/install-deps
+          dependency-file: ./validation/python/requirements.txt
       - python/save-cache
       - run:
           command: ./validation/python/runtests.py
