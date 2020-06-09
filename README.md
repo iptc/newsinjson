@@ -37,7 +37,7 @@ Dev schema
 
 A "development" version of the schema is available in the `specification`
 folder and at 
-http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.2_v1.3.json
+http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.2_v1.3.json
 
 The dev schema is used to test possible additions to future versions of ninjs.
 It is not guaranteed to be maintained and is subject to change at any time.

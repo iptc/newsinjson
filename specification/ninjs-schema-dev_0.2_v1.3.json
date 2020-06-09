@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.2_v1.3.json#",
+    "id": "http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.2_v1.3.json#",
     "type": "object",
     "title": "IPTC ninjs - News in JSON - dev 0.2 - based on version 1.3",
     "description": "A news item as JSON object -- copyright 2020 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/  THIS is a development version to test possible solutions to new additions. ",
