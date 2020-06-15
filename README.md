@@ -1,6 +1,7 @@
+[![IPTC](https://circleci.com/gh/iptc/newsinjson.svg?style=shield)](https://circleci.com/gh/iptc/newsinjson)
+
 ninjs - News in JSON
 ====================
-
 
 ninjs is [http://www.iptc.org/](IPTC)'s standard for describing news
 content in JSON format.
@@ -28,9 +29,7 @@ command/terminal window:
 
     validation/python/runtests.py 
 
-We automatically run unit tests on every commit using CircleCI. The current
-status is:
-[![IPTC](https://circleci.com/gh/iptc/newsinjson.svg?style=shield)](https://circleci.com/gh/iptc/newsinjson)
+We automatically run unit tests on every commit using CircleCI. The badge above the title on this page indicates the current status of the unit tests.
 
 Dev schema
 ----------
