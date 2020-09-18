@@ -1,4 +1,4 @@
-[![IPTC](https://circleci.com/gh/iptc/newsinjson.svg?style=shield)](https://circleci.com/gh/iptc/newsinjson)
+[![IPTC](https://circleci.com/gh/iptc/newsinjson.svg?style=svg)](https://app.circleci.com/pipelines/github/iptc/newsinjson)
 
 ninjs - News in JSON
 ====================
