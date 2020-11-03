@@ -42,8 +42,8 @@
             "description": "Indicates how complete this representation of a news item is. No mapping to nar. Specific for ninjs.",
             "type": "string",
             "enum": [
-                "complete",
-                "incomplete"
+                "full",
+                "partial"
             ]
         },
         
@@ -567,12 +567,6 @@
              }            
         },
         
-        "altids": {
-            "title": "Alternative id",
-            "description": "Alternative identifiers of the item. It is up to the individual provider to name and set type on the alternative identifiers they like to use. nar:altId issue #3. (Added in version 1.3)",
-            "type": "object",
-            "additionalProperties": true
-        },
         
         "trustindicator": {
             "title": "Trust indicator",

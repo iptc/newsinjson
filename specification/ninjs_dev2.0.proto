@@ -1,0 +1,139 @@
+syntax = "proto2";
+
+message NINJS {
+    
+  required string uri = 1;
+  enum Type {
+    text = 0;
+    audio = 1;
+    video = 2;
+    picture = 3;
+    graphic = 4;
+    composite = 5;
+    component = 6;
+  }
+  optional Type type = 2 [default = text];
+  optional string mimetype = 3;
+  enum Representationtype {
+    full = 0;
+    partial = 1;
+  }
+  optional Representationtype representationtype = 4 [default = full];
+  optional string profile = 5;
+  optional string version = 6;
+  optional string firstcreated = 7;
+  optional string versioncreated = 8;
+  optional string embargoed = 9;
+  enum Pubstatus {
+    usable = 0;
+    withheld = 1;
+    canceled = 2;
+  }
+  optional Pubstatus pubstatus = 10 [default = usable];
+  optional int32 urgency = 11;
+  optional string copyrightholder = 12;
+  optional string copyrightnotice = 13;
+  optional string usageterms = 14;
+  optional string ednote = 15;
+  optional string language = 16;
+  repeated name_content_type description = 17;
+  repeated name_content_type body = 18;
+  repeated name_content_type headline = 19;
+  repeated code_scheme_all person = 20;
+  repeated org_type organisation = 21;
+  repeated place_type place = 22;
+  repeated code_scheme_all subject = 23;
+  repeated code_scheme_all event = 24;
+  repeated code_scheme_all object = 25;
+  repeated code_scheme_all infosource = 26;
+  optional string title = 27;
+  optional string byline = 28;
+  optional string slugline = 29;
+  optional string located = 30;
+  optional int32 charcount = 31;
+  optional int32 wordcount = 32;
+  repeated rendition_type renditions = 33;
+  repeated association_type associations = 34;
+  repeated trust_type trustindicator = 35;
+  repeated genre_type genre = 36;
+  optional standard_type standard = 37;
+}
+
+message association_type {
+  required string name = 38;
+  optional NINJS association = 39;
+}
+
+message name_content_type {
+  optional string name = 1;
+  optional string content = 2;
+}
+
+message standard_type {
+  optional string name = 1;
+  optional string version = 2;
+  optional string schema = 3;
+}
+
+message place_type {
+  optional string scheme = 1;
+  optional string code = 2;
+  optional string name = 3;
+  optional string rel = 4;
+  repeated geojson_type geometry_geojson = 5;
+}
+
+message geojson_type {
+  optional string type = 1;
+  repeated double coordinates = 2;
+} 
+
+message org_type {
+  optional string scheme = 1;
+  optional string code = 2;
+  optional string name = 3;
+  optional string rel = 4;
+  repeated symbol_type symbols = 5;
+}
+
+message symbol_type {
+  optional string ticker = 1;
+  optional string exchange = 2;
+} 
+
+message code_scheme_all {
+  optional string scheme = 1;
+  optional string code = 2;
+  optional string name = 3;
+  optional string rel = 4;
+}
+
+message code_scheme { 
+  optional string scheme = 1;
+  optional string code = 2;
+}
+
+message trust_type {
+  optional string scheme = 1;
+  optional string code = 2;
+  optional string title = 3;
+  optional string href = 4;
+}
+
+message genre_type {
+  optional string scheme = 1;
+  optional string code = 2;
+  optional string name = 3;
+}
+
+message rendition_type {
+  optional string name = 1;
+  optional string href = 2;
+  optional string mimetype = 3;
+  optional string title = 4;
+  optional int32 height = 5;
+  optional int32 width = 6;
+  optional int32 sizeinbytes = 7;
+  optional int32 duration = 8;
+  optional string format = 9;
+}
