@@ -1,0 +1,142 @@
+{
+    "uri": "http://IPTC.com/video/3e02fc32-9cbf-48db-a3a2-57b49a321310",
+    "$standard": {
+        "name": "NINJS",
+        "version": "1.3",
+        "schema": "ninjs-schema_1.3.json"
+    },
+    "type": "video",
+    "representationtype": "complete",
+    "profile": "video",
+    "genre": [
+        {
+            "name": "Current",
+            "code": "Current",
+            "scheme": "http://cv.iptc.org/newscodes/genre/"
+        }
+    ],
+    "subject": [
+        {
+            "code": "08000000",
+            "rel": "classifies",
+            "name": "Human interest",
+            "scheme": "http://cv.iptc.org/newscodes/mediatopic/"
+        }
+    ],
+    "versioncreated": "2020-07-13T11:59:09.102Z",
+    "pubstatus": "usable",
+    "urgency": 2,
+    "copyrightholder": "IPTC",
+    "copyrightnotice": "Copyright (C) 2020, IPTC",
+    "usageterms": "Test content. Not to be published under any circumstances.",
+    "ednote": "Test content. Not to be published under any circumstances.",
+    "language": "EN",
+    "body_text": "It's a cliche, but we managed to catch it on camera for the first time: a man actually bit a dog.",
+    "byline": "Brendan Quinn",
+    "located": "Anywhere, North Carolina",
+    "headline": "Man bites dog",
+    "headline_subheadline": "Yes, it finally happened",
+    "slugline": "MAN-BITES-DOG",
+    "partmeta": [
+    <partMeta partid="Part1_ID" seq="1">
+        <icon href=" http://www.example.com/video/Keyframes/407624.jpeg"/>
+        <timeDelim renditionref="vidrnd:avi25" start="0" end="446" timeunit="timeunit:editUnit"/>
+        <language tag="en" role="langusecode:VoiceOver" />
+        <description>Vicco von Bülow entering exhibition </description>
+    </partMeta>
+        {
+            "partid": "Part1_ID - should be a URI?",
+            "sequencenumber": 1,
+            "icon": {
+                "rendition": {
+                    "uri": "thumbnail-image-uri",
+                    "href": ""
+                },
+                "href": "http://www.example.com/video/Keyframes/407624.jpeg"
+            },
+            "timedelimiter": {
+                "renditionref": "http://example.com/vidrnd/avi25 ???",
+                "start": "0",
+                "end": "446",
+                "timeunit": "http://cv.iptc.org/newscodes/timeunit/editUnit",
+            },
+            "language": "EN",
+            "languagerole???": "http://cv.iptc.org/newscodes/languagerole/voiceOver",
+            "description": "Vicco von Bülow entering exhibition"
+        },
+    <partMeta partid="Part2_ID" seq="2">
+        <icon href="http://www.example.com/video/Keyframes/407624-447.jpeg"/>
+        <timeDelim renditionref="vidrnd:avi25" start="446" end="831" timeunit="timeunit:editUnit"/>
+        <language tag="en" role="langusecode:VoiceOver" />
+        <description>Loriot and media </description>
+    </partMeta>
+        {
+            "partid": "Part2_ID - should be a URI?",
+            "sequencenumber": "2",
+            "icon ???": "http://www.example.com/video/Keyframes/407624-447.jpeg",
+            "timedelimiter": {
+                "renditionref": "http://example.com/vidrnd/avi25 ???",
+                "start": "0",
+                "end": "446",
+                "timeunit": "http://cv.iptc.org/newscodes/timeunit/editUnit",
+            },
+            "language": "EN",
+            "languagerole???": "http://cv.iptc.org/newscodes/languagerole/voiceOver",
+            "description": "Vicco von Bülow entering exhibition"
+        },
+        {
+            "partid": "Part3_ID - should be a URI?",
+            "sequencenumber": "3",
+            "icon ???": "http://www.example.com/video/Keyframes/407624-832.jpeg",
+            "timedelimiter": {
+                "renditionref": "http://example.com/vidrnd/avi25",
+                "start": "831",
+                "end": "1081",
+                "timeunit": "http://cv.iptc.org/newscodes/timeunit/editUnit",
+            },
+            "language": "EN",
+            "languagerole???": "http://cv.iptc.org/newscodes/languagerole/interlocution (doesn't exist yet)",
+            "description": "Vicco von Bülow interview"
+        }
+    ]
+    <partMeta partid="Part4_ID" seq="4">
+        <icon href="http://www.example.com/video/Keyframes/407624-1082.jpeg"/>
+        <timeDelim renditionref="vidrnd:avi25" start="1081" end="1313" timeunit="timeunit:editUnit"/>
+        <language tag="en" role="langusecode:NaturalSound" />
+        <description>Exhibition panorama </description>
+    </partMeta>
+    <partMeta partid="Part5_ID" seq="5">
+        <icon href="http://www.example.com/video/Keyframes/407624-1314.jpeg"/>
+        <timeDelim renditionref="vidrnd:avi25" start="1313" end="1616" timeunit="timeunit:editUnit"/>
+        <language tag="en" role="langusecode:Interlocution" />
+        <description>Irm Herrmann, actress, interview</description>
+    </partMeta>
+    <partMeta partid="Part6_ID" seq="6">
+        <icon href="http://www.example.com/video/Keyframes/407624-1617.jpeg"/>
+        <timeDelim renditionref="vidrnd:avi25" start="1616" end="2109" timeunit="timeunit:editUnit"/>
+        <language tag="en" role="langusecode:VoiceOver" />
+        <description>Ulrich Matthes, actor, in exhibition</description>
+    </partMeta>
+    <partMeta partid="Part7_ID" seq="7">
+        <icon href="http://www.example.com/video/Keyframes/407624-2110.jpeg"/>
+        <timeDelim renditionref="vidrnd:avi25" start="2109" end="2732" timeunit="timeunit:editUnit"/>
+        <language tag="en" role="langusecode:Interlocution" />
+        <description>Ulrich Matthes, actor, interview</description>
+    </partMeta>
+    <partMeta partid="Part8_ID" seq="9">
+        <icon href="http://www.example.com/video/Keyframes/407624-2733.jpeg"/>
+        <timeDelim renditionref="vidrnd:avi25" start="2732" end="2775" timeunit="timeunit:editUnit"/>
+        <language tag="en" role="langusecode:VoiceOver" />
+        <description>"I would say: one of the great German classics. Goethe, Kleist,
+            Schiller, Thomas Mann, Loriot. That's the way I would say it."</description>
+    </partMeta>
+    <contentSet>
+        <remoteContent href="http://www.example.com/video/407624.avi"
+            rendition="vidrnd:avi25"
+            format="fmt:avi"
+            duration="111" durationunit="timeunit:seconds"
+            videocodec="vcdc:c155"
+            videoframerate="25"
+            videoaspectratio="16:9" />
+    </contentSet>
+}
