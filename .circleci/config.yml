@@ -10,6 +10,7 @@ jobs:
       - checkout
       - python/install-packages:
           pip-dependency-file: validation/python/requirements.txt
+          pkg-manager: pip
       - run:
           command: validation/python/runtests.py
           name: Run ninjs unit tests using Python jsonschema
