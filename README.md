@@ -29,7 +29,9 @@ command/terminal window:
 
     validation/python/runtests.py 
 
-We automatically run unit tests on every commit using CircleCI. The badge above the title on this page indicates the current status of the unit tests.
+We automatically run unit tests on every commit using CircleCI. The
+badge above the title on this page indicates the current status of the
+unit tests.
 
 Dev schema
 ----------
