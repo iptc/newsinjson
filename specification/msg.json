@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://www.iptc.org/std/ninjs/msg_json_0.9.json#",
+    "type": "object",
+    "title": "IPTC message json for bundling ninjs objects",
+    "additionalProperties": false,
+    "required": ["uri"],
+    "properties": {
+        "standard": {
+            "title": "Standard",
+            "type": "object",
+            "description": "An object with information about standard, version and schema this instance is valid against.",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Name of standard.",
+                    "description": "For example msg_json"
+                },
+                "version": {
+                    "type": "string",
+                    "title": "Version of standard.",
+                    "description": "For example 1.3."
+                },
+                "schema": {
+                    "type": "string",
+                    "format": "uri",
+                    "title": "Schema",
+                    "description": "The uri of the json schema to use for validation."
+                }
+            }
+            
+        },
+        "uri": {
+            "title": "Uniform Resource Identifier",
+            "description": "The identifier for this package",
+            "type": "string",
+            "format": "uri"
+        },
+        "title": {
+            "title": "Title",
+            "description": "A short natural-language name for the item.",
+            "type": "string"
+        },
+        "ninjs": {
+            "title": "Ninjs",
+            "description": "Array of ninjs objects",
+            "type": "array",
+            "additionalProperties": false,
+            "items": {
+                 "$ref": "ninjs-schema_dev_2.0.json" 
+            }
+        }
+
+
+    }
+}
