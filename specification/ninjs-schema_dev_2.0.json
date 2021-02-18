@@ -211,15 +211,15 @@
                         "description": "The relationship of the content of the news object to the person",
                         "type": "string"
                     },
-                    "scheme": {
-                        "title": "Scheme",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the person",
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier for the person as a complete uri with the code.",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the person in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the person as a literal value.",
                         "type": "string"
                     }
                 }
@@ -244,15 +244,15 @@
                         "description": "The relationship of the content of the news object to the organisation",
                         "type": "string"
                     },
-                    "scheme": {
-                        "title": "Scheme",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the organisation",
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier of the organisation as a complete uri",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the organisation in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the organisation as a literal",
                         "type": "string"
                     },
                     "symbols": {
@@ -304,15 +304,15 @@
                         "description": "The relationship of the content of the news object to the place",
                         "type": "string"
                     },
-                    "scheme": {
-                        "title": "Scheme",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the place",
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier for the place as a complete uri",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the place in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the place as a literal",
                         "type": "string"
                     }
                 }
@@ -337,15 +337,15 @@
                         "description": "The relationship of the content of the news object to the subject",
                         "type": "string"
                     },
-                    "scheme": {
-                        "title": "Scheme",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the subject",
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier of the subject as a complete uri",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the subject in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the subject as a string literal",
                         "type": "string"
                     }
                 }
@@ -370,15 +370,15 @@
                         "description": "The relationship of the content of the news object to the event",
                         "type": "string"
                     },
-                    "scheme": {
-                        "title": "Scheme",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the event",
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier for the event as a complete uri",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the event in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the event as a string literal",
                         "type": "string"
                     }
                 }
@@ -403,15 +403,15 @@
                         "description": "The relationship of the content of the news object to the object",
                         "type": "string"
                     },
-                    "scheme": {
-                        "title": "Scheme",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the object",
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier for the object as a complete uri",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the object in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the object as a string literal",
                         "type": "string"
                     }
                 }
@@ -431,20 +431,25 @@
                         "description": "The name of the infosource",
                         "type": "string"
                     },
-                    "rel": {
-                        "title": "Relationship",
-                        "description": "The relationship of the content of the news object to the infosource",
+                    "role": {
+                        "title": "Role",
+                        "description": "The role the infosource in relationship to the content as a string literal.",
                         "type": "string"
                     },
-                    "scheme": {
-                        "title": "Schema",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the infosource",
+                    "roleuri": {
+                        "title": "Role URI",
+                        "description": "The identifier of the role as a complete uri.",
+                        "type": "string"
+                    },
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier of the infosource as a complete uri",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the infosource in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the infosource as a string literal",
                         "type": "string"
                     }
                 }
@@ -576,15 +581,15 @@
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "scheme": {
-                        "title": "Scheme",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the trust indicator",
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier of the trust indicator as a complete uri",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the trust indicator in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the trust indicator as a string literal",
                         "type": "string"
                     },
                     "title": {
@@ -641,15 +646,15 @@
                         "description": "The name of the genre",
                         "type": "string"
                     },      
-                    "scheme": {
-                        "title": "Scheme",
-                        "description": "The identifier of a scheme (= controlled vocabulary) which includes a code for the genre. Normally  http://cv.iptc.org/newscodes/genre/",
+                    "uri": {
+                        "title": "URI",
+                        "description": "The identifier of  the genre as a complete uri",
                         "type": "string",
                         "format": "uri"
                     },
-                    "code": {
-                        "title": "Code",
-                        "description": "The code for the genre in a scheme (= controlled vocabulary) which is identified by the scheme property",
+                    "literal": {
+                        "title": "Literal",
+                        "description": "The code for the genre as a string literal",
                         "type": "string"
                     }
                 }
