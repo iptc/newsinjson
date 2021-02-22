@@ -19,8 +19,8 @@ message Ninjs {
   message Person {
     optional string name = 1;
     optional string rel = 2;
-    optional string scheme = 3;
-    optional string code = 4;
+    optional string uri = 3;
+    optional string literal = 4;
   }
   
   message Organisation {
@@ -31,44 +31,45 @@ message Ninjs {
     
     optional string name = 1;
     optional string rel = 2;
-    optional string scheme = 3;
-    optional string code = 4;
+    optional string uri = 3;
+    optional string literal = 4;
     repeated Symbols symbols = 5;
   }
   
   message Place {
     optional string name = 1;
     optional string rel = 2;
-    optional string scheme = 3;
-    optional string code = 4;
+    optional string uri = 3;
+    optional string literal = 4;
   }
   
   message Subject {
     optional string name = 1;
     optional string rel = 2;
-    optional string scheme = 3;
-    optional string code = 4;
+    optional string uri = 3;
+    optional string literal = 4;
   }
   
   message Event {
     optional string name = 1;
     optional string rel = 2;
-    optional string scheme = 3;
-    optional string code = 4;
+    optional string uri = 3;
+    optional string literal = 4;
   }
   
   message Object {
     optional string name = 1;
     optional string rel = 2;
-    optional string scheme = 3;
-    optional string code = 4;
+    optional string uri = 3;
+    optional string literal = 4;
   }
   
   message Infosource {
     optional string name = 1;
-    optional string rel = 2;
-    optional string scheme = 3;
-    optional string code = 4;
+    optional string role = 2;
+    optional string roleuri = 3;
+    optional string uri = 4;
+    optional string literal = 5;
   }
   
   message Renditions {
@@ -87,8 +88,8 @@ message Ninjs {
   }
   
   message Trustindicator {
-    optional string scheme = 1;
-    optional string code = 2;
+    optional string uri = 1;
+    optional string literal = 2;
     optional string title = 3;
     optional string href = 4;
   }
@@ -101,8 +102,8 @@ message Ninjs {
   
   message Genre {
     optional string name = 1;
-    optional string scheme = 2;
-    optional string code = 3;
+    optional string uri = 2;
+    optional string literal = 3;
   }
   
   message Rightsinfo {

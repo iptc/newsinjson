@@ -17,14 +17,15 @@ if __name__ == '__main__':
     newsitem.profile = "video"
     newsitem.genre.add(
         name = 'Current',
-        code = 'Current',
-        scheme = 'http://cv.iptc.org/newscodes/genre/'
+        uri = 'http://cv.iptc.org/newscodes/genre/Current'
     )
     newsitem.subject.add(
-        code = '08000000',
         rel = 'classifies',
         name = 'Human interest',
-        scheme = 'http://cv.iptc.org/newscodes/mediatopic/'
+        uri = 'http://cv.iptc.org/newscodes/mediatopic/08000000'
+    )
+    newsitem.person.add(
+        literal = 'Joe Bloggs'
     )
     newsitem.versioncreated = '2020-07-13T11:59:09.102Z'
     newsitem.pubstatus = ninjs20_dev_pb2.Ninjs.Pubstatus.usable
