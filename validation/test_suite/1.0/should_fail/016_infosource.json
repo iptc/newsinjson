@@ -2,7 +2,7 @@
     "uri": "016_infosource",
     "infosource": [
         {
-            "name": "Susan Smith",
+            "name": "Interviewee",
             "rel": "Interview source - future property - should fail in 1.0",
             "scheme": "http://cv.iptc.org/newscodes/contentprodpartyrole/",
             "code": "interviewee"

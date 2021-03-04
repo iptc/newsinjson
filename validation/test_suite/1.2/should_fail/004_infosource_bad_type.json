@@ -5,10 +5,10 @@
             "name": "Susan Smith",
             "rel": "Interview source",
             "scheme": {
-                "URI": "http://cv.iptc.org/newscodes/contentprodpartyrole/",
-                "qcode": "newscodes:cpprole"
+                "URI": "http://cv.iptc.org/people",
+                "qcode": "newscodes:people"
             },
-            "code": "interviewee"
+            "code": "SSMITH"
         }
     ] 
 }

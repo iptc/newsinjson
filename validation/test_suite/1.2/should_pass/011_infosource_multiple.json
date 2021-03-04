@@ -3,15 +3,13 @@
     "infosource": [
         {
             "name": "Susan Smith",
-            "rel": "Interview source",
-            "scheme": "http://cv.iptc.org/newscodes/contentprodpartyrole/",
-            "code": "interviewee"
+            "rel": "http://cv.iptc.org/newscodes/contentprodpartyrole/Interviewee",
         },
         {
             "name": "Paramount Pictures",
-            "rel": "Video clips supplied by",
-            "scheme": "http://cv.iptc.org/newscodes/contentprodpartyrole/",
-            "code": "mediaOffice"
+            "rel": "http://cv.iptc.org/newscodes/contentprodpartyrole/mediaOffice",
+            "scheme": "https://www.wikidata.org/wiki/",
+            "code": "Q159846"
         }
     ] 
 }
