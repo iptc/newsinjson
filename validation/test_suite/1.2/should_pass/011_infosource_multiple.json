@@ -3,7 +3,7 @@
     "infosource": [
         {
             "name": "Susan Smith",
-            "rel": "http://cv.iptc.org/newscodes/contentprodpartyrole/Interviewee",
+            "rel": "http://cv.iptc.org/newscodes/contentprodpartyrole/Interviewee"
         },
         {
             "name": "Paramount Pictures",
