@@ -2,7 +2,6 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "http://www.iptc.org/std/ninjs/ninjs-schema_draft_2.0.json#",
     "type": "object",
-    "name": "ninjs",
     "title": "IPTC ninjs - News in JSON - Draft schema to test a 2.0 version",
     "description": "A news item as JSON object -- copyright 2020 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
     "additionalProperties": false,
@@ -62,18 +61,25 @@
         
         "firstcreated": {
             "title": "First created",
-            "description": "Indicates when the first version of the item was created. (Added in version 1.2 from issue #5). nar:firstCreated",
+            "description": "Indicates when the first version of this ninjs object was created. (Added in version 1.2 from issue #5). nar:firstCreated",
             "type": "string",
             "format": "date-time"
         },
         
         "versioncreated": {
             "title": "Version created",
-            "description": "The date and time when this version of the news object was created. nar:versionCreated",
+            "description": "The date and time when this version of this ninjs object was created. nar:versionCreated",
             "type": "string",
             "format": "date-time"
         },
         
+        "contentcreated": {
+            "title": "Content created",
+            "description": "The date and time when the content of this ninjs object was originally created. For example and old photo that is now handled as a ninjs object. nar:contentCreated",
+            "type": "string",
+            "format": "date-time"
+        },
+
         "embargoed": {
             "title": "Embargoed",
             "description": "The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed. nar:embargoed",
@@ -129,8 +135,8 @@
         },
         
         "description": {
-            "title": "Descriptions",
-            "description": "",
+            "title": "Description",
+            "description": "An array of one or more descriptions of the ninjs object.",
             "type": "array",
             "items": {
                 "type": "object",
@@ -141,7 +147,7 @@
                         "description": "The name of this description",
                         "type": "string"
                     },
-                    "content": {
+                    "value": {
                         "title": "Value",
                         "description": "The descriptive text identified with the above name.",
                         "type": "string"
@@ -152,7 +158,7 @@
         
         "body": {
             "title": "Body",
-            "description": "An array of body objects",
+            "description": "An array of body objects with the content as text or with markup.",
             "type": "array",
             "items": {
                 "type": "object",
@@ -173,7 +179,7 @@
         },
         
         "headline": {
-            "title": "Headlines",
+            "title": "Headline",
             "description": "Array of objects containing various types of headlines",
             "type": "array", 
             "items": {
@@ -185,7 +191,7 @@
                         "description": "The name identifying this headline",
                         "type": "string"
                     },
-                    "text": {
+                    "value": {
                         "title": "Value",
                         "description": "The headline identified with the above name.",
                         "type": "string"
@@ -440,7 +446,8 @@
                     "roleuri": {
                         "title": "Role URI",
                         "description": "The identifier of the role as a complete uri.",
-                        "type": "string"
+                        "type": "string",
+                        "format": "uri"
                     },
                     "uri": {
                         "title": "URI",
