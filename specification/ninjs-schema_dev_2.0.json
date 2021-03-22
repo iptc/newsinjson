@@ -294,35 +294,34 @@
             "items": {
                 "type": "object",
                 "additionalProperties": false,
-                "patternProperties": {
-                    "^geometry_[a-zA-Z0-9_]+": {
-                        "description": "An object holding geo data of this place. Could be of any relevant geo data JSON object definition. OBS!!",
-                        "type": "object"
+                
+                "anyOf":[
+                    { "properties": {
+                        "name": {
+                            "title": "Name",
+                            "description": "The name of the place",
+                            "type": "string"
+                        },
+                        "rel": {
+                            "title": "Relationship",
+                            "description": "The relationship of the content of the news object to the place",
+                            "type": "string"
+                        },
+                        "uri": {
+                            "title": "URI",
+                            "description": "The identifier for the place as a complete uri",
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "literal": {
+                            "title": "Literal",
+                            "description": "The code for the place as a literal",
+                            "type": "string"
+                        }
                     }
-                },
-                "properties": {
-                    "name": {
-                        "title": "Name",
-                        "description": "The name of the place",
-                        "type": "string"
                     },
-                    "rel": {
-                        "title": "Relationship",
-                        "description": "The relationship of the content of the news object to the place",
-                        "type": "string"
-                    },
-                    "uri": {
-                        "title": "URI",
-                        "description": "The identifier for the place as a complete uri",
-                        "type": "string",
-                        "format": "uri"
-                    },
-                    "literal": {
-                        "title": "Literal",
-                        "description": "The code for the place as a literal",
-                        "type": "string"
-                    }
-                }
+                    {"$ref": "https://json.schemastore.org/geojson"}
+                ]
             }
         },
         
@@ -569,17 +568,37 @@
                 "type": "object",
                 "anyOf":[
                     { "properties": {
-                        "name": {
-                            "type": "string"
-                            }
+                        "name": { "type": "string" }
                         },
                         "required": ["name"]
                     },
                     {"$ref": "#"}
                 ]
-             }            
+            }            
         },
         
+        "altids": {
+            "title": "Alternative id",
+            "description": "Alternative identifiers of the item. Each alternative id can have a name and a value. nar:altId issue #3.",
+            "type": "array",
+            "items":
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "description": "The name of the alternative id",
+                        "type": "string"
+                    },
+                    "value": {
+                        "title": "Value",
+                        "description": "The alternative id value",
+                        "type": "string"
+                    }
+                 }
+             }
+         },
         
         "trustindicator": {
             "title": "Trust indicator",
@@ -638,7 +657,6 @@
                     "description": "The uri of the json schema to use for validation."
                 }
             }
-            
         },
         
         "genre": {
@@ -668,6 +686,7 @@
                 }
             }
         },
+        
         "rightsinfo": {
             "title": "Rights information",
             "type": "object",
@@ -697,6 +716,5 @@
                 {"required": ["encodedrights"]}
             ]
         }
-
     }
 }
