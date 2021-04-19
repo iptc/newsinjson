@@ -61,18 +61,25 @@
         
         "firstcreated": {
             "title": "First created",
-            "description": "Indicates when the first version of the item was created. (Added in version 1.2 from issue #5). nar:firstCreated",
+            "description": "Indicates when the first version of this ninjs object was created. (Added in version 1.2 from issue #5). nar:firstCreated",
             "type": "string",
             "format": "date-time"
         },
         
         "versioncreated": {
             "title": "Version created",
-            "description": "The date and time when this version of the news object was created. nar:versionCreated",
+            "description": "The date and time when this version of this ninjs object was created. nar:versionCreated",
             "type": "string",
             "format": "date-time"
         },
         
+        "contentcreated": {
+            "title": "Content created",
+            "description": "The date and time when the content of this ninjs object was originally created. For example and old photo that is now handled as a ninjs object. nar:contentCreated",
+            "type": "string",
+            "format": "date-time"
+        },
+
         "embargoed": {
             "title": "Embargoed",
             "description": "The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed. nar:embargoed",
@@ -128,8 +135,8 @@
         },
         
         "description": {
-            "title": "Descriptions",
-            "description": "",
+            "title": "Description",
+            "description": "An array of one or more descriptions of the ninjs object.",
             "type": "array",
             "items": {
                 "type": "object",
@@ -140,7 +147,7 @@
                         "description": "The name of this description",
                         "type": "string"
                     },
-                    "content": {
+                    "value": {
                         "title": "Value",
                         "description": "The descriptive text identified with the above name.",
                         "type": "string"
@@ -151,7 +158,7 @@
         
         "body": {
             "title": "Body",
-            "description": "An array of body objects",
+            "description": "An array of body objects with the content as text or with markup.",
             "type": "array",
             "items": {
                 "type": "object",
@@ -172,7 +179,7 @@
         },
         
         "headline": {
-            "title": "Headlines",
+            "title": "Headline",
             "description": "Array of objects containing various types of headlines",
             "type": "array", 
             "items": {
@@ -184,7 +191,7 @@
                         "description": "The name identifying this headline",
                         "type": "string"
                     },
-                    "text": {
+                    "value": {
                         "title": "Value",
                         "description": "The headline identified with the above name.",
                         "type": "string"
@@ -287,35 +294,34 @@
             "items": {
                 "type": "object",
                 "additionalProperties": false,
-                "patternProperties": {
-                    "^geometry_[a-zA-Z0-9_]+": {
-                        "description": "An object holding geo data of this place. Could be of any relevant geo data JSON object definition. OBS!!",
-                        "type": "object"
+                
+                "anyOf":[
+                    { "properties": {
+                        "name": {
+                            "title": "Name",
+                            "description": "The name of the place",
+                            "type": "string"
+                        },
+                        "rel": {
+                            "title": "Relationship",
+                            "description": "The relationship of the content of the news object to the place",
+                            "type": "string"
+                        },
+                        "uri": {
+                            "title": "URI",
+                            "description": "The identifier for the place as a complete uri",
+                            "type": "string",
+                            "format": "uri"
+                        },
+                        "literal": {
+                            "title": "Literal",
+                            "description": "The code for the place as a literal",
+                            "type": "string"
+                        }
                     }
-                },
-                "properties": {
-                    "name": {
-                        "title": "Name",
-                        "description": "The name of the place",
-                        "type": "string"
                     },
-                    "rel": {
-                        "title": "Relationship",
-                        "description": "The relationship of the content of the news object to the place",
-                        "type": "string"
-                    },
-                    "uri": {
-                        "title": "URI",
-                        "description": "The identifier for the place as a complete uri",
-                        "type": "string",
-                        "format": "uri"
-                    },
-                    "literal": {
-                        "title": "Literal",
-                        "description": "The code for the place as a literal",
-                        "type": "string"
-                    }
-                }
+                    {"$ref": "https://json.schemastore.org/geojson"}
+                ]
             }
         },
         
@@ -439,7 +445,8 @@
                     "roleuri": {
                         "title": "Role URI",
                         "description": "The identifier of the role as a complete uri.",
-                        "type": "string"
+                        "type": "string",
+                        "format": "uri"
                     },
                     "uri": {
                         "title": "URI",
@@ -561,17 +568,37 @@
                 "type": "object",
                 "anyOf":[
                     { "properties": {
-                        "name": {
-                            "type": "string"
-                            }
+                        "name": { "type": "string" }
                         },
                         "required": ["name"]
                     },
                     {"$ref": "#"}
                 ]
-             }            
+            }            
         },
         
+        "altids": {
+            "title": "Alternative id",
+            "description": "Alternative identifiers of the item. Each alternative id can have a name and a value. nar:altId issue #3.",
+            "type": "array",
+            "items":
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "description": "The name of the alternative id",
+                        "type": "string"
+                    },
+                    "value": {
+                        "title": "Value",
+                        "description": "The alternative id value",
+                        "type": "string"
+                    }
+                 }
+             }
+         },
         
         "trustindicator": {
             "title": "Trust indicator",
@@ -630,7 +657,6 @@
                     "description": "The uri of the json schema to use for validation."
                 }
             }
-            
         },
         
         "genre": {
@@ -660,6 +686,7 @@
                 }
             }
         },
+        
         "rightsinfo": {
             "title": "Rights information",
             "type": "object",
@@ -689,6 +716,5 @@
                 {"required": ["encodedrights"]}
             ]
         }
-
     }
 }
