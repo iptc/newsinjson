@@ -8,17 +8,17 @@
 	"headline": [
         {
             "name": "main",
-            "text": "Test of ninjs 2.0 properties"
+            "value": "Test of ninjs 2.0 properties"
         },
         {
             "name": "extension",
-	        "text": "Extensible headline test"
+	        "value": "Extensible headline test"
         }
     ],
 	"description": [
         {
             "name": "caption",
-            "content": "Extensible description test"
+            "value": "Extensible description test"
         }
     ],
     "trustindicator": [

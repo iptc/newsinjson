@@ -8,17 +8,17 @@
     "headline": [
         {
             "name": "main",
-            "text": "Test of three new properties"
+            "value": "Test of three new properties"
         },
         {
             "name": "test",
-            "text": "Extensible headline test"
+            "value": "Extensible headline test"
         }
     ],
     "description": [
         {
             "name": "caption_xhtml",
-            "content": "Extensible description test"
+            "value": "Extensible description test"
         }
     ],
     "trustindicator": [

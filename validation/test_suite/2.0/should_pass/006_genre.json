@@ -3,7 +3,7 @@
     "headline": [
         {
             "name": "main",
-            "text": "test headline"
+            "value": "test headline"
         }
     ],
     "genre": [
