@@ -34,12 +34,10 @@ import jsonschema
 import os
 
 TEST_FILES_FOLDER = os.path.join('..', 'test_suite')
-EXAMPLE_FILES_FOLDER = os.path.join('..', '..', 'examples')
-DOCUMENTATION_EXAMPLES_FOLDER_1_x = os.path.join(
-    '..', '..', 'documentation', 'includes', 'examples', '1.x'
-)
-DOCUMENTATION_EXAMPLES_FOLDER_2_0 = os.path.join(
-    '..', '..', 'documentation', 'includes', 'examples', '2.0'
+EXAMPLE_FILES_FOLDER_1_3 = os.path.join('..', '..', 'examples', '1.3')
+EXAMPLE_FILES_FOLDER_2_0 = os.path.join('..', '..', 'examples', '2.0')
+DOCUMENTATION_EXAMPLES_FOLDER = os.path.join(
+    '..', '..', 'documentation', 'includes', 'examples'
 )
 
 class TestNinJSSchema(unittest.TestCase):
@@ -322,41 +320,39 @@ class TestNinJSSchema(unittest.TestCase):
             folder_name=os.path.join('1.3', 'should_fail')
         )
 
-    def test_example_files_against_1_3_schema(self):
+    def test_1_3_example_files_against_1_3_schema(self):
         """
-        Run all files in EXAMPLE_FILES_FOLDER against the latest schema.
+        Run all files in EXAMPLE_FILES_FOLDER_1_3 against the latest schema.
         They should all pass. (They will not all pass against old versions
         of the schema, as the examples use the latest features of ninjs)
         """
         self.folder_should_pass(
             schema=self.ninjs13_schema,
-            folder_name=EXAMPLE_FILES_FOLDER
+            folder_name=EXAMPLE_FILES_FOLDER_1_3
         )
 
-    def test_1_x_documentation_examples_against_1_3_schema(self):
+    def test_2_0_example_files_against_2_0_schema(self):
         """
-        Run all files in DOCUMENTATION_EXAMPLES_FOLDER_1_x against the latest
+        Run all files in EXAMPLE_FILES_FOLDER_2_0 against the latest schema.
+        They should all pass. (They will not all pass against old versions
+        of the schema, as the examples use the latest features of ninjs)
+        """
+        self.folder_should_pass(
+            schema=self.ninjs20dev_schema,
+            folder_name=EXAMPLE_FILES_FOLDER_2_0
+        )
+
+    def test_documentation_examples_against_1_3_schema(self):
+        """
+        Run all files in DOCUMENTATION_EXAMPLES_FOLDER against the latest
         schema. They should all pass. (They will not all pass against old
         versions of the schema, as the examples use the latest features of
         ninjs)
         """
         self.folder_should_pass(
             schema=self.ninjs13_schema,
-            folder_name=DOCUMENTATION_EXAMPLES_FOLDER_1_x
+            folder_name=DOCUMENTATION_EXAMPLES_FOLDER
         )
-
-    def test_2_0_documentation_examples_against_2_0_schema(self):
-        """
-        Run all files in DOCUMENTATION_EXAMPLES_FOLDER_2_0 against the latest
-        schema. They should all pass. (They will not all pass against old
-        versions of the schema, as the examples use the latest features of
-        ninjs)
-        """
-        self.folder_should_pass(
-            schema=self.ninjs20dev_schema,
-            folder_name=DOCUMENTATION_EXAMPLES_FOLDER_2_0
-        )
-
 
     def test_all_passing_unit_test_files_against_dev_schema(self):
         """
