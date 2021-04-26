@@ -290,10 +290,10 @@
         "place": {
             "title": "Place",
             "description": "A named location. nar:subject",
+            "additionalProperties": false,
             "type": "array",
             "items": {
                 "type": "object",
-                "additionalProperties": false,
                 
                 "anyOf":[
                     { "properties": {
