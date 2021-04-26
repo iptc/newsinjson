@@ -439,12 +439,7 @@
                     },
                     "role": {
                         "title": "Role",
-                        "description": "The role the infosource in relationship to the content as a string literal.",
-                        "type": "string"
-                    },
-                    "roleuri": {
-                        "title": "Role URI",
-                        "description": "The identifier of the role as a complete uri.",
+                        "description": "The role the infosource in relationship to the content as a uri.",
                         "type": "string",
                         "format": "uri"
                     },
@@ -608,16 +603,11 @@
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "uri": {
-                        "title": "URI",
-                        "description": "The identifier of the trust indicator as a complete uri",
+                    "role": {
+                        "title": "Role",
+                        "description": "The role of the trust indicator as a complete uri",
                         "type": "string",
                         "format": "uri"
-                    },
-                    "literal": {
-                        "title": "Literal",
-                        "description": "The code for the trust indicator as a string literal",
-                        "type": "string"
                     },
                     "title": {
                         "title": "Title",
