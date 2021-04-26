@@ -103,11 +103,14 @@ class TestNinJSSchema(unittest.TestCase):
                         self.current_path,
                         folder_name
                     )
-        return [
-            os.path.join(folder_name, file)
-            for file in os.listdir(folder_name)
-            if file.endswith('.json')
-        ]
+        if not os.path.isdir(folder_name):
+            return []
+        else:
+            return [
+                os.path.join(folder_name, file)
+                for file in os.listdir(folder_name)
+                if file.endswith('.json')
+            ]
 
     def get_test_files_in_folder(self, test_folder_name):
         return self.get_files_in_folder(
