@@ -19,10 +19,60 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x11ninjs20-dev.proto\"\xde\x12\n\x05Ninjs\x12\x0b\n\x03uri\x18\x01 \x02(\t\x12\x19\n\x04type\x18\x02 \x01(\x0e\x32\x0b.Ninjs.Type\x12\x10\n\x08mimetype\x18\x03 \x01(\t\x12\x35\n\x12representationtype\x18\x04 \x01(\x0e\x32\x19.Ninjs.Representationtype\x12\x0f\n\x07profile\x18\x05 \x01(\t\x12\x0f\n\x07version\x18\x06 \x01(\t\x12\x14\n\x0c\x66irstcreated\x18\x07 \x01(\t\x12\x16\n\x0eversioncreated\x18\x08 \x01(\t\x12\x11\n\tembargoed\x18\t \x01(\t\x12#\n\tpubstatus\x18\n \x01(\x0e\x32\x10.Ninjs.Pubstatus\x12\x0f\n\x07urgency\x18\x0b \x01(\x05\x12\x17\n\x0f\x63opyrightholder\x18\x0c \x01(\t\x12\x17\n\x0f\x63opyrightnotice\x18\r \x01(\t\x12\x12\n\nusageterms\x18\x0e \x01(\t\x12\x0e\n\x06\x65\x64note\x18\x0f \x01(\t\x12\x10\n\x08language\x18\x10 \x01(\t\x12\'\n\x0b\x64\x65scription\x18\x11 \x03(\x0b\x32\x12.Ninjs.Description\x12\x19\n\x04\x62ody\x18\x12 \x03(\x0b\x32\x0b.Ninjs.Body\x12!\n\x08headline\x18\x13 \x03(\x0b\x32\x0f.Ninjs.Headline\x12\x1d\n\x06person\x18\x14 \x03(\x0b\x32\r.Ninjs.Person\x12)\n\x0corganisation\x18\x15 \x03(\x0b\x32\x13.Ninjs.Organisation\x12\x1b\n\x05place\x18\x16 \x03(\x0b\x32\x0c.Ninjs.Place\x12\x1f\n\x07subject\x18\x17 \x03(\x0b\x32\x0e.Ninjs.Subject\x12\x1b\n\x05\x65vent\x18\x18 \x03(\x0b\x32\x0c.Ninjs.Event\x12\x1d\n\x06object\x18\x19 \x03(\x0b\x32\r.Ninjs.Object\x12%\n\ninfosource\x18\x1a \x03(\x0b\x32\x11.Ninjs.Infosource\x12\r\n\x05title\x18\x1b \x01(\t\x12\x0e\n\x06\x62yline\x18\x1c \x01(\t\x12\x10\n\x08slugline\x18\x1d \x01(\t\x12\x0f\n\x07located\x18\x1e \x01(\t\x12\x11\n\tcharcount\x18\x1f \x01(\x05\x12\x11\n\twordcount\x18  \x01(\x05\x12%\n\nrenditions\x18! \x03(\x0b\x32\x11.Ninjs.Renditions\x12)\n\x0c\x61ssociations\x18\" \x03(\x0b\x32\x13.Ninjs.Associations\x12-\n\x0etrustindicator\x18# \x03(\x0b\x32\x15.Ninjs.Trustindicator\x12!\n\x08standard\x18$ \x01(\x0b\x32\x0f.Ninjs.Standard\x12\x1b\n\x05genre\x18% \x03(\x0b\x32\x0c.Ninjs.Genre\x12%\n\nrightsinfo\x18& \x01(\x0b\x32\x11.Ninjs.Rightsinfo\x1a,\n\x0b\x44\x65scription\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x02 \x01(\t\x1a#\n\x04\x42ody\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a&\n\x08Headline\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x1a\x41\n\x06Person\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\xa2\x01\n\x0cOrganisation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x12,\n\x07symbols\x18\x05 \x03(\x0b\x32\x1b.Ninjs.Organisation.Symbols\x1a+\n\x07Symbols\x12\x0e\n\x06ticker\x18\x01 \x01(\t\x12\x10\n\x08\x65xchange\x18\x02 \x01(\t\x1a@\n\x05Place\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x42\n\x07Subject\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a@\n\x05\x45vent\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x41\n\x06Object\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1aW\n\nInfosource\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04role\x18\x02 \x01(\t\x12\x0f\n\x07roleuri\x18\x03 \x01(\t\x12\x0b\n\x03uri\x18\x04 \x01(\t\x12\x0f\n\x07literal\x18\x05 \x01(\t\x1a\x9f\x01\n\nRenditions\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04href\x18\x02 \x01(\t\x12\x10\n\x08mimetype\x18\x03 \x01(\t\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\r\n\x05width\x18\x06 \x01(\x05\x12\x13\n\x0bsizeinbytes\x18\x07 \x01(\x05\x12\x10\n\x08\x64uration\x18\x08 \x01(\x05\x12\x0e\n\x06\x66ormat\x18\t \x01(\t\x1a\x0e\n\x0c\x41ssociations\x1aK\n\x0eTrustindicator\x12\x0b\n\x03uri\x18\x01 \x01(\t\x12\x0f\n\x07literal\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0c\n\x04href\x18\x04 \x01(\t\x1a\x39\n\x08Standard\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x0e\n\x06schema\x18\x03 \x01(\t\x1a\x33\n\x05Genre\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03uri\x18\x02 \x01(\t\x12\x0f\n\x07literal\x18\x03 \x01(\t\x1aI\n\nRightsinfo\x12\x0e\n\x06langid\x18\x01 \x01(\t\x12\x14\n\x0clinkedrights\x18\x02 \x01(\t\x12\x15\n\rencodedrights\x18\x03 \x01(\t\"^\n\x04Type\x12\x08\n\x04text\x10\x00\x12\t\n\x05\x61udio\x10\x01\x12\t\n\x05video\x10\x02\x12\x0b\n\x07picture\x10\x03\x12\x0b\n\x07graphic\x10\x04\x12\r\n\tcomposite\x10\x05\x12\r\n\tcomponent\x10\x06\"+\n\x12Representationtype\x12\x08\n\x04\x66ull\x10\x00\x12\x0b\n\x07partial\x10\x01\"3\n\tPubstatus\x12\n\n\x06usable\x10\x00\x12\x0c\n\x08withheld\x10\x01\x12\x0c\n\x08\x63\x61nceled\x10\x02'
+  serialized_pb=b'\n\x11ninjs20-dev.proto\"\xd9\x17\n\x05Ninjs\x12\x0b\n\x03uri\x18\x01 \x02(\t\x12\x19\n\x04type\x18\x02 \x01(\x0e\x32\x0b.Ninjs.Type\x12\x10\n\x08mimetype\x18\x03 \x01(\t\x12\x35\n\x12representationtype\x18\x04 \x01(\x0e\x32\x19.Ninjs.Representationtype\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\x14\n\x0c\x66irstcreated\x18\x06 \x01(\t\x12\x16\n\x0eversioncreated\x18\x07 \x01(\t\x12#\n\tpubstatus\x18\x08 \x01(\x0e\x32\x10.Ninjs.Pubstatus\x12\x0f\n\x07urgency\x18\t \x01(\x05\x12\x10\n\x08language\x18\n \x01(\t\x12\x19\n\x04\x62ody\x18\x0b \x03(\x0b\x32\x0b.Ninjs.Body\x12\'\n\x0b\x64\x65scription\x18\x0c \x03(\x0b\x32\x12.Ninjs.Description\x12!\n\x08headline\x18\r \x03(\x0b\x32\x0f.Ninjs.Headline\x12\r\n\x05title\x18\x0e \x01(\t\x12\x10\n\x08slugline\x18\x0f \x01(\t\x12\x1d\n\x06person\x18\x14 \x03(\x0b\x32\r.Ninjs.Person\x12)\n\x0corganisation\x18\x15 \x03(\x0b\x32\x13.Ninjs.Organisation\x12\x1b\n\x05place\x18\x16 \x03(\x0b\x32\x0c.Ninjs.Place\x12\x1f\n\x07subject\x18\x17 \x03(\x0b\x32\x0e.Ninjs.Subject\x12\x1b\n\x05\x65vent\x18\x18 \x03(\x0b\x32\x0c.Ninjs.Event\x12\x1d\n\x06object\x18\x19 \x03(\x0b\x32\r.Ninjs.Object\x12%\n\ninfosource\x18\x1a \x03(\x0b\x32\x11.Ninjs.Infosource\x12$\n\nrenditions\x18\x1b \x03(\x0b\x32\x10.Ninjs.Rendition\x12(\n\x0c\x61ssociations\x18\x1c \x03(\x0b\x32\x12.Ninjs.Association\x12\x1d\n\x06\x61ltids\x18\x1d \x03(\x0b\x32\r.Ninjs.Altids\x12-\n\x0etrustindicator\x18\x1e \x03(\x0b\x32\x15.Ninjs.Trustindicator\x12\x1b\n\x05genre\x18\x1f \x03(\x0b\x32\x0c.Ninjs.Genre\x12\x0e\n\x06\x62yline\x18\x32 \x01(\t\x12\x0f\n\x07located\x18\x33 \x01(\t\x12\x11\n\tcharcount\x18\x34 \x01(\x05\x12\x11\n\twordcount\x18\x35 \x01(\x05\x12!\n\x08standard\x18\x36 \x01(\x0b\x32\x0f.Ninjs.Standard\x12%\n\nrightsinfo\x18\x37 \x01(\x0b\x32\x11.Ninjs.Rightsinfo\x12\x11\n\tembargoed\x18n \x01(\t\x12\x0f\n\x07profile\x18p \x01(\t\x12\x17\n\x0f\x63opyrightholder\x18q \x01(\t\x12\x17\n\x0f\x63opyrightnotice\x18r \x01(\t\x12\x12\n\nusageterms\x18s \x01(\t\x12\x0e\n\x06\x65\x64note\x18t \x01(\t\x12\x16\n\x0e\x63ontentcreated\x18x \x01(\t\x1a*\n\x0b\x44\x65scription\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a#\n\x04\x42ody\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a\'\n\x08Headline\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a\x41\n\x06Person\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\xa2\x01\n\x0cOrganisation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x12,\n\x07symbols\x18\x05 \x03(\x0b\x32\x1b.Ninjs.Organisation.Symbols\x1a+\n\x07Symbols\x12\x0e\n\x06ticker\x18\x01 \x01(\t\x12\x10\n\x08\x65xchange\x18\x02 \x01(\t\x1a\xa3\x01\n\x05Value\x12\x16\n\x0cstring_value\x18\x01 \x01(\tH\x00\x12\x16\n\x0c\x64ouble_value\x18\x02 \x01(\x01H\x00\x12\x17\n\rpos_int_value\x18\x03 \x01(\x04H\x00\x12\x17\n\rneg_int_value\x18\x04 \x01(\x04H\x00\x12\x14\n\nbool_value\x18\x05 \x01(\x08H\x00\x12\x14\n\njson_value\x18\x06 \x01(\tH\x00\x42\x0c\n\nvalue_type\x1a\xb8\x02\n\x08Geometry\x12\"\n\x04type\x18\x01 \x02(\x0e\x32\x14.Ninjs.Geometry.Type\x12\x13\n\x07lengths\x18\x02 \x03(\rB\x02\x10\x01\x12\x12\n\x06\x63oords\x18\x03 \x03(\x12\x42\x02\x10\x01\x12#\n\ngeometries\x18\x04 \x03(\x0b\x32\x0f.Ninjs.Geometry\x12\x1c\n\x06values\x18\r \x03(\x0b\x32\x0c.Ninjs.Value\x12\x1d\n\x11\x63ustom_properties\x18\x0f \x03(\rB\x02\x10\x01\"}\n\x04Type\x12\t\n\x05POINT\x10\x00\x12\x0e\n\nMULTIPOINT\x10\x01\x12\x0e\n\nLINESTRING\x10\x02\x12\x13\n\x0fMULTILINESTRING\x10\x03\x12\x0b\n\x07POLYGON\x10\x04\x12\x10\n\x0cMULTIPOLYGON\x10\x05\x12\x16\n\x12GEOMETRYCOLLECTION\x10\x06\x1ak\n\x05Place\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x12)\n\x10geometry_geojson\x18\x05 \x01(\x0b\x32\x0f.Ninjs.Geometry\x1a\x42\n\x07Subject\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a@\n\x05\x45vent\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x41\n\x06Object\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x46\n\nInfosource\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04role\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x9e\x01\n\tRendition\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04href\x18\x02 \x01(\t\x12\x10\n\x08mimetype\x18\x03 \x01(\t\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\r\n\x05width\x18\x06 \x01(\x05\x12\x13\n\x0bsizeinbytes\x18\x07 \x01(\x05\x12\x10\n\x08\x64uration\x18\x08 \x01(\x05\x12\x0e\n\x06\x66ormat\x18\t \x01(\t\x1a\x32\n\x0b\x41ssociation\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x15\n\x05ninjs\x18\x02 \x01(\x0b\x32\x06.Ninjs\x1a%\n\x06\x41ltids\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a;\n\x0eTrustindicator\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0c\n\x04href\x18\x03 \x01(\t\x1a\x39\n\x08Standard\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x0e\n\x06schema\x18\x03 \x01(\t\x1a\x33\n\x05Genre\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03uri\x18\x02 \x01(\t\x12\x0f\n\x07literal\x18\x03 \x01(\t\x1a[\n\nRightsinfo\x12\x0e\n\x06langid\x18\x01 \x01(\t\x12\x16\n\x0clinkedrights\x18\x02 \x01(\tH\x00\x12\x17\n\rencodedrights\x18\x03 \x01(\tH\x00\x42\x0c\n\ntest_oneof\"^\n\x04Type\x12\x08\n\x04text\x10\x00\x12\t\n\x05\x61udio\x10\x01\x12\t\n\x05video\x10\x02\x12\x0b\n\x07picture\x10\x03\x12\x0b\n\x07graphic\x10\x04\x12\r\n\tcomposite\x10\x05\x12\r\n\tcomponent\x10\x06\"+\n\x12Representationtype\x12\x08\n\x04\x66ull\x10\x00\x12\x0b\n\x07partial\x10\x01\"3\n\tPubstatus\x12\n\n\x06usable\x10\x00\x12\x0c\n\x08withheld\x10\x01\x12\x0c\n\x08\x63\x61nceled\x10\x02'
 )
 
 
+
+_NINJS_GEOMETRY_TYPE = _descriptor.EnumDescriptor(
+  name='Type',
+  full_name='Ninjs.Geometry.Type',
+  filename=None,
+  file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='POINT', index=0, number=0,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MULTIPOINT', index=1, number=1,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='LINESTRING', index=2, number=2,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MULTILINESTRING', index=3, number=3,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='POLYGON', index=4, number=4,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='MULTIPOLYGON', index=5, number=5,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='GEOMETRYCOLLECTION', index=6, number=6,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1836,
+  serialized_end=1961,
+)
+_sym_db.RegisterEnumDescriptor(_NINJS_GEOMETRY_TYPE)
 
 _NINJS_TYPE = _descriptor.EnumDescriptor(
   name='Type',
@@ -69,8 +119,8 @@ _NINJS_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2228,
-  serialized_end=2322,
+  serialized_start=2863,
+  serialized_end=2957,
 )
 _sym_db.RegisterEnumDescriptor(_NINJS_TYPE)
 
@@ -94,8 +144,8 @@ _NINJS_REPRESENTATIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2324,
-  serialized_end=2367,
+  serialized_start=2959,
+  serialized_end=3002,
 )
 _sym_db.RegisterEnumDescriptor(_NINJS_REPRESENTATIONTYPE)
 
@@ -124,8 +174,8 @@ _NINJS_PUBSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2369,
-  serialized_end=2420,
+  serialized_start=3004,
+  serialized_end=3055,
 )
 _sym_db.RegisterEnumDescriptor(_NINJS_PUBSTATUS)
 
@@ -146,7 +196,7 @@ _NINJS_DESCRIPTION = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='content', full_name='Ninjs.Description.content', index=1,
+      name='value', full_name='Ninjs.Description.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -164,8 +214,8 @@ _NINJS_DESCRIPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1075,
-  serialized_end=1119,
+  serialized_start=1128,
+  serialized_end=1170,
 )
 
 _NINJS_BODY = _descriptor.Descriptor(
@@ -202,8 +252,8 @@ _NINJS_BODY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1121,
-  serialized_end=1156,
+  serialized_start=1172,
+  serialized_end=1207,
 )
 
 _NINJS_HEADLINE = _descriptor.Descriptor(
@@ -222,7 +272,7 @@ _NINJS_HEADLINE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='text', full_name='Ninjs.Headline.text', index=1,
+      name='value', full_name='Ninjs.Headline.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -240,8 +290,8 @@ _NINJS_HEADLINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1158,
-  serialized_end=1196,
+  serialized_start=1209,
+  serialized_end=1248,
 )
 
 _NINJS_PERSON = _descriptor.Descriptor(
@@ -292,8 +342,8 @@ _NINJS_PERSON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1198,
-  serialized_end=1263,
+  serialized_start=1250,
+  serialized_end=1315,
 )
 
 _NINJS_ORGANISATION_SYMBOLS = _descriptor.Descriptor(
@@ -330,8 +380,8 @@ _NINJS_ORGANISATION_SYMBOLS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1385,
-  serialized_end=1428,
+  serialized_start=1437,
+  serialized_end=1480,
 )
 
 _NINJS_ORGANISATION = _descriptor.Descriptor(
@@ -389,8 +439,146 @@ _NINJS_ORGANISATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1266,
-  serialized_end=1428,
+  serialized_start=1318,
+  serialized_end=1480,
+)
+
+_NINJS_VALUE = _descriptor.Descriptor(
+  name='Value',
+  full_name='Ninjs.Value',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='string_value', full_name='Ninjs.Value.string_value', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='double_value', full_name='Ninjs.Value.double_value', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='pos_int_value', full_name='Ninjs.Value.pos_int_value', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='neg_int_value', full_name='Ninjs.Value.neg_int_value', index=3,
+      number=4, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='bool_value', full_name='Ninjs.Value.bool_value', index=4,
+      number=5, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='json_value', full_name='Ninjs.Value.json_value', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='value_type', full_name='Ninjs.Value.value_type',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=1483,
+  serialized_end=1646,
+)
+
+_NINJS_GEOMETRY = _descriptor.Descriptor(
+  name='Geometry',
+  full_name='Ninjs.Geometry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='Ninjs.Geometry.type', index=0,
+      number=1, type=14, cpp_type=8, label=2,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='lengths', full_name='Ninjs.Geometry.lengths', index=1,
+      number=2, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\020\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='coords', full_name='Ninjs.Geometry.coords', index=2,
+      number=3, type=18, cpp_type=2, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\020\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='geometries', full_name='Ninjs.Geometry.geometries', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='values', full_name='Ninjs.Geometry.values', index=4,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='custom_properties', full_name='Ninjs.Geometry.custom_properties', index=5,
+      number=15, type=13, cpp_type=3, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=b'\020\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _NINJS_GEOMETRY_TYPE,
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1649,
+  serialized_end=1961,
 )
 
 _NINJS_PLACE = _descriptor.Descriptor(
@@ -429,6 +617,13 @@ _NINJS_PLACE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='geometry_geojson', full_name='Ninjs.Place.geometry_geojson', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -441,8 +636,8 @@ _NINJS_PLACE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1430,
-  serialized_end=1494,
+  serialized_start=1963,
+  serialized_end=2070,
 )
 
 _NINJS_SUBJECT = _descriptor.Descriptor(
@@ -493,8 +688,8 @@ _NINJS_SUBJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1496,
-  serialized_end=1562,
+  serialized_start=2072,
+  serialized_end=2138,
 )
 
 _NINJS_EVENT = _descriptor.Descriptor(
@@ -545,8 +740,8 @@ _NINJS_EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1564,
-  serialized_end=1628,
+  serialized_start=2140,
+  serialized_end=2204,
 )
 
 _NINJS_OBJECT = _descriptor.Descriptor(
@@ -597,8 +792,8 @@ _NINJS_OBJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1630,
-  serialized_end=1695,
+  serialized_start=2206,
+  serialized_end=2271,
 )
 
 _NINJS_INFOSOURCE = _descriptor.Descriptor(
@@ -624,22 +819,15 @@ _NINJS_INFOSOURCE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='roleuri', full_name='Ninjs.Infosource.roleuri', index=2,
+      name='uri', full_name='Ninjs.Infosource.uri', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='uri', full_name='Ninjs.Infosource.uri', index=3,
+      name='literal', full_name='Ninjs.Infosource.literal', index=3,
       number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='literal', full_name='Ninjs.Infosource.literal', index=4,
-      number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -656,76 +844,76 @@ _NINJS_INFOSOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1697,
-  serialized_end=1784,
+  serialized_start=2273,
+  serialized_end=2343,
 )
 
-_NINJS_RENDITIONS = _descriptor.Descriptor(
-  name='Renditions',
-  full_name='Ninjs.Renditions',
+_NINJS_RENDITION = _descriptor.Descriptor(
+  name='Rendition',
+  full_name='Ninjs.Rendition',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='Ninjs.Renditions.name', index=0,
+      name='name', full_name='Ninjs.Rendition.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='href', full_name='Ninjs.Renditions.href', index=1,
+      name='href', full_name='Ninjs.Rendition.href', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='mimetype', full_name='Ninjs.Renditions.mimetype', index=2,
+      name='mimetype', full_name='Ninjs.Rendition.mimetype', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='title', full_name='Ninjs.Renditions.title', index=3,
+      name='title', full_name='Ninjs.Rendition.title', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='height', full_name='Ninjs.Renditions.height', index=4,
+      name='height', full_name='Ninjs.Rendition.height', index=4,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='width', full_name='Ninjs.Renditions.width', index=5,
+      name='width', full_name='Ninjs.Rendition.width', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='sizeinbytes', full_name='Ninjs.Renditions.sizeinbytes', index=6,
+      name='sizeinbytes', full_name='Ninjs.Rendition.sizeinbytes', index=6,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='duration', full_name='Ninjs.Renditions.duration', index=7,
+      name='duration', full_name='Ninjs.Rendition.duration', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='format', full_name='Ninjs.Renditions.format', index=8,
+      name='format', full_name='Ninjs.Rendition.format', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -743,18 +931,32 @@ _NINJS_RENDITIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1787,
-  serialized_end=1946,
+  serialized_start=2346,
+  serialized_end=2504,
 )
 
-_NINJS_ASSOCIATIONS = _descriptor.Descriptor(
-  name='Associations',
-  full_name='Ninjs.Associations',
+_NINJS_ASSOCIATION = _descriptor.Descriptor(
+  name='Association',
+  full_name='Ninjs.Association',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='Ninjs.Association.name', index=0,
+      number=1, type=9, cpp_type=9, label=2,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ninjs', full_name='Ninjs.Association.ninjs', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -767,8 +969,46 @@ _NINJS_ASSOCIATIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1948,
-  serialized_end=1962,
+  serialized_start=2506,
+  serialized_end=2556,
+)
+
+_NINJS_ALTIDS = _descriptor.Descriptor(
+  name='Altids',
+  full_name='Ninjs.Altids',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='Ninjs.Altids.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='Ninjs.Altids.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2558,
+  serialized_end=2595,
 )
 
 _NINJS_TRUSTINDICATOR = _descriptor.Descriptor(
@@ -780,29 +1020,22 @@ _NINJS_TRUSTINDICATOR = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='uri', full_name='Ninjs.Trustindicator.uri', index=0,
+      name='role', full_name='Ninjs.Trustindicator.role', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='literal', full_name='Ninjs.Trustindicator.literal', index=1,
+      name='title', full_name='Ninjs.Trustindicator.title', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='title', full_name='Ninjs.Trustindicator.title', index=2,
+      name='href', full_name='Ninjs.Trustindicator.href', index=2,
       number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='href', full_name='Ninjs.Trustindicator.href', index=3,
-      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -819,8 +1052,8 @@ _NINJS_TRUSTINDICATOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1964,
-  serialized_end=2039,
+  serialized_start=2597,
+  serialized_end=2656,
 )
 
 _NINJS_STANDARD = _descriptor.Descriptor(
@@ -864,8 +1097,8 @@ _NINJS_STANDARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2041,
-  serialized_end=2098,
+  serialized_start=2658,
+  serialized_end=2715,
 )
 
 _NINJS_GENRE = _descriptor.Descriptor(
@@ -909,8 +1142,8 @@ _NINJS_GENRE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2100,
-  serialized_end=2151,
+  serialized_start=2717,
+  serialized_end=2768,
 )
 
 _NINJS_RIGHTSINFO = _descriptor.Descriptor(
@@ -953,9 +1186,14 @@ _NINJS_RIGHTSINFO = _descriptor.Descriptor(
   syntax='proto2',
   extension_ranges=[],
   oneofs=[
+    _descriptor.OneofDescriptor(
+      name='test_oneof', full_name='Ninjs.Rightsinfo.test_oneof',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
   ],
-  serialized_start=2153,
-  serialized_end=2226,
+  serialized_start=2770,
+  serialized_end=2861,
 )
 
 _NINJS = _descriptor.Descriptor(
@@ -995,247 +1233,261 @@ _NINJS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='profile', full_name='Ninjs.profile', index=4,
+      name='version', full_name='Ninjs.version', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='version', full_name='Ninjs.version', index=5,
+      name='firstcreated', full_name='Ninjs.firstcreated', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='firstcreated', full_name='Ninjs.firstcreated', index=6,
+      name='versioncreated', full_name='Ninjs.versioncreated', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='versioncreated', full_name='Ninjs.versioncreated', index=7,
-      number=8, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='embargoed', full_name='Ninjs.embargoed', index=8,
-      number=9, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='pubstatus', full_name='Ninjs.pubstatus', index=9,
-      number=10, type=14, cpp_type=8, label=1,
+      name='pubstatus', full_name='Ninjs.pubstatus', index=7,
+      number=8, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='urgency', full_name='Ninjs.urgency', index=10,
-      number=11, type=5, cpp_type=1, label=1,
+      name='urgency', full_name='Ninjs.urgency', index=8,
+      number=9, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='copyrightholder', full_name='Ninjs.copyrightholder', index=11,
-      number=12, type=9, cpp_type=9, label=1,
+      name='language', full_name='Ninjs.language', index=9,
+      number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='copyrightnotice', full_name='Ninjs.copyrightnotice', index=12,
-      number=13, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='body', full_name='Ninjs.body', index=10,
+      number=11, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='usageterms', full_name='Ninjs.usageterms', index=13,
+      name='description', full_name='Ninjs.description', index=11,
+      number=12, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='headline', full_name='Ninjs.headline', index=12,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='title', full_name='Ninjs.title', index=13,
       number=14, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='ednote', full_name='Ninjs.ednote', index=14,
+      name='slugline', full_name='Ninjs.slugline', index=14,
       number=15, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='language', full_name='Ninjs.language', index=15,
-      number=16, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='Ninjs.description', index=16,
-      number=17, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='body', full_name='Ninjs.body', index=17,
-      number=18, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='headline', full_name='Ninjs.headline', index=18,
-      number=19, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='person', full_name='Ninjs.person', index=19,
+      name='person', full_name='Ninjs.person', index=15,
       number=20, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='organisation', full_name='Ninjs.organisation', index=20,
+      name='organisation', full_name='Ninjs.organisation', index=16,
       number=21, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='place', full_name='Ninjs.place', index=21,
+      name='place', full_name='Ninjs.place', index=17,
       number=22, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='subject', full_name='Ninjs.subject', index=22,
+      name='subject', full_name='Ninjs.subject', index=18,
       number=23, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='event', full_name='Ninjs.event', index=23,
+      name='event', full_name='Ninjs.event', index=19,
       number=24, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='object', full_name='Ninjs.object', index=24,
+      name='object', full_name='Ninjs.object', index=20,
       number=25, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='infosource', full_name='Ninjs.infosource', index=25,
+      name='infosource', full_name='Ninjs.infosource', index=21,
       number=26, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='title', full_name='Ninjs.title', index=26,
-      number=27, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      name='renditions', full_name='Ninjs.renditions', index=22,
+      number=27, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='associations', full_name='Ninjs.associations', index=23,
+      number=28, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='altids', full_name='Ninjs.altids', index=24,
+      number=29, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='trustindicator', full_name='Ninjs.trustindicator', index=25,
+      number=30, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='genre', full_name='Ninjs.genre', index=26,
+      number=31, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='byline', full_name='Ninjs.byline', index=27,
-      number=28, type=9, cpp_type=9, label=1,
+      number=50, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='slugline', full_name='Ninjs.slugline', index=28,
-      number=29, type=9, cpp_type=9, label=1,
+      name='located', full_name='Ninjs.located', index=28,
+      number=51, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='located', full_name='Ninjs.located', index=29,
-      number=30, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='charcount', full_name='Ninjs.charcount', index=30,
-      number=31, type=5, cpp_type=1, label=1,
+      name='charcount', full_name='Ninjs.charcount', index=29,
+      number=52, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='wordcount', full_name='Ninjs.wordcount', index=31,
-      number=32, type=5, cpp_type=1, label=1,
+      name='wordcount', full_name='Ninjs.wordcount', index=30,
+      number=53, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='renditions', full_name='Ninjs.renditions', index=32,
-      number=33, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='associations', full_name='Ninjs.associations', index=33,
-      number=34, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='trustindicator', full_name='Ninjs.trustindicator', index=34,
-      number=35, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='standard', full_name='Ninjs.standard', index=35,
-      number=36, type=11, cpp_type=10, label=1,
+      name='standard', full_name='Ninjs.standard', index=31,
+      number=54, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='genre', full_name='Ninjs.genre', index=36,
-      number=37, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='rightsinfo', full_name='Ninjs.rightsinfo', index=32,
+      number=55, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='rightsinfo', full_name='Ninjs.rightsinfo', index=37,
-      number=38, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='embargoed', full_name='Ninjs.embargoed', index=33,
+      number=110, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='profile', full_name='Ninjs.profile', index=34,
+      number=112, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='copyrightholder', full_name='Ninjs.copyrightholder', index=35,
+      number=113, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='copyrightnotice', full_name='Ninjs.copyrightnotice', index=36,
+      number=114, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='usageterms', full_name='Ninjs.usageterms', index=37,
+      number=115, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='ednote', full_name='Ninjs.ednote', index=38,
+      number=116, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='contentcreated', full_name='Ninjs.contentcreated', index=39,
+      number=120, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
-  nested_types=[_NINJS_DESCRIPTION, _NINJS_BODY, _NINJS_HEADLINE, _NINJS_PERSON, _NINJS_ORGANISATION, _NINJS_PLACE, _NINJS_SUBJECT, _NINJS_EVENT, _NINJS_OBJECT, _NINJS_INFOSOURCE, _NINJS_RENDITIONS, _NINJS_ASSOCIATIONS, _NINJS_TRUSTINDICATOR, _NINJS_STANDARD, _NINJS_GENRE, _NINJS_RIGHTSINFO, ],
+  nested_types=[_NINJS_DESCRIPTION, _NINJS_BODY, _NINJS_HEADLINE, _NINJS_PERSON, _NINJS_ORGANISATION, _NINJS_VALUE, _NINJS_GEOMETRY, _NINJS_PLACE, _NINJS_SUBJECT, _NINJS_EVENT, _NINJS_OBJECT, _NINJS_INFOSOURCE, _NINJS_RENDITION, _NINJS_ASSOCIATION, _NINJS_ALTIDS, _NINJS_TRUSTINDICATOR, _NINJS_STANDARD, _NINJS_GENRE, _NINJS_RIGHTSINFO, ],
   enum_types=[
     _NINJS_TYPE,
     _NINJS_REPRESENTATIONTYPE,
@@ -1248,7 +1500,7 @@ _NINJS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=22,
-  serialized_end=2420,
+  serialized_end=3055,
 )
 
 _NINJS_DESCRIPTION.containing_type = _NINJS
@@ -1258,22 +1510,55 @@ _NINJS_PERSON.containing_type = _NINJS
 _NINJS_ORGANISATION_SYMBOLS.containing_type = _NINJS_ORGANISATION
 _NINJS_ORGANISATION.fields_by_name['symbols'].message_type = _NINJS_ORGANISATION_SYMBOLS
 _NINJS_ORGANISATION.containing_type = _NINJS
+_NINJS_VALUE.containing_type = _NINJS
+_NINJS_VALUE.oneofs_by_name['value_type'].fields.append(
+  _NINJS_VALUE.fields_by_name['string_value'])
+_NINJS_VALUE.fields_by_name['string_value'].containing_oneof = _NINJS_VALUE.oneofs_by_name['value_type']
+_NINJS_VALUE.oneofs_by_name['value_type'].fields.append(
+  _NINJS_VALUE.fields_by_name['double_value'])
+_NINJS_VALUE.fields_by_name['double_value'].containing_oneof = _NINJS_VALUE.oneofs_by_name['value_type']
+_NINJS_VALUE.oneofs_by_name['value_type'].fields.append(
+  _NINJS_VALUE.fields_by_name['pos_int_value'])
+_NINJS_VALUE.fields_by_name['pos_int_value'].containing_oneof = _NINJS_VALUE.oneofs_by_name['value_type']
+_NINJS_VALUE.oneofs_by_name['value_type'].fields.append(
+  _NINJS_VALUE.fields_by_name['neg_int_value'])
+_NINJS_VALUE.fields_by_name['neg_int_value'].containing_oneof = _NINJS_VALUE.oneofs_by_name['value_type']
+_NINJS_VALUE.oneofs_by_name['value_type'].fields.append(
+  _NINJS_VALUE.fields_by_name['bool_value'])
+_NINJS_VALUE.fields_by_name['bool_value'].containing_oneof = _NINJS_VALUE.oneofs_by_name['value_type']
+_NINJS_VALUE.oneofs_by_name['value_type'].fields.append(
+  _NINJS_VALUE.fields_by_name['json_value'])
+_NINJS_VALUE.fields_by_name['json_value'].containing_oneof = _NINJS_VALUE.oneofs_by_name['value_type']
+_NINJS_GEOMETRY.fields_by_name['type'].enum_type = _NINJS_GEOMETRY_TYPE
+_NINJS_GEOMETRY.fields_by_name['geometries'].message_type = _NINJS_GEOMETRY
+_NINJS_GEOMETRY.fields_by_name['values'].message_type = _NINJS_VALUE
+_NINJS_GEOMETRY.containing_type = _NINJS
+_NINJS_GEOMETRY_TYPE.containing_type = _NINJS_GEOMETRY
+_NINJS_PLACE.fields_by_name['geometry_geojson'].message_type = _NINJS_GEOMETRY
 _NINJS_PLACE.containing_type = _NINJS
 _NINJS_SUBJECT.containing_type = _NINJS
 _NINJS_EVENT.containing_type = _NINJS
 _NINJS_OBJECT.containing_type = _NINJS
 _NINJS_INFOSOURCE.containing_type = _NINJS
-_NINJS_RENDITIONS.containing_type = _NINJS
-_NINJS_ASSOCIATIONS.containing_type = _NINJS
+_NINJS_RENDITION.containing_type = _NINJS
+_NINJS_ASSOCIATION.fields_by_name['ninjs'].message_type = _NINJS
+_NINJS_ASSOCIATION.containing_type = _NINJS
+_NINJS_ALTIDS.containing_type = _NINJS
 _NINJS_TRUSTINDICATOR.containing_type = _NINJS
 _NINJS_STANDARD.containing_type = _NINJS
 _NINJS_GENRE.containing_type = _NINJS
 _NINJS_RIGHTSINFO.containing_type = _NINJS
+_NINJS_RIGHTSINFO.oneofs_by_name['test_oneof'].fields.append(
+  _NINJS_RIGHTSINFO.fields_by_name['linkedrights'])
+_NINJS_RIGHTSINFO.fields_by_name['linkedrights'].containing_oneof = _NINJS_RIGHTSINFO.oneofs_by_name['test_oneof']
+_NINJS_RIGHTSINFO.oneofs_by_name['test_oneof'].fields.append(
+  _NINJS_RIGHTSINFO.fields_by_name['encodedrights'])
+_NINJS_RIGHTSINFO.fields_by_name['encodedrights'].containing_oneof = _NINJS_RIGHTSINFO.oneofs_by_name['test_oneof']
 _NINJS.fields_by_name['type'].enum_type = _NINJS_TYPE
 _NINJS.fields_by_name['representationtype'].enum_type = _NINJS_REPRESENTATIONTYPE
 _NINJS.fields_by_name['pubstatus'].enum_type = _NINJS_PUBSTATUS
-_NINJS.fields_by_name['description'].message_type = _NINJS_DESCRIPTION
 _NINJS.fields_by_name['body'].message_type = _NINJS_BODY
+_NINJS.fields_by_name['description'].message_type = _NINJS_DESCRIPTION
 _NINJS.fields_by_name['headline'].message_type = _NINJS_HEADLINE
 _NINJS.fields_by_name['person'].message_type = _NINJS_PERSON
 _NINJS.fields_by_name['organisation'].message_type = _NINJS_ORGANISATION
@@ -1282,11 +1567,12 @@ _NINJS.fields_by_name['subject'].message_type = _NINJS_SUBJECT
 _NINJS.fields_by_name['event'].message_type = _NINJS_EVENT
 _NINJS.fields_by_name['object'].message_type = _NINJS_OBJECT
 _NINJS.fields_by_name['infosource'].message_type = _NINJS_INFOSOURCE
-_NINJS.fields_by_name['renditions'].message_type = _NINJS_RENDITIONS
-_NINJS.fields_by_name['associations'].message_type = _NINJS_ASSOCIATIONS
+_NINJS.fields_by_name['renditions'].message_type = _NINJS_RENDITION
+_NINJS.fields_by_name['associations'].message_type = _NINJS_ASSOCIATION
+_NINJS.fields_by_name['altids'].message_type = _NINJS_ALTIDS
 _NINJS.fields_by_name['trustindicator'].message_type = _NINJS_TRUSTINDICATOR
-_NINJS.fields_by_name['standard'].message_type = _NINJS_STANDARD
 _NINJS.fields_by_name['genre'].message_type = _NINJS_GENRE
+_NINJS.fields_by_name['standard'].message_type = _NINJS_STANDARD
 _NINJS.fields_by_name['rightsinfo'].message_type = _NINJS_RIGHTSINFO
 _NINJS_TYPE.containing_type = _NINJS
 _NINJS_REPRESENTATIONTYPE.containing_type = _NINJS
@@ -1338,6 +1624,20 @@ Ninjs = _reflection.GeneratedProtocolMessageType('Ninjs', (_message.Message,), {
     })
   ,
 
+  'Value' : _reflection.GeneratedProtocolMessageType('Value', (_message.Message,), {
+    'DESCRIPTOR' : _NINJS_VALUE,
+    '__module__' : 'ninjs20_dev_pb2'
+    # @@protoc_insertion_point(class_scope:Ninjs.Value)
+    })
+  ,
+
+  'Geometry' : _reflection.GeneratedProtocolMessageType('Geometry', (_message.Message,), {
+    'DESCRIPTOR' : _NINJS_GEOMETRY,
+    '__module__' : 'ninjs20_dev_pb2'
+    # @@protoc_insertion_point(class_scope:Ninjs.Geometry)
+    })
+  ,
+
   'Place' : _reflection.GeneratedProtocolMessageType('Place', (_message.Message,), {
     'DESCRIPTOR' : _NINJS_PLACE,
     '__module__' : 'ninjs20_dev_pb2'
@@ -1373,17 +1673,24 @@ Ninjs = _reflection.GeneratedProtocolMessageType('Ninjs', (_message.Message,), {
     })
   ,
 
-  'Renditions' : _reflection.GeneratedProtocolMessageType('Renditions', (_message.Message,), {
-    'DESCRIPTOR' : _NINJS_RENDITIONS,
+  'Rendition' : _reflection.GeneratedProtocolMessageType('Rendition', (_message.Message,), {
+    'DESCRIPTOR' : _NINJS_RENDITION,
     '__module__' : 'ninjs20_dev_pb2'
-    # @@protoc_insertion_point(class_scope:Ninjs.Renditions)
+    # @@protoc_insertion_point(class_scope:Ninjs.Rendition)
     })
   ,
 
-  'Associations' : _reflection.GeneratedProtocolMessageType('Associations', (_message.Message,), {
-    'DESCRIPTOR' : _NINJS_ASSOCIATIONS,
+  'Association' : _reflection.GeneratedProtocolMessageType('Association', (_message.Message,), {
+    'DESCRIPTOR' : _NINJS_ASSOCIATION,
     '__module__' : 'ninjs20_dev_pb2'
-    # @@protoc_insertion_point(class_scope:Ninjs.Associations)
+    # @@protoc_insertion_point(class_scope:Ninjs.Association)
+    })
+  ,
+
+  'Altids' : _reflection.GeneratedProtocolMessageType('Altids', (_message.Message,), {
+    'DESCRIPTOR' : _NINJS_ALTIDS,
+    '__module__' : 'ninjs20_dev_pb2'
+    # @@protoc_insertion_point(class_scope:Ninjs.Altids)
     })
   ,
 
@@ -1425,17 +1732,23 @@ _sym_db.RegisterMessage(Ninjs.Headline)
 _sym_db.RegisterMessage(Ninjs.Person)
 _sym_db.RegisterMessage(Ninjs.Organisation)
 _sym_db.RegisterMessage(Ninjs.Organisation.Symbols)
+_sym_db.RegisterMessage(Ninjs.Value)
+_sym_db.RegisterMessage(Ninjs.Geometry)
 _sym_db.RegisterMessage(Ninjs.Place)
 _sym_db.RegisterMessage(Ninjs.Subject)
 _sym_db.RegisterMessage(Ninjs.Event)
 _sym_db.RegisterMessage(Ninjs.Object)
 _sym_db.RegisterMessage(Ninjs.Infosource)
-_sym_db.RegisterMessage(Ninjs.Renditions)
-_sym_db.RegisterMessage(Ninjs.Associations)
+_sym_db.RegisterMessage(Ninjs.Rendition)
+_sym_db.RegisterMessage(Ninjs.Association)
+_sym_db.RegisterMessage(Ninjs.Altids)
 _sym_db.RegisterMessage(Ninjs.Trustindicator)
 _sym_db.RegisterMessage(Ninjs.Standard)
 _sym_db.RegisterMessage(Ninjs.Genre)
 _sym_db.RegisterMessage(Ninjs.Rightsinfo)
 
 
+_NINJS_GEOMETRY.fields_by_name['lengths']._options = None
+_NINJS_GEOMETRY.fields_by_name['coords']._options = None
+_NINJS_GEOMETRY.fields_by_name['custom_properties']._options = None
 # @@protoc_insertion_point(module_scope)
