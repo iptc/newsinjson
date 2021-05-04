@@ -1,9 +1,10 @@
 syntax = "proto2";
 
 message Ninjs {
+
   message Description {
     optional string name = 1;
-    optional string content = 2;
+    optional string value = 2;
   }
   
   message Body {
@@ -13,7 +14,7 @@ message Ninjs {
   
   message Headline {
     optional string name = 1;
-    optional string text = 2;
+    optional string value = 2;
   }
   
   message Person {
@@ -28,19 +29,50 @@ message Ninjs {
       optional string ticker = 1;
       optional string exchange = 2;
     }
-    
     optional string name = 1;
     optional string rel = 2;
     optional string uri = 3;
     optional string literal = 4;
     repeated Symbols symbols = 5;
   }
-  
+
+  message Value {
+    oneof value_type {
+        string string_value = 1;
+        double double_value = 2;
+        uint64 pos_int_value = 3;
+        uint64 neg_int_value = 4;
+        bool bool_value = 5;
+        string json_value = 6;
+    }
+  }
+
+  message Geometry {
+    required Type type = 1;
+
+    repeated uint32 lengths = 2 [packed = true]; // coordinate structure in lengths
+    repeated sint64 coords = 3 [packed = true]; // delta-encoded integer values
+    repeated Geometry geometries = 4;
+
+    repeated Value values = 13;
+    repeated uint32 custom_properties = 15 [packed = true];
+
+    enum Type {
+        POINT = 0;
+        MULTIPOINT = 1;
+        LINESTRING = 2;
+        MULTILINESTRING = 3;
+        POLYGON = 4;
+        MULTIPOLYGON = 5;
+        GEOMETRYCOLLECTION = 6;
+    }
+}
   message Place {
     optional string name = 1;
     optional string rel = 2;
     optional string uri = 3;
     optional string literal = 4;
+    optional Geometry geometry_geojson = 5;
   }
   
   message Subject {
@@ -67,12 +99,11 @@ message Ninjs {
   message Infosource {
     optional string name = 1;
     optional string role = 2;
-    optional string roleuri = 3;
-    optional string uri = 4;
-    optional string literal = 5;
+    optional string uri = 3;
+    optional string literal = 4;
   }
   
-  message Renditions {
+  message Rendition {
     optional string name = 1;
     optional string href = 2;
     optional string mimetype = 3;
@@ -83,15 +114,21 @@ message Ninjs {
     optional int32 duration = 8;
     optional string format = 9;
   }
-  
-  message Associations {
+
+  message Association {
+    required string name = 1;
+    optional Ninjs ninjs = 2;
+  }
+
+  message Altids {
+    optional string name = 1;
+    optional string value = 2;
   }
   
   message Trustindicator {
-    optional string uri = 1;
-    optional string literal = 2;
-    optional string title = 3;
-    optional string href = 4;
+    optional string role = 1;
+    optional string title = 2;
+    optional string href = 3;
   }
   
   message Standard {
@@ -108,11 +145,12 @@ message Ninjs {
   
   message Rightsinfo {
     optional string langid = 1;
-    optional string linkedrights = 2;
-    optional string encodedrights = 3;
+    oneof test_oneof {
+      string linkedrights = 2;
+      string encodedrights = 3;
+    }    
   }
-  
-  required string uri = 1;
+
   enum Type {
     text = 0;
     audio = 1;
@@ -122,33 +160,33 @@ message Ninjs {
     composite = 5;
     component = 6;
   }
-  optional Type type = 2;
-  optional string mimetype = 3;
   enum Representationtype {
     full = 0;
     partial = 1;
   }
-  optional Representationtype representationtype = 4;
-  optional string profile = 5;
-  optional string version = 6;
-  optional string firstcreated = 7;
-  optional string versioncreated = 8;
-  optional string embargoed = 9;
   enum Pubstatus {
     usable = 0;
     withheld = 1;
     canceled = 2;
   }
-  optional Pubstatus pubstatus = 10;
-  optional int32 urgency = 11;
-  optional string copyrightholder = 12;
-  optional string copyrightnotice = 13;
-  optional string usageterms = 14;
-  optional string ednote = 15;
-  optional string language = 16;
-  repeated Description description = 17;
-  repeated Body body = 18;
-  repeated Headline headline = 19;
+
+
+  required string uri = 1;
+  optional Type type = 2;
+  optional string mimetype = 3;
+  optional Representationtype representationtype = 4;
+  optional string version = 5;
+  optional string firstcreated = 6;
+  optional string versioncreated = 7;
+  optional Pubstatus pubstatus = 8;
+  optional int32 urgency = 9;
+  optional string language = 10;
+  repeated Body body = 11;
+  repeated Description description = 12;
+  repeated Headline headline = 13;
+  optional string title = 14;
+  optional string slugline = 15;
+
   repeated Person person = 20;
   repeated Organisation organisation = 21;
   repeated Place place = 22;
@@ -156,16 +194,25 @@ message Ninjs {
   repeated Event event = 24;
   repeated Object object = 25;
   repeated Infosource infosource = 26;
-  optional string title = 27;
-  optional string byline = 28;
-  optional string slugline = 29;
-  optional string located = 30;
-  optional int32 charcount = 31;
-  optional int32 wordcount = 32;
-  repeated Renditions renditions = 33;
-  repeated Associations associations = 34;
-  repeated Trustindicator trustindicator = 35;
-  optional Standard standard = 36;
-  repeated Genre genre = 37;
-  optional Rightsinfo rightsinfo = 38;
+  repeated Rendition renditions = 27;
+  repeated Association associations = 28;
+  repeated Altids altids = 29;
+  repeated Trustindicator trustindicator = 30;
+  repeated Genre genre = 31;
+
+  optional string byline = 50;
+  optional string located = 51;
+  optional int32 charcount = 52;
+  optional int32 wordcount = 53;
+  optional Standard standard = 54;
+  optional Rightsinfo rightsinfo = 55;
+
+  optional string embargoed = 110;
+  optional string profile = 112;
+  optional string copyrightholder = 113;
+  optional string copyrightnotice = 114;
+  optional string usageterms = 115;
+  optional string ednote = 116;
+  optional string contentcreated = 120;
+
 }
