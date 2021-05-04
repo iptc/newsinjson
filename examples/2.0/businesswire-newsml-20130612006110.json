@@ -1,0 +1,34 @@
+{
+    "uri": "http://www.businesswire.com/news/home/20130612006110/zh",
+    "type":"text",
+    "mimetype": "application/x-resource+json;level=text",
+    "version": "1",
+    "versioncreated": "2013-06-12T15:29:00Z",
+    "language": "zh",
+    "subject": [
+        {"name": "United States","rel": "about"},
+        {"name": "Asia Pacific","rel": "about"},
+        {"name": "North America","rel": "about"},
+        {"name": "Advisory","rel": "about"},
+        {"name": "Manufacturing","rel": "about"},
+        {"name": "Packaging","rel": "about"},
+        {"name": "Other Manufacturing","rel": "about"},
+        {"name": "Natural Resources","rel": "about"},
+        {"name": "Forest Products","rel": "about"},
+        {"name": "New York","rel": "about"},
+        {"name": "Environment","rel": "about"},
+        {"name": "Indonesia","rel": "about"}
+    ],
+    "headline": [
+        {
+            "name": "main",
+            "value": "APP发布“2020 可持续发展路线图”第三次工作进展报告，并将继续落实森林保护政策"
+        }
+    ],
+    "body": [
+        {
+            "name": "xhtml",
+            "value": "亚洲浆纸业有限公司（Asia Pulp & Paper, 以下简称 \n      APP）近日发布其“2020可持续发展路线图”第三次工作进展报告，称集团在供应链中停止所有涉及天然林相关作业的举措正对印尼当地热带雨林保护工作起到积极作用。\n    "
+        }
+    ]
+}

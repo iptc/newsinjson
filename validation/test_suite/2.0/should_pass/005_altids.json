@@ -1,0 +1,54 @@
+{
+	"standard": {
+	    "name": "ninjs",
+	    "version": "2.0",
+	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json"
+	},
+	"uri": "005_altids",
+	"altids": [
+        {
+	        "name": "itemid",
+            "value": "(ap):f40b0304-0454-4ba2-a84d-686378279ba4"
+        },
+        {
+	        "name": "etag",
+            "value": "(ap):686897696a7c876b7e"
+        },
+        {
+	        "name": "friendlykey",
+            "value": "(ap)"
+        },
+        {
+	        "name": "videoid",
+            "value": "(ap)"
+        },
+        {
+	        "name": "transref",
+            "value": "(ap)"
+        },
+        {
+	        "name": "iid",
+            "value": "(reuters)"
+        },
+        {
+	        "name": "otr",
+            "value": "(reuters)"
+        },
+        {
+	        "name": "tpcid",
+            "value": "(reuters)"
+        },
+        {
+	        "name": "sid",
+            "value": "(reuters)"
+        },
+        {
+	        "name": "tpguid",
+            "value": "(reuters)"
+        },
+        {
+	        "name": "rpid",
+            "value": "(reuters)"
+        }
+    ]
+}

@@ -20,12 +20,39 @@ The `examples` folder contains example files, including some supplied
 by Business Wire. Examples show how NewsML 1.2 files convert to their
 equivalents in ninjs.
 
+ninjs 2.0: Work in Progress
+---------------------------
+
+We are working on a 2.0 version of ninjs, which includes several
+breaking changes. The main change is that we avoid the use of
+patternProperties altogether, so all properties now have well-defined
+names. This work is intended to make ninjs easier for work with binary
+protocols such as Protocol Buffers and Avro. We also take the
+opportunity to make property names more consistent and to add some
+fields to handle rights.
+
+As of May 2021, the 2.0 schema is still in development and is subject
+to change at any time. We do not recommend its use in production
+projects.
+
+Protocol Buffers demo
+---------------------
+
+In the [protobufs](/protobufs) folder we have included a demonstration
+Protocol Buffers schema based on the current dev version of ninjs 2.0.
+
+We also show how a code library can be automatically generated from
+the protobufs schema and we include an example Python script showing
+how a ninjs Protobufs document can be written and read via code.
+
+See [the protobufs README](/protobufs/README.md) for details.
+
 Unit tests
 ----------
 
 To run unit tests in the `validation/test_suite` folder against each
-of the ninjs 1.0, 1.1, 1.2 and 1.3 schemas, run the following tool in a
-command/terminal window:
+of the ninjs 1.0, 1.1, 1.2, 1.3 and 2.0-dev schemas, run the following
+tool in a command/terminal window:
 
     validation/python/runtests.py 
 

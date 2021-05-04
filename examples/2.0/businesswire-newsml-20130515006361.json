@@ -1,0 +1,153 @@
+{
+    "uri": "http://www.businesswire.com/news/home/20130515006361/en",
+    "type":"composite",
+    "mimetype": "application/x-resource+json;level=composite",
+    "version": "1",
+    "versioncreated": "2013-05-16T04:01:00Z",
+    "language": "en",
+    "subject": [
+        {"name": "United States","rel": "about"},
+        {"name": "Technology","rel": "about"},
+        {"name": "Data Management","rel": "about"},
+        {"name": "North America","rel": "about"},
+        {"name": "Hardware","rel": "about"},
+        {"name": "Software","rel": "about"},
+        {"name": "Product/Service","rel": "about"},
+        {"name": "Photo/Multimedia","rel": "about"},
+        {"name": "Texas","rel": "about"}
+    ],
+    "headline": [
+        {
+            "name": "main",
+            "value": "Dell Redefines Workstation Computing Boundaries with Smallest Tower and Most Powerful Rack Workstations"
+        }
+    ],
+    "body": [
+        {
+            "name": "xhtml",
+            "value": "<a rel=\"nofollow\" href=\"http://www.dell.com\" >Dell</a> today announced an expanded and stronger <a rel=\"nofollow\" href=\"http://www.dell.com/Learn/us/en/04/campaigns/dell-precision-workstations?c=us&l=en&s=bsd\" >Dell\n                      Precision workstation</a> portfolio that includes the smallest tower workstation chassis in its class, the Dell Precision T1700 small form-factor, and the worldâ€™s most powerful rack workstation, the Dell Precision R7610. In\n                    addition, the Dell Precision family features a more powerful and reliable Dell Precision T1700 Mini-Tower rounding out a workstation portfolio that offers increased performance, dependability and smart design for entry-level and\n                    high-end workstation users. "
+        }
+    ],
+    "associations": [
+        {
+            "name": "logo",
+            "uri":"http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
+            "type":"graphic",
+            "versioncreated": "2013-05-16T04:01:00Z",
+            "renditions": [
+                {
+                    "name": "thumbnail",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/2/dell_blue_rgb.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 70,
+                    "width": 70,
+                    "sizeinbytes": 4380
+                },
+                {
+                    "name": "viewimage",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 144,
+                    "width": 144,
+                    "sizeinbytes": 9891
+                },
+                {
+                    "name": "lowres",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/4/dell_blue_rgb.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 300,
+                    "width": 300,
+                    "sizeinbytes": 25475
+                },
+                {
+                    "name": "highres",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/221373/5/dell_blue_rgb.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 432,
+                    "width": 432,
+                    "sizeinbytes": 33116
+                }
+            ]
+        },
+        {
+            "name": "photo",
+            "uri":"http://mms.businesswire.com/media/newsItemId/en/369394/3/0025lf.jpg",
+            "type":"picture",
+            "versioncreated": "2013-05-16T04:01:00Z",
+            "renditions": [
+                {
+                    "name": "thumbnail",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/2/0025lf.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 72,
+                    "width": 72,
+                    "sizeinbytes": 1682
+                },
+                {
+                    "name": "viewimage",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/3/0025lf.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 144,
+                    "width": 143,
+                    "sizeinbytes": 4749
+                },
+                {
+                    "name": "lowres",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/4/0025lf.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 480,
+                    "width": 478,
+                    "sizeinbytes": 34502
+                },
+                {
+                    "name": "highres",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/369394/5/0025lf.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 2064,
+                    "width": 2055,
+                    "sizeinbytes": 483923
+                }
+            ]
+        },
+        {
+            "name": "photo_2",
+            "uri":"http://mms.businesswire.com/media/newsItemId/en/369395/3/00095.jpg",
+            "type":"picture",
+            "versioncreated": "2013-05-16T04:01:00Z",
+            "renditions": [
+                {
+                    "name": "thumbnail",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/2/00095.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 24,
+                    "width": 72,
+                    "sizeinbytes": 1002
+                },
+                {
+                    "name": "viewimage",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/3/00095.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 49,
+                    "width": 144,
+                    "sizeinbytes": 2238
+                },
+                {
+                    "name": "lowres",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/4/00095.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 162,
+                    "width": 480,
+                    "sizeinbytes": 12418
+                },
+                {
+                    "name": "highres",
+                    "href":  "http://mms.businesswire.com/media/newsItemId/en/369395/5/00095.jpg",
+                    "mimetype": "image/jpeg",
+                    "height": 1000,
+                    "width": 2962,
+                    "sizeinbytes": 286164
+                }
+            ]
+        }
+    ]
+}
