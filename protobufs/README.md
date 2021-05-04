@@ -23,7 +23,7 @@ https://www.npmjs.com/package/jsonschema-protobuf)
 
 The jsonschema-protobuf tool doesn't yet support enum fields so we have to add
 them manually. The version of ninjs20-dev.proto in this repository has enums
-added. We also manually change the version to "proto2" so we can use required
+added. We also manually change the version to "proto2" so we can use `required`
 fields.
 
 == Generating code from the protobuf schema
@@ -37,8 +37,8 @@ For example, we create a Python library with:
 `$PATH_TO_PROTOBUF/bin/protoc --python_out=. ninjs20-dev.proto`
 
 This generates the file `ninjs20_dev_pb2.py` which can be included in Python
-scripts with `import ninjs20_dev_pb2`. (Note that the name must end with _pb2
-even if you use proto3 as the Protobufs schema version)
+scripts with `import ninjs20_dev_pb2`. (Note that the name must end with `_pb2`,
+even if the schema uses proto3, or the tool won't work)
 
 == Using the generated code
 
