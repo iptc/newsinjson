@@ -38,14 +38,14 @@ projects.
 Protocol Buffers demo
 ---------------------
 
-In the [/protobufs](protobufs) folder we have included a demonstration
+In the [protobufs](/protobufs) folder we have included a demonstration
 Protocol Buffers schema based on the current dev version of ninjs 2.0.
 
 We also show how a code library can be automatically generated from
 the protobufs schema and we include an example Python script showing
 how a ninjs Protobufs document can be written and read via code.
 
-See [/protobufs/README.md](the protobufs README) for details.
+See [the protobufs README](/protobufs/README.md) for details.
 
 Unit tests
 ----------
