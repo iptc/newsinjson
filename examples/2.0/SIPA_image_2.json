@@ -9,13 +9,13 @@
     "pubstatus": "usable",
     "language": "en",
     "byline": "Insidefoto",
-    "headline": [
+    "headlines": [
         {
             "name": "main",
             "value": "Italy: Italy Demonstration of the workers congresses and conferences"
         }
     ],
-    "description": [
+    "descriptions": [
         {
             "name": "writer",
             "value": "www.insidefoto.com"
@@ -25,7 +25,7 @@
             "value": "Demonstration of the workers of congresses and conferences against he measures taken by the Government that closed all the sporting centers to contrast the Covid-19 emergency.\nRome (Italy), October 27th 2020\nPhoto Samantha Zucchi /Insidefoto/Sipa USA)"
         }
     ],
-    "body": [
+    "bodies": [
         {
             "name": "text",
             "value": "Demonstration of the workers of congresses and conferences against he measures taken by the Government that closed all the sporting centers to contrast the Covid-19 emergency.\nRome (Italy), October 27th 2020\nPhoto Samantha Zucchi /Insidefoto/Sipa USA)"
@@ -38,7 +38,7 @@
     "copyrightholder": "SIPA USA",
     "copyrightnotice": "SIPA USA/PA Images",
     "usageterms": "*** World Rights Except Italy ***",
-    "subject": [
+    "subjects": [
         {
             "literal": "paimagescategory:a",
             "name": "News",
@@ -100,7 +100,7 @@
             "rel": "about"
         }
     ],
-    "place": [
+    "places": [
         {
             "literal": "city:rome",
             "name": "Rome",
@@ -108,7 +108,7 @@
             "rel": "mentions"
         }
     ],
-    "object": [
+    "objects": [
         {
             "literal": "2.1234567",
             "uri": "https://www.paimages.co.uk/2.1234567",

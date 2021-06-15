@@ -11,14 +11,14 @@
 
         "uri": {
             "title": "Uniform Resource Identifier",
-            "description": "The identifier for this news object. nar:newsItem@guid",
+            "description": "The global unique identifier for this news object. This is the only required property and should identify the ninjs object, not be used for links to external resources etc.  nar:newsItem@guid",
             "type": "string",
             "format": "uri"
         },
     
         "type": {
             "title": "Type",
-            "description": "The generic news type of this news object. (Value 'component' added in version 1.2 as issue #21.). nar:itemClass",
+            "description": "The generic news type of this news object. (Value 'component' added in version 1.2 as issue #21.). See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
             "type": "string",
             "enum": [
                 "text",
@@ -134,7 +134,7 @@
             "type": "string"
         },
         
-        "description": {
+        "descriptions": {
             "title": "Description",
             "description": "An array of one or more descriptions of the ninjs object.",
             "type": "array",
@@ -156,7 +156,7 @@
             }
         },
         
-        "body": {
+        "bodies": {
             "title": "Body",
             "description": "An array of body objects with the content as text or with markup.",
             "type": "array",
@@ -178,7 +178,7 @@
             }
         },
         
-        "headline": {
+        "headlines": {
             "title": "Headline",
             "description": "Array of objects containing various types of headlines",
             "type": "array", 
@@ -200,9 +200,9 @@
             }
         },
         
-        "person": {
-            "title": "Person",
-            "description": "An individual human being. nar:subject",
+        "people": {
+            "title": "People",
+            "description": "An array of objects describing individual human beings. nar:subject",
             "type": "array",
             "items": {
                 "type": "object",
@@ -233,9 +233,9 @@
             }
         },
         
-        "organisation": {
+        "organisations": {
             "title": "Organisation",
-            "description": "An administrative and functional structure which may act as as a business, as a political party or not-for-profit party. nar:subject",
+            "description": "An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party. nar:subject",
             "type": "array",
             "items": {
                 "type": "object",
@@ -287,9 +287,9 @@
             }
         },
         
-        "place": {
+        "places": {
             "title": "Place",
-            "description": "A named location. nar:subject",
+            "description": "An array of named locations. nar:subject",
             "additionalProperties": false,
             "type": "array",
             "items": {
@@ -325,9 +325,9 @@
             }
         },
         
-        "subject": {
+        "subjects": {
             "title": "Subject",
-            "description": "A concept with a relationship to the content. nar:subject",
+            "description": "An array of objects holding concepts with a relationship to the content. nar:subject",
             "type": "array",
             "items": {
                 "type": "object",
@@ -358,9 +358,9 @@
             }
         },
         
-        "event": {
+        "events": {
             "title": "Event",
-            "description": "Something which happens in a planned or unplanned manner. nar:?",
+            "description": "An array of objects describing something which happens in a planned or unplanned manner. nar:?",
             "type": "array",
             "items": {
                 "type": "object",
@@ -391,9 +391,9 @@
             }
         },
         
-        "object": {
+        "objects": {
             "title": "Object",
-            "description": "Something material, excluding persons. nar:subject",
+            "description": "Ann array of objects describing something material, excluding persons. nar:subject",
             "type": "array",
             "items": {
                 "type": "object",
@@ -424,9 +424,9 @@
             }
         },
         
-        "infosource": {
+        "infosources": {
             "title": "Info source",
-            "description": "A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. (Added in version 1.2 according to issue #15.) .    infosource:  nar:infoSource",
+            "description": "An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. (Added in version 1.2 according to issue #15.) .    infosource:  nar:infoSource",
             "type": "array",
             "items": {
                 "type": "object",
@@ -496,7 +496,7 @@
         
         "renditions": {
             "title": "Renditions",
-            "description": "Wrapper for different renditions of the news object. nar:remoteContent",
+            "description": "An array of objects with different renditions of the news object. nar:remoteContent",
             "type": "array",
             "additionalProperties": false,
             "items": {
@@ -555,7 +555,7 @@
         },
         
         "associations": {
-            "description": "Content of news objects which are associated with this news object. nar:link",
+            "description": "And array of objects with content of news objects which are associated with this news object. nar:link",
             "type": "array",
             "additionalProperties": false,
             "items": {
@@ -595,7 +595,7 @@
              }
          },
         
-        "trustindicator": {
+        "trustindicators": {
             "title": "Trust indicator",
             "description": "An array of objects to allow links to documents about trust indicators. (nar:link) issue #44. (Added in version 1.3)",
             "type": "array",

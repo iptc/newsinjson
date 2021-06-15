@@ -5,7 +5,7 @@
     "version": "1",
     "versioncreated": "2013-06-05T21:00:00Z",
     "language": "zh",
-    "subject": [
+    "subjects": [
         {
             "name": "United States",
             "rel": "about"
@@ -59,13 +59,13 @@
             "rel": "about"
         }
     ],
-    "headline": [
+    "headlines": [
         {
             "name": "main",
             "value": "Cambrios被Gartner評選為「最酷供應商」"
         }
     ],
-    "body": [
+    "bodies": [
         {
             "name": "xhtml",
             "value": "\n      (美國商業資訊)--為透明及軟性導體市場提供銀奈米線解決方案的領導廠商Cambrios Technologies \n      Corporation今天宣布，該公司最近被Gartner評選為「最酷供應商」(Cool Vendor)。\n    "

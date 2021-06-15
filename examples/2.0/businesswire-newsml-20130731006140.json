@@ -5,7 +5,7 @@
     "version": "1",
     "versioncreated": "2013-07-31T15:32:00Z",
     "language": "en",
-    "subject": [
+    "subjects": [
         {
             "name": "Other Consumer",
             "rel": "about"
@@ -47,13 +47,13 @@
             "rel": "about"
         }
     ],
-    "headline": [
+    "headlines": [
         {
             "name": "main",
             "value": "Lunch Taking a Toll? Let Applebee\u2019s® Industrial Strength Lunch Decoy Stand In"
         }
     ],
-    "body": [
+    "bodies": [
         {
             "name": "xhtml",
             "value": "With more Applebee\u2019s<sup >®</sup> Lunch Combos than ever \u2013 enough to try \n      a new combination every workday for a year \u2013 America\u2019s favorite \n      neighborhood grill and bar this week unveiled a stronger, longer-lasting \n      Industrial Strength Lunch Decoy that is 20 percent thicker than the \n      original, which sold out in weeks last summer."

@@ -12,25 +12,25 @@
     "usageterms": "",
     "ednote": "Noe utvidet.",
     "language": "nb-NO",
-    "description": [
+    "descriptions": [
         {
             "name": "text",
             "value": "IT-giganten Google har kjøpt en tomt på nærmere 2.000 mål i Skien i tilfelle det blir behov for flere datasentre i Europa. "
         }
     ],
-    "headline": [
+    "headlines": [
         {
             "name": "main",
             "value": "Google har kjøpt giganttomt i Skien"
         }
     ],
-    "place": [
+    "places": [
         {
             "name": "Telemark",
             "literal": "Telemark"
         }
     ],
-    "subject": [
+    "subjects": [
         {
             "name": "Innenriks",
             "literal": "Innenriks"

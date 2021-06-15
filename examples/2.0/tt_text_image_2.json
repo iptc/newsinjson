@@ -20,19 +20,19 @@
     "language": "sv",
     "urgency": 3,
     "slugline": "militärövning",
-    "headline": [
+    "headlines": [
       {
           "name": "main",
           "value": "Militärövning i jätteformat hålls 2023"
       }  
     ],
-    "description": [
+    "descriptions": [
         {
             "name": "text",
             "value": "Pandemin satte stopp för den stora internationella militärövningen Aurora 2020 förra våren. Redan då sade Försvarsmakten att den skulle genomföras senare och nu står det klart att det blir 2023, rapporterar Sydöstran . \u2013 Aurora 2023 kommer att genomföra"
         }
     ],
-    "body": [
+    "bodies": [
         {
             "name": "text",
             "value": "Militärövning i jätteformat hålls 2023\nFörsvar TT\nPandemin satte stopp för den stora internationella militärövningen Aurora 2020 förra våren. Redan då sade Försvarsmakten att den skulle genomföras senare och nu står det klart att det blir 2023, rapporterar Sydöstran.\n\u2013 Aurora 2023 kommer att genomföras ungefär samma period som Aurora 20 var tänkt, det vill säga i april-maj, med fokus på södra Sverige och Gotland. Men hela landet kommer i olika omfattning att beröras, säger Jonas Svensson, kommunikationschef för Aurora 23, till TT.\nAurora 20 skulle omfatta 25\u2009000 deltagare från totalt 13 nationer och bli den största svenska försvarsövningen på decennier. Mycket är fortfarande oklart när det gäller Aurora 23 då planeringen pågår just nu, berättar Jonas Svensson.\n\u2013 Precis som den gången har vi inlett en dialog med ett antal internationella partners, inte minst Finland. Men det är alldeles för tidigt att säga i vilken omfattning och vilka internationella partners som deltar."
@@ -99,17 +99,17 @@
         ]
       }
     ],
-    "person": [
+    "people": [
         {
             "name": "Jonas Svensson"
         }
     ],
-    "organisation": [
+    "organisations": [
         {
             "name": "Aurora"
         }
     ],
-    "subject": [
+    "subjects": [
         {
             "literal": "16000000",
             "name": "Krig, konflikter och oroligheter",
@@ -117,7 +117,7 @@
             "rel": "classifies"
         }
     ],
-    "place": [
+    "places": [
         {
             "name": "Sverige"
         },

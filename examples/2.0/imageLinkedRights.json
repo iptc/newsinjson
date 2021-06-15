@@ -7,13 +7,13 @@
         "langid": "http://w3.org/ns/odrl/2/",
         "linkedrights": "http://example.agency.com/rights/editorialUseOnly"
     },
-    "headline": [
+    "headlines": [
         {
             "name": "main",
             "value": "MotoGP - Spain - Valentino Rossi"
         }
     ],
-    "description": [
+    "descriptions": [
         {
             "name": "text",
             "value": "Valentino Rossi (46) of Italy and Petronas Yamaha SRT during the MotoGP test day at Circuito de Jerez - Angel Nieto on May 3, 2021 in Jerez de la Frontera, Spain"

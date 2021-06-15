@@ -9,19 +9,19 @@
     "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required. International: AP Clients Only | US: AP Clients Only / This video may not be edited",
     "ednote": "APWhollyOwned",
     "language": "en",
-    "description": [
+    "descriptions": [
         {
             "name": "caption",
             "value": "As the Trump impeachment hearings go public, House Democrats are refining the case against the president to a simple allegation: Bribery. Meanwhile, Republicans are dismissing the testimony so far as hearsay, at best second-hand information. (Nov. 14)"
         }
     ],
-    "headline": [
+    "headlines": [
         {
             "name": "main",
             "value": "House leaders double down on impeachment positions"
         }
     ],
-    "person": [
+    "people": [
         {
             "literal": "850c8ab4e24d4c128250621e377c83dd",
             "name": "Nancy Pelosi",
@@ -38,7 +38,7 @@
             "uri": "http://cv.ap.org/id/a6331b54c46e4ca8b79fa40fada95db5"
         }
     ],
-    "place": [
+    "places": [
         {
             "literal": "661cd9087d5b10048265c076b8e3055c",
             "name": "Ukraine",
@@ -69,7 +69,7 @@
             }
         }
     ],
-    "subject": [
+    "subjects": [
         {
             "literal": "a",
             "name": "National"
@@ -120,7 +120,7 @@
             "uri": "http://cv.ap.org/id/86c17a007dac1004898fba7fa5283c3e"
         }
     ],
-    "infosource": [
+    "infosources": [
         {"name": "ASSOCIATED PRESS"}
     ],
     "title": "US Pelosi McCarthy (CR)",

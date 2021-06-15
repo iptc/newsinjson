@@ -10,26 +10,26 @@
     "copyrightnotice": "Copyright 2019 The Associated Press, though the copyright in some contents and materials incorporated herein may be owned by third parties where so indicated. All rights reserved. This material may not be published, broadcast, rewritten or redistributed without permission.",
     "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
     "language": "en",
-    "description": [
+    "descriptions": [
         {
             "name": "caption",
             "value": "House Speaker Nancy Pelosi says the president committed an impeachable offense. "
         }
     ],
-    "headline": [
+    "headlines": [
         {
             "name": "main",
             "value": "Next up in impeachment hearings: A parade of key witnesses"
         }
     ],
-    "person": [
+    "people": [
         {
             "literal": "850c8ab4e24d4c128250621e377c83dd",
             "name": "Nancy Pelosi",
             "uri": "http://cv.ap.org/id/850c8ab4e24d4c128250621e377c83dd"
         }
     ],
-    "subject": [
+    "subjects": [
         {
             "literal": "p",
             "name": "Political News"
@@ -55,7 +55,7 @@
             "uri": "http://cv.ap.org/id/17092930618f41079a063c02851881a1"
         }
     ],
-    "infosource": [
+    "infosources": [
         {"name": "ASSOCIATED PRESS"}
     ],
     "title": "Trump Impeachment What s Next-Pelosi 1",
