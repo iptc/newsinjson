@@ -9,7 +9,7 @@
     "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
     "ednote": "TURKEY OUT  NOV. 11, 2019 FILE PHOTO",
     "language": "en",
-    "description": [
+    "descriptions": [
         {
             "name": "creditline",
             "value": "ASSOCIATED PRESS"
@@ -19,13 +19,13 @@
             "value": "FILE - In this Monday, Nov. 11, 2019 file photo, a man identified by Turkish media as 39-year-old Muhammad Darwis B., a U.S. citizen of Jordanian origin, stands in a no man's land between Turkey and Greece near Pazarkule border gate, Edirne, Turkey. Turkey's Interior Minister Suleyman Soylu said Friday Nov, 15, 2019 that the an American Islamic State group member has been deported to the United States. (DHA via AP, File)"
         }
     ],
-    "headline": [
+    "headlines": [
         {
             "name": "main",
             "value": "Turkey Islamic State"
         }
     ],
-    "organisation": [
+    "organisations": [
         {
             "literal": "84de12052c9c4e3ebca80df389e66fc3",
             "name": "Islamic State group",
@@ -37,7 +37,7 @@
             "rel": "http://cv.ap.org/id/5f36c12adb1447fa971c2f6d4d272333"
         }
     ],
-    "place": [
+    "places": [
         {
             "literal": "661e09b87d5b10048287c076b8e3055c",
             "name": "Turkey",
@@ -97,7 +97,7 @@
             }
         }
     ],
-    "subject": [
+    "subjects": [
         {
             "literal": "i",
             "name": "International News"
@@ -112,7 +112,7 @@
             "uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"
         }
     ],
-    "infosource": [
+    "infosources": [
         {"name": "DHA"}
     ],
     "title": "Turkey Islamic State",
