@@ -11,13 +11,13 @@
     "language": "en",
     "descriptions": [
         {
-            "name": "caption",
+            "role": "caption",
             "value": "As the Trump impeachment hearings go public, House Democrats are refining the case against the president to a simple allegation: Bribery. Meanwhile, Republicans are dismissing the testimony so far as hearsay, at best second-hand information. (Nov. 14)"
         }
     ],
     "headlines": [
         {
-            "name": "main",
+            "role": "main",
             "value": "House leaders double down on impeachment positions"
         }
     ],
@@ -136,7 +136,7 @@
             "width": 640,
             "height": 360,
             "duration": 128929,
-            "mimetype": "video/mpeg"
+            "contenttype": "video/mpeg"
         },
         {
             "name": "main_1080_29",
@@ -146,7 +146,7 @@
             "sizeinbytes": 1880522908,
             "width": 1920,
             "height": 1080,
-            "mimetype": "video/mpeg"
+            "contenttype": "video/mpeg"
         },
         {
             "name": "preview",
@@ -156,7 +156,7 @@
             "sizeinbytes": 1880522908,
             "width": 1920,
             "height": 1080,
-            "mimetype": "image/jpeg"
+            "contenttype": "image/jpeg"
         },
         {
             "name": "preview_300",
@@ -166,7 +166,7 @@
             "sizeinbytes": 1880522908,
             "width": 400,
             "height": 300,
-            "mimetype": "image/jpeg"
+            "contenttype": "image/jpeg"
         },
         {
             "name": "thumbnail",
@@ -176,7 +176,7 @@
             "sizeinbytes": 1880522908,
             "width": 105,
             "height": 70,
-            "mimetype": "image/jpeg"
+            "contenttype": "image/jpeg"
         },
         {
             "name": "thumbnail_69",
@@ -186,7 +186,7 @@
             "sizeinbytes": 1880522908,
             "width": 92,
             "height": 69,
-            "mimetype": "image/jpeg"
+            "contenttype": "image/jpeg"
         },
         {
             "name": "thumbnail_70",
@@ -196,7 +196,7 @@
             "sizeinbytes": 1880522908,
             "width": 105,
             "height": 70,
-            "mimetype": "image/jpeg"
+            "contenttype": "image/jpeg"
         },
         {
             "name": "thumbnail_135",
@@ -206,20 +206,20 @@
             "sizeinbytes": 1880522908,
             "width": 180,
             "height": 135,
-            "mimetype": "image/jpeg"
+            "contenttype": "image/jpeg"
         },
         {
             "name": "caption_nitf",
             "title": "NITF Caption Download",
             "format": "IIM",
-            "mimetype": "text/xml",
+            "contenttype": "text/xml",
             "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
         },
         {
             "name": "script_nitf",
             "title": "NITF Script Download",
             "format": "IIM",
-            "mimetype": "text/xml",
+            "contenttype": "text/xml",
             "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=script&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
         }
     ]

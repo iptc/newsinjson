@@ -12,13 +12,13 @@
     "language": "en",
     "descriptions": [
         {
-            "name": "caption",
+            "role": "caption",
             "value": "House Speaker Nancy Pelosi says the president committed an impeachable offense. "
         }
     ],
     "headlines": [
         {
-            "name": "main",
+            "role": "main",
             "value": "Next up in impeachment hearings: A parade of key witnesses"
         }
     ],
@@ -68,7 +68,7 @@
             "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?role=main&qt=H1Kdh42orF&cid=62000ab669e047b2b00b5faa1d08f41d&pt=NXw3Njg5NXwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
             "sizeinbytes": 189504,
             "duration": 7896,
-            "mimetype": "audio/mpeg"
+            "contenttype": "audio/mpeg"
         },
         {
             "name": "main-1",
@@ -77,13 +77,13 @@
             "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?role=main&qt=H1Kdh42orF&cid=c5bf75e74985448daab6cc615757195b&pt=NXw3Njg5NXwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
             "sizeinbytes": 189504,
             "duration": 7896,
-            "mimetype": "audio/mpeg"
+            "contenttype": "audio/mpeg"
         },
         {
             "name": "caption_nitf",
             "title": "NITF Caption Download",
             "format": "IIM",
-            "mimetype": "text/xml",
+            "contenttype": "text/xml",
             "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza2c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
         }
     ]

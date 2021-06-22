@@ -31,12 +31,6 @@
             ]
         },
 
-        "mimetype": {
-            "title": "MIME type",
-            "description": "A MIME type which applies to this news object. nar:contentType",
-            "type": "string"
-        },
-        
         "representationtype": {
             "title": "Representation type",
             "description": "Indicates how complete this representation of a news item is. No mapping to nar. Specific for ninjs.",
@@ -136,44 +130,54 @@
         
         "descriptions": {
             "title": "Description",
-            "description": "An array of one or more descriptions of the ninjs object.",
+            "description": "An array of one or more descriptions of the ninjs object. See also ednote for information from provider to reciever. Descriptions are seen as metadata.",
             "type": "array",
             "items": {
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "name": {
-                        "title": "Name",
-                        "description": "The name of this description",
+                    "role": {
+                        "title": "Role",
+                        "description": "The role of this description",
+                        "type": "string"
+                    },
+                    "contenttype": {
+                        "title": "Content Type",
+                        "description": "The IANA (Internet Assigned Numbers Authority) MIME type of the content of this description.",
                         "type": "string"
                     },
                     "value": {
                         "title": "Value",
-                        "description": "The descriptive text identified with the above name.",
+                        "description": "The descriptive text identified with the above role (and contenttype).",
                         "type": "string"
-                    }                    
+                    }                   
                 }
             }
         },
         
         "bodies": {
-            "title": "Body",
-            "description": "An array of body objects with the content as text or with markup.",
+            "title": "Bodies",
+            "description": "An array of body objects with the content as text or with markup. ",
             "type": "array",
             "items": {
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "name": {
-                        "title": "Name",
-                        "description": "The name identifying this body",
+                    "role": {
+                        "title": "Role",
+                        "description": "The role of this body",
                         "type": "string"
                     },
+                    "contenttype": {
+                        "title": "Content Type",
+                        "description": "The IANA (Internet Assigned Numbers Authority) MIME type of the content of this body.",
+                        "type": "string"
+                    } ,
                     "value": {
                         "title": "Value",
-                        "description": "The body text identified with the above name.",
+                        "description": "The body text identified with the above role and contenttype.",
                         "type": "string"
-                    }                    
+                    }                      
                 }
             }
         },
@@ -186,14 +190,19 @@
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "name": {
-                        "title": "Name",
-                        "description": "The name identifying this headline",
+                    "role": {
+                        "title": "Role",
+                        "description": "The role of this headline",
+                        "type": "string"
+                    },
+                    "contenttype": {
+                        "title": "Content Type",
+                        "description": "The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.",
                         "type": "string"
                     },
                     "value": {
                         "title": "Value",
-                        "description": "The headline identified with the above name.",
+                        "description": "The headline identified with the above role and contenttype.",
                         "type": "string"
                     }                    
                 }
@@ -393,7 +402,7 @@
         
         "objects": {
             "title": "Object",
-            "description": "Ann array of objects describing something material, excluding persons. nar:subject",
+            "description": "An array of objects describing something material, excluding persons. nar:subject",
             "type": "array",
             "items": {
                 "type": "object",
@@ -515,9 +524,9 @@
                         "type": "string",
                         "format": "uri"
                     },
-                    "mimetype": {
-                        "title": "mimetype", 
-                        "description": "A MIME type which applies to the rendition. nar:remoteContent@contenttype",
+                    "contenttype": {
+                        "title": "Content Type", 
+                        "description": "A MIME type which applies to this rendition. nar:remoteContent@contenttype",
                         "type": "string"
                     },
                     "title": {
