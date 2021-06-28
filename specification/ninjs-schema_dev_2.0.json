@@ -6,16 +6,13 @@
     "description": "A news item as JSON object -- copyright 2020 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
     "additionalProperties": false,
     "required": ["uri"],
-    
     "properties": {
-
         "uri": {
             "title": "Uniform Resource Identifier",
             "description": "The global unique identifier for this news object. This is the only required property and should identify the ninjs object, not be used for links to external resources etc.  nar:newsItem@guid",
             "type": "string",
             "format": "uri"
         },
-    
         "type": {
             "title": "Type",
             "description": "The generic news type of this news object. (Value 'component' added in version 1.2 as issue #21.). See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
@@ -30,7 +27,6 @@
                 "component"
             ]
         },
-
         "representationtype": {
             "title": "Representation type",
             "description": "Indicates how complete this representation of a news item is. No mapping to nar. Specific for ninjs.",
@@ -40,47 +36,40 @@
                 "partial"
             ]
         },
-        
         "profile": {
             "title": "Profile",
             "description": "An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as 'text-only' or 'text-photo'. Profiles are typically provider-specific. nar:profile",
             "type": "string"
         },
-        
         "version": {
             "title": "Version",
             "description": "The version of the news object which is identified by the uri property. nar:newsItem@version",
             "type": "string"
         },
-        
         "firstcreated": {
             "title": "First created",
             "description": "Indicates when the first version of this ninjs object was created. (Added in version 1.2 from issue #5). nar:firstCreated",
             "type": "string",
             "format": "date-time"
         },
-        
         "versioncreated": {
             "title": "Version created",
             "description": "The date and time when this version of this ninjs object was created. nar:versionCreated",
             "type": "string",
             "format": "date-time"
         },
-        
         "contentcreated": {
             "title": "Content created",
             "description": "The date and time when the content of this ninjs object was originally created. For example and old photo that is now handled as a ninjs object. nar:contentCreated",
             "type": "string",
             "format": "date-time"
         },
-
         "embargoed": {
             "title": "Embargoed",
             "description": "The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed. nar:embargoed",
             "type": "string",
             "format": "date-time"
         },
-        
         "pubstatus": {
             "title": "Publication status",
             "description": "The publishing status of the news object, its value is *usable* by default. nar:pubStatus",
@@ -91,43 +80,36 @@
                 "canceled"
             ]
         },
-        
         "urgency": {
             "title": "Urgency",
             "description": "The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest. nar:urgency",
             "type": "number"
         },
-        
         "copyrightholder": {
             "title": "Copyright holder",
             "description": "The person or organisation claiming the intellectual property for the content. nar:copyrightHolder",
             "type": "string"
         },
-        
         "copyrightnotice": {
             "title": "Copyright notice",
             "description": "Any necessary copyright notice for claiming the intellectual property for the content. nar:copyrightNotice",
             "type": "string"
         },
-        
         "usageterms": {
             "title": "Usage terms",
             "description": "A natural-language statement about the usage terms pertaining to the content. nar:usageTerms",
             "type": "string"
         },
-        
         "ednote": {
             "title": "Editorial note",
             "description": "A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user. (Added in version 1.2 from issue #6.) . ednote: nar:edNote",
             "type": "string"
         },
-        
         "language": {
             "title": "Language",
             "description": "The human language used by the content. The value should follow IETF BCP47. nar:language",
             "type": "string"
         },
-        
         "descriptions": {
             "title": "Description",
             "description": "An array of one or more descriptions of the ninjs object. See also ednote for information from provider to reciever. Descriptions are seen as metadata.",
@@ -150,11 +132,10 @@
                         "title": "Value",
                         "description": "The descriptive text identified with the above role (and contenttype).",
                         "type": "string"
-                    }                   
+                    }
                 }
             }
         },
-        
         "bodies": {
             "title": "Bodies",
             "description": "An array of body objects with the content as text or with markup. ",
@@ -172,20 +153,29 @@
                         "title": "Content Type",
                         "description": "The IANA (Internet Assigned Numbers Authority) MIME type of the content of this body.",
                         "type": "string"
-                    } ,
+                    },
+                    "charcount": {
+                        "title": "Character count",
+                        "description": "The total character count in this body excluding figure captions. (Added in version 1.2 according to issue #27.). nar:charcount",
+                        "type": "number"
+                    },
+                    "wordcount": {
+                        "title": "Word count",
+                        "description": "The total number of words in this body excluding figure captions. (Added in version 1.2 according to issue #27.). nar:wordcount",
+                        "type": "number"
+                    },
                     "value": {
                         "title": "Value",
                         "description": "The body text identified with the above role and contenttype.",
                         "type": "string"
-                    }                      
+                    }
                 }
             }
         },
-        
         "headlines": {
             "title": "Headline",
             "description": "Array of objects containing various types of headlines",
-            "type": "array", 
+            "type": "array",
             "items": {
                 "type": "object",
                 "additionalProperties": false,
@@ -204,11 +194,10 @@
                         "title": "Value",
                         "description": "The headline identified with the above role and contenttype.",
                         "type": "string"
-                    }                    
+                    }
                 }
             }
         },
-        
         "people": {
             "title": "People",
             "description": "An array of objects describing individual human beings. nar:subject",
@@ -241,7 +230,6 @@
                 }
             }
         },
-        
         "organisations": {
             "title": "Organisation",
             "description": "An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party. nar:subject",
@@ -295,7 +283,6 @@
                 }
             }
         },
-        
         "places": {
             "title": "Place",
             "description": "An array of named locations. nar:subject",
@@ -303,37 +290,36 @@
             "type": "array",
             "items": {
                 "type": "object",
-                
-                "anyOf":[
-                    { "properties": {
-                        "name": {
-                            "title": "Name",
-                            "description": "The name of the place",
-                            "type": "string"
-                        },
-                        "rel": {
-                            "title": "Relationship",
-                            "description": "The relationship of the content of the news object to the place",
-                            "type": "string"
-                        },
-                        "uri": {
-                            "title": "URI",
-                            "description": "The identifier for the place as a complete uri",
-                            "type": "string",
-                            "format": "uri"
-                        },
-                        "literal": {
-                            "title": "Literal",
-                            "description": "The code for the place as a literal",
-                            "type": "string"
+                "anyOf": [
+                    {
+                        "properties": {
+                            "name": {
+                                "title": "Name",
+                                "description": "The name of the place",
+                                "type": "string"
+                            },
+                            "rel": {
+                                "title": "Relationship",
+                                "description": "The relationship of the content of the news object to the place",
+                                "type": "string"
+                            },
+                            "uri": {
+                                "title": "URI",
+                                "description": "The identifier for the place as a complete uri",
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "literal": {
+                                "title": "Literal",
+                                "description": "The code for the place as a literal",
+                                "type": "string"
+                            }
                         }
-                    }
                     },
                     {"$ref": "https://json.schemastore.org/geojson"}
                 ]
             }
         },
-        
         "subjects": {
             "title": "Subject",
             "description": "An array of objects holding concepts with a relationship to the content. nar:subject",
@@ -366,7 +352,6 @@
                 }
             }
         },
-        
         "events": {
             "title": "Event",
             "description": "An array of objects describing something which happens in a planned or unplanned manner. nar:?",
@@ -399,7 +384,6 @@
                 }
             }
         },
-        
         "objects": {
             "title": "Object",
             "description": "An array of objects describing something material, excluding persons. nar:subject",
@@ -432,7 +416,6 @@
                 }
             }
         },
-        
         "infosources": {
             "title": "Info source",
             "description": "An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. (Added in version 1.2 according to issue #15.) .    infosource:  nar:infoSource",
@@ -466,43 +449,26 @@
                 }
             }
         },
-        
         "title": {
             "title": "Title",
             "description": "A short natural-language name for the item. (Added in version 1.2 according to issue #9). nar:itemMeta/title",
             "type": "string"
         },
-        
-        "byline": {
-            "title": "Byline",
-            "description": "The name(s) of the creator(s) of the content. nar:by",
+        "by": {
+            "title": "By",
+            "description": "A natural-language statement about the creator (author, photographer etc.) of the content. nar:by",
             "type": "string"
         },
-        
         "slugline": {
             "title": "Slugline",
             "description": "A human-readable identifier for the item. (Added in version 1.2 from issue #4.). nar:slugline",
             "type": "string"
         },
-        
         "located": {
             "title": "Located",
             "description": "The name of the location from which the content originates. nar:located",
             "type": "string"
         },
-        
-        "charcount": {
-            "title": "Character count",
-            "description": "The total character count in the article excluding figure captions. (Added in version 1.2 according to issue #27.). nar:charcount",
-            "type": "number"
-        },
-        
-        "wordcount": {
-            "title": "Word count",
-            "description": "The total number of words in the article excluding figure captions. (Added in version 1.2 according to issue #27.). nar:wordcount",
-            "type": "number"
-        },
-        
         "renditions": {
             "title": "Renditions",
             "description": "An array of objects with different renditions of the news object. nar:remoteContent",
@@ -514,23 +480,23 @@
                 "additionalProperties": false,
                 "properties": {
                     "name": {
-                        "title": "name", 
+                        "title": "name",
                         "description": "The name of this object in the array of renditions. For example 'thumbnail'",
                         "type": "string"
                     },
                     "href": {
-                        "title": "href", 
+                        "title": "href",
                         "description": "The URL for accessing the rendition as a resource. nar:remoteContent@ref",
                         "type": "string",
                         "format": "uri"
                     },
                     "contenttype": {
-                        "title": "Content Type", 
+                        "title": "Content Type",
                         "description": "A MIME type which applies to this rendition. nar:remoteContent@contenttype",
                         "type": "string"
                     },
                     "title": {
-                        "title": "Title", 
+                        "title": "Title",
                         "description": "A title for the link to the rendition resource",
                         "type": "string"
                     },
@@ -545,7 +511,7 @@
                         "type": "number"
                     },
                     "sizeinbytes": {
-                        "title": "Size in bytes", 
+                        "title": "Size in bytes",
                         "description": "The size of the rendition resource in bytes",
                         "type": "number"
                     },
@@ -562,31 +528,29 @@
                 }
             }
         },
-        
         "associations": {
-            "description": "And array of objects with content of news objects which are associated with this news object. nar:link",
+            "description": "And array of objects with content of news objects which are associated with this news object.",
             "type": "array",
             "additionalProperties": false,
             "items": {
                 "description": "One associated object where each object can use all properties in ninjs.",
                 "type": "object",
-                "anyOf":[
-                    { "properties": {
-                        "name": { "type": "string" }
+                "anyOf": [
+                    {
+                        "properties": {
+                            "name": {"type": "string"}
                         },
                         "required": ["name"]
                     },
                     {"$ref": "#"}
                 ]
-            }            
+            }
         },
-        
         "altids": {
             "title": "Alternative id",
             "description": "Alternative identifiers of the item. Each alternative id can have a name and a value. nar:altId issue #3.",
             "type": "array",
-            "items":
-              {
+            "items": {
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
@@ -600,13 +564,12 @@
                         "description": "The alternative id value",
                         "type": "string"
                     }
-                 }
-             }
-         },
-        
+                }
+            }
+        },
         "trustindicators": {
             "title": "Trust indicator",
-            "description": "An array of objects to allow links to documents about trust indicators. (nar:link) issue #44. (Added in version 1.3)",
+            "description": "An array of objects to allow links to documents about trust indicators. issue #44. (Added in version 1.3)",
             "type": "array",
             "items": {
                 "type": "object",
@@ -624,7 +587,7 @@
                         "type": "string"
                     },
                     "href": {
-                        "title": "href", 
+                        "title": "href",
                         "description": "The URL for accessing the trust indicator resource.",
                         "type": "string",
                         "format": "uri"
@@ -632,7 +595,6 @@
                 }
             }
         },
-        
         "standard": {
             "title": "Standard",
             "type": "object",
@@ -657,7 +619,6 @@
                 }
             }
         },
-        
         "genre": {
             "title": "Genre",
             "description": "A nature, intellectual or journalistic form of the content. nar:genre. (Added in version 1.3)",
@@ -670,7 +631,7 @@
                         "title": "Name",
                         "description": "The name of the genre",
                         "type": "string"
-                    },      
+                    },
                     "uri": {
                         "title": "URI",
                         "description": "The identifier of  the genre as a complete uri",
@@ -685,7 +646,6 @@
                 }
             }
         },
-        
         "rightsinfo": {
             "title": "Rights information",
             "type": "object",
@@ -698,21 +658,25 @@
                     "format": "uri"
                 },
                 "linkedrights": {
-                        "title": "Linked rights",
-                        "type": "string",
-                        "description": "A link from the current Item to Web resource with rights related information. nar:link",
-                        "format": "uri"
+                    "title": "Linked rights",
+                    "type": "string",
+                    "description": "A link from the current Item to Web resource with rights related information. nar:link",
+                    "format": "uri"
                 },
                 "encodedrights": {
-                        "title": "Encoded Rights",
-                        "additionalProperties": false,
-                        "type": "string",
-                        "description": "Contains a rights expression as defined by a Rights Expression Language. (The string appended to rightsExpression_ in the property name should reflect the format and/or the purpose of the expression, separating the parts with _). nar:rightsExpressionXML or nar:rightsExpressionData"
+                    "title": "Encoded Rights",
+                    "additionalProperties": false,
+                    "type": "string",
+                    "description": "Contains a rights expression as defined by a Rights Expression Language. (The string appended to rightsExpression_ in the property name should reflect the format and/or the purpose of the expression, separating the parts with _). nar:rightsExpressionXML or nar:rightsExpressionData"
                 }
             },
-            "oneOf":[
-                {"required": ["linkedrights" ]},
-                {"required": ["encodedrights"]}
+            "oneOf": [
+                {
+                    "required": ["linkedrights"]
+                },
+                {
+                    "required": ["encodedrights"]
+                }
             ]
         }
     }

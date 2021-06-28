@@ -2,7 +2,7 @@
     "uri": "http://ninjs.example.com/newsitems/20130709simp123",
     "type": "text",
     "versioncreated": "2013-07-09T10:37:00Z",
-    "byline": "Paulo Santalucia and Frances d'Emilio",
+    "by": "Paulo Santalucia and Frances d'Emilio",
     "headlines": [
         {
             "role": "main",

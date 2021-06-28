@@ -2,7 +2,7 @@
     "uri": "http://example.agency.com/item/TG346285",
     "type": "picture",
     "versioncreated": "2013-07-08T08:12:00Z",
-    "byline": "John Smith",
+    "by": "John Smith",
     "rightsinfo": {
         "langid": "http://w3.org/ns/odrl/2/",
         "linkedrights": "http://example.agency.com/rights/editorialUseOnly"
