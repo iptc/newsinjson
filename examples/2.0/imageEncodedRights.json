@@ -5,7 +5,7 @@
   "byline": "John Smith",
   "rightsinfo": {
     "langid": "http://w3.org/ns/odrl/2/",
-    "encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.agency.com/policy:3433\",\"conflict\":\"perm\",\"prohibitions\":[{\"target\":\"http://example.agency.com/item/TG346285\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.agency.com/cv/party/pamediagroup\",\"assignee\":\"http://example.agency.com/cv/partygroup/exampleagencypartners\"}]}"
+    "encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.agency.com/policy:3433\",\"prohibitions\":[{\"target\":\"http://example.agency.com/item/TG346285\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.agency.com/cv/party/pamediagroup\",\"assignee\":\"http://example.agency.com/cv/partygroup/exampleagencypartners\"}]}"
   },
   "headline": [
     {
