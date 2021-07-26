@@ -11,8 +11,8 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :author: IPTC News in JSON Working Group
 :email: office@iptc.org
 :version-label: Covers version
-:revnumber: 1.3
-:revremark: Revised 2020-05-04
+:revnumber: 2.0
+:revremark: Revised 2021-07-26
 :toc: left
 :toc-title: ninjs User Guide
 :toclevels: 2
@@ -37,9 +37,9 @@ https://www.iptc.org/std/ninjs/generator/[simple ninjs generator] so you can see
 how simple a real ninjs document can be. We have also built a JSON schema for
 ninjs to help you <<How to validate objects,validate your ninjs implementation>>.
 
-The latest version of the standard is 1.3: 
-https://iptc.org/std/ninjs/ninjs-schema_1.3.json[Version 1.3 of the ninjs
-schema] was made available in May 2020.
+The latest version of the standard is 2.0: 
+https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs
+schema] was made available in October 2021.
 
 The IPTC welcomes your feedback on how to improve the standard via the
 https://groups.io/g/iptc-ninjs[public ninjs discussion group]. You can also add
@@ -54,30 +54,55 @@ ninjs development team].
 In creating ninjs, we focused on two main use cases:
 
 . *Data interchange - such as via APIs*
-* ninjs documents can be very concise, allowing for the inclusion of just the most important properties - such as byline, headline, and body text - as determined by a given provider.
-*  ninjs allows the provider to indicate whether there are more properties available, if the recipient would like to request more.
-footnote:[The provider can indicate that more properties are available using the `representationtype: "incomplete"` construct.]
+* ninjs documents can be very concise, allowing for the inclusion of just the
+most important properties - such as byline, headline, and body text - as
+determined by a given provider.
+* ninjs allows the provider to indicate whether there are more properties
+available, if the recipient would like to request more, using the
+`representationtype: "partial"` construct.
+* Starting from version 2.0, the ninjs schema has been created in such a way
+that it can easily be converted into a schema for a binary data serialisation
+protocol such as https://developers.google.com/protocol-buffers[Protocol
+Buffers], https://avro.apache.org/[Avro], https://thrift.apache.org/[Thrift] or
+https://cbor.io/[CBOR] / https://datatracker.ietf.org/doc/html/rfc8610[CDDL]. We
+include a Protocol Buffers schema as an example.
 . *Data at rest - such as in search engines or content management systems*
-* ninjs documents can convey a rich set of news publishing properties, such as information that is necessary for the pre-publishing workflow or custom properties that a particular provider wants to express in a standard way.
-* ninjs is designed to be customisable by a particular provider, so that they can express just what they require, without unnecessary overhead. Ninjs is suitable for use in JSON-native engines, such as http://www.mongodb.org/[MongoDB] or
+* ninjs documents can convey a rich set of news publishing properties, such as
+information that is necessary for the pre-publishing workflow or custom
+properties that a particular provider wants to express in a standard way.
+* ninjs is designed to be customisable by a particular provider, so that they
+can express just what they require, without unnecessary overhead. Ninjs is
+suitable for use in JSON-native engines, such as
+http://www.mongodb.org/[MongoDB] or
 http://www.elasticsearch.org/[Elasticsearch].
 
 === ninjs data model in a nutshell
 
-As the below diagram shows, every ninjs object describes a *News Item*. All ninjs items must have a unique ID given by a *URI*. They can have administrative metadata, describing who created the news item and when, descriptive metadata describing *people*, *places*, *subjects*, *organisations* and *events* related
-to the news item.
+As the below diagram shows, every ninjs object describes a *News Item*. All
+ninjs items must have a unique ID given by a *URI*. They can have administrative
+metadata, describing who created the news item and when, descriptive metadata
+describing *people*, *places*, *genres*, *subjects*, *organisations* and
+*events* related to the news item.
 
-The content itself can be a *body*, containing text, HTML or other representation of the text of a news item, *renditions* of the news item as images, videos or multimedia, or both body and renditions. *Associations* are a means of linking news items together.
+The content itself can be a *body*, containing text, HTML or other
+representation of the text of a news item, *renditions* of the news item as
+images, videos or multimedia, or both body and renditions. *Associations* are a
+means of linking news items together.
+
+NOTE: Needs to be updated
 
 image:ninjsScope-w800.jpg[ninjs Data Model diagram]
 
 === ninjs object building blocks
 
+NOTE: Needs to be updated
+
 image:ninjs_blocks_callouts.jpg[ninjs Object Building Blocks diagram]
 
 === A simple example
 
-ninjs can be very simple. This is an example of something that might be returned by an API call.
+ninjs can be very simple. This is an example of something that might be returned
+by an API call.
 
 [source,json]
 ----
@@ -99,7 +124,7 @@ https://iptc.org/standards/iptc-7901/[IPTC7901] and https://iptc.org/standards/r
 
 === Copyright
 
-Copyright © 2020 IPTC, International Press Telecommunications Council.
+Copyright © 2021 IPTC, International Press Telecommunications Council.
 
 The IPTC ninjs User Guide document is published under the 
 http://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 license]
@@ -205,25 +230,36 @@ This property is an object with the following child properties:
 |object
 
 |altids
-|Alternative identifiers for the item. It is up to the individual provider to
+a|Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use. +
 This property is an object with no restrictions on key-names or value-types. +
-Added in ninjs 1.3.
-|array of unrestricted key/value pairs
+Added in ninjs 1.3, modified in ninjs 2.0. +
+This property is an object with the following child properties: +
 
-|mimetype
-|The https://www.iana.org/assignments/media-types/media-types.xhtml[MIME type]
-which applies to this news object.
-|string
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!name
+!The name of the alternative id
+!string
+
+!version
+!The alternative id value
+!string
+
+!===
+
+|array of objects
 
 |representationtype
 |Indicates the completeness of this representation of a news item. +
 For a full document representation, the value should be `complete`. +
-For a partial representation, for example a short extract provided as the results of an API call, the value `incomplete` should be used.
+For a partial representation, for example a short extract provided as the results of an API call, the value `partial` should be used. (The value `incomplete` in 1.x was changed to `partial` in ninjs 2.0.)
 |
 One of: +
 `complete` +
-`incomplete`
+`partial`
 
 |profile
 |An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as `'text-only'` or `'text-photo'`. Profiles are typically provider-specific.
@@ -302,17 +338,31 @@ Properties representing the actual story that will be shown to the audience.
 |===
 |Property|Description|Data type
 
-|headline
-|A brief and snappy introduction to the content, designed to catch the reader's attention
-|string
+|headlines
+a|Array of objects containing various types of headlines. +
+Changed from `headline` and `headline_*` in ninjs 2.0. +
+ +
+This property is an object with the following child properties: +
 
-|headline___<type>__
-|Additional headlines or strings of that type can be handled here. This does not
-replace the above headline property, but enables users to add additional headlines
-for specific purposes such as teasers, other languages. +
-Multiple headline_* properties are allowed. +
-Added in ninjs 1.3.
-|string
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!role
+!The role of this headline
+!string
+
+!contenttype
+!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.
+!string
+
+!value
+!The headline identified with the above role and contenttype.
+!string
+
+!===
+
+|Array of objects
 
 |slugline
 |A human-readable identifier for the item.
@@ -973,19 +1023,27 @@ https://iptc.org/std/ninjs/ninjs-schema_1.3.json[Version 1.3 of the ninjs schema
 
 Version 1.3 added the `headline_`, `altids`, `trustindicator`, `$standard` and `genre` properties. 
 
+=== ninjs 2.0
+
+https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs schema] was approved by the IPTC Standards Committee and made available in October 2021.
+
+Version 2.0 added ...
+
+NOTE: TODO
+
 == Additional Resources
 
 === On the Web
 
-The IPTC web site www.iptc.org has a wealth of resources for implementers. The page www.iptc.org/standards summarises all of the IPTC's standards and provides links to further resources for each, including ninjs, NewsML-G2, SportsML-G2 and RightsML.
+The IPTC web site https://www.iptc.org[www.iptc.org] has a wealth of resources for implementers. The page https://www.iptc.org/standards[www.iptc.org/standards] summarises all of the IPTC's standards and provides links to further resources for each, including https://www.iptc.org/standards/ninjs/[ninjs], https://www.iptc.org/standards/newsml-g2/[NewsML-G2], https://www.iptc.org/standards/sportsml-g2/[SportsML-G2] and https://www.iptc.org/standards/rightsml/[RightsML].
 
 There are also user groups at Groups.io for all those seeking answers to questions about ninjs or other IPTC standards, and for those who would like to participate in development work:
 
-https://groups.io/g/iptc-ninjs/ is the public group for discussing ninjs and other representations of news content in the JSON format.
+* https://groups.io/g/iptc-ninjs/ is the public group for discussing ninjs and other representations of news content in the JSON format.
 
-https://groups.io/g/iptc-newsml-g2/ is the public group for NewsML-G2 and Events in NewsML-G2 topics.
+* https://groups.io/g/iptc-newsml-g2/ is the public group for NewsML-G2 and Events in NewsML-G2 topics.
 
-Staff from IPTC Member organisations are welcome to join the 
+* Staff from IPTC Member organisations are welcome to join the 
 https://groups.io/g/iptc-news-in-json-dev[members-only discussion list for the ninjs development team].
 
 === Join the IPTC
