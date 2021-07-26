@@ -5,23 +5,23 @@
 	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json"
 	},
 	"uri": "http://ninjs.example.com/newsitems/ninjs2-0-tests",
-	"headline": [
+	"headlines": [
         {
-            "name": "main",
+            "role": "main",
             "value": "Test of ninjs 2.0 properties"
         },
         {
-            "name": "extension",
+            "role": "extension",
 	        "value": "Extensible headline test"
         }
     ],
-	"description": [
+	"descriptions": [
         {
-            "name": "caption",
+            "role": "caption",
             "value": "Extensible description test"
         }
     ],
-    "trustindicator": [
+    "trustindicators": [
 	 {
         "role" : "http://cv.iptc.org/newscodes/trustindicator/editorialPolicy",
         "title" : "The BBC's Editorial Standards",

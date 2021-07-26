@@ -52,8 +52,9 @@ Unit tests
 
 To run unit tests in the `validation/test_suite` folder against each
 of the ninjs 1.0, 1.1, 1.2, 1.3 and 2.0-dev schemas, run the following
-tool in a command/terminal window:
+commands in a terminal window:
 
+    pip install -r validation/python/requirements.txt
     validation/python/runtests.py 
 
 We automatically run unit tests on every commit using CircleCI. The
