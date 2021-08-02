@@ -548,15 +548,15 @@
         },
         "altids": {
             "title": "Alternative id",
-            "description": "Alternative identifiers of the item. Each alternative id can have a name and a value. nar:altId issue #3.",
+            "description": "Alternative identifiers assigned to the content. Each alternative id can have a name and a value. nar:altId issue #3.",
             "type": "array",
             "items": {
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
-                    "name": {
-                        "title": "Name",
-                        "description": "The name of the alternative id",
+                    "role": {
+                        "title": "Role",
+                        "description": "The role of the alternative id",
                         "type": "string"
                     },
                     "value": {
