@@ -89,7 +89,7 @@ representation of the text of a news item, *renditions* of the news item as
 images, videos or multimedia, or both body and renditions. *Associations* are a
 means of linking news items together.
 
-NOTE: Needs to be updated
+NOTE: This diagram needs to be updated
 
 image:ninjsScope-w800.jpg[ninjs Data Model diagram]
 
@@ -201,12 +201,11 @@ These properties concern the structure, type and creation details of the content
 
 |title
 |A short natural-language name for the item. +
-Added in ninjs 1.2.
++
 |string
 
 |$standard
 a|An object with information about standard, version and schema this instance is valid against. +
-Added in ninjs 1.3. +
 This property is an object with the following child properties:
 
 [cols="3"]
@@ -232,8 +231,6 @@ This property is an object with the following child properties:
 |altids
 a|Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use. +
-This property is an object with no restrictions on key-names or value-types. +
-Added in ninjs 1.3, modified in ninjs 2.0. +
 This property is an object with the following child properties: +
 
 [cols="3"]
@@ -244,7 +241,7 @@ This property is an object with the following child properties: +
 !The name of the alternative id
 !string
 
-!version
+!value
 !The alternative id value
 !string
 
@@ -254,11 +251,11 @@ This property is an object with the following child properties: +
 
 |representationtype
 |Indicates the completeness of this representation of a news item. +
-For a full document representation, the value should be `complete`. +
-For a partial representation, for example a short extract provided as the results of an API call, the value `partial` should be used. (The value `incomplete` in 1.x was changed to `partial` in ninjs 2.0.)
+For a full document representation, the value should be `full`. +
+For a partial representation, for example a short extract provided as the results of an API call, the value `partial` should be used.
 |
 One of: +
-`complete` +
+`full` +
 `partial`
 
 |profile
@@ -328,6 +325,34 @@ One of: +
 |usageterms
 |A natural-language statement about the usage terms pertaining to the content.
 |string
+
+|rightsinfo
+a|An expression of rights to be applied to the content. +
+ +
+This property is an object with the following child properties: +
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!langid
+!Identifier for the used Rights Expression language.
+!uri
+
+!linkedrights
+!A link from the current Item to Web resource with rights related information.
+!uri
+
+!encodedrights
+!Contains a rights expression as defined by a Rights Expression Language.
+!string
+
+!===
+For each array element under rightsinfo, one of either `linkedrights` or `encodedrights` is required.
+
+|Array of objects
+
+|string
 |===
 
 === Editorial properties
@@ -340,7 +365,6 @@ Properties representing the actual story that will be shown to the audience.
 
 |headlines
 a|Array of objects containing various types of headlines. +
-Changed from `headline` and `headline_*` in ninjs 2.0. +
  +
 This property is an object with the following child properties: +
 
@@ -368,21 +392,61 @@ This property is an object with the following child properties: +
 |A human-readable identifier for the item.
 |string
 
-|byline
+|by
 |The name(s) of the creator(s) of the content
 |string
 
-|body___<type>__
-|The textual content of the news object. The string appended to body_ in the
-property name should reflect the format of the text, for example `body_text` or
-`body_html`. +
-Multiple body_* properties are allowed.
-|string
+|bodies
+a|An array of body objects with the content as text or with markup. +
+ +
+This property is an object with the following child properties: +
 
-|description___<type>__
-|A free-form textual description of the content of the item. The string appended to description_ in the property name should reflect the format of the text, for example `description_text` or `description_html`. +
-Multiple description_* properties are allowed.
-|string
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!role
+!The role of this headline
+!string
+
+!contenttype
+!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.
+!string
+
+!value
+!The headline identified with the above role and contenttype.
+!string
+
+!===
+
+|Array of objects
+
+|descriptions
+a|An array of one or more descriptions of the ninjs object. See also ednote +
+for information from provider to reciever. Descriptions are seen as metadata.
++
+This property is an object with the following child properties: +
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!role
+!The role of this description
+!string
+
+!contenttype
+!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this description.
+!string
+
+!value
+!The descriptive text identified with the above role and contenttype.
+!string
+
+!===
+
+|Array of objects
+
 |===
 
 === Metadata properties
@@ -394,12 +458,13 @@ ninjs allows content to be marked up with one simple string-based metadata prope
 |Property name|Description|Data type
 
 |located
-|The name of the location from which the content originates
+a|The name of the location from which the content originates. +
+NOTE: See also `places` for places which are mentioned in the content.
 |string
 
 |genre
-|The nature, intellectual or journalistic form of the content. +
-Added in ninjs 1.3. +
+a|The nature, intellectual or journalistic form of the content. +
+
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -410,22 +475,20 @@ This property is an array of objects with the following properties:
 !The human-readable name of the genre, such as `Press Release`.
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the
-genre, such as `http://cv.iptc.org/newscodes/genre/`
+!uri
+!The identifier of the genre as a complete uri
 !URI
 
-!code
-!The code for the person in the scheme/controlled vocabulary which is identified
-by the scheme property, such as `Press_Release`.
+!literal
+!The code for the genre as a string literal
 !string
 
 !===
 
 |array
 
-|person
-|An individual human being. +
+|people
+| An array of objects describing individual human beings. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -440,21 +503,21 @@ This property is an array of objects with the following properties:
 !The relationship of the content of the news object to the person
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the person
+!uri
+!The identifier for the person as a complete uri with the code.
 !URI
 
-!code
-!The code for the person in a scheme/controlled vocabulary which is identified by the scheme property
+!literal
+!The code for the person as a literal value.
 !string
 
 !===
 
 |array
 
-|organisation
-|An administrative and functional structure which may act as as a business, as a political party or not-for-profit party +
-This property is an array of objects with the following properties:
+|organisations
+|An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party. +
+This property is an array of objects with the following properties: +
 
 [cols="3"]
 !===
@@ -468,12 +531,12 @@ This property is an array of objects with the following properties:
 !The relationship of the content of the news object to the organisation
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the organisation
+!uri
+!The identifier of the organisation as a complete uri
 !URI
 
-!code
-!The code for the organisation in a scheme/controlled vocabulary which is identified by the scheme property
+!literal
+!The code for the organisation as a literal
 !string
 
 !symbols
@@ -488,8 +551,8 @@ Array of objects with the properties:
 
 |array
 
-|place
-|A named location. +
+|places
+|An array of named locations. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -504,15 +567,15 @@ This property is an array of objects with the following properties:
 !The relationship of the content of the news object to the place
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the place
+!uri
+!The identifier for the place as a complete uri
 !URI
 
-!code
-!The code for the place in a scheme/controlled vocabulary which is identified by the scheme property
+!literal
+!The code for the place as a literal
 !string
 
-!geometry___<type>__
+!GeoJSON properties
 !An object holding geo data of this place. Could be of any relevant geo data JSON object definition.
 !object
 
@@ -520,8 +583,8 @@ This property is an array of objects with the following properties:
 
 |array
 
-|subject
-|A concept with a relationship to the content. +
+|subjects
+|An array of objects holding concepts with a relationship to the content. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -536,19 +599,19 @@ This property is an array of objects with the following properties:
 !The relationship of the content of the news object to the subject
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the subject
+!uri
+!The identifier of the subject as a complete uri
 !URI
 
-!code
-!The code for the subject in a scheme/controlled vocabulary which is identified by the scheme property
+!literal
+!The code for the subject as a string literal
 !string
 !===
 
 |array
 
-|event
-|Something which happens in a planned or unplanned manner. +
+|events
+|An array of objects describing something which happens in a planned or unplanned manner. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -563,19 +626,19 @@ This property is an array of objects with the following properties:
 !The relationship of the content of the news object to the event
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the event
+!uri
+!The identifier for the event as a complete uri
 !URI
 
-!code
-!The code for the event in a scheme/controlled vocabulary which is identified by the scheme property
+!literal
+!The code for the event as a string literal
 !string
 !===
 
 |array
 
-|object
-|Something material, excluding persons. +
+|objects
+|An array of objects describing something material, excluding persons. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -590,19 +653,19 @@ This property is an array of objects with the following properties:
 !The relationship of the content of the news object to the object
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the object
+!uri
+!The identifier for the object as a complete uri
 !URI
 
-!code
-!The code for the object in a scheme/controlled vocabulary which is identified by the scheme property
+!literal
+!The code for the object as a string literal
 !string
 !===
 
 |array
 
-|infosource
-|A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. Infosource was added in 1.2. +
+|infosources
+|An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
@@ -613,16 +676,16 @@ This property is an array of objects with the following properties:
 !The name of the infosource
 !string
 
-!rel
-!The relationship of the content of the news object to the infosource
+!role
+!The role the infosource in relationship to the content as a uri.
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the infosource
+!uri
+!The identifier of the infosource as a complete uri
 !URI
 
-!code
-!The code for the infosource in a scheme/controlled vocabulary which is identified by the scheme property
+!literal
+!The code for the infosource as a string literal
 !string
 !===
 
@@ -631,28 +694,22 @@ This property is an array of objects with the following properties:
 |trustindicator
 |An array of objects to allow links to documents about trust indicators, intended to show
 the trustworthiness of the news provider. +
-Added in ninjs 1.3. +
 This property is an array of objects with the following properties:
 
 [cols="3"]
 !===
 !Property name!Description!Data type
 
-!title
-!The name of the resource being referenced, such as `BBC Editorial Guidelines`
-!string
+!role
+!The role of the trust indicator as a complete uri, such as `http://cv.iptc.org/newscodes/trustindicator/editorialPolicy`
+!URI
 
 !href
 !The URL for accessing the trust indicator resource, such as `https://www.bbc.com/editorialguidelines/`
 !string
 
-!scheme
-!The identifier of a scheme/controlled vocabulary which includes a code for the infosource, typically
-`http://cv.iptc.org/newscodes/trustindicator/`
-!URI
-
-!code
-!The code for the infosource in a scheme/controlled vocabulary which is identified by the scheme property, such as `editorialPolicy`
+!title
+!The name of the resource being referenced, such as `BBC Editorial Guidelines`
 !string
 !===
 
@@ -714,7 +771,7 @@ Key features:
 
 * A `uri` must be present as an identifier for this content
 * `type` indicates that the generic content type is 'text'
-* `byline` and `headline` are typical text news metadata
+* `by` and `headlines` are typical text news metadata
 * The text of article itself is represented by `body`, in two format variants: plain text (`body_text`) and HTML (`body_html`).
 
 [source,json]
@@ -745,7 +802,7 @@ Key features:
 
 * A "uri" must be present
 * "type" indicates that the generic content type is 'a picture'
-* "byline", "headline", "description" (in plain text and HTML format) are typical photo metadata
+* "by", "headlines", "descriptions" (in plain text and HTML format) are typical photo metadata
 * The image itself is represented by "renditions". Two are available in this example: a main version and a small version.
 
 [source,json]
@@ -905,24 +962,32 @@ This is an example ninjs document that includes a sub-headline in an extended ni
 include::includes/examples/not-valid/008_extension.json[]
 ----
 
-==== Using $standard
+==== Using `standard`
 
-With the ninjs 1.3 addition of `$standard`, providers can indicate in each JSON file exactly which schema the file is valid against. So the above example of extending the schema could be shown like this:
+With the `standard` field, providers can indicate in each JSON file exactly which schema the file is valid against. So the above example of extending the schema could be shown like this:
 
 [source,json]
 {
   "uri": "http://ninjs.example.com/newsitems/20130709simp123",
-  "$standard": {
+  "standard": {
       "name": "e-ninjs-schema",
       "schema" : "http://www.example.com/e-ninjs-schema_0.1.json",
       "version" : "0.1"
   },
   "type": "text",
   "versioncreated": "2013-07-09T10:37:00Z",
-  "byline": "Paulo Santalucia and Frances d'Emilio",
-  "headline": "Captain of wrecked cruise ship on trial in Italy",
-  "subhead": "Stranded passengers watch with interest"
-    ...
+  "by": "Paulo Santalucia and Frances d'Emilio",
+  "headlines": [
+    {
+        "role": "main",
+        "value": "Captain of wrecked cruise ship on trial in Italy",
+    },
+    {
+        "role": "subhead",
+        "value": "Stranded passengers watch with interest"
+    }
+  ],
+  ...
 }
 
 === How to validate objects
@@ -972,12 +1037,12 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |copyrightholder|nar:copyrightHolder
 |copyrightnotice|nar:copyrightnotice
 |usageterms|nar:usageTerms
-|headline|nar:headline
-|headline_|nar:headline with @role
+|rightsinfo|nar:rightsInfo
+|headlines|nar:headline with @role
 |slugline|nar:slugline
-|byline|nar:creator
-|body_|nar:data or nar:inlineXML
-|description_|nar:description
+|by|nar:by
+|bodies|nar:data or nar:inlineXML
+|descriptions|nar:description
 |located|nar:located
 |genre|nar:genre
 |person|nar:subject
@@ -1025,11 +1090,31 @@ Version 1.3 added the `headline_`, `altids`, `trustindicator`, `$standard` and `
 
 === ninjs 2.0
 
-https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs schema] was approved by the IPTC Standards Committee and made available in October 2021.
+https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs schema] was approved by the IPTC Standards Committee and made available in XXXXXX.
 
-Version 2.0 added ...
+Version 2.0 made several changes, some of them breaking backwards compatibility:
 
-NOTE: TODO
+* headline_* changed to headlines
+* body_* changed to bodies
+* description_* changed to descriptions
+* altid_* changed to altids
+* byline changed to by to become more consistent with IPTC News Architecture and NewsML-G2
+* person changed to people
+* organisation changed to organisations
+* place changed to places
+* event changed to events
+* object changed to objects
+* infosource changed to infosources
+* trustindicator changed to trustindicators
+* infosource/rel changed to infosource/role to be more consistent with other properties and the IPTC News Architecture
+* all metadata properties now use URIs with an optional literal instead of schemes and codes
+* Clarified definition of uri
+* Removed mimetype property
+* Added contentcreated property
+* Changed representationtype enum values from "complete" and "incomplete" to "full" and "partial"
+* charcount and wordcount moved to properties of "bodies" elements
+* "$standard" changed to "standard"
+* Added a new "rightsinfo" property with "linkedrights" or "embeddedrights" as child properties
 
 == Additional Resources
 

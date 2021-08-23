@@ -613,7 +613,7 @@ means of linking news items together.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Needs to be updated
+This diagram needs to be updated
 </td>
 </tr>
 </table>
@@ -806,14 +806,13 @@ United Kingdom</pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A short natural-language name for the item.<br>
-Added in ninjs 1.2.</p></td>
++</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">$standard</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An object with information about standard, version and schema this instance is valid against.<br>
-Added in ninjs 1.3.<br>
 This property is an object with the following child properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -854,8 +853,6 @@ This property is an object with the following child properties:</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use.<br>
-This property is an object with no restrictions on key-names or value-types.<br>
-Added in ninjs 1.3, modified in ninjs 2.0.<br>
 This property is an object with the following child properties:<br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -878,7 +875,7 @@ This property is an object with the following child properties:<br></p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The alternative id value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
@@ -889,10 +886,10 @@ This property is an object with the following child properties:<br></p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">representationtype</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the completeness of this representation of a news item.<br>
-For a full document representation, the value should be <code>complete</code>.<br>
-For a partial representation, for example a short extract provided as the results of an API call, the value <code>partial</code> should be used. (The value <code>incomplete</code> in 1.x was changed to <code>partial</code> in ninjs 2.0.)</p></td>
+For a full document representation, the value should be <code>full</code>.<br>
+For a partial representation, for example a short extract provided as the results of an API call, the value <code>partial</code> should be used.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
-<code>complete</code><br>
+<code>full</code><br>
 <code>partial</code></p></td>
 </tr>
 <tr>
@@ -988,6 +985,49 @@ For a partial representation, for example a short extract provided as the result
 <td class="tableblock halign-left valign-top"><p class="tableblock">A natural-language statement about the usage terms pertaining to the content.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rightsinfo</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An expression of rights to be applied to the content.<br>
+<br>
+This property is an object with the following child properties:<br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">langid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier for the used Rights Expression language.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">linkedrights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A link from the current Item to Web resource with rights related information.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">encodedrights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains a rights expression as defined by a Rights Expression Language.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For each array element under rightsinfo, one of either <code>linkedrights</code> or <code>encodedrights</code> is required.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of objects</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1014,7 +1054,6 @@ For a partial representation, for example a short extract provided as the result
 <td class="tableblock halign-left valign-top"><p class="tableblock">headlines</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Array of objects containing various types of headlines.<br>
-Changed from <code>headline</code> and <code>headline_*</code> in ninjs 2.0.<br>
 <br>
 This property is an object with the following child properties:<br></p>
 </div>
@@ -1057,23 +1096,92 @@ This property is an object with the following child properties:<br></p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">byline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">by</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name(s) of the creator(s) of the content</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">body<em>_&lt;type&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The textual content of the news object. The string appended to body_ in the
-property name should reflect the format of the text, for example <code>body_text</code> or
-<code>body_html</code>.<br>
-Multiple body_* properties are allowed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bodies</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An array of body objects with the content as text or with markup.<br>
+<br>
+This property is an object with the following child properties:<br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The role of this headline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">description<em>_&lt;type&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A free-form textual description of the content of the item. The string appended to description_ in the property name should reflect the format of the text, for example <code>description_text</code> or <code>description_html</code>.<br>
-Multiple description_* properties are allowed.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The headline identified with the above role and contenttype.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+</tbody>
+</table></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of objects</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">descriptions</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An array of one or more descriptions of the ninjs object. See also ednote<br>
+for information from provider to reciever. Descriptions are seen as metadata.</p>
+</div>
+<div class="paragraph">
+<p>+
+This property is an object with the following child properties:<br></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The role of this description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The IANA (Internet Assigned Numbers Authority) MIME type of the content of this description.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The descriptive text identified with the above role and contenttype.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+</tbody>
+</table></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of objects</p></td>
 </tr>
 </tbody>
 </table>
@@ -1100,16 +1208,18 @@ Multiple description_* properties are allowed.</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">located</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The name of the location from which the content originates</p>
+<p>The name of the location from which the content originates.<br>
+NOTE: See also <code>places</code> for places which are mentioned in the content.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">genre</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The nature, intellectual or journalistic form of the content.<br>
-Added in ninjs 1.3.<br>
-This property is an array of objects with the following properties:</p>
+<p>The nature, intellectual or journalistic form of the content.<br></p>
+</div>
+<div class="paragraph">
+<p>This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1131,15 +1241,13 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the
-genre, such as <code><a href="http://cv.iptc.org/newscodes/genre/" class="bare">http://cv.iptc.org/newscodes/genre/</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the genre as a complete uri</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the person in the scheme/controlled vocabulary which is identified
-by the scheme property, such as <code>Press_Release</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the genre as a string literal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1147,9 +1255,9 @@ by the scheme property, such as <code>Press_Release</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">person</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">people</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An individual human being.<br>
+<p>An array of objects describing individual human beings.<br>
 This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1177,13 +1285,13 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the person</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for the person as a complete uri with the code.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the person in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the person as a literal value.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1191,10 +1299,10 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">organisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">organisations</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An administrative and functional structure which may act as as a business, as a political party or not-for-profit party<br>
-This property is an array of objects with the following properties:</p>
+<p>An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party.<br>
+This property is an array of objects with the following properties:<br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1221,13 +1329,13 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the organisation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the organisation as a complete uri</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the organisation in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the organisation as a literal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1253,9 +1361,9 @@ Array of objects with the properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">place</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">places</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A named location.<br>
+<p>An array of named locations.<br>
 This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1283,17 +1391,17 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the place</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for the place as a complete uri</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the place in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the place as a literal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">geometry<em>_&lt;type&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GeoJSON properties</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An object holding geo data of this place. Could be of any relevant geo data JSON object definition.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
 </tr>
@@ -1302,9 +1410,9 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">subject</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subjects</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A concept with a relationship to the content.<br>
+<p>An array of objects holding concepts with a relationship to the content.<br>
 This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1332,13 +1440,13 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the subject</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the subject as a complete uri</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the subject in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the subject as a string literal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1346,9 +1454,9 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">event</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">events</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Something which happens in a planned or unplanned manner.<br>
+<p>An array of objects describing something which happens in a planned or unplanned manner.<br>
 This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1376,13 +1484,13 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the event</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for the event as a complete uri</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the event in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the event as a string literal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1390,9 +1498,9 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">objects</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Something material, excluding persons.<br>
+<p>An array of objects describing something material, excluding persons.<br>
 This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1420,13 +1528,13 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for the object as a complete uri</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the object in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the object as a string literal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1434,9 +1542,9 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">infosource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">infosources</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A party (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. Infosource was added in 1.2.<br>
+<p>An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content.<br>
 This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1459,18 +1567,18 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rel</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The relationship of the content of the news object to the infosource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The role the infosource in relationship to the content as a uri.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the infosource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the infosource as a complete uri</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the infosource in a scheme/controlled vocabulary which is identified by the scheme property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">literal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the infosource as a string literal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1482,7 +1590,6 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of objects to allow links to documents about trust indicators, intended to show
 the trustworthiness of the news provider.<br>
-Added in ninjs 1.3.<br>
 This property is an array of objects with the following properties:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
@@ -1500,9 +1607,9 @@ This property is an array of objects with the following properties:</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the resource being referenced, such as <code>BBC Editorial Guidelines</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The role of the trust indicator as a complete uri, such as <code><a href="http://cv.iptc.org/newscodes/trustindicator/editorialPolicy" class="bare">http://cv.iptc.org/newscodes/trustindicator/editorialPolicy</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">href</p></td>
@@ -1510,14 +1617,8 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">scheme</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of a scheme/controlled vocabulary which includes a code for the infosource, typically
-<code><a href="http://cv.iptc.org/newscodes/trustindicator/" class="bare">http://cv.iptc.org/newscodes/trustindicator/</a></code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The code for the infosource in a scheme/controlled vocabulary which is identified by the scheme property, such as <code>editorialPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the resource being referenced, such as <code>BBC Editorial Guidelines</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1718,7 +1819,7 @@ This property is an array of objects with the following properties:</p>
 <p><code>type</code> indicates that the generic content type is 'text'</p>
 </li>
 <li>
-<p><code>byline</code> and <code>headline</code> are typical text news metadata</p>
+<p><code>by</code> and <code>headlines</code> are typical text news metadata</p>
 </li>
 <li>
 <p>The text of article itself is represented by <code>body</code>, in two format variants: plain text (<code>body_text</code>) and HTML (<code>body_html</code>).</p>
@@ -1852,7 +1953,7 @@ repository</a>.</p>
 <p>"type" indicates that the generic content type is 'a picture'</p>
 </li>
 <li>
-<p>"byline", "headline", "description" (in plain text and HTML format) are typical photo metadata</p>
+<p>"by", "headlines", "descriptions" (in plain text and HTML format) are typical photo metadata</p>
 </li>
 <li>
 <p>The image itself is represented by "renditions". Two are available in this example: a main version and a small version.</p>
@@ -2339,25 +2440,33 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 </div>
 </div>
 <div class="sect3">
-<h4 id="_using_standard">5.3.1. Using $standard</h4>
+<h4 id="_using_standard">5.3.1. Using <code>standard</code></h4>
 <div class="paragraph">
-<p>With the ninjs 1.3 addition of <code>$standard</code>, providers can indicate in each JSON file exactly which schema the file is valid against. So the above example of extending the schema could be shown like this:</p>
+<p>With the <code>standard</code> field, providers can indicate in each JSON file exactly which schema the file is valid against. So the above example of extending the schema could be shown like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "http://ninjs.example.com/newsitems/20130709simp123",
-  "$standard": {
+  "standard": {
       "name": "e-ninjs-schema",
       "schema" : "http://www.example.com/e-ninjs-schema_0.1.json",
       "version" : "0.1"
   },
   "type": "text",
   "versioncreated": "2013-07-09T10:37:00Z",
-  "byline": "Paulo Santalucia and Frances d'Emilio",
-  "headline": "Captain of wrecked cruise ship on trial in Italy",
-  "subhead": "Stranded passengers watch with interest"
-    ...
+  "by": "Paulo Santalucia and Frances d'Emilio",
+  "headlines": [
+    {
+        "role": "main",
+        "value": "Captain of wrecked cruise ship on trial in Italy",
+    },
+    {
+        "role": "subhead",
+        "value": "Stranded passengers watch with interest"
+    }
+  ],
+  ...
 }</code></pre>
 </div>
 </div>
@@ -2491,11 +2600,11 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:usageTerms</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">headline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:headline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rightsinfo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:rightsInfo</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">headline_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headlines</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:headline with @role</p></td>
 </tr>
 <tr>
@@ -2503,15 +2612,15 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:slugline</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">byline</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:creator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">by</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:by</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">body_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bodies</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:data or nar:inlineXML</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">description_</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">descriptions</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:description</p></td>
 </tr>
 <tr>
@@ -2628,22 +2737,77 @@ object is a complete ninjs document and this is how the schema knows to recursiv
 <div class="sect2">
 <h3 id="_ninjs_2_0">7.5. ninjs 2.0</h3>
 <div class="paragraph">
-<p><a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json">Version 2.0 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in October 2021.</p>
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json">Version 2.0 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in XXXXXX.</p>
 </div>
 <div class="paragraph">
-<p>Version 2.0 added &#8230;&#8203;</p>
+<p>Version 2.0 made several changes, some of them breaking backwards compatibility:</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-TODO
-</td>
-</tr>
-</table>
+<div class="ulist">
+<ul>
+<li>
+<p>headline_* changed to headlines</p>
+</li>
+<li>
+<p>body_* changed to bodies</p>
+</li>
+<li>
+<p>description_* changed to descriptions</p>
+</li>
+<li>
+<p>altid_* changed to altids</p>
+</li>
+<li>
+<p>byline changed to by to become more consistent with IPTC News Architecture and NewsML-G2</p>
+</li>
+<li>
+<p>person changed to people</p>
+</li>
+<li>
+<p>organisation changed to organisations</p>
+</li>
+<li>
+<p>place changed to places</p>
+</li>
+<li>
+<p>event changed to events</p>
+</li>
+<li>
+<p>object changed to objects</p>
+</li>
+<li>
+<p>infosource changed to infosources</p>
+</li>
+<li>
+<p>trustindicator changed to trustindicators</p>
+</li>
+<li>
+<p>infosource/rel changed to infosource/role to be more consistent with other properties and the IPTC News Architecture</p>
+</li>
+<li>
+<p>all metadata properties now use URIs with an optional literal instead of schemes and codes</p>
+</li>
+<li>
+<p>Clarified definition of uri</p>
+</li>
+<li>
+<p>Removed mimetype property</p>
+</li>
+<li>
+<p>Added contentcreated property</p>
+</li>
+<li>
+<p>Changed representationtype enum values from "complete" and "incomplete" to "full" and "partial"</p>
+</li>
+<li>
+<p>charcount and wordcount moved to properties of "bodies" elements</p>
+</li>
+<li>
+<p>"$standard" changed to "standard"</p>
+</li>
+<li>
+<p>Added a new "rightsinfo" property with "linkedrights" or "embeddedrights" as child properties</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
