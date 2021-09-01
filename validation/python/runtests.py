@@ -74,13 +74,13 @@ class TestNinJSSchema(unittest.TestCase):
             specification_path,
             'ninjs-schema_1.3.json'
         )
+        ninjs20_schema_filename = os.path.join(
+            specification_path,
+            'ninjs-schema_2.0.json',
+        )
         ninjsdev_schema_filename = os.path.join(
             specification_path,
             'ninjs-schema-dev_0.2_v1.3.json'
-        )
-        ninjs20dev_schema_filename = os.path.join(
-            specification_path,
-            'ninjs-schema_dev_2.0.json',
         )
         with open(ninjs10_schema_filename) as schemafile:
             self.ninjs10_schema = json.load(schemafile)
@@ -92,8 +92,8 @@ class TestNinJSSchema(unittest.TestCase):
             self.ninjs13_schema = json.load(schemafile)
         with open(ninjsdev_schema_filename) as schemafile:
             self.ninjsdev_schema = json.load(schemafile)
-        with open(ninjs20dev_schema_filename) as schemafile:
-            self.ninjs20dev_schema = json.load(schemafile)
+        with open(ninjs20_schema_filename) as schemafile:
+            self.ninjs20_schema = json.load(schemafile)
         return super(TestNinJSSchema, self).__init__(*args, **kwargs)
 
     # HELPER FUNCTIONS
@@ -341,11 +341,11 @@ class TestNinJSSchema(unittest.TestCase):
         of the schema, as the examples use the latest features of ninjs)
         """
         self.folder_should_pass(
-            schema=self.ninjs20dev_schema,
+            schema=self.ninjs20_schema,
             folder_name=EXAMPLE_FILES_FOLDER_2_0
         )
 
-    def test_documentation_examples_against_1_3_schema(self):
+    def test_documentation_examples_against_latest_schema(self):
         """
         Run all files in DOCUMENTATION_EXAMPLES_FOLDER against the latest
         schema. They should all pass. (They will not all pass against old
@@ -353,7 +353,7 @@ class TestNinJSSchema(unittest.TestCase):
         ninjs)
         """
         self.folder_should_pass(
-            schema=self.ninjs20dev_schema,
+            schema=self.ninjs20_schema,
             folder_name=DOCUMENTATION_EXAMPLES_FOLDER
         )
 
@@ -381,6 +381,10 @@ class TestNinJSSchema(unittest.TestCase):
         )
         self.folder_should_pass(
             schema=self.ninjsdev_schema,
+            folder_name=os.path.join('1.3', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjsdev_schema,
             folder_name=os.path.join('dev', 'should_pass')
         )
 
@@ -398,28 +402,24 @@ class TestNinJSSchema(unittest.TestCase):
 
     def test_passing_2_0_unit_tests_against_2_0_schema(self):
         """
-        Run files in TEST_FILES_FOLDER/2.0/should_pass against the dev schema.
+        Run files in TEST_FILES_FOLDER/2.0/should_pass against the 2.0 schema.
         They should all pass (ie they are all valid against the schema).
 
         We do *not* run 1.x tests against the 2.0 schema as it is
         NOT backwards compatible.
-
-        We use "subTest" so we can see which file failed in test output.
         """
         self.folder_should_pass(
-            schema=self.ninjs20dev_schema,
+            schema=self.ninjs20_schema,
             folder_name=os.path.join('2.0', 'should_pass')
         )
 
     def test_failing_2_0_unit_tests_against_2_0_schema(self):
         """
-        Run files in TEST_FILES_FOLDER/2.0/should_fail against the dev schema.
+        Run files in TEST_FILES_FOLDER/2.0/should_fail against the  2.0 schema.
         They should all fail (ie they are all invalid in some way).
-
-        We use "subTest" so we can see which file failed in test output.
         """
         self.folder_should_fail(
-            schema=self.ninjs20dev_schema,
+            schema=self.ninjs20_schema,
             folder_name=os.path.join('2.0', 'should_fail')
         )
 

@@ -1,9 +1,9 @@
 {
     "uri": "http://tt.se/media/text/210526-militarovning-a0f2d045",
     "type": "text",
-    "altids": [ {"name": "originaltransmissionreference", "value": "a0f2d045-1058-46d1-9f9a-ad80ed1bc86f"}],
+    "altids": [ {"role": "originaltransmissionreference", "value": "a0f2d045-1058-46d1-9f9a-ad80ed1bc86f"}],
     "representationtype": "full",
-    "genre": [
+    "genres": [
         {
             "literal": "INR",
             "uri": "http://tt.se/spec/sector/1.0/INR",
