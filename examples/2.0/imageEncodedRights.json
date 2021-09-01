@@ -1,0 +1,40 @@
+{
+  "uri": "http://example.agency.com/item/TG346285",
+  "type": "picture",
+  "versioncreated": "2013-07-08T08:12:00Z",
+  "by": "John Smith",
+  "rightsinfo": {
+    "langid": "http://w3.org/ns/odrl/2/",
+    "encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.agency.com/policy:3433\",\"prohibitions\":[{\"target\":\"http://example.agency.com/item/TG346285\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.agency.com/cv/party/pamediagroup\",\"assignee\":\"http://example.agency.com/cv/partygroup/exampleagencypartners\"}]}"
+  },
+  "headlines": [
+    {
+      "role": "main",
+      "value": "MotoGP - Spain - Valentino Rossi"
+    }
+  ],
+  "descriptions": [
+    {
+      "role": "text",
+      "value": "Valentino Rossi (46) of Italy and Petronas Yamaha SRT during the MotoGP test day at Circuito de Jerez - Angel Nieto on May 3, 2021 in Jerez de la Frontera, Spain"
+    }
+  ],
+  "renditions": [
+    {
+      "name": "main",
+      "href": "https://images.static.press.net/v2/image/preview/99bf1cf9b8c917876bf1ce7ac31a85c7/2.59562475.jpg?1",
+      "contenttype": "image/jpg",
+      "title": "Mid Resolution",
+      "height": 342,
+      "width": 512
+    },
+    {
+      "name": "small",
+      "href": "https://images.static.press.net/v2/image/webpreview/d3e2a59c08821d87d2c491c814c56f58/2.59562458.jpg",
+      "contenttype": "image/jpg",
+      "title": "Low Resolution",
+      "height": 300,
+      "width": 450
+    }
+  ]
+}

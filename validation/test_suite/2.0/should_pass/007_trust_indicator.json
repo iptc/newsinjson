@@ -1,12 +1,12 @@
 {
     "uri": "007-trust-indicator",
-    "headline": [
+    "headlines": [
         {
-            "name": "main",
+            "role": "main",
             "value": "test headline"
         }
     ],
-    "trustindicator": [
+    "trustindicators": [
       {
         "role" : "http://cv.iptc.org/newscodes/trustindicator/editorialPolicy",
         "title" : "The BBC's Editorial Standards",

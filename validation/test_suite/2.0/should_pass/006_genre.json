@@ -1,8 +1,8 @@
 {
     "uri": "006_genre",
-    "headline": [
+    "headlines": [
         {
-            "name": "main",
+            "role": "main",
             "value": "test headline"
         }
     ],
