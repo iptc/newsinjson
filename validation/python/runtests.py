@@ -353,7 +353,7 @@ class TestNinJSSchema(unittest.TestCase):
         ninjs)
         """
         self.folder_should_pass(
-            schema=self.ninjs13_schema,
+            schema=self.ninjs20dev_schema,
             folder_name=DOCUMENTATION_EXAMPLES_FOLDER
         )
 
