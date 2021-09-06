@@ -117,7 +117,7 @@
         
         "ednote": {
             "title": "Editorial note",
-            "description": "A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user. (Added in version 1.2 from issue #6.). (Consider using this before using the descriptions array.) ednote: nar:edNote",
+            "description": "A note that is intended to be read by internal staff at the receiving organisation, but not intended to be published. (Added in version 1.2 from issue #6.). (Consider using this before using the descriptions array.) ednote: nar:edNote",
             "type": "string"
         },
         
@@ -520,7 +520,7 @@
                         "type": "string"
                     },
                     "href": {
-                        "title": "HREF",
+                        "title": "href",
                         "description": "The URL for accessing the rendition as a resource. nar:remoteContent@ref",
                         "type": "string",
                         "format": "uri"
@@ -626,7 +626,7 @@
                         "type": "string"
                     },
                     "href": {
-                        "title": "HREF",
+                        "title": "href",
                         "description": "The URL for accessing the trust indicator resource.",
                         "type": "string",
                         "format": "uri"
