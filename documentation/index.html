@@ -1052,7 +1052,7 @@ This property is an object with the following child properties:<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The headline identified with the above role and contenttype. Value is required.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The headline identified with the above role and contenttype. Required in each object in the array.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1102,7 +1102,7 @@ This property is an object with the following child properties:<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The headline identified with the above role and contenttype. Value is required.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The headline identified with the above role and contenttype. Required in each object in the array.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1155,7 +1155,7 @@ This property is an object with the following child properties:<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The descriptive text identified with the above role and contenttype. Value is required.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The descriptive text identified with the above role and contenttype. Required in each object in the array.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1633,7 +1633,7 @@ This property is an array of objects with the following properties:</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of this object in the array of renditions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of this object in the array of renditions. Required</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1716,7 +1716,7 @@ This property is an array of objects with the following properties:</p>
 <div class="sect2">
 <h3 id="_associations">3.6. Associations</h3>
 <div class="paragraph">
-<p>The <code>associations</code> property contains associated valid ninjs objects, each with a name explaining the nature of the association.</p>
+<p>The <code>associations</code> property contains associated valid ninjs objects, each with a required <code>name</code> explaining the nature of the association.</p>
 </div>
 <div class="paragraph">
 <p>This can be used to link news items together, or to associate images with a text story, for example.</p>

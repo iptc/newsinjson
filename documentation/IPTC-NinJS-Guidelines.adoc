@@ -372,7 +372,7 @@ This property is an object with the following child properties: +
 !string
 
 !value
-!The headline identified with the above role and contenttype. Value is required.
+!The headline identified with the above role and contenttype. Required in each object in the array.
 !string
 
 !===
@@ -405,7 +405,7 @@ This property is an object with the following child properties: +
 !string
 
 !value
-!The headline identified with the above role and contenttype. Value is required.
+!The headline identified with the above role and contenttype. Required in each object in the array.
 !string
 
 !charcount
@@ -439,7 +439,7 @@ This property is an object with the following child properties: +
 !string
 
 !value
-!The descriptive text identified with the above role and contenttype. Value is required.
+!The descriptive text identified with the above role and contenttype. Required in each object in the array.
 !string
 
 !===
@@ -728,7 +728,7 @@ It contains a set of one or more keys, each with a name and an object as the val
 [%autowidth,options="header"]
 |===
 |Property name|Description|Data type
-|name|The name of this object in the array of renditions|string
+|name|The name of this object in the array of renditions. Required|string
 |href|The URL for accessing the rendition as a resource|URI
 |mimetype|A MIME type which applies to the rendition|string
 |title|A title for the link to the rendition resource|string
@@ -748,7 +748,7 @@ include::includes/examples/002_renditions_example.json[]
 
 === Associations
 
-The `associations` property contains associated valid ninjs objects, each with a name explaining the nature of the association.
+The `associations` property contains associated valid ninjs objects, each with a required `name` explaining the nature of the association.
 
 This can be used to link news items together, or to associate images with a text story, for example.
 

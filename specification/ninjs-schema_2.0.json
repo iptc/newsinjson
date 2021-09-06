@@ -566,7 +566,7 @@
         
         "associations": {
             "title": "Associations",
-            "description": "And array of objects with content of news objects which are associated with this news object.",
+            "description": "An array of objects with content of news objects which are associated with this news object.",
             "type": "array",
             "additionalProperties": false,
             "items": {
@@ -575,7 +575,10 @@
                 "anyOf": [
                     {
                         "properties": {
-                            "name": {"type": "string"}
+                            "name": {
+                            "type": "string",
+                            "description": "The name of this object in the array of associations. For example 'logo'"
+                            }
                         },
                         "required": ["name"]
                     },
