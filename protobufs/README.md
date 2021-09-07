@@ -11,6 +11,9 @@ Protocol Buffers was developed by Google as a "language-neutral, platform-
 neutral, extensible mechanism for serializing structured data – think XML, but
 smaller, faster, and simpler."
 
+The process should be similar for other binary data serialisation protocols such
+as Avro, Thrift and CBOR.
+
 For more information on Protocol Buffers, see Google's documentation at
 https://developers.google.com/protocol-buffers
 
@@ -21,10 +24,15 @@ We generate a Protocol Buffers schema from the ninjs JSON Schema using
 https://github.com/Army-U/jsonschema-protobuf/ (which is a patched version of
 https://www.npmjs.com/package/jsonschema-protobuf)
 
-`jsonschema-protobuf specification/ninjs-schema_dev_2.0.json >protobufs/ninjs20-dev.proto`
+```bash
+git clone https://github.com/Army-U/jsonschema-protobuf.git
+npm install -g jsonschema-protobuf
+_log out of your terminal and log back in_
+jsonschema-protobuf specification/ninjs-schema_2.0.json >protobufs/ninjs20.proto
+```
 
 The jsonschema-protobuf tool doesn't yet support enum fields so we have to add
-them manually. The version of ninjs20-dev.proto in this repository has enums
+them manually. The version of `ninjs20.proto` in this repository has enums
 added. We also manually change the version to "proto2" so we can use `required`
 fields.
 

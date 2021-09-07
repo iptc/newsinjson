@@ -1,0 +1,214 @@
+syntax = "proto2";
+
+message Ninjs {
+  message Descriptions {
+    optional string role = 1;
+    optional string contenttype = 2;
+    required string value = 3;
+  }
+  
+  message Bodies {
+    optional string role = 1;
+    optional string contenttype = 2;
+    optional int32 charcount = 3;
+    optional int32 wordcount = 4;
+    required string value = 5;
+  }
+  
+  message Headlines {
+    optional string role = 1;
+    optional string contenttype = 2;
+    required string value = 3;
+  }
+  
+  message People {
+    optional string name = 1;
+    optional string rel = 2;
+    optional string uri = 3;
+    optional string literal = 4;
+  }
+  
+  message Organisations {
+    message Symbols {
+      optional string ticker = 1;
+      optional string exchange = 2;
+    }
+    
+    optional string name = 1;
+    optional string rel = 2;
+    optional string uri = 3;
+    optional string literal = 4;
+    repeated Symbols symbols = 5;
+  }
+
+  message Value {
+    oneof value_type {
+        string string_value = 1;
+        double double_value = 2;
+        uint64 pos_int_value = 3;
+        uint64 neg_int_value = 4;
+        bool bool_value = 5;
+        string json_value = 6;
+    }
+  }
+
+  message Geometry {
+    required Type type = 1;
+
+    repeated uint32 lengths = 2 [packed = true]; // coordinate structure in lengths
+    repeated sint64 coords = 3 [packed = true]; // delta-encoded integer values
+    repeated Geometry geometries = 4;
+
+    repeated Value values = 13;
+    repeated uint32 custom_properties = 15 [packed = true];
+
+    enum Type {
+        POINT = 0;
+        MULTIPOINT = 1;
+        LINESTRING = 2;
+        MULTILINESTRING = 3;
+        POLYGON = 4;
+        MULTIPOLYGON = 5;
+        GEOMETRYCOLLECTION = 6;
+    }
+  }
+
+  message Places {
+    optional string name = 1;
+    optional string rel = 2;
+    optional string uri = 3;
+    optional string literal = 4;
+    optional Geometry geometry_geojson = 5;
+  }
+  
+  message Subjects {
+    optional string name = 1;
+    optional string rel = 2;
+    optional string uri = 3;
+    optional string literal = 4;
+  }
+  
+  message Events {
+    optional string name = 1;
+    optional string rel = 2;
+    optional string uri = 3;
+    optional string literal = 4;
+  }
+  
+  message Objects {
+    optional string name = 1;
+    optional string rel = 2;
+    optional string uri = 3;
+    optional string literal = 4;
+  }
+  
+  message Infosources {
+    optional string name = 1;
+    optional string role = 2;
+    optional string uri = 3;
+    optional string literal = 4;
+  }
+  
+  message Renditions {
+    required string name = 1;
+    optional string href = 2;
+    optional string contenttype = 3;
+    optional string title = 4;
+    optional int32 height = 5;
+    optional int32 width = 6;
+    optional int32 sizeinbytes = 7;
+    optional int32 duration = 8;
+    optional string format = 9;
+  }
+  
+  message Associations {
+  }
+  
+  message Altids {
+    optional string role = 1;
+    optional string value = 2;
+  }
+  
+  message Trustindicators {
+    optional string role = 1;
+    optional string title = 2;
+    optional string href = 3;
+  }
+  
+  message Standard {
+    optional string name = 1;
+    optional string version = 2;
+    optional string schema = 3;
+  }
+  
+  message Genres {
+    optional string name = 1;
+    optional string uri = 2;
+    optional string literal = 3;
+  }
+  
+  message Rightsinfo {
+    optional string langid = 1;
+    optional string linkedrights = 2;
+    optional string encodedrights = 3;
+  }
+
+  enum Type {
+    text = 0;
+    audio = 1;
+    video = 2;
+    picture = 3;
+    graphic = 4;
+    composite = 5;
+    component = 6;
+  }
+
+  enum Representationtype {
+    full = 0;
+    partial = 1;
+  }
+
+  enum Pubstatus {
+    usable = 0;
+    withheld = 1;
+    canceled = 2;
+  }
+
+  required string uri = 1;
+  optional Type type = 2;
+  optional Representationtype representationtype = 3;
+  optional string profile = 4;
+  optional string version = 5;
+  optional string firstcreated = 6;
+  optional string versioncreated = 7;
+  optional string contentcreated = 8;
+  optional string embargoed = 9;
+  optional Pubstatus pubstatus = 10;
+  optional int32 urgency = 11;
+  optional string copyrightholder = 12;
+  optional string copyrightnotice = 13;
+  optional string usageterms = 14;
+  optional string ednote = 15;
+  optional string language = 16;
+  repeated Descriptions descriptions = 17;
+  repeated Bodies bodies = 18;
+  repeated Headlines headlines = 19;
+  repeated People people = 20;
+  repeated Organisations organisations = 21;
+  repeated Places places = 22;
+  repeated Subjects subjects = 23;
+  repeated Events events = 24;
+  repeated Objects objects = 25;
+  repeated Infosources infosources = 26;
+  optional string title = 27;
+  optional string by = 28;
+  optional string slugline = 29;
+  optional string located = 30;
+  repeated Renditions renditions = 31;
+  repeated Associations associations = 32;
+  repeated Altids altids = 33;
+  repeated Trustindicators trustindicators = 34;
+  optional Standard standard = 35;
+  repeated Genres genres = 36;
+  optional Rightsinfo rightsinfo = 37;
+}
