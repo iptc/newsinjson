@@ -40,8 +40,8 @@ class NinjsGenerator extends React.Component {
             bodytext: '',
             by: '',
             location: '',
-            altid_name: '',
             altid_role: '',
+            altid_value: '',
             medtop: [],
             ednote: ''
         };
@@ -224,10 +224,10 @@ class NinjsGenerator extends React.Component {
         }
         if (this.state.altid_role || this.state.altid_value) {
             if (version == "ninjs13") {
-                jsonObj['altids'] = {
-                    "role": this.state.altid_role || "",
-                    "value": this.state.altid_value || ""
-                };
+                var altid_role = this.state.altid_role || "altidrole";
+                var altid_value = this.state.altid_value || "";
+                jsonObj['altids'] = {}
+                jsonObj['altids'][altid_role] =  altid_value;
             } else {
                 jsonObj['altids'] = [{
                     "role": this.state.altid_role || "",
