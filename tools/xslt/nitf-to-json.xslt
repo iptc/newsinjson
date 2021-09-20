@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
  
+  <!-- Example xslt to illustrate conversion of a nitf document to a ninjs item.
+        It uses the sample NTB_nitf_sample.xml so xpath's is specific to this variant of NITF.
+        But the ideas can be used in other environments.
+    --> 
+ 
   <xsl:output method="text" encoding="UTF-8"/>
  
   <!-- MATCHES EVERYTHING, CREATES A JSON OBJECT, THEN CALLS A SUB-TEMPLATE TO GRAB AND ESCAPE THE NITF BODY CONTENT -->
   <xsl:template match="/">
     <xsl:variable name="uid" select="/nitf/head/docdata/doc-id/@id-string"/>
+    <xsl:variable name="timestamp" select="/nitf/head/docdata/date.issue/@norm"/>
+    <xsl:variable name="slug" select="/nitf/head/docdata/du-key/@key"/>
+    <xsl:variable name="version" select="/nitf/head/docdata/du-key/@version"/>
+    <xsl:variable name="urg" select="/nitf/head/docdata/urgency/@ed-urg"/>
     <xsl:text>{</xsl:text>
     <xsl:text>   "uri":  "</xsl:text><xsl:value-of select="$uid"/><xsl:text>",</xsl:text>
+    <xsl:text>   "versioncreated":  "</xsl:text><xsl:value-of select="$timestamp"/><xsl:text>Z",</xsl:text>
+    <xsl:text>   "version":  "</xsl:text><xsl:value-of select="$version"/><xsl:text>",</xsl:text>
+    <xsl:text>   "urgency":  </xsl:text><xsl:value-of select="$urg"/><xsl:text>,</xsl:text>
+    <xsl:text>   "slugline":  "</xsl:text><xsl:value-of select="$slug"/><xsl:text>",</xsl:text>
     <xsl:text>   "bodies": [{"role": "nitf", "value": "</xsl:text><xsl:apply-templates select="/nitf/body"/>" <xsl:text>}]}</xsl:text>
   </xsl:template>
  
