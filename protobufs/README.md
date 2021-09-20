@@ -40,7 +40,7 @@ Generating code from the protobuf schema
 ----------------------------------------
 
 If you install the 
-https://github.com/protocolbuffers/protobuf/releases/[Google protobuf compiler],
+[Google protobuf compiler](https://github.com/protocolbuffers/protobuf/releases/),
 you can create a code library in many languages.
 
 For example, we create a Python library with:
