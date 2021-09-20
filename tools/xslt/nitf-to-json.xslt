@@ -5,8 +5,10 @@
  
   <!-- MATCHES EVERYTHING, CREATES A JSON OBJECT, THEN CALLS A SUB-TEMPLATE TO GRAB AND ESCAPE THE NITF BODY CONTENT -->
   <xsl:template match="/">
+    <xsl:variable name="uid" select="/nitf/head/docdata/doc-id/@id-string"/>
     <xsl:text>{</xsl:text>
-    <xsl:text>   "body_nitf": "</xsl:text><xsl:apply-templates select="/nitf/body"/>" <xsl:text>}</xsl:text>
+    <xsl:text>   "uri":  "</xsl:text><xsl:value-of select="$uid"/><xsl:text>",</xsl:text>
+    <xsl:text>   "bodies": [{"role": "nitf", "value": "</xsl:text><xsl:apply-templates select="/nitf/body"/>" <xsl:text>}]}</xsl:text>
   </xsl:template>
  
   <!-- GRAB AND ESCAPES THE NITF BODY -->

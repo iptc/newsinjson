@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<nitf version="-//IPTC//DTD NITF 3.6//EN" baselang="nb-NO">
+  <head>
+    <title>Pandemien herjer på den legeløse indiske landsbygda</title>
+    <meta content="1" name="NTBBilderAntall"/>
+    <meta content="Superdesk" name="NTBEditor"/>
+    <meta content="Nyhetstjenesten" name="NTBTjeneste"/>
+    <meta content="2021-05-16_09-00-04_Nyhetstjenesten_Utenriks_india-korona-bygd.xml" name="filename"/>
+    <meta content="2021.05.16 09:00:04" name="timestamp"/>
+    <meta content="16.05.2021 09:00" name="ntb-dato"/>
+    <meta content="16.05.2021" name="NTBUtDato"/>
+    <meta content="india-korona-bygd" name="NTBStikkord"/>
+    <meta content="india-korona-bygd" name="subject"/>
+    <meta content="NTB5df9281a-a270-4dc5-a618-869bbc3bbca7" name="NTBID"/>
+    <meta content="ALL" name="NTBDistribusjonsKode"/>
+    <meta content="A" name="NTBKanal"/>
+    <meta content="1657" name="NTBIPTCSequence"/>
+    <tobject tobject.type="Utenriks">
+      <tobject.property tobject.property.type="Nyheter"/>
+      <tobject.subject tobject.subject.matter="Sykdom" tobject.subject.refnum="07001000"/>
+      <tobject.subject tobject.subject.refnum="07000000" tobject.subject.type="Medisin og helse"/>
+    </tobject>
+    <docdata>
+      <urgency ed-urg="5"/>
+      <date.issue norm="2021-05-16T09:00:04"/>
+      <doc-id id-string="NTB5df9281a-a270-4dc5-a618-869bbc3bbca7_00" regsrc="NTB"/>
+      <ed-msg info=""/>
+      <key-list>
+        <keyword key="india-korona-bygd"/>
+      </key-list>
+      <du-key key="india-korona-bygd" version="1"/>
+      <evloc state-prov="Asia" county-dist="India"/>
+      <evloc county-dist="Asia"/>
+    </docdata>
+    <pubdata date.publication="20210516T090004" item-length="2867" unit-of-measure="character"/>
+  </head>
+  <body>
+    <body.head>
+      <hedline>
+        <hl1>Pandemien herjer på den legeløse indiske landsbygda</hl1>
+      </hedline>
+      <byline>NTB-AFP-DPA</byline>
+      <distributor>
+        <org>NTB</org>
+      </distributor>
+      <dateline>Unnao</dateline>
+    </body.head>
+    <body.content>
+      <p class="lead" lede="true">Koronapandemien herjer også i landsbyer rundt omkring i India. Døde kastes ut i elver, og de syke behandles med urter av leger uten medisinsk opplæring.</p>
+      <p class="txt-ind">&#8211; Det er så mye fattigdom rundt omkring i landsbyen at folk ikke har råd til ordentlig kremasjoner. De knytter ofte store steiner til likene og kaster dem ut i elva, sier Kidwai Ahmad, fra landsbyen Sadullahpur i den enorme delstaten Uttar Pradesh.</p>
+      <p class="txt-ind">Han kaller situasjonen katastrofal. Uttar Pradesh huser over 200 millioner av Indias innbyggere, men er samtidig blant de aller fattigste delstatene. </p>
+      <p class="txt-ind">&#8211; Noen kaster til og med bare liket ut i elva uten å bruke steiner som lodd. Andre bare begraver de døde i et lite hull i graven, og venter ikke engang for å se om hunder og kråker spiser dem.</p>
+      <hl2>- Det skjulte India</hl2>
+      <p class="txt">Ingen leger har vært innom landsbyen den siste måneden. De syke blir hjemme og tar urtemedisin, sier Ahmad.</p>
+      <p class="txt-ind">Hvis folk overhodet kommer seg til helsestasjoner og sykehus, mangler det sengeplasser, medisin og oksygen. </p>
+      <p class="txt-ind">&#8211; Folk blir etterlatt for å dø. Dette er det skjulte India, mener Ahmad.</p>
+      <p class="txt-ind">Fredag meldte India om ytterligere 343.000 tilfeller av koronaviruset. Dermed er det mer enn 24 millioner som har vært bekreftet koronasmittet i landet.</p>
+      <hl2>Myndighetene patruljerer langs elvebredden</hl2>
+      <p class="txt">De siste dagene har mer enn 100 lik drevet i land langs den enorme elva Ganges, som renner gjennom store deler av det nordlige India. I Unnao-distriktet i Uttar Pradesh begraves flere titalls mennesker i sanden langs elvebredden. </p>
+      <p class="txt-ind">Fredag uttalte myndighetene at de skal begynne å patruljere langs elvebredden for å hindre at folk kvitter seg med sine avdøde der.</p>
+      <p class="txt-ind">Innbyggerne mener det ikke finnes nok ved til å lage et kremasjonsbål, men myndighetene sier ved ikke er en mangelvare. Delstatsregjeringen insisterer også på at de jobber intenst med smittesporing, testing og behandling av koronapasienter. Lokale myndighetspersoner mener imidlertid helsevesenet har kollapset. </p>
+      <hl2>Ingen fagfolk</hl2>
+      <p class="txt">&#8211; Det finnes ingen lege på helsestasjonen, og det er hovedsakelig ufaglærte fra apotekene som tar seg av behandlingen og medisineringen, sier Ajay Singh Yadav.</p>
+      <p class="txt-ind">Han forteller at de unge apoteksansatte deler ut medisiner basert på sin egen forståelse av folks symptomer.</p>
+      <p class="txt-ind">Yadav mener lokalvalget i delstaten skal ha deler av skylden, ettersom mange millioner av mennesker gikk ut for å stemme, og kandidater dro rundt for å drive valgkamp.</p>
+      <hl2>Amatørleger uten utstyr</hl2>
+      <p class="txt">I nabodelstaten Bihar ble Guddu Khan behandlet av en «jhola chhaap»-lege (amatørlege) som manglet grunnleggende utstyr. Det finnes flere hundre tusen uregistrerte og ukvalifiserte behandlere i India, som landets landsbybefolkning ofte er avhengige av.</p>
+      <p class="txt-ind">Ifølge Khans slektning Arman Khan er det hundrevis av mennesker som besøker slike amatørleger. I likhet med Khan, som hadde feber, hoste og blødende sår i en uke, blir de sjelden testet og havner dermed ikke i den offisielle statistikken. </p>
+      <p class="txt-ind">Derfor regner man med at Indias offisielle koronadødstall på 260.000 er langt under det virkelige antallet som har omkommet med sykdommen.</p>
+      <p class="txt">(©NTB)</p>
+      <media media-type="image">
+        <media-reference mime-type="image/jpeg" source="JsxLggxsoo4"/>
+        <media-caption>Kremasjonsbål for koronaofre brenner i Indias hovedstad New Delhi. Foto: Amit Sharma / AP / NTB</media-caption>
+      </media>
+    </body.content>
+    <body.end>
+      <tagline><a href="mailto:kenneth.kandolf.haug@ntb.no">kenneth.kandolf.haug@ntb.no</a>/<a href="mailto:per.christensen@ntb.no">per.christensen@ntb.no</a></tagline>
+    </body.end>
+  </body>
+</nitf>
