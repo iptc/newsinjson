@@ -15,12 +15,14 @@
     <xsl:variable name="slug" select="/nitf/head/docdata/du-key/@key"/>
     <xsl:variable name="version" select="/nitf/head/docdata/du-key/@version"/>
     <xsl:variable name="urg" select="/nitf/head/docdata/urgency/@ed-urg"/>
+    <xsl:variable name="headline" select="/nitf/body/body.head/hedline/hl1"/>
     <xsl:text>{</xsl:text>
     <xsl:text>   "uri":  "</xsl:text><xsl:value-of select="$uid"/><xsl:text>",</xsl:text>
     <xsl:text>   "versioncreated":  "</xsl:text><xsl:value-of select="$timestamp"/><xsl:text>Z",</xsl:text>
     <xsl:text>   "version":  "</xsl:text><xsl:value-of select="$version"/><xsl:text>",</xsl:text>
     <xsl:text>   "urgency":  </xsl:text><xsl:value-of select="$urg"/><xsl:text>,</xsl:text>
     <xsl:text>   "slugline":  "</xsl:text><xsl:value-of select="$slug"/><xsl:text>",</xsl:text>
+    <xsl:text>   "headlines": [{"value": "</xsl:text><xsl:value-of select="$headline"/><xsl:text>"}],</xsl:text>
     <xsl:text>   "bodies": [{"role": "nitf", "value": "</xsl:text><xsl:apply-templates select="/nitf/body"/>" <xsl:text>}]}</xsl:text>
   </xsl:template>
  
