@@ -23,7 +23,9 @@ In a more realistic setup you would need to add support to connect to the databa
   uri
   pubstatus
   language
-  headline
+  headlines {
+    value
+  }
 }
 }`
 Will show these four properties for each ninjs item.
@@ -33,7 +35,9 @@ Will show these four properties for each ninjs item.
   uri
   pubstatus
   language
-  headline
+  headlines {
+    value
+  }
 }
 }`
 Will only show the usable items that is in Swedish.
@@ -42,9 +46,9 @@ Will only show the usable items that is in Swedish.
 
 
 
-The samples in the data.json come from TT, NTB, DPA and AP. They have been adapted to fit the ninjs 1.2 schema. 
+The samples in the data.json come from TT, NTB, DPA and AP. They have been adapted to fit the ninjs 2.0 schema. 
 
 
 
-Johan Lindgren November 2019
+Johan Lindgren September 2021
 
