@@ -34,7 +34,7 @@ jsonschema-protobuf specification/ninjs-schema_2.0.json >protobufs/ninjs20.proto
 The jsonschema-protobuf tool doesn't yet support enum fields so we have to add
 them manually. The version of `ninjs20.proto` in this repository has enums
 added. We also manually change the version to "proto2" so we can use `required`
-fields.
+fields, and change the message type of Associations to support any Ninjs object.
 
 Generating code from the protobuf schema
 ----------------------------------------
@@ -45,10 +45,10 @@ you can create a code library in many languages.
 
 For example, we create a Python library with:
 
-`$PATH_TO_PROTOBUF/bin/protoc --python_out=. ninjs20-dev.proto`
+`$PATH_TO_PROTOBUF/bin/protoc --python_out=. ninjs20.proto`
 
-This generates the file `ninjs20_dev_pb2.py` which can be included in Python
-scripts with `import ninjs20_dev_pb2`. (Note that the name must end with `_pb2`,
+This generates the file `ninjs20_pb2.py` which can be included in Python
+scripts with `import ninjs20_pb2`. (Note that the name must end with `_pb2`,
 even if the schema uses proto3, or the tool won't work)
 
 Using the generated code

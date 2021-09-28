@@ -112,6 +112,11 @@ if __name__ == '__main__':
         role = "main",
         value = "Man bites dog"
     )
+    # Associations
+    newsitem.associations.add(
+        uri='http://IPTC.com/image/61732fc32-9cbf-48db-a3a2-57b49a321310',
+        type=ninjs20_pb2.Ninjs.Type.video
+    )
     ninjs_protobuf_string = newsitem.SerializeToString()
 
     print("Protobuf serialised version of ninjs article:")
@@ -177,3 +182,5 @@ if __name__ == '__main__':
     for body in ninjs_obj.bodies:
         print("\tBody ("+body.role+"):")
         printwrapped(body.value)
+    for assoc in ninjs_obj.associations:
+        print("\tAssociation "+assoc.uri+"")

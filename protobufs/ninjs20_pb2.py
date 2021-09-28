@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto2',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rninjs20.proto\"\xf7\x17\n\x05Ninjs\x12\x0b\n\x03uri\x18\x01 \x02(\t\x12\x19\n\x04type\x18\x02 \x01(\x0e\x32\x0b.Ninjs.Type\x12\x35\n\x12representationtype\x18\x03 \x01(\x0e\x32\x19.Ninjs.Representationtype\x12\x0f\n\x07profile\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\x14\n\x0c\x66irstcreated\x18\x06 \x01(\t\x12\x16\n\x0eversioncreated\x18\x07 \x01(\t\x12\x16\n\x0e\x63ontentcreated\x18\x08 \x01(\t\x12\x11\n\tembargoed\x18\t \x01(\t\x12#\n\tpubstatus\x18\n \x01(\x0e\x32\x10.Ninjs.Pubstatus\x12\x0f\n\x07urgency\x18\x0b \x01(\x05\x12\x17\n\x0f\x63opyrightholder\x18\x0c \x01(\t\x12\x17\n\x0f\x63opyrightnotice\x18\r \x01(\t\x12\x12\n\nusageterms\x18\x0e \x01(\t\x12\x0e\n\x06\x65\x64note\x18\x0f \x01(\t\x12\x10\n\x08language\x18\x10 \x01(\t\x12)\n\x0c\x64\x65scriptions\x18\x11 \x03(\x0b\x32\x13.Ninjs.Descriptions\x12\x1d\n\x06\x62odies\x18\x12 \x03(\x0b\x32\r.Ninjs.Bodies\x12#\n\theadlines\x18\x13 \x03(\x0b\x32\x10.Ninjs.Headlines\x12\x1d\n\x06people\x18\x14 \x03(\x0b\x32\r.Ninjs.People\x12+\n\rorganisations\x18\x15 \x03(\x0b\x32\x14.Ninjs.Organisations\x12\x1d\n\x06places\x18\x16 \x03(\x0b\x32\r.Ninjs.Places\x12!\n\x08subjects\x18\x17 \x03(\x0b\x32\x0f.Ninjs.Subjects\x12\x1d\n\x06\x65vents\x18\x18 \x03(\x0b\x32\r.Ninjs.Events\x12\x1f\n\x07objects\x18\x19 \x03(\x0b\x32\x0e.Ninjs.Objects\x12\'\n\x0binfosources\x18\x1a \x03(\x0b\x32\x12.Ninjs.Infosources\x12\r\n\x05title\x18\x1b \x01(\t\x12\n\n\x02\x62y\x18\x1c \x01(\t\x12\x10\n\x08slugline\x18\x1d \x01(\t\x12\x0f\n\x07located\x18\x1e \x01(\t\x12%\n\nrenditions\x18\x1f \x03(\x0b\x32\x11.Ninjs.Renditions\x12)\n\x0c\x61ssociations\x18  \x03(\x0b\x32\x13.Ninjs.Associations\x12\x1d\n\x06\x61ltids\x18! \x03(\x0b\x32\r.Ninjs.Altids\x12/\n\x0ftrustindicators\x18\" \x03(\x0b\x32\x16.Ninjs.Trustindicators\x12!\n\x08standard\x18# \x01(\x0b\x32\x0f.Ninjs.Standard\x12\x1d\n\x06genres\x18$ \x03(\x0b\x32\r.Ninjs.Genres\x12%\n\nrightsinfo\x18% \x01(\x0b\x32\x11.Ninjs.Rightsinfo\x1a@\n\x0c\x44\x65scriptions\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\x13\n\x0b\x63ontenttype\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x02(\t\x1a`\n\x06\x42odies\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\x13\n\x0b\x63ontenttype\x18\x02 \x01(\t\x12\x11\n\tcharcount\x18\x03 \x01(\x05\x12\x11\n\twordcount\x18\x04 \x01(\x05\x12\r\n\x05value\x18\x05 \x02(\t\x1a=\n\tHeadlines\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\x13\n\x0b\x63ontenttype\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x02(\t\x1a\x41\n\x06People\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\xa4\x01\n\rOrganisations\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x12-\n\x07symbols\x18\x05 \x03(\x0b\x32\x1c.Ninjs.Organisations.Symbols\x1a+\n\x07Symbols\x12\x0e\n\x06ticker\x18\x01 \x01(\t\x12\x10\n\x08\x65xchange\x18\x02 \x01(\t\x1a\xa3\x01\n\x05Value\x12\x16\n\x0cstring_value\x18\x01 \x01(\tH\x00\x12\x16\n\x0c\x64ouble_value\x18\x02 \x01(\x01H\x00\x12\x17\n\rpos_int_value\x18\x03 \x01(\x04H\x00\x12\x17\n\rneg_int_value\x18\x04 \x01(\x04H\x00\x12\x14\n\nbool_value\x18\x05 \x01(\x08H\x00\x12\x14\n\njson_value\x18\x06 \x01(\tH\x00\x42\x0c\n\nvalue_type\x1a\xb8\x02\n\x08Geometry\x12\"\n\x04type\x18\x01 \x02(\x0e\x32\x14.Ninjs.Geometry.Type\x12\x13\n\x07lengths\x18\x02 \x03(\rB\x02\x10\x01\x12\x12\n\x06\x63oords\x18\x03 \x03(\x12\x42\x02\x10\x01\x12#\n\ngeometries\x18\x04 \x03(\x0b\x32\x0f.Ninjs.Geometry\x12\x1c\n\x06values\x18\r \x03(\x0b\x32\x0c.Ninjs.Value\x12\x1d\n\x11\x63ustom_properties\x18\x0f \x03(\rB\x02\x10\x01\"}\n\x04Type\x12\t\n\x05POINT\x10\x00\x12\x0e\n\nMULTIPOINT\x10\x01\x12\x0e\n\nLINESTRING\x10\x02\x12\x13\n\x0fMULTILINESTRING\x10\x03\x12\x0b\n\x07POLYGON\x10\x04\x12\x10\n\x0cMULTIPOLYGON\x10\x05\x12\x16\n\x12GEOMETRYCOLLECTION\x10\x06\x1al\n\x06Places\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x12)\n\x10geometry_geojson\x18\x05 \x01(\x0b\x32\x0f.Ninjs.Geometry\x1a\x43\n\x08Subjects\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x41\n\x06\x45vents\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x42\n\x07Objects\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1aG\n\x0bInfosources\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04role\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\xa2\x01\n\nRenditions\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x0c\n\x04href\x18\x02 \x01(\t\x12\x13\n\x0b\x63ontenttype\x18\x03 \x01(\t\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\r\n\x05width\x18\x06 \x01(\x05\x12\x13\n\x0bsizeinbytes\x18\x07 \x01(\x05\x12\x10\n\x08\x64uration\x18\x08 \x01(\x05\x12\x0e\n\x06\x66ormat\x18\t \x01(\t\x1a\x0e\n\x0c\x41ssociations\x1a%\n\x06\x41ltids\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a<\n\x0fTrustindicators\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0c\n\x04href\x18\x03 \x01(\t\x1a\x39\n\x08Standard\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x0e\n\x06schema\x18\x03 \x01(\t\x1a\x34\n\x06Genres\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03uri\x18\x02 \x01(\t\x12\x0f\n\x07literal\x18\x03 \x01(\t\x1aI\n\nRightsinfo\x12\x0e\n\x06langid\x18\x01 \x01(\t\x12\x14\n\x0clinkedrights\x18\x02 \x01(\t\x12\x15\n\rencodedrights\x18\x03 \x01(\t\"^\n\x04Type\x12\x08\n\x04text\x10\x00\x12\t\n\x05\x61udio\x10\x01\x12\t\n\x05video\x10\x02\x12\x0b\n\x07picture\x10\x03\x12\x0b\n\x07graphic\x10\x04\x12\r\n\tcomposite\x10\x05\x12\r\n\tcomponent\x10\x06\"+\n\x12Representationtype\x12\x08\n\x04\x66ull\x10\x00\x12\x0b\n\x07partial\x10\x01\"3\n\tPubstatus\x12\n\n\x06usable\x10\x00\x12\x0c\n\x08withheld\x10\x01\x12\x0c\n\x08\x63\x61nceled\x10\x02'
+  serialized_pb=b'\n\rninjs20.proto\"\xda\x17\n\x05Ninjs\x12\x0b\n\x03uri\x18\x01 \x02(\t\x12\x19\n\x04type\x18\x02 \x01(\x0e\x32\x0b.Ninjs.Type\x12\x35\n\x12representationtype\x18\x03 \x01(\x0e\x32\x19.Ninjs.Representationtype\x12\x0f\n\x07profile\x18\x04 \x01(\t\x12\x0f\n\x07version\x18\x05 \x01(\t\x12\x14\n\x0c\x66irstcreated\x18\x06 \x01(\t\x12\x16\n\x0eversioncreated\x18\x07 \x01(\t\x12\x16\n\x0e\x63ontentcreated\x18\x08 \x01(\t\x12\x11\n\tembargoed\x18\t \x01(\t\x12#\n\tpubstatus\x18\n \x01(\x0e\x32\x10.Ninjs.Pubstatus\x12\x0f\n\x07urgency\x18\x0b \x01(\x05\x12\x17\n\x0f\x63opyrightholder\x18\x0c \x01(\t\x12\x17\n\x0f\x63opyrightnotice\x18\r \x01(\t\x12\x12\n\nusageterms\x18\x0e \x01(\t\x12\x0e\n\x06\x65\x64note\x18\x0f \x01(\t\x12\x10\n\x08language\x18\x10 \x01(\t\x12)\n\x0c\x64\x65scriptions\x18\x11 \x03(\x0b\x32\x13.Ninjs.Descriptions\x12\x1d\n\x06\x62odies\x18\x12 \x03(\x0b\x32\r.Ninjs.Bodies\x12#\n\theadlines\x18\x13 \x03(\x0b\x32\x10.Ninjs.Headlines\x12\x1d\n\x06people\x18\x14 \x03(\x0b\x32\r.Ninjs.People\x12+\n\rorganisations\x18\x15 \x03(\x0b\x32\x14.Ninjs.Organisations\x12\x1d\n\x06places\x18\x16 \x03(\x0b\x32\r.Ninjs.Places\x12!\n\x08subjects\x18\x17 \x03(\x0b\x32\x0f.Ninjs.Subjects\x12\x1d\n\x06\x65vents\x18\x18 \x03(\x0b\x32\r.Ninjs.Events\x12\x1f\n\x07objects\x18\x19 \x03(\x0b\x32\x0e.Ninjs.Objects\x12\'\n\x0binfosources\x18\x1a \x03(\x0b\x32\x12.Ninjs.Infosources\x12\r\n\x05title\x18\x1b \x01(\t\x12\n\n\x02\x62y\x18\x1c \x01(\t\x12\x10\n\x08slugline\x18\x1d \x01(\t\x12\x0f\n\x07located\x18\x1e \x01(\t\x12%\n\nrenditions\x18\x1f \x03(\x0b\x32\x11.Ninjs.Renditions\x12\x1c\n\x0c\x61ssociations\x18  \x03(\x0b\x32\x06.Ninjs\x12\x1d\n\x06\x61ltids\x18! \x03(\x0b\x32\r.Ninjs.Altids\x12/\n\x0ftrustindicators\x18\" \x03(\x0b\x32\x16.Ninjs.Trustindicators\x12!\n\x08standard\x18# \x01(\x0b\x32\x0f.Ninjs.Standard\x12\x1d\n\x06genres\x18$ \x03(\x0b\x32\r.Ninjs.Genres\x12%\n\nrightsinfo\x18% \x01(\x0b\x32\x11.Ninjs.Rightsinfo\x1a@\n\x0c\x44\x65scriptions\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\x13\n\x0b\x63ontenttype\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x02(\t\x1a`\n\x06\x42odies\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\x13\n\x0b\x63ontenttype\x18\x02 \x01(\t\x12\x11\n\tcharcount\x18\x03 \x01(\x05\x12\x11\n\twordcount\x18\x04 \x01(\x05\x12\r\n\x05value\x18\x05 \x02(\t\x1a=\n\tHeadlines\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\x13\n\x0b\x63ontenttype\x18\x02 \x01(\t\x12\r\n\x05value\x18\x03 \x02(\t\x1a\x41\n\x06People\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\xa4\x01\n\rOrganisations\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x12-\n\x07symbols\x18\x05 \x03(\x0b\x32\x1c.Ninjs.Organisations.Symbols\x1a+\n\x07Symbols\x12\x0e\n\x06ticker\x18\x01 \x01(\t\x12\x10\n\x08\x65xchange\x18\x02 \x01(\t\x1a\xa3\x01\n\x05Value\x12\x16\n\x0cstring_value\x18\x01 \x01(\tH\x00\x12\x16\n\x0c\x64ouble_value\x18\x02 \x01(\x01H\x00\x12\x17\n\rpos_int_value\x18\x03 \x01(\x04H\x00\x12\x17\n\rneg_int_value\x18\x04 \x01(\x04H\x00\x12\x14\n\nbool_value\x18\x05 \x01(\x08H\x00\x12\x14\n\njson_value\x18\x06 \x01(\tH\x00\x42\x0c\n\nvalue_type\x1a\xb8\x02\n\x08Geometry\x12\"\n\x04type\x18\x01 \x02(\x0e\x32\x14.Ninjs.Geometry.Type\x12\x13\n\x07lengths\x18\x02 \x03(\rB\x02\x10\x01\x12\x12\n\x06\x63oords\x18\x03 \x03(\x12\x42\x02\x10\x01\x12#\n\ngeometries\x18\x04 \x03(\x0b\x32\x0f.Ninjs.Geometry\x12\x1c\n\x06values\x18\r \x03(\x0b\x32\x0c.Ninjs.Value\x12\x1d\n\x11\x63ustom_properties\x18\x0f \x03(\rB\x02\x10\x01\"}\n\x04Type\x12\t\n\x05POINT\x10\x00\x12\x0e\n\nMULTIPOINT\x10\x01\x12\x0e\n\nLINESTRING\x10\x02\x12\x13\n\x0fMULTILINESTRING\x10\x03\x12\x0b\n\x07POLYGON\x10\x04\x12\x10\n\x0cMULTIPOLYGON\x10\x05\x12\x16\n\x12GEOMETRYCOLLECTION\x10\x06\x1al\n\x06Places\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x12)\n\x10geometry_geojson\x18\x05 \x01(\x0b\x32\x0f.Ninjs.Geometry\x1a\x43\n\x08Subjects\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x41\n\x06\x45vents\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\x42\n\x07Objects\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03rel\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1aG\n\x0bInfosources\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04role\x18\x02 \x01(\t\x12\x0b\n\x03uri\x18\x03 \x01(\t\x12\x0f\n\x07literal\x18\x04 \x01(\t\x1a\xa2\x01\n\nRenditions\x12\x0c\n\x04name\x18\x01 \x02(\t\x12\x0c\n\x04href\x18\x02 \x01(\t\x12\x13\n\x0b\x63ontenttype\x18\x03 \x01(\t\x12\r\n\x05title\x18\x04 \x01(\t\x12\x0e\n\x06height\x18\x05 \x01(\x05\x12\r\n\x05width\x18\x06 \x01(\x05\x12\x13\n\x0bsizeinbytes\x18\x07 \x01(\x05\x12\x10\n\x08\x64uration\x18\x08 \x01(\x05\x12\x0e\n\x06\x66ormat\x18\t \x01(\t\x1a%\n\x06\x41ltids\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x1a<\n\x0fTrustindicators\x12\x0c\n\x04role\x18\x01 \x01(\t\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0c\n\x04href\x18\x03 \x01(\t\x1a\x39\n\x08Standard\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x0e\n\x06schema\x18\x03 \x01(\t\x1a\x34\n\x06Genres\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0b\n\x03uri\x18\x02 \x01(\t\x12\x0f\n\x07literal\x18\x03 \x01(\t\x1aI\n\nRightsinfo\x12\x0e\n\x06langid\x18\x01 \x01(\t\x12\x14\n\x0clinkedrights\x18\x02 \x01(\t\x12\x15\n\rencodedrights\x18\x03 \x01(\t\"^\n\x04Type\x12\x08\n\x04text\x10\x00\x12\t\n\x05\x61udio\x10\x01\x12\t\n\x05video\x10\x02\x12\x0b\n\x07picture\x10\x03\x12\x0b\n\x07graphic\x10\x04\x12\r\n\tcomposite\x10\x05\x12\r\n\tcomponent\x10\x06\"+\n\x12Representationtype\x12\x08\n\x04\x66ull\x10\x00\x12\x0b\n\x07partial\x10\x01\"3\n\tPubstatus\x12\n\n\x06usable\x10\x00\x12\x0c\n\x08withheld\x10\x01\x12\x0c\n\x08\x63\x61nceled\x10\x02'
 )
 
 
@@ -69,8 +69,8 @@ _NINJS_GEOMETRY_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=1905,
-  serialized_end=2030,
+  serialized_start=1892,
+  serialized_end=2017,
 )
 _sym_db.RegisterEnumDescriptor(_NINJS_GEOMETRY_TYPE)
 
@@ -119,8 +119,8 @@ _NINJS_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2889,
-  serialized_end=2983,
+  serialized_start=2860,
+  serialized_end=2954,
 )
 _sym_db.RegisterEnumDescriptor(_NINJS_TYPE)
 
@@ -144,8 +144,8 @@ _NINJS_REPRESENTATIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2985,
-  serialized_end=3028,
+  serialized_start=2956,
+  serialized_end=2999,
 )
 _sym_db.RegisterEnumDescriptor(_NINJS_REPRESENTATIONTYPE)
 
@@ -174,8 +174,8 @@ _NINJS_PUBSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3030,
-  serialized_end=3081,
+  serialized_start=3001,
+  serialized_end=3052,
 )
 _sym_db.RegisterEnumDescriptor(_NINJS_PUBSTATUS)
 
@@ -221,8 +221,8 @@ _NINJS_DESCRIPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1090,
-  serialized_end=1154,
+  serialized_start=1077,
+  serialized_end=1141,
 )
 
 _NINJS_BODIES = _descriptor.Descriptor(
@@ -280,8 +280,8 @@ _NINJS_BODIES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1156,
-  serialized_end=1252,
+  serialized_start=1143,
+  serialized_end=1239,
 )
 
 _NINJS_HEADLINES = _descriptor.Descriptor(
@@ -325,8 +325,8 @@ _NINJS_HEADLINES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1254,
-  serialized_end=1315,
+  serialized_start=1241,
+  serialized_end=1302,
 )
 
 _NINJS_PEOPLE = _descriptor.Descriptor(
@@ -377,8 +377,8 @@ _NINJS_PEOPLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1317,
-  serialized_end=1382,
+  serialized_start=1304,
+  serialized_end=1369,
 )
 
 _NINJS_ORGANISATIONS_SYMBOLS = _descriptor.Descriptor(
@@ -415,8 +415,8 @@ _NINJS_ORGANISATIONS_SYMBOLS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1506,
-  serialized_end=1549,
+  serialized_start=1493,
+  serialized_end=1536,
 )
 
 _NINJS_ORGANISATIONS = _descriptor.Descriptor(
@@ -474,8 +474,8 @@ _NINJS_ORGANISATIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1385,
-  serialized_end=1549,
+  serialized_start=1372,
+  serialized_end=1536,
 )
 
 _NINJS_VALUE = _descriptor.Descriptor(
@@ -545,8 +545,8 @@ _NINJS_VALUE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=1552,
-  serialized_end=1715,
+  serialized_start=1539,
+  serialized_end=1702,
 )
 
 _NINJS_GEOMETRY = _descriptor.Descriptor(
@@ -612,8 +612,8 @@ _NINJS_GEOMETRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1718,
-  serialized_end=2030,
+  serialized_start=1705,
+  serialized_end=2017,
 )
 
 _NINJS_PLACES = _descriptor.Descriptor(
@@ -671,8 +671,8 @@ _NINJS_PLACES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2032,
-  serialized_end=2140,
+  serialized_start=2019,
+  serialized_end=2127,
 )
 
 _NINJS_SUBJECTS = _descriptor.Descriptor(
@@ -723,8 +723,8 @@ _NINJS_SUBJECTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2142,
-  serialized_end=2209,
+  serialized_start=2129,
+  serialized_end=2196,
 )
 
 _NINJS_EVENTS = _descriptor.Descriptor(
@@ -775,8 +775,8 @@ _NINJS_EVENTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2211,
-  serialized_end=2276,
+  serialized_start=2198,
+  serialized_end=2263,
 )
 
 _NINJS_OBJECTS = _descriptor.Descriptor(
@@ -827,8 +827,8 @@ _NINJS_OBJECTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2278,
-  serialized_end=2344,
+  serialized_start=2265,
+  serialized_end=2331,
 )
 
 _NINJS_INFOSOURCES = _descriptor.Descriptor(
@@ -879,8 +879,8 @@ _NINJS_INFOSOURCES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2346,
-  serialized_end=2417,
+  serialized_start=2333,
+  serialized_end=2404,
 )
 
 _NINJS_RENDITIONS = _descriptor.Descriptor(
@@ -966,32 +966,8 @@ _NINJS_RENDITIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2420,
-  serialized_end=2582,
-)
-
-_NINJS_ASSOCIATIONS = _descriptor.Descriptor(
-  name='Associations',
-  full_name='Ninjs.Associations',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto2',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2584,
-  serialized_end=2598,
+  serialized_start=2407,
+  serialized_end=2569,
 )
 
 _NINJS_ALTIDS = _descriptor.Descriptor(
@@ -1028,8 +1004,8 @@ _NINJS_ALTIDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2600,
-  serialized_end=2637,
+  serialized_start=2571,
+  serialized_end=2608,
 )
 
 _NINJS_TRUSTINDICATORS = _descriptor.Descriptor(
@@ -1073,8 +1049,8 @@ _NINJS_TRUSTINDICATORS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2639,
-  serialized_end=2699,
+  serialized_start=2610,
+  serialized_end=2670,
 )
 
 _NINJS_STANDARD = _descriptor.Descriptor(
@@ -1118,8 +1094,8 @@ _NINJS_STANDARD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2701,
-  serialized_end=2758,
+  serialized_start=2672,
+  serialized_end=2729,
 )
 
 _NINJS_GENRES = _descriptor.Descriptor(
@@ -1163,8 +1139,8 @@ _NINJS_GENRES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2760,
-  serialized_end=2812,
+  serialized_start=2731,
+  serialized_end=2783,
 )
 
 _NINJS_RIGHTSINFO = _descriptor.Descriptor(
@@ -1208,8 +1184,8 @@ _NINJS_RIGHTSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2814,
-  serialized_end=2887,
+  serialized_start=2785,
+  serialized_end=2858,
 )
 
 _NINJS = _descriptor.Descriptor(
@@ -1482,7 +1458,7 @@ _NINJS = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_NINJS_DESCRIPTIONS, _NINJS_BODIES, _NINJS_HEADLINES, _NINJS_PEOPLE, _NINJS_ORGANISATIONS, _NINJS_VALUE, _NINJS_GEOMETRY, _NINJS_PLACES, _NINJS_SUBJECTS, _NINJS_EVENTS, _NINJS_OBJECTS, _NINJS_INFOSOURCES, _NINJS_RENDITIONS, _NINJS_ASSOCIATIONS, _NINJS_ALTIDS, _NINJS_TRUSTINDICATORS, _NINJS_STANDARD, _NINJS_GENRES, _NINJS_RIGHTSINFO, ],
+  nested_types=[_NINJS_DESCRIPTIONS, _NINJS_BODIES, _NINJS_HEADLINES, _NINJS_PEOPLE, _NINJS_ORGANISATIONS, _NINJS_VALUE, _NINJS_GEOMETRY, _NINJS_PLACES, _NINJS_SUBJECTS, _NINJS_EVENTS, _NINJS_OBJECTS, _NINJS_INFOSOURCES, _NINJS_RENDITIONS, _NINJS_ALTIDS, _NINJS_TRUSTINDICATORS, _NINJS_STANDARD, _NINJS_GENRES, _NINJS_RIGHTSINFO, ],
   enum_types=[
     _NINJS_TYPE,
     _NINJS_REPRESENTATIONTYPE,
@@ -1495,7 +1471,7 @@ _NINJS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=18,
-  serialized_end=3081,
+  serialized_end=3052,
 )
 
 _NINJS_DESCRIPTIONS.containing_type = _NINJS
@@ -1536,7 +1512,6 @@ _NINJS_EVENTS.containing_type = _NINJS
 _NINJS_OBJECTS.containing_type = _NINJS
 _NINJS_INFOSOURCES.containing_type = _NINJS
 _NINJS_RENDITIONS.containing_type = _NINJS
-_NINJS_ASSOCIATIONS.containing_type = _NINJS
 _NINJS_ALTIDS.containing_type = _NINJS
 _NINJS_TRUSTINDICATORS.containing_type = _NINJS
 _NINJS_STANDARD.containing_type = _NINJS
@@ -1556,7 +1531,7 @@ _NINJS.fields_by_name['events'].message_type = _NINJS_EVENTS
 _NINJS.fields_by_name['objects'].message_type = _NINJS_OBJECTS
 _NINJS.fields_by_name['infosources'].message_type = _NINJS_INFOSOURCES
 _NINJS.fields_by_name['renditions'].message_type = _NINJS_RENDITIONS
-_NINJS.fields_by_name['associations'].message_type = _NINJS_ASSOCIATIONS
+_NINJS.fields_by_name['associations'].message_type = _NINJS
 _NINJS.fields_by_name['altids'].message_type = _NINJS_ALTIDS
 _NINJS.fields_by_name['trustindicators'].message_type = _NINJS_TRUSTINDICATORS
 _NINJS.fields_by_name['standard'].message_type = _NINJS_STANDARD
@@ -1668,13 +1643,6 @@ Ninjs = _reflection.GeneratedProtocolMessageType('Ninjs', (_message.Message,), {
     })
   ,
 
-  'Associations' : _reflection.GeneratedProtocolMessageType('Associations', (_message.Message,), {
-    'DESCRIPTOR' : _NINJS_ASSOCIATIONS,
-    '__module__' : 'ninjs20_pb2'
-    # @@protoc_insertion_point(class_scope:Ninjs.Associations)
-    })
-  ,
-
   'Altids' : _reflection.GeneratedProtocolMessageType('Altids', (_message.Message,), {
     'DESCRIPTOR' : _NINJS_ALTIDS,
     '__module__' : 'ninjs20_pb2'
@@ -1728,7 +1696,6 @@ _sym_db.RegisterMessage(Ninjs.Events)
 _sym_db.RegisterMessage(Ninjs.Objects)
 _sym_db.RegisterMessage(Ninjs.Infosources)
 _sym_db.RegisterMessage(Ninjs.Renditions)
-_sym_db.RegisterMessage(Ninjs.Associations)
 _sym_db.RegisterMessage(Ninjs.Altids)
 _sym_db.RegisterMessage(Ninjs.Trustindicators)
 _sym_db.RegisterMessage(Ninjs.Standard)

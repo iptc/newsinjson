@@ -121,9 +121,6 @@ message Ninjs {
     optional string format = 9;
   }
   
-  message Associations {
-  }
-  
   message Altids {
     optional string role = 1;
     optional string value = 2;
@@ -205,7 +202,7 @@ message Ninjs {
   optional string slugline = 29;
   optional string located = 30;
   repeated Renditions renditions = 31;
-  repeated Associations associations = 32;
+  repeated Ninjs associations = 32;
   repeated Altids altids = 33;
   repeated Trustindicators trustindicators = 34;
   optional Standard standard = 35;
