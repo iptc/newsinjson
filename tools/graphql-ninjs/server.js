@@ -4,19 +4,19 @@ var gqlHTTP = require("express-graphql");
 var { buildSchema } = require("graphql");
 var _ = require("lodash");
 
-//This schema is according to the NINJS 1.3 schema
+//This schema is according to the NINJS 2.0 schema
 
 var schema = buildSchema(`
 
     type NINJS {
         uri: String!
         type: String
-        mimetype: String
         representationtype: String
         profile: String
         version: String
         firstcreated: String
         versioncreated: String
+        contentcreated: String
         embargoed: String
         pubstatus: String
         urgency: Int
@@ -25,39 +25,82 @@ var schema = buildSchema(`
         usageterms: String
         ednote: String
         language: String
-        person: [PersonType]
-        organisation: [OrganisationType]
-        place: [PlaceType]
-        subject: [SubjectType]
-        event: [EventType]
-        object: [ObjectType]
-        infosource: [InfosourceType]
+        descriptions: [DescriptionType]
+        bodies: [BodyType]
+        headlines: [HeadlineType]
+        people: [PersonType]
+        organisations: [OrganisationType]
+        places: [PlaceType]
+        subjects: [SubjectType]
+        events: [EventType]
+        objects: [ObjectType]
+        infosources: [InfosourceType]
         title: String
-        byline: String
-        headline: String
+        by: String
         slugline: String
         located: String
+        renditions: [RenditionType]
+        altids: [AltIDType]
+        trustindicators: [TrustindicatorType]
+        genres: [GenreType]
+        rightsinfo: RightsType
+      }
+
+      type RightsType {
+        langid: String
+        linkedrights: String
+        encodedrights: String
+      }
+
+      type AltIDType {
+        role: String
+        value: String
+      } 
+
+      type RenditionType {
+        name: String!
+        href: String
+        contenttype: String
+        title: String
+        height: Float
+        width: Float
+        sizeinbytes: Float
+        duration: Float
+        format: String
+      }
+
+      type HeadlineType {
+        role: String
+        contenttype: String
+        value: String!
+      }
+
+      type BodyType {
+        role: String
+        contenttype: String
         charcount: Int
         wordcount: Int
-        description_text: String
-        description_usage: String
-        body_text: String
-        trustindicator: [TrustindicatorType]
-        genre: [GenreType]
+        value: String!
+      }
+
+      type DescriptionType {
+        role: String
+        contenttype: String
+        value: String!
       }
     
       type PersonType {
-        code: String
+        literal: String
         name: String
         rel: String
-        scheme: String
+        uri: String
       }
 
       type OrganisationType {
-        code: String
+        literal: String
         name: String
         rel: String
-        scheme: String
+        uri: String
         symbols: [OrgSymbolsType]
       }
 
@@ -67,10 +110,10 @@ var schema = buildSchema(`
       }
 
       type PlaceType {
-        code: String
+        literal: String
         name: String
         rel: String
-        scheme: String
+        uri: String
         geometry_geojson: GeoType
       }
 
@@ -80,44 +123,43 @@ var schema = buildSchema(`
     }
 
     type SubjectType {
-        code: String
+        literal: String
         name: String
         rel: String
-        scheme: String
+        uri: String
       }
     
       type EventType {
-        code: String
+        literal: String
         name: String
         rel: String
-        scheme: String
+        uri: String
       }
     
       type ObjectType {
-        code: String
+        literal: String
         name: String
         rel: String
-        scheme: String
+        uri: String
       }
     
       type InfosourceType {
-        code: String
+        literal: String
         name: String
         rel: String
-        scheme: String
+        uri: String
       }
 
       type TrustindicatorType {
-        code: String
+        role: String
         title: String
         href: String
-        scheme: String
       }
 
       type GenreType {
-        code: String
+        literal: String
         name: String
-        scheme: String
+        uri: String
       }
     
 
