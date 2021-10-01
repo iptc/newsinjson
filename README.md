@@ -32,7 +32,7 @@ opportunity to make property names more consistent with NewsML-G2 and to add
 some fields to handle rights.
 
 The 2.0 version of ninjs was approved by the IPTC Standards Committee on
-xx xxx 2021.
+October 20th, 2021.
 
 Protocol Buffers demo
 ---------------------
@@ -63,7 +63,7 @@ unit tests.
 Dev schema
 ----------
 
-A "development" version of the schema is available in the `specification`
+A "development" version of the 1.3 schema is available in the `specification`
 folder and at 
 http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.2_v1.3.json
 
@@ -75,5 +75,5 @@ ninjs Generator
 ---------------
 
 In the `generator` folder is the source code to the ninjs generator, a
-user-facing tool to generate sample ninjs files,  which is hosted at
+user-facing tool to generate sample ninjs files of either 1.3 or 2.0 version,  which is hosted at
 https://www.iptc.org/std/ninjs/generator/. 
