@@ -1,12 +1,19 @@
 # ninjs Examples
 
-Examples beginning with "businesswire" are available in two formats.
-The document with the extension "xml" is the news release in NewsML
-1.2 format, and the document with the extension "json" is the news
-release in ninjs format. The examples validate against the latest
-ninjs schema, which is currently 1.3.
+There are three folders of examples:
 
-The latest ninjs specification file is available in JSON schema format
-at
+In 2.0 you can find samples with various purposes and from different providers following the 2.0 schema.
+(The providers do not use 2.0 so the samples have been manually converted to illustrate the 2.0 version.)
+
+In 1.3 we have collected samples from various providers to illustrate the 1.3 version of ninjs.
+
+The NewsML folder holds some xml samples that were converted to ninjs 1.3.
+
+
+The latest ninjs specification file is available in JSON schema format at
+
+    http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json
+
+The most recent specification for ninjs generation 1 is available at
 
     http://www.iptc.org/std/ninjs/ninjs-schema_1.3.json
