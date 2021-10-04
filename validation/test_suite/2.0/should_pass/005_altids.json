@@ -1,53 +1,53 @@
 {
-	"standard": {
-	    "name": "ninjs",
-	    "version": "2.0",
-	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json"
-	},
-	"uri": "005_altids",
-	"altids": [
+    "standard": {
+        "name": "ninjs",
+        "version": "2.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json"
+    },
+    "uri": "005_altids",
+    "altids": [
         {
-	        "role": "itemid",
+            "role": "itemid",
             "value": "(ap):f40b0304-0454-4ba2-a84d-686378279ba4"
         },
         {
-	        "role": "etag",
+            "role": "etag",
             "value": "(ap):686897696a7c876b7e"
         },
         {
-	        "role": "friendlykey",
+            "role": "friendlykey",
             "value": "(ap)"
         },
         {
-	        "role": "videoid",
+            "role": "videoid",
             "value": "(ap)"
         },
         {
-	        "role": "transref",
+            "role": "transref",
             "value": "(ap)"
         },
         {
-	        "role": "iid",
+            "role": "iid",
             "value": "(reuters)"
         },
         {
-	        "role": "otr",
+            "role": "otr",
             "value": "(reuters)"
         },
         {
-	        "role": "tpcid",
+            "role": "tpcid",
             "value": "(reuters)"
         },
         {
-	        "role": "sid",
+            "role": "sid",
             "value": "(reuters)"
         },
         {
-	        "role": "tpguid",
+            "role": "tpguid",
             "value": "(reuters)"
         },
         {
-	        "role": "rpid",
+            "role": "rpid",
             "value": "(reuters)"
         }
     ]
