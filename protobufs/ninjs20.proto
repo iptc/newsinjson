@@ -1,34 +1,39 @@
 syntax = "proto2";
 
 message Ninjs {
-
-  message Description {
-    optional string name = 1;
-    optional string value = 2;
+  message Descriptions {
+    optional string role = 1;
+    optional string contenttype = 2;
+    required string value = 3;
   }
   
-  message Body {
-    optional string name = 1;
-    optional string value = 2;
+  message Bodies {
+    optional string role = 1;
+    optional string contenttype = 2;
+    optional int32 charcount = 3;
+    optional int32 wordcount = 4;
+    required string value = 5;
   }
   
-  message Headline {
-    optional string name = 1;
-    optional string value = 2;
+  message Headlines {
+    optional string role = 1;
+    optional string contenttype = 2;
+    required string value = 3;
   }
   
-  message Person {
+  message People {
     optional string name = 1;
     optional string rel = 2;
     optional string uri = 3;
     optional string literal = 4;
   }
   
-  message Organisation {
+  message Organisations {
     message Symbols {
       optional string ticker = 1;
       optional string exchange = 2;
     }
+    
     optional string name = 1;
     optional string rel = 2;
     optional string uri = 3;
@@ -66,8 +71,9 @@ message Ninjs {
         MULTIPOLYGON = 5;
         GEOMETRYCOLLECTION = 6;
     }
-}
-  message Place {
+  }
+
+  message Places {
     optional string name = 1;
     optional string rel = 2;
     optional string uri = 3;
@@ -75,38 +81,38 @@ message Ninjs {
     optional Geometry geometry_geojson = 5;
   }
   
-  message Subject {
+  message Subjects {
     optional string name = 1;
     optional string rel = 2;
     optional string uri = 3;
     optional string literal = 4;
   }
   
-  message Event {
+  message Events {
     optional string name = 1;
     optional string rel = 2;
     optional string uri = 3;
     optional string literal = 4;
   }
   
-  message Object {
+  message Objects {
     optional string name = 1;
     optional string rel = 2;
     optional string uri = 3;
     optional string literal = 4;
   }
   
-  message Infosource {
+  message Infosources {
     optional string name = 1;
     optional string role = 2;
     optional string uri = 3;
     optional string literal = 4;
   }
   
-  message Rendition {
-    optional string name = 1;
+  message Renditions {
+    required string name = 1;
     optional string href = 2;
-    optional string mimetype = 3;
+    optional string contenttype = 3;
     optional string title = 4;
     optional int32 height = 5;
     optional int32 width = 6;
@@ -114,18 +120,13 @@ message Ninjs {
     optional int32 duration = 8;
     optional string format = 9;
   }
-
-  message Association {
-    required string name = 1;
-    optional Ninjs ninjs = 2;
-  }
-
+  
   message Altids {
-    optional string name = 1;
+    optional string role = 1;
     optional string value = 2;
   }
   
-  message Trustindicator {
+  message Trustindicators {
     optional string role = 1;
     optional string title = 2;
     optional string href = 3;
@@ -137,7 +138,7 @@ message Ninjs {
     optional string schema = 3;
   }
   
-  message Genre {
+  message Genres {
     optional string name = 1;
     optional string uri = 2;
     optional string literal = 3;
@@ -145,10 +146,8 @@ message Ninjs {
   
   message Rightsinfo {
     optional string langid = 1;
-    oneof test_oneof {
-      string linkedrights = 2;
-      string encodedrights = 3;
-    }    
+    optional string linkedrights = 2;
+    optional string encodedrights = 3;
   }
 
   enum Type {
@@ -160,59 +159,53 @@ message Ninjs {
     composite = 5;
     component = 6;
   }
+
   enum Representationtype {
     full = 0;
     partial = 1;
   }
+
   enum Pubstatus {
     usable = 0;
     withheld = 1;
     canceled = 2;
   }
 
-
   required string uri = 1;
   optional Type type = 2;
-  optional string mimetype = 3;
-  optional Representationtype representationtype = 4;
+  optional Representationtype representationtype = 3;
+  optional string profile = 4;
   optional string version = 5;
   optional string firstcreated = 6;
   optional string versioncreated = 7;
-  optional Pubstatus pubstatus = 8;
-  optional int32 urgency = 9;
-  optional string language = 10;
-  repeated Body body = 11;
-  repeated Description description = 12;
-  repeated Headline headline = 13;
-  optional string title = 14;
-  optional string slugline = 15;
-
-  repeated Person person = 20;
-  repeated Organisation organisation = 21;
-  repeated Place place = 22;
-  repeated Subject subject = 23;
-  repeated Event event = 24;
-  repeated Object object = 25;
-  repeated Infosource infosource = 26;
-  repeated Rendition renditions = 27;
-  repeated Association associations = 28;
-  repeated Altids altids = 29;
-  repeated Trustindicator trustindicator = 30;
-  repeated Genre genre = 31;
-
-  optional string byline = 50;
-  optional string located = 51;
-  optional int32 charcount = 52;
-  optional int32 wordcount = 53;
-  optional Standard standard = 54;
-  optional Rightsinfo rightsinfo = 55;
-
-  optional string embargoed = 110;
-  optional string profile = 112;
-  optional string copyrightholder = 113;
-  optional string copyrightnotice = 114;
-  optional string usageterms = 115;
-  optional string ednote = 116;
-  optional string contentcreated = 120;
-
+  optional string contentcreated = 8;
+  optional string embargoed = 9;
+  optional Pubstatus pubstatus = 10;
+  optional int32 urgency = 11;
+  optional string copyrightholder = 12;
+  optional string copyrightnotice = 13;
+  optional string usageterms = 14;
+  optional string ednote = 15;
+  optional string language = 16;
+  repeated Descriptions descriptions = 17;
+  repeated Bodies bodies = 18;
+  repeated Headlines headlines = 19;
+  repeated People people = 20;
+  repeated Organisations organisations = 21;
+  repeated Places places = 22;
+  repeated Subjects subjects = 23;
+  repeated Events events = 24;
+  repeated Objects objects = 25;
+  repeated Infosources infosources = 26;
+  optional string title = 27;
+  optional string by = 28;
+  optional string slugline = 29;
+  optional string located = 30;
+  repeated Renditions renditions = 31;
+  repeated Ninjs associations = 32;
+  repeated Altids altids = 33;
+  repeated Trustindicators trustindicators = 34;
+  optional Standard standard = 35;
+  repeated Genres genres = 36;
+  optional Rightsinfo rightsinfo = 37;
 }

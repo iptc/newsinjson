@@ -6,7 +6,7 @@
             "value": "test headline"
         }
     ],
-    "genre": [
+    "genres": [
         {
             "name": "Current",
             "uri": "http://cv.iptc.org/newscodes/genre/Current"

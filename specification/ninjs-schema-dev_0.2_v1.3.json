@@ -476,7 +476,7 @@
             "type": "object",
             "additionalProperties": false,
             "patternProperties": {
-                "^[a-zA-Z0-9]+": {
+                "^[a-zA-Z0-9_]+": {
                     "$ref": "http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.2_v1.3.json#"
                 }
             }

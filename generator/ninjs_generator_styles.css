@@ -1,0 +1,9 @@
+/* Asciidoctor default stylesheet plus IPTC styles | MIT License | http://asciidoctor.org */
+/* Remove comment around @import statement below when using as a custom stylesheet */
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
+h1{font-family: "Open Sans","DejaVu Sans",sans-serif; font-size:2.75em;margin:.67em 0; font-weight: 300;}
+body{font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+
+#reactcontainer {
+    display: block;
+}
