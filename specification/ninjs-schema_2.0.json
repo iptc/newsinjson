@@ -248,7 +248,7 @@
                     },
                     "literal": {
                         "title": "Literal",
-                        "description": "The code for the person as a literal value.",
+                        "description": "An identifier for the person as a free-text string.",
                         "type": "string"
                     }
                 }
@@ -281,7 +281,7 @@
                     },
                     "literal": {
                         "title": "Literal",
-                        "description": "The code for the organisation as a literal",
+                        "description": "An identifier for the organisation as a free-text string.",
                         "type": "string"
                     },
                     "symbols": {
@@ -337,7 +337,7 @@
                             },
                             "literal": {
                                 "title": "Literal",
-                                "description": "The code for the place as a literal",
+                                "description": "An identifier for the place as a free-text string.",
                                 "type": "string"
                             }
                         }
@@ -373,7 +373,7 @@
                     },
                     "literal": {
                         "title": "Literal",
-                        "description": "The code for the subject as a string literal",
+                        "description": "An identifier for the subject as a free-text string.",
                         "type": "string"
                     }
                 }
@@ -406,7 +406,7 @@
                     },
                     "literal": {
                         "title": "Literal",
-                        "description": "The code for the event as a string literal",
+                        "description": "An identifier for the event as a free-text string.",
                         "type": "string"
                     }
                 }
@@ -439,7 +439,7 @@
                     },
                     "literal": {
                         "title": "Literal",
-                        "description": "The code for the object as a string literal",
+                        "description": "An identifier for the object as a free-text string.",
                         "type": "string"
                     }
                 }
@@ -473,7 +473,7 @@
                     },
                     "literal": {
                         "title": "Literal",
-                        "description": "The code for the infosource as a string literal",
+                        "description": "An identifier for the infosource as a free-text string.",
                         "type": "string"
                     }
                 }
@@ -685,7 +685,7 @@
                     },
                     "literal": {
                         "title": "Literal",
-                        "description": "The code for the genre as a string literal",
+                        "description": "An identifier for the genre as a free-text string.",
                         "type": "string"
                     }
                 }
