@@ -468,7 +468,7 @@
                         },
                         "format": {
                             "title": "Format",
-                            "description": "Binary format name. (Added in version 1.2. Issue #18). nar:remoteContent@format",
+                            "description": "A refinement of a generic content type (i.e. IANA MIME type) by a literal string value. (Added in version 1.2. Issue #18). nar:remoteContent@contenttypevariant",
                             "type": "string"
                         }
                     }
@@ -646,7 +646,7 @@
         },
         "expires": {
             "title": "Expires",
-            "description": "The date and time after which the NewsItem is no longer considered valid by its publisher nar:expires (Added in 1.4)",
+            "description": "The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in 1.4)",
             "type": "string",
             "format": "date-time"
         },
