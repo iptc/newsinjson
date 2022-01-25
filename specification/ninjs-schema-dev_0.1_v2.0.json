@@ -338,10 +338,14 @@
                                 "title": "Literal",
                                 "description": "An identifier for the place as a free-text string.",
                                 "type": "string"
+                            },
+                            "geometry_geojson": {
+                                "title": "Geometry Geojson",
+                                "description": "An object where geo-data from the geojson schema can be used.",
+                                "$ref": "https://json.schemastore.org/geojson.json#"
                             }
                         }
-                    },
-                    {"$ref": "https://json.schemastore.org/geojson"}
+                    }
                 ]
             }
         },
