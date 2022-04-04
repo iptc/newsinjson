@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.15">
 <meta name="author" content="IPTC News in JSON Working Group">
 <title>NinJS User Guide</title>
 <style>
@@ -426,6 +426,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
 </head>
 <body class="html5 toc2 toc-left">
 <div id="header">
@@ -623,7 +624,7 @@ by an API call.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simp123",
   "type" : "text",
   "versioncreated" : "2013-07-09T10:37:00Z",
@@ -1683,7 +1684,7 @@ This property is an array of objects with the following properties:</p>
 <h4 id="_renditions_example">3.5.2. Renditions example</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "renditions-example",
   "bodies": [
     {
@@ -1728,7 +1729,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "http://www.businesswire.com/news/home/20130515006361/en",
   "type":"composite",
   "version": "1",
@@ -1812,7 +1813,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simp123",
   "type" : "text",
   "versioncreated" : "2013-07-09T10:37:00Z",
@@ -1853,7 +1854,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709med123",
   "type" : "text",
   "profile" : "text-only",
@@ -1946,7 +1947,7 @@ repository</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
   "type" : "picture",
   "versioncreated" : "2013-07-08T08:12:00Z",
@@ -2014,7 +2015,7 @@ repository</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709cplx456",
   "type" : "composite",
   "profile" : "text-photo",
@@ -2040,8 +2041,7 @@ repository</a>.</p>
     {
       "name" : "Italy",
       "rel" : "mentions",
-      "scheme" : "http://cvx.iptc.org/iso3166-1a2/",
-      "code" : "it"
+      "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
     }
   ],
   "organisations" : [
@@ -2147,15 +2147,14 @@ repository</a>.</p>
       "type" : "picture",
       "versioncreated" : "2013-07-09T10:12:00Z",
       "copyrightnotice" : "Copyright 2013 The News Agency, www.tna.org - all rights reserved.",
-      "person" : [
+      "people" : [
         {
           "name" : "Francesco Schettino",
           "rel" : "about",
-          "scheme" : "http://www.freebase.com/m/",
-          "code" : "0hzcydt"
+          "uri" : "http://www.wikidata.org/entity/Q4421821"
         }
       ],
-      "place" : [
+      "places" : [
         {
           "name" : "Grossetto",
           "rel" : "mentions"
@@ -2167,8 +2166,7 @@ repository</a>.</p>
         {
           "name" : "Italy",
           "rel" : "mentions",
-          "scheme" : "http://cvx.iptc.org/iso3166-1a2/",
-          "code" : "it"
+          "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
         }
       ],
       "organisation" : [
@@ -2255,7 +2253,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>change the URL of the "id" property of IPTC&#8217;s ninjs 2.0 &#8230;&#8203;</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json#",
   "type" : "object",
@@ -2267,7 +2265,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2279,7 +2277,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>add your own properties to your copy of the schema. For example, to add a property explaining the reason for the embargo:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2302,7 +2300,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>save your new schema to a location where users of the schema can access it, which should be the same URL used for the "id" property:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2321,7 +2319,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "http://ninjs.example.com/newsitems/20130709simp123",
   "type": "text",
   "versioncreated": "2013-07-09T10:37:00Z",
@@ -2337,7 +2335,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "http://ninjs.example.com/newsitems/20130709simp123",
   "standard": {
       "name": "e-ninjs-schema",
@@ -2732,8 +2730,12 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 </div>
 </div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-<script>hljs.initHighlighting()</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
 </body>
 </html>
