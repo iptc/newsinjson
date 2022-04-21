@@ -1,10 +1,10 @@
 {
     "uri": "002_advice_complex.json",
     "title": "An article with different importance and lifetime values for different users",
-    "advice": [
+    "advices": [
         {
             "role": "publish",
-            "environment": [
+            "environments": [
                 {
                     "code": "EFE",
                     "scheme": "http://cv.iptc.org/newscodes/newsprovider/"
@@ -25,7 +25,7 @@
         },
         {
             "role": "publish",
-            "environment": [
+            "environments": [
                 {
                     "code": "SPX",
                     "scheme": "http://cv.iptc.org/newscodes/newsprovider/"

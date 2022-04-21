@@ -1,10 +1,10 @@
 {
     "uri": "003_advice_anyvalue.json",
     "title": "An advice object showing that values are not validated and can be anything",
-    "advice": [
+    "advices": [
         {
             "role": "publish",
-            "environment": [
+            "environments": [
                 {
                     "code": "asdufgalsdfgalsdfglasf",
                     "scheme": "http://asdfasdf.asdasdf/asdavkaygv/"
