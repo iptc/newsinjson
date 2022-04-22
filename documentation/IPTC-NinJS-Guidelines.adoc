@@ -1025,7 +1025,7 @@ Version 1.3 added the `headline_`, `altids`, `trustindicator`, `$standard` and `
 
 === ninjs 2.0
 
-https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs schema] was approved by the IPTC Standards Committee and made available in XXXXXX.
+https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs schema] was approved by the IPTC Standards Committee and made available in October 2021.
 
 Version 2.0 made several changes, some of them breaking backwards compatibility:
 
@@ -1050,6 +1050,8 @@ Version 2.0 made several changes, some of them breaking backwards compatibility:
 * charcount and wordcount moved to properties of "bodies" elements
 * "$standard" changed to "standard"
 * Added a new "rightsinfo" property with "linkedrights" or "embeddedrights" as child properties
+
+An errata release of 2.0 in April 2022 fixed a problem with the GeoJSON property in the `places` object.
 
 == Additional Resources
 

@@ -24,8 +24,7 @@
     {
       "name" : "Italy",
       "rel" : "mentions",
-      "scheme" : "http://cvx.iptc.org/iso3166-1a2/",
-      "code" : "it"
+      "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
     }
   ],
   "organisations" : [
