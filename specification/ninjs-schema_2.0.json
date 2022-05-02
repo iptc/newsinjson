@@ -1,7 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json#",
-    "name": "ninjs",
     "type": "object",
     "title": "IPTC ninjs - News in JSON - version 2.0 (approved at IPTC Standards Committee October 2021)",
     "description": "A news item as JSON object -- copyright 2021 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
@@ -316,8 +315,7 @@
             "type": "array",
             "items": {
                 "type": "object",
-                "anyOf": [
-                    {
+                        "additionalProperties": false,
                         "properties": {
                             "name": {
                                 "title": "Name",
@@ -339,11 +337,9 @@
                                 "title": "Literal",
                                 "description": "An identifier for the place as a free-text string.",
                                 "type": "string"
-                            }
+                            },
+                            "geojson": {"$ref": "https://geojson.org/schema/GeoJSON.json#"}
                         }
-                    },
-                    {"$ref": "https://json.schemastore.org/geojson"}
-                ]
             }
         },
         
@@ -558,7 +554,7 @@
                     },
                     "format": {
                         "title": "Format",
-                        "description": "Binary format name. (Added in version 1.2. Issue #18). nar:remoteContent@format",
+                        "description": "A refinement of a generic content type (i.e. IANA MIME type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format",
                         "type": "string"
                     }
                 }
