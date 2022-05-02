@@ -130,15 +130,14 @@
       "type" : "picture",
       "versioncreated" : "2013-07-09T10:12:00Z",
       "copyrightnotice" : "Copyright 2013 The News Agency, www.tna.org - all rights reserved.",
-      "person" : [
+      "people" : [
         {
           "name" : "Francesco Schettino",
           "rel" : "about",
-          "scheme" : "http://www.freebase.com/m/",
-          "code" : "0hzcydt"
+          "uri" : "http://www.wikidata.org/entity/Q4421821"
         }
       ],
-      "place" : [
+      "places" : [
         {
           "name" : "Grossetto",
           "rel" : "mentions"
@@ -150,8 +149,7 @@
         {
           "name" : "Italy",
           "rel" : "mentions",
-          "scheme" : "http://cvx.iptc.org/iso3166-1a2/",
-          "code" : "it"
+          "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
         }
       ],
       "organisation" : [
