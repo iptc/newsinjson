@@ -1051,7 +1051,7 @@ Version 2.0 made several changes, some of them breaking backwards compatibility:
 * "$standard" changed to "standard"
 * Added a new "rightsinfo" property with "linkedrights" or "embeddedrights" as child properties
 
-An errata release of 2.0 in April 2022 fixed a problem with the GeoJSON property in the `places` object.
+An errata release of 2.0 in May 2022 fixed a problem with the GeoJSON property in the `places` object.
 
 == Additional Resources
 

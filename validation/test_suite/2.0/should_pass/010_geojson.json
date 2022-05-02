@@ -1,0 +1,159 @@
+{
+    "uri": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0?qt=H1Kdh42orF&et=0a1aza3c0",
+    "type": "picture",
+    "version": "0",
+    "firstcreated": "2019-11-15T13:39:59Z",
+    "versioncreated": "2019-11-15T14:39:44Z",
+    "pubstatus": "usable",
+    "urgency": 5,
+    "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
+    "ednote": "TURKEY OUT  NOV. 11, 2019 FILE PHOTO",
+    "language": "en",
+    "descriptions": [
+        {
+            "role": "creditline",
+            "value": "ASSOCIATED PRESS"
+        },
+        {
+            "role": "caption",
+            "value": "FILE - In this Monday, Nov. 11, 2019 file photo, a man identified by Turkish media as 39-year-old Muhammad Darwis B., a U.S. citizen of Jordanian origin, stands in a no man's land between Turkey and Greece near Pazarkule border gate, Edirne, Turkey. Turkey's Interior Minister Suleyman Soylu said Friday Nov, 15, 2019 that the an American Islamic State group member has been deported to the United States. (DHA via AP, File)"
+        }
+    ],
+    "headlines": [
+        {
+            "role": "main",
+            "value": "Turkey Islamic State"
+        }
+    ],
+    "organisations": [
+        {
+            "literal": "84de12052c9c4e3ebca80df389e66fc3",
+            "name": "Islamic State group",
+            "uri": "http://cv.ap.org/id/84de12052c9c4e3ebca80df389e66fc3"
+        },
+        {
+            "literal": "5f36c12adb1447fa971c2f6d4d272333",
+            "name": "Turkey government",
+            "rel": "http://cv.ap.org/id/5f36c12adb1447fa971c2f6d4d272333"
+        }
+    ],
+    "places": [
+        {
+            "literal": "661e09b87d5b10048287c076b8e3055c",
+            "name": "Turkey",
+            "uri": "http://cv.ap.org/id/661e09b87d5b10048287c076b8e3055c",
+            "geojson": {
+                "type": "Point",
+                "coordinates": [
+                    35,
+                    39
+                ]
+            }
+        },
+        {
+            "literal": "6618c9f87d5b10048202c076b8e3055c",
+            "name": "Western Europe",
+            "uri": "http://cv.ap.org/id/6618c9f87d5b10048202c076b8e3055c"
+        },
+        {
+            "literal": "661850e07d5b100481f4c076b8e3055c",
+            "name": "Europe",
+            "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
+            "geojson": {
+                "type": "Point",
+                "coordinates": [
+                    9.14062,
+                    48.69096
+                ]
+            }
+        },
+        {
+            "literal": "661850e07d5b100481f6c076b8e3055c",
+            "name": "Middle East",
+            "uri": "http://cv.ap.org/id/661850e07d5b100481f6c076b8e3055c"
+        },
+        {
+            "literal": "661e48387d5b10048291c076b8e3055c",
+            "name": "United States",
+            "uri": "http://cv.ap.org/id/661e48387d5b10048291c076b8e3055c",
+            "geojson": {
+                "type": "Point",
+                "coordinates": [
+                    -98.5,
+                    39.76
+                ]
+            }
+        },
+        {
+            "literal": "661850e07d5b100481f7c076b8e3055c",
+            "name": "North America",
+            "uri": "http://cv.ap.org/id/661850e07d5b100481f7c076b8e3055c",
+            "geojson": {
+                "type": "Point",
+                "coordinates": [
+                    -100.54688,
+                    46.07323
+                ]
+            }
+        }
+    ],
+    "subjects": [
+        {
+            "literal": "i",
+            "name": "International News"
+        },
+        {
+            "literal": "file",
+            "name": "File photo"
+        },
+        {
+            "literal": "86aad5207dac100488ecba7fa5283c3e",
+            "name": "Government and politics",
+            "uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"
+        }
+    ],
+    "infosources": [
+        {"name": "DHA"}
+    ],
+    "title": "Turkey Islamic State",
+    "slugline": "Turkey Islamic State",
+    "renditions": [
+        {
+            "name": "main",
+            "title": "Full Resolution (JPG)",
+            "format": "JPEG Baseline",
+            "href": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0.0/download?role=main&qt=H1Kdh42orF&cid=ad53e3cd73934bbabd38e8bf9c6aff4a&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
+            "sizeinbytes": 4764958,
+            "width": 3000,
+            "height": 2208,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "preview",
+            "title": "Preview (JPG)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/b2b6c3f4642f46deac7509d4db315ca0.0/preview/preview.jpg?nfe=true&s=512&app=MPK&tag=iid~b2b6c3f4642f46deac7509d4db315ca0!rsn~0!cid~5b8a7db244c14125b3caa243bd8bb961!ofn~Turkey_Islamic_State_46506.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~photo!fmt~JPEG%20Baseline",
+            "sizeinbytes": 120321,
+            "width": 512,
+            "height": 377,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "thumbnail",
+            "title": "Thumbnail (JPG)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/b2b6c3f4642f46deac7509d4db315ca0.0/thumbnail/thumbnail.jpg?nfe=true&app=MPK&tag=iid~b2b6c3f4642f46deac7509d4db315ca0!rsn~0!cid~47c49ccfc46f4c538892e6379baae111!ofn~Turkey_Islamic_State_46506.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~photo!fmt~JPEG%20Baseline",
+            "sizeinbytes": 27098,
+            "width": 125,
+            "height": 92,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "caption_nitf",
+            "title": "NITF Caption Download",
+            "format": "IIM",
+            "contenttype": "text/xml",
+            "href": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62"
+        }
+    ]
+}
