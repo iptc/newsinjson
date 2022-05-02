@@ -12,7 +12,7 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :email: office@iptc.org
 :version-label: Covers version
 :revnumber: 2.0
-:revremark: Revised 2021-09-06
+:revremark: Revised 2022-05-22
 :toc: left
 :toc-title: ninjs User Guide
 :toclevels: 2
@@ -39,7 +39,9 @@ ninjs to help you <<How to validate objects,validate your ninjs implementation>>
 
 The latest version of the standard is 2.0: 
 https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs
-schema] was made available in October 2021.
+schema] was made available in October 2021. An erratum release of version 2.0 was
+published in May 2022 to fix a problem with the way GeoJSON was included in the
+places object.
 
 The IPTC welcomes your feedback on how to improve the standard via the
 https://groups.io/g/iptc-ninjs[public ninjs discussion group]. You can also add
