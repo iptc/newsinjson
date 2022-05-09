@@ -370,7 +370,7 @@ This property is an object with the following child properties: +
 !string
 
 !contenttype
-!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.
+!The IANA (Internet Assigned Numbers Authority) media type of the content of this headline. (Used to be MIME type.) 
 !string
 
 !value
@@ -403,7 +403,7 @@ This property is an object with the following child properties: +
 !string
 
 !contenttype
-!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.
+!The IANA (Internet Assigned Numbers Authority) media type of the content of this headline. (Used to be MIME type.)
 !string
 
 !value
@@ -437,7 +437,7 @@ This property is an object with the following child properties: +
 !string
 
 !contenttype
-!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this description.
+!The IANA (Internet Assigned Numbers Authority) media type of the content of this description. (Used to be MIME type.)
 !string
 
 !value
@@ -732,7 +732,7 @@ It contains a set of one or more keys, each with a name and an object as the val
 |Property name|Description|Data type
 |name|The name of this object in the array of renditions. Required|string
 |href|The URL for accessing the rendition as a resource|URI
-|mimetype|A MIME type which applies to the rendition|string
+|contenttype|A media type which applies to the rendition|string
 |title|A title for the link to the rendition resource|string
 |height|For still and moving images: the height of the display area measured in pixels|number
 |width|For still and moving images: the width of the display area measured in pixels|number
@@ -959,7 +959,6 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |type|nar:itemClass
 |title|nar:itemMeta/title
 |altids|nar:altId
-|mimetype|nar:contentType
 |profile|nar:profile
 |version|nar:newsItem@version
 |firstcreated|nar:firstCreated
@@ -974,12 +973,15 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |usageterms|nar:usageTerms
 |rightsinfo|nar:rightsInfo
 |headlines|nar:headline with @role
+|headlines@contenttype|nar:contentType
 |slugline|nar:slugline
 |by|nar:by
 |bodies|nar:data or nar:inlineXML
 |bodies@charcount|nar:charcount
 |bodies@wordcount|nar:wordcount
+|bodies@contenttype|nar:contentType
 |descriptions|nar:description
+|descriptions@contenttype|nar:contentType
 |located|nar:located
 |genre|nar:genre
 |person|nar:subject
@@ -991,7 +993,7 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |trustindicator|nar:link with @rel
 |renditions|nar:remoteContent
 |renditions@href|nar:remoteContent@ref
-|renditions@mimetype|nar:remoteContent@contenttype
+|renditions@contenttype|nar:remoteContent@contenttype
 |renditions@height|nar:remoteContent@height
 |renditions@width|nar:remoteContent@width
 |renditions@format|nar:remoteContent@format
