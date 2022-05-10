@@ -34,7 +34,7 @@ as https://iptc.org/standards/newsml-g2/[NewsML-G2].
 
 To help get you started, we have created a
 https://www.iptc.org/std/ninjs/generator/[simple ninjs generator] so you can see
-how a real ninjs document can be. We have also built a JSON schema for
+how easily a real ninjs document can be created. We have also built a JSON schema for
 ninjs to help you <<How to validate objects,validate your ninjs implementation>>.
 
 The latest version of the standard is 2.0: 
@@ -218,7 +218,7 @@ This property is an object with the following child properties:
 !string
 
 !schema
-!The uri of the json schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json`
+!The uri of the JSON schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json`
 !URI
 
 !===
@@ -370,7 +370,7 @@ This property is an object with the following child properties: +
 !string
 
 !contenttype
-!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.
+!The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this headline. (Previously known as MIME Type.)
 !string
 
 !value
@@ -399,11 +399,11 @@ This property is an object with the following child properties: +
 !Property name!Description!Data type
 
 !role
-!The role of this headline
+!The role of this body
 !string
 
 !contenttype
-!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.
+!The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this body. (Previously known as MIME Type.)
 !string
 
 !value
@@ -437,7 +437,7 @@ This property is an object with the following child properties: +
 !string
 
 !contenttype
-!The IANA (Internet Assigned Numbers Authority) MIME type of the content of this description.
+!The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this description. (Previously known as MIME Type.)
 !string
 
 !value
@@ -576,8 +576,11 @@ This property is an array of objects with the following properties:
 !The code for the place as a literal
 !string
 
-!GeoJSON properties
-!An object holding geo data of this place. Could be of any relevant geo data JSON object definition.
+!geojson
+!An object holding geo data of this place. As of ninjs 2.0, the contents of this
+object must conform to https://geojson.org/schema/GeoJSON.json[the GeoJSON
+format] defined in https://datatracker.ietf.org/doc/html/rfc7946[RFC 7946].
+
 !object
 
 !===
@@ -732,7 +735,7 @@ It contains a set of one or more keys, each with a name and an object as the val
 |Property name|Description|Data type
 |name|The name of this object in the array of renditions. Required|string
 |href|The URL for accessing the rendition as a resource|URI
-|mimetype|A MIME type which applies to the rendition|string
+|contenttype|A media type which applies to the rendition|string
 |title|A title for the link to the rendition resource|string
 |height|For still and moving images: the height of the display area measured in pixels|number
 |width|For still and moving images: the width of the display area measured in pixels|number
@@ -931,24 +934,31 @@ With the `standard` field, providers can indicate in each JSON file exactly whic
 
 ==== Validating a ninjs document
 
-JSON Schema is the de-facto standard for validating JSON documents. The IPTC maintains schemas for each version of the ninjs standard. These schemas can be used to validate ninjs documents. 
+JSON Schema is the de-facto standard for validating JSON documents. The IPTC
+maintains schemas for each version of the ninjs standard. These schemas can be
+used to validate ninjs documents. 
 
-This is the latest IPTC ninjs schema available for download:
+The latest IPTC ninjs schema is available for download at
 https://iptc.org/std/ninjs/ninjs-schema_2.0.json
 
 ==== Sample Code
 
-Sample code demonstrating how to validate ninjs documents, along with example ninjs documents, can be found in the https://github.com/iptc/newsinjson[IPTC newsinjson github repository].
+Sample code demonstrating how to validate ninjs documents, along with example
+ninjs documents, can be found in the
+https://github.com/iptc/newsinjson[IPTC newsinjson github repository].
 
 ==== Online Validator
 
-You can also validate ninjs documents by pasting the schema and document into this online validator, which is built on the json-schema-validator library:
+You can also validate ninjs documents by pasting the schema and document into
+this online validator, which is built on the json-schema-validator library:
 
 http://json-schema-validator.herokuapp.com
 
 == Mapping between ninjs and NewsML-G2
 
-ninjs and NewsML-G2 are not intended to be equivalent to each other, but they both adhere to the IPTC News Architecture, so they share many properties.
+ninjs and NewsML-G2 are not intended to be equivalent to each other, but they
+both adhere to the https://www.iptc.org/standards/news-architecture/[IPTC News
+Architecture], so they share many properties.
 
 Here is a summary of the properties shared by ninjs and NewsML-G2:
 
@@ -959,7 +969,6 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |type|nar:itemClass
 |title|nar:itemMeta/title
 |altids|nar:altId
-|mimetype|nar:contentType
 |profile|nar:profile
 |version|nar:newsItem@version
 |firstcreated|nar:firstCreated
@@ -974,12 +983,15 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |usageterms|nar:usageTerms
 |rightsinfo|nar:rightsInfo
 |headlines|nar:headline with @role
+|headlines@contenttype|nar:contentType
 |slugline|nar:slugline
 |by|nar:by
 |bodies|nar:data or nar:inlineXML
 |bodies@charcount|nar:charcount
 |bodies@wordcount|nar:wordcount
+|bodies@contenttype|nar:contentType
 |descriptions|nar:description
+|descriptions@contenttype|nar:contentType
 |located|nar:located
 |genre|nar:genre
 |person|nar:subject
@@ -991,7 +1003,7 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |trustindicator|nar:link with @rel
 |renditions|nar:remoteContent
 |renditions@href|nar:remoteContent@ref
-|renditions@mimetype|nar:remoteContent@contenttype
+|renditions@contenttype|nar:remoteContent@contenttype
 |renditions@height|nar:remoteContent@height
 |renditions@width|nar:remoteContent@width
 |renditions@format|nar:remoteContent@format
