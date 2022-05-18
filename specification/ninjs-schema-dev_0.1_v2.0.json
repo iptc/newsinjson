@@ -68,7 +68,7 @@
         
         "contentcreated": {
             "title": "Content created",
-            "description": "The date and time when the content of this ninjs object was originally created. For example and old photo that is now handled as a ninjs object. nar:contentCreated",
+            "description": "The date and time when the content of this ninjs object was originally created. For example an old photo that is now handled as a ninjs object. nar:contentCreated",
             "type": "string",
             "format": "date-time"
         },
