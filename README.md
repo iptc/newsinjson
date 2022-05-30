@@ -20,22 +20,45 @@ The `examples` folder contains example files, including some supplied
 by Business Wire. Examples show how NewsML 1.2 files convert to their
 equivalents in ninjs.
 
-Latest version: ninjs 2.0
+Two versions of ninjs: ninjs 1.4 and ninjs 2.0
 -------------------------
 
-This repository specifies the 2.0 version of ninjs, which includes several
-breaking changes compared to previous versions. The main change is that we
-avoid the use of patternProperties altogether, so all properties now have
-well-defined names. This work is intended to make ninjs easier for work with
-binary protocols such as Protocol Buffers and Avro. We also take the
-opportunity to make property names more consistent with NewsML-G2 and to add
-some fields to handle rights.
+This repository specifies both the 1.4 and 2.0 versions of ninjs.
+
+The 1.x series adds new features to the version of ninjs that started
+with ninjs 1.0 back in 2013, in a way that is fully backwards
+compatible. The latest release in this series is 1.4, which includes
+new fields _contentcreated_, _expires_ and _rightsinfo_. The 1.4
+version of ninjs was approved by the IPTC Standards Committee on May
+18th, 2022.
+
+The 2.x series fixes some issues that made the 1.x series tricky for
+developers to work with. The main change is that we avoid the use of
+patternProperties, so all properties now have well-defined names. This
+work is intended to make ninjs easier for work with binary protocols
+such as Protocol Buffers and Avro. We also took the opportunity to make
+property names more consistent with NewsML-G2 and to add some fields to
+handle rights.
+
+We wanted to issue a new release which fixed these problems, but this
+meant breaking backwards-compatibility with the 1.x versions of ninjs.
+This is why we increased the major version number to 2.0.
 
 The 2.0 version of ninjs was approved by the IPTC Standards Committee on
 October 20th, 2021.
 
 An errata update was made in May 2022 to fix a problem with the way GeoJSON
 properties were integrated into the "places" object.
+
+Which version should I choose for my project?
+-------------------------
+
+If you are starting a green-field project, we recommend using ninjs 2.0.
+This version should be easiest for developers to work with.
+
+If you are already using a 1.x version of ninjs, we recommend at least
+upgrading to version 1.4. This should be an easy change as 1.4 is
+backwards-compatible with versions 1.0, 1.1, 1.2 and 1.3.
 
 Protocol Buffers demo
 ---------------------

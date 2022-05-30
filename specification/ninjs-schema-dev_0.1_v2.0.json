@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json#",
+    "id": "http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.1_v2.0.json#",
     "type": "object",
-    "title": "IPTC ninjs - News in JSON - version 2.0 (approved at IPTC Standards Committee October 2021)",
+    "title": "IPTC ninjs - News in JSON - version 2.0 (draft for approval at IPTC Standards Committee)",
     "description": "A news item as JSON object -- copyright 2021 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
     "additionalProperties": false,
     "required": ["uri"],
@@ -143,7 +143,7 @@
                     },
                     "contenttype": {
                         "title": "Content Type",
-                        "description": "The IANA (Internet Assigned Numbers Authority) media type of the content of this description. Used to be called MIME type.",
+                        "description": "The IANA (Internet Assigned Numbers Authority) MIME type of the content of this description.",
                         "type": "string"
                     },
                     "value": {
@@ -171,7 +171,7 @@
                     },
                     "contenttype": {
                         "title": "Content Type",
-                        "description": "The IANA (Internet Assigned Numbers Authority) media type of the content of this body. Used to be called MIME type.",
+                        "description": "The IANA (Internet Assigned Numbers Authority) MIME type of the content of this body.",
                         "type": "string"
                     },
                     "charcount": {
@@ -209,7 +209,7 @@
                     },
                     "contenttype": {
                         "title": "Content Type",
-                        "description": "The IANA (Internet Assigned Numbers Authority) media type of the content of this headline. Used to be called MIME type.",
+                        "description": "The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.",
                         "type": "string"
                     },
                     "value": {
@@ -315,7 +315,8 @@
             "type": "array",
             "items": {
                 "type": "object",
-                        "additionalProperties": false,
+                "anyOf": [
+                    {
                         "properties": {
                             "name": {
                                 "title": "Name",
@@ -338,8 +339,14 @@
                                 "description": "An identifier for the place as a free-text string.",
                                 "type": "string"
                             },
-                            "geojson": {"$ref": "https://geojson.org/schema/GeoJSON.json#"}
+                            "geometry_geojson": {
+                                "title": "Geometry Geojson",
+                                "description": "An object where geo-data from the geojson schema can be used.",
+                                "$ref": "https://json.schemastore.org/geojson.json#"
+                            }
                         }
+                    }
+                ]
             }
         },
         
@@ -524,7 +531,7 @@
                     },
                     "contenttype": {
                         "title": "Content Type",
-                        "description": "A media type which applies to this rendition. nar:remoteContent@contenttype",
+                        "description": "A MIME type which applies to this rendition. nar:remoteContent@contenttype",
                         "type": "string"
                     },
                     "title": {
@@ -554,7 +561,7 @@
                     },
                     "format": {
                         "title": "Format",
-                        "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format",
+                        "description": "A refinement of a generic content type (i.e. IANA MIME type) by a literal string value. (Added in version 1.2. Issue #18). nar:remoteContent@contenttypevariant",
                         "type": "string"
                     }
                 }
@@ -686,6 +693,82 @@
                     }
                 }
             }
+        },
+        "advices": {
+            "type": "array",
+            "title": "Advices",
+            "description": "Editorial advice to the receiver of the news object. Only in dev so far. Tests with the C-POP project.",
+            "additionalProperties": false,
+            "items": {
+                "description": "One advice item",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "role": {
+                        "title": "Role",
+                        "description": "Role of this advice.",
+                        "type": "string",
+                        "enum": [
+                            "publish"
+                        ]
+                    },
+                    "environments": {
+                        "type": "array",
+                        "additionalProperties": false,
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "string"
+                                },
+                                "scheme": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        }
+                    },
+                    "importance": {
+                        "type": "object",
+                        "description": "Advice regarding the importance of the content from an emotional perspective. Experimental vocabulary, part of the C-POP project.",
+                        "additionalProperties": false,
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "description": "Present values are: essential, useful and entertaining."
+                            },
+                            "scheme": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "http://cv.iptc.org/newscodes/advice-importance"
+                            }
+                        }
+                    },
+                    "lifetime": {
+                        "type": "object",
+                        "description": "Advice regarding the length of time that the content is considered to be relevant. Experimental vocabulary, part of the C-POP project.",
+                        "additionalProperties": false,
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "description": "Present values are: short, medium, long and evergreen."
+                            },
+                            "scheme": {
+                                "type": "string",
+                                "format": "uri",
+                                "description": "http://cv.iptc.org/newscodes/advice-lifetime"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        
+        "expires": {
+            "title": "Expires",
+            "description": "The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in 2.1)",
+            "type": "string",
+            "format": "date-time"
         },
         
         "rightsinfo": {
