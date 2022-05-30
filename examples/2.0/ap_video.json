@@ -43,7 +43,7 @@
             "literal": "661cd9087d5b10048265c076b8e3055c",
             "name": "Ukraine",
             "uri": "http://cv.ap.org/id/661cd9087d5b10048265c076b8e3055c",
-            "geometry_geojson": {
+            "geojson": {
                 "type": "Point",
                 "coordinates": [
                     32,
@@ -60,7 +60,7 @@
             "literal": "661850e07d5b100481f4c076b8e3055c",
             "name": "Europe",
             "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
-            "geometry_geojson": {
+            "geojson": {
                 "type": "Point",
                 "coordinates": [
                     9.14062,

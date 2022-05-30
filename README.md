@@ -47,6 +47,9 @@ This is why we increased the major version number to 2.0.
 The 2.0 version of ninjs was approved by the IPTC Standards Committee on
 October 20th, 2021.
 
+An errata update was made in May 2022 to fix a problem with the way GeoJSON
+properties were integrated into the "places" object.
+
 Which version should I choose for my project?
 -------------------------
 

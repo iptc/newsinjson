@@ -435,7 +435,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <span id="author" class="author">IPTC News in JSON Working Group</span><br>
 <span id="email" class="email"><a href="mailto:office@iptc.org">office@iptc.org</a></span><br>
 <span id="revnumber">covers version 2.0</span>
-<br><span id="revremark">Revised 2021-09-06</span>
+<br><span id="revremark">Revised 2022-05-22</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">ninjs User Guide</div>
@@ -520,13 +520,15 @@ as <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>.</p>
 <div class="paragraph">
 <p>To help get you started, we have created a
 <a href="https://www.iptc.org/std/ninjs/generator/">simple ninjs generator</a> so you can see
-how a real ninjs document can be. We have also built a JSON schema for
+how easily a real ninjs document can be created. We have also built a JSON schema for
 ninjs to help you <a href="#_how_to_validate_objects">validate your ninjs implementation</a>.</p>
 </div>
 <div class="paragraph">
 <p>The latest version of the standard is 2.0:
 <a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json">Version 2.0 of the ninjs
-schema</a> was made available in October 2021.</p>
+schema</a> was made available in October 2021. An erratum release of version 2.0 was
+published in May 2022 to fix a problem with the way GeoJSON was included in the
+places object.</p>
 </div>
 <div class="paragraph">
 <p>The IPTC welcomes your feedback on how to improve the standard via the
@@ -816,7 +818,7 @@ This property is an object with the following child properties:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">schema</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the json schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the JSON schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
@@ -1048,7 +1050,7 @@ This property is an object with the following child properties:<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this headline. (Previously known as MIME Type.)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1093,12 +1095,12 @@ This property is an object with the following child properties:<br></p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The role of this headline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The role of this body</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this body. (Previously known as MIME Type.)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1151,7 +1153,7 @@ This property is an object with the following child properties:<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The IANA (Internet Assigned Numbers Authority) MIME type of the content of this description.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this description. (Previously known as MIME Type.)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1381,8 +1383,10 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GeoJSON properties</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An object holding geo data of this place. Could be of any relevant geo data JSON object definition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geojson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An object holding geo data of this place. As of ninjs 2.0, the contents of this
+object must conform to <a href="https://geojson.org/schema/GeoJSON.json">the GeoJSON
+format</a> defined in <a href="https://datatracker.ietf.org/doc/html/rfc7946">RFC 7946</a>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
 </tr>
 </tbody>
@@ -1643,8 +1647,8 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mimetype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A MIME type which applies to the rendition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A media type which applies to the rendition</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -2357,23 +2361,28 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <div class="sect3">
 <h4 id="_validating_a_ninjs_document">5.4.1. Validating a ninjs document</h4>
 <div class="paragraph">
-<p>JSON Schema is the de-facto standard for validating JSON documents. The IPTC maintains schemas for each version of the ninjs standard. These schemas can be used to validate ninjs documents.</p>
+<p>JSON Schema is the de-facto standard for validating JSON documents. The IPTC
+maintains schemas for each version of the ninjs standard. These schemas can be
+used to validate ninjs documents.</p>
 </div>
 <div class="paragraph">
-<p>This is the latest IPTC ninjs schema available for download:
+<p>The latest IPTC ninjs schema is available for download at
 <a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_2.0.json</a></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_sample_code">5.4.2. Sample Code</h4>
 <div class="paragraph">
-<p>Sample code demonstrating how to validate ninjs documents, along with example ninjs documents, can be found in the <a href="https://github.com/iptc/newsinjson">IPTC newsinjson github repository</a>.</p>
+<p>Sample code demonstrating how to validate ninjs documents, along with example
+ninjs documents, can be found in the
+<a href="https://github.com/iptc/newsinjson">IPTC newsinjson github repository</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_online_validator">5.4.3. Online Validator</h4>
 <div class="paragraph">
-<p>You can also validate ninjs documents by pasting the schema and document into this online validator, which is built on the json-schema-validator library:</p>
+<p>You can also validate ninjs documents by pasting the schema and document into
+this online validator, which is built on the json-schema-validator library:</p>
 </div>
 <div class="paragraph">
 <p><a href="http://json-schema-validator.herokuapp.com" class="bare">http://json-schema-validator.herokuapp.com</a></p>
@@ -2386,7 +2395,9 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <h2 id="_mapping_between_ninjs_and_newsml_g2">6. Mapping between ninjs and NewsML-G2</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ninjs and NewsML-G2 are not intended to be equivalent to each other, but they both adhere to the IPTC News Architecture, so they share many properties.</p>
+<p>ninjs and NewsML-G2 are not intended to be equivalent to each other, but they
+both adhere to the <a href="https://www.iptc.org/standards/news-architecture/">IPTC News
+Architecture</a>, so they share many properties.</p>
 </div>
 <div class="paragraph">
 <p>Here is a summary of the properties shared by ninjs and NewsML-G2:</p>
@@ -2418,10 +2429,6 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">altids</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:altId</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mimetype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
@@ -2480,6 +2487,10 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:headline with @role</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headlines@contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">slugline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:slugline</p></td>
 </tr>
@@ -2500,8 +2511,16 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:wordcount</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bodies@contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">descriptions</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">descriptions@contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">located</p></td>
@@ -2548,7 +2567,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:remoteContent@ref</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">renditions@mimetype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renditions@contenttype</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:remoteContent@contenttype</p></td>
 </tr>
 <tr>
@@ -2617,7 +2636,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <div class="sect2">
 <h3 id="_ninjs_2_0">7.5. ninjs 2.0</h3>
 <div class="paragraph">
-<p><a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json">Version 2.0 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in XXXXXX.</p>
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json">Version 2.0 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in October 2021.</p>
 </div>
 <div class="paragraph">
 <p>Version 2.0 made several changes, some of them breaking backwards compatibility:</p>
@@ -2688,6 +2707,9 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>Added a new "rightsinfo" property with "linkedrights" or "embeddedrights" as child properties</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>An errata release of 2.0 in May 2022 fixed a problem with the GeoJSON property in the <code>places</code> object.</p>
 </div>
 </div>
 </div>
