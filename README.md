@@ -57,7 +57,7 @@ If you are starting a green-field project, we recommend using ninjs 2.0.
 This version should be easiest for developers to work with.
 
 If you are already using a 1.x version of ninjs, we recommend at least
-upgrading to version 1.4. This should be an easy change as 1.4 is
+upgrading to version 1.4. This should be an easy change, because 1.4 is
 backwards-compatible with versions 1.0, 1.1, 1.2 and 1.3.
 
 Protocol Buffers demo
@@ -76,7 +76,7 @@ Unit tests
 ----------
 
 To run unit tests in the `validation/test_suite` folder against each
-of the ninjs 1.0, 1.1, 1.2, 1.3 and 2.0 schemas, run the following
+of the ninjs 1.0, 1.1, 1.2, 1.3, 1.4 and 2.0 schemas, run the following
 tool in a command/terminal window:
 
     pip install -r validation/python/requirements.txt
@@ -89,9 +89,10 @@ unit tests.
 Dev schema
 ----------
 
-A "development" version of the 1.3 schema is available in the `specification`
-folder and at 
-http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.2_v1.3.json
+"Development" versions of the 1.4 schema and 2.0 schema are available
+in the `specification` folder and at 
+http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.1_v2.0.json
+http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.2_v1.4.json
 
 The dev schema is used to test possible additions to future versions of ninjs.
 It is not guaranteed to be maintained and is subject to change at any time.
@@ -101,5 +102,5 @@ ninjs Generator
 ---------------
 
 In the `generator` folder is the source code to the ninjs generator, a
-user-facing tool to generate sample ninjs files of either 1.3 or 2.0 version,  which is hosted at
+user-facing tool to generate sample ninjs files of either 1.4 or 2.0 version,  which is hosted at
 https://www.iptc.org/std/ninjs/generator/. 
