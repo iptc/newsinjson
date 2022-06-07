@@ -9,7 +9,6 @@
     "patternProperties": {
         "^description_[a-zA-Z0-9_]+": {
             "title": "Description",
-            "description_old": "A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format of the text). nar:description",
             "description": "A free-form textual description of the content of the item. (The string appended to description_ in the property name should reflect the format and/or the purpose of the text, separating the parts with _). nar:description",
             "type": "string"
         },

@@ -446,7 +446,9 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <li><a href="#_ninjs_data_model_in_a_nutshell">1.2. ninjs data model in a nutshell</a></li>
 <li><a href="#_ninjs_object_building_blocks">1.3. ninjs object building blocks</a></li>
 <li><a href="#_a_simple_example">1.4. A simple example</a></li>
-<li><a href="#_ninjs_and_other_standards">1.5. ninjs and other standards</a></li>
+<li><a href="#_two_versions_of_ninjs_ninjs_1_4_and_ninjs_2_0">1.5. Two versions of ninjs: ninjs 1.4 and ninjs 2.0</a></li>
+<li><a href="#_which_version_of_ninjs_should_i_choose_for_my_project">1.6. Which version of ninjs should I choose for my project?</a></li>
+<li><a href="#_ninjs_and_other_standards">1.7. ninjs and other standards</a></li>
 </ul>
 </li>
 <li><a href="#_about_the_iptc_ninjs_user_guide">2. About the IPTC ninjs User Guide</a>
@@ -652,7 +654,59 @@ by an API call.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ninjs_and_other_standards">1.5. ninjs and other standards</h3>
+<h3 id="_two_versions_of_ninjs_ninjs_1_4_and_ninjs_2_0">1.5. Two versions of ninjs: ninjs 1.4 and ninjs 2.0</h3>
+<div class="paragraph">
+<p>IPTC manages two current versions of ninjs: 1.4 and 2.0.</p>
+</div>
+<div class="paragraph">
+<p>The 1.x series adds new features to the version of ninjs that started
+with ninjs 1.0 back in 2013, in a way that is fully backwards
+compatible. The latest release in this series is 1.4, which includes
+new fields <em>contentcreated</em>, <em>expires</em> and <em>rightsinfo</em>. The 1.4
+version of ninjs was approved by the IPTC Standards Committee on May
+18th, 2022. All new users are strongly recommended to use version 2.0.
+This document describes only the 2.0 version, but those who must use
+version 1.4 for backwards compatibility reasons can find the JSON
+Schema file for ninjs 1.4 schema at
+<a href="https://iptc.org/std/ninjs/ninjs-schema_1.4.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.4.json</a>.</p>
+</div>
+<div class="paragraph">
+<p>The 2.x series fixes some issues that made the 1.x series tricky for
+developers to work with. The main change is that we avoid the use of
+patternProperties, so all properties now have well-defined names. This
+work is intended to make ninjs easier for work with binary protocols
+such as Protocol Buffers and Avro. We also took the opportunity to make
+property names more consistent with NewsML-G2 and to add some fields to
+handle rights.</p>
+</div>
+<div class="paragraph">
+<p>We wanted to issue a new release which fixed these problems, but this
+meant breaking backwards-compatibility with the 1.x versions of ninjs.
+This is why we increased the major version number to 2.0.</p>
+</div>
+<div class="paragraph">
+<p>The 2.0 version of ninjs was approved by the IPTC Standards Committee on
+October 20th, 2021.</p>
+</div>
+<div class="paragraph">
+<p>An errata update was made in May 2022 to fix a problem with the way GeoJSON
+properties were integrated into the "places" object.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_which_version_of_ninjs_should_i_choose_for_my_project">1.6. Which version of ninjs should I choose for my project?</h3>
+<div class="paragraph">
+<p>If you are starting a green-field project, we recommend using ninjs 2.0.
+This version should be easiest for developers to work with.</p>
+</div>
+<div class="paragraph">
+<p>If you are already using a 1.x version of ninjs, we recommend at least
+upgrading to version 1.4. This should be an easy change, because 1.4 is
+backwards-compatible with versions 1.0, 1.1, 1.2 and 1.3.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ninjs_and_other_standards">1.7. ninjs and other standards</h3>
 <div class="paragraph">
 <p>JSON is an increasingly popular
 <a href="http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/">alternative to</a>
