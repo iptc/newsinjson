@@ -1,5 +1,5 @@
 {
-    "$standard": {
+    "standard": {
         "name": "IPTC ninjs 1.2",
         "version": "1.2",
         "schema": "https://www.iptc.org/std/ninjs/ninjs-schema_1.2.json"

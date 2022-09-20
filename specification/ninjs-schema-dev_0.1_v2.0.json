@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "id": "http://www.iptc.org/std/ninjs/ninjs-schema-dev_0.1_2.0.json#",
+    "id": "http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.1_v2.0.json#",
     "type": "object",
     "title": "IPTC ninjs - News in JSON - version 2.0 (draft for approval at IPTC Standards Committee)",
     "description": "A news item as JSON object -- copyright 2021 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
@@ -68,7 +68,7 @@
         
         "contentcreated": {
             "title": "Content created",
-            "description": "The date and time when the content of this ninjs object was originally created. For example and old photo that is now handled as a ninjs object. nar:contentCreated",
+            "description": "The date and time when the content of this ninjs object was originally created. For example an old photo that is now handled as a ninjs object. nar:contentCreated",
             "type": "string",
             "format": "date-time"
         },
