@@ -338,14 +338,10 @@
                                 "title": "Literal",
                                 "description": "An identifier for the place as a free-text string.",
                                 "type": "string"
-                            },
-                            "geometry_geojson": {
-                                "title": "Geometry Geojson",
-                                "description": "An object where geo-data from the geojson schema can be used.",
-                                "$ref": "https://json.schemastore.org/geojson.json#"
                             }
                         }
-                    }
+                    },
+                    {"$ref": "https://json.schemastore.org/geojson"}
                 ]
             }
         },
@@ -561,7 +557,7 @@
                     },
                     "format": {
                         "title": "Format",
-                        "description": "A refinement of a generic content type (i.e. IANA MIME type) by a literal string value. (Added in version 1.2. Issue #18). nar:remoteContent@contenttypevariant",
+                        "description": "Binary format name. (Added in version 1.2. Issue #18). nar:remoteContent@format",
                         "type": "string"
                     }
                 }
