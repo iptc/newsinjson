@@ -1,0 +1,14 @@
+{
+    "uri": "003_advice_wrongproperties.json",
+    "title": "This is wrong because lifetime should contain 'code'",
+    "advices": [
+        {
+            "importance": {
+                "code": "essential"
+            },
+            "lifetime": {
+                "name": "forever"
+            }
+        }
+    ]
+}
