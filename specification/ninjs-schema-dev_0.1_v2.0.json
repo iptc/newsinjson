@@ -6,6 +6,22 @@
     "description": "A news item as JSON object -- copyright 2021 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
     "additionalProperties": false,
     "required": ["uri"],
+
+    "definitions": {
+      "contactinfoType": {
+        "additionalProperties": false,
+        "properties": {
+          "role": {"type":"string"},
+          "name": {"type":"string"},
+          "value": {"type":"string"},
+          "uri": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+      
+    },
     "properties": {
         
         "uri": {
@@ -249,7 +265,8 @@
                         "title": "Literal",
                         "description": "An identifier for the person as a free-text string.",
                         "type": "string"
-                    }
+                    },
+                    "contactinfo": {"$ref": "#/definitions/contactinfoType"}
                 }
             }
         },
