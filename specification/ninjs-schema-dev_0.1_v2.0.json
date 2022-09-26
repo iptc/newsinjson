@@ -300,6 +300,16 @@
                                     "title": "Exchange",
                                     "description": "Identifier for the marketplace which uses the ticker symbols of the ticker property",
                                     "type": "string"
+                                },
+                                "symboltype": {
+                                    "title": "Symbol type",
+                                    "description": "https://cv.iptc.org/newscodes/financialinstrumentsymboltype",
+                                    "type": "string"
+                                },
+                                "symbol": {
+                                    "title": "Symbol",
+                                    "description": "Compare with hasInstrument in NewsML-G2",
+                                    "type": "string"
                                 }
                             }
                         }
