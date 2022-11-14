@@ -293,7 +293,7 @@
                             "properties": {
                                 "ticker": {
                                     "title": "Ticker",
-                                    "description": "Ticker symbol used for the financial instrument",
+                                    "description": "Ticker symbol used for the financial instrument. Will be deprecated but still here for backwards compatibility.",
                                     "type": "string"
                                 },
                                 "exchange": {
@@ -302,6 +302,7 @@
                                     "type": "string"
                                 },
                                 "symboltype": {
+<<<<<<< HEAD
                                     "title": "Symbol type uri",
                                     "description": "https://cv.iptc.org/newscodes/financialinstrumentsymboltype. Same as type in G2.",
                                     "type": "string",
@@ -310,6 +311,15 @@
                                 "symbol": {
                                     "title": "Symbol",
                                     "description": "Compare with hasInstrument in NewsML-G2. Same as symbol in G2.",
+=======
+                                    "title": "Symbol type",
+                                    "description": "Symbol type according to the CV: https://cv.iptc.org/newscodes/financialinstrumentsymboltype. Complete uri or just the name of the type. For example ticker or ISIN ",
+                                    "type": "string"
+                                }
+                                "symbol": {
+                                    "title": "Symbol",
+                                    "description": " For example APPL           (Compare with hasInstrument in NewsML-G2)",
+>>>>>>> 593e54586339402c563fe0e5a00db03829467a65
                                     "type": "string"
                                 }
                             }
