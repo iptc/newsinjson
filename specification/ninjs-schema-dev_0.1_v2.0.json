@@ -298,17 +298,18 @@
                                 },
                                 "exchange": {
                                     "title": "Exchange",
-                                    "description": "Identifier for the marketplace which uses the ticker symbols of the ticker property",
+                                    "description": "Identifier for the marketplace which uses the ticker symbols of the ticker property. Same as market in G2.",
                                     "type": "string"
                                 },
                                 "symboltype": {
-                                    "title": "Symbol type",
-                                    "description": "https://cv.iptc.org/newscodes/financialinstrumentsymboltype",
-                                    "type": "string"
+                                    "title": "Symbol type uri",
+                                    "description": "https://cv.iptc.org/newscodes/financialinstrumentsymboltype. Same as type in G2.",
+                                    "type": "string",
+                                    "format": "uri"
                                 },
                                 "symbol": {
                                     "title": "Symbol",
-                                    "description": "Compare with hasInstrument in NewsML-G2",
+                                    "description": "Compare with hasInstrument in NewsML-G2. Same as symbol in G2.",
                                     "type": "string"
                                 }
                             }
