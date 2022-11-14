@@ -13,13 +13,32 @@
         "properties": {
           "type": {"description": "Type would be method of communication like phone, mobile, address etc.", "type":"string"},
           "role": {"description": "Role refers to type and could be private, office etc", "type":"string"},
+          "lang": {"description": "Role refers to type and could be private, office etc", "type":"string"},
           "name": {"description": "Human readable name of the contact method, like name for a web page, name of persons twitter account etc", "type":"string"},
+          
           "value": {"description": "Actual phone number, email address, web url etc.", "type":"string"},
-          "address": ["properties": { "line":"string"  } ]
+          
+          "address": {"description": "An array of lines to construct an address. The order is important to construct a correct address.", 
+                    "type": "array", 
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "part": {"type": "string"},
+                        "value": {"type": "string"}
+              }
+            }
           }
-        }
+        },
+            "oneOf": [
+                {
+                    "required": ["value"]
+                },
+                {
+                    "required": ["address"]
+                }
+            ]
       }
-      
     },
     "properties": {
         
@@ -265,7 +284,7 @@
                         "description": "An identifier for the person as a free-text string.",
                         "type": "string"
                     },
-                    "contactinfo": {"$ref": "#/definitions/contactinfoType"}
+                    "contactinfo": { "type": "array", "items": {"$ref": "#/definitions/contactinfoType"}}
                 }
             }
         },
@@ -319,7 +338,8 @@
                                 }
                             }
                         }
-                    }
+                    },
+                    "contactinfo": { "type": "array", "items": {"$ref": "#/definitions/contactinfoType"}}
                 }
             }
         },

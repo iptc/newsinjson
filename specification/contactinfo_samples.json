@@ -1,0 +1,121 @@
+{
+	"uri": "johantest/123",
+	
+	"organisations": [
+	{
+	  "name": "IPTC",
+	  
+	  "contactinfo": [
+	    {
+	      "type": "email",
+	      "role": "office",
+	      "value": "mdirector@iptc.org"
+	      
+	    },
+	    {
+	      "type": "twitter",
+	      "role": "official",
+	      "value": "@IPTC"
+	    },	    
+	    {
+        "role": "address",
+	      "name": "official",
+        "address": [
+	        {"part": "street", "value": "25 Southamption Buildings"},
+	        {"part": "city", "value": "London"},
+	        {"part": "postcode", "value": "WC2A 1AL"},
+	        {"part": "country", "value": "United Kingdom"}
+	      ]
+	    },
+	    {
+        "role": "address",
+	      "name": "official",
+        "address": [
+	        {"street": "25 Southamption Buildings",
+	        "city": "London","postalcode": "WC2A 1AL",
+	        "country": "United Kingdom"}
+	      ]
+	    }
+	  ]
+	}
+	  
+	],
+	
+	"people": [
+	  {
+	    "name": "Brendan Quinn",
+	    "contactinfo": [
+	    {
+	      "type": "twitter",
+	      "role": "private",
+	      "value": "@brendanquinn"
+	    }	      
+	      
+	    ]
+	    
+	  },
+	
+	  {
+	    "name": "Johan Lindgren",
+	    
+	    
+	    "contactinfo": 
+	    [{
+	      "type": "mobile",
+	      "role": "private",
+	      "value": "0706528007"
+	    },
+	    {
+	      "type": "phone",
+	      "role": "office",
+	      "value": "086922600"
+	    },
+	    {
+	      "type": "twitter",
+	      "role": "",
+	      "value": ""
+	    },
+	    {
+	      "type": "what3words",
+	      "value": "kräftdjur.lövträd.kvar"
+	    },
+	    {
+	      "type": "what3words",
+	      "value": "animated.goes.sank"
+	    },
+	    {
+	      "type": "address",
+	      "role": "private",
+	      "value": "Gnejsvägen 24, 85357 Sundsvall, Sweden"
+	    },
+	    {
+        "role": "home",
+	      "name": "Hemadress",
+        "address": [
+	        {"part": "street", "value": "Gnejsvägen 24"},
+	        {"part": "postnumber", "value": "85357"},
+	        {"part": "city", "value": "Sundsvall"},
+	        {"part": "country", "value": "Sweden"}
+	      ]
+	    },
+	    {
+        "role": "home",
+        "address": [
+	        {"part": "street", "value": "Gnejsvägen 24"},
+	        {"part": "postnumber", "value": "85357"},
+	        {"part": "city", "value": "Sundsvall"},
+	        {"part": "country", "value": "Sweden"}
+	      ]
+	    },
+	    {
+        "role": "home",
+        "address": [
+	        {"part": "what3words", "value": "animated.goes.sank"}
+	      ]
+	    }
+	    
+	    ]
+	    
+	  }
+	]
+}
