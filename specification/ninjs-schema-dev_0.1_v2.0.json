@@ -335,6 +335,17 @@
                                     "title": "Exchange",
                                     "description": "Identifier for the marketplace which uses the ticker symbols of the ticker property",
                                     "type": "string"
+                                },
+                                "symboltype": {
+                                    "title": "Symbol type uri",
+                                    "description": "https://cv.iptc.org/newscodes/financialinstrumentsymboltype. Same as type in G2.",
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "symbol": {
+                                    "title": "Symbol",
+                                    "description": "Compare with hasInstrument in NewsML-G2. Same as symbol in G2.",
+                                    "type": "string"
                                 }
                             }
                         }
@@ -832,6 +843,99 @@
                     "required": ["encodedrights"]
                 }
             ]
+        },
+        "partmetas":{
+            "type": "array",
+            "title": "Part metadata",
+            "description": "A set of properties describing a specific part of the content of the Item. nar:partmeta. (Added in 2.1)",
+            "additionalProperties": false,
+            "items": {
+                "description": "One part meta",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "partid": {
+                    "title": "part ID",
+                    "description": "The identifier of the part",
+                    "type": "string",
+                    "format": "uri"
+                    },  
+                  "language": {
+                    "title": "Language",
+                    "description": "The human language used. The value should follow IETF BCP47. nar:language@tag",
+                    "type": "string",
+                    "format": "uri"
+                    }, 
+                  "languagerole": {
+                    "title": "Language role",
+                    "description": "According to http://cv.iptc.org/newscodes/languagerole (For example: voiceOver) nar:language@role",
+                    "type": "string",
+                    "format": "uri"
+                    }, 
+                  "description": {
+                    "title": "Description",
+                    "description": "A free-form textual description of the content of this part meta. nar:description",
+                    "type": "string"
+                  },
+                  "icons": {
+                      "title": "Icons",
+                      "description": "An iconic visual identification of the content. nar:icon",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "properties": {
+                                "href": {
+                                    "title": "HREF",
+                                    "description": "",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                         }
+
+                     
+                },
+                "timedelimeters": {
+                      "title": "Time delimeters",
+                      "description": "A delimiter for a piece of streaming media content, expressed in various time formats. nar:timeDelim",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "required": ["start","end"],
+                            "properties": {
+                                "renditionref": {
+                                    "title": "Rendition ref",
+                                    "description": "From nar: Refers to the content rendition with this QCode as rendition attribute value - expressed by a QCode",
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "start": {
+                                    "title": "Start",
+                                    "description": "From nar: The start time of the part in a timeline. The expressed time unit is excluded. Using the Edit Unit requires the frame rate or sampling rate to be known, this must be defined by the referenced rendition of the content.",
+                                    "type": "string"
+                                },
+                                "end": {
+                                    "title": "End",
+                                    "description": "From nar: The end time of the part in a timeline. The expressed time unit is included. Using the Edit Unit requires the frame rate or sampling rate to be known, this must be defined by the referenced rendition of the content.",
+                                    "type": "string"
+                                },
+                                "timeunit": {
+                                    "title": "Time unit",
+                                    "description": "According to http://cv.iptc.org/newscodes/timeunit.",
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                              
+
+                            }
+                        }
+                    }
+            
+            }
         }
+
+       }
     }
 }
