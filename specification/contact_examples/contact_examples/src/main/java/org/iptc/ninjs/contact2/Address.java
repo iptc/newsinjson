@@ -8,6 +8,7 @@ import java.util.List;
 @JsonPropertyOrder({"lines", "locality", "area", "postalcode", "country"})
 public class Address {
 
+  @JsonProperty("lines")
   private List<String> lines;
   private String locality;
   private String area;
