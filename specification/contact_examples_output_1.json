@@ -1,0 +1,125 @@
+{
+  "uri" : "contact-sample-version-1",
+  "organisations" : [ {
+    "name" : "Business Wire",
+    "contactinfo" : [ {
+      "role" : "office",
+      "name" : "address",
+      "address" : [ {
+        "part" : "address",
+        "value" : "101 California Street"
+      }, {
+        "part" : "address",
+        "value" : "20th Floor"
+      }, {
+        "part" : "city",
+        "value" : "San Francisco"
+      }, {
+        "part" : "state",
+        "value" : "CA"
+      }, {
+        "part" : "zip",
+        "value" : "94111"
+      }, {
+        "part" : "country",
+        "value" : "United States"
+      } ]
+    }, {
+      "type" : "what3words",
+      "role" : "office",
+      "value" : "https://what3words.com/fruit.insert.left"
+    }, {
+      "type" : "phone",
+      "role" : "office",
+      "value" : "415-986-4422"
+    }, {
+      "type" : "fax",
+      "role" : "office",
+      "value" : "415-956-2609"
+    }, {
+      "type" : "twitter",
+      "role" : "social",
+      "name" : "Business Wire on Twitter",
+      "value" : "https://www.twitter.com/businesswire"
+    }, {
+      "type" : "instagram",
+      "role" : "social",
+      "name" : "Business Wire on Instagram",
+      "value" : "https://www.instagram.com/businesswire"
+    }, {
+      "role" : "office",
+      "name" : "phone"
+    } ]
+  } ],
+  "people" : [ {
+    "name" : "Brendan Quinn",
+    "contactinfo" : [ {
+      "type" : "email",
+      "role" : "office",
+      "value" : "mdirector@iptc.org"
+    }, {
+      "type" : "twitter",
+      "role" : "personal",
+      "name" : "@brendanquinn",
+      "value" : "https://www.twitter.com/brendanquinn"
+    }, {
+      "type" : "twitter",
+      "role" : "official",
+      "name" : "@IPTC",
+      "value" : "https://twitter.com/iptc"
+    }, {
+      "type" : "address",
+      "role" : "official",
+      "address" : [ {
+        "part" : "street",
+        "value" : "25 Southamption Buildings"
+      }, {
+        "part" : "city",
+        "value" : "London"
+      }, {
+        "part" : "postcode",
+        "value" : "WC2A 1AL"
+      }, {
+        "part" : "country",
+        "value" : "United Kingdom"
+      } ]
+    } ]
+  }, {
+    "name" : "Johan Lindgren",
+    "contactinfo" : [ {
+      "type" : "address",
+      "role" : "home",
+      "address" : [ {
+        "part" : "street",
+        "value" : "Gnejsvägen 24"
+      }, {
+        "part" : "city",
+        "value" : "Sundsvall"
+      }, {
+        "part" : "postcode",
+        "value" : "85357"
+      }, {
+        "part" : "country",
+        "value" : "Sweden"
+      } ]
+    }, {
+      "type" : "address",
+      "role" : "what3words",
+      "lang" : "en",
+      "value" : "https://what3words.com/animated.goes.sank"
+    }, {
+      "type" : "address",
+      "role" : "what3words",
+      "lang" : "sv",
+      "value" : "https://what3words.com/kräftdjur.lövträd.kvar"
+    }, {
+      "type" : "mobile",
+      "role" : "private",
+      "value" : "0706528007"
+    }, {
+      "type" : "phone",
+      "role" : "office",
+      "value" : "086922600"
+    } ]
+  } ]
+}

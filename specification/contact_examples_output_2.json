@@ -1,0 +1,100 @@
+{
+  "uri" : "contact-sample-version-2",
+  "organisations" : [ {
+    "name" : "Business Wire",
+    "contactinfo" : [ {
+      "type" : "address",
+      "role" : "office",
+      "address" : {
+        "locality" : "San Francisco",
+        "area" : "CA",
+        "country" : "United States",
+        "line" : [ "101 California Street", "20th Floor" ],
+        "postalcode" : "94111"
+      }
+    }, {
+      "type" : "what3words",
+      "role" : "office",
+      "value" : "https://what3words.com/fruit.insert.left"
+    }, {
+      "type" : "phone",
+      "role" : "office",
+      "value" : "415-986-4422"
+    }, {
+      "type" : "fax",
+      "role" : "office",
+      "value" : "415-956-2609"
+    }, {
+      "type" : "twitter",
+      "role" : "social",
+      "name" : "Business Wire on Twitter",
+      "value" : "https://www.twitter.com/businesswire"
+    }, {
+      "type" : "instagram",
+      "role" : "social",
+      "name" : "Business Wire on Instagram",
+      "value" : "https://www.instagram.com/businesswire"
+    } ]
+  } ],
+  "people" : [ {
+    "name" : "Brendan Quinn",
+    "contactinfo" : [ {
+      "type" : "email",
+      "role" : "office",
+      "value" : "mdirector@iptc.org"
+    }, {
+      "type" : "twitter",
+      "role" : "personal",
+      "name" : "@brendanquinn",
+      "value" : "https://www.twitter.com/brendanquinn"
+    }, {
+      "type" : "email",
+      "role" : "office",
+      "value" : "mdirector@iptc.org"
+    }, {
+      "type" : "twitter",
+      "role" : "official",
+      "name" : "@IPTC",
+      "value" : "https://twitter.com/iptc"
+    }, {
+      "type" : "address",
+      "role" : "official",
+      "address" : {
+        "locality" : "London",
+        "country" : "United Kingdom",
+        "line" : [ "25 Southampion Buildings" ],
+        "postalcode" : "WC2A 1AL"
+      }
+    } ]
+  }, {
+    "name" : "Johan Lindgren",
+    "contactinfo" : [ {
+      "type" : "address",
+      "role" : "home",
+      "address" : {
+        "locality" : "Sundsvall",
+        "country" : "Sweden",
+        "line" : [ "Gnejsvägen 24" ],
+        "postalcode" : "85357"
+      }
+    }, {
+      "type" : "address",
+      "role" : "what3words",
+      "lang" : "en",
+      "value" : "https://what3words.com/animated.goes.sank"
+    }, {
+      "type" : "address",
+      "role" : "what3words",
+      "lang" : "sv",
+      "value" : "https://what3words.com/kräftdjur.lövträd.kvar"
+    }, {
+      "type" : "mobile",
+      "role" : "private",
+      "value" : "0706528007"
+    }, {
+      "type" : "phone",
+      "role" : "office",
+      "value" : "086922600"
+    } ]
+  } ]
+}
