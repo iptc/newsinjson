@@ -1,9 +1,11 @@
 package org.iptc.ninjs.contact2;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonPropertyOrder({"lines", "locality", "area", "postalcode", "country"})
 public class Address {
 
   private List<String> lines;
