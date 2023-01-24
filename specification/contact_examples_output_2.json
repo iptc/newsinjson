@@ -6,11 +6,11 @@
       "type" : "address",
       "role" : "office",
       "address" : {
+        "lines" : [ "101 California Street", "20th Floor" ],
         "locality" : "San Francisco",
         "area" : "CA",
-        "country" : "United States",
-        "line" : [ "101 California Street", "20th Floor" ],
-        "postalcode" : "94111"
+        "postalcode" : "94111",
+        "country" : "United States"
       }
     }, {
       "type" : "what3words",
@@ -60,10 +60,10 @@
       "type" : "address",
       "role" : "official",
       "address" : {
+        "lines" : [ "25 Southampion Buildings" ],
         "locality" : "London",
-        "country" : "United Kingdom",
-        "line" : [ "25 Southampion Buildings" ],
-        "postalcode" : "WC2A 1AL"
+        "postalcode" : "WC2A 1AL",
+        "country" : "United Kingdom"
       }
     } ]
   }, {
@@ -72,10 +72,10 @@
       "type" : "address",
       "role" : "home",
       "address" : {
+        "lines" : [ "Gnejsvägen 24" ],
         "locality" : "Sundsvall",
-        "country" : "Sweden",
-        "line" : [ "Gnejsvägen 24" ],
-        "postalcode" : "85357"
+        "postalcode" : "85357",
+        "country" : "Sweden"
       }
     }, {
       "type" : "address",
