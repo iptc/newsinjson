@@ -9,7 +9,7 @@
         "locality" : "San Francisco",
         "area" : "CA",
         "country" : "United States",
-        "line" : [ "101 California Street", "20th Floor" ],
+        "lines" : [ "101 California Street", "20th Floor" ],
         "postalcode" : "94111"
       }
     }, {
@@ -62,7 +62,7 @@
       "address" : {
         "locality" : "London",
         "country" : "United Kingdom",
-        "line" : [ "25 Southampion Buildings" ],
+        "lines" : [ "25 Southampion Buildings" ],
         "postalcode" : "WC2A 1AL"
       }
     } ]
@@ -74,7 +74,7 @@
       "address" : {
         "locality" : "Sundsvall",
         "country" : "Sweden",
-        "line" : [ "Gnejsvägen 24" ],
+        "lines" : [ "Gnejsvägen 24" ],
         "postalcode" : "85357"
       }
     }, {
