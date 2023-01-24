@@ -28,11 +28,11 @@ public class Address {
     return new Builder();
   }
 
-  public List<String> getLine() {
+  public List<String> getLines() {
     return lines;
   }
 
-  public void setLine(List<String> lines) {
+  public void setLines(List<String> lines) {
     this.lines = lines;
   }
 
