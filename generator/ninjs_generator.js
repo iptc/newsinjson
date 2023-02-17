@@ -62,10 +62,10 @@ class NinjsGenerator extends React.Component {
             this.state.qcodeVisible = false;
             // output = this.getninjs20Output();
             output = this.getninjsOutput("ninjs20");
-        } else if (this.state.outputformat == 'ninjs13') {
+        } else if (this.state.outputformat == 'ninjs14') {
             this.state.qcodeVisible = false;
-            // output = this.getninjs13Output();
-            output = this.getninjsOutput("ninjs13");
+            // output = this.getninjs14Output();
+            output = this.getninjsOutput("ninjs14");
         }
         this.setState({output: output});
     }
@@ -80,11 +80,11 @@ class NinjsGenerator extends React.Component {
         jsonObj['uri'] = uri;
 
         var standard = {}; var standardkey = "";
-        if (version == "ninjs13") {
+        if (version == "ninjs14") {
             standard = {
                 "name": "ninjs",
-                "version": "1.3",
-                "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.3.json"
+                "version": "1.4",
+                "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.4.json"
             };
             standardkey = '$standard';
         } else {
@@ -107,7 +107,7 @@ class NinjsGenerator extends React.Component {
             jsonObj['type'] = this.state.type;
         }
         if (this.state.representationtype) {
-            if (version == "ninjs13") {
+            if (version == "ninjs14") {
                 jsonObj['representationtype'] = this.state.representationtype == "full" ? "complete" : "incomplete";
             } else {
                 jsonObj['representationtype'] = this.state.representationtype;
@@ -119,7 +119,7 @@ class NinjsGenerator extends React.Component {
         if (this.state.urgency) {
             jsonObj['urgency'] = parseInt(this.state.urgency);
         }
-        if (version == "ninjs13") {
+        if (version == "ninjs14") {
             if (this.state.headline) {
                 jsonObj['headline'] = this.state.headline;
             }
@@ -159,7 +159,7 @@ class NinjsGenerator extends React.Component {
             jsonObj['slugline'] = this.state.slugline;
         }
         if (this.state.bodytext) {
-            if (version == "ninjs13") {
+            if (version == "ninjs14") {
                 jsonObj['body_text'] = this.state.bodytext;
                 jsonObj['charcount'] = this.state.bodytext.length;
                 jsonObj['wordcount'] = this.state.bodytext.split(' ').length;
@@ -175,7 +175,7 @@ class NinjsGenerator extends React.Component {
         if (this.state.genre) {
             var genreitems = [];
             var genrekey = "";
-            if (version == "ninjs13") {
+            if (version == "ninjs14") {
                 genreitems.push({
                     'scheme': 'http://cv.iptc.org/newscodes/genre/',
                     'code': this.state.genre
@@ -193,7 +193,7 @@ class NinjsGenerator extends React.Component {
             var mediatopics = [];
             var medtopkey = '';
             for (var elem of this.state.medtop) {
-                if (version == "ninjs13") {
+                if (version == "ninjs14") {
                     mediatopics.push({
                         'scheme': 'http://cv.iptc.org/newscodes/mediatopic/',
                         'rel': 'classifies',
@@ -213,7 +213,7 @@ class NinjsGenerator extends React.Component {
             jsonObj[medtopkey] = mediatopics;
         }
         if (this.state.by) {
-            if (version == "ninjs13") {
+            if (version == "ninjs14") {
                 jsonObj['byline'] = this.state.by;
             } else {
                 jsonObj['by'] = this.state.by;
@@ -223,7 +223,7 @@ class NinjsGenerator extends React.Component {
             jsonObj['located'] = this.state.location;
         }
         if (this.state.altid_role || this.state.altid_value) {
-            if (version == "ninjs13") {
+            if (version == "ninjs14") {
                 var altid_role = this.state.altid_role || "altidrole";
                 var altid_value = this.state.altid_value || "";
                 jsonObj['altids'] = {}
@@ -669,8 +669,8 @@ class NinjsGenerator extends React.Component {
                             <label className="form-check-label" htmlFor="ninjs20">ninjs 2.0</label>
                         </div>
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs13" value="ninjs13" title="Output format - ninjs 1.3" onChange={this.handleInputChange} tabIndex="24" />&nbsp;
-                            <label className="form-check-label" htmlFor="ninjs13">ninjs 1.3</label>
+                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs14" value="ninjs14" title="Output format - ninjs 1.4" onChange={this.handleInputChange} tabIndex="24" />&nbsp;
+                            <label className="form-check-label" htmlFor="ninjs14">ninjs 1.4</label>
                         </div>
                     </div>
                 </div>

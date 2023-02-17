@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.10">
+<meta name="generator" content="Asciidoctor 2.0.15">
 <meta name="author" content="IPTC News in JSON Working Group">
 <title>NinJS User Guide</title>
 <style>
@@ -426,6 +426,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
 </head>
 <body class="html5 toc2 toc-left">
 <div id="header">
@@ -434,7 +435,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <span id="author" class="author">IPTC News in JSON Working Group</span><br>
 <span id="email" class="email"><a href="mailto:office@iptc.org">office@iptc.org</a></span><br>
 <span id="revnumber">covers version 2.0</span>
-<br><span id="revremark">Revised 2021-09-06</span>
+<br><span id="revremark">Revised 2022-05-22</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">ninjs User Guide</div>
@@ -445,7 +446,9 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <li><a href="#_ninjs_data_model_in_a_nutshell">1.2. ninjs data model in a nutshell</a></li>
 <li><a href="#_ninjs_object_building_blocks">1.3. ninjs object building blocks</a></li>
 <li><a href="#_a_simple_example">1.4. A simple example</a></li>
-<li><a href="#_ninjs_and_other_standards">1.5. ninjs and other standards</a></li>
+<li><a href="#_two_versions_of_ninjs_ninjs_1_4_and_ninjs_2_0">1.5. Two versions of ninjs: ninjs 1.4 and ninjs 2.0</a></li>
+<li><a href="#_which_version_of_ninjs_should_i_choose_for_my_project">1.6. Which version of ninjs should I choose for my project?</a></li>
+<li><a href="#_ninjs_and_other_standards">1.7. ninjs and other standards</a></li>
 </ul>
 </li>
 <li><a href="#_about_the_iptc_ninjs_user_guide">2. About the IPTC ninjs User Guide</a>
@@ -519,13 +522,15 @@ as <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>.</p>
 <div class="paragraph">
 <p>To help get you started, we have created a
 <a href="https://www.iptc.org/std/ninjs/generator/">simple ninjs generator</a> so you can see
-how a real ninjs document can be. We have also built a JSON schema for
+how easily a real ninjs document can be created. We have also built a JSON schema for
 ninjs to help you <a href="#_how_to_validate_objects">validate your ninjs implementation</a>.</p>
 </div>
 <div class="paragraph">
 <p>The latest version of the standard is 2.0:
 <a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json">Version 2.0 of the ninjs
-schema</a> was made available in October 2021.</p>
+schema</a> was made available in October 2021. An erratum release of version 2.0 was
+published in May 2022 to fix a problem with the way GeoJSON was included in the
+places object.</p>
 </div>
 <div class="paragraph">
 <p>The IPTC welcomes your feedback on how to improve the standard via the
@@ -623,7 +628,7 @@ by an API call.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simp123",
   "type" : "text",
   "versioncreated" : "2013-07-09T10:37:00Z",
@@ -649,7 +654,59 @@ by an API call.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ninjs_and_other_standards">1.5. ninjs and other standards</h3>
+<h3 id="_two_versions_of_ninjs_ninjs_1_4_and_ninjs_2_0">1.5. Two versions of ninjs: ninjs 1.4 and ninjs 2.0</h3>
+<div class="paragraph">
+<p>IPTC manages two current versions of ninjs: 1.4 and 2.0.</p>
+</div>
+<div class="paragraph">
+<p>The 1.x series adds new features to the version of ninjs that started
+with ninjs 1.0 back in 2013, in a way that is fully backwards
+compatible. The latest release in this series is 1.4, which includes
+new fields <em>contentcreated</em>, <em>expires</em> and <em>rightsinfo</em>. The 1.4
+version of ninjs was approved by the IPTC Standards Committee on May
+18th, 2022. All new users are strongly recommended to use version 2.0.
+This document describes only the 2.0 version, but those who must use
+version 1.4 for backwards compatibility reasons can find the JSON
+Schema file for ninjs 1.4 schema at
+<a href="https://iptc.org/std/ninjs/ninjs-schema_1.4.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.4.json</a>.</p>
+</div>
+<div class="paragraph">
+<p>The 2.x series fixes some issues that made the 1.x series tricky for
+developers to work with. The main change is that we avoid the use of
+patternProperties, so all properties now have well-defined names. This
+work is intended to make ninjs easier for work with binary protocols
+such as Protocol Buffers and Avro. We also took the opportunity to make
+property names more consistent with NewsML-G2 and to add some fields to
+handle rights.</p>
+</div>
+<div class="paragraph">
+<p>We wanted to issue a new release which fixed these problems, but this
+meant breaking backwards-compatibility with the 1.x versions of ninjs.
+This is why we increased the major version number to 2.0.</p>
+</div>
+<div class="paragraph">
+<p>The 2.0 version of ninjs was approved by the IPTC Standards Committee on
+October 20th, 2021.</p>
+</div>
+<div class="paragraph">
+<p>An errata update was made in May 2022 to fix a problem with the way GeoJSON
+properties were integrated into the "places" object.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_which_version_of_ninjs_should_i_choose_for_my_project">1.6. Which version of ninjs should I choose for my project?</h3>
+<div class="paragraph">
+<p>If you are starting a green-field project, we recommend using ninjs 2.0.
+This version should be easiest for developers to work with.</p>
+</div>
+<div class="paragraph">
+<p>If you are already using a 1.x version of ninjs, we recommend at least
+upgrading to version 1.4. This should be an easy change, because 1.4 is
+backwards-compatible with versions 1.0, 1.1, 1.2 and 1.3.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ninjs_and_other_standards">1.7. ninjs and other standards</h3>
 <div class="paragraph">
 <p>JSON is an increasingly popular
 <a href="http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/">alternative to</a>
@@ -815,7 +872,7 @@ This property is an object with the following child properties:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">schema</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the json schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the JSON schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
@@ -1047,7 +1104,7 @@ This property is an object with the following child properties:<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this headline. (Previously known as MIME Type.)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1092,12 +1149,12 @@ This property is an object with the following child properties:<br></p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The role of this headline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The role of this body</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The IANA (Internet Assigned Numbers Authority) MIME type of the content of this headline.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this body. (Previously known as MIME Type.)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1150,7 +1207,7 @@ This property is an object with the following child properties:<br></p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The IANA (Internet Assigned Numbers Authority) MIME type of the content of this description.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this description. (Previously known as MIME Type.)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1380,8 +1437,10 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">GeoJSON properties</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An object holding geo data of this place. Could be of any relevant geo data JSON object definition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geojson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An object holding geo data of this place. As of ninjs 2.0, the contents of this
+object must conform to <a href="https://geojson.org/schema/GeoJSON.json">the GeoJSON
+format</a> defined in <a href="https://datatracker.ietf.org/doc/html/rfc7946">RFC 7946</a>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
 </tr>
 </tbody>
@@ -1642,8 +1701,8 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mimetype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A MIME type which applies to the rendition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A media type which applies to the rendition</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
@@ -1683,7 +1742,7 @@ This property is an array of objects with the following properties:</p>
 <h4 id="_renditions_example">3.5.2. Renditions example</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "renditions-example",
   "bodies": [
     {
@@ -1728,7 +1787,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "http://www.businesswire.com/news/home/20130515006361/en",
   "type":"composite",
   "version": "1",
@@ -1812,7 +1871,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simp123",
   "type" : "text",
   "versioncreated" : "2013-07-09T10:37:00Z",
@@ -1853,7 +1912,7 @@ This property is an array of objects with the following properties:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709med123",
   "type" : "text",
   "profile" : "text-only",
@@ -1946,7 +2005,7 @@ repository</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
   "type" : "picture",
   "versioncreated" : "2013-07-08T08:12:00Z",
@@ -2014,7 +2073,7 @@ repository</a>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709cplx456",
   "type" : "composite",
   "profile" : "text-photo",
@@ -2040,8 +2099,7 @@ repository</a>.</p>
     {
       "name" : "Italy",
       "rel" : "mentions",
-      "scheme" : "http://cvx.iptc.org/iso3166-1a2/",
-      "code" : "it"
+      "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
     }
   ],
   "organisations" : [
@@ -2147,15 +2205,14 @@ repository</a>.</p>
       "type" : "picture",
       "versioncreated" : "2013-07-09T10:12:00Z",
       "copyrightnotice" : "Copyright 2013 The News Agency, www.tna.org - all rights reserved.",
-      "person" : [
+      "people" : [
         {
           "name" : "Francesco Schettino",
           "rel" : "about",
-          "scheme" : "http://www.freebase.com/m/",
-          "code" : "0hzcydt"
+          "uri" : "http://www.wikidata.org/entity/Q4421821"
         }
       ],
-      "place" : [
+      "places" : [
         {
           "name" : "Grossetto",
           "rel" : "mentions"
@@ -2167,8 +2224,7 @@ repository</a>.</p>
         {
           "name" : "Italy",
           "rel" : "mentions",
-          "scheme" : "http://cvx.iptc.org/iso3166-1a2/",
-          "code" : "it"
+          "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
         }
       ],
       "organisation" : [
@@ -2255,7 +2311,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>change the URL of the "id" property of IPTC&#8217;s ninjs 2.0 &#8230;&#8203;</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json#",
   "type" : "object",
@@ -2267,7 +2323,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2279,7 +2335,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>add your own properties to your copy of the schema. For example, to add a property explaining the reason for the embargo:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2302,7 +2358,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>save your new schema to a location where users of the schema can access it, which should be the same URL used for the "id" property:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
   "type" : "object",
@@ -2321,7 +2377,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "http://ninjs.example.com/newsitems/20130709simp123",
   "type": "text",
   "versioncreated": "2013-07-09T10:37:00Z",
@@ -2337,7 +2393,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code data-lang="json" class="language-json hljs">{
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri": "http://ninjs.example.com/newsitems/20130709simp123",
   "standard": {
       "name": "e-ninjs-schema",
@@ -2359,23 +2415,28 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <div class="sect3">
 <h4 id="_validating_a_ninjs_document">5.4.1. Validating a ninjs document</h4>
 <div class="paragraph">
-<p>JSON Schema is the de-facto standard for validating JSON documents. The IPTC maintains schemas for each version of the ninjs standard. These schemas can be used to validate ninjs documents.</p>
+<p>JSON Schema is the de-facto standard for validating JSON documents. The IPTC
+maintains schemas for each version of the ninjs standard. These schemas can be
+used to validate ninjs documents.</p>
 </div>
 <div class="paragraph">
-<p>This is the latest IPTC ninjs schema available for download:
+<p>The latest IPTC ninjs schema is available for download at
 <a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_2.0.json</a></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_sample_code">5.4.2. Sample Code</h4>
 <div class="paragraph">
-<p>Sample code demonstrating how to validate ninjs documents, along with example ninjs documents, can be found in the <a href="https://github.com/iptc/newsinjson">IPTC newsinjson github repository</a>.</p>
+<p>Sample code demonstrating how to validate ninjs documents, along with example
+ninjs documents, can be found in the
+<a href="https://github.com/iptc/newsinjson">IPTC newsinjson github repository</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_online_validator">5.4.3. Online Validator</h4>
 <div class="paragraph">
-<p>You can also validate ninjs documents by pasting the schema and document into this online validator, which is built on the json-schema-validator library:</p>
+<p>You can also validate ninjs documents by pasting the schema and document into
+this online validator, which is built on the json-schema-validator library:</p>
 </div>
 <div class="paragraph">
 <p><a href="http://json-schema-validator.herokuapp.com" class="bare">http://json-schema-validator.herokuapp.com</a></p>
@@ -2388,7 +2449,9 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <h2 id="_mapping_between_ninjs_and_newsml_g2">6. Mapping between ninjs and NewsML-G2</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ninjs and NewsML-G2 are not intended to be equivalent to each other, but they both adhere to the IPTC News Architecture, so they share many properties.</p>
+<p>ninjs and NewsML-G2 are not intended to be equivalent to each other, but they
+both adhere to the <a href="https://www.iptc.org/standards/news-architecture/">IPTC News
+Architecture</a>, so they share many properties.</p>
 </div>
 <div class="paragraph">
 <p>Here is a summary of the properties shared by ninjs and NewsML-G2:</p>
@@ -2420,10 +2483,6 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">altids</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:altId</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">mimetype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
@@ -2482,6 +2541,10 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:headline with @role</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headlines@contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">slugline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:slugline</p></td>
 </tr>
@@ -2502,8 +2565,16 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:wordcount</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bodies@contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">descriptions</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">descriptions@contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nar:contentType</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">located</p></td>
@@ -2550,7 +2621,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:remoteContent@ref</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">renditions@mimetype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renditions@contenttype</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">nar:remoteContent@contenttype</p></td>
 </tr>
 <tr>
@@ -2619,7 +2690,7 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <div class="sect2">
 <h3 id="_ninjs_2_0">7.5. ninjs 2.0</h3>
 <div class="paragraph">
-<p><a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json">Version 2.0 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in XXXXXX.</p>
+<p><a href="https://iptc.org/std/ninjs/ninjs-schema_2.0.json">Version 2.0 of the ninjs schema</a> was approved by the IPTC Standards Committee and made available in October 2021.</p>
 </div>
 <div class="paragraph">
 <p>Version 2.0 made several changes, some of them breaking backwards compatibility:</p>
@@ -2691,6 +2762,9 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>An errata release of 2.0 in May 2022 fixed a problem with the GeoJSON property in the <code>places</code> object.</p>
+</div>
 </div>
 </div>
 </div>
@@ -2732,8 +2806,12 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 </div>
 </div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
-<script>hljs.initHighlighting()</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
 </body>
 </html>

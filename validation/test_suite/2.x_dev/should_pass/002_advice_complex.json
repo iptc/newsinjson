@@ -1,0 +1,44 @@
+{
+    "uri": "002_advice_complex.json",
+    "title": "An article with different importance and lifetime values for different users",
+    "advices": [
+        {
+            "role": "publish",
+            "environments": [
+                {
+                    "code": "EFE",
+                    "scheme": "http://cv.iptc.org/newscodes/newsprovider/"
+                },
+                {
+                    "code": "GLOBE",
+                    "scheme": "http://cv.iptc.org/newscodes/newsprovider/"
+                }
+            ],
+            "importance": {
+                "code": "useful",
+                "scheme": "http://cv.iptc.org/newscodes/advice-importance/"
+            },
+            "lifetime": {
+                "code": "medium",
+                "scheme": "http://cv.iptc.org/newscodes/advice-lifetime/"
+            }
+        },
+        {
+            "role": "publish",
+            "environments": [
+                {
+                    "code": "SPX",
+                    "scheme": "http://cv.iptc.org/newscodes/newsprovider/"
+                }
+            ],
+            "importance": {
+                "code": "essential",
+                "scheme": "http://cv.iptc.org/newscodes/advice-importance/"
+            },
+            "lifetime": {
+                "code": "evergreen",
+                "scheme": "http://cv.iptc.org/newscodes/advice-lifetime/"
+            }
+        }
+    ]
+}

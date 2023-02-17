@@ -1,7 +1,7 @@
 {
     "uri": "001_advice_simple.json",
     "title": "Title of my ninjs dev article",
-    "advice": [
+    "advices": [
         {
             "importance": { "code": "useful" },
             "lifetime": { "code": "evergreen" }

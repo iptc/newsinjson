@@ -128,7 +128,7 @@
             "name": "Sverige"
         },
         {
-            "geometry_geojson": {
+            "geojson": {
                 "coordinates": [
                     18.2979,
                     57.6381
@@ -138,7 +138,7 @@
             "name": "Gotland"
         },
         {
-            "geometry_geojson": {
+            "geojson": {
                 "coordinates": [
                     25.748151,
                     61.92411
