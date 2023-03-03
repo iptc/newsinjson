@@ -1,12 +1,12 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json#",
+  "$schema": "http://json-schema.org/draft/2020-12/schema#",
+  "$id": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json#",
   "type": "object",
   "title": "IPTC ninjs - News in JSON - version 2.1 (approved at IPTC Standards Committee October 2023)",
   "description": "A news item as JSON object -- copyright 2023 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
   "additionalProperties": false,
   "required": ["uri"],
-  "definitions": {
+  "$defs": {
       "contactinfoType": {
         "additionalProperties": false,
         "properties": {
@@ -57,6 +57,7 @@
       }
     },
   "properties": {
+    "name": {"type": "string"},
     "uri": {
       "title": "Uniform Resource Identifier",
       "description": "The global unique identifier for this news object. This is the only required property and should identify the ninjs object, not be used for links to external resources etc.  nar:newsItem@guid",
@@ -282,7 +283,7 @@
           },
           "contactinfo": {
             "type": "array",
-            "items": {"$ref": "#/definitions/contactinfoType"}
+            "items": {"$ref": "#/$defs/contactinfoType"}
           }
         }
       }
@@ -350,7 +351,7 @@
           },
           "contactinfo": {
             "type": "array",
-            "items": {"$ref": "#/definitions/contactinfoType"}
+            "items": {"$ref": "#/$defs/contactinfoType"}
           }
         }
       }
@@ -387,7 +388,7 @@
           },
           "contactinfo": {
             "type": "array",
-            "items": {"$ref": "#/definitions/contactinfoType"}
+            "items": {"$ref": "#/$defs/contactinfoType"}
           },
           "geojson": {"$ref": "https://geojson.org/schema/GeoJSON.json#"}
         }
@@ -540,7 +541,7 @@
           },
           "contactinfo": {
             "type": "array",
-            "items": {"$ref": "#/definitions/contactinfoType"}
+            "items": {"$ref": "#/$defs/contactinfoType"}
           }
         }
       }
@@ -629,21 +630,19 @@
       "title": "Associations",
       "description": "An array of objects with content of news objects which are associated with this news object.",
       "type": "array",
-      "additionalProperties": false,
       "items": {
         "description": "One associated object where each object can use all properties in ninjs.",
         "type": "object",
+        "unevaluatedProperties": false,
         "anyOf": [
-          {
-            "properties": {
+          { "properties": {
               "name": {
-                "type": "string",
-                "description": "The name of this object in the array of associations. For example 'logo'"
+                  "type": "string",
+                  "description": "The name of this object in the array of associations. For example 'logo'"
               }
-            },
-            "required": ["name"]
-          },
-          {"$ref": "#"}
+            }
+         },
+         {"$ref": "#"}
         ]
       }
     },

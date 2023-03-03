@@ -61,7 +61,7 @@
     ],
     "associations": [
         {
-            "name": "logo",
+            "name": "logo",                       
             "uri": "http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
             "type": "graphic",
             "versioncreated": "2013-07-31T15:32:00Z",
