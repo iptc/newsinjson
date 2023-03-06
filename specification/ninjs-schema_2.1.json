@@ -631,10 +631,11 @@
       "description": "An array of objects with content of news objects which are associated with this news object.",
       "type": "array",
       "items": {
+              "required": ["name", "uri"],
+
         "description": "One associated object where each object can use all properties in ninjs.",
         "type": "object",
-        "unevaluatedProperties": false,
-        "anyOf": [
+        "allOf": [
           { "properties": {
               "name": {
                   "type": "string",
