@@ -6,6 +6,7 @@
 	},
 	"associations": [
 		{
+			"name": "Example association with rights",
 			"uri": "http://test.tt.se/associations/association01",
 			"title": "TEST",
 			"rightsinfo": {
