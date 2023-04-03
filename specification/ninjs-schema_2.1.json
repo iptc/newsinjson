@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft/2020-12/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json#",
   "type": "object",
   "title": "IPTC ninjs - News in JSON - version 2.1 (approved at IPTC Standards Committee October 2023)",
