@@ -16,7 +16,7 @@
         },
         {
             "role": "caption",
-            "value": "FILE - In this Monday, Nov. 11, 2019 file photo, a man identified by Turkish media as 39-year-old Muhammad Darwis B., a U.S. citizen of Jordanian origin, stands in a no man's land between Turkey and Greece near Pazarkule border gate, Edirne, Turkey. Turkey's Interior Minister Suleyman Soylu said Friday Nov, 15, 2019 that the an American Islamic State group member has been deported to the United States. (DHA via AP, File)"
+            "value": "FILE - In this Monday, Nov. 11, 2019 file photo, a man identified by Turkish media as 39-year-old Muhammad Darwis B., a U.S. citizen of Jordanian origin, stands in a no man's land between Turkey and Greece near Pazarkule border gate, Edirne, Turkey. Turkey's Interior Minister Suleyman Soylu said Friday Nov, 15, 2019 that the American Islamic State group member has been deported to the United States. (DHA via AP, File)"
         }
     ],
     "headlines": [
@@ -48,6 +48,32 @@
                 {
                     "type": "telephone",
                     "value": "+41 22 734 60 01"
+                }
+            ]
+        }
+    ],
+    "people": [
+        {
+            "name": "Suleyman Soylu",
+            "rel": "mentioned",
+            "contactinfo": [
+                {
+                    "type": "twitter",
+                    "value": "@suleymansoylu"
+                }
+            ]
+        }
+    ],
+    "places": [
+        {
+            "name": "Edirne",
+            "contactinfo": [
+                {
+                    "type": "physical",
+                    "lang": "tr-TR",
+                    "address": {
+                        "country": "Türkiye"
+                    }
                 }
             ]
         }
