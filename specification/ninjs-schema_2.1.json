@@ -57,11 +57,6 @@
       }
     },
   "properties": {
-    "name": {
-      "title": "Name (of associated object)",
-      "description": "With the associations in 2.x being an array a name property is useful, but for schema technical reasons it has to live in the root schema, but should only be used inside an association object.",
-      "type": "string"
-    },
     "uri": {
       "title": "Uniform Resource Identifier",
       "description": "The global unique identifier for this news object. This is the only required property and should identify the ninjs object, not be used for links to external resources etc.  nar:newsItem@guid",
@@ -635,13 +630,21 @@
       "description": "An array of objects with content of news objects which are associated with this news object.",
       "type": "array",
       "items": {
+        "required": ["name","uri"],
         "description": "One associated object where each object can use all properties in ninjs.",
         "type": "object",
-        "required": [
-          "name",
-          "uri"
-        ],
-        "$ref": "#"
+        "allOf": [
+          { "properties": {
+              "name": {
+              "title": "Name (of associated object)",
+              "description": "With the associations in 2.x being an array a name property is useful, but for schema technical reasons it has to live in the root schema, but should only be used inside an association object.",
+              "type": "string"
+              }
+             }
+          },
+        {"$ref": "#"}
+
+        ], "unevaluatedProperties": false
       }
     },
     "altids": {
