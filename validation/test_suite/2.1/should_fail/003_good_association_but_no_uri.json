@@ -1,5 +1,5 @@
 {
-  "uri": "should_fail_001_bad_association",
+  "uri": "should_fail_002_good_association_but_no_name",
   "version": "1",
   "versioncreated": "2023-04-03T12:00:00Z",
   "headlines": [
@@ -17,10 +17,7 @@
   ],
   "associations": [
     {
-      "uri":"http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
-      "incorrectproperty": "this should fail",
-      "type":"graphic",
-      "versioncreated": "2013-05-16T04:01:00Z"
+      "name": "Company logo"
     }
   ]
 }
