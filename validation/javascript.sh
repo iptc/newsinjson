@@ -18,9 +18,14 @@ validate_folder_against_schema () {
     done
 }
 
+cd "$(dirname "$0")"
+
 echo "The following tests should pass:"
 validate_folder_against_schema 'test_suite/2.1/should_pass' '../specification/ninjs-schema_2.1.json' valid
 validate_folder_against_schema '../examples/2.1' '../specification/ninjs-schema_2.1.json' valid
 
 echo "The following examples should fail validation:"
 validate_folder_against_schema 'test_suite/2.1/should_fail' '../specification/ninjs-schema_2.1.json' invalid
+
+# Go back to the pwd where the user started
+cd -

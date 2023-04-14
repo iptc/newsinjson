@@ -7,6 +7,7 @@
   "$defs": {
     "contactinfoType": {
       "additionalProperties": false,
+      "type": "object",
       "properties": {
         "type": {
           "description": "Type would be method of communication like phone, mobile, address etc.",
@@ -56,11 +57,13 @@
       },
       "oneOf": [
         {
+          "type": "object",
           "required": [
             "value"
           ]
         },
         {
+          "type": "object",
           "required": [
             "address"
           ]
@@ -68,12 +71,12 @@
       ]
     },
     "ninjsType": {
+      "type": "object",
       "properties": {
         "uri": {
           "title": "Uniform Resource Identifier",
           "description": "The global unique identifier for this news object. This is the only required property and should identify the ninjs object, not be used for links to external resources etc.  nar:newsItem@guid",
-          "type": "string",
-          "format": "uri"
+          "type": "string"
         },
         "type": {
           "title": "Type",
@@ -111,8 +114,7 @@
         "firstcreated": {
           "title": "First created",
           "description": "Indicates when the first version of this ninjs object was created. (Added in version 1.2 from issue #5). nar:firstCreated",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "versioncreated": {
           "title": "Version created",
@@ -123,14 +125,12 @@
         "contentcreated": {
           "title": "Content created",
           "description": "The date and time when the content of this ninjs object was originally created. For example an old photo that is now handled as a ninjs object. nar:contentCreated",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "embargoed": {
           "title": "Embargoed",
           "description": "The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed. nar:embargoed",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "pubstatus": {
           "title": "Publication status",
@@ -290,8 +290,7 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier for the person as a complete uri with the code.",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "literal": {
                 "title": "Literal",
@@ -328,8 +327,7 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier of the organisation as a complete uri",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "literal": {
                 "title": "Literal",
@@ -357,8 +355,7 @@
                     "symboltype": {
                       "title": "Symbol type uri",
                       "description": "https://cv.iptc.org/newscodes/financialinstrumentsymboltype. Same as type in G2.",
-                      "type": "string",
-                      "format": "uri"
+                      "type": "string"
                     },
                     "symbol": {
                       "title": "Symbol",
@@ -380,7 +377,6 @@
         "places": {
           "title": "Places",
           "description": "An array of named locations. nar:subject",
-          "additionalProperties": false,
           "type": "array",
           "items": {
             "type": "object",
@@ -399,8 +395,7 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier for the place as a complete uri",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "literal": {
                 "title": "Literal",
@@ -440,8 +435,7 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier of the subject as a complete uri",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "literal": {
                 "title": "Literal",
@@ -491,8 +485,7 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier for the event as a complete uri",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "literal": {
                 "title": "Literal",
@@ -523,8 +516,7 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier for the object as a complete uri",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "literal": {
                 "title": "Literal",
@@ -550,14 +542,12 @@
               "role": {
                 "title": "Role",
                 "description": "The role the infosource in relationship to the content as a uri.",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "uri": {
                 "title": "URI",
                 "description": "The identifier of the infosource as a complete uri",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "literal": {
                 "title": "Literal",
@@ -597,7 +587,6 @@
           "title": "Renditions",
           "description": "An array of objects with different renditions of the news object. nar:remoteContent",
           "type": "array",
-          "additionalProperties": false,
           "items": {
             "description": "A specific rendition of the content of the news object. (Description changed in version 1.2 according to issue #17.)",
             "type": "object",
@@ -614,8 +603,7 @@
               "href": {
                 "title": "href",
                 "description": "The URL for accessing the rendition as a resource. nar:remoteContent@ref",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "contenttype": {
                 "title": "Content Type",
@@ -673,7 +661,8 @@
               }
             },
             "required": [
-              "name", "uri"
+              "name",
+              "uri"
             ],
             "unevaluatedProperties": false
           }
@@ -710,8 +699,7 @@
               "role": {
                 "title": "Role",
                 "description": "The role of the trust indicator as a complete uri",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "title": {
                 "title": "Title",
@@ -721,8 +709,7 @@
               "href": {
                 "title": "href",
                 "description": "The URL for accessing the trust indicator resource.",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               }
             }
           }
@@ -746,8 +733,7 @@
             "schema": {
               "title": "Schema",
               "description": "The uri of the json schema to use for validation.",
-              "type": "string",
-              "format": "uri"
+              "type": "string"
             }
           }
         },
@@ -767,8 +753,7 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier of  the genre as a complete uri",
-                "type": "string",
-                "format": "uri"
+                "type": "string"
               },
               "literal": {
                 "title": "Literal",
@@ -781,8 +766,7 @@
         "expires": {
           "title": "Expires",
           "description": "The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in 2.1)",
-          "type": "string",
-          "format": "date-time"
+          "type": "string"
         },
         "rightsinfo": {
           "title": "Rights information",
@@ -792,18 +776,15 @@
             "langid": {
               "type": "string",
               "title": "Language id",
-              "description": "Identifier for the Rights Expression language used. nar:@langid",
-              "format": "uri"
+              "description": "Identifier for the Rights Expression language used. nar:@langid"
             },
             "linkedrights": {
               "title": "Linked rights",
               "description": "A link from the current Item to Web resource with rights related information. nar:link",
-              "type": "string",
-              "format": "uri"
+              "type": "string"
             },
             "encodedrights": {
               "title": "Encoded Rights",
-              "additionalProperties": false,
               "type": "string",
               "description": "Contains a rights expression as defined by a Rights Expression Language. nar:rightsExpressionXML or nar:rightsExpressionData"
             }
@@ -826,5 +807,7 @@
   },
   "$ref": "#/$defs/ninjsType",
   "unevaluatedProperties": false,
-  "required": ["uri"]
+  "required": [
+    "uri"
+  ]
 }
