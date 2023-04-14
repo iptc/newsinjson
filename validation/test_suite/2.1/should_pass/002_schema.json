@@ -4,5 +4,5 @@
 	    "version": "2.1",
 	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json"
 	},
-	"uri": "002-schema"
+	"uri": "urn:002-schema"
 }

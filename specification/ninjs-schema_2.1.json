@@ -76,7 +76,8 @@
         "uri": {
           "title": "Uniform Resource Identifier",
           "description": "The global unique identifier for this news object. This is the only required property and should identify the ninjs object, not be used for links to external resources etc.  nar:newsItem@guid",
-          "type": "string"
+          "type": "string",
+          "format": "uri"
         },
         "type": {
           "title": "Type",
@@ -114,7 +115,8 @@
         "firstcreated": {
           "title": "First created",
           "description": "Indicates when the first version of this ninjs object was created. (Added in version 1.2 from issue #5). nar:firstCreated",
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "versioncreated": {
           "title": "Version created",
@@ -125,12 +127,14 @@
         "contentcreated": {
           "title": "Content created",
           "description": "The date and time when the content of this ninjs object was originally created. For example an old photo that is now handled as a ninjs object. nar:contentCreated",
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "embargoed": {
           "title": "Embargoed",
           "description": "The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed. nar:embargoed",
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "pubstatus": {
           "title": "Publication status",
@@ -290,7 +294,8 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier for the person as a complete uri with the code.",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "literal": {
                 "title": "Literal",
@@ -327,7 +332,8 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier of the organisation as a complete uri",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "literal": {
                 "title": "Literal",
@@ -355,7 +361,8 @@
                     "symboltype": {
                       "title": "Symbol type uri",
                       "description": "https://cv.iptc.org/newscodes/financialinstrumentsymboltype. Same as type in G2.",
-                      "type": "string"
+                      "type": "string",
+                      "format": "uri"
                     },
                     "symbol": {
                       "title": "Symbol",
@@ -395,7 +402,8 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier for the place as a complete uri",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "literal": {
                 "title": "Literal",
@@ -435,7 +443,8 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier of the subject as a complete uri",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "literal": {
                 "title": "Literal",
@@ -485,7 +494,8 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier for the event as a complete uri",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "literal": {
                 "title": "Literal",
@@ -516,7 +526,8 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier for the object as a complete uri",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "literal": {
                 "title": "Literal",
@@ -547,7 +558,8 @@
               "uri": {
                 "title": "URI",
                 "description": "The identifier of the infosource as a complete uri",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "literal": {
                 "title": "Literal",
@@ -603,7 +615,8 @@
               "href": {
                 "title": "href",
                 "description": "The URL for accessing the rendition as a resource. nar:remoteContent@ref",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "contenttype": {
                 "title": "Content Type",
@@ -699,7 +712,8 @@
               "role": {
                 "title": "Role",
                 "description": "The role of the trust indicator as a complete uri",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "title": {
                 "title": "Title",
@@ -709,7 +723,8 @@
               "href": {
                 "title": "href",
                 "description": "The URL for accessing the trust indicator resource.",
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               }
             }
           }
@@ -733,7 +748,8 @@
             "schema": {
               "title": "Schema",
               "description": "The uri of the json schema to use for validation.",
-              "type": "string"
+              "type": "string",
+              "format": "uri"
             }
           }
         },
@@ -766,7 +782,8 @@
         "expires": {
           "title": "Expires",
           "description": "The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in 2.1)",
-          "type": "string"
+          "type": "string",
+          "format": "date-time"
         },
         "rightsinfo": {
           "title": "Rights information",
@@ -776,12 +793,14 @@
             "langid": {
               "type": "string",
               "title": "Language id",
-              "description": "Identifier for the Rights Expression language used. nar:@langid"
+              "description": "Identifier for the Rights Expression language used. nar:@langid",
+              "format": "uri"
             },
             "linkedrights": {
               "title": "Linked rights",
               "description": "A link from the current Item to Web resource with rights related information. nar:link",
-              "type": "string"
+              "type": "string",
+              "format": "uri"
             },
             "encodedrights": {
               "title": "Encoded Rights",

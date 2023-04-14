@@ -4,7 +4,7 @@
         "version": "2.1",
         "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json"
     },
-    "uri": "005_altids",
+    "uri": "urn:005_altids",
     "altids": [
         {
             "role": "itemid",
