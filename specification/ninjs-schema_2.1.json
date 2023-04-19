@@ -822,10 +822,10 @@
           ]
         }
       }
-    }
+    },
+    "unevaluatedProperties": false
   },
   "$ref": "#/$defs/ninjsType",
-  "unevaluatedProperties": false,
   "required": [
     "uri"
   ]
