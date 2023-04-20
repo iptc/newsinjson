@@ -668,9 +668,7 @@
               "name": {
                 "title": "Name (of associated object)",
                 "description": "Human-readable name of the associated object.",
-                "type": [
-                  "string"
-                ]
+                "type": "string"
               }
             },
             "required": [
