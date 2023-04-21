@@ -1,5 +1,5 @@
 {
-    "uri": "007_linked_rights.json",
+    "uri": "urn:007_linked_rights.json",
     "title": "Title of my ninjs dev image which is protected by dataco restrictions",
     "rightsinfo": {
         "linkedrights": "https://www.football-dataco.com/"

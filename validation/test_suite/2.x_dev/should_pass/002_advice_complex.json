@@ -1,5 +1,5 @@
 {
-    "uri": "002_advice_complex.json",
+    "uri": "urn:002_advice_complex.json",
     "title": "An article with different importance and lifetime values for different users",
     "advices": [
         {

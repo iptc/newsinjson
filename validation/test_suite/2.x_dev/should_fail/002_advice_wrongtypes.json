@@ -1,5 +1,5 @@
 {
-    "uri": "002_advice_wrongtypes.json",
+    "uri": "urn:002_advice_wrongtypes.json",
     "title": "This is wrong because importance and lifetime should be objects",
     "advice": [
         {

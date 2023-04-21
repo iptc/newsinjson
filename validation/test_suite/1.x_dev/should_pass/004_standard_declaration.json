@@ -4,5 +4,5 @@
         "version": "1.-x-dev",
         "schema": "https://www.iptc.org/std/ninjs/ninjs-schema_1.4.json"
     },
-    "uri": "004_standard_declaration.json"
+    "uri": "urn:004_standard_declaration.json"
 }

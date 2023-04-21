@@ -1,0 +1,4 @@
+{
+    "uri": "urn:001-test-bad-top-level-property",
+    "random": "properties should not be accepted"
+}

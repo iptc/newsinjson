@@ -1,5 +1,5 @@
 {
-    "uri": "006_trustindicator.json",
+    "uri": "urn:006_trustindicator.json",
     "trustindicators": [
         {
             "role": "http://cv.iptc.org/newscodes/trustindicator/editorialPolicy",

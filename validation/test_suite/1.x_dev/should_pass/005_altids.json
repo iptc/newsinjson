@@ -1,5 +1,5 @@
 {
-    "uri": "005_altids.json",
+    "uri": "urn:005_altids.json",
     "headline_main": "my new article",
     "altids": {
         "imySystem": "A12345",

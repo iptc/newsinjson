@@ -1,5 +1,5 @@
 {
-    "uri": "006-trust-indicator",
+    "uri": "urn:006-trust-indicator",
     "headline": "test headline",
     "trustindicator": [
       {
