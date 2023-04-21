@@ -31,10 +31,11 @@
         },
         "address": {
           "type": "object",
-          "description": "An array of lines to construct an address. The order is important to construct a correct address.",
+          "description": "The address of a person, place or organisation.",
           "additionalProperties": false,
           "properties": {
             "lines": {
+              "description": "An array of lines to construct an address. The order is important to construct a correct address.",
               "type": "array",
               "items": {
                 "type": "string"
@@ -57,13 +58,11 @@
       },
       "oneOf": [
         {
-          "type": "object",
           "required": [
             "value"
           ]
         },
         {
-          "type": "object",
           "required": [
             "address"
           ]
@@ -826,5 +825,6 @@
   "$ref": "#/$defs/ninjsType",
   "required": [
     "uri"
-  ]
+  ],
+  "unevaluatedProperties": false
 }
