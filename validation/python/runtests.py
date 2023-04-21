@@ -110,14 +110,14 @@ class TestNinJSSchema(unittest.TestCase):
             self.ninjs14_schema = json.load(schemafile)
         with open(ninjs15_schema_filename) as schemafile:
             self.ninjs15_schema = json.load(schemafile)
-        with open(ninjs1xdev_schema_filename) as schemafile:
-            self.ninjs1xdev_schema = json.load(schemafile)
-        with open(ninjs2xdev_schema_filename) as schemafile:
-            self.ninjs2xdev_schema = json.load(schemafile)
         with open(ninjs20_schema_filename) as schemafile:
             self.ninjs20_schema = json.load(schemafile)
         with open(ninjs21_schema_filename) as schemafile:
             self.ninjs21_schema = json.load(schemafile)
+        with open(ninjs1xdev_schema_filename) as schemafile:
+            self.ninjs1xdev_schema = json.load(schemafile)
+        with open(ninjs2xdev_schema_filename) as schemafile:
+            self.ninjs2xdev_schema = json.load(schemafile)
 
         self.latest_1_x_schema = self.ninjs15_schema
         self.latest_2_x_schema = self.ninjs21_schema
