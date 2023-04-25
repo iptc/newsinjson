@@ -39,12 +39,27 @@
             "lines": {
               "description": "An array of lines to construct an address. The order is important to construct a correct address.",
               "type": "array",
-              "items": {"type": "string"}
+              "items": {
+                "description": "One line in the lines array.",
+                "type": "string"
+              }
             },
-            "locality": {"type": "string"},
-            "area": {"type": "string"},
-            "postalcode": {"type": "string"},
-            "country": {"type": "string"}
+            "locality": {
+              "description": "A city/town/village etc. part of the address.",
+              "type": "string"
+              },
+            "area": {
+              "description": "A subdivision of a country part of the address.",
+              "type": "string"
+              },
+            "postalcode": {
+              "description": "A postal code part of the address.",
+              "type": "string"
+              },
+            "country": {
+              "description": "A country part of the address.",
+              "type": "string"
+              }
           }
         }
       },
