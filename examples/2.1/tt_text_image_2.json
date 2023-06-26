@@ -102,7 +102,14 @@
     ],
     "people": [
         {
-            "name": "Jonas Svensson"
+            "name": "Jonas Svensson",
+            "contactinfo": [
+              {
+              "type":"phone",
+              "role": "work",
+              "value": "+46 (0)8-7887500"
+              }
+            ]
         }
     ],
     "organisations": [
@@ -115,9 +122,13 @@
             "literal": "16000000",
             "name": "Krig, konflikter och oroligheter",
             "uri": "http://tt.se/spec/subref/1.0/16000000",
-            "rel": "classifies"
+            "rel": "classifies",
+            "creator": "system",
+            "relevance": 98,
+            "confidence": 58
         }
     ],
+    "expires": "2023-05-31T00:00:00+02:00",
     "places": [
         {
             "name": "Sverige"
@@ -145,7 +156,7 @@
     ],
     "standard": {
         "name": "TTNINJS",
-        "version": "2.0",
-        "schema": "https://tt.se/spec/ttninjs/ttninjs-schema_2.0.json"
+        "version": "2.1",
+        "schema": "https://tt.se/spec/ttninjs/ttninjs-schema_2.1.json"
     }
 }
