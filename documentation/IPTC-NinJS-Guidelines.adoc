@@ -33,17 +33,16 @@ careful to map ninjs concepts to the IPTC News Architecture, so you can rest
 assured that ninjs concepts can interoperate with other markup languages such
 as https://iptc.org/standards/newsml-g2/[NewsML-G2].
 
-To help get you started, we have created a
-https://www.iptc.org/std/ninjs/generator/[simple ninjs generator] so you can see
-how easily a real ninjs document can be created. We have also built a JSON schema for
-ninjs to help you <<How to validate objects,validate your ninjs implementation>>.
+We have created some tools to help get users started. These include a
+https://www.iptc.org/std/ninjs/generator/[simple ninjs generator] that shows
+how easily a real ninjs document can be created, and a <<Validating a ninjs document,JSON schema to validate ninjs objects>>.
 
 The latest version of the standard is 2.1. 
 https://iptc.org/std/ninjs/ninjs-schema_2.1.json[Version 2.1 of the ninjs
 schema] was made available in June 2023.
 
 The latest version in the 1.x branch is 1.5, which was made avaialble in June 2023.
-See below for more information on the differences between the 1.x and 2.x branches.
+See below for more information on the <<Differences between ninjs 1.x and 2.x,differences between the 1.x and 2.x branches>>.
 
 === Built for both APIs and data at rest
 
@@ -241,7 +240,7 @@ be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions
 JSON is an increasingly popular
 http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/[alternative to]
 (or
-http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/[replacement for]) XML. ninjs is designed to be used alongside other https://iptc.org/standards/[IPTC formats], including https://iptc.org/standards/newsml-g2/[NewsML-G2],
+http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/[replacement for]) XML. ninjs is designed in such a way that it can be used either standalone or alongside other https://iptc.org/standards/[IPTC news markup formats] such as https://iptc.org/standards/newsml-g2/[NewsML-G2], https://iptc.org/standards/nitf/[NITF]
 https://iptc.org/standards/iptc-7901/[IPTC7901] and https://iptc.org/standards/rnews/[rNews].
 
 == About the IPTC ninjs User Guide
@@ -1210,7 +1209,7 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |firstcreated|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-first-created---firstcreated[nar:firstCreated]
 |versioncreated|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-version-created---versioncreated[nar:versionCreated]
 |expires|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#expires[nar:expires]
-|embargoed|nar:embargoed
+|embargoed|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-item-embargo-ends-embargoed[nar:embargoed]
 |pubstatus|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#publish-status-pubstatus[nar:pubStatus]
 |urgency|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#urgency-urgency[nar:urgency]
 |ednote|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#editorial-note[nar:edNote]
@@ -1237,7 +1236,7 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 |subject|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
 |object|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
 |infosource|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#information-source-infosource[nar:infoSource]
-|trustindicator|nar:link with @rel
+|trustindicator|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-links[nar:link] with @rel
 |renditions|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#remote-content-remotecontent[nar:remoteContent]
 |renditions@href|nar:remoteContent@ref
 |renditions@contenttype|nar:remoteContent@contenttype

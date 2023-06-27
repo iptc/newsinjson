@@ -531,10 +531,9 @@ assured that ninjs concepts can interoperate with other markup languages such
 as <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>.</p>
 </div>
 <div class="paragraph">
-<p>To help get you started, we have created a
-<a href="https://www.iptc.org/std/ninjs/generator/">simple ninjs generator</a> so you can see
-how easily a real ninjs document can be created. We have also built a JSON schema for
-ninjs to help you <a href="#How to validate objects">validate your ninjs implementation</a>.</p>
+<p>We have created some tools to help get users started. These include a
+<a href="https://www.iptc.org/std/ninjs/generator/">simple ninjs generator</a> that shows
+how easily a real ninjs document can be created, and a <a href="#_validating_a_ninjs_document">JSON schema to validate ninjs objects</a>.</p>
 </div>
 <div class="paragraph">
 <p>The latest version of the standard is 2.1.
@@ -543,7 +542,7 @@ schema</a> was made available in June 2023.</p>
 </div>
 <div class="paragraph">
 <p>The latest version in the 1.x branch is 1.5, which was made avaialble in June 2023.
-See below for more information on the differences between the 1.x and 2.x branches.</p>
+See below for more information on the <a href="#_differences_between_ninjs_1_x_and_2_x">differences between the 1.x and 2.x branches</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="_built_for_both_apis_and_data_at_rest"><a class="anchor" href="#_built_for_both_apis_and_data_at_rest"></a>1.1. Built for both APIs and data at rest</h3>
@@ -852,7 +851,7 @@ be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions
 <p>JSON is an increasingly popular
 <a href="http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/">alternative to</a>
 (or
-<a href="http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/">replacement for</a>) XML. ninjs is designed to be used alongside other <a href="https://iptc.org/standards/">IPTC formats</a>, including <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>,
+<a href="http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/">replacement for</a>) XML. ninjs is designed in such a way that it can be used either standalone or alongside other <a href="https://iptc.org/standards/">IPTC news markup formats</a> such as <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>, <a href="https://iptc.org/standards/nitf/">NITF</a>
 <a href="https://iptc.org/standards/iptc-7901/">IPTC7901</a> and <a href="https://iptc.org/standards/rnews/">rNews</a>.</p>
 </div>
 </div>
@@ -2829,7 +2828,7 @@ Architecture</a>, so they share many properties.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:embargoed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-item-embargo-ends-embargoed">nar:embargoed</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pubstatus</p></td>
@@ -2937,7 +2936,7 @@ Architecture</a>, so they share many properties.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">trustindicator</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">nar:link with @rel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-links">nar:link</a> with @rel</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">renditions</p></td>
