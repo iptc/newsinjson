@@ -11,13 +11,14 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :author: IPTC News in JSON Working Group
 :email: office@iptc.org
 :version-label: Covers version
-:revnumber: 2.0
-:revremark: Revised 2022-05-22
+:revnumber: 2.1 and 1.5
+:revremark: Revised 2023-06-27
 :toc: left
 :toc-title: ninjs User Guide
 :toclevels: 2
 :nofooter:
 :sectnums:
+:sectanchors:
 :sectnumlevels: 3
 
 == Introduction: ninjs is News in JSON
@@ -37,19 +38,12 @@ https://www.iptc.org/std/ninjs/generator/[simple ninjs generator] so you can see
 how easily a real ninjs document can be created. We have also built a JSON schema for
 ninjs to help you <<How to validate objects,validate your ninjs implementation>>.
 
-The latest version of the standard is 2.0: 
-https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs
-schema] was made available in October 2021. An erratum release of version 2.0 was
-published in May 2022 to fix a problem with the way GeoJSON was included in the
-places object.
+The latest version of the standard is 2.1. 
+https://iptc.org/std/ninjs/ninjs-schema_2.1.json[Version 2.1 of the ninjs
+schema] was made available in June 2023.
 
-The IPTC welcomes your feedback on how to improve the standard via the
-https://groups.io/g/iptc-ninjs[public ninjs discussion group]. You can also add
-and comment on issues in the
-https://github.com/iptc/newsinjson[news in json github repository]. Staff from
-IPTC Member organisations are welcome to join the 
-https://groups.io/g/iptc-news-in-json-dev[members-only discussion list for the
-ninjs development team].
+The latest version in the 1.x branch is 1.5, which was made avaialble in June 2023.
+See below for more information on the differences between the 1.x and 2.x branches.
 
 === Built for both APIs and data at rest
 
@@ -109,47 +103,138 @@ include::includes/examples/001_simple_example.json[]
 You can make your own simple ninjs document using the
 https://www.iptc.org/std/ninjs/generator/[ninjs generator tool on iptc.org].
 
-=== Two versions of ninjs: ninjs 1.4 and ninjs 2.0
+=== Two versions of ninjs: ninjs 1.5 and ninjs 2.1
 
-IPTC manages two current versions of ninjs: 1.4 and 2.0.
+IPTC manages two current versions of ninjs: the 1.x branch (where the latest
+version is currently 1.5) and the 2.x branch (where the latest version is 2.1).
 
-The 1.x series adds new features to the version of ninjs that started
-with ninjs 1.0 back in 2013, in a way that is fully backwards
-compatible. The latest release in this series is 1.4, which includes
-new fields _contentcreated_, _expires_ and _rightsinfo_. The 1.4
-version of ninjs was approved by the IPTC Standards Committee on May
-18th, 2022. All new users are strongly recommended to use version 2.0.
-This document describes only the 2.0 version, but those who must use
-version 1.4 for backwards compatibility reasons can find the JSON
-Schema file for ninjs 1.4 schema at
-https://iptc.org/std/ninjs/ninjs-schema_1.4.json.
+The 1.x series adds new features to the version of ninjs that started with
+ninjs 1.0 back in 2013, in a way that is fully backwards compatible. The latest
+release in this series is 1.5, which includes new properties such as `contactinfo`,
+`symbol` and `symboltype` (<<ninjs 1.5,see the full list of changes>>). 
 
 The 2.x series fixes some issues that made the 1.x series tricky for
-developers to work with. The main change is that we avoid the use of
+some developers to work with. The main change is that we avoid the use of
 patternProperties, so all properties now have well-defined names. This
 work is intended to make ninjs easier for work with binary protocols
 such as Protocol Buffers and Avro. We also took the opportunity to make
 property names more consistent with NewsML-G2 and to add some fields to
 handle rights.
 
-We wanted to issue a new release which fixed these problems, but this
-meant breaking backwards-compatibility with the 1.x versions of ninjs.
-This is why we increased the major version number to 2.0.
+We wanted to issue a new release which fixed these problems, but this meant
+breaking backwards compatibility with the 1.x versions of ninjs.  This is why
+we decided to maintain two parallel branches: 1.x and 2.x.
+All new users are strongly recommended to use version 2.1.
 
-The 2.0 version of ninjs was approved by the IPTC Standards Committee on
-October 20th, 2021.
+The 2.1 and 1.5 versions of ninjs were approved by the IPTC Standards Committee on
+May 17th, 2023.
 
-An errata update was made in May 2022 to fix a problem with the way GeoJSON
-properties were integrated into the "places" object.
+This document describes only the 2.1 version, but those who must use
+version 1.5 for backwards compatibility reasons can find the JSON
+Schema file for ninjs 1.5 schema at
+https://iptc.org/std/ninjs/ninjs-schema_1.5.json.
+
+=== Differences between ninjs 1.x and 2.x
+
+We maintain the 1.x branch for those who can't move to the new structure in 2.0.
+Most of the properties are the same as the ones in ninjs 2.x, with the exception
+of the multi-valued properties.
+
+==== patternProperties converted to arrays
+
+Some properties are implemented as "patternProperties" in the 1.x JSON Schema,
+which means that the name must start with a certain text string (such as `headline_`) but can end in any string (such as `subhead`).
+This can be used to distinguish objects from each other. In the 2.x version of the schema,
+we converted them to be simple arrays with well-defined names, and a `role` property
+that defines the type of the value.
+
+For example, a subheadline is defined in ninjs 1.x as
+
+[source,ninjs 1.x JSON]
+----
+{
+  "headline_subhead": "My subheadline"
+}
+----
+
+The same subheadline would be defined in ninjs 2.x as
+
+[source,ninjs 2.x JSON]
+----
+{
+  "headlines": [
+    {
+      "role": "subhead",
+      "value": "My subheadline"
+    }
+  ]
+}
+----
+
+This applies to the following properties:
+
+*  `description_XXX` (1.x) / `descriptions` (2.x)
+* `body_XXX` (1.x) / `bodies` (2.x)
+* `headline_XXX` (1.x) / `headlines` (2.x)
+
+==== Renditions and Associations converted to arrays
+
+The `renditions` and `associations` properties are arrays in ninjs 2.x and objects in ninjs 1.x.
+
+In ninjs 1.x a rendition may look like the following:
+
+[source,ninjs 1.x JSON]
+----
+{
+  "renditions": {
+    "highres": {
+      ...
+    }
+  }
+}
+----
+
+The same rendition in ninjs 2.x would look like:
+
+[source,ninjs 2.x JSON]
+----
+{
+  "renditions": [
+    {
+      "name": "highres",
+      ...
+    }
+  ]
+}
+----
+
+Associations work the same way in both ninjs 1.x and ninjs 2.x.
+
+==== Property names converted to plural form
+
+In addition, the following property names were converted to plural form for ninjs 2.x.
+They were not changed in any other way.
+
+* `altid` (ninjs 1.x) / `altids` (ninjs 2.x)
+* `event` (ninjs 1.x) / `events` (ninjs 2.x)
+* `genre` (ninjs 1.x) / `genres` (ninjs 2.x)
+* `infosource` (ninjs 1.x) / `infosources` (ninjs 2.x)
+* `object` (ninjs 1.x) / `objects` (ninjs 2.x)
+* `organisation` (ninjs 1.x) / `organisations` (ninjs 2.x)
+* `person` (ninjs 1.x) / `people` (ninjs 2.x)
+* `place` (ninjs 1.x) / `places` (ninjs 2.x)
+* `subject` (ninjs 1.x) / `subjects` (ninjs 2.x) and
+* `trustindicator` (ninjs 1.x) / `trustindicators` (ninjs 2.x).
 
 === Which version of ninjs should I choose for my project?
 
-If you are starting a green-field project, we recommend using ninjs 2.0.
-This version should be easiest for developers to work with.
+If you are starting a green-field project, we recommend using the latest
+version in the ninjs 2.x branch: currently ninjs 2.1.  This version should be
+easiest for developers to work with.
 
 If you are already using a 1.x version of ninjs, we recommend at least
-upgrading to version 1.4. This should be an easy change, because 1.4 is
-backwards-compatible with versions 1.0, 1.1, 1.2 and 1.3.
+upgrading to the latest version in the 1.x branch, currently 1.5. This should
+be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions.
 
 === ninjs and other standards
 
@@ -163,7 +248,7 @@ https://iptc.org/standards/iptc-7901/[IPTC7901] and https://iptc.org/standards/r
 
 === Copyright
 
-Copyright © 2021 IPTC, International Press Telecommunications Council.
+Copyright © 2023 IPTC, International Press Telecommunications Council.
 
 The IPTC ninjs User Guide document is published under the 
 http://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 license]
@@ -180,22 +265,28 @@ This document is the result of a team effort by members of the News in JSON Work
 Contributors to this document include:
 Paul Harman (Bloomberg),
 Johan Lindgren (TT),
+Stuart Myles (ex-AP), 
 Brendan Quinn (IPTC),
 Michael Steidl (IPTC),
-Stuart Myles (ex-AP), 
-Evan Sandhaus (ex-NYT).
+Evan Sandhaus (ex-NYT), and
+Ian Young (PA Media / Alamy),
 
 === How to contact IPTC
 
-Join the public IPTC ninjs discussion group: https://groups.io/g/iptc-ninjs/
+All users of ninjs are encouraged to Join the public IPTC ninjs discussion group: https://groups.io/g/iptc-ninjs/
 
-Raise an issue on our GitHub repository: https://github.com/iptc/newsinjson/issues
+Staff from IPTC Member organisations are welcome to join the 
+https://groups.io/g/iptc-news-in-json-dev[members-only discussion list for the
+ninjs development team].
 
-Submit a message on our website: https://iptc.org/about-iptc/contact-us/
+For questions, comments or suggestions, you can raise an issue on our public
+GitHub repository: https://github.com/iptc/newsinjson/issues
 
-Visit IPTC's website: https://iptc.org/standards/ninjs/
+You can also submit a message on our website: https://iptc.org/about-iptc/contact-us/
 
-Follow IPTC on Twitter: http://www.twitter.com/IPTC/[@IPTC]
+Visit the ninjs section on IPTC's website: https://iptc.org/standards/ninjs/
+
+To stay up to date on developments with ninjs and other areas, follow IPTC on Twitter: http://www.twitter.com/IPTC/[@IPTC]
 
 === About IPTC
 
@@ -213,7 +304,9 @@ Business address:
 
 == ninjs in Detail
 
-Here we document each property in a ninjs object. Only the "uri" property is required at this level. In some array objects other properties are required.
+Here we document each property that can be used in a ninjs object.
+
+The "uri" property is *required* at the top level. In some array objects, other properties may be required.
 
 === Administrative properties
 
@@ -242,7 +335,7 @@ These properties concern the structure, type and creation details of the content
 |A short natural-language name for the item.
 |string
 
-|$standard
+|standard
 a|An object with information about standard, version and schema this instance is valid against. +
 This property is an object with the following child properties:
 
@@ -255,11 +348,11 @@ This property is an object with the following child properties:
 !string
 
 !version
-!The version of the standard used, such as `2.0`.
+!The version of the standard used, such as `2.1`.
 !string
 
 !schema
-!The uri of the JSON schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_2.0.json`
+!The uri of the JSON schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_2.1.json`
 !URI
 
 !===
@@ -275,8 +368,8 @@ This property is an object with the following child properties: +
 !===
 !Property name!Description!Data type
 
-!name
-!The name of the alternative id
+!role
+!The role of the alternative id (such as "internal")
 !string
 
 !value
@@ -320,7 +413,11 @@ One of: +
 |The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.
 |date-time
 
-|pubstatus
+|expires
+|The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in ninjs 2.1)
+|date-time
+
+||pubstatus
 |The publishing status of the news object, its value is `usable` by default.
 |One of: +
 `usable` +
@@ -382,7 +479,7 @@ This property is an object with the following child properties: +
 !string
 
 !===
-For each array element under rightsinfo, one of either `linkedrights` or `encodedrights` is required.
+For each array element under rightsinfo, one of either `linkedrights` or `encodedrights` is *required*.
 
 |Array of objects
 
@@ -448,7 +545,7 @@ This property is an object with the following child properties: +
 !string
 
 !value
-!The headline identified with the above role and contenttype. Required in each object in the array.
+!The headline identified with the above role and contenttype. *Required* to exist in each array item.
 !string
 
 !charcount
@@ -464,9 +561,9 @@ This property is an object with the following child properties: +
 |Array of objects
 
 |descriptions
-a|An array of one or more descriptions of the ninjs object. See also ednote +
+a|An array of one or more descriptions of the ninjs object. See also ednote
 for information from provider to reciever. Descriptions are seen as metadata.
-+
+
 This property is an object with the following child properties: +
 
 [cols="3"]
@@ -500,8 +597,10 @@ ninjs allows content to be marked up with one simple string-based metadata prope
 |Property name|Description|Data type
 
 |located
-a|The name of the location from which the content originates. +
-NOTE: See also `places` for places which are mentioned in the content.
+a|The name of the location from which the content originates.
+
+NOTE: See also `places` for locations which are mentioned in the content.
+
 |string
 
 |genres
@@ -553,6 +652,10 @@ This property is an array of objects with the following properties:
 !The code for the person as a literal value.
 !string
 
+!contactinfo
+!Contact and/or location information for the person as a ContactInfo structure.
+!<<Contact Info structure>>
+
 !===
 
 |array
@@ -585,9 +688,15 @@ This property is an array of objects with the following properties: +
 a!Symbols used for a financial instrument linked to the organisation at a specific market place. +
 Array of objects with the properties:
 
-* `ticker`: Ticker symbol used for the financial instrument (string) +
 * `exchange`: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)
+* `symboltype`: URI describing the type of the symbol. The CV http://cv.iptc.org/newscodes/financialinstrumentsymboltype is recommended.
+* `symbol`: Symbol identifier, including ticker symbols. We recommend using this sub-property.
+* `ticker`: Ticker symbol used for the financial instrument (string). This sub-property is allowed but deprecated. +
 !array
+
+!contactinfo
+!Contact and/or location information for the organisation as a ContactInfo structure.
+!<<Contact Info structure>>
 
 !===
 
@@ -617,10 +726,15 @@ This property is an array of objects with the following properties:
 !The code for the place as a literal
 !string
 
+!contactinfo
+!Contact and/or location information for the place as a ContactInfo structure.
+!<<Contact Info structure>>
+
 !geojson
-!An object holding geo data of this place. As of ninjs 2.0, the contents of this
-object must conform to https://geojson.org/schema/GeoJSON.json[the GeoJSON
-format] defined in https://datatracker.ietf.org/doc/html/rfc7946[RFC 7946].
+!An object holding geo data of this place. From ninjs 2.0 onwards, the
+contents of this object must conform to
+https://geojson.org/schema/GeoJSON.json[the GeoJSON format] defined in
+https://datatracker.ietf.org/doc/html/rfc7946[RFC 7946].
 
 !object
 
@@ -651,8 +765,19 @@ This property is an array of objects with the following properties:
 !literal
 !The code for the subject as a string literal
 !string
-!===
 
+!creator
+!Specifies which entity (person, organisation or system) that has created or last edited the property.
+!string
+
+!relevance
+!The relevance of the metadata to the news content to which it is attached.
+!integer (range 0-100)
+
+!confidence
+!The confidence with which the metadata has been assigned.
+!integer (range 0-100)
+!===
 |array
 
 |events
@@ -732,6 +857,11 @@ This property is an array of objects with the following properties:
 !literal
 !The code for the infosource as a string literal
 !string
+
+!contactinfo
+!Contact and/or location information for the info source as a ContactInfo structure.
+!<<Contact Info structure>>
+
 !===
 
 |array
@@ -761,6 +891,66 @@ This property is an array of objects with the following properties:
 |array
 
 
+|===
+
+==== Contact Info structure
+
+The Contact Info structure is used for the contents of the `contactinfo` property in items in the `people`, `organisations`, `places` and `infosources` arrays.
+
+[cols="1,3a,1",options="header"]
+|===
+|Property name|Description|Data type
+
+|type
+a|Type would be method of communication like phone, mobile, address etc.
+|string
+
+|role
+a|Role refers to type and could be private, office etc
+|string
+
+|lang
+a|If this contactinfo object need to be qualified with what language it is in. The value should follow IETF BCP47.
+|string
+
+|name
+|Human readable name of the contact method, like name for a web page, name of persons twitter account etc
+|string
+
+|value
+|Actual phone number, email address, web url etc.
+|string
+
+|address
+|The address of a person, place or organisation.
+This property is an object with the following child properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!lines
+!An array of lines to construct an address. The order is important to construct a correct address.
+!array
+
+!locality
+!A city/town/village etc. part of the address.
+!string
+
+!area
+!A subdivision of a country part of the address.
+!string
+
+!postalcode
+!A postal code part of the address.
+!string
+
+!country
+!A country part of the address.
+!string
+!===
+
+|object
 |===
 
 === Renditions
@@ -794,7 +984,7 @@ include::includes/examples/002_renditions_example.json[]
 
 === Associations
 
-The `associations` property contains associated valid ninjs objects, each with a required `name` explaining the nature of the association.
+The `associations` property contains associated valid ninjs objects, each with a *required* `name` explaining the nature of the association.
 
 This can be used to link news items together, or to associate images with a text story, for example.
 
@@ -971,29 +1161,34 @@ With the `standard` field, providers can indicate in each JSON file exactly whic
   ...
 }
 
-=== How to validate objects
+== Tools for developing with ninjs
 
-==== Validating a ninjs document
+=== Validating a ninjs document
 
 JSON Schema is the de-facto standard for validating JSON documents. The IPTC
 maintains schemas for each version of the ninjs standard. These schemas can be
 used to validate ninjs documents. 
 
 The latest IPTC ninjs schema is available for download at
-https://iptc.org/std/ninjs/ninjs-schema_2.0.json
+https://iptc.org/std/ninjs/ninjs-schema_2.1.json
 
-==== Sample Code
+=== Sample Code
 
 Sample code demonstrating how to validate ninjs documents, along with example
 ninjs documents, can be found in the
 https://github.com/iptc/newsinjson[IPTC newsinjson github repository].
 
-==== Online Validator
+=== Online "ninjs generator" tool
 
-You can also validate ninjs documents by pasting the schema and document into
-this online validator, which is built on the json-schema-validator library:
+The IPTC has created a simple form-based tool that can be used to generate
+sample ninjs documents. It supports both ninjs 1.5 and ninjs 2.1.
 
-http://json-schema-validator.herokuapp.com
+The tool can be accessed at https://iptc.org/std/ninjs/generator/.
+
+=== TypeScript type definition
+
+Ian Young of PA Media Group has created a 
+https://www.npmjs.com/package/@pa-media-group/iptc-ninjs-2-type[TypeScript type for ninjs 2] that can be used to ease development with ninjs in TypeScript.
 
 == Mapping between ninjs and NewsML-G2
 
@@ -1005,51 +1200,52 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 
 [%autowidth,options="header"]
 |===
-|ninjs property name|NewsML-G2 equivalent
-|uri|nar:newsItem@guid
-|type|nar:itemClass
-|title|nar:itemMeta/title
-|altids|nar:altId
-|profile|nar:profile
-|version|nar:newsItem@version
-|firstcreated|nar:firstCreated
-|versioncreated|nar:versionCreated
+|ninjs 2.x property name|NewsML-G2 equivalent
+|uri|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#identification-and-versioning[nar:newsItem@guid]
+|type|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-class-itemclass[nar:itemClass]
+|title|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-title[nar:itemMeta/title]
+|altids|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#alternative-identifier-altid[nar:altId]
+|profile|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#profile-profile[nar:profile]
+|version|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#identification-and-versioning[nar:newsItem@version]
+|firstcreated|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-first-created---firstcreated[nar:firstCreated]
+|versioncreated|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-version-created---versioncreated[nar:versionCreated]
+|expires|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#expires[nar:expires]
 |embargoed|nar:embargoed
-|pubstatus|nar:pubStatus
-|urgency|nar:urgency
-|ednote|nar:edNote
-|language|nar:language
-|copyrightholder|nar:copyrightHolder
-|copyrightnotice|nar:copyrightnotice
-|usageterms|nar:usageTerms
-|rightsinfo|nar:rightsInfo
-|headlines|nar:headline with @role
+|pubstatus|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#publish-status-pubstatus[nar:pubStatus]
+|urgency|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#urgency-urgency[nar:urgency]
+|ednote|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#editorial-note[nar:edNote]
+|language|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#language-language[nar:language]
+|copyrightholder|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:copyrightHolder]
+|copyrightnotice|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:copyrightnotice]
+|usageterms|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#usage-terms-usageterms[nar:usageTerms]
+|rightsinfo|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:rightsInfo]
+|headlines|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#headline-headline[nar:headline] with @role
 |headlines@contenttype|nar:contentType
-|slugline|nar:slugline
-|by|nar:by
-|bodies|nar:data or nar:inlineXML
+|slugline|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#slugline-slugline[nar:slugline]
+|by|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#by---by[nar:by]
+|bodies|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#newsitem-content[nar:data or nar:inlineXML]
 |bodies@charcount|nar:charcount
 |bodies@wordcount|nar:wordcount
 |bodies@contenttype|nar:contentType
-|descriptions|nar:description
+|descriptions|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#description-description[nar:description]
 |descriptions@contenttype|nar:contentType
-|located|nar:located
-|genre|nar:genre
-|person|nar:subject
-|organisation|nar:subject
-|place|nar:subject
-|subject|nar:subject
-|object|nar:subject
-|infosource|nar:infoSource
+|located|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#located-located[nar:located]
+|genre|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#genre-genre[nar:genre]
+|person|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|organisation|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|place|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|subject|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|object|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|infosource|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#information-source-infosource[nar:infoSource]
 |trustindicator|nar:link with @rel
-|renditions|nar:remoteContent
+|renditions|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#remote-content-remotecontent[nar:remoteContent]
 |renditions@href|nar:remoteContent@ref
 |renditions@contenttype|nar:remoteContent@contenttype
 |renditions@height|nar:remoteContent@height
 |renditions@width|nar:remoteContent@width
 |renditions@format|nar:remoteContent@format
 |renditions@duration|nar:remoteContent@duration
-|associations|nar:link
+|associations|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-links[nar:link]
 |===
 
 == ninjs Revision History
@@ -1078,35 +1274,53 @@ https://iptc.org/std/ninjs/ninjs-schema_1.3.json[Version 1.3 of the ninjs schema
 
 Version 1.3 added the `headline_`, `altids`, `trustindicator`, `$standard` and `genre` properties. 
 
+=== ninjs 1.4
+
+https://iptc.org/std/ninjs/ninjs-schema_1.4.json[Version 1.4 of the ninjs schema] was approved by the IPTC Standards Committee in May 2022. It contains new fields _contentcreated_, _expires_ and _rightsinfo_.
+
+=== ninjs 1.5
+
+https://iptc.org/std/ninjs/ninjs-schema_1.5.json[Version 1.5 of the ninjs schema] was approved by the IPTC Standards Committee in May 2023. It includes the new `contactInfo` type which can be applied to the `person`, `organisation`, `place` and `infosource` properties. ninjs 1.5 also includes the new `symboltype` and `symbol` properties under `symbols`, and new properties `creator`, `relevance` and `confidence` under `subject`. Use of `ticker` under `symbols` is now deprecated.
+
+In addition, some changes to the schema were made to fix a validation bug in previous versions. In order to accommodate these changes, the ninjs 1.5 schema uses the `http://json-schema.org/draft-07/schema#` version of JSON Schema.
+
 === ninjs 2.0
 
 https://iptc.org/std/ninjs/ninjs-schema_2.0.json[Version 2.0 of the ninjs schema] was approved by the IPTC Standards Committee and made available in October 2021.
 
-Version 2.0 made several changes, some of them breaking backwards compatibility:
+Many changes were made for Version 2.0, some of them breaking backwards compatibility:
 
-* headline_* changed to headlines
-* body_* changed to bodies
-* description_* changed to descriptions
-* altid_* changed to altids
-* byline changed to by to become more consistent with IPTC News Architecture and NewsML-G2
-* person changed to people
-* organisation changed to organisations
-* place changed to places
-* event changed to events
-* object changed to objects
-* infosource changed to infosources
-* trustindicator changed to trustindicators
-* infosource/rel changed to infosource/role to be more consistent with other properties and the IPTC News Architecture
+* `headline_*` changed to `headlines`
+* `body_*` changed to `bodies`
+* `description_*` changed to `descriptions`
+* `altid_*` changed to `altids`
+* `byline` changed to `by` to become more consistent with IPTC News Architecture and NewsML-G2
+* `person` changed to `people`
+* `organisation` changed to `organisations`
+* `place` changed to `places`
+* `event` changed to `events`
+* `object` changed to `objects`
+* `infosource` changed to `infosources`
+* `trustindicator` changed to `trustindicators`
+* `infosource/rel` changed to `infosource/role` to be more consistent with other properties and the IPTC News Architecture
 * all metadata properties now use URIs with an optional literal instead of schemes and codes
-* Clarified definition of uri
-* Removed mimetype property
-* Added contentcreated property
-* Changed representationtype enum values from "complete" and "incomplete" to "full" and "partial"
-* charcount and wordcount moved to properties of "bodies" elements
-* "$standard" changed to "standard"
-* Added a new "rightsinfo" property with "linkedrights" or "embeddedrights" as child properties
+* Clarified definition of `uri`
+* Removed `mimetype` property
+* Added `contentcreated` property
+* Changed `representationtype` enum values from _complete_ and _incomplete_ to _full_ and _partial_
+* `charcount` and `wordcount` moved to properties of `bodies` elements
+* `$standard" changed to "standard"
+* Added a new `rightsinfo` property with either `linkedrights` or `embeddedrights` as a child property
 
 An errata release of 2.0 in May 2022 fixed a problem with the GeoJSON property in the `places` object.
+
+=== ninjs 2.1
+
+https://iptc.org/std/ninjs/ninjs-schema_2.1.json[Version 2.1 of the ninjs schema] was approved by the IPTC Standards Committee in May 2023 and made available in June 2023.
+
+ninjs 2.1 includes the new `contactInfo` type which can be applied to the `people`, `organisations`, `places` and `infosources` properties. ninjs 2.1 also includes the new `symboltype` and `symbol` properties under `symbols`, and new properties `creator`, `relevance` and `confidence` under `subjects`. The `ticker` sub-property under `symbols` is now deprecated.
+
+In addition, some changes to the schema were made to fix a validation bug in previous versions. In order to accommodate these changes, the ninjs 2.1 schema uses the `https://json-schema.org/draft/2020-12/schema` version of JSON Schema.
 
 == Additional Resources
 
