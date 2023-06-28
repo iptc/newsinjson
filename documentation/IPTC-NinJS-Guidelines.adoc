@@ -104,34 +104,35 @@ https://www.iptc.org/std/ninjs/generator/[ninjs generator tool on iptc.org].
 
 === Two versions of ninjs: ninjs 1.5 and ninjs 2.1
 
-IPTC manages two current versions of ninjs: the 1.x branch (where the latest
-version is currently 1.5) and the 2.x branch (where the latest version is 2.1).
+IPTC manages two current versions of ninjs: the 2.x branch (where the latest
+version is 2.1) and the 1.x branch (where the latest version is currently
+1.5).
 
-The 1.x series adds new features to the version of ninjs that started with
-ninjs 1.0 back in 2013, in a way that is fully backwards compatible. The latest
-release in this series is 1.5, which includes new properties such as `contactinfo`,
-`symbol` and `symboltype` (<<ninjs 1.5,see the full list of changes>>). 
+The 1.x series continues the version of ninjs that started with ninjs 1.0 in
+2013, adding new features in a way that is fully backwardscompatible. The
+latest release in this series is 1.5, which includes new properties such as
+`contactinfo`, `symbol` and `symboltype` (<<ninjs 1.5,see the full list of
+changes>>). 
 
-The 2.x series fixes some issues that made the 1.x series tricky for
-some developers to work with. The main change is that we avoid the use of
-patternProperties, so all properties now have well-defined names. This
-work is intended to make ninjs easier for work with binary protocols
-such as Protocol Buffers and Avro. We also took the opportunity to make
-property names more consistent with NewsML-G2 and to add some fields to
-handle rights.
+The 2.x series fixes some issues that made the 1.x series tricky for some
+developers to work with. The main change is that ninjs 2.x avoids the use of
+patternProperties, so all properties now have well-defined names. This change
+is intended to make ninjs easier for projects based on binary protocols such as
+Protocol Buffers and Avro. We also took the opportunity to make property names
+more consistent with NewsML-G2 and to add some fields to handle rights.
 
 We wanted to issue a new release which fixed these problems, but this meant
 breaking backwards compatibility with the 1.x versions of ninjs.  This is why
 we decided to maintain two parallel branches: 1.x and 2.x.
+
 All new users are strongly recommended to use version 2.1.
 
-The 2.1 and 1.5 versions of ninjs were approved by the IPTC Standards Committee on
-May 17th, 2023.
+The 2.1 and 1.5 versions of ninjs were approved by the IPTC Standards Committee
+on May 17th, 2023.
 
-This document describes only the 2.1 version, but those who must use
-version 1.5 for backwards compatibility reasons can find the JSON
-Schema file for ninjs 1.5 schema at
-https://iptc.org/std/ninjs/ninjs-schema_1.5.json.
+This document focuses on the 2.1 version, but those who must use version 1.5
+for backwards compatibility reasons can find the JSON Schema file for ninjs 1.5
+schema at https://iptc.org/std/ninjs/ninjs-schema_1.5.json.
 
 === Differences between ninjs 1.x and 2.x
 
@@ -1026,7 +1027,8 @@ include::includes/examples/005_complex_text_article.json[]
 
 ==== More Examples on GitHub
 
-You can find more examples of ninjs representations of text-based news releases in the https://github.com/iptc/newsinjson/tree/master/examples[ninjs GitHub
+You can find more examples of ninjs representations of text-based news releases
+in the https://github.com/iptc/newsinjson/tree/main/examples[ninjs GitHub
 repository].
 
 === Photo-only example
@@ -1079,35 +1081,38 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 
 === How to create provider-specific extensions
 
-In some cases, your news releases may have content that does not fit into the objects that are defined in the ninjs standard. In these cases, you should extend (and rename) the IPTC ninjs schema.
+In some cases, your news releases may have content that does not fit into the
+objects that are defined in the ninjs standard. In these cases, you can (and
+should) copy and extend the IPTC ninjs schema.
 
 To do this, do the following:
 
 . make a copy of the schema file
-. change the URL of the "id" property of IPTC's ninjs 2.0 ...
+. change the URL of the "id" property of IPTC's ninjs 2.1 ...
 +
 [source,json]
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json#",
   "type" : "object",
   ...
 +
-to your example.com-ninjs 0.1
+to your own ID, for example `example.com-ninjs-0.1`:
 +
 [source,json]
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id" : "http://www.example.com/extended-ninjs-schema_0.1.json#",
   "type" : "object",
   ... 
 +
-. add your own properties to your copy of the schema. For example, to add a property explaining the reason for the embargo:
+. add your own properties to your copy of the schema. For example, to add a
+property explaining the reason for an embargo:
 +
 [source,json]
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id" : "http://www.example.com/extended-ninjs-schema_0.1.json#",
   "type" : "object",
   ...
   "embargoed": {
@@ -1122,19 +1127,13 @@ to your example.com-ninjs 0.1
   },
   ...
 +
-. save your new schema to a location where users of the schema can access it, which should be the same URL used for the "id" property:
-+
-[source,json]
-{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
-  "type" : "object",
-  ...
-}
-+
-the file should be saved to: http://www.example.com/e-ninjs-schema_0.1.json
+. save your new schema to a location where users of the schema can access it,
+which should be the same as the URL used for the "id" property. For the example
+above, the file should be accessible at
+http://www.example.com/e-ninjs-schema_0.1.json
 
-This is an example ninjs document that includes a reason for the embargo in an extended ninjs document:
+This is an example ninjs document that includes the added property giving the
+reason for the embargo in an extended ninjs document:
 
 [source,json]
 ----
@@ -1143,7 +1142,9 @@ include::includes/examples/not-valid/008_extension.json[]
 
 ==== Using `standard`
 
-With the `standard` field, providers can indicate in each JSON file exactly which schema the file is valid against. So the above example of extending the schema could be shown like this:
+With the `standard` field, providers can indicate in each JSON file exactly
+which schema the file is valid against. So the above example of extending the
+schema could be shown like this:
 
 [source,json]
 {

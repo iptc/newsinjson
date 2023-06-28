@@ -659,39 +659,41 @@ by an API call.</p>
 <div class="sect2">
 <h3 id="_two_versions_of_ninjs_ninjs_1_5_and_ninjs_2_1"><a class="anchor" href="#_two_versions_of_ninjs_ninjs_1_5_and_ninjs_2_1"></a>1.5. Two versions of ninjs: ninjs 1.5 and ninjs 2.1</h3>
 <div class="paragraph">
-<p>IPTC manages two current versions of ninjs: the 1.x branch (where the latest
-version is currently 1.5) and the 2.x branch (where the latest version is 2.1).</p>
+<p>IPTC manages two current versions of ninjs: the 2.x branch (where the latest
+version is 2.1) and the 1.x branch (where the latest version is currently
+1.5).</p>
 </div>
 <div class="paragraph">
-<p>The 1.x series adds new features to the version of ninjs that started with
-ninjs 1.0 back in 2013, in a way that is fully backwards compatible. The latest
-release in this series is 1.5, which includes new properties such as <code>contactinfo</code>,
-<code>symbol</code> and <code>symboltype</code> (<a href="#_ninjs_1_5">see the full list of changes</a>).</p>
+<p>The 1.x series continues the version of ninjs that started with ninjs 1.0 in
+2013, adding new features in a way that is fully backwardscompatible. The
+latest release in this series is 1.5, which includes new properties such as
+<code>contactinfo</code>, <code>symbol</code> and <code>symboltype</code> (<a href="#_ninjs_1_5">see the full list of
+changes</a>).</p>
 </div>
 <div class="paragraph">
-<p>The 2.x series fixes some issues that made the 1.x series tricky for
-some developers to work with. The main change is that we avoid the use of
-patternProperties, so all properties now have well-defined names. This
-work is intended to make ninjs easier for work with binary protocols
-such as Protocol Buffers and Avro. We also took the opportunity to make
-property names more consistent with NewsML-G2 and to add some fields to
-handle rights.</p>
+<p>The 2.x series fixes some issues that made the 1.x series tricky for some
+developers to work with. The main change is that ninjs 2.x avoids the use of
+patternProperties, so all properties now have well-defined names. This change
+is intended to make ninjs easier for projects based on binary protocols such as
+Protocol Buffers and Avro. We also took the opportunity to make property names
+more consistent with NewsML-G2 and to add some fields to handle rights.</p>
 </div>
 <div class="paragraph">
 <p>We wanted to issue a new release which fixed these problems, but this meant
 breaking backwards compatibility with the 1.x versions of ninjs.  This is why
-we decided to maintain two parallel branches: 1.x and 2.x.
-All new users are strongly recommended to use version 2.1.</p>
+we decided to maintain two parallel branches: 1.x and 2.x.</p>
 </div>
 <div class="paragraph">
-<p>The 2.1 and 1.5 versions of ninjs were approved by the IPTC Standards Committee on
-May 17th, 2023.</p>
+<p>All new users are strongly recommended to use version 2.1.</p>
 </div>
 <div class="paragraph">
-<p>This document describes only the 2.1 version, but those who must use
-version 1.5 for backwards compatibility reasons can find the JSON
-Schema file for ninjs 1.5 schema at
-<a href="https://iptc.org/std/ninjs/ninjs-schema_1.5.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.5.json</a>.</p>
+<p>The 2.1 and 1.5 versions of ninjs were approved by the IPTC Standards Committee
+on May 17th, 2023.</p>
+</div>
+<div class="paragraph">
+<p>This document focuses on the 2.1 version, but those who must use version 1.5
+for backwards compatibility reasons can find the JSON Schema file for ninjs 1.5
+schema at <a href="https://iptc.org/std/ninjs/ninjs-schema_1.5.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.5.json</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2287,7 +2289,8 @@ This property is an object with the following child properties:</p>
 <div class="sect3">
 <h4 id="_more_examples_on_github"><a class="anchor" href="#_more_examples_on_github"></a>4.1.3. More Examples on GitHub</h4>
 <div class="paragraph">
-<p>You can find more examples of ninjs representations of text-based news releases in the <a href="https://github.com/iptc/newsinjson/tree/master/examples">ninjs GitHub
+<p>You can find more examples of ninjs representations of text-based news releases
+in the <a href="https://github.com/iptc/newsinjson/tree/main/examples">ninjs GitHub
 repository</a>.</p>
 </div>
 </div>
@@ -2610,7 +2613,9 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <div class="sect2">
 <h3 id="_how_to_create_provider_specific_extensions"><a class="anchor" href="#_how_to_create_provider_specific_extensions"></a>5.3. How to create provider-specific extensions</h3>
 <div class="paragraph">
-<p>In some cases, your news releases may have content that does not fit into the objects that are defined in the ninjs standard. In these cases, you should extend (and rename) the IPTC ninjs schema.</p>
+<p>In some cases, your news releases may have content that does not fit into the
+objects that are defined in the ninjs standard. In these cases, you can (and
+should) copy and extend the IPTC ninjs schema.</p>
 </div>
 <div class="paragraph">
 <p>To do this, do the following:</p>
@@ -2621,36 +2626,37 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>make a copy of the schema file</p>
 </li>
 <li>
-<p>change the URL of the "id" property of IPTC&#8217;s ninjs 2.0 &#8230;&#8203;</p>
+<p>change the URL of the "id" property of IPTC&#8217;s ninjs 2.1 &#8230;&#8203;</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json#",
   "type" : "object",
   ...</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>to your example.com-ninjs 0.1</p>
+<p>to your own ID, for example <code>example.com-ninjs-0.1</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id" : "http://www.example.com/extended-ninjs-schema_0.1.json#",
   "type" : "object",
   ...</code></pre>
 </div>
 </div>
 </li>
 <li>
-<p>add your own properties to your copy of the schema. For example, to add a property explaining the reason for the embargo:</p>
+<p>add your own properties to your copy of the schema. For example, to add a
+property explaining the reason for an embargo:</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id" : "http://www.example.com/extended-ninjs-schema_0.1.json#",
   "type" : "object",
   ...
   "embargoed": {
@@ -2668,25 +2674,16 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 </div>
 </li>
 <li>
-<p>save your new schema to a location where users of the schema can access it, which should be the same URL used for the "id" property:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "id" : "http://www.example.com/e-ninjs-schema_0.1.json#",
-  "type" : "object",
-  ...
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>the file should be saved to: <a href="http://www.example.com/e-ninjs-schema_0.1.json" class="bare">http://www.example.com/e-ninjs-schema_0.1.json</a></p>
-</div>
+<p>save your new schema to a location where users of the schema can access it,
+which should be the same as the URL used for the "id" property. For the example
+above, the file should be accessible at
+<a href="http://www.example.com/e-ninjs-schema_0.1.json" class="bare">http://www.example.com/e-ninjs-schema_0.1.json</a></p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>This is an example ninjs document that includes a reason for the embargo in an extended ninjs document:</p>
+<p>This is an example ninjs document that includes the added property giving the
+reason for the embargo in an extended ninjs document:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2702,7 +2699,9 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <div class="sect3">
 <h4 id="_using_standard"><a class="anchor" href="#_using_standard"></a>5.3.1. Using <code>standard</code></h4>
 <div class="paragraph">
-<p>With the <code>standard</code> field, providers can indicate in each JSON file exactly which schema the file is valid against. So the above example of extending the schema could be shown like this:</p>
+<p>With the <code>standard</code> field, providers can indicate in each JSON file exactly
+which schema the file is valid against. So the above example of extending the
+schema could be shown like this:</p>
 </div>
 <div class="listingblock">
 <div class="content">
