@@ -29,6 +29,18 @@ properties defined in ninjs. Mainly useful during development of the schemas.
 This will run each of the files in the test suite against the ninjs-1.3 and
 ninjs-2.0 schemas.
 
+# JavaScript validator (using ajv)
+
+The script at `validation/javascript.sh` runs the same tests using the
+JavaScript `ajv` validator.
+
+## Running the JavaScript test suite
+
+* Install npm
+* From a command line, run
+    $ npm -g install ajv ajv-cli ajv-formats
+    $ validation/javascript.sh
+
 # License
 
 Source code is published under the Creative Commons Attribution 4.0 license -

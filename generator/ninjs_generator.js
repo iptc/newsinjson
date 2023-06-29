@@ -21,7 +21,7 @@ class NinjsGenerator extends React.Component {
         super(props);
         this.state = {
             output: '',
-            outputformat: 'ninjs20',
+            outputformat: 'ninjs2x',
             firstcreated: '',
             representationtype: 'full',
             type: 'text',
@@ -58,14 +58,14 @@ class NinjsGenerator extends React.Component {
     }
     refreshOutput() {    
         var output;
-        if (this.state.outputformat == 'ninjs20') {
+        if (this.state.outputformat == 'ninjs2x') {
             this.state.qcodeVisible = false;
-            // output = this.getninjs20Output();
-            output = this.getninjsOutput("ninjs20");
-        } else if (this.state.outputformat == 'ninjs14') {
+            // output = this.getninjs2xOutput();
+            output = this.getninjsOutput("ninjs2x");
+        } else if (this.state.outputformat == 'ninjs1x') {
             this.state.qcodeVisible = false;
-            // output = this.getninjs14Output();
-            output = this.getninjsOutput("ninjs14");
+            // output = this.getninjs1xOutput();
+            output = this.getninjsOutput("ninjs1x");
         }
         this.setState({output: output});
     }
@@ -80,18 +80,18 @@ class NinjsGenerator extends React.Component {
         jsonObj['uri'] = uri;
 
         var standard = {}; var standardkey = "";
-        if (version == "ninjs14") {
+        if (version == "ninjs1x") {
             standard = {
                 "name": "ninjs",
-                "version": "1.4",
-                "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.4.json"
+                "version": "1.5",
+                "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.5.json"
             };
             standardkey = '$standard';
         } else {
             standard = {
                 "name": "ninjs",
-                "version": "2.0",
-                "schema": "https://iptc.org/std/ninjs/ninjs-schema_2.0.json"
+                "version": "2.1",
+                "schema": "https://iptc.org/std/ninjs/ninjs-schema_2.1.json"
             };
             standardkey = 'standard';
         }
@@ -107,7 +107,7 @@ class NinjsGenerator extends React.Component {
             jsonObj['type'] = this.state.type;
         }
         if (this.state.representationtype) {
-            if (version == "ninjs14") {
+            if (version == "ninjs1x") {
                 jsonObj['representationtype'] = this.state.representationtype == "full" ? "complete" : "incomplete";
             } else {
                 jsonObj['representationtype'] = this.state.representationtype;
@@ -119,7 +119,7 @@ class NinjsGenerator extends React.Component {
         if (this.state.urgency) {
             jsonObj['urgency'] = parseInt(this.state.urgency);
         }
-        if (version == "ninjs14") {
+        if (version == "ninjs1x") {
             if (this.state.headline) {
                 jsonObj['headline'] = this.state.headline;
             }
@@ -159,7 +159,7 @@ class NinjsGenerator extends React.Component {
             jsonObj['slugline'] = this.state.slugline;
         }
         if (this.state.bodytext) {
-            if (version == "ninjs14") {
+            if (version == "ninjs1x") {
                 jsonObj['body_text'] = this.state.bodytext;
                 jsonObj['charcount'] = this.state.bodytext.length;
                 jsonObj['wordcount'] = this.state.bodytext.split(' ').length;
@@ -175,7 +175,7 @@ class NinjsGenerator extends React.Component {
         if (this.state.genre) {
             var genreitems = [];
             var genrekey = "";
-            if (version == "ninjs14") {
+            if (version == "ninjs1x") {
                 genreitems.push({
                     'scheme': 'http://cv.iptc.org/newscodes/genre/',
                     'code': this.state.genre
@@ -193,7 +193,7 @@ class NinjsGenerator extends React.Component {
             var mediatopics = [];
             var medtopkey = '';
             for (var elem of this.state.medtop) {
-                if (version == "ninjs14") {
+                if (version == "ninjs1x") {
                     mediatopics.push({
                         'scheme': 'http://cv.iptc.org/newscodes/mediatopic/',
                         'rel': 'classifies',
@@ -213,7 +213,7 @@ class NinjsGenerator extends React.Component {
             jsonObj[medtopkey] = mediatopics;
         }
         if (this.state.by) {
-            if (version == "ninjs14") {
+            if (version == "ninjs1x") {
                 jsonObj['byline'] = this.state.by;
             } else {
                 jsonObj['by'] = this.state.by;
@@ -223,7 +223,7 @@ class NinjsGenerator extends React.Component {
             jsonObj['located'] = this.state.location;
         }
         if (this.state.altid_role || this.state.altid_value) {
-            if (version == "ninjs14") {
+            if (version == "ninjs1x") {
                 var altid_role = this.state.altid_role || "altidrole";
                 var altid_value = this.state.altid_value || "";
                 jsonObj['altids'] = {}
@@ -665,12 +665,12 @@ class NinjsGenerator extends React.Component {
                     </div>
                     <div className="col-sm-5">
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" defaultChecked name="outputformat" id="ninjs20" value="ninjs20" title="Output format - ninjs 2.0" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
-                            <label className="form-check-label" htmlFor="ninjs20">ninjs 2.0</label>
+                            <input className="form-check-input" type="radio" defaultChecked name="outputformat" id="ninjs2x" value="ninjs2x" title="Output format - ninjs 2.1" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
+                            <label className="form-check-label" htmlFor="ninjs2x">ninjs 2.1</label>
                         </div>
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs14" value="ninjs14" title="Output format - ninjs 1.4" onChange={this.handleInputChange} tabIndex="24" />&nbsp;
-                            <label className="form-check-label" htmlFor="ninjs14">ninjs 1.4</label>
+                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs1x" value="ninjs1x" title="Output format - ninjs 1.5" onChange={this.handleInputChange} tabIndex="24" />&nbsp;
+                            <label className="form-check-label" htmlFor="ninjs1x">ninjs 1.5</label>
                         </div>
                     </div>
                 </div>

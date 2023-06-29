@@ -1,0 +1,21 @@
+{
+    "uri": "http://tt.se/media/text/210526-militarovning-a0f2d045",
+    "type": "text",
+    "representationtype": "full",
+    "subjects": [
+        {
+            "literal": "16000000",
+            "name": "Krig, konflikter och oroligheter",
+            "uri": "http://tt.se/spec/subref/1.0/16000000",
+            "rel": "classifies",
+            "creator": "system",
+            "relevance": 98,
+            "confidence": 58
+        }
+    ],
+    "standard": {
+        "name": "ninjs",
+        "version": "2.1",
+        "schema": "https://iptc.org/std/ninjs/ninjs-schema_2.1.json"
+    }
+}

@@ -1,0 +1,30 @@
+{
+	"standard": {
+	    "name": "ninjs",
+	    "version": "2.1",
+	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json"
+	},
+	"uri": "http://ninjs.example.com/newsitems/ninjs1-4-tests-001",
+	"headlines": [
+        {
+            "role": "main",
+            "value": "Test of three new properties"
+        },
+        {
+            "role": "test",
+	        "value": "Extensible headline test"
+        }
+    ],
+	"descriptions": [
+        {
+            "role": "test",
+            "value": "Extensible description test"
+        }
+    ],
+    "contentcreated": "2022-04-21T12:00:00+00:00",
+    "expires": "2023-12-31T23:59:59+00:00",
+    "rightsinfo": {
+        "langid": "http://w3.org/ns/odrl/2/",
+        "linkedrights": "http://example.agency.com/rights/editorialUseOnly"
+    }
+}

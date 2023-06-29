@@ -1,5 +1,5 @@
 {
-    "uri": "003_advice_anyvalue.json",
+    "uri": "urn:003_advice_anyvalue.json",
     "title": "An advice object showing that values are not validated and can be anything",
     "advices": [
         {

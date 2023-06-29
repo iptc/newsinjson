@@ -1,5 +1,5 @@
 {
-    "uri": "003_advice_wrongproperties.json",
+    "uri": "urn:003_advice_wrongproperties.json",
     "title": "This is wrong because lifetime should contain 'code'",
     "advice": [
         {

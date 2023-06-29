@@ -1,0 +1,63 @@
+{
+    "uri": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0?qt=H1Kdh42orF&et=0a1aza3c0",
+    "type": "picture",
+    "version": "0",
+    "firstcreated": "2019-11-15T13:39:59Z",
+    "versioncreated": "2019-11-15T14:39:44Z",
+    "pubstatus": "usable",
+    "urgency": 5,
+    "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
+    "ednote": "TURKEY OUT  NOV. 11, 2019 FILE PHOTO",
+    "language": "en",
+    "description_creditline": "ASSOCIATED PRESS",
+    "description_caption": "FILE - In this Monday, Nov. 11, 2019 file photo, a man identified by Turkish media as 39-year-old Muhammad Darwis B., a U.S. citizen of Jordanian origin, stands in a no man's land between Turkey and Greece near Pazarkule border gate, Edirne, Turkey. Turkey's Interior Minister Suleyman Soylu said Friday Nov, 15, 2019 that the American Islamic State group member has been deported to the United States. (DHA via AP, File)",
+    "headline_main": "Turkey Islamic State",
+    "organisation": [
+        {
+            "name": "Islamic State group"
+        },
+        {
+            "name": "International Committee of the Red Cross",
+            "contactinfo": [
+                {
+                    "type": "web",
+                    "value": "https://www.icrc.org/"
+                },
+                {
+                    "type": "address",
+                    "value": "19 Avenue de la paix, 1202 Geneva, Switzerland"
+                },
+                {
+                    "type": "telephone",
+                    "value": "+41 22 734 60 01"
+                }
+            ]
+        }
+    ],
+    "person": [
+        {
+            "name": "Suleyman Soylu",
+            "rel": "mentioned",
+            "contactinfo": [
+                {
+                    "type": "twitter",
+                    "value": "@suleymansoylu"
+                }
+            ]
+        }
+    ],
+    "place": [
+        {
+            "name": "Edirne",
+            "contactinfo": [
+                {
+                    "type": "physical",
+                    "lang": "tr-TR",
+                    "address": {
+                        "country": "Türkiye"
+                    }
+                }
+            ]
+        }
+    ]
+}
