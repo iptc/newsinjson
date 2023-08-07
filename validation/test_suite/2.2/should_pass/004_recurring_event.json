@@ -1,0 +1,39 @@
+{
+	"standard": {
+	    "name": "ninjs",
+	    "version": "2.2",
+	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+	},
+	"uri": "urn:004-ninjs2.2-recurring-event-test",
+	"events": [
+        {
+            "name": "Times Square Ball Drop",
+            "dates": {
+                "startdate": "2023-12-31T23:59:59-04:00",
+                "enddate": "2024-01-01T00:00:00-04:00",
+                "recurrence": {
+                    "recurrence-rules": [
+                        {
+                            "frequency": "yearly"
+                        }
+                    ]
+                }
+            },
+            "organiser": {
+                "name": "NATO",
+                "uri": "https://www.nato.int/"
+            },
+            "location": [
+                {
+                    "name": "Times Square",
+                    "type": "address",
+                    "address": {
+                        "locality": "New York",
+                        "area": "New York",
+                        "country": "United States"
+                    }
+                }
+            ]
+        }
+    ]
+}

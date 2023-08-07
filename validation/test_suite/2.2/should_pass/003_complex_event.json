@@ -1,0 +1,31 @@
+{
+	"standard": {
+	    "name": "ninjs",
+	    "version": "2.2",
+	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+	},
+	"uri": "urn:002-ninjs2.2-complex-event-test",
+	"events": [
+        {
+            "name": "2023 NATO Summit",
+            "uri": "urn:nato.int:2023-nato-summit",
+            "dates": {
+                "startdate": "2023-07-11",
+                "enddate": "2023-07-12"
+            },
+            "organiser": {
+                "name": "NATO",
+                "uri": "https://www.nato.int/"
+            },
+            "location": [
+                {
+                    "type": "address",
+                    "address": {
+                        "locality": "Vilnius",
+                        "country": "Lithuania"
+                    }
+                }
+            ]
+        }
+    ]
+}

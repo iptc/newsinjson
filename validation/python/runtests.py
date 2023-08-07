@@ -90,6 +90,10 @@ class TestNinJSSchema(unittest.TestCase):
             specification_path,
             'ninjs-schema_2.1.json',
         )
+        ninjs22_schema_filename = os.path.join(
+            specification_path,
+            'ninjs-schema_2.2.json',
+        )
         ninjs1xdev_schema_filename = os.path.join(
             specification_path,
             'ninjs-schema-dev_0.2_v1.5.json'
@@ -114,6 +118,8 @@ class TestNinJSSchema(unittest.TestCase):
             self.ninjs20_schema = json.load(schemafile)
         with open(ninjs21_schema_filename) as schemafile:
             self.ninjs21_schema = json.load(schemafile)
+        with open(ninjs22_schema_filename) as schemafile:
+            self.ninjs22_schema = json.load(schemafile)
         with open(ninjs1xdev_schema_filename) as schemafile:
             self.ninjs1xdev_schema = json.load(schemafile)
         with open(ninjs2xdev_schema_filename) as schemafile:
@@ -200,6 +206,7 @@ class TestNinJSSchema(unittest.TestCase):
         self.assertIsNone(jsonschema.validate({"uri": "test1.5"}, self.ninjs15_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test2.0"}, self.ninjs20_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test2.1"}, self.ninjs21_schema))
+        self.assertIsNone(jsonschema.validate({"uri": "test2.2"}, self.ninjs22_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test-1.x-dev"}, self.ninjs1xdev_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test-2.x-dev"}, self.ninjs2xdev_schema))
 
@@ -565,6 +572,38 @@ class TestNinJSSchema(unittest.TestCase):
         self.folder_should_fail(
             schema=self.ninjs21_schema,
             folder_name=os.path.join('2.1', 'should_fail')
+        )
+
+    def test_passing_2_2_unit_tests_against_2_2_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/2.2/should_pass against the 2.2 schema.
+        They should all pass (ie they are all valid against the schema).
+
+        Also run 2.0/should_pass and 2.1/should_pass against the 2.2 schema,
+        because it should be backwards compatible to 2.0.
+        """
+        self.folder_should_pass(
+            schema=self.ninjs22_schema,
+            folder_name=os.path.join('2.2', 'should_pass'),
+        )
+        self.folder_should_pass(
+            schema=self.ninjs22_schema,
+            folder_name=os.path.join('2.1', 'should_pass'),
+        )
+        self.folder_should_pass(
+            schema=self.ninjs22_schema,
+            folder_name=os.path.join('2.0', 'should_pass')
+        )
+
+
+    def test_failing_2_2_unit_tests_against_2_2_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/2.2/should_fail against the 2.2 schema.
+        They should all fail (ie they are all invalid in some way).
+        """
+        self.folder_should_fail(
+            schema=self.ninjs22_schema,
+            folder_name=os.path.join('2.2', 'should_fail')
         )
 
 
