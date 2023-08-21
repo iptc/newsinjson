@@ -5,6 +5,7 @@
 	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
 	},
 	"uri": "urn:002-ninjs2.2-complex-event-test",
+    "type": "event",
 	"events": [
         {
             "name": "2023 NATO Summit",
