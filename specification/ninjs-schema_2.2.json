@@ -165,7 +165,8 @@
             "graphic",
             "composite",
             "component",
-            "event"
+            "event",
+            "planning"
           ]
         },
         "representationtype": {
@@ -304,12 +305,12 @@
               "charcount": {
                 "title": "Character count",
                 "description": "The total character count in this body excluding figure captions. (Added in version 1.2 according to issue #27.). nar:charcount",
-                "type": "number"
+                "type": "integer"
               },
               "wordcount": {
                 "title": "Word count",
                 "description": "The total number of words in this body excluding figure captions. (Added in version 1.2 according to issue #27.). nar:wordcount",
-                "type": "number"
+                "type": "integer"
               },
               "value": {
                 "title": "Value",
@@ -494,6 +495,11 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
+              "id": {
+                "title": "ID",
+                "description": "An ID for the event",
+                "type": "string"
+              },
               "name": {
                 "title": "Name",
                 "description": "The name of the event",
@@ -593,6 +599,101 @@
                 "description": "A person or organisation organising the event.",
                 "$ref": "#/$defs/organisationType"
               }
+            }
+          }
+        },
+        "plannedcoverage": {
+          "title": "Planned Coverage",
+          "description": "An array of objects specifying planned coverage which may or may not be related to an event.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "uri": {
+                    "description": "The local identifier of the element which MUST be persistent for all versions of the item, i.e. for its entire lifecycle.",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
+                    "type": "string"
+                },
+                "event": {
+                    "description": "",
+                    "type": "string"
+                },
+                "audiences": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "audience": {
+                                "description": "Intended audience(s) for the content.",
+                                "type": "string"
+                            },
+                            "significance": {
+                                "description": "A qualifier which indicates the expected significance of the content for this specific audience.",
+                                "type": "integer"
+                            }
+                        }
+                    }
+                },
+                "exclaudience": {
+                    "type": "array",
+                    "description": "Excluded audience(s) for the content. (Note G2 also has significance attribute for each audience, as number 1-9)",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "headline": {
+                    "description": "",
+                    "type": "string"
+                },
+                "ednote": {
+                    "description": "Additional natural language information about the planned coverage addressed to the editorial people receiving and processing the item.",
+                    "type": "string"
+                },
+                "urgency": {
+                    "description": "The editorial urgency of the content, as scoped by the parent element.",
+                    "type": "string"
+                },
+                "language": {
+                    "description": "",
+                    "type": "string"
+                },
+                "scheduled": {
+                    "description": "The scheduled time of delivery for the planned G2 item(s).",
+                    "type": "string"
+                },
+                "services": {
+                    "description": "An editorial service by which the planned G2 item(s) will be distributed. QUESTION remove for now until we have better requirements?",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "assignedto": {
+                    "description": "The party which is assigned to cover the event and produce the planned item. NOTE G2 object also has coversfrom and coversto attributes, which are also at the higher planning level",
+                    "type": "string"
+                },
+                "itemcount": {
+                    "description": "Number of planned G2 items of this kind expressed by a range.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "rangefrom": {
+                            "type": "integer"
+                        },
+                        "rangeto": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "wordcount": {
+                    "description": "",
+                    "type": "integer"
+                }
             }
           }
         },

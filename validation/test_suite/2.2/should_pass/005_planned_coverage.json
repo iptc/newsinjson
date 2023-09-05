@@ -8,7 +8,7 @@
     "type": "planning",
     "plannedcoverage": [
         {
-            "id": "planning-times-square-001-text",
+            "uri": "planning-times-square-001-text",
             "headline": "",
             "type": "text",
             "event": "times-square-event-001",
@@ -17,11 +17,11 @@
             "services": [
                 "all-items-feed",
                 "all-text-items-feed",
-                "text-highlights-feed",
+                "text-highlights-feed"
             ],
             "wordcount": 300,
             "language": "en-US",
-            "audience": [
+            "audiences": [
                 {
                     "audience": "45-60",
                     "significance": 8
@@ -29,17 +29,17 @@
             ]
         },
         {
-            "id": "planning-times-square-001-video",
+            "uri": "planning-times-square-001-video",
             "type": "video",
             "event": "times-square-event-001",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
-            "scheduled": "2024-01-01T00:30:00-04:00"
+            "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
                 "all-items-feed",
                 "all-video-items-feed",
-                "video-highlights-feed",
+                "video-highlights-feed"
             ],
-            "audience": [
+            "audiences": [
                 {
                     "audience": "18-25",
                     "significance": 8
@@ -47,16 +47,16 @@
             ]
         },
         {
-            "id": "planning-times-square-001-all-photos",
+            "uri": "planning-times-square-001-all-photos",
             "type": "picture",
             "event": "times-square-event-001",
             "itemcount": { "rangefrom": 5, "rangeto": 15 },
-            "scheduled": "2024-01-01T00:30:00-04:00"
+            "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
                 "all-items-feed",
-                "all-photo-items-feed",
-            ]
-            "audience": [
+                "all-photo-items-feed"
+            ],
+            "audiences": [
                 {
                     "audience": "casual",
                     "significance": 7
@@ -64,15 +64,15 @@
             ]
         },
         {
-            "id": "planning-times-square-001-top-photos",
+            "uri": "planning-times-square-001-top-photos",
             "type": "picture",
             "event": "times-square-event-001",
             "itemcount": { "rangefrom": 1, "rangeto": 3 },
-            "scheduled": "2024-01-01T00:30:00-04:00"
+            "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
                 "photo-highlights-feed"
-            ]
-            "audience": [
+            ],
+            "audiences": [
                 {
                     "audience": "casual",
                     "significance": 8
@@ -82,7 +82,7 @@
      ],
 	"events": [
         {
-            "id": "times-square-event-001",
+            "uri": "times-square-event-001",
             "name": "Times Square Ball Drop",
             "dates": {
                 "startdate": "2023-12-31T23:59:59-04:00",
