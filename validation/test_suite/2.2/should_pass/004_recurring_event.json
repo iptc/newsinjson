@@ -6,28 +6,30 @@
 	},
 	"uri": "urn:004-ninjs2.2-recurring-event-test",
     "type": "event",
-	"events": [
+    "title": "Times Square Ball Drop",
+    "eventdetails": {
+        "dates": {
+            "startdate": "2023-12-31T23:59:59-04:00",
+            "enddate": "2024-01-01T00:00:00-04:00",
+            "recurrence": {
+                "recurrence-rules": [
+                    {
+                        "frequency": "yearly"
+                    }
+                ]
+            }
+        },
+        "organiser": {
+            "name": "Times Square Alliance Countdown Entertainment",
+            "uri": "https://timessquareball.net/"
+        }
+    },
+    "places": [
         {
-            "name": "Times Square Ball Drop",
-            "dates": {
-                "startdate": "2023-12-31T23:59:59-04:00",
-                "enddate": "2024-01-01T00:00:00-04:00",
-                "recurrence": {
-                    "recurrence-rules": [
-                        {
-                            "frequency": "yearly"
-                        }
-                    ]
-                }
-            },
-            "organiser": {
-                "name": "NATO",
-                "uri": "https://www.nato.int/"
-            },
-            "location": [
+            "name": "Times Square",
+            "contactinfo": [
                 {
-                    "name": "Times Square",
-                    "type": "address",
+                    "type": "physical",
                     "address": {
                         "locality": "New York",
                         "area": "New York",

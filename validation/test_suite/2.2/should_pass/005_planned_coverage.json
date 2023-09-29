@@ -11,7 +11,7 @@
             "uri": "planning-times-square-001-text",
             "headline": "",
             "type": "text",
-            "event": "times-square-event-001",
+            "event": "urn:004-ninjs2.2-recurring-event-test",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
             "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
@@ -31,7 +31,7 @@
         {
             "uri": "planning-times-square-001-video",
             "type": "video",
-            "event": "times-square-event-001",
+            "event": "urn:004-ninjs2.2-recurring-event-test",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
             "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
@@ -76,38 +76,6 @@
                 {
                     "audience": "casual",
                     "significance": 8
-                }
-            ]
-        }
-     ],
-	"events": [
-        {
-            "uri": "times-square-event-001",
-            "name": "Times Square Ball Drop",
-            "dates": {
-                "startdate": "2023-12-31T23:59:59-04:00",
-                "enddate": "2024-01-01T00:00:00-04:00",
-                "recurrence": {
-                    "recurrence-rules": [
-                        {
-                            "frequency": "yearly"
-                        }
-                    ]
-                }
-            },
-            "organiser": {
-                "name": "NATO",
-                "uri": "https://www.nato.int/"
-            },
-            "location": [
-                {
-                    "name": "Times Square",
-                    "type": "address",
-                    "address": {
-                        "locality": "New York",
-                        "area": "New York",
-                        "country": "United States"
-                    }
                 }
             ]
         }

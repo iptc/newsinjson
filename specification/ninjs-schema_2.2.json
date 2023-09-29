@@ -155,7 +155,7 @@
         },
         "type": {
           "title": "Type",
-          "description": "The generic news type of this news object. (Value 'component' added in version 1.2 as issue #21.). See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
+          "description": "The generic news type of this news object. (Value 'component' added in version 1.2. Values 'event' and 'planning' added in version 2.2). See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
           "type": "string",
           "enum": [
             "text",
@@ -190,7 +190,7 @@
         },
         "firstcreated": {
           "title": "First created",
-          "description": "Indicates when the first version of this ninjs object was created. (Added in version 1.2 from issue #5). nar:firstCreated",
+          "description": "Indicates when the first version of this ninjs object was created. (Added in version 1.2). nar:firstCreated",
           "type": "string",
           "format": "date-time"
         },
@@ -244,7 +244,7 @@
         },
         "ednote": {
           "title": "Editorial note",
-          "description": "A note that is intended to be read by internal staff at the receiving organisation, but not intended to be published. (Added in version 1.2 from issue #6.). (Consider using this before using the descriptions array.) ednote: nar:edNote",
+          "description": "A note that is intended to be read by internal staff at the receiving organisation, but not intended to be published. (Added in version 1.2.). (Consider using this before using the descriptions array.) ednote: nar:edNote",
           "type": "string"
         },
         "language": {
@@ -304,12 +304,12 @@
               },
               "charcount": {
                 "title": "Character count",
-                "description": "The total character count in this body excluding figure captions. (Added in version 1.2 according to issue #27.). nar:charcount",
+                "description": "The total character count in this body excluding figure captions. (Added in version 1.2.). nar:charcount",
                 "type": "integer"
               },
               "wordcount": {
                 "title": "Word count",
-                "description": "The total number of words in this body excluding figure captions. (Added in version 1.2 according to issue #27.). nar:wordcount",
+                "description": "The total number of words in this body excluding figure captions. (Added in version 1.2.). nar:wordcount",
                 "type": "integer"
               },
               "value": {
@@ -520,85 +520,86 @@
                 "title": "Literal",
                 "description": "An identifier for the event as a free-text string.",
                 "type": "string"
-              },
-              "location": {
-                "type": "array",
-                "description": "A location (geographical area or point of interest) where the event takes place.",
-                "items": {
-                  "$ref": "#/$defs/contactinfoType"
-                }
-              },
-              "dates": {
-                "type": "object",
-                "description": "All dates pertaining to the event, in particular the start and end date and any recurrence information",
-                "additionalProperties": false,
-                "properties": {
-                    "startdate": {
-                      "description": "The date (and optionally time) at which the event starts.",
-                      "$ref": "#/$defs/truncatedDateTimeType"
-                    },
-                    "enddate": {
-                      "description": "The date (and optionally time) at which the event ends.",
-                      "$ref": "#/$defs/truncatedDateTimeType"
-                    },
-                    "duration": {
-                      "description": "The period the event will last.",
-                      "type": "string"
-                    },
-                    "recurrence": {
-                      "type": "object",
-                      "description": "Specifies recurrence information about the event",
-                      "properties": {
-                        "recurrence-dates": {
-                          "type": "array",
-                          "description": "Date(s) (and optionally times) on which the event occurs.",
-                          "$ref": "#/$defs/truncatedDateTimeType"
-                        },
-                        "recurrence-rules": {
-                          "type": "array",
-                          "description": "Date(s) (and optionally times) on which the event occurs.",
-                          "items": {
-                            "type": "object",
-                            "additionalProperties": false,
-                            "properties": {
-                              "frequency": {
-                                "title": "Frequency",
-                                "description": "The FREQ rule part identifies the type of recurrence rule.",
-                                "type": "string",
-                                "enum": [
-                                  "secondly",
-                                  "minutely",
-                                  "hourly",
-                                  "daily",
-                                  "weekly",
-                                  "monthly",
-                                  "yearly"
-                                ]
-                              },
-                              "interval": {
-                                "description": "The INTERVAL rule part contains a positive integer representing how often the recurrence rule repeats.",
-                                "type": "string"
-                              },
-                              "until": {
-                                "description": "The UNTIL rule part defines a date-time value which bounds the recurrence rule in an inclusive manner.",
-                                "type": "string"
-                              },
-                              "count": {
-                                "description": "The COUNT rule part defines the number of occurrences at which to range-bound the recurrence.",
-                                "type": "string"
-                              }
+              }
+            }
+          }
+        },
+        "eventdetails": {
+          "title": "Event Details",
+          "description": "A container for properties related to a planned event.",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "dates": {
+              "type": "object",
+              "description": "All dates pertaining to the event, in particular the start and end date and any recurrence information",
+              "additionalProperties": false,
+              "properties": {
+                  "startdate": {
+                    "description": "The date (and optionally time) at which the event starts.",
+                    "$ref": "#/$defs/truncatedDateTimeType"
+                  },
+                  "enddate": {
+                    "description": "The date (and optionally time) at which the event ends.",
+                    "$ref": "#/$defs/truncatedDateTimeType"
+                  },
+                  "duration": {
+                    "description": "The period the event will last.",
+                    "type": "string"
+                  },
+                  "recurrence": {
+                    "type": "object",
+                    "description": "Specifies recurrence information about the event",
+                    "properties": {
+                      "recurrence-dates": {
+                        "type": "array",
+                        "description": "Date(s) (and optionally times) on which the event occurs.",
+                        "$ref": "#/$defs/truncatedDateTimeType"
+                      },
+                      "recurrence-rules": {
+                        "type": "array",
+                        "description": "Date(s) (and optionally times) on which the event occurs.",
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "properties": {
+                            "frequency": {
+                              "title": "Frequency",
+                              "description": "The FREQ rule part identifies the type of recurrence rule.",
+                              "type": "string",
+                              "enum": [
+                                "secondly",
+                                "minutely",
+                                "hourly",
+                                "daily",
+                                "weekly",
+                                "monthly",
+                                "yearly"
+                              ]
+                            },
+                            "interval": {
+                              "description": "The INTERVAL rule part contains a positive integer representing how often the recurrence rule repeats.",
+                              "type": "string"
+                            },
+                            "until": {
+                              "description": "The UNTIL rule part defines a date-time value which bounds the recurrence rule in an inclusive manner.",
+                              "type": "string"
+                            },
+                            "count": {
+                              "description": "The COUNT rule part defines the number of occurrences at which to range-bound the recurrence.",
+                              "type": "string"
                             }
                           }
                         }
                       }
                     }
                   }
+                }
               },
-              "organiser": {
-                "type": "object",
-                "description": "A person or organisation organising the event.",
-                "$ref": "#/$defs/organisationType"
-              }
+             "organiser": {
+              "type": "object",
+              "description": "A person or organisation organising the event.",
+              "$ref": "#/$defs/organisationType"
             }
           }
         },
@@ -731,7 +732,7 @@
         },
         "infosources": {
           "title": "Info sources",
-          "description": "An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. (Added in version 1.2 according to issue #15.) .    infosource:  nar:infoSource",
+          "description": "An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. (Added in version 1.2.). nar:infoSource",
           "type": "array",
           "items": {
             "type": "object",
@@ -769,7 +770,7 @@
         },
         "title": {
           "title": "Title",
-          "description": "A short natural-language name for the item. Title is metadata, use headlines for publishable headlines. (Added in version 1.2 according to issue #9). nar:itemMeta/title",
+          "description": "A short natural-language name for the item. Title is metadata, use headlines for publishable headlines. (Added in version 1.2.) nar:itemMeta/title",
           "type": "string"
         },
         "by": {
@@ -779,7 +780,7 @@
         },
         "slugline": {
           "title": "Slugline",
-          "description": "A human-readable identifier for the item. (Added in version 1.2 from issue #4.). nar:slugline",
+          "description": "A human-readable identifier for the item. (Added in version 1.2.). nar:slugline",
           "type": "string"
         },
         "located": {
@@ -792,7 +793,7 @@
           "description": "An array of objects with different renditions of the news object. nar:remoteContent",
           "type": "array",
           "items": {
-            "description": "A specific rendition of the content of the news object. (Description changed in version 1.2 according to issue #17.)",
+            "description": "A specific rendition of the content of the news object. (Description changed in version 1.2.)",
             "type": "object",
             "additionalProperties": false,
             "required": [
@@ -872,7 +873,7 @@
         },
         "altids": {
           "title": "Alternative ids",
-          "description": "Alternative identifiers assigned to the content. Each alternative id can have a role and a value. nar:altId issue #3.",
+          "description": "Alternative identifiers assigned to the content. Each alternative id can have a role and a value. nar:altId",
           "type": "array",
           "items": {
             "type": "object",
@@ -893,7 +894,7 @@
         },
         "trustindicators": {
           "title": "Trust indicators",
-          "description": "An array of objects to allow links to documents about trust indicators. issue #44. (Added in version 1.3)",
+          "description": "An array of objects to allow links to documents about trust indicators. (Added in version 1.3)",
           "type": "array",
           "items": {
             "type": "object",
@@ -922,7 +923,7 @@
         "standard": {
           "title": "Standard",
           "type": "object",
-          "description": "An object with information about standard, version and schema this instance is valid against. nar:standard, nar:standardversion and xml:schema issue #43. (Added in version 1.3)",
+          "description": "An object with information about standard, version and schema this instance is valid against. (Added in version 1.3.) ",
           "additionalProperties": false,
           "properties": {
             "name": {
@@ -1019,5 +1020,12 @@
   "required": [
     "uri"
   ],
+  "if": {
+    "properties": { "type": { "const": "event" } },
+    "required": [ "eventdetails" ]
+  },
+  "then": {
+    "required": [ "eventdetails" ]
+  },
   "unevaluatedProperties": false
 }
