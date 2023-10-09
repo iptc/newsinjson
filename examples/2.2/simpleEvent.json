@@ -31,16 +31,28 @@
       "enddate": "2011-03-17"
     }
   },
-  "places": [{
-    "name": "Twickenham Stadium",
-    "contactinfo": [{
-      "address": {
-        "locality": "London",
-        "country": "United Kingdom"
-      }
-    }]
-  }],
-  "organisations": [{
-    "name": "United Kingdom Anti-Doping"
-  }]
+  "places": [
+    {
+      "name": "Twickenham Stadium",
+      "contactinfo": [
+        {
+          "address": {
+            "locality": "London",
+            "country": "United Kingdom"
+          }
+        },
+        {
+          "type": "url",
+          "value": "http://www.cecileparkconferences.com/tackling-doping-sport-2012"
+        }
+      ]
+    }
+  ],
+  "organisations": [
+    {
+      "name": "United Kingdom Anti-Doping",
+      "literal": "UKAD",
+      "uri": "https://www.ukad.org.uk"
+    }
+  ]
 }
