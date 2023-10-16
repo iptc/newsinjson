@@ -1,0 +1,47 @@
+{
+    "title": "Athlete is tested Out-of-Competition",
+    "descriptions": [
+            {
+                "role": "text",
+                "contenttype": "text/plain",
+                "value": "The World Anti-Doping Agency (WADA) invited media to a pre-Olympic and Paralympic Winter Games 2022 media conference in Beijing, as detailed below, to apprise the media of the Agency’s activities surrounding the Games.\n\nWADA’s President, Witold Bańka; Vice-President, Yang Yang; Director General, Olivier Niggli; and, Chair of WADA’s Independent Observer Team for the Olympic Games, Hitesh Patel, will be on hand to answer media questions."
+            }
+    ],
+    "eventdetails": {
+        "dates": {
+            "startdate": "20220202T10:00:00+08:00"
+        },
+        "organiser": {"name": "World Anti-Doping Agency"}
+    },
+    "places": [
+        {
+            "name": "Beijing 2022 Main Media Centre",
+            "contactinfo": [
+                {
+                    "address": {
+                        "area": 'Main Press Conference Room, Main Media Centre (MMC), China National Convention Centre, Olympic Green',
+                        "locality": "Beijing",
+                        "lines": [
+                            "No.8-1 Beichen West Road",
+                            "Chaoyang District"
+                        ]
+                        ,
+                        "country": "China",
+                        "postalcode": "100105"
+                    }
+                },
+                {
+                    "type": "url",
+                    "value": "https://www.wada-ama.org/en/news/wada-hold-media-conference-lead-beijing-2022-olympic-and-paralympic-games"
+                }
+            ]
+        }
+    ],
+    "organisations": [
+        {
+            "name": "World Anti-Doping Agency",
+            "literal": "WADA",
+            "uri": "https://www.wada-ama.org"
+        }
+    ]
+}
