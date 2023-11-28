@@ -615,6 +615,10 @@
                     "description": "The local identifier of the element which MUST be persistent for all versions of the item, i.e. for its entire lifecycle.",
                     "type": "string"
                 },
+                "title": {
+                    "description": "A human-readable title for the planned event coverage",
+                    "type": "string"
+                },
                 "type": {
                     "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
                     "type": "string"
@@ -1022,7 +1026,7 @@
   ],
   "if": {
     "properties": { "type": { "const": "event" } },
-    "required": [ "eventdetails" ]
+    "required": ["type"]
   },
   "then": {
     "required": [ "eventdetails" ]
