@@ -143,6 +143,64 @@
         }
       }
     },
+    "renditionType": {
+      "items": {
+        "description": "A specific rendition of the content of the news object. (Description changed in version 1.2.)",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "title": "Name",
+            "description": "The name of this object in the array of renditions. For example 'thumbnail'",
+            "type": "string"
+          },
+          "href": {
+            "title": "href",
+            "description": "The URL for accessing the rendition as a resource. nar:remoteContent@ref",
+            "type": "string",
+            "format": "uri"
+          },
+          "contenttype": {
+            "title": "Content Type",
+            "description": "A media type which applies to this rendition. nar:remoteContent@contenttype",
+            "type": "string"
+          },
+          "title": {
+            "title": "Title",
+            "description": "A title for the link to the rendition resource",
+            "type": "string"
+          },
+          "height": {
+            "title": "Height",
+            "description": "For still and moving images: the height of the display area measured in pixels. nar:remoteContent@height",
+            "type": "number"
+          },
+          "width": {
+            "title": "Width",
+            "description": "For still and moving images: the width of the display area measured in pixels. nar:remoteContent@width",
+            "type": "number"
+          },
+          "sizeinbytes": {
+            "title": "Size in bytes",
+            "description": "The size of the rendition resource in bytes",
+            "type": "number"
+          },
+          "duration": {
+            "title": "Duration",
+            "description": "The total time duration of the content in seconds. (Added in version 1.2. Issue #18). nar:remoteContent@duration",
+            "type": "number"
+          },
+          "format": {
+            "title": "Format",
+            "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format",
+            "type": "string"
+          }
+        }
+      }
+    },
     "ninjsType": {
       "description": "The root schema of ninjs as a type to make it possible to combine schema parts.",
       "type": "object",
@@ -698,6 +756,14 @@
                 "wordcount": {
                     "description": "",
                     "type": "integer"
+                },
+                "renditions": {
+                    "title": "Renditions",
+                    "description": "An array of objects showing the planned renditions of the news object. nar:remoteContent",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/$defs/renditionType"
+                    }
                 }
             }
           }
@@ -797,60 +863,7 @@
           "description": "An array of objects with different renditions of the news object. nar:remoteContent",
           "type": "array",
           "items": {
-            "description": "A specific rendition of the content of the news object. (Description changed in version 1.2.)",
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "name"
-            ],
-            "properties": {
-              "name": {
-                "title": "Name",
-                "description": "The name of this object in the array of renditions. For example 'thumbnail'",
-                "type": "string"
-              },
-              "href": {
-                "title": "href",
-                "description": "The URL for accessing the rendition as a resource. nar:remoteContent@ref",
-                "type": "string",
-                "format": "uri"
-              },
-              "contenttype": {
-                "title": "Content Type",
-                "description": "A media type which applies to this rendition. nar:remoteContent@contenttype",
-                "type": "string"
-              },
-              "title": {
-                "title": "Title",
-                "description": "A title for the link to the rendition resource",
-                "type": "string"
-              },
-              "height": {
-                "title": "Height",
-                "description": "For still and moving images: the height of the display area measured in pixels. nar:remoteContent@height",
-                "type": "number"
-              },
-              "width": {
-                "title": "Width",
-                "description": "For still and moving images: the width of the display area measured in pixels. nar:remoteContent@width",
-                "type": "number"
-              },
-              "sizeinbytes": {
-                "title": "Size in bytes",
-                "description": "The size of the rendition resource in bytes",
-                "type": "number"
-              },
-              "duration": {
-                "title": "Duration",
-                "description": "The total time duration of the content in seconds. (Added in version 1.2. Issue #18). nar:remoteContent@duration",
-                "type": "number"
-              },
-              "format": {
-                "title": "Format",
-                "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format",
-                "type": "string"
-              }
-            }
+            "$ref": "#/$defs/renditionType"
           }
         },
         "associations": {
