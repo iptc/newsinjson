@@ -9,7 +9,7 @@
     "plannedcoverage": [
         {
             "uri": "planning-times-square-001-text",
-            "headline": "",
+            "title": "Text article covering the ball drop",
             "type": "text",
             "event": "urn:004-ninjs2.2-recurring-event-test",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },

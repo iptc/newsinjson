@@ -1,0 +1,74 @@
+{
+    "$schema": "file:/Users/trond/Projects/iptc/newsinjson/specification/ninjs-schema_2.2.json",
+    "title": "World Anti",
+    "descriptions": [
+            {
+                "role": "text",
+                "contenttype": "text/plain",
+                "value": "The World Anti-Doping Agency (WADA) invited media to a pre-Olympic and Paralympic Winter Games 2022 media conference in Beijing, as detailed below, to apprise the media of the Agency’s activities surrounding the Games.\n\nWADA’s President, Witold Bańka; Vice-President, Yang Yang; Director General, Olivier Niggli; and, Chair of WADA’s Independent Observer Team for the Olympic Games, Hitesh Patel, will be on hand to answer media questions."
+            }
+    ],
+    "eventdetails": {
+        "dates": {
+            "startdate": "20220202T10:00:00+08:00"
+        },
+        "organiser": {"name": "World Anti-Doping Agency"}
+    },
+    "places": [
+        {
+            "name": "Beijing 2022 Main Media Centre",
+            "contactinfo": [
+                {
+                    "address": {
+                        "area": 'Main Press Conference Room, Main Media Centre (MMC), China National Convention Centre, Olympic Green',
+                        "locality": "Beijing",
+                        "lines": [
+                            "No.8-1 Beichen West Road",
+                            "Chaoyang District"
+                        ]
+                        ,
+                        "country": "China",
+                        "postalcode": "100105"
+                    }
+                },
+                {
+                    "type": "url",
+                    "value": "https://www.wada-ama.org/en/news/wada-hold-media-conference-lead-beijing-2022-olympic-and-paralympic-games"
+                }
+            ]
+        }
+    ],
+    "bodies": [
+    {
+      "role": "nitf",
+      "contenttype": "text/vnd.IPTC.NITF",
+      "value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<nitf version=\"-//IPTC//DTD NITF 3.6//EN\">\n    <head>\n        <title>Anti-doping measures at the 'Tour Down Under' will be the toughest ever</title>\n        <tobject tobject.type=\"news\">\n            <tobject.subject tobject.subject.refnum=\"20000822\" tobject.subject.type=\"Sport\"/>\n            <tobject.subject tobject.subject.refnum=\"20000892\" tobject.subject.matter=\"Cycling\"/>\n            <tobject.subject tobject.subject.refnum=\"20001104\" tobject.subject.type=\"drug use in sport\"/>\n            <tobject.subject tobject.subject.refnum=\"20001105\" tobject.subject.matter=\"drug abuse in sport\"/>\n        </tobject>\n        <docdata>\n            <du-key version=\"1\" key=\"anti-doping-measures-at-the-tour-down-under-will-be-the-toughest-ever\" />\n            <doc-id regsrc=\"DW\" id-string=\"anti-doping-measures-at-the-tour-down-under-will-be-the-toughest-ever\"/>\n            <date.issue norm=\"20080219+0100\"/>\n            <doc.copyright holder=\"The Anti-Doping Database\" year=\"20080219T000000+0100\"/>\n            <evloc city=\"Oslo\" iso-cc=\"NOR\" />\n            <urgency ed-urg=\"5\"/>\n        </docdata>\n    </head>\n    <body>\n        <body.head>\n            <hedline>\n                <hl1 id=\"headline\">Anti-doping measures at the 'Tour Down Under' will be the toughest ever</hl1>\n            </hedline>\n            <byline>By DopingWatch</byline>\n            <distributor>DopingWatch</distributor>\n        </body.head>\n        <body.content>\n            <block id=\"lead\">\n                <p class=\"lead\" lede=\"true\">The Australian Sports Anti-Doping Authority (ASADA) today announced a range of anti-doping initiatives to protect the integrity of the 2008 \u2018Tour Down Under\u2019 to be held in South Australia from January 22-27.</p>\n            </block>\n            <block class=\"content\">\n                <p class=\"text\">The initiatives are being implemented in close partnership with the International Cycling Union (UCI) and Events South Australia. The 2008 \u2018Tour Down Under\u2019 is the first stop on the UCI sanctioned world professional cycling calendar and the first time that a UCI sanctioned ProTour event has been held in Australia.</p>\n<p class=\"text\">The anti-doping initiatives announced by ASADA and the UCI include steps never before seen at a cycling event in Australia, including:</p>\n<p class=\"text\">Launch of the UCI\u2019s Biological Passport Program which will involve mandatory blood profiling of every cyclist before the event;</p>\n<p class=\"text\">comprehensive and targeted urine testing before and during the event;</p>\n<p class=\"text\">placing selected samples in \u2018The Tank\u2019 (ASADA\u2019s deep freeze storage facility designed to close the net on use of undetectable prohibited substances by freezing samples for future retesting with new technology);</p>\n<p class=\"text\">sharing intelligence with the Australian Customs Service to enhance the interception at the border of any prohibited substances destined for the \u2018Tour Down Under\u2019 and investigation of those involved.</p>\n<p class=\"text\">ASADA Chairman Richard Ings said ASADA was implementing every measure at its disposal to deter doping at this prestigious international cycling event.</p>\n<p class=\"text\">\u201cClean cyclists coming to the \u2018Tour Down Under\u2019 can rest assured this will be an event where those contemplating doping will face greater scrutiny than ever before,\u201d Mr Ings said.</p>\n<p class=\"text\">\u201cThrough a combination of blood and urine testing, long term storage of selected samples and existing partnerships with border control and law enforcement agencies, any professional cyclist attempting to dope at this event will face severe consequences.\u201d</p>\n<p class=\"text\">UCI President Pat McQuaid said he was pleased to see the UCI, ASADA and the event organisers working so closely and indicated that this was a model for future cooperation between international sport and government.</p>\n<p class=\"text\">\u201cThese initiatives to protect the \u2018Tour Down Under\u2019 from doping are a demonstration of what can be achieved when international sport and governments work cooperatively together,\u201d Mr McQuaid said.</p>\n<p class=\"text\">\u201cUCI is absolutely committed to eliminating doping from our sport and we are pleased to partner with such a determined anti-doping body as ASADA to protect the integrity of cycling in Australia.\u201d</p>\n<p class=\"text\">ASADA is Australia\u2019s peak anti-doping authority with wide ranging powers established under legislation to deter, detect and present cases at tribunals against athletes and their support personnel found in breach of Australia\u2019s anti-doping rules. ASADA\u2019s vision is to be Australia\u2019s driving force for pure performance in sport; ASADA\u2019s mission is to protect Australia\u2019s sporting integrity through the elimination of doping. Anyone with information about an athlete or their support personnel involved in doping should call the Stamp Out Doping hotline on 1800 645 700.</p>\n<p class=\"text\">Media organisations can contact ASADA's Media Manager for more information on:</p>\n<p class=\"text\">Work:   +61 (0)2 6206 0208</p>\n<p class=\"text\">Mobile: +61 (0)418 450 113</p>\n<p class=\"text\">Email:   media@asada.gov.au</p>\n            </block>\n        </body.content>\n    </body>\n</nitf>\n"
+    },
+    {
+      "role": "text",
+      "contenttype": "text/plain",
+      "value": "The initiatives are being implemented in close partnership with the International Cycling Union (UCI) and Events South Australia. The 2008 \u2018Tour Down Under\u2019 is the first stop on the UCI sanctioned world professional cycling calendar and the first time that a UCI sanctioned ProTour event has been held in Australia.\r\n\r\nThe anti-doping initiatives announced by ASADA and the UCI include steps never before seen at a cycling event in Australia, including:\r\n\r\n    Launch of the UCI\u2019s Biological Passport Program which will involve mandatory blood profiling of every cyclist before the event;\r\n    comprehensive and targeted urine testing before and during the event;\r\n    placing selected samples in \u2018The Tank\u2019 (ASADA\u2019s deep freeze storage facility designed to close the net on use of undetectable prohibited substances by freezing samples for future retesting with new technology);\r\n    sharing intelligence with the Australian Customs Service to enhance the interception at the border of any prohibited substances destined for the \u2018Tour Down Under\u2019 and investigation of those involved.\r\n\r\nASADA Chairman Richard Ings said ASADA was implementing every measure at its disposal to deter doping at this prestigious international cycling event.\r\n\r\n\u201cClean cyclists coming to the \u2018Tour Down Under\u2019 can rest assured this will be an event where those contemplating doping will face greater scrutiny than ever before,\u201d Mr Ings said.\r\n\r\n\u201cThrough a combination of blood and urine testing, long term storage of selected samples and existing partnerships with border control and law enforcement agencies, any professional cyclist attempting to dope at this event will face severe consequences.\u201d\r\n\r\nUCI President Pat McQuaid said he was pleased to see the UCI, ASADA and the event organisers working so closely and indicated that this was a model for future cooperation between international sport and government.\r\n\r\n\u201cThese initiatives to protect the \u2018Tour Down Under\u2019 from doping are a demonstration of what can be achieved when international sport and governments work cooperatively together,\u201d Mr McQuaid said.\r\n\r\n\u201cUCI is absolutely committed to eliminating doping from our sport and we are pleased to partner with such a determined anti-doping body as ASADA to protect the integrity of cycling in Australia.\u201d\r\n\r\nASADA is Australia\u2019s peak anti-doping authority with wide ranging powers established under legislation to deter, detect and present cases at tribunals against athletes and their support personnel found in breach of Australia\u2019s anti-doping rules. ASADA\u2019s vision is to be Australia\u2019s driving force for pure performance in sport; ASADA\u2019s mission is to protect Australia\u2019s sporting integrity through the elimination of doping. Anyone with information about an athlete or their support personnel involved in doping should call the Stamp Out Doping hotline on 1800 645 700.\r\n\r\nMedia organisations can contact ASADA's Media Manager for more information on:\r\n\r\n    Work:   +61 (0)2 6206 0208\r\n    Mobile: +61 (0)418 450 113\r\n    Email:   media@asada.gov.au"
+    }
+  ],
+    "people": [
+        {
+            "name": "WADA’s President, Witold Bańka"
+        },
+        {
+            "name": "Vice-President, Yang Yang"
+        },
+        {
+            "name": "Director General, Olivier Niggli"
+        },
+        {
+            "name": "Chair of WADA’s Independent Observer Team for the Olympic Games, Hitesh Patel"
+        }
+    ],
+    "organisations": [
+        {
+            "name": "World Anti-Doping Agency",
+            "literal": "WADA",
+            "uri": "https://www.wada-ama.org"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+  "standard": {
+    "name": "ninjs",
+    "version": "2.2",
+    "schema": "https://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+  },
+  "uri": "urn:newsml:addb.no:20110316:0002-ninjs2.2-addb--event-test",
+  "type": "event",
+  "genres": [
+    {
+      "literal": "CON",
+      "name": "Confernence"
+    }
+  ],
+  "title": "Tackling Doping in Sport Conference",
+  "version": "2",
+  "versioncreated": "2023-10-04T08:16:21+02:00",
+  "pubstatus": "usable",
+  "urgency": 4,
+  "copyrightholder": "addb",
+  "copyrightnotice": "Copyright 2023, The Anti-Doping Database (www.addb.no).",
+  "language": "en",
+  "descriptions": [{
+    "role": "text",
+    "contenttype": "text/plain",
+    "value": "The two-day Tackling Doping in Sport Conference took place at Twickenham Stadium on Wednesday 16 and Thursday 17 March 2011, bringing together the world\u2019s leading experts in the field of anti-doping."
+  }],
+  "eventdetails": {
+    "dates": {
+      "startdate": "2011-03-16",
+      "enddate": "2011-03-17"
+    }
+  },
+  "places": [
+    {
+      "name": "Twickenham Stadium",
+      "contactinfo": [
+        {
+          "address": {
+            "locality": "London",
+            "country": "United Kingdom"
+          }
+        },
+        {
+          "type": "url",
+          "value": "http://www.cecileparkconferences.com/tackling-doping-sport-2012"
+        }
+      ]
+    }
+  ],
+  "organisations": [
+    {
+      "name": "United Kingdom Anti-Doping",
+      "literal": "UKAD",
+      "uri": "https://www.ukad.org.uk"
+    }
+  ]
+}

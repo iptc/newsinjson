@@ -1,0 +1,76 @@
+{
+  "uri": "http://tt.se/media/event/00ccd8e3-21a3-4386-b384-d3ba57122372",
+  "pubstatus": "usable",
+  "type": "event",
+  "copyrightholder": "TT",
+  "mimetype": "text/html",
+  "representationtype": "complete",
+  "profile": "DATA",
+  "version": "3",
+  "firstcreated": "2023-10-05T14:10:33+02:00",
+  "versioncreated": "2023-10-05T14:27:32+02:00",
+  "week": 40,
+  "language": "sv",
+  "urgency": 1,
+  "date": "2023-10-05",
+  "enddate": "2023-10-05",
+  "headline": "Pk med finansminister Elisabeth Svantesson kl 16",
+  "description_text": "Finansminister Elisabeth Svantesson kommentera oppositionens budgetmotioner, riksdagens presscenter, Stockholm.",
+  "body_text": "Finansminister Elisabeth Svantesson kommentera oppositionens budgetmotioner, riksdagens presscenter, Stockholm.\n\n",
+  "slugline": "",
+  "altids": {"originaltransmissionreference": "00ccd8e3-21a3-4386-b384-d3ba57122372"},
+  "subject": [
+    {
+      "code": "11000000",
+      "name": "Politik",
+      "scheme": "http://tt.se/spec/subref/1.0/",
+      "rel": "classifies"
+    },
+    {
+      "code": "04000000",
+      "name": "Ekonomi, affärer och finans",
+      "scheme": "http://tt.se/spec/subref/1.0/",
+      "rel": "classifies"
+    }
+  ],
+  "person": [
+    {
+      "name": "Elisabeth Svantesson",
+      "code": "02c70302-960d-448e-a81f-008d7ae809a2",
+      "scheme": "http://tt.se/spec/person/1.0/"
+    }
+  ],
+  "organisation": [
+    {
+      "name": "Sveriges riksdag",
+      "code": "a58ed481-b7f3-469d-85ef-8033fbaebbf2",
+      "scheme": "http://tt.se/spec/organisation/1.0/"
+    }
+  ],
+  "event": [
+    {
+      "scheme": "http://tt.se/spec/event/text/1.0/",
+      "name": "Week of planned activity",
+      "code": "40",
+      "rel": "Week"
+    }
+  ],
+  "body_html5": "<html><body><article><section><h1>Pk med finansminister Elisabeth Svantesson kl 16</h1><div class=\"dat\"><span class=\"vignette\">Torsdag 5 Oktober 2023, klockan 16:00</span><span class=\"source\">TT</span></div><div class=\"bodytext\"><p>Finansminister Elisabeth Svantesson kommentera oppositionens budgetmotioner, riksdagens presscenter, Stockholm.</p><p/><p/></div></section></article></body></html>",
+  "$standard": {
+    "name": "TTNINJS",
+    "version": "1.3",
+    "schema": "https://tt.se/spec/ttninjs/ttninjs-schema_1.3.json"
+  },
+  "genre": [
+    {
+      "name": "Ekonomi",
+      "code": "EKO",
+      "scheme": "http://tt.se/spec/sector/1.0/"
+    }
+  ],
+  "body_event": {
+    "eventstatus": "1",
+    "eventstatus_text": "Planerat",
+    "accreditation": "Kontakt: Niklas Gillström, pressekreterare, 076-141 14 79."
+  }
+}

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json#",
+  "$id": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json#",
   "type": "object",
-  "title": "IPTC ninjs - News in JSON - version 2.1 (approved at IPTC Standards Committee May 2023)",
+  "title": "IPTC ninjs - News in JSON - version 2.2 (work in progress)",
   "description": "A news item as JSON object -- copyright 2023 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
   "$defs": {
     "contactinfoType": {
@@ -615,6 +615,10 @@
                     "description": "The local identifier of the element which MUST be persistent for all versions of the item, i.e. for its entire lifecycle.",
                     "type": "string"
                 },
+                "title": {
+                    "description": "A human-readable title for the planned event coverage",
+                    "type": "string"
+                },
                 "type": {
                     "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
                     "type": "string"
@@ -1022,7 +1026,7 @@
   ],
   "if": {
     "properties": { "type": { "const": "event" } },
-    "required": [ "eventdetails" ]
+    "required": ["type"]
   },
   "then": {
     "required": [ "eventdetails" ]
