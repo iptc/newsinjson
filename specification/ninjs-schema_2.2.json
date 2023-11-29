@@ -294,7 +294,7 @@
           },
           "format": {
             "title": "Format",
-            "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format (Same as TT variant: One of 'Normal', 'Watermark', 'BlackAndWhite', 'Cropped' or 'Framegrab'?)",
+            "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format (Same as TT variant: One of 'Normal', 'Watermark', 'BlackAndWhite', 'Cropped' or 'Framegrab'?) (https://cv.iptc.org/newscodes/format/)",
             "type": "string"
           },
           "originalfilename": {
@@ -334,17 +334,17 @@
           },
           "colourspace": {
             "title": "Colour space",
-            "description": "The colour space of video or pictures (for example; Colour or Black and White), if available.  (https://cv.iptc.org/newscodes/colourindicator/)",
+            "description": "The colour space of video or pictures (for example; Colour or Black and White), if available.   (https://cv.iptc.org/newscodes/colorspace/) (https://cv.iptc.org/newscodes/colourindicator/)",
             "type": "string"
           },
           "backgroundcolour": {
             "title": "Background colour",
-            "description": "Image background color; typically used for graphics. (Suggested by AP.) (Same as Reuters colourindicator:Color indicator of rendition?)",
+            "description": "Image background color; typically used for graphics. (Suggested by AP.) (Same as Reuters colourindicator:Color indicator of rendition?)  (https://cv.iptc.org/newscodes/colourindicator/)",
             "type": "string"
           },
           "orientation": {
             "title": "Orientation",
-            "description": "The image orientation, which indicates whether the human interpretation of the top of the image is aligned to its short side (vertical) or long side (horizontal).  PA: landscape, portrait, square.  (Suggested by AP.) (Same as Reuters layoutorientation:Layout orientation of rendition?)",
+            "description": "The image orientation, which indicates whether the human interpretation of the top of the image is aligned to its short side (vertical) or long side (horizontal).  PA: landscape, portrait, square.  (Suggested by AP.) (Same as Reuters layoutorientation:Layout orientation of rendition?)  (https://cv.iptc.org/newscodes/layoutorientation/)",
             "type": "string"
           },
           "videocodec": {
@@ -367,9 +367,14 @@
             "description": "The recording or image resolution of the content (if available):",
             "type": "string"
           },
+          "audiocodec": {
+            "title": "Audio codec",
+            "description": "https://cv.iptc.org/newscodes/audiocodec/",
+            "type": "string"
+          },
           "scene": {
             "title": "Scene",
-            "description": "Description of recording scene; used only for images. (Suggested by AP.)",
+            "description": "Description of recording scene; used only for images. (Suggested by AP.) (https://cv.iptc.org/newscodes/scene/ ??)",
             "type": "string"
           },
           "printsize": {
