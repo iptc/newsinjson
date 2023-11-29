@@ -221,7 +221,7 @@
         "properties": {
           "name": {
             "title": "Name",
-            "description": "The name of this object in the array of renditions. For example 'thumbnail' (Same as AP rel:The content item rendition; for example, Main, Preview, Thumbnail and Caption for images; and Main, Preview, Thumbnail, Caption, Script and/or Shotlist for video?) (Same as TT usage:One of \'Thumbnail\', \'Preview\', \'Hires\' or \'Hidef\'?) (https://cv.iptc.org/newscodes/rendition/)",
+            "description": "The name of this object in the array of renditions. For example 'thumbnail' (Same as AP rel:The content item rendition; for example, Main, Preview, Thumbnail and Caption for images; and Main, Preview, Thumbnail, Caption, Script and/or Shotlist for video?) (Same as TT usage:One of 'Thumbnail', 'Preview', 'Hires' or 'Hidef'?) (https://cv.iptc.org/newscodes/rendition/)",
             "type": "string"
           },
           "uri": {
@@ -294,7 +294,7 @@
           },
           "format": {
             "title": "Format",
-            "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format (Same as TT variant:One of \'Normal\', \'Watermark\', \'BlackAndWhite\', \'Cropped\' or \'Framegrab\'?)",
+            "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format (Same as TT variant: One of 'Normal', 'Watermark', 'BlackAndWhite', 'Cropped' or 'Framegrab'?)",
             "type": "string"
           },
           "originalfilename": {
