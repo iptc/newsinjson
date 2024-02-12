@@ -6,71 +6,70 @@
   "description": "A news item as JSON object -- copyright 2023 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
   "$defs": {
     "datesobjectType": {
-              "type": "object",
-              "description": "All dates pertaining to an event, a planning or a coverage, in particular the start and end date and any recurrence information",
-              "additionalProperties": false,
-              "properties": {
-                  "startdate": {
-                    "description": "The date (and optionally time) at which the event starts.",
-                    "$ref": "#/$defs/truncatedDateTimeType"
+      "type": "object",
+      "description": "All dates pertaining to an event, a planning or a coverage, in particular the start and end date and any recurrence information",
+      "additionalProperties": false,
+      "properties": {
+        "startdate": {
+          "description": "The date (and optionally time) at which the event starts.",
+          "$ref": "#/$defs/truncatedDateTimeType"
+        },
+        "enddate": {
+          "description": "The date (and optionally time) at which the event ends.",
+          "$ref": "#/$defs/truncatedDateTimeType"
+        },
+        "duration": {
+          "description": "The period the event will last. REMOVE?? We already have start and end date, plus duration in rendition array",
+          "type": "string"
+        },
+        "recurrence": {
+          "type": "object",
+          "description": "Specifies recurrence information about the event",
+          "properties": {
+            "recurrence-dates": {
+              "type": "array",
+              "description": "Date(s) (and optionally times) on which the event occurs.",
+              "$ref": "#/$defs/truncatedDateTimeType"
+            },
+            "recurrence-rules": {
+              "type": "array",
+              "description": "Date(s) (and optionally times) on which the event occurs.",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "frequency": {
+                    "title": "Frequency",
+                    "description": "The FREQ rule part identifies the type of recurrence rule.",
+                    "type": "string",
+                    "enum": [
+                      "secondly",
+                      "minutely",
+                      "hourly",
+                      "daily",
+                      "weekly",
+                      "monthly",
+                      "yearly"
+                    ]
                   },
-                  "enddate": {
-                    "description": "The date (and optionally time) at which the event ends.",
-                    "$ref": "#/$defs/truncatedDateTimeType"
-                  },
-                  "duration": {
-                    "description": "The period the event will last. REMOVE?? We already have start and end date, plus duration in rendition array",
+                  "interval": {
+                    "description": "The INTERVAL rule part contains a positive integer representing how often the recurrence rule repeats.",
                     "type": "string"
                   },
-                  "recurrence": {
-                    "type": "object",
-                    "description": "Specifies recurrence information about the event",
-                    "properties": {
-                      "recurrence-dates": {
-                        "type": "array",
-                        "description": "Date(s) (and optionally times) on which the event occurs.",
-                        "$ref": "#/$defs/truncatedDateTimeType"
-                      },
-                      "recurrence-rules": {
-                        "type": "array",
-                        "description": "Date(s) (and optionally times) on which the event occurs.",
-                        "items": {
-                          "type": "object",
-                          "additionalProperties": false,
-                          "properties": {
-                            "frequency": {
-                              "title": "Frequency",
-                              "description": "The FREQ rule part identifies the type of recurrence rule.",
-                              "type": "string",
-                              "enum": [
-                                "secondly",
-                                "minutely",
-                                "hourly",
-                                "daily",
-                                "weekly",
-                                "monthly",
-                                "yearly"
-                              ]
-                            },
-                            "interval": {
-                              "description": "The INTERVAL rule part contains a positive integer representing how often the recurrence rule repeats.",
-                              "type": "string"
-                            },
-                            "until": {
-                              "description": "The UNTIL rule part defines a date-time value which bounds the recurrence rule in an inclusive manner.",
-                              "type": "string"
-                            },
-                            "count": {
-                              "description": "The COUNT rule part defines the number of occurrences at which to range-bound the recurrence.",
-                              "type": "string"
-                            }
-                          }
-                        }
-                      }
-                    }
+                  "until": {
+                    "description": "The UNTIL rule part defines a date-time value which bounds the recurrence rule in an inclusive manner.",
+                    "type": "string"
+                  },
+                  "count": {
+                    "description": "The COUNT rule part defines the number of occurrences at which to range-bound the recurrence.",
+                    "type": "string"
                   }
                 }
-      
+              }
+            }
+          }
+        }
+      }
     },
     "contactinfoType": {
       "additionalProperties": false,
@@ -145,38 +144,38 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
-          "by": {
-            "title": "By",
-            "description": "The person or party that commissioned the content.",
-            "type": "string"
-          },
-          "on": {
-            "title": "On",
-            "description": "The date at which the content was commissioned.",
-            "type": "string",
-            "format": "date-time"
-          },
-          "references": {
-            "title": "References",
-            "description": "Identifiers that help with the commissioning process such as purchase orders and work order numbers.",
-            "type": "array",
-            "items": {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "name": {
-                  "title": "Name",
-                  "description": "Name of the reference",
-                  "type": "string"
-                },
-                "value": {
-                  "title": "Value",
-                  "description": "Value of the reference",
-                  "type": "string"
-                }
+        "by": {
+          "title": "By",
+          "description": "The person or party that commissioned the content.",
+          "type": "string"
+        },
+        "on": {
+          "title": "On",
+          "description": "The date at which the content was commissioned.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "references": {
+          "title": "References",
+          "description": "Identifiers that help with the commissioning process such as purchase orders and work order numbers.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "title": "Name",
+                "description": "Name of the reference",
+                "type": "string"
+              },
+              "value": {
+                "title": "Value",
+                "description": "Value of the reference",
+                "type": "string"
               }
             }
           }
+        }
       }
     },
     "truncatedDateTimeType": {
@@ -346,13 +345,13 @@
           },
           "originalfilename": {
             "title": "Original filename",
-             "description": "The name of the original media file.  (Suggested by AP.)",
-             "type": "string"
+            "description": "The name of the original media file.  (Suggested by AP.)",
+            "type": "string"
           },
           "fileextension": {
             "title": "File extension",
-           "description": "The file extension of the content item. (Suggested by AP.)",
-           "type": "string"
+            "description": "The file extension of the content item. (Suggested by AP.)",
+            "type": "string"
           },
           "digest": {
             "title": "Digest, Checksum or Hash?",
@@ -451,7 +450,6 @@
               }
             }
           }
-          
         }
       }
     },
@@ -851,7 +849,7 @@
               "type": "object",
               "description": "Dates and times for this event.",
               "$ref": "#/$defs/datesobjectType"
-              },
+            },
             "organiser": {
               "type": "object",
               "description": "A person or organisation organising the event.",
@@ -867,122 +865,122 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
-                "uri": {
-                    "description": "The local identifier of the element which MUST be persistent for all versions of the item, i.e. for its entire lifecycle.",
-                    "type": "string"
-                },
-                "title": {
-                    "description": "A human-readable title for the planned event coverage",
-                    "type": "string"
-                },
-                "pubstatus": {
-                  "title": "Publication status",
-                  "description": "The publishing status of the news object, its value is *usable* by default. nar:pubStatus",
-                  "type": "string",
-                  "enum": [
-                    "usable",
-                    "withheld",
-                    "canceled"
-                  ]
-                },
-                "commissioned": {
+              "uri": {
+                "description": "The local identifier of the element which MUST be persistent for all versions of the item, i.e. for its entire lifecycle.",
+                "type": "string"
+              },
+              "title": {
+                "description": "A human-readable title for the planned event coverage",
+                "type": "string"
+              },
+              "pubstatus": {
+                "title": "Publication status",
+                "description": "The publishing status of the news object, its value is *usable* by default. nar:pubStatus",
+                "type": "string",
+                "enum": [
+                  "usable",
+                  "withheld",
+                  "canceled"
+                ]
+              },
+              "commissioned": {
+                "type": "object",
+                "description": "Information about the commissioning of this content.",
+                "$ref": "#/$defs/commissionedType"
+              },
+              "dates": {
+                "type": "object",
+                "description": "Dates and times for this event.",
+                "$ref": "#/$defs/datesobjectType"
+              },
+              "type": {
+                "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
+                "type": "string"
+              },
+              "event": {
+                "description": "",
+                "type": "string"
+              },
+              "audiences": {
+                "type": "array",
+                "items": {
                   "type": "object",
-                  "description": "Information about the commissioning of this content.",
-                  "$ref": "#/$defs/commissionedType"
-                },
-                "dates": {
-                  "type": "object",
-                  "description": "Dates and times for this event.",
-                  "$ref": "#/$defs/datesobjectType"
-                },
-                "type": {
-                    "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
-                    "type": "string"
-                },
-                "event": {
-                    "description": "",
-                    "type": "string"
-                },
-                "audiences": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                            "audience": {
-                                "description": "Intended audience(s) for the content.",
-                                "type": "string"
-                            },
-                            "significance": {
-                                "description": "A qualifier which indicates the expected significance of the content for this specific audience.",
-                                "type": "integer"
-                            }
-                        }
+                  "additionalProperties": false,
+                  "properties": {
+                    "audience": {
+                      "description": "Intended audience(s) for the content.",
+                      "type": "string"
+                    },
+                    "significance": {
+                      "description": "A qualifier which indicates the expected significance of the content for this specific audience.",
+                      "type": "integer"
                     }
-                },
-                "exclaudience": {
-                    "type": "array",
-                    "description": "Excluded audience(s) for the content. (Note G2 also has significance attribute for each audience, as number 1-9)",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "headline": {
-                    "description": "",
-                    "type": "string"
-                },
-                "ednote": {
-                    "description": "Additional natural language information about the planned coverage addressed to the editorial people receiving and processing the item.",
-                    "type": "string"
-                },
-                "urgency": {
-                    "description": "The editorial urgency of the content, as scoped by the parent element.",
-                    "type": "string"
-                },
-                "language": {
-                    "description": "",
-                    "type": "string"
-                },
-                "scheduled": {
-                    "description": "The scheduled time of delivery for the planned G2 item(s).",
-                    "type": "string"
-                },
-                "services": {
-                    "description": "An editorial service by which the planned G2 item(s) will be distributed. QUESTION remove for now until we have better requirements?",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "assignedto": {
-                    "description": "The party which is assigned to cover the event and produce the planned item. NOTE G2 object also has coversfrom and coversto attributes, which are also at the higher planning level",
-                    "type": "string"
-                },
-                "itemcount": {
-                    "description": "Number of planned G2 items of this kind expressed by a range.",
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
-                        "rangefrom": {
-                            "type": "integer"
-                        },
-                        "rangeto": {
-                            "type": "integer"
-                        }
-                    }
-                },
-                "wordcount": {
-                    "description": "",
-                    "type": "integer"
-                },
-                "renditions": {
-                    "title": "Renditions",
-                    "description": "An array of objects showing the planned renditions of the news object. nar:remoteContent",
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/$defs/renditionType"
-                    }
+                  }
                 }
+              },
+              "exclaudience": {
+                "type": "array",
+                "description": "Excluded audience(s) for the content. (Note G2 also has significance attribute for each audience, as number 1-9)",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "headline": {
+                "description": "",
+                "type": "string"
+              },
+              "ednote": {
+                "description": "Additional natural language information about the planned coverage addressed to the editorial people receiving and processing the item.",
+                "type": "string"
+              },
+              "urgency": {
+                "description": "The editorial urgency of the content, as scoped by the parent element.",
+                "type": "string"
+              },
+              "language": {
+                "description": "",
+                "type": "string"
+              },
+              "scheduled": {
+                "description": "The scheduled time of delivery for the planned G2 item(s).",
+                "type": "string"
+              },
+              "services": {
+                "description": "An editorial service by which the planned G2 item(s) will be distributed. QUESTION remove for now until we have better requirements?",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "assignedto": {
+                "description": "The party which is assigned to cover the event and produce the planned item. NOTE G2 object also has coversfrom and coversto attributes, which are also at the higher planning level",
+                "type": "string"
+              },
+              "itemcount": {
+                "description": "Number of planned G2 items of this kind expressed by a range.",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "rangefrom": {
+                    "type": "integer"
+                  },
+                  "rangeto": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "wordcount": {
+                "description": "",
+                "type": "integer"
+              },
+              "renditions": {
+                "title": "Renditions",
+                "description": "An array of objects showing the planned renditions of the news object. nar:remoteContent",
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/renditionType"
+                }
+              }
             }
           }
         },
@@ -1256,11 +1254,19 @@
     "uri"
   ],
   "if": {
-    "properties": { "type": { "const": "event" } },
-    "required": ["type"]
+    "properties": {
+      "type": {
+        "const": "event"
+      }
+    },
+    "required": [
+      "type"
+    ]
   },
   "then": {
-    "required": [ "eventdetails" ]
+    "required": [
+      "eventdetails"
+    ]
   },
   "unevaluatedProperties": false
 }
