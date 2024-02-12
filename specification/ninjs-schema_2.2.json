@@ -486,11 +486,6 @@
           "description": "The minimum latency of the flow (B2B stream).",
           "type": "number"
         },
-        "codec": {
-          "title": "Codec (video profile)",
-          "description": "The codec of the video .",
-          "type": "string"
-        },
         "scantype": {
           "title": "Scan type (video profile)",
           "description": "The scan type of the video e.g. progressive, interlaced.",
@@ -509,17 +504,6 @@
           "title": "Group of pictures (video profile)",
           "description": "The GOP value of the video.",
           "type": "number"
-        },
-        "colorspace": {
-          "title": "Color space (video profile)",
-          "description": "The color space of the video.",
-          "type": "string",
-          "enum": [
-            "REC_601",
-            "REC_709",
-            "HLG_2020",
-            "HDR10"
-          ]
         },
         "ratecontrolmode": {
           "title": "Rate control mode (video profile)",

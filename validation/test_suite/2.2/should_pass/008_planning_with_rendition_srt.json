@@ -51,13 +51,13 @@
           "cidr": "128.0.0.1/1",
           "port": 9000,
           "srtpassword": "encrypted-password",
-          "codec": "AVC",
+          "videocodec": "AVC",
           "framerate": 60,
           "width": 1920,
           "height": 1080,
           "scantype": "progressive",
           "bitrate": 1000000,
-          "colorspace": "HDR10",
+          "colourspace": "HDR10",
           "ratecontrolmode": "QVBR"
         },
         {
@@ -73,14 +73,14 @@
           "listeneraddress": "128.0.0.1",
           "srtpassword": "encrypted-different-password",
           "streamid": "AVC123FTW",
-          "codec": "AVC",
+          "videocodec": "AVC",
           "framerate": 60,
           "width": 1920,
           "height": 1080,
           "scantype": "progressive",
           "bitrate": 1000000,
           "gop": 10,
-          "colorspace": "REC_709",
+          "colourspace": "REC_709",
           "ratecontrolmode": "CBR"
         }
       ]
