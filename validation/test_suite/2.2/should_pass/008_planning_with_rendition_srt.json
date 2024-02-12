@@ -48,7 +48,7 @@
           "href": "srt://128.0.0.1:9000",
           "contenttype": "video/mp4",
           "maxbitrate": 1000000,
-          "cidr": "128.0.0.1/1",
+          "cidr": "128.0.0.1/8",
           "port": 9000,
           "srtpassword": "encrypted-password",
           "videocodec": "AVC",
