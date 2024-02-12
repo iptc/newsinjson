@@ -141,6 +141,44 @@
         }
       ]
     },
+    "commissionedType": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+          "by": {
+            "title": "By",
+            "description": "The person or party that commissioned the content.",
+            "type": "string"
+          },
+          "on": {
+            "title": "On",
+            "description": "The date at which the content was commissioned.",
+            "type": "string",
+            "format": "date-time"
+          },
+          "references": {
+            "title": "References",
+            "description": "Identifiers that help with the commissioning process such as purchase orders and work order numbers.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "title": "Name",
+                  "description": "Name of the reference",
+                  "type": "string"
+                },
+                "value": {
+                  "title": "Value",
+                  "description": "Value of the reference",
+                  "type": "string"
+                }
+              }
+            }
+          }
+      }
+    },
     "truncatedDateTimeType": {
       "description": "Allows any of year (xs:gYear, YYYY), year/month (xs:gYearMonth, YYYY-MM), year/month/day (xs:date YYYY-MM-DD), and full datetime (xs:dateTime, YYYY-MM-DDTHH:MM:SS+HH:MM), all with an optional timezone suffix. Note that this does NOT include ISO8601 month of year (xs:gMonth, --MM) or yearly day (xs:gMonthDay, --MM-DD) TODO: the actual regex!",
       "type": "string"
@@ -846,8 +884,12 @@
                     "withheld",
                     "canceled"
                   ]
-            },
- 
+                },
+                "commissioned": {
+                  "type": "object",
+                  "description": "Information about the commissioning of this content.",
+                  "$ref": "#/$defs/commissionedType"
+                },
                 "dates": {
                   "type": "object",
                   "description": "Dates and times for this event.",
