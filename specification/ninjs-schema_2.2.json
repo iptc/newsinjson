@@ -19,7 +19,7 @@
                     "$ref": "#/$defs/truncatedDateTimeType"
                   },
                   "duration": {
-                    "description": "The period the event will last.",
+                    "description": "The period the event will last. REMOVE?? We already have start and end date, plus duration in rendition array",
                     "type": "string"
                   },
                   "recurrence": {
@@ -246,6 +246,15 @@
             "type": "string",
             "format": "uri"
           },
+          "transportprotocol": {
+            "title": "Transport protocol",
+            "description": "The transport/flow type of the flow (B2B stream). NOTE more types to be added: HLS, RTMP??",
+            "type": "string",
+            "enum": [
+              "srtlistener",
+              "srtcaller"
+            ]
+          },
           "code": {
             "title": "Code",
             "description": "Code for this rendition. (Suggested by Reuters.) (Same as AP contentid:A code used to identify the content item rendition?)",
@@ -253,7 +262,7 @@
           },
           "signal": {
             "title": "Signal",
-            "description": "Signal in remote content. (Suggested by Reuters.)",
+            "description": "Signal in remote content. (Suggested by Reuters.) NOTE: Reuters to check if they still need it",
             "type": "string"
           },
           "contenttype": {
@@ -320,6 +329,11 @@
           "samplerate": {
             "title": "Sample rate",
             "description": "The number of audio samples per second in the audio or video content, expressed as audio sampling frequency in hertz (Hz). (Suggested by AP and Reuters.)",
+            "type": "number"
+          },
+          "audiochannels": {
+            "title": "Audio channels",
+            "description": "Number of audio channels in the content",
             "type": "number"
           },
           "audiobitrate": {
@@ -790,6 +804,11 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
+            "eventstatus": {
+              "type": "string",
+              "description": "Status of the event (as opposed to the status of coverage of the event. Suggested CV: https://cv.iptc.org/newscodes/speventstatus/",
+              "format": "uri"
+            },
             "dates": {
               "type": "object",
               "description": "Dates and times for this event.",
@@ -818,6 +837,17 @@
                     "description": "A human-readable title for the planned event coverage",
                     "type": "string"
                 },
+                "pubstatus": {
+                  "title": "Publication status",
+                  "description": "The publishing status of the news object, its value is *usable* by default. nar:pubStatus",
+                  "type": "string",
+                  "enum": [
+                    "usable",
+                    "withheld",
+                    "canceled"
+                  ]
+            },
+ 
                 "dates": {
                   "type": "object",
                   "description": "Dates and times for this event.",

@@ -10,7 +10,6 @@
         {
             "uri": "planning-times-square-001-text",
             "title": "Text article covering the ball drop",
-            "pubstatus": "usable",
             "type": "text",
             "event": "urn:004-ninjs2.2-recurring-event-test",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
@@ -21,16 +20,10 @@
                 "text-highlights-feed"
             ],
             "wordcount": 300,
-            "language": "en-US",
-            "audiences": [
-                {
-                    "audience": "45-60",
-                    "significance": 8
-                }
-            ]
-        },
+            "language": "en-US"
+       },
         {
-            "uri": "planning-times-square-001-video",
+            "uri": "urn:planning-times-square-001-video",
             "type": "video",
             "event": "urn:004-ninjs2.2-recurring-event-test",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
@@ -40,10 +33,14 @@
                 "all-video-items-feed",
                 "video-highlights-feed"
             ],
-            "audiences": [
+            "renditions": [
                 {
-                    "audience": "18-25",
-                    "significance": 8
+                    "name": "SRT stream",
+                    "uri": "urn:streamer.com:planning-times-square-001-video",
+                    "version": "1",
+                    "transportprotocol": "srt_listener",
+                    "href": "srt://10.186.3.41:9000",
+                    "contenttype": "video/mp4"
                 }
             ]
         },
@@ -62,6 +59,8 @@
                     "audience": "casual",
                     "significance": 7
                 }
+            ],
+            "renditions": [
             ]
         },
         {
@@ -78,6 +77,8 @@
                     "audience": "casual",
                     "significance": 8
                 }
+            ],
+            "renditions": [
             ]
         }
     ]
