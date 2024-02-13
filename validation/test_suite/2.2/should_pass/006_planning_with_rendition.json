@@ -10,7 +10,6 @@
         {
             "uri": "planning-times-square-001-text",
             "title": "Text article covering the ball drop",
-            "pubstatus": "usable",
             "type": "text",
             "event": "urn:004-ninjs2.2-recurring-event-test",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
@@ -27,6 +26,8 @@
                     "audience": "45-60",
                     "significance": 8
                 }
+            ],
+            "renditions": [
             ]
         },
         {
@@ -45,6 +46,8 @@
                     "audience": "18-25",
                     "significance": 8
                 }
+            ],
+            "renditions": [
             ]
         },
         {
@@ -62,6 +65,8 @@
                     "audience": "casual",
                     "significance": 7
                 }
+            ],
+            "renditions": [
             ]
         },
         {
@@ -78,6 +83,8 @@
                     "audience": "casual",
                     "significance": 8
                 }
+            ],
+            "renditions": [
             ]
         }
     ]

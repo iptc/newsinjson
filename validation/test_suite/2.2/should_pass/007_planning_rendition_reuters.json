@@ -4,17 +4,16 @@
 	    "version": "2.2",
 	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
 	},
-	"uri": "urn:005-ninjs2.2-planned-coverage-test",
+	"uri": "urn:007-ninjs2.2-planned-coverage-with-rendition-reuters-example-test",
     "type": "planning",
     "plannedcoverage": [
         {
-            "uri": "planning-times-square-001-text",
-            "title": "Text article covering the ball drop",
-            "pubstatus": "usable",
-            "type": "text",
-            "event": "urn:004-ninjs2.2-recurring-event-test",
+            "uri": "planned-coverage-with-rendition-reuters-example-test",
+            "title": "Hospital update on released hostages",
+            "type": "video",
+            "event": "tag:reuters.com,2023:newsml_ADITLCDCO:7",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
+            "scheduled": "2023-01-01T00:30:00-04:00",
             "services": [
                 "all-items-feed",
                 "all-text-items-feed",
@@ -27,6 +26,8 @@
                     "audience": "45-60",
                     "significance": 8
                 }
+            ],
+            "renditions": [
             ]
         },
         {
@@ -45,6 +46,8 @@
                     "audience": "18-25",
                     "significance": 8
                 }
+            ],
+            "renditions": [
             ]
         },
         {
@@ -62,6 +65,8 @@
                     "audience": "casual",
                     "significance": 7
                 }
+            ],
+            "renditions": [
             ]
         },
         {
@@ -78,6 +83,8 @@
                     "audience": "casual",
                     "significance": 8
                 }
+            ],
+            "renditions": [
             ]
         }
     ]
