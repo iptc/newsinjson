@@ -1,0 +1,110 @@
+{
+  "standard": {
+    "name": "ninjs",
+    "version": "2.2",
+    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+  },
+  "uri": "urn:005-ninjs2.2-planned-coverage-test",
+  "type": "planning",
+  "plannedcoverage": [
+    {
+      "uri": "planning-times-square-001-text",
+      "title": "Text article covering the ball drop",
+      "pubstatus": "usable",
+      "type": "text",
+      "event": "urn:004-ninjs2.2-recurring-event-test",
+      "itemcount": {
+        "rangefrom": 1,
+        "rangeto": 1
+      },
+      "scheduled": "2024-01-01T00:30:00-04:00",
+      "commissioned": {
+        "by": "Julie Bloggs",
+        "on": "2024-02-05T12:34:56Z",
+        "references": [
+          {
+            "name": "purchaseordernumber",
+            "value": "PO16382"
+          },
+          {
+            "name": "workordernumber",
+            "value": "17364382189"
+          }
+        ]
+      },
+      "services": [
+        "all-items-feed",
+        "all-text-items-feed",
+        "text-highlights-feed"
+      ],
+      "wordcount": 300,
+      "language": "en-US",
+      "audiences": [
+        {
+          "audience": "45-60",
+          "significance": 8
+        }
+      ]
+    },
+    {
+      "uri": "planning-times-square-001-video",
+      "type": "video",
+      "event": "urn:004-ninjs2.2-recurring-event-test",
+      "itemcount": {
+        "rangefrom": 1,
+        "rangeto": 1
+      },
+      "scheduled": "2024-01-01T00:30:00-04:00",
+      "services": [
+        "all-items-feed",
+        "all-video-items-feed",
+        "video-highlights-feed"
+      ],
+      "audiences": [
+        {
+          "audience": "18-25",
+          "significance": 8
+        }
+      ]
+    },
+    {
+      "uri": "planning-times-square-001-all-photos",
+      "type": "picture",
+      "event": "times-square-event-001",
+      "itemcount": {
+        "rangefrom": 5,
+        "rangeto": 15
+      },
+      "scheduled": "2024-01-01T00:30:00-04:00",
+      "services": [
+        "all-items-feed",
+        "all-photo-items-feed"
+      ],
+      "audiences": [
+        {
+          "audience": "casual",
+          "significance": 7
+        }
+      ]
+    },
+    {
+      "uri": "planning-times-square-001-top-photos",
+      "type": "picture",
+      "event": "times-square-event-001",
+      "itemcount": {
+        "rangefrom": 1,
+        "rangeto": 3
+      },
+      "scheduled": "2024-01-01T00:30:00-04:00",
+      "services": [
+        "photo-highlights-feed"
+      ],
+      "audiences": [
+        {
+          "audience": "casual",
+          "significance": 8
+        }
+      ]
+    }
+  ]
+}
