@@ -393,11 +393,6 @@
           "description": "The number of video frames per second, which is the rate at which the material should be shown in order to achieve the intended visual effect. (Suggested by AP.)",
           "type": "number"
         },
-        "resolution": {
-          "title": "Resolution",
-          "description": "The recording or image resolution of the content (if available):",
-          "type": "string"
-        },
         "audiocodec": {
           "title": "Audio codec",
           "description": "https://cv.iptc.org/newscodes/audiocodec/",
