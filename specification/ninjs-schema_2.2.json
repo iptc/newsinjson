@@ -11,11 +11,23 @@
       "additionalProperties": false,
       "properties": {
         "startdate": {
-          "description": "The date (and optionally time) at which the event starts.",
-          "$ref": "#/$defs/truncatedDateTimeType"
+          "title": "Start Date",
+          "description": "The date and time at which the event starts.",
+          "type": "string",
+          "format": "date-time"
         },
         "enddate": {
-          "description": "The date (and optionally time) at which the event ends.",
+          "title": "End Date",
+          "description": "The date and time at which the event ends.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "expectedstartdate": {
+          "description": "The approximate date (and optionally time) at which the event is expected to start.",
+          "$ref": "#/$defs/truncatedDateTimeType"
+        },
+        "expectedenddate": {
+          "description": "The approximate date (and optionally time) at which the event is expected to end.",
           "$ref": "#/$defs/truncatedDateTimeType"
         },
         "duration": {
@@ -69,7 +81,37 @@
             }
           }
         }
-      }
+      },
+      "anyOf": [
+        {
+          "oneOf": [
+            {
+              "required": [
+                "startdate"
+              ]
+            },
+            {
+              "required": [
+                "expectedstartdate"
+              ]
+            }
+          ]
+        },
+        {
+          "oneOf": [
+            {
+              "required": [
+                "enddate"
+              ]
+            },
+            {
+              "required": [
+                "expectedenddate"
+              ]
+            }
+          ]
+        }
+      ]
     },
     "contactinfoType": {
       "additionalProperties": false,
