@@ -1,0 +1,33 @@
+{
+  "standard": {
+    "name": "ninjs",
+    "version": "2.2",
+    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+  },
+  "uri": "urn:nato.int:2023-nato-summit-press-conference",
+  "type": "event",
+  "title": "2023 NATO Summit Press Conference",
+  "eventdetails": {
+    "dates": {
+      "startdate": "2023-07-11T09:00:00Z",
+      "expectedstartdate": "2023-07-12"
+    }
+  },
+  "places": [
+    {
+      "name": "LITEXPO",
+      "contactinfo": [
+        {
+          "type": "physical",
+          "address": {
+            "locality": "Vilnius",
+            "country": "Lithuania"
+          }
+        }
+      ]
+    }
+  ],
+  "renditions": [
+
+  ]
+}
