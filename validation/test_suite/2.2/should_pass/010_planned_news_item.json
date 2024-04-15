@@ -1,0 +1,20 @@
+{
+  "standard": {
+    "name": "ninjs",
+    "version": "2.2",
+    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+  },
+  "uri": "http://ninjs.example.com/newsitems/ninjs2-2-tests",
+  "descriptions": [
+    {
+      "role": "caption",
+      "value": "Extensible description test for ninjs 2.2 this item links to planned coverage via associations"
+    }
+  ],
+  "associations": [
+    {
+      "uri": "urn:005-ninjs2.2-planned-coverage-test",
+      "name": "Planned coverage"
+    }
+  ]
+}
