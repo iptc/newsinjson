@@ -14,7 +14,8 @@
   "associations": [
     {
       "uri": "urn:005-ninjs2.2-planned-coverage-test",
-      "name": "Planned coverage"
+      "name": "Planned coverage",
+      "type": "planning"
     }
   ]
 }
