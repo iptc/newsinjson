@@ -9,11 +9,10 @@
   "dependencies": {
     "json-schema-to-typescript": "^14.0.4",
     "libxmljs2": "^0.33.0",
-    "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
-  "devDependancies": {
+  "devDependencies": {
+    "ts-node": "^10.9.2",
     "@types/node": "^20.10.0"
   }
 }
-
