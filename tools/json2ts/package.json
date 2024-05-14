@@ -7,12 +7,13 @@
   },
   "private": "true",
   "dependencies": {
-    "json-schema-to-typescript": "^10.1.5",
-    "libxmljs2": "^0.29.0",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.3"
+    "json-schema-to-typescript": "^14.0.4",
+    "libxmljs2": "^0.33.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
-  "devDependencies": {
-    "@types/node": "^16.11.12"
+  "devDependancies": {
+    "@types/node": "^20.10.0"
   }
 }
+
