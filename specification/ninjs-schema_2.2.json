@@ -11,11 +11,23 @@
       "additionalProperties": false,
       "properties": {
         "startdate": {
-          "description": "The date (and optionally time) at which the event starts.",
-          "$ref": "#/$defs/truncatedDateTimeType"
+          "title": "Start Date",
+          "description": "The date and time at which the event starts.",
+          "type": "string",
+          "format": "date-time"
         },
         "enddate": {
-          "description": "The date (and optionally time) at which the event ends.",
+          "title": "End Date",
+          "description": "The date and time at which the event ends.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "expectedstartdate": {
+          "description": "The approximate date (and optionally time) at which the event is expected to start.",
+          "$ref": "#/$defs/truncatedDateTimeType"
+        },
+        "expectedenddate": {
+          "description": "The approximate date (and optionally time) at which the event is expected to end.",
           "$ref": "#/$defs/truncatedDateTimeType"
         },
         "duration": {
@@ -69,7 +81,37 @@
             }
           }
         }
-      }
+      },
+      "anyOf": [
+        {
+          "oneOf": [
+            {
+              "required": [
+                "startdate"
+              ]
+            },
+            {
+              "required": [
+                "expectedstartdate"
+              ]
+            }
+          ]
+        },
+        {
+          "oneOf": [
+            {
+              "required": [
+                "enddate"
+              ]
+            },
+            {
+              "required": [
+                "expectedenddate"
+              ]
+            }
+          ]
+        }
+      ]
     },
     "contactinfoType": {
       "additionalProperties": false,
@@ -180,7 +222,9 @@
     },
     "truncatedDateTimeType": {
       "description": "Allows any of year (xs:gYear, YYYY), year/month (xs:gYearMonth, YYYY-MM), year/month/day (xs:date YYYY-MM-DD), and full datetime (xs:dateTime, YYYY-MM-DDTHH:MM:SS+HH:MM), all with an optional timezone suffix. Note that this does NOT include ISO8601 month of year (xs:gMonth, --MM) or yearly day (xs:gMonthDay, --MM-DD) TODO: the actual regex!",
-      "type": "string"
+      "type": "string",
+      "pattern": "^(-?(?:[1-9][0-9]*)?[0-9]{4})(-(1[0-2]|0[1-9])(-(3[01]|0[1-9]|[12][0-9])(T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.[0-9]+)?(Z|[+-](?:2[0-3]|[01][0-9]):[0-5][0-9])?)?)?)?$",
+      "example": "2020-07"
     },
     "organisationType": {
       "type": "object",
