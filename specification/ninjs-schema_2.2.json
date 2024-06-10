@@ -222,7 +222,9 @@
     },
     "truncatedDateTimeType": {
       "description": "Allows any of year (xs:gYear, YYYY), year/month (xs:gYearMonth, YYYY-MM), year/month/day (xs:date YYYY-MM-DD), and full datetime (xs:dateTime, YYYY-MM-DDTHH:MM:SS+HH:MM), all with an optional timezone suffix. Note that this does NOT include ISO8601 month of year (xs:gMonth, --MM) or yearly day (xs:gMonthDay, --MM-DD) TODO: the actual regex!",
-      "type": "string"
+      "type": "string",
+      "pattern": "^(-?(?:[1-9][0-9]*)?[0-9]{4})(-(1[0-2]|0[1-9])(-(3[01]|0[1-9]|[12][0-9])(T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(\\.[0-9]+)?(Z|[+-](?:2[0-3]|[01][0-9]):[0-5][0-9])?)?)?)?$",
+      "example": "2020-07"
     },
     "organisationType": {
       "type": "object",
