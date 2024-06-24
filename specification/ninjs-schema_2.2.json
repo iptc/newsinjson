@@ -1369,14 +1369,25 @@
         ]
       },
       "then": {
-        "required": [
-          "eventdetails"
-        ],
-        "not": {
-          "required": [
-            "renditions"
-          ]
-        }
+        "allOf": [
+          {
+            "required": [
+              "eventdetails"
+            ],
+            "not": {
+              "required": [
+                "renditions"
+              ]
+            }
+          },
+          {
+            "not": {
+              "required": [
+                "plannedcoverage"
+              ]
+            }
+          }
+        ]
       }
     },
     {
