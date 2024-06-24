@@ -1356,25 +1356,62 @@
   "required": [
     "uri"
   ],
-  "if": {
-    "properties": {
-      "type": {
-        "const": "event"
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "event"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "required": [
+          "eventdetails"
+        ],
+        "not": {
+          "required": [
+            "renditions"
+          ]
+        }
       }
     },
-    "required": [
-      "type"
-    ]
-  },
-  "then": {
-    "required": [
-      "eventdetails"
-    ],
-    "not": {
-      "required": [
-        "renditions"
-      ]
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "planning"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "allOf": [
+          {
+            "required": [
+              "plannedcoverage"
+            ],
+            "not": {
+              "required": [
+                "renditions"
+              ]
+            }
+          },
+          {
+            "not": {
+              "required": [
+                "eventdetails"
+              ]
+            }
+          }
+        ]
+      }
     }
-  },
+  ],
   "unevaluatedProperties": false
 }
