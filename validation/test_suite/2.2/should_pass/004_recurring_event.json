@@ -8,7 +8,7 @@
     "type": "event",
     "title": "Times Square Ball Drop",
     "eventdetails": {
-        "eventstatus": "https://cv.iptc.org/newscodes/speventstatus/pre-event",
+        "eventstatus": "http://cv.iptc.org/newscodes/eventoccurstatus/eos5",
         "dates": {
             "startdate": "2023-12-31T23:59:59-04:00",
             "enddate": "2024-01-01T00:00:00-04:00",
