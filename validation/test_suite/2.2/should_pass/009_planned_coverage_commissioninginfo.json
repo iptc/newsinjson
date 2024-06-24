@@ -10,7 +10,7 @@
     {
       "uri": "planning-times-square-001-text",
       "title": "Text article covering the ball drop",
-      "pubstatus": "usable",
+      "plannedcoveragestatus": "http://cv.iptc.org/newscodes/newscoveragestatus/int",
       "type": "text",
       "event": "urn:004-ninjs2.2-recurring-event-test",
       "itemcount": {

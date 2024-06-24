@@ -976,15 +976,10 @@
                 "description": "A human-readable title for the planned event coverage",
                 "type": "string"
               },
-              "pubstatus": {
-                "title": "Publication status",
-                "description": "The publishing status of the news object, its value is *usable* by default. nar:pubStatus",
+              "plannedcoveragestatus": {
                 "type": "string",
-                "enum": [
-                  "usable",
-                  "withheld",
-                  "canceled"
-                ]
+                "description": "Status of the coverage (as opposed to the status of the event itself. Suggested CV: https://cv.iptc.org/newscodes/newscoveragestatus/",
+                "format": "uri"
               },
               "commissioned": {
                 "type": "object",
