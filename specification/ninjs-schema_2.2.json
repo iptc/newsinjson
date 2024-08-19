@@ -944,7 +944,12 @@
           "properties": {
             "eventstatus": {
               "type": "string",
-              "description": "Status of the event (as opposed to the status of coverage of the event. Suggested CV: https://cv.iptc.org/newscodes/speventstatus/",
+              "description": "Status of the event (as opposed to the status of coverage of the event. Suggested CV: https://cv.iptc.org/newscodes/eventoccurstatus/",
+              "format": "uri"
+            },
+            "plannedcoveragestatus": {
+              "type": "string",
+              "description": "Status of the coverage (as opposed to the status of the event itself. Suggested CV: https://cv.iptc.org/newscodes/newscoveragestatus/",
               "format": "uri"
             },
             "dates": {
@@ -984,11 +989,6 @@
                   "withheld",
                   "canceled"
                 ]
-              },
-              "plannedcoveragestatus": {
-                "type": "string",
-                "description": "Status of the coverage (as opposed to the status of the event itself. Suggested CV: https://cv.iptc.org/newscodes/newscoveragestatus/",
-                "format": "uri"
               },
               "commissioned": {
                 "type": "object",
@@ -1203,6 +1203,11 @@
               "name": {
                 "title": "Name (of associated object)",
                 "description": "Human-readable name of the associated object.",
+                "type": "string"
+              },
+              "role": {
+                "title": "Role",
+                "description": "The role of the association",
                 "type": "string"
               }
             },
