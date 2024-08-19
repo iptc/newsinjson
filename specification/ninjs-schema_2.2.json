@@ -1004,10 +1004,6 @@
                 "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
                 "type": "string"
               },
-              "event": {
-                "description": "",
-                "type": "string"
-              },
               "audiences": {
                 "type": "array",
                 "items": {
