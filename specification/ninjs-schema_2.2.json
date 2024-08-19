@@ -1205,9 +1205,9 @@
                 "description": "Human-readable name of the associated object.",
                 "type": "string"
               },
-              "role": {
-                "title": "Role",
-                "description": "The role of the association",
+              "rel": {
+                "title": "Relationship",
+                "description": "The relationship between this document and the associated document",
                 "type": "string"
               }
             },
