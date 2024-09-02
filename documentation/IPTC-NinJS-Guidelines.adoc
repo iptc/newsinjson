@@ -417,7 +417,7 @@ One of: +
 |The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in ninjs 2.1)
 |date-time
 
-||pubstatus
+|pubstatus
 |The publishing status of the news object, its value is `usable` by default.
 |One of: +
 `usable` +
