@@ -7,8 +7,8 @@
   "$defs": {
     "datesobjectType": {
       "type": "object",
-      "description": "All dates pertaining to an event, a planning or a coverage, in particular the start and end date and any recurrence information",
       "additionalProperties": false,
+      "description": "All dates pertaining to an event, a planning or a coverage, in particular the start and end date and any recurrence information",
       "properties": {
         "startdate": {
           "title": "Start Date",
@@ -36,6 +36,7 @@
         },
         "recurrence": {
           "type": "object",
+          "additionalProperties": false,
           "description": "Specifies recurrence information about the event",
           "properties": {
             "recurrence-dates": {
@@ -114,8 +115,8 @@
       ]
     },
     "contactinfoType": {
-      "additionalProperties": false,
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "type": {
           "description": "Type would be method of communication like phone, mobile, address etc.",
@@ -139,8 +140,8 @@
         },
         "address": {
           "type": "object",
-          "description": "The address of a person, place or organisation.",
           "additionalProperties": false,
+          "description": "The address of a person, place or organisation.",
           "properties": {
             "lines": {
               "description": "An array of lines to construct an address. The order is important to construct a correct address.",
@@ -291,9 +292,9 @@
       }
     },
     "renditionType": {
-      "description": "A specific rendition of the content of the news object. (Description changed in version 1.2.)",
       "type": "object",
       "additionalProperties": false,
+      "description": "A specific rendition of the content of the news object. (Description changed in version 1.2.)",
       "required": [
         "name"
       ],
@@ -453,6 +454,7 @@
         },
         "poi": {
           "type": "object",
+          "additionalProperties": false,
           "title": "Point of Interest",
           "description": "The point of interest of the rendition. (Suggested by PA.)",
           "properties": {
