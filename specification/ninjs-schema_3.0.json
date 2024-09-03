@@ -363,7 +363,7 @@
         },
         "format": {
           "title": "Format",
-          "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contentTypevariant and nar:remoteContent@format (Same as TT variant: One of 'Normal', 'Watermark', 'BlackAndWhite', 'Cropped' or 'Framegrab'?) (https://cv.iptc.org/newscodes/format/)",
+          "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contentrypevariant and nar:remoteContent@format (Same as TT variant: One of 'Normal', 'Watermark', 'BlackAndWhite', 'Cropped' or 'Framegrab'?) (https://cv.iptc.org/newscodes/format/)",
           "type": "string"
         },
         "originalFilename": {
@@ -381,7 +381,7 @@
           "description": "JL: a digest sounds like a readable summary. Checksum or hash are different things.    AP: A short digest (also known as checksum or hash) of the rendition data (if available).",
           "type": "string"
         },
-        "averageBitRate": {
+        "averageBitrate": {
           "title": "Average Bitrate (ABR)",
           "description": "The average amount of data that is transferred per second in the audio or video content. (Suggested by AP, TT and Reuters.)",
           "type": "number"
@@ -396,9 +396,9 @@
           "description": "Number of audio channels in the content",
           "type": "number"
         },
-        "audioBitRate": {
-          "title": "Audio bitRate",
-          "description": "Audio bitRate measured in kbps. (Suggested by Reuters.)",
+        "audioBitrate": {
+          "title": "Audio bitrate",
+          "description": "Audio bitrate measured in kbps. (Suggested by Reuters.)",
           "type": "number"
         },
         "aspectRatio": {
@@ -423,7 +423,7 @@
         },
         "videoCodec": {
           "title": "Video codec",
-          "description": "The video encoding system used to create the content. (Suggested by AP.) (https://cv.iptc.org/newscodes/videoCodec/)",
+          "description": "The video encoding system used to create the content. (Suggested by AP.) (https://cv.iptc.org/newscodes/videocodec/)",
           "type": "string"
         },
         "videoScaling": {
@@ -487,8 +487,8 @@
             "srtcaller"
           ]
         },
-        "maxBitRate": {
-          "title": "Max bitRate (SRT video all)",
+        "maxBitrate": {
+          "title": "Max bitrate (SRT video all)",
           "description": "The maximum amount of data that is transferred per second in the audio or video content.",
           "type": "number"
         },
@@ -505,8 +505,8 @@
           "exclusiveMaximum": 65535
         },
         "srtPassword": {
-          "title": "SRTP password (SRT video listener)",
-          "description": "The SRTP password of the flow (B2B stream).",
+          "title": "SRT password (SRT video listener)",
+          "description": "The SRT password of the flow (B2B stream).",
           "type": "string"
         },
         "listenerAddress": {
@@ -514,7 +514,7 @@
           "description": "The listener address of the flow (B2B stream).",
           "type": "string"
         },
-        "streamID": {
+        "streamId": {
           "title": "Stream ID (SRT video caller)",
           "description": "The stream ID of the flow (B2B stream).",
           "type": "string"
@@ -533,9 +533,9 @@
             "interlaced"
           ]
         },
-        "bitRate": {
+        "bitrate": {
           "title": "Bitrate (video profile)",
-          "description": "The bitRate of the video.",
+          "description": "The bitrate of the video.",
           "type": "number"
         },
         "gop": {
@@ -618,9 +618,9 @@
           "type": "string",
           "format": "date-time"
         },
-        "embargoed": {
-          "title": "Embargoed",
-          "description": "The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed. nar:embargoed NOTE for 3.0 could/should we change this to 'embargoedUntil' ?",
+        "embargoedUntil": {
+          "title": "Embargoed until",
+          "description": "The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed. nar:embargoed",
           "type": "string",
           "format": "date-time"
         },
@@ -721,7 +721,7 @@
               },
               "wordCount": {
                 "title": "Word count",
-                "description": "The total number of words in this body excluding figure captions. (Added in version 1.2.). nar:wordCount",
+                "description": "The total number of words in this body excluding figure captions. (Added in version 1.2.). nar:wordcount",
                 "type": "integer"
               },
               "value": {
@@ -842,7 +842,7 @@
                   "$ref": "#/$defs/contactInfoType"
                 }
               },
-              "geojson": {
+              "geoJSON": {
                 "$ref": "https://geojson.org/schema/GeoJSON.json#"
               }
             }
@@ -944,7 +944,7 @@
           "properties": {
             "eventStatus": {
               "type": "string",
-              "description": "Status of the event (as opposed to the status of coverage of the event. Suggested CV: https://cv.iptc.org/newscodes/speventStatus/",
+              "description": "Status of the event (as opposed to the status of coverage of the event). Suggested CV: https://cv.iptc.org/newscodes/speventstatus/",
               "format": "uri"
             },
             "dates": {
@@ -1079,7 +1079,7 @@
                 }
               },
               "wordCount": {
-                "description": "",
+                "description": "The count of words of textual content. nar:wordcount",
                 "type": "integer"
               },
               "renditions": {
@@ -1326,7 +1326,7 @@
             "langId": {
               "type": "string",
               "title": "Language id",
-              "description": "Identifier for the Rights Expression language used. nar:@langId",
+              "description": "Identifier for the Rights Expression language used. nar:@langid",
               "format": "uri"
             },
             "linkedRights": {

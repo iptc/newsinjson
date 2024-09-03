@@ -42,7 +42,7 @@
             "literal": "661e09b87d5b10048287c076b8e3055c",
             "name": "Turkey",
             "uri": "http://cv.ap.org/id/661e09b87d5b10048287c076b8e3055c",
-            "geojson": {
+            "geoJSON": {
                 "type": "Point",
                 "coordinates": [
                     35,
@@ -59,7 +59,7 @@
             "literal": "661850e07d5b100481f4c076b8e3055c",
             "name": "Europe",
             "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
-            "geojson": {
+            "geoJSON": {
                 "type": "Point",
                 "coordinates": [
                     9.14062,
@@ -76,7 +76,7 @@
             "literal": "661e48387d5b10048291c076b8e3055c",
             "name": "United States",
             "uri": "http://cv.ap.org/id/661e48387d5b10048291c076b8e3055c",
-            "geojson": {
+            "geoJSON": {
                 "type": "Point",
                 "coordinates": [
                     -98.5,
@@ -88,7 +88,7 @@
             "literal": "661850e07d5b100481f7c076b8e3055c",
             "name": "North America",
             "uri": "http://cv.ap.org/id/661850e07d5b100481f7c076b8e3055c",
-            "geojson": {
+            "geoJSON": {
                 "type": "Point",
                 "coordinates": [
                     -100.54688,
