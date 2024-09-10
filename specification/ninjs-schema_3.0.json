@@ -1324,6 +1324,7 @@
         "rightsInfo": {
           "title": "Rights information",
           "type": "object",
+          "additionalProperties": false,
           "description": "Expression of rights to be applied to content. nar:rightsInfo",
           "properties": {
             "langId": {
