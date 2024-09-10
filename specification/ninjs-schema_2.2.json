@@ -23,15 +23,15 @@
           "format": "date-time"
         },
         "expectedstartdate": {
-          "description": "The approximate date (and optionally time) at which the event is expected to start.",
+          "description": "The approximate date (and optionally time) at which the event or coverage is expected to start.",
           "$ref": "#/$defs/truncatedDateTimeType"
         },
         "expectedenddate": {
-          "description": "The approximate date (and optionally time) at which the event is expected to end.",
+          "description": "The approximate date (and optionally time) at which the event or coverage is expected to end.",
           "$ref": "#/$defs/truncatedDateTimeType"
         },
-        "duration": {
-          "description": "The period the event will last. REMOVE?? We already have start and end date, plus duration in rendition array",
+        "expectedduration": {
+          "description": "The time period that the event or coverage is expected to last. (Actual duration can be calculated from startdate and enddate)",
           "type": "string"
         },
         "recurrence": {
