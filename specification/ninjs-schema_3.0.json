@@ -364,7 +364,7 @@
         },
         "format": {
           "title": "Format",
-          "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contentrypevariant and nar:remoteContent@format (Same as TT variant: One of 'Normal', 'Watermark', 'BlackAndWhite', 'Cropped' or 'Framegrab'?) (https://cv.iptc.org/newscodes/format/)",
+          "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contentypevariant and nar:remoteContent@format (Same as TT variant: One of 'Normal', 'Watermark', 'BlackAndWhite', 'Cropped' or 'Framegrab'?) (https://cv.iptc.org/newscodes/format/)",
           "type": "string"
         },
         "originalFilename": {
