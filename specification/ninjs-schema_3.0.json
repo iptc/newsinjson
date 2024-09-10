@@ -585,7 +585,7 @@
         },
         "representationType": {
           "title": "Representation type",
-          "description": "Indicates how complete this representation of a news item is. No mapping to nar. Specific for ninjs. NOTE: for 3.0 could we change this to 'completeness' ?",
+          "description": "Indicates how complete this representation of a news item is. No mapping to nar. Specific for ninjs.",
           "type": "string",
           "enum": [
             "full",
