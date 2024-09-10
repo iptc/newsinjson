@@ -944,7 +944,12 @@
           "properties": {
             "eventstatus": {
               "type": "string",
-              "description": "Status of the event (as opposed to the status of coverage of the event. Suggested CV: https://cv.iptc.org/newscodes/speventstatus/",
+              "description": "Status of the event (as opposed to the status of coverage of the event. Suggested CV: https://cv.iptc.org/newscodes/eventoccurstatus/",
+              "format": "uri"
+            },
+            "plannedcoveragestatus": {
+              "type": "string",
+              "description": "Status of the coverage (as opposed to the status of the event itself. Suggested CV: https://cv.iptc.org/newscodes/newscoveragestatus/",
               "format": "uri"
             },
             "dates": {
@@ -985,11 +990,6 @@
                   "canceled"
                 ]
               },
-              "plannedcoveragestatus": {
-                "type": "string",
-                "description": "Status of the coverage (as opposed to the status of the event itself. Suggested CV: https://cv.iptc.org/newscodes/newscoveragestatus/",
-                "format": "uri"
-              },
               "commissioned": {
                 "type": "object",
                 "description": "Information about the commissioning of this content.",
@@ -1002,10 +1002,6 @@
               },
               "type": {
                 "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
-                "type": "string"
-              },
-              "event": {
-                "description": "",
                 "type": "string"
               },
               "audiences": {
@@ -1203,6 +1199,11 @@
               "name": {
                 "title": "Name (of associated object)",
                 "description": "Human-readable name of the associated object.",
+                "type": "string"
+              },
+              "rel": {
+                "title": "Relationship",
+                "description": "The relationship between this document and the associated document",
                 "type": "string"
               }
             },

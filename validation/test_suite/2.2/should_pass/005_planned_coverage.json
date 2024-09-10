@@ -10,9 +10,7 @@
         {
             "uri": "planning-times-square-001-text",
             "title": "Text article covering the ball drop",
-            "plannedcoveragestatus": "http://cv.iptc.org/newscodes/newscoveragestatus/int",
             "type": "text",
-            "event": "urn:004-ninjs2.2-recurring-event-test",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
             "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
@@ -32,7 +30,6 @@
         {
             "uri": "planning-times-square-001-video",
             "type": "video",
-            "event": "urn:004-ninjs2.2-recurring-event-test",
             "itemcount": { "rangefrom": 1, "rangeto": 1 },
             "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
@@ -50,7 +47,6 @@
         {
             "uri": "planning-times-square-001-all-photos",
             "type": "picture",
-            "event": "times-square-event-001",
             "itemcount": { "rangefrom": 5, "rangeto": 15 },
             "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
@@ -67,7 +63,6 @@
         {
             "uri": "planning-times-square-001-top-photos",
             "type": "picture",
-            "event": "times-square-event-001",
             "itemcount": { "rangefrom": 1, "rangeto": 3 },
             "scheduled": "2024-01-01T00:30:00-04:00",
             "services": [
