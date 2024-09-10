@@ -7,8 +7,8 @@
   "$defs": {
     "datesObjectType": {
       "type": "object",
-      "description": "All dates pertaining to an event, a planning or a coverage, in particular the start and end date and any recurrence information",
       "additionalProperties": false,
+      "description": "All dates pertaining to an event, a planning or a coverage, in particular the start and end date and any recurrence information",
       "properties": {
         "startDate": {
           "title": "Start Date",
@@ -23,19 +23,20 @@
           "format": "date-time"
         },
         "expectedStartDate": {
-          "description": "The approximate date (and optionally time) at which the event is expected to start.",
+          "description": "The approximate date (and optionally time) at which the event or coverage is expected to start.",
           "$ref": "#/$defs/truncatedDateTimeType"
         },
         "expectedEndDate": {
-          "description": "The approximate date (and optionally time) at which the event is expected to end.",
+          "description": "The approximate date (and optionally time) at which the event or coverage is expected to end.",
           "$ref": "#/$defs/truncatedDateTimeType"
         },
-        "duration": {
-          "description": "The period the event will last. REMOVE?? We already have start and end date, plus duration in rendition array",
+        "expectedDuration": {
+          "description": "The time period that the event or coverage is expected to last. (Actual duration can be calculated from startdate and enddate)",
           "type": "string"
         },
         "recurrence": {
           "type": "object",
+          "additionalProperties": false,
           "description": "Specifies recurrence information about the event",
           "properties": {
             "recurrenceDates": {
@@ -114,8 +115,8 @@
       ]
     },
     "contactInfoType": {
-      "additionalProperties": false,
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "type": {
           "description": "Type would be method of communication like phone, mobile, address etc.",
@@ -139,8 +140,8 @@
         },
         "address": {
           "type": "object",
-          "description": "The address of a person, place or organisation.",
           "additionalProperties": false,
+          "description": "The address of a person, place or organisation.",
           "properties": {
             "lines": {
               "description": "An array of lines to construct an address. The order is important to construct a correct address.",
@@ -291,9 +292,9 @@
       }
     },
     "renditionType": {
-      "description": "A specific rendition of the content of the news object. (Description changed in version 1.2.)",
       "type": "object",
       "additionalProperties": false,
+      "description": "A specific rendition of the content of the news object. (Description changed in version 1.2.)",
       "required": [
         "name"
       ],
@@ -453,6 +454,7 @@
         },
         "poi": {
           "type": "object",
+          "additionalProperties": false,
           "title": "Point of Interest",
           "description": "The point of interest of the rendition. (Suggested by PA.)",
           "properties": {
@@ -944,7 +946,12 @@
           "properties": {
             "eventStatus": {
               "type": "string",
-              "description": "Status of the event (as opposed to the status of coverage of the event). Suggested CV: https://cv.iptc.org/newscodes/speventstatus/",
+              "description": "Status of the event (as opposed to the status of coverage of the event). Suggested CV: https://cv.iptc.org/newscodes/eventoccurstatus/",
+              "format": "uri"
+            },
+            "plannedCoverageStatus": {
+              "type": "string",
+              "description": "Status of the coverage (as opposed to the status of the event itself). Suggested CV: https://cv.iptc.org/newscodes/newscoveragestatus/",
               "format": "uri"
             },
             "dates": {
@@ -985,11 +992,6 @@
                   "canceled"
                 ]
               },
-              "plannedCoverageStatus": {
-                "type": "string",
-                "description": "Status of the coverage (as opposed to the status of the event itself. Suggested CV: https://cv.iptc.org/newscodes/newscoveragestatus/",
-                "format": "uri"
-              },
               "commissioned": {
                 "type": "object",
                 "description": "Information about the commissioning of this content.",
@@ -1002,10 +1004,6 @@
               },
               "type": {
                 "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
-                "type": "string"
-              },
-              "event": {
-                "description": "",
                 "type": "string"
               },
               "audiences": {
@@ -1203,6 +1201,11 @@
               "name": {
                 "title": "Name (of associated object)",
                 "description": "Human-readable name of the associated object.",
+                "type": "string"
+              },
+              "rel": {
+                "title": "Relationship",
+                "description": "The relationship between this document and the associated document",
                 "type": "string"
               }
             },
