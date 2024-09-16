@@ -1366,25 +1366,5 @@
   "required": [
     "uri"
   ],
-  "if": {
-    "properties": {
-      "type": {
-        "const": "event"
-      }
-    },
-    "required": [
-      "type"
-    ]
-  },
-  "then": {
-    "required": [
-      "eventDetails"
-    ],
-    "not": {
-      "required": [
-        "renditions"
-      ]
-    }
-  },
   "unevaluatedProperties": false
 }
