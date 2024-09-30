@@ -841,12 +841,8 @@
               },
               "dates": {
                 "type": "object",
-                "description": "Dates and times for this event.",
+                "description": "Dates and times for this planned coverage.",
                 "$ref": "#/$defs/datesObjectType"
-              },
-              "type": {
-                "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
-                "type": "string"
               },
               "audiences": {
                 "type": "array",
@@ -867,14 +863,10 @@
               },
               "exclAudience": {
                 "type": "array",
-                "description": "Excluded audience(s) for the content. (Note G2 also has significance attribute for each audience, as number 1-9)",
+                "description": "Excluded audience(s) for the content.",
                 "items": {
                   "type": "string"
                 }
-              },
-              "headline": {
-                "description": "",
-                "type": "string"
               },
               "edNote": {
                 "description": "Additional natural language information about the planned coverage addressed to the editorial people receiving and processing the item.",
@@ -887,26 +879,11 @@
                 "maximum": 9
               },
               "language": {
-                "description": "",
-                "type": "string"
-              },
-              "scheduled": {
-                "description": "The scheduled time of delivery for the planned G2 item(s).",
-                "type": "string"
-              },
-              "services": {
-                "description": "An editorial service by which the planned G2 item(s) will be distributed. QUESTION remove for now until we have better requirements?",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "assignedTo": {
-                "description": "The party which is assigned to cover the event and produce the planned item. NOTE G2 object also has coversfrom and coversto attributes, which are also at the higher planning level",
+                "description": "The human language used by the content. The value should follow IETF BCP47. nar:language",
                 "type": "string"
               },
               "itemCount": {
-                "description": "Number of planned G2 items of this kind expressed by a range.",
+                "description": "Number of planned items of this kind expressed by a range.",
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
