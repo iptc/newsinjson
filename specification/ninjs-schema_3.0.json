@@ -360,6 +360,24 @@
           "description": "The number of video frames per second, which is the rate at which the material should be shown in order to achieve the intended visual effect. (Suggested by AP.)",
           "type": "number"
         },
+        "poi": {
+          "type": "object",
+          "additionalProperties": false,
+          "title": "Point of Interest",
+          "description": "The point of interest of the rendition. (Suggested by PA.)",
+          "properties": {
+            "x": {
+              "title": "X",
+              "description": "The x-coordinate of the point of interest of the rendition.",
+              "type": "integer"
+            },
+            "y": {
+              "title": "Y",
+              "description": "The y-coordinate of the point of interest of the rendition.",
+              "type": "integer"
+            }
+          }
+        },
         "transportProtocol": {
           "title": "Transport protocol",
           "description": "The transport/flow type of the flow (B2B stream).",
