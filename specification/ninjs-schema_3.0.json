@@ -399,6 +399,22 @@
         }
       }
     },
+    "newsObjectType": {
+      "title": "Type",
+      "description": "The generic news type of this news object. (Value 'component' added in version 1.2. Values 'event' and 'planning' added in version 3.0). See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
+      "type": "string",
+      "enum": [
+        "text",
+        "audio",
+        "video",
+        "picture",
+        "graphic",
+        "composite",
+        "component",
+        "event",
+        "planning"
+      ]
+    },
     "ninjsType": {
       "description": "The root schema of ninjs as a type to make it possible to combine schema parts.",
       "type": "object",
@@ -410,20 +426,7 @@
           "format": "uri"
         },
         "type": {
-          "title": "Type",
-          "description": "The generic news type of this news object. (Value 'component' added in version 1.2. Values 'event' and 'planning' added in version 2.2). See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
-          "type": "string",
-          "enum": [
-            "text",
-            "audio",
-            "video",
-            "picture",
-            "graphic",
-            "composite",
-            "component",
-            "event",
-            "planning"
-          ]
+          "$ref": "#/$defs/newsObjectType"
         },
         "representationType": {
           "title": "Representation type",
@@ -821,7 +824,7 @@
                 "type": "string"
               },
               "title": {
-                "description": "A human-readable title for the planned event coverage",
+                "description": "A human-readable title for the planned content",
                 "type": "string"
               },
               "pubStatus": {
@@ -834,6 +837,11 @@
                   "canceled"
                 ]
               },
+              "type": {
+                "type": "string",
+                "description": "The generic news type of the planned content. See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
+                "$ref": "#/$defs/newsObjectType"
+              },
               "commissioned": {
                 "type": "object",
                 "description": "Information about the commissioning of this content.",
@@ -841,12 +849,8 @@
               },
               "dates": {
                 "type": "object",
-                "description": "Dates and times for this event.",
+                "description": "Dates and times for this planned content.",
                 "$ref": "#/$defs/datesObjectType"
-              },
-              "type": {
-                "description": "TBD The kind of planned item(s) (g2contentType)  OR The nature of the G2 item, set in accordance with the structure of its content (itemClass).",
-                "type": "string"
               },
               "audiences": {
                 "type": "array",
@@ -867,46 +871,27 @@
               },
               "exclAudience": {
                 "type": "array",
-                "description": "Excluded audience(s) for the content. (Note G2 also has significance attribute for each audience, as number 1-9)",
+                "description": "Excluded audience(s) for the planned content.",
                 "items": {
                   "type": "string"
                 }
               },
-              "headline": {
-                "description": "",
-                "type": "string"
-              },
               "edNote": {
-                "description": "Additional natural language information about the planned coverage addressed to the editorial people receiving and processing the item.",
+                "description": "Additional natural language information about the planned content addressed to the editorial people receiving and processing the item.",
                 "type": "string"
               },
               "urgency": {
-                "description": "The editorial urgency of the content, as scoped by the parent element.",
+                "description": "The editorial urgency of the planned content, as scoped by the parent element.",
                 "type": "number",
                 "minimum": 1,
                 "maximum": 9
               },
               "language": {
-                "description": "",
-                "type": "string"
-              },
-              "scheduled": {
-                "description": "The scheduled time of delivery for the planned G2 item(s).",
-                "type": "string"
-              },
-              "services": {
-                "description": "An editorial service by which the planned G2 item(s) will be distributed. QUESTION remove for now until we have better requirements?",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "assignedTo": {
-                "description": "The party which is assigned to cover the event and produce the planned item. NOTE G2 object also has coversfrom and coversto attributes, which are also at the higher planning level",
+                "description": "The human language used by the planned content. The value should follow IETF BCP47. nar:language",
                 "type": "string"
               },
               "itemCount": {
-                "description": "Number of planned G2 items of this kind expressed by a range.",
+                "description": "Number of planned items of this kind expressed by a range.",
                 "type": "object",
                 "additionalProperties": false,
                 "properties": {
