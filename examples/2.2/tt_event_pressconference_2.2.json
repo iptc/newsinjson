@@ -1,0 +1,90 @@
+{
+  "uri": "http://tt.se/media/event/00ccd8e3-21a3-4386-b384-d3ba57122372",
+  "pubstatus": "usable",
+  "type": "event",
+  "copyrightholder": "TT",
+  "representationtype": "full",
+  "profile": "DATA",
+  "version": "3",
+  "firstcreated": "2023-10-05T14:10:33+02:00",
+  "versioncreated": "2023-10-05T14:27:32+02:00",
+  "language": "sv",
+  "urgency": 1,
+  "eventdetails": {
+    "dates": {
+      "startdate": "2023-10-05T16:00:00+02:00",
+      "enddate": "2023-10-05"
+    },
+    "organiser": {
+      "name": "Niklas Gillström",
+      "rel": "Presssekreterare",
+      "contactinfo": [{
+        "type": "Kontaktperson",
+        "role": "Telefon",
+        "value": "076-141 14 79"
+      }]
+    }
+  },
+  "headlines": [
+    {"value": "Pk med finansminister Elisabeth Svantesson kl 16"}
+  ],
+  "bodies": [
+    {
+      "contenttype": "text/plain",
+      "value": "Finansminister Elisabeth Svantesson kommentera oppositionens budgetmotioner, riksdagens presscenter, Stockholm."
+    },
+    {
+      "contenttype": "text/html5",
+      "value": "<html><body><article><section><h1>Pk med finansminister Elisabeth Svantesson kl 16</h1><div class=\"dat\"><span class=\"vignette\">Torsdag 5 Oktober 2023, klockan 16:00</span><span class=\"source\">TT</span></div><div class=\"bodytext\"><p>Finansminister Elisabeth Svantesson kommentera oppositionens budgetmotioner, riksdagens presscenter, Stockholm.</p><p/><p/></div></section></article></body></html>"
+    }
+  ],
+  "slugline": "",
+  "altids": [
+    {
+      "role": "originaltransmissionreference",
+      "value": "00ccd8e3-21a3-4386-b384-d3ba57122372"
+    }
+  ],
+  "subjects": [
+    {
+      "name": "Politik",
+      "uri": "http://tt.se/spec/subref/1.0/11000000",
+      "rel": "classifies"
+    },
+    {
+      "name": "Ekonomi, affärer och finans",
+      "uri": "http://tt.se/spec/subref/1.0/04000000",
+      "rel": "classifies"
+    }
+  ],
+  "people": [
+    {
+      "name": "Elisabeth Svantesson",
+      "literal": "02c70302-960d-448e-a81f-008d7ae809a2"
+    }
+  ],
+  "organisations": [
+    {
+      "name": "Sveriges riksdag",
+      "literal": "a58ed481-b7f3-469d-85ef-8033fbaebbf2"
+    }
+  ],
+  "events": [
+    {
+      "name": "Week of planned activity",
+      "literal": "40",
+      "rel": "Week"
+    }
+  ],
+  "standard": {
+    "name": "TTNINJS",
+    "version": "2.2",
+    "schema": "https://tt.se/spec/ttninjs/ttninjs-schema_2.2.json"
+  },
+  "genres": [
+    {
+      "name": "Ekonomi",
+      "uri": "http://tt.se/spec/sector/1.0/EKO"
+    }
+  ]
+}
