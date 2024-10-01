@@ -824,7 +824,7 @@
                 "type": "string"
               },
               "title": {
-                "description": "A human-readable title for the planned event coverage",
+                "description": "A human-readable title for the planned content",
                 "type": "string"
               },
               "pubStatus": {
@@ -839,7 +839,7 @@
               },
               "type": {
                 "type": "string",
-                "description": "The generic news type of the planned coverage. See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
+                "description": "The generic news type of the planned content. See: http://cv.iptc.org/newscodes/ninature/ nar:itemClass",
                 "$ref": "#/$defs/newsObjectType"
               },
               "commissioned": {
@@ -849,7 +849,7 @@
               },
               "dates": {
                 "type": "object",
-                "description": "Dates and times for this planned coverage.",
+                "description": "Dates and times for this planned content.",
                 "$ref": "#/$defs/datesObjectType"
               },
               "audiences": {
@@ -871,23 +871,23 @@
               },
               "exclAudience": {
                 "type": "array",
-                "description": "Excluded audience(s) for the content.",
+                "description": "Excluded audience(s) for the planned content.",
                 "items": {
                   "type": "string"
                 }
               },
               "edNote": {
-                "description": "Additional natural language information about the planned coverage addressed to the editorial people receiving and processing the item.",
+                "description": "Additional natural language information about the planned content addressed to the editorial people receiving and processing the item.",
                 "type": "string"
               },
               "urgency": {
-                "description": "The editorial urgency of the content, as scoped by the parent element.",
+                "description": "The editorial urgency of the planned content, as scoped by the parent element.",
                 "type": "number",
                 "minimum": 1,
                 "maximum": 9
               },
               "language": {
-                "description": "The human language used by the content. The value should follow IETF BCP47. nar:language",
+                "description": "The human language used by the planned content. The value should follow IETF BCP47. nar:language",
                 "type": "string"
               },
               "itemCount": {
