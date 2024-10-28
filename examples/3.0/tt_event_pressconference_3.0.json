@@ -1,24 +1,24 @@
 {
   "uri": "http://tt.se/media/event/00ccd8e3-21a3-4386-b384-d3ba57122372",
-  "pubstatus": "usable",
+  "pubStatus": "usable",
   "type": "event",
-  "copyrightholder": "TT",
-  "representationtype": "full",
+  "copyrightHolder": "TT",
+  "representationType": "full",
   "profile": "DATA",
   "version": "3",
-  "firstcreated": "2023-10-05T14:10:33+02:00",
-  "versioncreated": "2023-10-05T14:27:32+02:00",
+  "firstCreated": "2023-10-05T14:10:33+02:00",
+  "versionCreated": "2023-10-05T14:27:32+02:00",
   "language": "sv",
   "urgency": 1,
-  "eventdetails": {
+  "eventDetails": {
     "dates": {
-      "startdate": "2023-10-05T16:00:00+02:00",
-      "enddate": "2023-10-05"
+      "startDate": "2023-10-05T16:00:00+02:00",
+      "expectedEndDate": "2023-10-05"
     },
     "organiser": {
       "name": "Niklas Gillström",
       "rel": "Presssekreterare",
-      "contactinfo": [{
+      "contactInfo": [{
         "type": "Kontaktperson",
         "role": "Telefon",
         "value": "076-141 14 79"
@@ -30,16 +30,16 @@
   ],
   "bodies": [
     {
-      "contenttype": "text/plain",
+      "contentType": "text/plain",
       "value": "Finansminister Elisabeth Svantesson kommentera oppositionens budgetmotioner, riksdagens presscenter, Stockholm."
     },
     {
-      "contenttype": "text/html5",
+      "contentType": "text/html5",
       "value": "<html><body><article><section><h1>Pk med finansminister Elisabeth Svantesson kl 16</h1><div class=\"dat\"><span class=\"vignette\">Torsdag 5 Oktober 2023, klockan 16:00</span><span class=\"source\">TT</span></div><div class=\"bodytext\"><p>Finansminister Elisabeth Svantesson kommentera oppositionens budgetmotioner, riksdagens presscenter, Stockholm.</p><p/><p/></div></section></article></body></html>"
     }
   ],
   "slugline": "",
-  "altids": [
+  "altIds": [
     {
       "role": "originaltransmissionreference",
       "value": "00ccd8e3-21a3-4386-b384-d3ba57122372"

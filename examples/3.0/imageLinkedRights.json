@@ -4,7 +4,7 @@
   "versionCreated": "2013-07-08T08:12:00Z",
   "by": "John Smith",
   "rightsInfo": {
-    "langid": "http://w3.org/ns/odrl/2/",
+    "langId": "http://w3.org/ns/odrl/2/",
     "linkedRights": "http://example.agency.com/rights/editorialUseOnly"
   },
   "headlines": [
