@@ -38,8 +38,8 @@ JavaScript `ajv` validator.
 
 * Install npm
 * From a command line, run
-    $ npm -g install ajv ajv-cli ajv-formats
-    $ validation/javascript.sh
+    $ npm i
+    $ npm run test
 
 # License
 
