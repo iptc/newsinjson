@@ -39,7 +39,7 @@ where the ninjs objects are stored.
     {
       ninjs {
         uri
-        pubstatus
+        pubStatus
         language
         headlines {
           value
@@ -55,9 +55,9 @@ where the ninjs objects are stored.
 
     ```
     {
-      ninjs (pubstatus: "usable", language: "sv") {
+      ninjs (pubStatus: "usable", language: "sv") {
         uri
-        pubstatus
+        pubStatus
         language
         headlines {
           value
@@ -68,6 +68,6 @@ where the ninjs objects are stored.
 
     will only show the usable items in Swedish.
 
-The samples in the data.json come from TT, NTB, DPA and AP. They have been adapted to fit the ninjs 2.0 schema. 
+The samples in the data.json come from TT, NTB, DPA and AP. They have been adapted to fit the ninjs 3.0 schema. 
 
-_Johan Lindgren, IPTC News in JSON Working Group lead, September 2021_
+_Johan Lindgren, October 2024_

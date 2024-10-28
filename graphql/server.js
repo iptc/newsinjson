@@ -11,19 +11,19 @@ var schema = buildSchema(`
     type NINJS {
         uri: String!
         type: String
-        representationtype: String
+        representationType: String
         profile: String
         version: String
-        firstcreated: String
-        versioncreated: String
-        contentcreated: String
-        embargoed: String
-        pubstatus: String
+        firstCreated: String
+        versionCreated: String
+        contentCreated: String
+        embargoedUntil: String
+        pubStatus: String
         urgency: Int
-        copyrightholder: String
-        copyrightnotice: String
-        usageterms: String
-        ednote: String
+        copyrightHolder: String
+        copyrightNotice: String
+        usageTerms: String
+        edNote: String
         language: String
         descriptions: [DescriptionType]
         bodies: [BodyType]
@@ -34,22 +34,23 @@ var schema = buildSchema(`
         subjects: [SubjectType]
         events: [EventType]
         objects: [ObjectType]
-        infosources: [InfosourceType]
+        infoSources: [InfosourceType]
         title: String
         by: String
         slugline: String
         located: String
         renditions: [RenditionType]
-        altids: [AltIDType]
-        trustindicators: [TrustindicatorType]
+        altIds: [AltIDType]
+        trustIndicators: [TrustindicatorType]
         genres: [GenreType]
-        rightsinfo: RightsType
+        expires: String
+        rightsInfo: RightsType
       }
 
       type RightsType {
-        langid: String
-        linkedrights: String
-        encodedrights: String
+        langId: String
+        linkedRights: String
+        encodedRights: String
       }
 
       type AltIDType {
@@ -60,32 +61,44 @@ var schema = buildSchema(`
       type RenditionType {
         name: String!
         href: String
-        contenttype: String
+        contentType: String
         title: String
         height: Float
         width: Float
-        sizeinbytes: Float
+        sizeInBytes: Float
         duration: Float
         format: String
+        aspectRatio: String
+        videoCodec: String
+        frameRate: Float
+        poi: [PoiType]
+        transportProtocol: String
+        scanType: String
+        bitrate: String
+      }
+      
+      type PoiType {
+          x: Int
+          y: Int
       }
 
       type HeadlineType {
         role: String
-        contenttype: String
+        contentType: String
         value: String!
       }
 
       type BodyType {
         role: String
-        contenttype: String
-        charcount: Int
-        wordcount: Int
+        contentType: String
+        charCount: Int
+        wordCount: Int
         value: String!
       }
 
       type DescriptionType {
         role: String
-        contenttype: String
+        contentType: String
         value: String!
       }
     
@@ -114,7 +127,7 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
-        geometry_geojson: GeoType
+        geoJSON: GeoType
       }
 
       type GeoType {
@@ -127,9 +140,13 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
+        creator: String
+        relevance: Int
+        confidence: Int
       }
     
       type EventType {
+        id: String
         literal: String
         name: String
         rel: String
@@ -166,11 +183,11 @@ var schema = buildSchema(`
       type Query {
         ninjs(uri: String, 
             urgency: Int, 
-            pubstatus: String,
+            pubStatus: String,
             language: String,
             startAfter: String,
             startBefore: String,
-            copyrightholder: String,
+            copyrightHolder: String,
             topicid: String,
             filter: String): [NINJS]
     }
