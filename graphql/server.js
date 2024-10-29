@@ -33,6 +33,8 @@ var schema = buildSchema(`
         places: [PlaceType]
         subjects: [SubjectType]
         events: [EventType]
+        eventDetails: EventDetailType
+        plannedCoverage: [PlannedCoverageType]
         objects: [ObjectType]
         infoSources: [InfosourceType]
         title: String
@@ -71,7 +73,7 @@ var schema = buildSchema(`
         aspectRatio: String
         videoCodec: String
         frameRate: Float
-        poi: [PoiType]
+        poi: PoiType
         transportProtocol: String
         scanType: String
         bitrate: String
@@ -86,6 +88,55 @@ var schema = buildSchema(`
         role: String
         contentType: String
         value: String!
+      }
+      
+      type DateObjectType {
+          startDate: String
+          endDate: String
+          expectedStartDate: String
+          expectedEndDate: String
+          expectedDuration: String
+          recurrence: RecurrenceType
+      }
+      
+      type RecurrenceType {
+          recurrenceDates: [String]
+          recurrenceRules: [recurrenceRuleType]
+      } 
+      
+      type recurrenceRuleType {
+          frequency: String
+          interval: String
+          until: String
+          count: String
+      }
+      
+      type ContactInfoType {
+          type: String
+          role: String
+          lang: String
+          name: String
+          value: String
+          address: AddressType
+      }
+      
+      type AddressType {
+          lines: [String]
+          locality: String
+          area: String
+          postalCode: String
+          country: String
+      }
+      
+      type CommissionedType {
+          by: String
+          on: String
+          references: [ReferenceType]
+      }
+      
+      type ReferenceType {
+          name: String
+          value: String
       }
 
       type BodyType {
@@ -107,6 +158,7 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
+        contactInfo: [ContactInfoType]
       }
 
       type OrganisationType {
@@ -115,11 +167,14 @@ var schema = buildSchema(`
         rel: String
         uri: String
         symbols: [OrgSymbolsType]
+        contactInfo: [ContactInfoType]
       }
 
       type OrgSymbolsType {
         ticker: String
         exchange: String
+        symbolType: String
+        symbol: String
       }
 
       type PlaceType {
@@ -127,6 +182,7 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
+        contactInfo: [ContactInfoType]
         geoJSON: GeoType
       }
 
@@ -152,6 +208,39 @@ var schema = buildSchema(`
         rel: String
         uri: String
       }
+      
+      type EventDetailType {
+          eventStatus: String
+          plannedCoverageStatus: String
+          dates: DateObjectType
+          organiser: OrganisationType
+      }
+      
+      type PlannedCoverageType {
+          uri: String
+          title: String
+          pubStatus: String
+          type: String
+          comissioned: CommissionedType
+          audiences: [AudienceType]
+          exclAudience: [String]
+          edNote: String
+          urgency: Int
+          language: String
+          itemCount: ItemCountType
+          wordCount: Int
+          renditions: [RenditionType]
+      }
+      
+      type ItemCountType {
+          rangeFrom: Int
+          rangeTo: Int
+      }
+      
+      type AudienceType {
+          audience: String
+          significance: Int
+      }
     
       type ObjectType {
         literal: String
@@ -165,8 +254,9 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
+        contactInfo: [ContactInfoType]
       }
-
+      
       type TrustindicatorType {
         role: String
         title: String
@@ -181,7 +271,8 @@ var schema = buildSchema(`
     
 
       type Query {
-        ninjs(uri: String, 
+        ninjs(uri: String,
+            type: String,
             urgency: Int, 
             pubStatus: String,
             language: String,
@@ -200,6 +291,9 @@ var getItems = function(args) {
     if (args.uri) {
         svaret = svaret.filter(item => item.uri === args.uri);
     } else { 
+        if (args.type) {
+            svaret = svaret.filter(item => item.type === args.type);
+        } 
         if (args.urgency) {
             svaret = svaret.filter(item => item.urgency === args.urgency);
         } 

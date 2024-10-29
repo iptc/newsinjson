@@ -67,6 +67,8 @@ where the ninjs objects are stored.
     ```
 
     will only show the usable items in Swedish.
+	
+	If you want certain types of items you can filter on type like type: "text"
 
 The samples in the data.json come from TT, NTB, DPA and AP. They have been adapted to fit the ninjs 3.0 schema. 
 

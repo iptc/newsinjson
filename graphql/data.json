@@ -1,1120 +1,1711 @@
 [
-  {
-      "uri": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0?qt=H1Kdh42orF&et=0a1aza3c0",
-      "version": "0",
-      "type": "picture",
-      "urgency": 5,
-      "language": "en",
-      "versionCreated": "2019-11-15T14:39:44Z",
-      "firstCreated": "2019-11-15T13:39:59Z",
-      "pubStatus": "usable",
-      "edNote": "TURKEY OUT  NOV. 11, 2019 FILE PHOTO",
-      "title": "Turkey Islamic State",
-      "headlines": [{"value": "Turkey Islamic State"}],
-      "slugline": "Turkey Islamic State",
-      "usageTerms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
-      "provider": "AP",
-      "infoSources": [{"name": "DHA"}],
-      "subjects": [
-        {"literal": "i","name": "International News"},
-        {"literal": "file","name": "File photo"},
-        {"literal": "86aad5207dac100488ecba7fa5283c3e","name": "Government and politics","uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"}
-      ],
-      "organisations": [
-        {"literal": "84de12052c9c4e3ebca80df389e66fc3","name": "Islamic State group","uri": "http://cv.ap.org/id/84de12052c9c4e3ebca80df389e66fc3"},
-        {"literal": "5f36c12adb1447fa971c2f6d4d272333","name": "Turkey government","uri": "http://cv.ap.org/id/5f36c12adb1447fa971c2f6d4d272333"}
-      ],
-      "places": [
-        {
-          "literal": "661e09b87d5b10048287c076b8e3055c",
-          "name": "Turkey",
-          "uri": "http://cv.ap.org/id/661e09b87d5b10048287c076b8e3055c",
-          "geoJSON": { "type": "Point", "coordinates": [35,39]}
-        },
-        {
-          "literal": "6618c9f87d5b10048202c076b8e3055c",
-          "name": "Western Europe",
-          "uri": "http://cv.ap.org/id/6618c9f87d5b10048202c076b8e3055c"
-        },
-        {
-          "literal": "661850e07d5b100481f4c076b8e3055c",
-          "name": "Europe",
-          "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
-          "geoJSON": {"type": "Point","coordinates": [ 9.14062, 48.69096]}
-        },
-        {
-          "literal": "661850e07d5b100481f6c076b8e3055c",
-          "name": "Middle East",
-          "uri": "http://cv.ap.org/id/661850e07d5b100481f6c076b8e3055c"
-        },
-        {
-          "literal": "661e48387d5b10048291c076b8e3055c",
-          "name": "United States",
-          "uri": "http://cv.ap.org/id/661e48387d5b10048291c076b8e3055c",
-          "geoJSON": {"type": "Point","coordinates": [-98.5,39.76]}
-        },
-        {
-          "literal": "661850e07d5b100481f7c076b8e3055c",
-          "name": "North America",
-          "uri": "http://cv.ap.org/id/661850e07d5b100481f7c076b8e3055c",
-          "geoJSON": {"type": "Point", "coordinates": [ -100.54688, 46.07323]}
+    {
+        "uri": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0?qt=H1Kdh42orF&et=0a1aza3c0",
+        "version": "0",
+        "type": "picture",
+        "urgency": 5,
+        "language": "en",
+        "versionCreated": "2019-11-15T14:39:44Z",
+        "firstCreated": "2019-11-15T13:39:59Z",
+        "pubStatus": "usable",
+        "edNote": "TURKEY OUT  NOV. 11, 2019 FILE PHOTO",
+        "title": "Turkey Islamic State",
+        "headlines": [
+            {"value": "Turkey Islamic State"}
+        ],
+        "slugline": "Turkey Islamic State",
+        "usageTerms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
+        "provider": "AP",
+        "infoSources": [
+            {"name": "DHA"}
+        ],
+        "subjects": [
+            {
+                "literal": "i",
+                "name": "International News"
+            },
+            {
+                "literal": "file",
+                "name": "File photo"
+            },
+            {
+                "literal": "86aad5207dac100488ecba7fa5283c3e",
+                "name": "Government and politics",
+                "uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"
+            }
+        ],
+        "organisations": [
+            {
+                "literal": "84de12052c9c4e3ebca80df389e66fc3",
+                "name": "Islamic State group",
+                "uri": "http://cv.ap.org/id/84de12052c9c4e3ebca80df389e66fc3"
+            },
+            {
+                "literal": "5f36c12adb1447fa971c2f6d4d272333",
+                "name": "Turkey government",
+                "uri": "http://cv.ap.org/id/5f36c12adb1447fa971c2f6d4d272333"
+            }
+        ],
+        "places": [
+            {
+                "literal": "661e09b87d5b10048287c076b8e3055c",
+                "name": "Turkey",
+                "uri": "http://cv.ap.org/id/661e09b87d5b10048287c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        35,
+                        39
+                    ]
+                }
+            },
+            {
+                "literal": "6618c9f87d5b10048202c076b8e3055c",
+                "name": "Western Europe",
+                "uri": "http://cv.ap.org/id/6618c9f87d5b10048202c076b8e3055c"
+            },
+            {
+                "literal": "661850e07d5b100481f4c076b8e3055c",
+                "name": "Europe",
+                "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        9.14062,
+                        48.69096
+                    ]
+                }
+            },
+            {
+                "literal": "661850e07d5b100481f6c076b8e3055c",
+                "name": "Middle East",
+                "uri": "http://cv.ap.org/id/661850e07d5b100481f6c076b8e3055c"
+            },
+            {
+                "literal": "661e48387d5b10048291c076b8e3055c",
+                "name": "United States",
+                "uri": "http://cv.ap.org/id/661e48387d5b10048291c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        -98.5,
+                        39.76
+                    ]
+                }
+            },
+            {
+                "literal": "661850e07d5b100481f7c076b8e3055c",
+                "name": "North America",
+                "uri": "http://cv.ap.org/id/661850e07d5b100481f7c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        -100.54688,
+                        46.07323
+                    ]
+                }
+            }
+        ],
+        "descriptions": [
+            {
+                "role": "creditline",
+                "value": "ASSOCIATED PRESS"
+            },
+            {
+                "role": "caption",
+                "value": "FILE - In this Monday, Nov. 11, 2019 file photo, a man identified by Turkish media as 39-year-old Muhammad Darwis B., a U.S. citizen of Jordanian origin, stands in a no man's land between Turkey and Greece near Pazarkule border gate, Edirne, Turkey. Turkey's Interior Minister Suleyman Soylu said Friday Nov, 15, 2019 that the an American Islamic State group member has been deported to the United States. (DHA via AP, File)"
+            }
+        ],
+        "renditions": {
+            "main": {
+                "title": "Full Resolution (JPG)",
+                "format": "JPEG Baseline",
+                "href": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0.0/download?role=main&qt=H1Kdh42orF&cid=ad53e3cd73934bbabd38e8bf9c6aff4a&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
+                "sizeInBytes": 4764958,
+                "width": 3000,
+                "height": 2208,
+                "contentType": "image/jpeg"
+            },
+            "preview": {
+                "title": "Preview (JPG)",
+                "format": "JPEG Baseline",
+                "href": "http://mapi.associatedpress.com/v1/items/b2b6c3f4642f46deac7509d4db315ca0.0/preview/preview.jpg?nfe=true&s=512&app=MPK&tag=iid~b2b6c3f4642f46deac7509d4db315ca0!rsn~0!cid~5b8a7db244c14125b3caa243bd8bb961!ofn~Turkey_Islamic_State_46506.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~photo!fmt~JPEG%20Baseline",
+                "sizeInBytes": 120321,
+                "width": 512,
+                "height": 377,
+                "contentType": "image/jpeg"
+            },
+            "thumbnail": {
+                "title": "Thumbnail (JPG)",
+                "format": "JPEG Baseline",
+                "href": "http://mapi.associatedpress.com/v1/items/b2b6c3f4642f46deac7509d4db315ca0.0/thumbnail/thumbnail.jpg?nfe=true&app=MPK&tag=iid~b2b6c3f4642f46deac7509d4db315ca0!rsn~0!cid~47c49ccfc46f4c538892e6379baae111!ofn~Turkey_Islamic_State_46506.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~photo!fmt~JPEG%20Baseline",
+                "sizeInBytes": 27098,
+                "width": 125,
+                "height": 92,
+                "contentType": "image/jpeg"
+            },
+            "caption_nitf": {
+                "title": "NITF Caption Download",
+                "format": "IIM",
+                "contentType": "text/xml",
+                "href": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62"
+            }
         }
-      ],
-      "descriptions": [
-          {"role": "creditline", "value": "ASSOCIATED PRESS"},
-          { "role": "caption",  "value":  "FILE - In this Monday, Nov. 11, 2019 file photo, a man identified by Turkish media as 39-year-old Muhammad Darwis B., a U.S. citizen of Jordanian origin, stands in a no man's land between Turkey and Greece near Pazarkule border gate, Edirne, Turkey. Turkey's Interior Minister Suleyman Soylu said Friday Nov, 15, 2019 that the an American Islamic State group member has been deported to the United States. (DHA via AP, File)"}],
-      "renditions": {
-        "main": {
-          "title": "Full Resolution (JPG)",
-          "format": "JPEG Baseline",
-          "href": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0.0/download?role=main&qt=H1Kdh42orF&cid=ad53e3cd73934bbabd38e8bf9c6aff4a&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
-          "sizeInBytes": 4764958,
-          "width": 3000,
-          "height": 2208,
-          "contentType": "image/jpeg"
+    },
+    {
+        "uri": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62?qt=H1Kdh42orF&et=3a7aza0c0",
+        "version": "3",
+        "type": "text",
+        "urgency": 4,
+        "profile": "Spot Development",
+        "language": "en",
+        "versionCreated": "2019-11-15T14:42:10Z",
+        "firstCreated": "2019-11-15T09:49:57Z",
+        "pubStatus": "usable",
+        "ednote": "Eds: Updates with details. Updates photos. With AP Photos.",
+        "title": "Turkey-Islamic State",
+        "headlines": [
+            {"value": "American IS suspect repatriated from Turkish-Greek border"}
+        ],
+        "slugline": "AP-EU--Turkey-Islamic State, 3rd Ld-Writethru",
+        "descriptions": [
+            {
+                "role": "summary",
+                "value": "Turkey’s interior minister says an American Islamic State group suspect who was stranded in a no man’s land between Greece and Turkey has been deported to the United States. Suleyman Soylu said Friday the man was put on a plane from Istanbul."
+            }
+        ],
+        "located": "ANKARA, Turkey",
+        "copyrightNotice": "Copyright 2019 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+        "usageTerms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
+        "provider": "AP",
+        "infoSources": [
+            {"name": "AP"}
+        ],
+        "persons": [
+            {
+                "literal": "630ab2288d9e10048e17a55c96277d3e",
+                "name": "Recep Tayyip Erdogan",
+                "uri": "http://cv.ap.org/id/630ab2288d9e10048e17a55c96277d3e"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "i",
+                "name": "i"
+            },
+            {
+                "literal": "f25af2d07e4e100484f5df092526b43e",
+                "name": "General news",
+                "uri": "http://cv.ap.org/id/f25af2d07e4e100484f5df092526b43e"
+            },
+            {
+                "literal": "86aad5207dac100488ecba7fa5283c3e",
+                "name": "Government and politics",
+                "uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"
+            }
+        ],
+        "organisations": [
+            {
+                "literal": "84de12052c9c4e3ebca80df389e66fc3",
+                "name": "Islamic State group",
+                "uri": "http://cv.ap.org/id/84de12052c9c4e3ebca80df389e66fc3"
+            },
+            {
+                "literal": "5f36c12adb1447fa971c2f6d4d272333",
+                "name": "Turkey government",
+                "uri": "http://cv.ap.org/id/5f36c12adb1447fa971c2f6d4d272333"
+            }
+        ],
+        "places": [
+            {
+                "literal": "661e48387d5b10048291c076b8e3055c",
+                "name": "United States",
+                "uri": "http://cv.ap.org/id/661e48387d5b10048291c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        -98.5,
+                        39.76
+                    ]
+                }
+            },
+            {
+                "literal": "661850e07d5b100481f7c076b8e3055c",
+                "name": "North America",
+                "uri": "http://cv.ap.org/id/661850e07d5b100481f7c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        -100.54688,
+                        46.07323
+                    ]
+                }
+            },
+            {
+                "literal": "661e09b87d5b10048287c076b8e3055c",
+                "name": "Turkey",
+                "uri": "http://cv.ap.org/id/661e09b87d5b10048287c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        35,
+                        39
+                    ]
+                }
+            },
+            {
+                "literal": "6618c9f87d5b10048202c076b8e3055c",
+                "name": "Western Europe",
+                "uri": "http://cv.ap.org/id/6618c9f87d5b10048202c076b8e3055c"
+            },
+            {
+                "literal": "661850e07d5b100481f4c076b8e3055c",
+                "name": "Europe",
+                "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        9.14062,
+                        48.69096
+                    ]
+                }
+            },
+            {
+                "literal": "661850e07d5b100481f6c076b8e3055c",
+                "name": "Middle East",
+                "uri": "http://cv.ap.org/id/661850e07d5b100481f6c076b8e3055c"
+            },
+            {
+                "literal": "61743ec081be10048549df092526b43e",
+                "name": "Ankara",
+                "uri": "http://cv.ap.org/id/61743ec081be10048549df092526b43e",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        32.85427,
+                        39.91987
+                    ]
+                }
+            },
+            {
+                "literal": "6620e8187d5b100482d4c076b8e3055c",
+                "name": "Germany",
+                "uri": "http://cv.ap.org/id/6620e8187d5b100482d4c076b8e3055c"
+            },
+            {
+                "literal": "6620e8187d5b100482d5c076b8e3055c",
+                "name": "Greece",
+                "uri": "http://cv.ap.org/id/6620e8187d5b100482d5c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        22,
+                        39
+                    ]
+                }
+            },
+            {
+                "literal": "661e09b87d5b10048286c076b8e3055c",
+                "name": "Syria",
+                "uri": "http://cv.ap.org/id/661e09b87d5b10048286c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        38,
+                        35
+                    ]
+                }
+            },
+            {
+                "literal": "6436ae6881be10048550df092526b43e",
+                "name": "Istanbul",
+                "uri": "http://cv.ap.org/id/6436ae6881be10048550df092526b43e",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        28.94966,
+                        41.01384
+                    ]
+                }
+            }
+        ],
+        "associations": {
+            "1": {
+                "uri": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0?qt=H1Kdh42orF&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
+                "version": "0",
+                "type": "picture",
+                "headlines": [
+                    {"value": "Turkey Islamic State"}
+                ]
+            },
+            "2": {
+                "uri": "http://api.ap.org/media/v/content/c69aad13fe8b47f39efe0f7bb37e0dbc?qt=H1Kdh42orF&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
+                "version": "0",
+                "type": "picture",
+                "headlines": [
+                    {"value": "Germany Turkey Islamic State"}
+                ]
+            }
         },
-        "preview": {
-          "title": "Preview (JPG)",
-          "format": "JPEG Baseline",
-          "href": "http://mapi.associatedpress.com/v1/items/b2b6c3f4642f46deac7509d4db315ca0.0/preview/preview.jpg?nfe=true&s=512&app=MPK&tag=iid~b2b6c3f4642f46deac7509d4db315ca0!rsn~0!cid~5b8a7db244c14125b3caa243bd8bb961!ofn~Turkey_Islamic_State_46506.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~photo!fmt~JPEG%20Baseline",
-          "sizeInBytes": 120321,
-          "width": 512,
-          "height": 377,
-          "contentType": "image/jpeg"
-        },
-        "thumbnail": {
-          "title": "Thumbnail (JPG)",
-          "format": "JPEG Baseline",
-          "href": "http://mapi.associatedpress.com/v1/items/b2b6c3f4642f46deac7509d4db315ca0.0/thumbnail/thumbnail.jpg?nfe=true&app=MPK&tag=iid~b2b6c3f4642f46deac7509d4db315ca0!rsn~0!cid~47c49ccfc46f4c538892e6379baae111!ofn~Turkey_Islamic_State_46506.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~photo!fmt~JPEG%20Baseline",
-          "sizeInBytes": 27098,
-          "width": 125,
-          "height": 92,
-          "contentType": "image/jpeg"
-        },
-        "caption_nitf": {
-          "title": "NITF Caption Download",
-          "format": "IIM",
-          "contentType": "text/xml",
-          "href": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62"
+        "renditions": {
+            "nitf": {
+                "title": "NITF Story Download",
+                "format": "IIM",
+                "contentType": "text/xml",
+                "href": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62.3/download?type=text&format=NITF&rid=9aabe4b41e3e4ababb66ccaefbb3821c&cid=0&fid=73c4871d1efd4262b76dcf9df91ced1f&trf=NAM0116&qt=H1Kdh42orF&dt=SyE9hV2ir&ai=2cc1cee3495f548653f5d38130750408&et=3a7aza0c0"
+            },
+            "anpa": {
+                "title": "ANPA Story Download",
+                "format": "ANPA1312",
+                "contentType": "application/octet-stream",
+                "href": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62.3/download?type=text&format=ANPA&rid=9aabe4b41e3e4ababb66ccaefbb3821c&cid=0&fid=73c4871d1efd4262b76dcf9df91ced1f&trf=NAM0116&qt=H1Kdh42orF&dt=SyE9hV2ir&ai=2cc1cee3495f548653f5d38130750408&et=3a7aza0c0"
+            }
         }
-      }
-  },
-  
-  {
-      "uri": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62?qt=H1Kdh42orF&et=3a7aza0c0",
-      "version": "3",
-      "type": "text",
-      "urgency": 4,
-      "profile": "Spot Development",
-      "language": "en",
-      "versionCreated": "2019-11-15T14:42:10Z",
-      "firstCreated": "2019-11-15T09:49:57Z",
-      "pubStatus": "usable",
-      "ednote": "Eds: Updates with details. Updates photos. With AP Photos.",
-      "title": "Turkey-Islamic State",
-      "headlines": [{"value": "American IS suspect repatriated from Turkish-Greek border"}],
-      "slugline": "AP-EU--Turkey-Islamic State, 3rd Ld-Writethru",
-      "descriptions": [{"role": "summary", "value": "Turkey’s interior minister says an American Islamic State group suspect who was stranded in a no man’s land between Greece and Turkey has been deported to the United States. Suleyman Soylu said Friday the man was put on a plane from Istanbul."}],
-      "located": "ANKARA, Turkey",
-      "copyrightNotice": "Copyright 2019 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
-      "usageTerms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
-      "provider": "AP",
-      "infoSources": [{"name": "AP"}],
-      "persons": [{"literal": "630ab2288d9e10048e17a55c96277d3e","name": "Recep Tayyip Erdogan","uri": "http://cv.ap.org/id/630ab2288d9e10048e17a55c96277d3e"}],
-      "subjects": [
-        {"literal": "i","name": "i"},
-        {"literal": "f25af2d07e4e100484f5df092526b43e","name": "General news","uri": "http://cv.ap.org/id/f25af2d07e4e100484f5df092526b43e"},
-        {"literal": "86aad5207dac100488ecba7fa5283c3e","name": "Government and politics","uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"}
-      ],
-      "organisations": [
-        {"literal": "84de12052c9c4e3ebca80df389e66fc3","name": "Islamic State group","uri": "http://cv.ap.org/id/84de12052c9c4e3ebca80df389e66fc3"},
-        {"literal": "5f36c12adb1447fa971c2f6d4d272333","name": "Turkey government", "uri": "http://cv.ap.org/id/5f36c12adb1447fa971c2f6d4d272333"}
-      ],
-      "places": [
-        {
-          "literal": "661e48387d5b10048291c076b8e3055c",
-          "name": "United States",
-          "uri": "http://cv.ap.org/id/661e48387d5b10048291c076b8e3055c",
-          "geoJSON": {"type": "Point","coordinates": [-98.5,39.76 ] }
-        },
-        {
-          "literal": "661850e07d5b100481f7c076b8e3055c",
-          "name": "North America",
-          "uri": "http://cv.ap.org/id/661850e07d5b100481f7c076b8e3055c",
-          "geoJSON": { "type": "Point", "coordinates": [-100.54688, 46.07323 ]}
-        },
-        {
-          "literal": "661e09b87d5b10048287c076b8e3055c",
-          "name": "Turkey",
-          "uri": "http://cv.ap.org/id/661e09b87d5b10048287c076b8e3055c",
-          "geoJSON": {  "type": "Point", "coordinates": [ 35, 39 ] }
-        },
-        {
-          "literal": "6618c9f87d5b10048202c076b8e3055c",
-          "name": "Western Europe",
-          "uri": "http://cv.ap.org/id/6618c9f87d5b10048202c076b8e3055c"
-        },
-        {
-          "literal": "661850e07d5b100481f4c076b8e3055c",
-          "name": "Europe",
-          "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
-          "geoJSON": { "type": "Point", "coordinates": [ 9.14062, 48.69096 ]}
-        },
-        {
-          "literal": "661850e07d5b100481f6c076b8e3055c",
-          "name": "Middle East",
-          "uri": "http://cv.ap.org/id/661850e07d5b100481f6c076b8e3055c"
-        },
-        {
-          "literal": "61743ec081be10048549df092526b43e",
-          "name": "Ankara",
-          "uri": "http://cv.ap.org/id/61743ec081be10048549df092526b43e",
-          "geoJSON": {"type": "Point", "coordinates": [  32.85427, 39.91987 ] }
-        },
-        {
-          "literal": "6620e8187d5b100482d4c076b8e3055c",
-          "name": "Germany",
-          "uri": "http://cv.ap.org/id/6620e8187d5b100482d4c076b8e3055c"
-        },
-        {
-          "literal": "6620e8187d5b100482d5c076b8e3055c",
-          "name": "Greece",
-          "uri": "http://cv.ap.org/id/6620e8187d5b100482d5c076b8e3055c",
-          "geoJSON": { "type": "Point", "coordinates": [22,   39 ]}
-        },
-        {
-          "literal": "661e09b87d5b10048286c076b8e3055c",
-          "name": "Syria",
-          "uri": "http://cv.ap.org/id/661e09b87d5b10048286c076b8e3055c",
-          "geoJSON": { "type": "Point", "coordinates": [ 38, 35]}
-        },
-        {
-          "literal": "6436ae6881be10048550df092526b43e",
-          "name": "Istanbul",
-          "uri": "http://cv.ap.org/id/6436ae6881be10048550df092526b43e",
-          "geoJSON": { "type": "Point", "coordinates": [ 28.94966, 41.01384 ] }
+    },
+    {
+        "uri": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74?qt=H1Kdh42orF&et=0a3aza2c0",
+        "version": "0",
+        "type": "audio",
+        "urgency": 4,
+        "profile": "Actuality",
+        "language": "en",
+        "versionCreated": "2019-11-14T16:17:53Z",
+        "firstCreated": "2019-11-14T16:17:53Z",
+        "pubStatus": "usable",
+        "title": "Trump Impeachment What s Next-Pelosi 1",
+        "headlines": [
+            {"value": "Next up in impeachment hearings: A parade of key witnesses"}
+        ],
+        "located": "CAPITOL HILL",
+        "copyrightNotice": "Copyright 2019 The Associated Press, though the copyright in some contents and materials incorporated herein may be owned by third parties where so indicated. All rights reserved. This material may not be published, broadcast, rewritten or redistributed without permission.",
+        "usageTerms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
+        "provider": "AP",
+        "infoSources": [
+            {"name": "ASSOCIATED PRESS"}
+        ],
+        "persons": [
+            {
+                "literal": "850c8ab4e24d4c128250621e377c83dd",
+                "name": "Nancy Pelosi",
+                "uri": "http://cv.ap.org/id/850c8ab4e24d4c128250621e377c83dd"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "p",
+                "name": "Political News"
+            },
+            {
+                "literal": "86aad5207dac100488ecba7fa5283c3e",
+                "name": "Government and politics",
+                "uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"
+            },
+            {
+                "literal": "86c17a007dac1004898fba7fa5283c3e",
+                "name": "Impeachments",
+                "uri": "http://cv.ap.org/id/86c17a007dac1004898fba7fa5283c3e"
+            },
+            {
+                "literal": "86bc3e287dac1004895dba7fa5283c3e",
+                "name": "Political issues",
+                "uri": "http://cv.ap.org/id/86bc3e287dac1004895dba7fa5283c3e"
+            },
+            {
+                "literal": "17092930618f41079a063c02851881a1",
+                "name": "Trump impeachment inquiry",
+                "uri": "http://cv.ap.org/id/17092930618f41079a063c02851881a1"
+            }
+        ],
+        "descriptions": [
+            {
+                "role": "caption",
+                "value": "House Speaker Nancy Pelosi says the president committed an impeachable offense. "
+            }
+        ],
+        "renditions": {
+            "main": {
+                "title": "Full Resolution (MP3)",
+                "format": "MP3",
+                "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?role=main&qt=H1Kdh42orF&cid=62000ab669e047b2b00b5faa1d08f41d&pt=NXw3Njg5NXwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+                "sizeInBytes": 189504,
+                "duration": 7896,
+                "contentType": "audio/mpeg"
+            },
+            "main-1": {
+                "title": "Full Resolution (MPG)",
+                "format": "MPEG",
+                "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?role=main&qt=H1Kdh42orF&cid=c5bf75e74985448daab6cc615757195b&pt=NXw3Njg5NXwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+                "sizeInBytes": 189504,
+                "duration": 7896,
+                "contentType": "audio/mpeg"
+            },
+            "caption_nitf": {
+                "title": "NITF Caption Download",
+                "format": "IIM",
+                "contentType": "text/xml",
+                "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza2c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
+            }
         }
-      ],
-      "associations": {
-        "1": {
-          "uri": "http://api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0?qt=H1Kdh42orF&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
-          "version": "0",
-          "type": "picture",
-          "headlines": [{"value": "Turkey Islamic State"}]
-        },
-        "2": {
-          "uri": "http://api.ap.org/media/v/content/c69aad13fe8b47f39efe0f7bb37e0dbc?qt=H1Kdh42orF&et=0a1aza3c0&ai=2cc1cee3495f548653f5d38130750408/f1a1b7afc83b4963822157483f758e62",
-          "version": "0",
-          "type": "picture",
-          "headlines": [{"value": "Germany Turkey Islamic State"}]
+    },
+    {
+        "uri": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4?qt=H1Kdh42orF&et=0a3aza9c0",
+        "version": "0",
+        "type": "video",
+        "language": "en",
+        "versionCreated": "2019-11-14T18:50:57Z",
+        "firstCreated": "2019-11-14T18:50:56Z",
+        "pubStatus": "usable",
+        "ednote": "APWhollyOwned",
+        "title": "US Pelosi McCarthy (CR)",
+        "headlines": [
+            {"value": "House leaders double down on impeachment positions"}
+        ],
+        "slugline": "US Pelosi McCarthy (CR)",
+        "located": "Washington",
+        "copyrightNotice": "Copyright 2019 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+        "usageTerms": "This content is intended for editorial use only. For other uses, additional clearances may be required. International: AP Clients Only | US: AP Clients Only / This video may not be edited",
+        "provider": "AP",
+        "infoSources": [
+            {"name": "ASSOCIATED PRESS"}
+        ],
+        "persons": [
+            {
+                "literal": "850c8ab4e24d4c128250621e377c83dd",
+                "name": "Nancy Pelosi",
+                "uri": "http://cv.ap.org/id/850c8ab4e24d4c128250621e377c83dd"
+            },
+            {
+                "literal": "42fcd5108d2610048a34f7ae5e3ffd3e",
+                "name": "Joe Biden",
+                "uri": "http://cv.ap.org/id/42fcd5108d2610048a34f7ae5e3ffd3e"
+            },
+            {
+                "literal": "a6331b54c46e4ca8b79fa40fada95db5",
+                "name": "Donald Trump",
+                "uri": "http://cv.ap.org/id/a6331b54c46e4ca8b79fa40fada95db5"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "a",
+                "name": "National"
+            },
+            {
+                "literal": "9c0bd01cd7c84527bad1319c99abb3ea",
+                "name": "Bribery, graft and conflicts of interest",
+                "uri": "http://cv.ap.org/id/9c0bd01cd7c84527bad1319c99abb3ea"
+            },
+            {
+                "literal": "48612b807c2b4b93bbbacbf54f547ad5",
+                "name": "Crime",
+                "uri": "http://cv.ap.org/id/48612b807c2b4b93bbbacbf54f547ad5"
+            },
+            {
+                "literal": "f25af2d07e4e100484f5df092526b43e",
+                "name": "General news",
+                "uri": "http://cv.ap.org/id/f25af2d07e4e100484f5df092526b43e"
+            },
+            {
+                "literal": "6e70a850885f10048d0dcb8225d5863e",
+                "name": "Military legal affairs",
+                "uri": "http://cv.ap.org/id/6e70a850885f10048d0dcb8225d5863e"
+            },
+            {
+                "literal": "3b7438807d7010048477ba7fa5283c3e",
+                "name": "Military and defense",
+                "uri": "http://cv.ap.org/id/3b7438807d7010048477ba7fa5283c3e"
+            },
+            {
+                "literal": "86aad5207dac100488ecba7fa5283c3e",
+                "name": "Government and politics",
+                "uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"
+            },
+            {
+                "literal": "b6559a30872a10048eadd7c656897a02",
+                "name": "Political corruption",
+                "uri": "http://cv.ap.org/id/b6559a30872a10048eadd7c656897a02"
+            },
+            {
+                "literal": "86bc3e287dac1004895dba7fa5283c3e",
+                "name": "Political issues",
+                "uri": "http://cv.ap.org/id/86bc3e287dac1004895dba7fa5283c3e"
+            },
+            {
+                "literal": "86c17a007dac1004898fba7fa5283c3e",
+                "name": "Impeachments",
+                "uri": "http://cv.ap.org/id/86c17a007dac1004898fba7fa5283c3e"
+            }
+        ],
+        "places": [
+            {
+                "literal": "661cd9087d5b10048265c076b8e3055c",
+                "name": "Ukraine",
+                "uri": "http://cv.ap.org/id/661cd9087d5b10048265c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        32,
+                        49
+                    ]
+                }
+            },
+            {
+                "literal": "6618c9f87d5b10048200c076b8e3055c",
+                "name": "Eastern Europe",
+                "uri": "http://cv.ap.org/id/6618c9f87d5b10048200c076b8e3055c"
+            },
+            {
+                "literal": "661850e07d5b100481f4c076b8e3055c",
+                "name": "Europe",
+                "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
+                "geoJSON": {
+                    "type": "Point",
+                    "coordinates": [
+                        9.14062,
+                        48.69096
+                    ]
+                }
+            }
+        ],
+        "descriptions": [
+            {
+                "role": "caption",
+                "value": "As the Trump impeachment hearings go public, House Democrats are refining the case against the president to a simple allegation: Bribery. Meanwhile, Republicans are dismissing the testimony so far as hearsay, at best second-hand information. (Nov. 14)"
+            }
+        ],
+        "renditions": {
+            "main": {
+                "title": "Full Resolution (MP4 640x360)",
+                "format": "MPEG",
+                "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?role=main&qt=H1Kdh42orF&cid=e2da4d19d5dc4378a17ab6157e83f906&pt=Nnw3NDAyNHwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+                "sizeInBytes": 1880522908,
+                "width": 640,
+                "height": 360,
+                "duration": 128929,
+                "contentType": "video/mpeg"
+            },
+            "main_1080_29": {
+                "title": "Full Resolution (MP4 1920x1080)",
+                "format": "MPEG",
+                "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?role=main&qt=H1Kdh42orF&cid=714e0b23feed42318f07705982a533dd&pt=Nnw3NDAyNHwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+                "sizeInBytes": 1880522908,
+                "width": 1920,
+                "height": 1080,
+                "contentType": "video/mpeg"
+            },
+            "preview": {
+                "title": "Preview (JPG 1920x1080)",
+                "format": "JPEG Baseline",
+                "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/preview/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_1920x1080.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~030addea5c734b8f8126a1e391db7872!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_1920x1080.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~video!fmt~JPEG%20Baseline",
+                "sizeInBytes": 1880522908,
+                "width": 1920,
+                "height": 1080,
+                "contentType": "image/jpeg"
+            },
+            "preview_300": {
+                "title": "Preview (JPG 400x300)",
+                "format": "JPEG Baseline",
+                "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/preview/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_400x300.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~c262fedd77294a1d89edabe9134f9206!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_400x300.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~video!fmt~JPEG%20Baseline",
+                "sizeInBytes": 1880522908,
+                "width": 400,
+                "height": 300,
+                "contentType": "image/jpeg"
+            },
+            "thumbnail": {
+                "title": "Thumbnail (JPG 105x70)",
+                "format": "JPEG Baseline",
+                "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~e4c4b7d20ebd4179a6bde4e48fb42c58!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+                "sizeInBytes": 1880522908,
+                "width": 105,
+                "height": 70,
+                "contentType": "image/jpeg"
+            },
+            "thumbnail_69": {
+                "title": "Thumbnail (JPG 92x69)",
+                "format": "JPEG Baseline",
+                "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_092x069.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~12f5743ecd7a42ecb02fb0de33bfce16!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_092x069.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+                "sizeInBytes": 1880522908,
+                "width": 92,
+                "height": 69,
+                "contentType": "image/jpeg"
+            },
+            "thumbnail_70": {
+                "title": "Thumbnail (JPG 105x70)",
+                "format": "JPEG Baseline",
+                "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_105x070.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~41474a970b234153b091dbf998388b98!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_105x070.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+                "sizeInBytes": 1880522908,
+                "width": 105,
+                "height": 70,
+                "contentType": "image/jpeg"
+            },
+            "thumbnail_135": {
+                "title": "Thumbnail (JPG 180x135)",
+                "format": "JPEG Baseline",
+                "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_180x135.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~ccc561499bc849a9b8bd6aea5b1e1c67!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_180x135.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+                "sizeInBytes": 1880522908,
+                "width": 180,
+                "height": 135,
+                "contentType": "image/jpeg"
+            },
+            "caption_nitf": {
+                "title": "NITF Caption Download",
+                "format": "IIM",
+                "contentType": "text/xml",
+                "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
+            },
+            "script_nitf": {
+                "title": "NITF Script Download",
+                "format": "IIM",
+                "contentType": "text/xml",
+                "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=script&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
+            }
         }
-      },
-      "renditions": {
-        "nitf": {
-          "title": "NITF Story Download",
-          "format": "IIM",
-          "contentType": "text/xml",
-          "href": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62.3/download?type=text&format=NITF&rid=9aabe4b41e3e4ababb66ccaefbb3821c&cid=0&fid=73c4871d1efd4262b76dcf9df91ced1f&trf=NAM0116&qt=H1Kdh42orF&dt=SyE9hV2ir&ai=2cc1cee3495f548653f5d38130750408&et=3a7aza0c0"
+    },
+    {
+        "uri": "http://tt.se/media/text/191008-malmomordfrsk-1078821",
+        "type": "text",
+        "representationType": "complete",
+        "profile": "PUBL",
+        "versionCreated": "2019-10-08T19:26:37+02:00",
+        "pubStatus": "usable",
+        "copyrightHolder": "TT",
+        "language": "sv",
+        "urgency": 4,
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "Inne i köpcentret Emporia i Malmö knivhöggs en kvinna i slutet av augusti så allvarligt att hon fick livshotande skador. Nu åtalas en 24-årig man för mordförsök. Enligt åklagaren knivhöggs kvinnan flera gånger och träffades bland annat i huvudet och ryg"
+            }
+        ],
+        "bodies": [
+            {
+                "contentType": "plain",
+                "charcount": 3739,
+                "value": "Åtalas för knivattack på köpcentrum i Malmö\nBrott TT\nInne i köpcentret Emporia i Malmö knivhöggs en kvinna i slutet av augusti så allvarligt att hon fick livshotande skador. Nu åtalas en 24-årig man för mordförsök.\nEnligt åklagaren knivhöggs kvinnan flera gånger och träffades bland annat i huvudet och ryggen. Brottet avbröts av vittnen på plats och därför menar åklagaren att bara tillfälliga omständigheter gjorde att kvinnan inte dödades.\nDen åtalade förnekar brott.\nsdltdcdb833\u2013NormalHires.jpg En 24-årig man åtalas i Malmö tingsrätt för ett knivöverfall mot en kvinna på köpcentret Emporia i Malmö. Arkivbild.\nJohan Nilsson/TT\n\n"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "02000000",
+                "name": "Brott, lag och rätt",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/02000000"
+            }
+        ],
+        "headlines": [
+            {"value": "Åtalas för knivattack på köpcentrum i Malmö"}
+        ],
+        "slugline": "malmömordförsök"
+    },
+    {
+        "uri": "http://tt.se/media/text/191008-malmomord-1078822",
+        "type": "text",
+        "representationType": "complete",
+        "profile": "PUBL",
+        "versionCreated": "2019-10-08T19:26:37+02:00",
+        "pubStatus": "usable",
+        "copyrightHolder": "TT",
+        "language": "sv",
+        "urgency": 3,
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "Inne i köpcentret Emporia i Malmö knivhöggs en kvinna i slutet av augusti så allvarligt att hon fick livshotande skador. Nu åtalas en 24-årig man för mordförsök. Enligt åklagaren knivhöggs kvinnan flera gånger och träffades bland annat i huvudet och ryg"
+            }
+        ],
+        "bodies": [
+            {
+                "contentType": "plain",
+                "charcount": 3739,
+                "value": "Åtalas för knivattack på köpcentrum i Malmö\nBrott TT\nInne i köpcentret Emporia i Malmö knivhöggs en kvinna i slutet av augusti så allvarligt att hon fick livshotande skador. Nu åtalas en 24-årig man för mordförsök.\nEnligt åklagaren knivhöggs kvinnan flera gånger och träffades bland annat i huvudet och ryggen. Brottet avbröts av vittnen på plats och därför menar åklagaren att bara tillfälliga omständigheter gjorde att kvinnan inte dödades.\nDen åtalade förnekar brott.\nsdltdcdb833\u2013NormalHires.jpg En 24-årig man åtalas i Malmö tingsrätt för ett knivöverfall mot en kvinna på köpcentret Emporia i Malmö. Arkivbild.\nJohan Nilsson/TT\n\n"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "02000000",
+                "name": "Brott, lag och rätt",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/02000000"
+            }
+        ],
+        "headlines": [
+            {"value": "Åtalas för knivattack på köpcentrum i Malmö"}
+        ],
+        "slugline": "malmömord"
+    },
+    {
+        "uri": "http://tt.se/media/text/191008-brarapport-1078843",
+        "type": "text",
+        "representationType": "complete",
+        "profile": "PUBL",
+        "versionCreated": "2019-10-08T19:26:37+02:00",
+        "pubStatus": "draft",
+        "copyrightHolder": "TT",
+        "language": "sv",
+        "urgency": 4,
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "Det är 80 procent av befolkningen (16\u201384 år) som tror att brottsligheten i Sverige har ökat under de senaste tre åren, vilket är något mindre än 2018 då andelen var 82 procent. Sett över tid har andelen legat relativt stabilt, men ligger på lite lägre n"
+            }
+        ],
+        "bodies": [
+            {
+                "contentType": "plain",
+                "charcount": 3739,
+                "value": "BRÅRAPPORT: FORTSATT STOR ORO FÖR BROTTSLIGHET\nDet är 80 procent av befolkningen (16\u201384 år) som tror att brottsligheten i Sverige har ökat under de senaste tre åren, vilket är något mindre än 2018 då andelen var 82 procent. Sett över tid har andelen legat relativt stabilt, men ligger på lite lägre nivåer 2019 jämfört med de första åren.\nDet är en något större andel kvinnor än män som tror att antalet brott har ökat under de senaste tre åren, och vidare är andelen störst bland de äldre åldersgrupperna, framför allt den äldsta (75\u201384 år).\nDrygt 43 % av befolkningen (16\u201384 år) oroar sig i stor utsträckning över brottsligheten i samhället, vilket är på ungefär samma nivå som 2018 (42 %). Fram till och med 2011 minskade andelen som känner oro, och därefter skedde en ökning med årliga variationer som pågick fram till och med 2017.\nAndelen som känner stor oro över brottsligheten i samhället är lika stor bland män som bland kvinnor och sett till ålder är andelen störst bland personer i åldrarna 65\u201374 år.\n\n\n"
+            }
+        ],
+        "headlines": [
+            {"value": "BRÅRAPPORT: FORTSATT STOR ORO FÖR BROTTSLIGHET"}
+        ],
+        "slugline": "BRÅRAPPORT"
+    },
+    {
+        "uri": "http://tt.se/media/text/191020-allsvnorrkoping-1087436",
+        "type": "text",
+        "representationType": "complete",
+        "profile": "PUBL",
+        "versionCreated": "2019-10-20T19:26:37+02:00",
+        "pubStatus": "usable",
+        "copyrightHolder": "TT",
+        "language": "sv",
+        "urgency": 4,
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "Möjligheten att ta medalj är minimal \u2013 men IFK Norrköping kan i alla fall vara med och avgöra guldstriden. I sista omgången väntar Djurgården på Östgötaporten. För Kalmar FF väntar en helt annan uppgift \u2013 att undvika nedflyttning eller kvalspel. Andeas "
+            }
+        ],
+        "ednote": "Uppdateras",
+        "bodies": [
+            {
+                "contentType": "plain",
+                "charcount": 3739,
+                "value": "Tung förlust för Kalmar mot länge tamt Norrköping\nFotboll TT\nMöjligheten att ta medalj är minimal \u2013 men IFK Norrköping kan i alla fall vara med och avgöra guldstriden.\nI sista omgången väntar Djurgården på Östgötaporten.\nFör Kalmar FF väntar en helt annan uppgift \u2013 att undvika nedflyttning eller kvalspel.\nAndeas Blomqvists mål stod sig som matchens enda men Norrköpings 1\u20130-seger lär sakna större betydelse. Upp till toppkvartetten Hammarby, Malmö FF, Djurgården och AIK är det sex poäng med lika många kvar att spela om.\nDen lilla chans som fanns att haka på i den absoluta toppen försvann i takt med att målen trillade in mot Sundsvall före EM-kvaluppehållet. Norrköping räddade till slut 4\u20134, men med två förlorade gick tåget i kampen om medaljerna och en plats i Europa \u2013 via allsvenskan \u2013 nästa år.\nDet var inte direkt övertända spelare, beredda att springa genom eld och vatten, som klev in på Östgötaporten för näst sista gången i år.\nOch klass har ju en fallenhet att förlora mot motivation.\nMed den överhängande risken att behöva kvala \u2013 eller något än värre \u2013 avslutar Kalmar FF serien som om den vore en cupturnering.\nStark halvlek \u2013 men ingen utdelning\nTränaren Magnus Pehrsson kunde matcha en elva som tränat tillsammans de senaste två veckorna. Blott 20 gjorda mål den här säsongen förklarar till stor del läget i tabellen. För att få bättre snurr framåt fick Rasmus Elm en roll som släpande anfallare bakom Geir André Herrem och Alexander Jakobsen, lånet från just IFK Norrköping.\nNär Elm är stark och frisk är han fortfarande en av allsvenskans främsta spelare. De första 45 var han just det \u2013 stark och frisk. Ett tungt distansskott över och ett avslut mitt på Isak Pettersson var goda försök, men inte roligare än så.\nMer imponerade var det disciplinerade kollektiva arbetet. Ett Norrköping på trekvartsfart fick inte mycket uträttat.\n\u2013 Så där som helhet. Vi har alldeles för dålig aktivitet och energi. Det ser ängsligt ut och så vill vi inte ha det, sade managern Jens Gustafsson till C\u2009More i halvtid.\nHolmberg och Thern tillbaka\nKalle Holmberg, tillbaka efter skada, avlöste Sead Haksabanovic i hemmaanfallet till andra halvlek. Och ibland behövs det inte mer än så. Efter fyra minuter på planen frispelade Holmberg elegant Andreas Blomqvist, som lugnt placerade 1\u20130 förbi Lucas Hägg Johansson.\nEfter två korsbandsskador på lika många år har Blomqvist långsamt jobbat sig tillbaka till sin fulla potential. Målet var hans första för säsongen.\nSimon Thern har också missat en hel del fotboll på sistone, men av andra skäl än enbart kroppsliga. Mittfältaren talade nyligen ut om sin ångest. När Blomqvist fick kramp, välkomnades Thern in i gemenskapen med allsång från supportrarna på Curva Nordahl.\nKalmar fick inte den poäng man kom för att ta \u2013 och länge förtjänade. Med Falkenberg (hemma på lördag) och sedan Sirius borta i sista omgången har klubben, som spelat allsvenskt i ett sträck sedan 2004, allt i egna händer.\nSett till hur det såg ut över 90 minuter mot Norrköping borde det sluta väl. Tung motgång i slutminuterna: Mittbacken Viktor Elm haltade ut.\nHenrik Skiöld/TT\nsdlTpjTDmwzAzI\u2013NormalHires.jpg Norrköpings Henrik Castegren gratulerar Andreas Blomqvist efter segermålet mot Kalmar FF på Östgötaporten.\nStefan Jerrevång/TT\n\nFakta: Så avgörs bottenstriden\n11) Östersund, 28 matcher, 25 poäng, minus 18 mål.\nKvar att möta: Hammarby (hemma), IFK Göteborg (borta).\n12) Sirius, 28 matcher, 25 poäng, minus 20.\nKvar att möta: AFC Eskilstuna (b), Kalmar (h).\n13) Kalmar, 28 matcher, 23 poäng, minus 21.\nKvar att möta: Falkenberg (h), Sirius (b)\n14) Sundsvall, 28 matcher, 20 poäng, minus 17.\nKvar att möta: Helsingborg (h), AIK (b)\n15) AFC Eskilstuna, 28 matcher, 19 poäng, minus 31.\nKvar att möta: Sirius (h), Falkenberg (b)\n16) Falkenberg, 28 matcher, 19 poäng, minus 38.\nKvar att möta: Kalmar (b), Eskilstuna (h).\n\nFotnot: Lag placerat som 14:e kvalar i dubbelmöte med trean i superettan om en plats i nästa års allsvenska, lag 15 och 16 flyttas ned till superettan.\n\n\n\n"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "15000000",
+                "name": "Sport",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/15000000"
+            },
+            {
+                "literal": "20001065",
+                "name": "fotboll",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/20001065"
+            }
+        ],
+        "places": [
+            {
+                "uri": "http://tt.se/spec/place/1.0",
+                "geoJSON": {
+                    "coordinates": [
+                        18.643501,
+                        60.128161
+                    ],
+                    "type": "Point"
+                },
+                "name": "Sverige"
+            },
+            {
+                "uri": "http://tt.se/spec/place/1.0",
+                "geoJSON": {
+                    "coordinates": [
+                        16.192421,
+                        58.587745
+                    ],
+                    "type": "Point"
+                },
+                "name": "Norrköping, Sverige"
+            }
+        ],
+        "byline": "Henrik Skiöld/TT",
+        "headlines": [
+            {"value": "Tung förlust för Kalmar mot länge tamt Norrköping"}
+        ],
+        "slugline": "allsv-norrköping"
+    },
+    {
+        "uri": "http://tt.se/media/text/191020-banglaoro-1087484",
+        "type": "text",
+        "representationType": "complete",
+        "profile": "PUBL",
+        "versionCreated": "2019-10-20T19:18:02+02:00",
+        "pubStatus": "usable",
+        "copyrightHolder": "TT",
+        "language": "sv",
+        "urgency": 4,
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "Minst fyra personer sköts ihjäl av polisen i Bangladesh vid en demonstration mot påstådda hädelser på Facebook mot profeten Muhammed. Ungefär 20\u2009000 muslimer hade samlats i staden Borhanuddin för att kräva att en ung hinduisk man som åtalats för uppvigl"
+            }
+        ],
+        "bodies": [
+            {
+                "contentType": "plain",
+                "charcount": 861,
+                "value": "Många sköts av polis i Bangladesh \u2013 fyra döda\nBangladesh TT-AFP\nMinst fyra personer sköts ihjäl av polisen i Bangladesh vid en demonstration mot påstådda hädelser på Facebook mot profeten Muhammed. Ungefär 20\u2009000 muslimer hade samlats i staden Borhanuddin för att kräva att en ung hinduisk man som åtalats för uppvigling till religiös oro ska avrättas. Polisen säger att den öppnade eld i självförsvar efter att ha attackerats av demonstranter.\n\u2013 Minst 4 personer dödades och uppemot 50 personer skadades, säger polisinspektör Salahuddin Mia.\nHan säger att polisförstärkningar fördes till staden, som ligger på ön Bhola, med helikopter.\nDödstalet väntas stiga. En läkare på sjukhuset dit 43 skadade fördes säger att 7 av dem kämpar för sina liv.\nPremiärminister Sheikh Hasina manar till lugn och säger att de som verkligen har begått brott ska hittas och straffas.\nsdlOjmYpsikoCs\u2013NormalHires.jpg Bangladesh premiärminister Sheikh Hasina. Arkivbild.\nManish Swarup/AP/TT\n\n"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "02000000",
+                "name": "Brott, lag och rätt",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/02000000"
+            }
+        ],
+        "places": [
+            {
+                "uri": "http://tt.se/spec/place/1.0/Bangladesh",
+                "geoJSON": {
+                    "coordinates": [
+                        90.356331,
+                        23.684994
+                    ],
+                    "type": "Point"
+                },
+                "name": "Bangladesh"
+            },
+            {
+                "name": "Bangladesh",
+                "uri": "http://tt.se/spec/place/1.0/Bangladesh"
+            },
+            {
+                "name": "Bhola",
+                "uri": "http://tt.se/spec/place/1.0/Bhola"
+            }
+        ],
+        "headlines": [
+            {"value": "Många sköts av polis i Bangladesh \u2013 fyra döda"}
+        ],
+        "slugline": "bangla-oro"
+    },
+    {
+        "uri": "http://tt.se/media/event/0dae4b2d-3a03-4f24-a806-4a678ca35877",
+        "pubStatus": "usable",
+        "type": "event",
+        "copyrightHolder": "TT",
+        "representationType": "full",
+        "profile": "DATA",
+        "version": "10",
+        "firstCreated": "2024-10-23T10:50:58+02:00",
+        "versionCreated": "2024-10-29T00:38:07+01:00",
+        "altIds": [
+            {
+                "role": "originaltransmissionreference",
+                "value": "0dae4b2d-3a03-4f24-a806-4a678ca35877"
+            },
+            {
+                "role": "newsvalue",
+                "value": "3"
+            },
+            {
+                "role": "week",
+                "value": "44"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "11000000",
+                "name": "Politik",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/11000000"
+            },
+            {
+                "literal": "KAL",
+                "name": "Kalender",
+                "rel": "product",
+                "uri": "http://tt.se/spec/product/1.0/KAL"
+            },
+            {
+                "literal": "KLINR",
+                "name": "Kalender Inrikes",
+                "rel": "product",
+                "uri": "http://tt.se/spec/product/1.0/KLINR"
+            }
+        ],
+        "genres": [
+            {
+                "name": "Inrikes",
+                "uri": "http://tt.se/spec/sector/1.0/INR"
+            }
+        ],
+        "eventDetails": {
+            "eventStatus": "http://cv.iptc.org/newscodes/eventoccurstatus/eos5",
+            "dates": {
+                "startDate": "2024-10-29T10:00:00+01:00",
+                "endDate": "2024-10-29T20:00:00+01:00"
+            }
         },
-        "anpa": {
-          "title": "ANPA Story Download",
-          "format": "ANPA1312",
-          "contentType": "application/octet-stream",
-          "href": "http://api.ap.org/media/v/content/f1a1b7afc83b4963822157483f758e62.3/download?type=text&format=ANPA&rid=9aabe4b41e3e4ababb66ccaefbb3821c&cid=0&fid=73c4871d1efd4262b76dcf9df91ced1f&trf=NAM0116&qt=H1Kdh42orF&dt=SyE9hV2ir&ai=2cc1cee3495f548653f5d38130750408&et=3a7aza0c0"
-        }
-      }
-  },
-
-  {
-      "uri": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74?qt=H1Kdh42orF&et=0a3aza2c0",
-      "version": "0",
-      "type": "audio",
-      "urgency": 4,
-      "profile": "Actuality",
-      "language": "en",
-      "versionCreated": "2019-11-14T16:17:53Z",
-      "firstCreated": "2019-11-14T16:17:53Z",
-      "pubStatus": "usable",
-      "title": "Trump Impeachment What s Next-Pelosi 1",
-      "headlines": [{"value": "Next up in impeachment hearings: A parade of key witnesses"}],
-      "located": "CAPITOL HILL",
-      "copyrightNotice": "Copyright 2019 The Associated Press, though the copyright in some contents and materials incorporated herein may be owned by third parties where so indicated. All rights reserved. This material may not be published, broadcast, rewritten or redistributed without permission.",
-      "usageTerms": "This content is intended for editorial use only. For other uses, additional clearances may be required.",
-      "provider": "AP",
-      "infoSources": [{"name": "ASSOCIATED PRESS"}],
-      "persons": [ {"literal": "850c8ab4e24d4c128250621e377c83dd","name": "Nancy Pelosi","uri": "http://cv.ap.org/id/850c8ab4e24d4c128250621e377c83dd"}],
-      "subjects": [
-        {"literal": "p","name": "Political News"},
-        {"literal": "86aad5207dac100488ecba7fa5283c3e","name": "Government and politics","uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"},
-        {"literal": "86c17a007dac1004898fba7fa5283c3e","name": "Impeachments","uri": "http://cv.ap.org/id/86c17a007dac1004898fba7fa5283c3e"},
-        {"literal": "86bc3e287dac1004895dba7fa5283c3e","name": "Political issues","uri": "http://cv.ap.org/id/86bc3e287dac1004895dba7fa5283c3e"},
-        {"literal": "17092930618f41079a063c02851881a1","name": "Trump impeachment inquiry","uri": "http://cv.ap.org/id/17092930618f41079a063c02851881a1"}
-      ],
-      "descriptions": [{"role": "caption", "value":  "House Speaker Nancy Pelosi says the president committed an impeachable offense. "}],
-      "renditions": {
-        "main": {
-          "title": "Full Resolution (MP3)",
-          "format": "MP3",
-          "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?role=main&qt=H1Kdh42orF&cid=62000ab669e047b2b00b5faa1d08f41d&pt=NXw3Njg5NXwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
-          "sizeInBytes": 189504,
-          "duration": 7896,
-          "contentType": "audio/mpeg"
+        "language": "sv",
+        "urgency": 4,
+        "headlines": [
+            {"value": "Nordiska rådet på Island + pk med statsministrarna samt utrikesministrarna"}
+        ],
+        "descriptions": [
+            {
+                "role": "accreditation",
+                "value": "Mer information: https://www.norden.org/sv/session2024nnLivestream från rådet: https://www.norden.org/en/information/broadcasts-2024-session-nordic-council-reykjavik "
+            },
+            {
+                "role": "text",
+                "value": "Nordiska rådets sessioner i Reykjavik fortsätter (till 31/10). Ordförandeskapet för Nordiska rådet håller en presskonferens innan sessionen öppnas i Skáli-rummet. Ukrainas president Volodymyr Zelenskyj håller tal till ledamöterna kl 11.40. De nordiska s"
+            }
+        ],
+        "slugline": "",
+        "people": [
+            {
+                "name": "Volodymyr Zelenskyj",
+                "rel": "0.52155601978302",
+                "uri": "http://tt.se/spec/person/1.0/800a7fc0-2652-4518-96a5-a67055006063"
+            },
+            {
+                "name": "Svetlana Tichanovskaja",
+                "rel": "0.9977999925613403"
+            }
+        ],
+        "organisations": [
+            {
+                "name": "Nordiska rådet",
+                "rel": "0.9989490509033203"
+            }
+        ],
+        "bodies": [
+            {
+                "role": "html5",
+                "contentType": "text/html",
+                "charCount": 572,
+                "value": "<html><body><article><section><h1>Nordiska r&#xE5;det p&#xE5; Island + pk med statsministrarna samt utrikesministrarna</h1><div class=\"dat\"><span class=\"vignette\">Tisdag 29 Oktober 2024, klockan 10:00</span><span class=\"source\">TT</span></div><div class=\"bodytext\"><p>Nordiska r&#xE5;dets sessioner i Reykjavik forts&#xE4;tter (till 31/10). Ordf&#xF6;randeskapet f&#xF6;r Nordiska r&#xE5;det h&#xE5;ller en presskonferens innan sessionen &#xF6;ppnas i Sk&#xE1;li-rummet. Ukrainas president Volodymyr Zelenskyj h&#xE5;ller tal till ledam&#xF6;terna kl 11.40. De nordiska statsministrarna och regeringsledarna h&#xE5;ller presskonferens, Sk&#xE1;li klockan 10 (kl 9 isl&#xE4;ndsk tid). Och statsministrarna deltar i plenum klockan 15.30-17.30 (isl&#xE4;ndsk tid 14.30-16.30). Utrikesministrarna och Belarus oppositionsledare Svetlana Tichanovskaja h&#xE5;ller presskonferens, Sk&#xE1;li klockan 19.30 (isl&#xE4;ndsk tid 18.30).</p></div></section></article></body></html>"
+            },
+            {
+                "role": "richhtml5",
+                "contentType": "text/html",
+                "charCount": 572,
+                "value": "<html><body><article><section><h1>Nordiska r&#xE5;det p&#xE5; Island + pk med statsministrarna samt utrikesministrarna</h1><div class=\"dat\"><span class=\"vignette\">Tisdag 29 Oktober 2024, klockan 10:00</span><span class=\"source\">TT</span></div><div class=\"bodytext\"><p>Nordiska r&#xE5;dets sessioner i Reykjavik forts&#xE4;tter (till 31/10). Ordf&#xF6;randeskapet f&#xF6;r Nordiska r&#xE5;det h&#xE5;ller en presskonferens innan sessionen &#xF6;ppnas i Sk&#xE1;li-rummet. Ukrainas president Volodymyr Zelenskyj h&#xE5;ller tal till ledam&#xF6;terna kl 11.40. De nordiska statsministrarna och regeringsledarna h&#xE5;ller presskonferens, Sk&#xE1;li klockan 10 (kl 9 isl&#xE4;ndsk tid). Och statsministrarna deltar i plenum klockan 15.30-17.30 (isl&#xE4;ndsk tid 14.30-16.30). Utrikesministrarna och Belarus oppositionsledare Svetlana Tichanovskaja h&#xE5;ller presskonferens, Sk&#xE1;li klockan 19.30 (isl&#xE4;ndsk tid 18.30).</p></div></section></article></body></html>"
+            },
+            {
+                "role": "text",
+                "contentType": "text/plain",
+                "charCount": 572,
+                "value": "Nordiska rådets sessioner i Reykjavik fortsätter (till 31/10). Ordförandeskapet för Nordiska rådet håller en presskonferens innan sessionen öppnas i Skáli-rummet. Ukrainas president Volodymyr Zelenskyj håller tal till ledamöterna kl 11.40. De nordiska statsministrarna och regeringsledarna håller presskonferens, Skáli klockan 10 (kl 9 isländsk tid). Och statsministrarna deltar i plenum klockan 15.30-17.30 (isländsk tid 14.30-16.30). Utrikesministrarna och Belarus oppositionsledare Svetlana Tichanovskaja håller presskonferens, Skáli  klockan 19.30 (isländsk tid 18.30)."
+            }
+        ]
+    },
+    {
+        "uri": "http://tt.se/media/text/191020-atpmurray-1087489",
+        "type": "text",
+        "representationType": "complete",
+        "profile": "PUBL",
+        "versionCreated": "2019-10-20T19:14:28+02:00",
+        "pubStatus": "usable",
+        "copyrightHolder": "TT",
+        "language": "sv",
+        "urgency": 3,
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "Tennisens förre världsetta Andy Murray är en vinnare igen. Skotten vann ATP-turneringen i Antwerpen efter att ha besegrat schweizaren Stan Wawrinka med 6\u20134, 6\u20134 i finalen. \u2013 Det här betyder mycket. De senaste åren har varit extremt tuffa, säger Murray e"
+            }
+        ],
+        "bodies": [
+            {
+                "contentType": "plain",
+                "charcount": 539,
+                "value": "Andy Murray tog första titeln sedan 2017\nTennis TT-AFP\nTennisens förre världsetta Andy Murray är en vinnare igen. Skotten vann ATP-turneringen i Antwerpen efter att ha besegrat schweizaren Stan Wawrinka med 6\u20134, 6\u20134 i finalen.\n\u2013 Det här betyder mycket. De senaste åren har varit extremt tuffa, säger Murray enligt ATP-tourens hemsida.\nDet var Andy Murrays 46:e turneringsseger i karriären, men den första sedan i mars 2017. 32-åringen har haft stora skadeproblem, men efter en lyckad höftoperation tidigare i år gjorde han comeback i augusti.\nsdlGGAaUCHUHF4\u2013NormalHires.jpg Andy Murray efter segern i Antwerpen.\nFrancisco Seco/AP/TT\n\n"
+            }
+        ],
+        "subjects": [
+            {
+                "literal": "15000000",
+                "name": "Sport",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/15000000"
+            },
+            {
+                "literal": "20001085",
+                "name": "tennis",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/20001085"
+            }
+        ],
+        "places": [
+            {
+                "uri": "http://tt.se/spec/place/1.0/Antwerpen",
+                "geoJSON": {
+                    "coordinates": [
+                        4.402464,
+                        51.219448
+                    ],
+                    "type": "Point"
+                },
+                "name": "Antwerpen, Belgien"
+            },
+            {
+                "uri": "http://tt.se/spec/place/1.0/Belgien",
+                "geoJSON": {
+                    "coordinates": [
+                        4.469936,
+                        50.503887
+                    ],
+                    "type": "Point"
+                },
+                "name": "Belgien"
+            }
+        ],
+        "headlines": [
+            {"value": "Andy Murray tog första titeln sedan 2017"}
+        ],
+        "slugline": "atp-murray"
+    },
+    {
+        "ednote": "OBS på at vi navngir siktede i ingress og brødtekst",
+        "version": "20",
+        "uri": "0d63670a-8080-4854-9a31-6d18afc8d8f8",
+        "headlines": [
+            {"value": "VG: Nokas-raner siktet for innførsel av 130 kilo hasj"}
+        ],
+        "copyrightHolder": "NTB",
+        "byline": "NTB-Fredrik Moen Gabrielsen",
+        "urgency": 5,
+        "versionCreated": "2019-08-09T09:31:26Z",
+        "located": "Oslo",
+        "subjects": [
+            {
+                "name": "Innenriks",
+                "literal": "Innenriks"
+            },
+            {
+                "name": "Kriminalitet og rettsvesen",
+                "literal": "02000000",
+                "uri": "subject_custom/02000000"
+            }
+        ],
+        "places": [
+            {
+                "name": "Riksnyheter",
+                "literal": "Riksnyheter"
+            }
+        ],
+        "bodies": [
+            {
+                "contentType": "text/html",
+                "charcount": 1878,
+                "wordcount": 301,
+                "value": "<p>57 år gamle Alf Henrik Christensen, som ble dømt for sin deltakelse som sjåfør i Nokas-ranet, er nå siktet for å ha innført rundt 130 kilo hasj, ifølge VG.</p>"
+            }
+        ],
+        "slugline": "nokas-narkotika-fengsling",
+        "language": "nb-NO",
+        "usageTerms": "",
+        "copyrightNotice": "",
+        "profile": "Standard",
+        "firstCreated": "2019-08-09T09:01:23Z",
+        "type": "text",
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "57 år gamle Alf Henrik Christensen, som ble dømt for sin deltakelse som sjåfør i Nokas-ranet, er nå siktet for å ha innført rundt 130 kilo hasj, ifølge VG."
+            }
+        ],
+        "pubStatus": "usable"
+    },
+    {
+        "pubStatus": "usable",
+        "urgency": 5,
+        "copyrightHolder": "NTB",
+        "subjects": [
+            {
+                "name": "Jubilantomtaler",
+                "literal": "Jubilantomtaler"
+            }
+        ],
+        "firstpublished": "2019-08-08T09:05:13+0000",
+        "places": [
+            {
+                "name": "Akershus",
+                "literal": "Akershus"
+            }
+        ],
+        "versionCreated": "2019-08-08T23:04:50+0000",
+        "uri": "ad91c98d-4c69-4957-8645-f51614544643",
+        "slugline": "FØDSELSDAG-190820/F",
+        "firstCreated": "2019-08-05T13:54:34+0000",
+        "language": "nb-NO",
+        "version": "16",
+        "headlines": [
+            {"value": "60 år 20. august: Komponist Gaute Storaas, Nøkkefaret 28, 1452 Nesoddtangen"}
+        ],
+        "ednote": "\n",
+        "type": "text"
+    },
+    {
+        "ednote": "Noe utvidet.",
+        "version": "6",
+        "uri": "8d19cf88-b3ab-4972-8fec-1207599f2872",
+        "headlines": [
+            {"value": "Google har kjøpt giganttomt i Skien"}
+        ],
+        "copyrightHolder": "NTB",
+        "byline": "NTB",
+        "urgency": 5,
+        "versionCreated": "2019-08-09T09:46:53Z",
+        "subjects": [
+            {
+                "name": "Innenriks",
+                "literal": "Innenriks"
+            },
+            {
+                "name": "Teknologi",
+                "literal": "13010000",
+                "uri": "subject_custom/13010000"
+            },
+            {
+                "name": "Industri",
+                "literal": "04011000",
+                "uri": "subject_custom/04011000"
+            },
+            {
+                "name": "Olje og energi",
+                "literal": "04005000",
+                "uri": "subject_custom/04005000"
+            }
+        ],
+        "places": [
+            {
+                "name": "Telemark",
+                "literal": "Telemark"
+            }
+        ],
+        "slugline": "skien-google",
+        "language": "nb-NO",
+        "usageTerms": "",
+        "copyrightNotice": "",
+        "profile": "Standard",
+        "firstCreated": "2019-08-09T09:30:04Z",
+        "type": "text",
+        "bodies": [
+            {
+                "role": "text",
+                "wordcount": 311,
+                "charcount": 1873,
+                "value": "IT-giganten Google har kjøpt en tomt på nærmere 2.000 mål i Skien i tilfelle det blir behov for flere datasentre i Europa. "
+            }
+        ],
+        "pubStatus": "usable"
+    },
+    {
+        "uri": "urn:newsml:dpa.com:20090101:190423-99-924900",
+        "versionCreated": "2019-04-23T11:21:46+02:00",
+        "version": 2,
+        "pubStatus": "usable",
+        "language": "de",
+        "urgency": 4,
+        "headlines": [
+            {"value": "Faktencheck: Gerüchte und Wahrheiten zum Thema Impfen"}
+        ],
+        "bodies": [
+            {
+                "contentType": "text/html",
+                "value": "<section class=\"main\"><p>Impfen als Pflicht? Die Diskussion darüber hat sich auch an Masernausbrüchen in Schulen entzündet. Dort sind manchmal zu wenige Kinder immunisiert. Geht es ums Impfen, wird es schnell emotional. Argumente von Impfbefürworten treffen auf Äußerungen von Impfgegnern. Was stimmt und was stimmt nicht? Ein Faktencheck:</p><p>BEHAUPTUNG: Es gibt immer mehr Impfgegner.</p><p>BEWERTUNG: Das stimmt nicht.</p><p>FAKTEN: Die Bundeszentrale für gesundheitliche Aufklärung untersucht regelmäßig die Einstellung zum Impfen. Die jüngste Befragung von 2016 zeigt, dass der Anteil der Impfbefürworter gestiegen ist - von 69 Prozent im Jahr 2014 auf 77 Prozent 2016. Der Anteil der Befragten mit Vorbehalten gegen Impfungen ist dagegen deutlich gesunken, von 25 Prozent 2014 auf 18 Prozent 2016. Der Anteil der Befragten mit einer ablehnenden oder eher ablehnenden Haltung ist leicht gesunken, von 6 Prozent 2014 auf 5 Prozent 2016.</p><p>BEHAUPTUNG: Wenn man sich impfen lässt, kann die Krankheit erst Recht ausbrechen.</p><p>BEWERTUNG: Das ist falsch - mit extrem seltenen Ausnahmen.</p><p>FAKTEN: «Die meisten Impfstoffe heute sind Impfstoffe, in denen nur noch Teile des Erregers vorkommen», erläutert Klaus Cichutek, Präsident des Paul-Ehrlich-Instituts (PEI). In diesen Mitteln seien also keine vermehrungsfähigen Erreger, die Krankheiten auslösen könnten. Im Unterschied dazu gebe es Lebendimpfstoffe, die abgeschwächte Varianten eines Erregers enthielten. Beispiele dafür sind Impfungen gegen Masern, Mumps, Röteln und Gelbfieber. «Diese Erreger können sich begrenzt vermehren», sagt Cichutek. «Aber sie können die entsprechende Infektionskrankheit nicht mehr auslösen.»</p><p>Es gibt aber Ausnahmen: Im Ausland könne es auf drei bis vier Millionen mit Polio-Lebendimpfstoff - der in Deutschland nicht mehr gegeben wird - immunisierte Menschen im Schnitt bei einem Menschen zu Rückmutationen kommen, sagt Cichutek. Das heißt, dass dieser Mensch wirklich durch die Impfung Polio bekommt. Dieses sehr seltene Risiko werde aber toleriert, um Polio weltweit ausrotten zu können - und damit noch mehr Menschen vor dem Tod oder lebenslangen Behinderungen zu bewahren.</p><p>Bei den Masern gibt es zudem eine Besonderheit. So bekämen etwa 5 bis 15 Prozent der Geimpften besonders nach der ersten Masern-Immunisierung sogenannte «Impfmasern» mit mäßigem Fieber, flüchtigem Ausschlag und Symptomen im Bereich der Atemwege. Meist passiere das in der zweiten Woche nach der Impfung. Impfmasern seien aber nicht ansteckend und verursachten nur milde Symptome, die von selbst abklingen.</p><p>BEHAUPTUNG: Sein Kind impfen zu lassen, hilft der Gesellschaft.</p><p>BEWERTUNG: Das stimmt.</p><p>FAKTEN: Der Gemeinschaftsschutz, die sogenannte Herdenimmunität, ist nach Angaben auf den Internetseiten des Robert Koch-Instituts ein wichtiger Vorteil beim Impfen. Ein Mensch schütze mit der Impfung nicht nur sich selbst, sondern indirekt auch die anderen. Wenn ausreichend viele Menschen geimpft seien, könne sich ein Erreger nicht mehr in der Bevölkerung verbreiten. Erst dann seien auch Säuglinge oder Schwangere geschützt, die zum Beispiel nicht gegen Masern geimpft werden können.</p><p>BEHAUPTUNG: Impfungen können Autismus, Allergien und Plötzlichen Kindstod verursachen.</p><p>BEWERTUNG: Das ist falsch.</p><p>FAKTEN: «Das Gerücht, insbesondere die Masernimpfung könne Autismus verursachen, geht auf eine Untersuchung an nur zwölf Kindern zurück», sagt Klaus Cichutek, Präsident des Paul-Ehrlich-Instituts. Die Studie eines britischen Arztes sei jedoch methodisch so fehlerhaft gewesen, dass das Fachmagazin «The Lancet» die Veröffentlichung aus dem Jahr 1998 im Jahr 2011 zurückgezogen habe. Der Autor hat seine Zulassung als Arzt in Großbritannien verloren. Unter anderem, weil ihm Interessenkonflikte nachgewiesen worden seien. «Es gibt keine Hinweise auf einen Zusammenhang zwischen Impfstoffen und Autismus», betonte Cichutek.</p><p>Das gelte auch für Allergien. Als ein Beleg dafür gilt unter anderem, dass es in der DDR trotz Impfpflicht kaum Allergien gab. Es gebe sogar Hinweise darauf, dass Impfungen das Risiko für die Allergie-Entwicklung verringern können.</p><p>Auch beim plötzlichen Kindstod (SIDS) wurde kein Zusammenhang mit Impfungen nachgewiesen. Vielmehr gingen diese Todesfälle in Deutschland trotz neuer Kombinationsimpfungen zurück. So starben nach der Gesundheitsstatistik des Bundes 1991 etwa 1,5 Säuglinge pro 1000 Kinder am Plötzlichen Kindstod. Seit Einführung der Kombi-Impfstoffe 2002 sank die Zahl der Fälle bis zu den jüngsten Zahlen für 2013 auf 0,2 SIDS-Todesfälle pro 1000 Kinder. «SIDS tritt in der frühen Kindheit auf und in derselben Zeit ihres Lebens werden Kinder geimpft», sagt Cichutek. Daher könne es rein zufällig zu Fällen von SIDS in zeitlichem Zusammenhang mit einer Impfung kommen.</p><p>BEHAUPTUNG: Wenn Frauen vor einer Schwangerschaft geimpft sind, schützt das auch ihr Baby.</p><p>BEWERTUNG: Das gilt zumindest für einige Impfungen.</p><p>FAKTEN: Vor der Geburt werden schützende Antikörper von der Mutter auf das Kind übertragen. Neugeborene haben damit laut Webseiten des Robert Koch-Instituts gegen diese Erreger einen gewissen Schutz. Stillen unterstütze diesen Nestschutz. Es gibt aber Unterschiede. Bei Krankheiten wie Masern stimuliere die Impfung das Immunsystem der Mutter weniger stark als eine frühere natürliche Infektion. Bei anderen Erkrankungen wie Tetanus oder Diphtherie bestehe nur bei Neugeborenen geimpfter Mütter ein Nestschutz, nicht bei Babys von Müttern, die eine Infektion durchgemacht haben. Bei einigen Infektionskrankheiten gibt es keinen Nestschutz, zum Beispiel bei Keuchhusten.</p><p>BEHAUPTUNG: Eine Impfung belastet das Immunsystem von kleinen Kindern viel zu stark, weil es noch nicht voll ausgereift ist.</p><p>BEWERTUNG: Das ist falsch.</p><p>FAKTEN: «Das Immunsystem von kleinen Kindern ist dafür ausgerüstet, sich mit Krankheitserregern auseinanderzusetzen», sagt Klaus Cichutek, Präsident des Paul-Ehrlich-Instituts. Das Immunsystem des Menschen entwickele sich durch Training. «Dieses Training sollte so früh wie möglich beginnen, und zwar mit einem ungefährlichen Trainingspartner», ergänzt er. Impfstoffe zählten dazu. Echte Krankheitserreger seien ohne ein trainiertes Immunsystem sehr gefährlich, zum Teil lebensgefährlich. «Sie können in jedem Alter zuschlagen», ergänzt Cichutek.</p><p>BEHAUPTUNG: Gegen Polio braucht man keine Impfung, weil es die Krankheit nicht mehr gibt.</p><p>BEWERTUNG: Das stimmt nicht.</p><p>FAKTEN: Polio (Kinderlähmung) gilt in Deutschland nach der großen Schluckimpfungskampagne ab 1962 heute als ausgerottet. Die letzte in Deutschland erworbene Poliomyelitis wurde nach den Daten des Robert Koch-Instituts 1990 erfasst. Die letzten beiden importierten Fälle (aus Ägypten und Indien) wurden 1992 registriert. Trotz des weltweiten starken Rückgangs der Poliomyelitis könne aber eine Einschleppung von Polioviren nach Deutschland nicht vollständig ausgeschlossen werden. Die Impfung sei solange notwendig, bis nirgendwo auf der Welt mehr Polioviren zirkulierten.</p><p>Heute wird in Deutschland keine Schluckimpfung mit Lebendimpfstoff mehr gegeben, sondern inaktiver Impfstoff gespritzt. Damit gibt es kein Risiko einer Erkrankung durch diesen Impfstoff. In Ländern mit hohem Polio-Risiko setzt die Weltgesundheitsorganisation WHO jedoch nach wie vor auf die Schluckimpfung. Sie habe den Vorteil, durch das Ausscheiden abgeschwächter Impfviren die Umgebung mit zu immunisieren, sagt Klaus Cichutek, Präsident des Paul-Ehrlich-Instituts.</p><p>BEHAUPTUNG: Masern muss man durchmachen, das stärkt auch den Körper.</p><p>BEWERTUNG: Das ist falsch.</p><p>FAKTEN: Masern sind keinesfalls harmlos. Ein Drittel bis zur Hälfte der Fälle, die bisher an das Robert Koch-Institut gemeldet wurden, mussten im Krankenhaus behandelt werden. Denn Masernviren unterdrücken die Immunabwehr, so dass andere Krankheitserreger zum Zug kommen und zum Beispiel eine Lungenentzündung verursachen können. Pro Jahr werden in Deutschland laut Gesundheitsberichterstattung durchschnittlich 4 bis 7 Todesfälle registriert, die auf eine Maserninfektion zurückzuführen sind. Vor Einführung der Impfung wurden in Deutschland um die 100 Todesfälle pro Jahr registriert.</p><p>BEHAUPTUNG: Einige Impfungen können auch vor bestimmten anderen Krankheiten oder Folgeerscheinungen schützen.</p><p>BEWERTUNG: Das ist richtig.</p><p>FAKTEN: Impfungen können nach den Erkenntnissen des Robert Koch-Instituts nicht nur vor der Erkrankung selbst, sondern auf vor Komplikationen und Folgeerscheinungen schützen. Bei Masern zum Beispiel werden Hirnhautentzündungen vermieden, die durch Masernviren ausgelöst werden. Oder Lungenentzündungen, die entstehen können, wenn Masernviren das Immunsystem für eine gewisse Zeit schwächen.</p><p>Die Impfung gegen Influenza verringert zum Beispiel das Risiko einer bakteriellen Lungenentzündung oder auch von Herzinfarkt und Schlaganfall, die als Komplikation nach einer Influenzainfektion auftreten können. Die im Kindesalter gegebene Impfung gegen Windpocken schützt indirekt auch vor Gürtelrose. Ohne Impfung bleiben Windpocken-Viren nach einer Infektion im Körper und könnten nach Jahrzehnten die sehr schmerzhafte Gürtelrose verursachen.</p><p>BEHAUPTUNG: Es ist schwierig, Nebenwirkungen von Impfungen zu melden. Darum sind sie in vielen Fällen noch gar nicht richtig bekannt.</p><p>BEWERTUNG: Das ist falsch.</p><p>FAKTEN: Bevor ein Impfstoff zugelassen wird, müssen Wirksamkeit und Unbedenklichkeit nach Angaben des Paul-Ehrlich-Instituts in klinischen Prüfungen nachgewiesen werden. Auch nach der Zulassung müssen Verdachtsfälle auf Nebenwirkungen und Impfkomplikationen an das PEI gemeldet werden. Für die Meldung von Verdachtsfällen gibt es seit 2001 auch für Angehörige der Heilberufe eine Verpflichtung nach Infektionsschutzgesetz, wie sie für Pharmaunternehmen nach Arzneimittelgesetz schon immer besteht.</p><p>Seit 2012 können auch Betroffene selbst den Verdacht auf Komplikationen melden. Alle Meldungen werden an die Europäische Arzneimittelagentur EMA weitergeleitet. Ein Beispiel für Konsequenzen aus diesem vielschichtigen Überwachungs- und Alarmsystem ist eine Impfung gegen eine bestimmte Form der Hirnhautentzündung (FSME), die durch Zeckenstiche übertragen werden kann. Nach Meldungen über sehr hohes Fieber als Impfreaktion wurde dieser Impfstoff 2001 vom Markt genommen. Der Impfstoff wurde danach modifiziert und neu zugelassen.</p><p>BEHAUPTUNG: Pharmafirmen verdienen an Impfstoffen extrem viel Geld.</p><p>BEWERTUNG: Das kann man so pauschal nicht sagen.</p><p>FAKTEN: Die Impfstoff-Herstellung gilt in der Branche als weit weniger lukrativ als die Entwicklung manch anderer Medikamente. Nach Angaben des Paul-Ehrlich-Instituts gibt es weltweit nur noch wenige Firmen, die Impfstoffe überhaupt produzieren. Die Herstellung sei extrem aufwendig, dauere je nach Impfstoff zwischen einigen Monaten bis zu zwei Jahren und erfordere Spezialisten. Zusätzlich zu Qualitätsprüfungen und Kontrollen beim Herstellungsprozess gebe es bei Impfstoffen eine staatliche Chargenprüfung. Erfülle eine Charge nicht alle geforderten Kriterien, müsse sie verworfen werden. Das könne sehr große Mengen betreffen - und einen entsprechenden Verlust für die Pharmafirma.</p></section>"
+            }
+        ],
+        "copyrightHolder": "dpa",
+        "copyrightNotice": "Copyright 2019, dpa (www.dpa.de). Alle Rechte vorbehalten"
+    },
+    {
+        "uri": "urn:newsml:dpa.com:20090101:190510-99-167362",
+        "versionCreated": "2019-05-10T16:02:28+02:00",
+        "version": 2,
+        "pubStatus": "usable",
+        "language": "de",
+        "urgency": 4,
+        "headlines": [
+            {"value": "Faktencheck Derby-Elfmeter: Hat Schiedsrichter Zwayer recht?"}
+        ],
+        "byline": "Von Christian Hollmann, dpa",
+        "bodies": [
+            {
+                "contentType": "text/html",
+                "value": "<section class=\"main\"><p>Für Lucien Favre war es «der größte Skandal im Fußball seit Jahren». Der Trainer von Borussia Dortmund regte sich nach dem 2:4 im Revierderby gegen den FC Schalke 04 mächtig über den Handelfmeter zum zwischenzeitlichen 1:1 für die Gäste auf.</p><p>Auf Hinweis seines Video-Assistenten Guido Winkmann hatte Schiedsrichter Felix Zwayer nach Ansicht der Fernsehbilder auf strafbares Handspiel durch Julian Weigl im BVB-Strafraum entschieden. Daniel Caligiuri nutzte den Elfmeter in der 18. Minute zum Ausgleich, danach kippte die Partie.</p><p>BEHAUPTUNG: Referee Zwayer aus Berlin sagte nach dem Spiel zu seiner Entscheidung: «Die Aufnahmen haben eindeutig gezeigt, dass es nach aktueller internationaler und nationaler Auslegung ein strafbares Handspiel war.»</p><p>BEWERTUNG: Diese Aussage ist umstritten. Frühere Weltklasse-Schiris wie Thorsten Kinhöfer und Markus Merk halten Zwayers Auslegung des Regelwerks für falsch. Andererseits wurden zuletzt immer wieder Strafstöße nach ähnlichen Vorkommnissen gepfiffen. Lutz Michael Fröhlich als DFB-Schiedsrichterchef hatte diese Bewertungen unlängst als «in fast allen Fällen klar und regeltechnisch korrekt» gelobt.</p><p>FAKTEN: In der Regel 12 «Fouls und unsportliches Betragen» der Fußball-Regeln des DFB heißt es: «Ein Handspiel liegt vor, wenn ein Spieler den Ball absichtlich mit der Hand oder dem Arm berührt.» Dabei seien drei Umstände zu berücksichtigen: «die Bewegung der Hand zum Ball (nicht des Balls zur Hand), die Entfernung zwischen Gegner und Ball (unerwarteter Ball), die Position der Hand (das Berühren des Balls an sich ist noch kein Vergehen)».</p><p>In der konkreten Situation trifft der Ball nach dem Schuss des Schalkers Breel Embolo den Dortmunder Abwehrspieler Weigl klar an der linken Hand. Das belegen die TV-Bilder. Zwayer sagte, er habe zunächst nicht gesehen, mit welchem Körperteil Weigl die Kugel berührte. Daher durfte der Video-Assistent laut Regelwerk eingreifen, weil der Schiedsrichter eine möglicherweise entscheidende Szene übersehen hatte.</p><p>Schiri Zwayer argumentiert nach Studium der Fernseh-Aufnahmen mit einer «Vergrößerung der Körperfläche» durch Weigl. Dies ist unstrittig, da Weigls Arm nicht angelegt war. Diese Art der Auslegung sei auch «Bestandteil der Regelschulungen mit den Clubs vor Beginn der Saison» gewesen, sagte Schiri-Boss Fröhlich im Dezember. Damit orientiere sich der DFB «an den internationalen Vorgaben, um auch hier größtmögliche Einheitlichkeit zu erreichen».</p><p>Strittig aber bleibt die Beurteilung der konkreten Absicht. Eine Bewegung Weigls mit der Hand zum Ball «war hier nicht der Fall», sagte der frühere Top-Referee Kinhöfer der «Bild am Sonntag». Zudem sei die Entfernung von Weigl zu Embolo in der Szene nur sehr gering gewesen. Sky-Experte Merk befand: «Weigl kann mit dem Ball überhaupt nicht rechnen.» Daher sei diese Aktion «nie und nimmer ein Elfmeter».</p><p>Die Debatte zeigt einmal mehr, dass die aktuelle Handspiel-Regel weiter großen Interpretationsspielraum lässt. Auch künftig dürfte es daher zu Diskussionen um die richtige Auslegung der Bestimmungen kommen.</p></section>"
+            }
+        ],
+        "copyrightHolder": "dpa",
+        "copyrightNotice": "Copyright 2019, dpa (www.dpa.de). Alle Rechte vorbehalten"
+    },
+    {
+        "uri": "http://www.businesswire.com/news/home/20130605006126/zh",
+        "type": "text",
+        "version": "1",
+        "versionCreated": "2013-06-05T21:00:00Z",
+        "language": "zh",
+        "subjects": [
+            {
+                "name": "United States",
+                "rel": "about"
+            },
+            {
+                "name": "Technology",
+                "rel": "about"
+            },
+            {
+                "name": "Consumer Electronics",
+                "rel": "about"
+            },
+            {
+                "name": "North America",
+                "rel": "about"
+            },
+            {
+                "name": "Hardware",
+                "rel": "about"
+            },
+            {
+                "name": "Audio/Video",
+                "rel": "about"
+            },
+            {
+                "name": "Nanotechnology",
+                "rel": "about"
+            },
+            {
+                "name": "Semiconductor",
+                "rel": "about"
+            },
+            {
+                "name": "California",
+                "rel": "about"
+            },
+            {
+                "name": "Award",
+                "rel": "about"
+            },
+            {
+                "name": "Manufacturing",
+                "rel": "about"
+            },
+            {
+                "name": "Chemicals/Plastics",
+                "rel": "about"
+            },
+            {
+                "name": "Engineering",
+                "rel": "about"
+            }
+        ],
+        "headlines": [
+            {
+                "role": "main",
+                "value": "Cambrios被Gartner評選為「最酷供應商」"
+            }
+        ],
+        "bodies": [
+            {
+                "role": "xhtml",
+                "contentType": "text/html",
+                "value": "\n      (美國商業資訊)--為透明及軟性導體市場提供銀奈米線解決方案的領導廠商Cambrios Technologies \n      Corporation今天宣布，該公司最近被Gartner評選為「最酷供應商」(Cool Vendor)。\n    "
+            }
+        ]
+    },
+    {
+        "uri": "http://www.businesswire.com/news/home/20130731006140/en",
+        "type": "composite",
+        "version": "1",
+        "versionCreated": "2013-07-31T15:32:00Z",
+        "language": "en",
+        "subjects": [
+            {
+                "name": "Other Consumer",
+                "rel": "about"
+            },
+            {
+                "name": "United States",
+                "rel": "about"
+            },
+            {
+                "name": "North America",
+                "rel": "about"
+            },
+            {
+                "name": "Restaurant/Bar",
+                "rel": "about"
+            },
+            {
+                "name": "Product/Service",
+                "rel": "about"
+            },
+            {
+                "name": "Photo/Multimedia",
+                "rel": "about"
+            },
+            {
+                "name": "Missouri",
+                "rel": "about"
+            },
+            {
+                "name": "Retail",
+                "rel": "about"
+            },
+            {
+                "name": "Food/Beverage",
+                "rel": "about"
+            },
+            {
+                "name": "Consumer",
+                "rel": "about"
+            }
+        ],
+        "headlines": [
+            {
+                "role": "main",
+                "value": "Lunch Taking a Toll? Let Applebee\u2019s® Industrial Strength Lunch Decoy Stand In"
+            }
+        ],
+        "bodies": [
+            {
+                "role": "xhtml",
+                "contentType": "text/html",
+                "value": "With more Applebee\u2019s<sup >®</sup> Lunch Combos than ever \u2013 enough to try \n      a new combination every workday for a year \u2013 America\u2019s favorite \n      neighborhood grill and bar this week unveiled a stronger, longer-lasting \n      Industrial Strength Lunch Decoy that is 20 percent thicker than the \n      original, which sold out in weeks last summer."
+            }
+        ],
+        "associations": [
+            {
+                "name": "logo",
+                "uri": "http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
+                "type": "graphic",
+                "versionCreated": "2013-07-31T15:32:00Z",
+                "renditions": [
+                    {
+                        "name": "thumbnail",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/372964/2/AB_LOGO_thumbnail.jpg",
+                        "contentType": "image/jpeg",
+                        "height": 70,
+                        "width": 107,
+                        "sizeInBytes": 6753
+                    },
+                    {
+                        "name": "viewimage",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
+                        "contentType": "image/jpeg",
+                        "height": 94,
+                        "width": 144,
+                        "sizeInBytes": 10330
+                    },
+                    {
+                        "name": "lowres",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/372964/4/AB_LOGO_webready.jpg",
+                        "contentType": "image/jpeg",
+                        "height": 141,
+                        "width": 216,
+                        "sizeInBytes": 17930
+                    }
+                ]
+            },
+            {
+                "name": "video",
+                "uri": "http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg",
+                "type": "video",
+                "versionCreated": "2013-07-31T15:32:00Z",
+                "renditions": [
+                    {
+                        "name": "thumbnail",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/377719/2/Applebees-72.jpg",
+                        "contentType": "image/jpeg",
+                        "height": 41,
+                        "width": 72,
+                        "sizeInBytes": 28094
+                    },
+                    {
+                        "name": "viewimage",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg",
+                        "contentType": "image/jpeg",
+                        "height": 81,
+                        "width": 144,
+                        "sizeInBytes": 42098
+                    },
+                    {
+                        "name": "highres",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/377719/5/Applebees-640.jpg",
+                        "contentType": "image/jpeg",
+                        "height": 360,
+                        "width": 640,
+                        "sizeInBytes": 197827
+                    },
+                    {
+                        "name": "wmv",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/377719/11/1730461_Lunch_Decoy_Extended_WMV+1Mbps.wmv",
+                        "contentType": "video/x-ms-wmv",
+                        "sizeInBytes": 14390033
+                    },
+                    {
+                        "name": "mov",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/377719/13/1730461_Lunch_Decoy_Extended_QT+360p+%2816x9%29.mov",
+                        "contentType": "video/quicktime",
+                        "sizeInBytes": 13462929
+                    },
+                    {
+                        "name": "mp4",
+                        "href": "http://mms.businesswire.com/media/newsItemId/en/377719/19/1730461_Lunch_Decoy_Extended_MP4+1Mbps+import.mp4",
+                        "contentType": "video/mp4",
+                        "sizeInBytes": 12673045
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "uri": "http://example.agency.com/item/TG346285",
+        "type": "picture",
+        "versionCreated": "2013-07-08T08:12:00Z",
+        "by": "John Smith",
+        "rightsinfo": {
+            "langid": "http://w3.org/ns/odrl/2/",
+            "encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.agency.com/policy:3433\",\"prohibitions\":[{\"target\":\"http://example.agency.com/item/TG346285\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.agency.com/cv/party/pamediagroup\",\"assignee\":\"http://example.agency.com/cv/partygroup/exampleagencypartners\"}]}"
         },
-        "main-1": {
-          "title": "Full Resolution (MPG)",
-          "format": "MPEG",
-          "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?role=main&qt=H1Kdh42orF&cid=c5bf75e74985448daab6cc615757195b&pt=NXw3Njg5NXwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
-          "sizeInBytes": 189504,
-          "duration": 7896,
-          "contentType": "audio/mpeg"
+        "headlines": [
+            {
+                "role": "main",
+                "value": "MotoGP - Spain - Valentino Rossi"
+            }
+        ],
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "Valentino Rossi (46) of Italy and Petronas Yamaha SRT during the MotoGP test day at Circuito de Jerez - Angel Nieto on May 3, 2021 in Jerez de la Frontera, Spain"
+            }
+        ],
+        "renditions": [
+            {
+                "name": "main",
+                "href": "https://images.static.press.net/v2/image/preview/99bf1cf9b8c917876bf1ce7ac31a85c7/2.59562475.jpg?1",
+                "contentType": "image/jpg",
+                "title": "Mid Resolution",
+                "height": 342,
+                "width": 512
+            },
+            {
+                "name": "small",
+                "href": "https://images.static.press.net/v2/image/webpreview/d3e2a59c08821d87d2c491c814c56f58/2.59562458.jpg",
+                "contentType": "image/jpg",
+                "title": "Low Resolution",
+                "height": 300,
+                "width": 450
+            }
+        ]
+    },
+    {
+        "uri": "http://example.agency.com/item/TG346285",
+        "type": "picture",
+        "versionCreated": "2013-07-08T08:12:00Z",
+        "by": "John Smith",
+        "rightsinfo": {
+            "langid": "http://w3.org/ns/odrl/2/",
+            "linkedrights": "http://example.agency.com/rights/editorialUseOnly"
         },
-        "caption_nitf": {
-          "title": "NITF Caption Download",
-          "format": "IIM",
-          "contentType": "text/xml",
-          "href": "http://api.ap.org/media/v/content/8c9f92e2a4414c709a295b449f459a74.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza2c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
-        }
-      }
-  },
-  
-  {
-      "uri": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4?qt=H1Kdh42orF&et=0a3aza9c0",
-      "version": "0",
-      "type": "video",
-      "language": "en",
-      "versionCreated": "2019-11-14T18:50:57Z",
-      "firstCreated": "2019-11-14T18:50:56Z",
-      "pubStatus": "usable",
-      "ednote": "APWhollyOwned",
-      "title": "US Pelosi McCarthy (CR)",
-      "headlines": [{"value": "House leaders double down on impeachment positions"}],
-      "slugline": "US Pelosi McCarthy (CR)",
-      "located": "Washington",
-      "copyrightNotice": "Copyright 2019 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
-      "usageTerms": "This content is intended for editorial use only. For other uses, additional clearances may be required. International: AP Clients Only | US: AP Clients Only / This video may not be edited",
-      "provider": "AP",
-      "infoSources": [{"name": "ASSOCIATED PRESS"}],
-      "persons": [
-        {"literal": "850c8ab4e24d4c128250621e377c83dd","name": "Nancy Pelosi","uri": "http://cv.ap.org/id/850c8ab4e24d4c128250621e377c83dd"},
-        {"literal": "42fcd5108d2610048a34f7ae5e3ffd3e","name": "Joe Biden","uri": "http://cv.ap.org/id/42fcd5108d2610048a34f7ae5e3ffd3e"},
-        {"literal": "a6331b54c46e4ca8b79fa40fada95db5","name": "Donald Trump","uri": "http://cv.ap.org/id/a6331b54c46e4ca8b79fa40fada95db5"}
-      ],
-      "subjects": [
-        {"literal": "a","name": "National"},
-        {"literal": "9c0bd01cd7c84527bad1319c99abb3ea","name": "Bribery, graft and conflicts of interest","uri": "http://cv.ap.org/id/9c0bd01cd7c84527bad1319c99abb3ea"},
-        {"literal": "48612b807c2b4b93bbbacbf54f547ad5","name": "Crime","uri": "http://cv.ap.org/id/48612b807c2b4b93bbbacbf54f547ad5"},
-        {"literal": "f25af2d07e4e100484f5df092526b43e","name": "General news","uri": "http://cv.ap.org/id/f25af2d07e4e100484f5df092526b43e"},
-        {"literal": "6e70a850885f10048d0dcb8225d5863e","name": "Military legal affairs","uri": "http://cv.ap.org/id/6e70a850885f10048d0dcb8225d5863e"},
-        {"literal": "3b7438807d7010048477ba7fa5283c3e","name": "Military and defense","uri": "http://cv.ap.org/id/3b7438807d7010048477ba7fa5283c3e"},
-        {"literal": "86aad5207dac100488ecba7fa5283c3e","name": "Government and politics","uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"},
-        {"literal": "b6559a30872a10048eadd7c656897a02","name": "Political corruption","uri": "http://cv.ap.org/id/b6559a30872a10048eadd7c656897a02"},
-        {"literal": "86bc3e287dac1004895dba7fa5283c3e","name": "Political issues","uri": "http://cv.ap.org/id/86bc3e287dac1004895dba7fa5283c3e"},
-        {"literal": "86c17a007dac1004898fba7fa5283c3e","name": "Impeachments","uri": "http://cv.ap.org/id/86c17a007dac1004898fba7fa5283c3e"}
-      ],
-      "places": [
-        {
-          "literal": "661cd9087d5b10048265c076b8e3055c",
-          "name": "Ukraine",
-          "uri": "http://cv.ap.org/id/661cd9087d5b10048265c076b8e3055c",
-          "geoJSON": {"type": "Point","coordinates": [32,49]}
-        },
-        {"literal": "6618c9f87d5b10048200c076b8e3055c","name": "Eastern Europe", "uri": "http://cv.ap.org/id/6618c9f87d5b10048200c076b8e3055c"},
-        {
-          "literal": "661850e07d5b100481f4c076b8e3055c",
-          "name": "Europe",
-          "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
-          "geoJSON": {"type": "Point","coordinates": [9.14062, 48.69096]}
-        }
-      ],
-      "descriptions": [{"role": "caption", "value":  "As the Trump impeachment hearings go public, House Democrats are refining the case against the president to a simple allegation: Bribery. Meanwhile, Republicans are dismissing the testimony so far as hearsay, at best second-hand information. (Nov. 14)"}],
-      "renditions": {
-        "main": {
-          "title": "Full Resolution (MP4 640x360)",
-          "format": "MPEG",
-          "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?role=main&qt=H1Kdh42orF&cid=e2da4d19d5dc4378a17ab6157e83f906&pt=Nnw3NDAyNHwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
-          "sizeInBytes": 1880522908,
-          "width": 640,
-          "height": 360,
-          "duration": 128929,
-          "contentType": "video/mpeg"
-        },
-        "main_1080_29": {
-          "title": "Full Resolution (MP4 1920x1080)",
-          "format": "MPEG",
-          "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?role=main&qt=H1Kdh42orF&cid=714e0b23feed42318f07705982a533dd&pt=Nnw3NDAyNHwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
-          "sizeInBytes": 1880522908,
-          "width": 1920,
-          "height": 1080,
-          "contentType": "video/mpeg"
-        },
-        "preview": {
-          "title": "Preview (JPG 1920x1080)",
-          "format": "JPEG Baseline",
-          "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/preview/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_1920x1080.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~030addea5c734b8f8126a1e391db7872!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_1920x1080.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~video!fmt~JPEG%20Baseline",
-          "sizeInBytes": 1880522908,
-          "width": 1920,
-          "height": 1080,
-          "contentType": "image/jpeg"
-        },
-        "preview_300": {
-          "title": "Preview (JPG 400x300)",
-          "format": "JPEG Baseline",
-          "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/preview/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_400x300.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~c262fedd77294a1d89edabe9134f9206!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_400x300.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~video!fmt~JPEG%20Baseline",
-          "sizeInBytes": 1880522908,
-          "width": 400,
-          "height": 300,
-          "contentType": "image/jpeg"
-        },
-        "thumbnail": {
-          "title": "Thumbnail (JPG 105x70)",
-          "format": "JPEG Baseline",
-          "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~e4c4b7d20ebd4179a6bde4e48fb42c58!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
-          "sizeInBytes": 1880522908,
-          "width": 105,
-          "height": 70,
-          "contentType": "image/jpeg"
-        },
-        "thumbnail_69": {
-          "title": "Thumbnail (JPG 92x69)",
-          "format": "JPEG Baseline",
-          "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_092x069.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~12f5743ecd7a42ecb02fb0de33bfce16!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_092x069.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
-          "sizeInBytes": 1880522908,
-          "width": 92,
-          "height": 69,
-          "contentType": "image/jpeg"
-        },
-        "thumbnail_70": {
-          "title": "Thumbnail (JPG 105x70)",
-          "format": "JPEG Baseline",
-          "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_105x070.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~41474a970b234153b091dbf998388b98!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_105x070.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
-          "sizeInBytes": 1880522908,
-          "width": 105,
-          "height": 70,
-          "contentType": "image/jpeg"
-        },
-        "thumbnail_135": {
-          "title": "Thumbnail (JPG 180x135)",
-          "format": "JPEG Baseline",
-          "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_180x135.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~ccc561499bc849a9b8bd6aea5b1e1c67!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_180x135.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
-          "sizeInBytes": 1880522908,
-          "width": 180,
-          "height": 135,
-          "contentType": "image/jpeg"
-        },
-        "caption_nitf": {
-          "title": "NITF Caption Download",
-          "format": "IIM",
-          "contentType": "text/xml",
-          "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
-        },
-        "script_nitf": {
-          "title": "NITF Script Download",
-          "format": "IIM",
-          "contentType": "text/xml",
-          "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=script&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
-        }
-      }
-  },
-
-  {
-      "uri": "http://tt.se/media/text/191008-malmomordfrsk-1078821",
-      "type": "text",
-      "representationType": "complete",
-      "profile": "PUBL",
-      "versionCreated": "2019-10-08T19:26:37+02:00",
-      "pubStatus": "usable",
-      "copyrightHolder": "TT",
-      "language": "sv",
-      "urgency": 4,
-      "descriptions": [{"role": "text", "value": "Inne i köpcentret Emporia i Malmö knivhöggs en kvinna i slutet av augusti så allvarligt att hon fick livshotande skador. Nu åtalas en 24-årig man för mordförsök. Enligt åklagaren knivhöggs kvinnan flera gånger och träffades bland annat i huvudet och ryg"}],
-      "bodies": [{"contentType": "plain","charcount": 3739, "value": "Åtalas för knivattack på köpcentrum i Malmö\nBrott TT\nInne i köpcentret Emporia i Malmö knivhöggs en kvinna i slutet av augusti så allvarligt att hon fick livshotande skador. Nu åtalas en 24-årig man för mordförsök.\nEnligt åklagaren knivhöggs kvinnan flera gånger och träffades bland annat i huvudet och ryggen. Brottet avbröts av vittnen på plats och därför menar åklagaren att bara tillfälliga omständigheter gjorde att kvinnan inte dödades.\nDen åtalade förnekar brott.\nsdltdcdb833\u2013NormalHires.jpg En 24-årig man åtalas i Malmö tingsrätt för ett knivöverfall mot en kvinna på köpcentret Emporia i Malmö. Arkivbild.\nJohan Nilsson/TT\n\n"}],
-      "subjects": [ {"literal": "02000000", "name": "Brott, lag och rätt","rel": "classifies", "uri": "http://tt.se/spec/subref/1.0/02000000" }],
-      "headlines": [{"value": "Åtalas för knivattack på köpcentrum i Malmö"}],
-      "slugline": "malmömordförsök"
-  },
-  
-  {
-      "uri": "http://tt.se/media/text/191008-malmomord-1078822",
-      "type": "text",
-      "representationType": "complete",
-      "profile": "PUBL",
-      "versionCreated": "2019-10-08T19:26:37+02:00",
-      "pubStatus": "usable",
-      "copyrightHolder": "TT",
-      "language": "sv",
-      "urgency": 3,
-      "descriptions": [{"role": "text", "value": "Inne i köpcentret Emporia i Malmö knivhöggs en kvinna i slutet av augusti så allvarligt att hon fick livshotande skador. Nu åtalas en 24-årig man för mordförsök. Enligt åklagaren knivhöggs kvinnan flera gånger och träffades bland annat i huvudet och ryg"}],
-      "bodies": [{"contentType": "plain", "charcount": 3739, "value": "Åtalas för knivattack på köpcentrum i Malmö\nBrott TT\nInne i köpcentret Emporia i Malmö knivhöggs en kvinna i slutet av augusti så allvarligt att hon fick livshotande skador. Nu åtalas en 24-årig man för mordförsök.\nEnligt åklagaren knivhöggs kvinnan flera gånger och träffades bland annat i huvudet och ryggen. Brottet avbröts av vittnen på plats och därför menar åklagaren att bara tillfälliga omständigheter gjorde att kvinnan inte dödades.\nDen åtalade förnekar brott.\nsdltdcdb833\u2013NormalHires.jpg En 24-årig man åtalas i Malmö tingsrätt för ett knivöverfall mot en kvinna på köpcentret Emporia i Malmö. Arkivbild.\nJohan Nilsson/TT\n\n"}],
-      "subjects": [{"literal": "02000000","name": "Brott, lag och rätt", "rel": "classifies", "uri": "http://tt.se/spec/subref/1.0/02000000"}],
-      "headlines": [{"value": "Åtalas för knivattack på köpcentrum i Malmö"}],
-      "slugline": "malmömord"
-  },
-  
-  {
-      "uri": "http://tt.se/media/text/191008-brarapport-1078843",
-      "type": "text",
-      "representationType": "complete",
-      "profile": "PUBL",
-      "versionCreated": "2019-10-08T19:26:37+02:00",
-      "pubStatus": "draft",
-      "copyrightHolder": "TT",
-      "language": "sv",
-      "urgency": 4,
-      "descriptions": [{"role": "text", "value": "Det är 80 procent av befolkningen (16\u201384 år) som tror att brottsligheten i Sverige har ökat under de senaste tre åren, vilket är något mindre än 2018 då andelen var 82 procent. Sett över tid har andelen legat relativt stabilt, men ligger på lite lägre n"}],
-      "bodies": [{"contentType": "plain","charcount": 3739, "value": "BRÅRAPPORT: FORTSATT STOR ORO FÖR BROTTSLIGHET\nDet är 80 procent av befolkningen (16\u201384 år) som tror att brottsligheten i Sverige har ökat under de senaste tre åren, vilket är något mindre än 2018 då andelen var 82 procent. Sett över tid har andelen legat relativt stabilt, men ligger på lite lägre nivåer 2019 jämfört med de första åren.\nDet är en något större andel kvinnor än män som tror att antalet brott har ökat under de senaste tre åren, och vidare är andelen störst bland de äldre åldersgrupperna, framför allt den äldsta (75\u201384 år).\nDrygt 43 % av befolkningen (16\u201384 år) oroar sig i stor utsträckning över brottsligheten i samhället, vilket är på ungefär samma nivå som 2018 (42 %). Fram till och med 2011 minskade andelen som känner oro, och därefter skedde en ökning med årliga variationer som pågick fram till och med 2017.\nAndelen som känner stor oro över brottsligheten i samhället är lika stor bland män som bland kvinnor och sett till ålder är andelen störst bland personer i åldrarna 65\u201374 år.\n\n\n"}],
-      "headlines": [{"value": "BRÅRAPPORT: FORTSATT STOR ORO FÖR BROTTSLIGHET"}],
-      "slugline": "BRÅRAPPORT"
-   },
-   
-   {
-      "uri": "http://tt.se/media/text/191020-allsvnorrkoping-1087436",
-      "type": "text",
-      "representationType": "complete",
-      "profile": "PUBL",
-      "versionCreated": "2019-10-20T19:26:37+02:00",
-      "pubStatus": "usable",
-      "copyrightHolder": "TT",
-      "language": "sv",
-      "urgency": 4,
-      "descriptions": [{"role": "text", "value": "Möjligheten att ta medalj är minimal \u2013 men IFK Norrköping kan i alla fall vara med och avgöra guldstriden. I sista omgången väntar Djurgården på Östgötaporten. För Kalmar FF väntar en helt annan uppgift \u2013 att undvika nedflyttning eller kvalspel. Andeas "}],
-      "ednote": "Uppdateras",
-      "bodies": [{"contentType": "plain","charcount": 3739, "value": "Tung förlust för Kalmar mot länge tamt Norrköping\nFotboll TT\nMöjligheten att ta medalj är minimal \u2013 men IFK Norrköping kan i alla fall vara med och avgöra guldstriden.\nI sista omgången väntar Djurgården på Östgötaporten.\nFör Kalmar FF väntar en helt annan uppgift \u2013 att undvika nedflyttning eller kvalspel.\nAndeas Blomqvists mål stod sig som matchens enda men Norrköpings 1\u20130-seger lär sakna större betydelse. Upp till toppkvartetten Hammarby, Malmö FF, Djurgården och AIK är det sex poäng med lika många kvar att spela om.\nDen lilla chans som fanns att haka på i den absoluta toppen försvann i takt med att målen trillade in mot Sundsvall före EM-kvaluppehållet. Norrköping räddade till slut 4\u20134, men med två förlorade gick tåget i kampen om medaljerna och en plats i Europa \u2013 via allsvenskan \u2013 nästa år.\nDet var inte direkt övertända spelare, beredda att springa genom eld och vatten, som klev in på Östgötaporten för näst sista gången i år.\nOch klass har ju en fallenhet att förlora mot motivation.\nMed den överhängande risken att behöva kvala \u2013 eller något än värre \u2013 avslutar Kalmar FF serien som om den vore en cupturnering.\nStark halvlek \u2013 men ingen utdelning\nTränaren Magnus Pehrsson kunde matcha en elva som tränat tillsammans de senaste två veckorna. Blott 20 gjorda mål den här säsongen förklarar till stor del läget i tabellen. För att få bättre snurr framåt fick Rasmus Elm en roll som släpande anfallare bakom Geir André Herrem och Alexander Jakobsen, lånet från just IFK Norrköping.\nNär Elm är stark och frisk är han fortfarande en av allsvenskans främsta spelare. De första 45 var han just det \u2013 stark och frisk. Ett tungt distansskott över och ett avslut mitt på Isak Pettersson var goda försök, men inte roligare än så.\nMer imponerade var det disciplinerade kollektiva arbetet. Ett Norrköping på trekvartsfart fick inte mycket uträttat.\n\u2013 Så där som helhet. Vi har alldeles för dålig aktivitet och energi. Det ser ängsligt ut och så vill vi inte ha det, sade managern Jens Gustafsson till C\u2009More i halvtid.\nHolmberg och Thern tillbaka\nKalle Holmberg, tillbaka efter skada, avlöste Sead Haksabanovic i hemmaanfallet till andra halvlek. Och ibland behövs det inte mer än så. Efter fyra minuter på planen frispelade Holmberg elegant Andreas Blomqvist, som lugnt placerade 1\u20130 förbi Lucas Hägg Johansson.\nEfter två korsbandsskador på lika många år har Blomqvist långsamt jobbat sig tillbaka till sin fulla potential. Målet var hans första för säsongen.\nSimon Thern har också missat en hel del fotboll på sistone, men av andra skäl än enbart kroppsliga. Mittfältaren talade nyligen ut om sin ångest. När Blomqvist fick kramp, välkomnades Thern in i gemenskapen med allsång från supportrarna på Curva Nordahl.\nKalmar fick inte den poäng man kom för att ta \u2013 och länge förtjänade. Med Falkenberg (hemma på lördag) och sedan Sirius borta i sista omgången har klubben, som spelat allsvenskt i ett sträck sedan 2004, allt i egna händer.\nSett till hur det såg ut över 90 minuter mot Norrköping borde det sluta väl. Tung motgång i slutminuterna: Mittbacken Viktor Elm haltade ut.\nHenrik Skiöld/TT\nsdlTpjTDmwzAzI\u2013NormalHires.jpg Norrköpings Henrik Castegren gratulerar Andreas Blomqvist efter segermålet mot Kalmar FF på Östgötaporten.\nStefan Jerrevång/TT\n\nFakta: Så avgörs bottenstriden\n11) Östersund, 28 matcher, 25 poäng, minus 18 mål.\nKvar att möta: Hammarby (hemma), IFK Göteborg (borta).\n12) Sirius, 28 matcher, 25 poäng, minus 20.\nKvar att möta: AFC Eskilstuna (b), Kalmar (h).\n13) Kalmar, 28 matcher, 23 poäng, minus 21.\nKvar att möta: Falkenberg (h), Sirius (b)\n14) Sundsvall, 28 matcher, 20 poäng, minus 17.\nKvar att möta: Helsingborg (h), AIK (b)\n15) AFC Eskilstuna, 28 matcher, 19 poäng, minus 31.\nKvar att möta: Sirius (h), Falkenberg (b)\n16) Falkenberg, 28 matcher, 19 poäng, minus 38.\nKvar att möta: Kalmar (b), Eskilstuna (h).\n\nFotnot: Lag placerat som 14:e kvalar i dubbelmöte med trean i superettan om en plats i nästa års allsvenska, lag 15 och 16 flyttas ned till superettan.\n\n\n\n"}],
-      "subjects": [
-           {"literal": "15000000", "name": "Sport",  "rel": "classifies","uri": "http://tt.se/spec/subref/1.0/15000000"},
-           {"literal": "20001065","name": "fotboll","rel": "classifies","uri": "http://tt.se/spec/subref/1.0/20001065"}
-      ],
-      "places": [
-          {"uri": "http://tt.se/spec/place/1.0","geoJSON": {"coordinates": [18.643501,60.128161 ],"type": "Point"}, "name": "Sverige" },
-          {"uri": "http://tt.se/spec/place/1.0","geoJSON": {"coordinates": [ 16.192421, 58.587745], "type": "Point"}, "name": "Norrköping, Sverige"}
-       ],
-       "byline": "Henrik Skiöld/TT",
-       "headlines": [{"value": "Tung förlust för Kalmar mot länge tamt Norrköping"}],
-       "slugline": "allsv-norrköping"
-  },
-  
-  {
-      "uri": "http://tt.se/media/text/191020-banglaoro-1087484",
-      "type": "text",
-      "representationType": "complete",
-      "profile": "PUBL",
-      "versionCreated": "2019-10-20T19:18:02+02:00",
-      "pubStatus": "usable",
-      "copyrightHolder": "TT",
-      "language": "sv",
-      "urgency": 4,
-      "descriptions": [{"role": "text", "value": "Minst fyra personer sköts ihjäl av polisen i Bangladesh vid en demonstration mot påstådda hädelser på Facebook mot profeten Muhammed. Ungefär 20\u2009000 muslimer hade samlats i staden Borhanuddin för att kräva att en ung hinduisk man som åtalats för uppvigl"}],
-      "bodies": [{"contentType": "plain","charcount": 861, "value": "Många sköts av polis i Bangladesh \u2013 fyra döda\nBangladesh TT-AFP\nMinst fyra personer sköts ihjäl av polisen i Bangladesh vid en demonstration mot påstådda hädelser på Facebook mot profeten Muhammed. Ungefär 20\u2009000 muslimer hade samlats i staden Borhanuddin för att kräva att en ung hinduisk man som åtalats för uppvigling till religiös oro ska avrättas. Polisen säger att den öppnade eld i självförsvar efter att ha attackerats av demonstranter.\n\u2013 Minst 4 personer dödades och uppemot 50 personer skadades, säger polisinspektör Salahuddin Mia.\nHan säger att polisförstärkningar fördes till staden, som ligger på ön Bhola, med helikopter.\nDödstalet väntas stiga. En läkare på sjukhuset dit 43 skadade fördes säger att 7 av dem kämpar för sina liv.\nPremiärminister Sheikh Hasina manar till lugn och säger att de som verkligen har begått brott ska hittas och straffas.\nsdlOjmYpsikoCs\u2013NormalHires.jpg Bangladesh premiärminister Sheikh Hasina. Arkivbild.\nManish Swarup/AP/TT\n\n"}],
-      "subjects": [
-          {"literal": "02000000","name": "Brott, lag och rätt", "rel": "classifies","uri": "http://tt.se/spec/subref/1.0/02000000"}
-      ],
-      "places": [
-          {"uri": "http://tt.se/spec/place/1.0/Bangladesh","geoJSON": {"coordinates": [90.356331,23.684994],"type": "Point"},"name": "Bangladesh"},
-          {"name": "Bangladesh","uri": "http://tt.se/spec/place/1.0/Bangladesh"},
-          {"name": "Bhola","uri": "http://tt.se/spec/place/1.0/Bhola"}
-      ],
-      "headlines": [{"value": "Många sköts av polis i Bangladesh \u2013 fyra döda"}],
-      "slugline": "bangla-oro"
-  },
-  
-  {
-      "uri": "http://tt.se/media/text/191020-atpmurray-1087489",
-      "type": "text",
-      "representationType": "complete",
-      "profile": "PUBL",
-      "versionCreated": "2019-10-20T19:14:28+02:00",
-      "pubStatus": "usable",
-      "copyrightHolder": "TT",
-      "language": "sv",
-      "urgency": 3,
-      "descriptions": [{"role": "text", "value": "Tennisens förre världsetta Andy Murray är en vinnare igen. Skotten vann ATP-turneringen i Antwerpen efter att ha besegrat schweizaren Stan Wawrinka med 6\u20134, 6\u20134 i finalen. \u2013 Det här betyder mycket. De senaste åren har varit extremt tuffa, säger Murray e"}],
-      "bodies": [{"contentType": "plain","charcount": 539, "value": "Andy Murray tog första titeln sedan 2017\nTennis TT-AFP\nTennisens förre världsetta Andy Murray är en vinnare igen. Skotten vann ATP-turneringen i Antwerpen efter att ha besegrat schweizaren Stan Wawrinka med 6\u20134, 6\u20134 i finalen.\n\u2013 Det här betyder mycket. De senaste åren har varit extremt tuffa, säger Murray enligt ATP-tourens hemsida.\nDet var Andy Murrays 46:e turneringsseger i karriären, men den första sedan i mars 2017. 32-åringen har haft stora skadeproblem, men efter en lyckad höftoperation tidigare i år gjorde han comeback i augusti.\nsdlGGAaUCHUHF4\u2013NormalHires.jpg Andy Murray efter segern i Antwerpen.\nFrancisco Seco/AP/TT\n\n"}],
-      "subjects": [
-          {"literal": "15000000","name": "Sport","rel": "classifies","uri": "http://tt.se/spec/subref/1.0/15000000" },
-          {"literal": "20001085","name": "tennis","rel": "classifies","uri": "http://tt.se/spec/subref/1.0/20001085"}
-      ],
-      "places": [
-          {"uri": "http://tt.se/spec/place/1.0/Antwerpen", "geoJSON": {"coordinates": [4.402464,51.219448],"type": "Point"},"name": "Antwerpen, Belgien"},
-          {"uri": "http://tt.se/spec/place/1.0/Belgien","geoJSON": {"coordinates": [4.469936,50.503887],"type": "Point"},"name": "Belgien"}
-      ],
-      "headlines": [{"value": "Andy Murray tog första titeln sedan 2017"}],
-      "slugline": "atp-murray"
-  },
-  
-  {
-      "ednote": "OBS på at vi navngir siktede i ingress og brødtekst",
-      "version": "20",
-      "uri": "0d63670a-8080-4854-9a31-6d18afc8d8f8",
-      "headlines": [{"value": "VG: Nokas-raner siktet for innførsel av 130 kilo hasj"}],
-      "copyrightHolder": "NTB",
-      "byline": "NTB-Fredrik Moen Gabrielsen",
-      "urgency": 5,
-      "versionCreated": "2019-08-09T09:31:26Z",
-      "located": "Oslo",
-      "subjects": [
-          {"name": "Innenriks","literal": "Innenriks"},
-          {"name": "Kriminalitet og rettsvesen","literal": "02000000", "uri": "subject_custom/02000000"}
-      ],
-      "places": [{"name": "Riksnyheter","literal": "Riksnyheter"}],
-      "bodies": [{"contentType": "text/html", "charcount": 1878, "wordcount": 301, "value": "<p>57 år gamle Alf Henrik Christensen, som ble dømt for sin deltakelse som sjåfør i Nokas-ranet, er nå siktet for å ha innført rundt 130 kilo hasj, ifølge VG.<\/p>"}],
-      "slugline": "nokas-narkotika-fengsling",
-      "language": "nb-NO",
-      "usageTerms": "",
-      "copyrightNotice": "",
-      "profile": "Standard",
-      "firstCreated": "2019-08-09T09:01:23Z",
-      "type": "text",
-      "descriptions": [{"role": "text", "value": "57 år gamle Alf Henrik Christensen, som ble dømt for sin deltakelse som sjåfør i Nokas-ranet, er nå siktet for å ha innført rundt 130 kilo hasj, ifølge VG."}],
-      "pubStatus": "usable"
-  },
-  
-  {
-      "pubStatus": "usable",
-      "urgency": 5,
-      "copyrightHolder": "NTB",
-      "subjects": [{"name": "Jubilantomtaler", "literal": "Jubilantomtaler" } ],
-      "firstpublished": "2019-08-08T09:05:13+0000",
-      "places": [{"name": "Akershus","literal": "Akershus"}],
-      "versionCreated": "2019-08-08T23:04:50+0000",
-      "uri": "ad91c98d-4c69-4957-8645-f51614544643",
-      "slugline": "FØDSELSDAG-190820/F",
-      "firstCreated": "2019-08-05T13:54:34+0000",
-      "language": "nb-NO",
-      "version": "16",
-      "headlines": [{"value": "60 år 20. august: Komponist Gaute Storaas, Nøkkefaret 28, 1452 Nesoddtangen"}],
-      "ednote": "\n",
-      "type": "text"
-  },
-  
-  {
-      "ednote": "Noe utvidet.",
-      "version": "6",
-      "uri": "8d19cf88-b3ab-4972-8fec-1207599f2872",
-      "headlines": [{"value": "Google har kjøpt giganttomt i Skien"}],
-      "copyrightHolder": "NTB",
-      "byline": "NTB",
-      "urgency": 5,
-      "versionCreated": "2019-08-09T09:46:53Z",
-      "subjects": [
-          {"name": "Innenriks","literal": "Innenriks" },
-          {"name": "Teknologi","literal": "13010000", "uri": "subject_custom/13010000"},
-          {"name": "Industri", "literal": "04011000", "uri": "subject_custom/04011000"},
-          {"name": "Olje og energi", "literal": "04005000", "uri": "subject_custom/04005000"}
-      ],
-      "places": [ {"name": "Telemark", "literal": "Telemark"}],
-      "slugline": "skien-google",
-      "language": "nb-NO",
-      "usageTerms": "",
-      "copyrightNotice": "",
-      "profile": "Standard",
-      "firstCreated": "2019-08-09T09:30:04Z",
-      "type": "text",
-      "bodies": [{"role": "text","wordcount": 311,"charcount": 1873, "value": "IT-giganten Google har kjøpt en tomt på nærmere 2.000 mål i Skien i tilfelle det blir behov for flere datasentre i Europa. "}],
-      "pubStatus": "usable"
-  },
-  
-  {
-      "uri": "urn:newsml:dpa.com:20090101:190423-99-924900",
-      "versionCreated": "2019-04-23T11:21:46+02:00",
-      "version": 2,
-      "pubStatus": "usable",
-      "language": "de",
-      "urgency": 4,
-      "headlines": [{"value": "Faktencheck: Gerüchte und Wahrheiten zum Thema Impfen"}],
-      "bodies": [{"contentType": "text/html", "value": "<section class=\"main\"><p>Impfen als Pflicht? Die Diskussion darüber hat sich auch an Masernausbrüchen in Schulen entzündet. Dort sind manchmal zu wenige Kinder immunisiert. Geht es ums Impfen, wird es schnell emotional. Argumente von Impfbefürworten treffen auf Äußerungen von Impfgegnern. Was stimmt und was stimmt nicht? Ein Faktencheck:</p><p>BEHAUPTUNG: Es gibt immer mehr Impfgegner.</p><p>BEWERTUNG: Das stimmt nicht.</p><p>FAKTEN: Die Bundeszentrale für gesundheitliche Aufklärung untersucht regelmäßig die Einstellung zum Impfen. Die jüngste Befragung von 2016 zeigt, dass der Anteil der Impfbefürworter gestiegen ist - von 69 Prozent im Jahr 2014 auf 77 Prozent 2016. Der Anteil der Befragten mit Vorbehalten gegen Impfungen ist dagegen deutlich gesunken, von 25 Prozent 2014 auf 18 Prozent 2016. Der Anteil der Befragten mit einer ablehnenden oder eher ablehnenden Haltung ist leicht gesunken, von 6 Prozent 2014 auf 5 Prozent 2016.</p><p>BEHAUPTUNG: Wenn man sich impfen lässt, kann die Krankheit erst Recht ausbrechen.</p><p>BEWERTUNG: Das ist falsch - mit extrem seltenen Ausnahmen.</p><p>FAKTEN: «Die meisten Impfstoffe heute sind Impfstoffe, in denen nur noch Teile des Erregers vorkommen», erläutert Klaus Cichutek, Präsident des Paul-Ehrlich-Instituts (PEI). In diesen Mitteln seien also keine vermehrungsfähigen Erreger, die Krankheiten auslösen könnten. Im Unterschied dazu gebe es Lebendimpfstoffe, die abgeschwächte Varianten eines Erregers enthielten. Beispiele dafür sind Impfungen gegen Masern, Mumps, Röteln und Gelbfieber. «Diese Erreger können sich begrenzt vermehren», sagt Cichutek. «Aber sie können die entsprechende Infektionskrankheit nicht mehr auslösen.»</p><p>Es gibt aber Ausnahmen: Im Ausland könne es auf drei bis vier Millionen mit Polio-Lebendimpfstoff - der in Deutschland nicht mehr gegeben wird - immunisierte Menschen im Schnitt bei einem Menschen zu Rückmutationen kommen, sagt Cichutek. Das heißt, dass dieser Mensch wirklich durch die Impfung Polio bekommt. Dieses sehr seltene Risiko werde aber toleriert, um Polio weltweit ausrotten zu können - und damit noch mehr Menschen vor dem Tod oder lebenslangen Behinderungen zu bewahren.</p><p>Bei den Masern gibt es zudem eine Besonderheit. So bekämen etwa 5 bis 15 Prozent der Geimpften besonders nach der ersten Masern-Immunisierung sogenannte «Impfmasern» mit mäßigem Fieber, flüchtigem Ausschlag und Symptomen im Bereich der Atemwege. Meist passiere das in der zweiten Woche nach der Impfung. Impfmasern seien aber nicht ansteckend und verursachten nur milde Symptome, die von selbst abklingen.</p><p>BEHAUPTUNG: Sein Kind impfen zu lassen, hilft der Gesellschaft.</p><p>BEWERTUNG: Das stimmt.</p><p>FAKTEN: Der Gemeinschaftsschutz, die sogenannte Herdenimmunität, ist nach Angaben auf den Internetseiten des Robert Koch-Instituts ein wichtiger Vorteil beim Impfen. Ein Mensch schütze mit der Impfung nicht nur sich selbst, sondern indirekt auch die anderen. Wenn ausreichend viele Menschen geimpft seien, könne sich ein Erreger nicht mehr in der Bevölkerung verbreiten. Erst dann seien auch Säuglinge oder Schwangere geschützt, die zum Beispiel nicht gegen Masern geimpft werden können.</p><p>BEHAUPTUNG: Impfungen können Autismus, Allergien und Plötzlichen Kindstod verursachen.</p><p>BEWERTUNG: Das ist falsch.</p><p>FAKTEN: «Das Gerücht, insbesondere die Masernimpfung könne Autismus verursachen, geht auf eine Untersuchung an nur zwölf Kindern zurück», sagt Klaus Cichutek, Präsident des Paul-Ehrlich-Instituts. Die Studie eines britischen Arztes sei jedoch methodisch so fehlerhaft gewesen, dass das Fachmagazin «The Lancet» die Veröffentlichung aus dem Jahr 1998 im Jahr 2011 zurückgezogen habe. Der Autor hat seine Zulassung als Arzt in Großbritannien verloren. Unter anderem, weil ihm Interessenkonflikte nachgewiesen worden seien. «Es gibt keine Hinweise auf einen Zusammenhang zwischen Impfstoffen und Autismus», betonte Cichutek.</p><p>Das gelte auch für Allergien. Als ein Beleg dafür gilt unter anderem, dass es in der DDR trotz Impfpflicht kaum Allergien gab. Es gebe sogar Hinweise darauf, dass Impfungen das Risiko für die Allergie-Entwicklung verringern können.</p><p>Auch beim plötzlichen Kindstod (SIDS) wurde kein Zusammenhang mit Impfungen nachgewiesen. Vielmehr gingen diese Todesfälle in Deutschland trotz neuer Kombinationsimpfungen zurück. So starben nach der Gesundheitsstatistik des Bundes 1991 etwa 1,5 Säuglinge pro 1000 Kinder am Plötzlichen Kindstod. Seit Einführung der Kombi-Impfstoffe 2002 sank die Zahl der Fälle bis zu den jüngsten Zahlen für 2013 auf 0,2 SIDS-Todesfälle pro 1000 Kinder. «SIDS tritt in der frühen Kindheit auf und in derselben Zeit ihres Lebens werden Kinder geimpft», sagt Cichutek. Daher könne es rein zufällig zu Fällen von SIDS in zeitlichem Zusammenhang mit einer Impfung kommen.</p><p>BEHAUPTUNG: Wenn Frauen vor einer Schwangerschaft geimpft sind, schützt das auch ihr Baby.</p><p>BEWERTUNG: Das gilt zumindest für einige Impfungen.</p><p>FAKTEN: Vor der Geburt werden schützende Antikörper von der Mutter auf das Kind übertragen. Neugeborene haben damit laut Webseiten des Robert Koch-Instituts gegen diese Erreger einen gewissen Schutz. Stillen unterstütze diesen Nestschutz. Es gibt aber Unterschiede. Bei Krankheiten wie Masern stimuliere die Impfung das Immunsystem der Mutter weniger stark als eine frühere natürliche Infektion. Bei anderen Erkrankungen wie Tetanus oder Diphtherie bestehe nur bei Neugeborenen geimpfter Mütter ein Nestschutz, nicht bei Babys von Müttern, die eine Infektion durchgemacht haben. Bei einigen Infektionskrankheiten gibt es keinen Nestschutz, zum Beispiel bei Keuchhusten.</p><p>BEHAUPTUNG: Eine Impfung belastet das Immunsystem von kleinen Kindern viel zu stark, weil es noch nicht voll ausgereift ist.</p><p>BEWERTUNG: Das ist falsch.</p><p>FAKTEN: «Das Immunsystem von kleinen Kindern ist dafür ausgerüstet, sich mit Krankheitserregern auseinanderzusetzen», sagt Klaus Cichutek, Präsident des Paul-Ehrlich-Instituts. Das Immunsystem des Menschen entwickele sich durch Training. «Dieses Training sollte so früh wie möglich beginnen, und zwar mit einem ungefährlichen Trainingspartner», ergänzt er. Impfstoffe zählten dazu. Echte Krankheitserreger seien ohne ein trainiertes Immunsystem sehr gefährlich, zum Teil lebensgefährlich. «Sie können in jedem Alter zuschlagen», ergänzt Cichutek.</p><p>BEHAUPTUNG: Gegen Polio braucht man keine Impfung, weil es die Krankheit nicht mehr gibt.</p><p>BEWERTUNG: Das stimmt nicht.</p><p>FAKTEN: Polio (Kinderlähmung) gilt in Deutschland nach der großen Schluckimpfungskampagne ab 1962 heute als ausgerottet. Die letzte in Deutschland erworbene Poliomyelitis wurde nach den Daten des Robert Koch-Instituts 1990 erfasst. Die letzten beiden importierten Fälle (aus Ägypten und Indien) wurden 1992 registriert. Trotz des weltweiten starken Rückgangs der Poliomyelitis könne aber eine Einschleppung von Polioviren nach Deutschland nicht vollständig ausgeschlossen werden. Die Impfung sei solange notwendig, bis nirgendwo auf der Welt mehr Polioviren zirkulierten.</p><p>Heute wird in Deutschland keine Schluckimpfung mit Lebendimpfstoff mehr gegeben, sondern inaktiver Impfstoff gespritzt. Damit gibt es kein Risiko einer Erkrankung durch diesen Impfstoff. In Ländern mit hohem Polio-Risiko setzt die Weltgesundheitsorganisation WHO jedoch nach wie vor auf die Schluckimpfung. Sie habe den Vorteil, durch das Ausscheiden abgeschwächter Impfviren die Umgebung mit zu immunisieren, sagt Klaus Cichutek, Präsident des Paul-Ehrlich-Instituts.</p><p>BEHAUPTUNG: Masern muss man durchmachen, das stärkt auch den Körper.</p><p>BEWERTUNG: Das ist falsch.</p><p>FAKTEN: Masern sind keinesfalls harmlos. Ein Drittel bis zur Hälfte der Fälle, die bisher an das Robert Koch-Institut gemeldet wurden, mussten im Krankenhaus behandelt werden. Denn Masernviren unterdrücken die Immunabwehr, so dass andere Krankheitserreger zum Zug kommen und zum Beispiel eine Lungenentzündung verursachen können. Pro Jahr werden in Deutschland laut Gesundheitsberichterstattung durchschnittlich 4 bis 7 Todesfälle registriert, die auf eine Maserninfektion zurückzuführen sind. Vor Einführung der Impfung wurden in Deutschland um die 100 Todesfälle pro Jahr registriert.</p><p>BEHAUPTUNG: Einige Impfungen können auch vor bestimmten anderen Krankheiten oder Folgeerscheinungen schützen.</p><p>BEWERTUNG: Das ist richtig.</p><p>FAKTEN: Impfungen können nach den Erkenntnissen des Robert Koch-Instituts nicht nur vor der Erkrankung selbst, sondern auf vor Komplikationen und Folgeerscheinungen schützen. Bei Masern zum Beispiel werden Hirnhautentzündungen vermieden, die durch Masernviren ausgelöst werden. Oder Lungenentzündungen, die entstehen können, wenn Masernviren das Immunsystem für eine gewisse Zeit schwächen.</p><p>Die Impfung gegen Influenza verringert zum Beispiel das Risiko einer bakteriellen Lungenentzündung oder auch von Herzinfarkt und Schlaganfall, die als Komplikation nach einer Influenzainfektion auftreten können. Die im Kindesalter gegebene Impfung gegen Windpocken schützt indirekt auch vor Gürtelrose. Ohne Impfung bleiben Windpocken-Viren nach einer Infektion im Körper und könnten nach Jahrzehnten die sehr schmerzhafte Gürtelrose verursachen.</p><p>BEHAUPTUNG: Es ist schwierig, Nebenwirkungen von Impfungen zu melden. Darum sind sie in vielen Fällen noch gar nicht richtig bekannt.</p><p>BEWERTUNG: Das ist falsch.</p><p>FAKTEN: Bevor ein Impfstoff zugelassen wird, müssen Wirksamkeit und Unbedenklichkeit nach Angaben des Paul-Ehrlich-Instituts in klinischen Prüfungen nachgewiesen werden. Auch nach der Zulassung müssen Verdachtsfälle auf Nebenwirkungen und Impfkomplikationen an das PEI gemeldet werden. Für die Meldung von Verdachtsfällen gibt es seit 2001 auch für Angehörige der Heilberufe eine Verpflichtung nach Infektionsschutzgesetz, wie sie für Pharmaunternehmen nach Arzneimittelgesetz schon immer besteht.</p><p>Seit 2012 können auch Betroffene selbst den Verdacht auf Komplikationen melden. Alle Meldungen werden an die Europäische Arzneimittelagentur EMA weitergeleitet. Ein Beispiel für Konsequenzen aus diesem vielschichtigen Überwachungs- und Alarmsystem ist eine Impfung gegen eine bestimmte Form der Hirnhautentzündung (FSME), die durch Zeckenstiche übertragen werden kann. Nach Meldungen über sehr hohes Fieber als Impfreaktion wurde dieser Impfstoff 2001 vom Markt genommen. Der Impfstoff wurde danach modifiziert und neu zugelassen.</p><p>BEHAUPTUNG: Pharmafirmen verdienen an Impfstoffen extrem viel Geld.</p><p>BEWERTUNG: Das kann man so pauschal nicht sagen.</p><p>FAKTEN: Die Impfstoff-Herstellung gilt in der Branche als weit weniger lukrativ als die Entwicklung manch anderer Medikamente. Nach Angaben des Paul-Ehrlich-Instituts gibt es weltweit nur noch wenige Firmen, die Impfstoffe überhaupt produzieren. Die Herstellung sei extrem aufwendig, dauere je nach Impfstoff zwischen einigen Monaten bis zu zwei Jahren und erfordere Spezialisten. Zusätzlich zu Qualitätsprüfungen und Kontrollen beim Herstellungsprozess gebe es bei Impfstoffen eine staatliche Chargenprüfung. Erfülle eine Charge nicht alle geforderten Kriterien, müsse sie verworfen werden. Das könne sehr große Mengen betreffen - und einen entsprechenden Verlust für die Pharmafirma.</p></section>"}],
-      "copyrightHolder": "dpa",
-      "copyrightNotice": "Copyright 2019, dpa (www.dpa.de). Alle Rechte vorbehalten"
-  },
-  
-  {
-      "uri": "urn:newsml:dpa.com:20090101:190510-99-167362",
-      "versionCreated": "2019-05-10T16:02:28+02:00",
-      "version": 2,
-      "pubStatus": "usable",
-      "language": "de",
-      "urgency": 4,
-      "headlines": [{"value": "Faktencheck Derby-Elfmeter: Hat Schiedsrichter Zwayer recht?"}],
-      "byline": "Von Christian Hollmann, dpa",
-      "bodies": [{"contentType": "text/html", "value":  "<section class=\"main\"><p>Für Lucien Favre war es «der größte Skandal im Fußball seit Jahren». Der Trainer von Borussia Dortmund regte sich nach dem 2:4 im Revierderby gegen den FC Schalke 04 mächtig über den Handelfmeter zum zwischenzeitlichen 1:1 für die Gäste auf.</p><p>Auf Hinweis seines Video-Assistenten Guido Winkmann hatte Schiedsrichter Felix Zwayer nach Ansicht der Fernsehbilder auf strafbares Handspiel durch Julian Weigl im BVB-Strafraum entschieden. Daniel Caligiuri nutzte den Elfmeter in der 18. Minute zum Ausgleich, danach kippte die Partie.</p><p>BEHAUPTUNG: Referee Zwayer aus Berlin sagte nach dem Spiel zu seiner Entscheidung: «Die Aufnahmen haben eindeutig gezeigt, dass es nach aktueller internationaler und nationaler Auslegung ein strafbares Handspiel war.»</p><p>BEWERTUNG: Diese Aussage ist umstritten. Frühere Weltklasse-Schiris wie Thorsten Kinhöfer und Markus Merk halten Zwayers Auslegung des Regelwerks für falsch. Andererseits wurden zuletzt immer wieder Strafstöße nach ähnlichen Vorkommnissen gepfiffen. Lutz Michael Fröhlich als DFB-Schiedsrichterchef hatte diese Bewertungen unlängst als «in fast allen Fällen klar und regeltechnisch korrekt» gelobt.</p><p>FAKTEN: In der Regel 12 «Fouls und unsportliches Betragen» der Fußball-Regeln des DFB heißt es: «Ein Handspiel liegt vor, wenn ein Spieler den Ball absichtlich mit der Hand oder dem Arm berührt.» Dabei seien drei Umstände zu berücksichtigen: «die Bewegung der Hand zum Ball (nicht des Balls zur Hand), die Entfernung zwischen Gegner und Ball (unerwarteter Ball), die Position der Hand (das Berühren des Balls an sich ist noch kein Vergehen)».</p><p>In der konkreten Situation trifft der Ball nach dem Schuss des Schalkers Breel Embolo den Dortmunder Abwehrspieler Weigl klar an der linken Hand. Das belegen die TV-Bilder. Zwayer sagte, er habe zunächst nicht gesehen, mit welchem Körperteil Weigl die Kugel berührte. Daher durfte der Video-Assistent laut Regelwerk eingreifen, weil der Schiedsrichter eine möglicherweise entscheidende Szene übersehen hatte.</p><p>Schiri Zwayer argumentiert nach Studium der Fernseh-Aufnahmen mit einer «Vergrößerung der Körperfläche» durch Weigl. Dies ist unstrittig, da Weigls Arm nicht angelegt war. Diese Art der Auslegung sei auch «Bestandteil der Regelschulungen mit den Clubs vor Beginn der Saison» gewesen, sagte Schiri-Boss Fröhlich im Dezember. Damit orientiere sich der DFB «an den internationalen Vorgaben, um auch hier größtmögliche Einheitlichkeit zu erreichen».</p><p>Strittig aber bleibt die Beurteilung der konkreten Absicht. Eine Bewegung Weigls mit der Hand zum Ball «war hier nicht der Fall», sagte der frühere Top-Referee Kinhöfer der «Bild am Sonntag». Zudem sei die Entfernung von Weigl zu Embolo in der Szene nur sehr gering gewesen. Sky-Experte Merk befand: «Weigl kann mit dem Ball überhaupt nicht rechnen.» Daher sei diese Aktion «nie und nimmer ein Elfmeter».</p><p>Die Debatte zeigt einmal mehr, dass die aktuelle Handspiel-Regel weiter großen Interpretationsspielraum lässt. Auch künftig dürfte es daher zu Diskussionen um die richtige Auslegung der Bestimmungen kommen.</p></section>"}],
-      "copyrightHolder": "dpa",
-      "copyrightNotice": "Copyright 2019, dpa (www.dpa.de). Alle Rechte vorbehalten"
-  },
-
-{
-  "uri": "http://www.businesswire.com/news/home/20130605006126/zh",
-  "type": "text",
-  "version": "1",
-  "versionCreated": "2013-06-05T21:00:00Z",
-  "language": "zh",
-  "subjects": [
-      {
-          "name": "United States",
-          "rel": "about"
-      },
-      {
-          "name": "Technology",
-          "rel": "about"
-      },
-      {
-          "name": "Consumer Electronics",
-          "rel": "about"
-      },
-      {
-          "name": "North America",
-          "rel": "about"
-      },
-      {
-          "name": "Hardware",
-          "rel": "about"
-      },
-      {
-          "name": "Audio/Video",
-          "rel": "about"
-      },
-      {
-          "name": "Nanotechnology",
-          "rel": "about"
-      },
-      {
-          "name": "Semiconductor",
-          "rel": "about"
-      },
-      {
-          "name": "California",
-          "rel": "about"
-      },
-      {
-          "name": "Award",
-          "rel": "about"
-      },
-      {
-          "name": "Manufacturing",
-          "rel": "about"
-      },
-      {
-          "name": "Chemicals/Plastics",
-          "rel": "about"
-      },
-      {
-          "name": "Engineering",
-          "rel": "about"
-      }
-  ],
-  "headlines": [
-      {
-          "role": "main",
-          "value": "Cambrios被Gartner評選為「最酷供應商」"
-      }
-  ],
-  "bodies": [
-      {
-          "role": "xhtml",
-          "contentType": "text/html",
-          "value": "\n      (美國商業資訊)--為透明及軟性導體市場提供銀奈米線解決方案的領導廠商Cambrios Technologies \n      Corporation今天宣布，該公司最近被Gartner評選為「最酷供應商」(Cool Vendor)。\n    "
-      }
-  ]
-},
-
-{
-  "uri": "http://www.businesswire.com/news/home/20130731006140/en",
-  "type": "composite",
-  "version": "1",
-  "versionCreated": "2013-07-31T15:32:00Z",
-  "language": "en",
-  "subjects": [
-      {
-          "name": "Other Consumer",
-          "rel": "about"
-      },
-      {
-          "name": "United States",
-          "rel": "about"
-      },
-      {
-          "name": "North America",
-          "rel": "about"
-      },
-      {
-          "name": "Restaurant/Bar",
-          "rel": "about"
-      },
-      {
-          "name": "Product/Service",
-          "rel": "about"
-      },
-      {
-          "name": "Photo/Multimedia",
-          "rel": "about"
-      },
-      {
-          "name": "Missouri",
-          "rel": "about"
-      },
-      {
-          "name": "Retail",
-          "rel": "about"
-      },
-      {
-          "name": "Food/Beverage",
-          "rel": "about"
-      },
-      {
-          "name": "Consumer",
-          "rel": "about"
-      }
-  ],
-  "headlines": [
-      {
-          "role": "main",
-          "value": "Lunch Taking a Toll? Let Applebee\u2019s® Industrial Strength Lunch Decoy Stand In"
-      }
-  ],
-  "bodies": [
-      {
-          "role": "xhtml",
-          "contentType": "text/html",
-          "value": "With more Applebee\u2019s<sup >®</sup> Lunch Combos than ever \u2013 enough to try \n      a new combination every workday for a year \u2013 America\u2019s favorite \n      neighborhood grill and bar this week unveiled a stronger, longer-lasting \n      Industrial Strength Lunch Decoy that is 20 percent thicker than the \n      original, which sold out in weeks last summer."
-      }
-  ],
-  "associations": [
-      {
-          "name": "logo",
-          "uri": "http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
-          "type": "graphic",
-          "versionCreated": "2013-07-31T15:32:00Z",
-          "renditions": [
-              {
-                  "name": "thumbnail",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/372964/2/AB_LOGO_thumbnail.jpg",
-                  "contentType": "image/jpeg",
-                  "height": 70,
-                  "width": 107,
-                  "sizeInBytes": 6753
-              },
-              {
-                  "name": "viewimage",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
-                  "contentType": "image/jpeg",
-                  "height": 94,
-                  "width": 144,
-                  "sizeInBytes": 10330
-              },
-              {
-                  "name": "lowres",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/372964/4/AB_LOGO_webready.jpg",
-                  "contentType": "image/jpeg",
-                  "height": 141,
-                  "width": 216,
-                  "sizeInBytes": 17930
-              }
-          ]
-      },
-      {
-          "name": "video",
-          "uri": "http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg",
-          "type": "video",
-          "versionCreated": "2013-07-31T15:32:00Z",
-          "renditions": [
-              {
-                  "name": "thumbnail",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/377719/2/Applebees-72.jpg",
-                  "contentType": "image/jpeg",
-                  "height": 41,
-                  "width": 72,
-                  "sizeInBytes": 28094
-              },
-              {
-                  "name": "viewimage",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg",
-                  "contentType": "image/jpeg",
-                  "height": 81,
-                  "width": 144,
-                  "sizeInBytes": 42098
-              },
-              {
-                  "name": "highres",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/377719/5/Applebees-640.jpg",
-                  "contentType": "image/jpeg",
-                  "height": 360,
-                  "width": 640,
-                  "sizeInBytes": 197827
-              },
-              {
-                  "name": "wmv",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/377719/11/1730461_Lunch_Decoy_Extended_WMV+1Mbps.wmv",
-                  "contentType": "video/x-ms-wmv",
-                  "sizeInBytes": 14390033
-              },
-              {
-                  "name": "mov",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/377719/13/1730461_Lunch_Decoy_Extended_QT+360p+%2816x9%29.mov",
-                  "contentType": "video/quicktime",
-                  "sizeInBytes": 13462929
-              },
-              {
-                  "name": "mp4",
-                  "href": "http://mms.businesswire.com/media/newsItemId/en/377719/19/1730461_Lunch_Decoy_Extended_MP4+1Mbps+import.mp4",
-                  "contentType": "video/mp4",
-                  "sizeInBytes": 12673045
-              }
-          ]
-      }
-  ]
-},
-
-{
-"uri": "http://example.agency.com/item/TG346285",
-"type": "picture",
-"versionCreated": "2013-07-08T08:12:00Z",
-"by": "John Smith",
-"rightsinfo": {
-  "langid": "http://w3.org/ns/odrl/2/",
-  "encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.agency.com/policy:3433\",\"prohibitions\":[{\"target\":\"http://example.agency.com/item/TG346285\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.agency.com/cv/party/pamediagroup\",\"assignee\":\"http://example.agency.com/cv/partygroup/exampleagencypartners\"}]}"
-},
-"headlines": [
-  {
-    "role": "main",
-    "value": "MotoGP - Spain - Valentino Rossi"
-  }
-],
-"descriptions": [
-  {
-    "role": "text",
-    "value": "Valentino Rossi (46) of Italy and Petronas Yamaha SRT during the MotoGP test day at Circuito de Jerez - Angel Nieto on May 3, 2021 in Jerez de la Frontera, Spain"
-  }
-],
-"renditions": [
-  {
-    "name": "main",
-    "href": "https://images.static.press.net/v2/image/preview/99bf1cf9b8c917876bf1ce7ac31a85c7/2.59562475.jpg?1",
-    "contentType": "image/jpg",
-    "title": "Mid Resolution",
-    "height": 342,
-    "width": 512
-  },
-  {
-    "name": "small",
-    "href": "https://images.static.press.net/v2/image/webpreview/d3e2a59c08821d87d2c491c814c56f58/2.59562458.jpg",
-    "contentType": "image/jpg",
-    "title": "Low Resolution",
-    "height": 300,
-    "width": 450
-  }
-]
-},
-
-{
-"uri": "http://example.agency.com/item/TG346285",
-"type": "picture",
-"versionCreated": "2013-07-08T08:12:00Z",
-"by": "John Smith",
-"rightsinfo": {
-  "langid": "http://w3.org/ns/odrl/2/",
-  "linkedrights": "http://example.agency.com/rights/editorialUseOnly"
-},
-"headlines": [
-  {
-    "role": "main",
-    "value": "MotoGP - Spain - Valentino Rossi"
-  }
-],
-"descriptions": [
-  {
-    "role": "text",
-    "value": "Valentino Rossi (46) of Italy and Petronas Yamaha SRT during the MotoGP test day at Circuito de Jerez - Angel Nieto on May 3, 2021 in Jerez de la Frontera, Spain"
-  }
-],
-"renditions": [
-  {
-    "name": "main",
-    "href": "https://images.static.press.net/v2/image/preview/99bf1cf9b8c917876bf1ce7ac31a85c7/2.59562475.jpg?1",
-    "contentType": "image/jpg",
-    "title": "Mid Resolution",
-    "height": 342,
-    "width": 512
-  },
-  {
-    "name": "small",
-    "href": "https://images.static.press.net/v2/image/webpreview/d3e2a59c08821d87d2c491c814c56f58/2.59562458.jpg",
-    "contentType": "image/jpg",
-    "title": "Low Resolution",
-    "height": 300,
-    "width": 450
-  }
-]
-},
-
-{
-  "uri": "http://ninjs.example.com/newsitems/20130709simp123",
-  "type": "text",
-  "versionCreated": "2013-07-09T10:37:00Z",
-  "by": "Paulo Santalucia and Frances d'Emilio",
-  "headlines": [
-      {
-          "role": "main",
-          "value": "Captain of wrecked cruise ship on trial in Italy"
-      }
-  ],
-  "bodies": [
-      {
-          "role": "text",
-          "contentType": "text/plain",
-          "value": "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,2000 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing."
-      },
-      {
-          "role": "xhtml",
-          "contentType": "text/html",
-          "value": "<body><p>GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.</p><p>The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.</p><p>His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.</p><p>Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,2000 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.</p></body>"
-      }
-  ]
-},
-
-{
-  "uri": "https://internal-repository-xxxx/2.1234567",
-  "profile": "asset",
-  "type": "picture",
-  "version": "1",
-  "representationType": "full",
-  "firstCreated": "2020-10-27T15:35:19Z",
-  "versionCreated": "2020-10-27T15:35:19Z",
-  "pubStatus": "usable",
-  "language": "en",
-  "by": "Insidefoto",
-  "headlines": [
-      {
-          "role": "main",
-          "value": "Italy: Italy Demonstration of the workers congresses and conferences"
-      }
-  ],
-  "descriptions": [
-      {
-          "role": "writer",
-          "value": "www.insidefoto.com"
-      },
-      {
-          "role": "text",
-          "value": "Demonstration of the workers of congresses and conferences against he measures taken by the Government that closed all the sporting centers to contrast the Covid-19 emergency.\nRome (Italy), October 27th 2020\nPhoto Samantha Zucchi /Insidefoto/Sipa USA)"
-      }
-  ],
-  "bodies": [
-      {
-          "role": "text",
-          "contentType": "text/plain",
-          "value": "Demonstration of the workers of congresses and conferences against he measures taken by the Government that closed all the sporting centers to contrast the Covid-19 emergency.\nRome (Italy), October 27th 2020\nPhoto Samantha Zucchi /Insidefoto/Sipa USA)"
-      },
-      {
-          "role": "xhtml",
-          "contentType": "text/html",
-          "value": "<body><p>GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.</p><p>The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.</p><p>His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.</p><p>Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,2000 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.</p></body>"
-      }
-  ],
-  "copyrightHolder": "SIPA USA",
-  "copyrightNotice": "SIPA USA/PA Images",
-  "usageTerms": "*** World Rights Except Italy ***",
-  "subjects": [
-      {
-          "literal": "paimagescategory:a",
-          "name": "News",
-          "uri": "http://images-repository/v1/subject/paimagescategory:a",
-          "rel": "partOf"
-      },
-      {
-          "literal": "paimagescategory:a:general-news",
-          "name": "General News",
-          "uri": "http://images-repository/v1/subject/paimagescategory:a:general-news",
-          "rel": "partOf"
-      },
-      {
-          "literal": "paimageskeyword:rome",
-          "name": "rome",
-          "uri": "http://images-repository/v1/subject/paimageskeyword:rome",
-          "rel": "about"
-      },
-      {
-          "literal": "paimageskeyword:italy",
-          "name": "italy",
-          "uri": "http://images-repository/v1/subject/paimageskeyword:italy",
-          "rel": "about"
-      },
-      {
-          "literal": "paimageskeyword:politics",
-          "name": "politics",
-          "uri": "http://images-repository/v1/subject/paimageskeyword:politics",
-          "rel": "about"
-      },
-      {
-          "literal": "paimageskeyword:face-masks",
-          "name": "face masks",
-          "uri": "http://images-repository/v1/subject/paimageskeyword:face-masks",
-          "rel": "about"
-      },
-      {
-          "literal": "paimageskeyword:covid-19",
-          "name": "covid-19",
-          "uri": "http://images-repository/v1/subject/paimageskeyword:covid-19",
-          "rel": "about"
-      },
-      {
-          "literal": "paimageskeyword:man",
-          "name": "man",
-          "uri": "http://images-repository/v1/subject/paimageskeyword:man",
-          "rel": "about"
-      },
-      {
-          "literal": "paimageskeyword:woman",
-          "name": "woman",
-          "uri": "http://images-repository/v1/subject/paimageskeyword:woma",
-          "rel": "about"
-      },
-      {
-          "literal": "paimageskeyword:women",
-          "name": "women",
-          "uri": "http://images-repository/v1/subject/paimageskeyword:women",
-          "rel": "about"
-      }
-  ],
-  "places": [
-      {
-          "literal": "city:rome",
-          "name": "Rome",
-          "uri": "http://images-repository/v1/place/city:rome",
-          "rel": "mentions"
-      }
-  ],
-  "objects": [
-      {
-          "literal": "2.1234567",
-          "uri": "https://www.paimages.co.uk/2.1234567",
-          "rel": "source"
-      },
-      {
-          "literal": "paimagescopyright:573",
-          "uri": "http://images-repository/v1/object/paimagescopyright:573",
-          "rel": "classifiedAs",
-          "name": "SIPA USA"
-      },
-      {
-          "literal": "paimagescontributor:sipausa",
-          "uri": "http://images-repository/v1/object/paimagescontributor:sipausa",
-          "rel": "contributedBy"
-      },
-      {
-          "literal": "filename:sipa-20201027-153349-sipausa_11111111.jpg",
-          "uri": "http://images-repository/v1/object/filename:sipa-20201027-153349-sipausa_11111111.jpg",
-          "rel": "suppliedAs",
-          "name": "sipa-20201027-153349-sipausa_11111111.jpg"
-      }
-  ],
-  "renditions": [
-      {
-          "name": "supplied",
-          "href": "https://XXXXXX.amazonaws.com/sipa-20201027-153349-sipausa_31238900.jpg?AWSAccessKeyId=XXXX&Expires=1621756446&Signature=XXXX",
-          "contentType": "image/jpeg",
-          "width": 3543,
-          "height": 2362
-      }
-  ]
-}
-
-
-
+        "headlines": [
+            {
+                "role": "main",
+                "value": "MotoGP - Spain - Valentino Rossi"
+            }
+        ],
+        "descriptions": [
+            {
+                "role": "text",
+                "value": "Valentino Rossi (46) of Italy and Petronas Yamaha SRT during the MotoGP test day at Circuito de Jerez - Angel Nieto on May 3, 2021 in Jerez de la Frontera, Spain"
+            }
+        ],
+        "renditions": [
+            {
+                "name": "main",
+                "href": "https://images.static.press.net/v2/image/preview/99bf1cf9b8c917876bf1ce7ac31a85c7/2.59562475.jpg?1",
+                "contentType": "image/jpg",
+                "title": "Mid Resolution",
+                "height": 342,
+                "width": 512
+            },
+            {
+                "name": "small",
+                "href": "https://images.static.press.net/v2/image/webpreview/d3e2a59c08821d87d2c491c814c56f58/2.59562458.jpg",
+                "contentType": "image/jpg",
+                "title": "Low Resolution",
+                "height": 300,
+                "width": 450
+            }
+        ]
+    },
+    {
+        "uri": "http://ninjs.example.com/newsitems/20130709simp123",
+        "type": "text",
+        "versionCreated": "2013-07-09T10:37:00Z",
+        "by": "Paulo Santalucia and Frances d'Emilio",
+        "headlines": [
+            {
+                "role": "main",
+                "value": "Captain of wrecked cruise ship on trial in Italy"
+            }
+        ],
+        "bodies": [
+            {
+                "role": "text",
+                "contentType": "text/plain",
+                "value": "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,2000 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing."
+            },
+            {
+                "role": "xhtml",
+                "contentType": "text/html",
+                "value": "<body><p>GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.</p><p>The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.</p><p>His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.</p><p>Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,2000 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.</p></body>"
+            }
+        ]
+    },
+    {
+        "uri": "https://internal-repository-xxxx/2.1234567",
+        "profile": "asset",
+        "type": "picture",
+        "version": "1",
+        "representationType": "full",
+        "firstCreated": "2020-10-27T15:35:19Z",
+        "versionCreated": "2020-10-27T15:35:19Z",
+        "pubStatus": "usable",
+        "language": "en",
+        "by": "Insidefoto",
+        "headlines": [
+            {
+                "role": "main",
+                "value": "Italy: Italy Demonstration of the workers congresses and conferences"
+            }
+        ],
+        "descriptions": [
+            {
+                "role": "writer",
+                "value": "www.insidefoto.com"
+            },
+            {
+                "role": "text",
+                "value": "Demonstration of the workers of congresses and conferences against he measures taken by the Government that closed all the sporting centers to contrast the Covid-19 emergency.\nRome (Italy), October 27th 2020\nPhoto Samantha Zucchi /Insidefoto/Sipa USA)"
+            }
+        ],
+        "bodies": [
+            {
+                "role": "text",
+                "contentType": "text/plain",
+                "value": "Demonstration of the workers of congresses and conferences against he measures taken by the Government that closed all the sporting centers to contrast the Covid-19 emergency.\nRome (Italy), October 27th 2020\nPhoto Samantha Zucchi /Insidefoto/Sipa USA)"
+            },
+            {
+                "role": "xhtml",
+                "contentType": "text/html",
+                "value": "<body><p>GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.</p><p>The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.</p><p>His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.</p><p>Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,2000 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.</p></body>"
+            }
+        ],
+        "copyrightHolder": "SIPA USA",
+        "copyrightNotice": "SIPA USA/PA Images",
+        "usageTerms": "*** World Rights Except Italy ***",
+        "subjects": [
+            {
+                "literal": "paimagescategory:a",
+                "name": "News",
+                "uri": "http://images-repository/v1/subject/paimagescategory:a",
+                "rel": "partOf"
+            },
+            {
+                "literal": "paimagescategory:a:general-news",
+                "name": "General News",
+                "uri": "http://images-repository/v1/subject/paimagescategory:a:general-news",
+                "rel": "partOf"
+            },
+            {
+                "literal": "paimageskeyword:rome",
+                "name": "rome",
+                "uri": "http://images-repository/v1/subject/paimageskeyword:rome",
+                "rel": "about"
+            },
+            {
+                "literal": "paimageskeyword:italy",
+                "name": "italy",
+                "uri": "http://images-repository/v1/subject/paimageskeyword:italy",
+                "rel": "about"
+            },
+            {
+                "literal": "paimageskeyword:politics",
+                "name": "politics",
+                "uri": "http://images-repository/v1/subject/paimageskeyword:politics",
+                "rel": "about"
+            },
+            {
+                "literal": "paimageskeyword:face-masks",
+                "name": "face masks",
+                "uri": "http://images-repository/v1/subject/paimageskeyword:face-masks",
+                "rel": "about"
+            },
+            {
+                "literal": "paimageskeyword:covid-19",
+                "name": "covid-19",
+                "uri": "http://images-repository/v1/subject/paimageskeyword:covid-19",
+                "rel": "about"
+            },
+            {
+                "literal": "paimageskeyword:man",
+                "name": "man",
+                "uri": "http://images-repository/v1/subject/paimageskeyword:man",
+                "rel": "about"
+            },
+            {
+                "literal": "paimageskeyword:woman",
+                "name": "woman",
+                "uri": "http://images-repository/v1/subject/paimageskeyword:woma",
+                "rel": "about"
+            },
+            {
+                "literal": "paimageskeyword:women",
+                "name": "women",
+                "uri": "http://images-repository/v1/subject/paimageskeyword:women",
+                "rel": "about"
+            }
+        ],
+        "places": [
+            {
+                "literal": "city:rome",
+                "name": "Rome",
+                "uri": "http://images-repository/v1/place/city:rome",
+                "rel": "mentions"
+            }
+        ],
+        "objects": [
+            {
+                "literal": "2.1234567",
+                "uri": "https://www.paimages.co.uk/2.1234567",
+                "rel": "source"
+            },
+            {
+                "literal": "paimagescopyright:573",
+                "uri": "http://images-repository/v1/object/paimagescopyright:573",
+                "rel": "classifiedAs",
+                "name": "SIPA USA"
+            },
+            {
+                "literal": "paimagescontributor:sipausa",
+                "uri": "http://images-repository/v1/object/paimagescontributor:sipausa",
+                "rel": "contributedBy"
+            },
+            {
+                "literal": "filename:sipa-20201027-153349-sipausa_11111111.jpg",
+                "uri": "http://images-repository/v1/object/filename:sipa-20201027-153349-sipausa_11111111.jpg",
+                "rel": "suppliedAs",
+                "name": "sipa-20201027-153349-sipausa_11111111.jpg"
+            }
+        ],
+        "renditions": [
+            {
+                "name": "supplied",
+                "href": "https://XXXXXX.amazonaws.com/sipa-20201027-153349-sipausa_31238900.jpg?AWSAccessKeyId=XXXX&Expires=1621756446&Signature=XXXX",
+                "contentType": "image/jpeg",
+                "width": 3543,
+                "height": 2362
+            }
+        ]
+    }
 ]
