@@ -297,14 +297,14 @@ var getItems = function(args) {
         if (args.urgency) {
             svaret = svaret.filter(item => item.urgency === args.urgency);
         } 
-        if (args.pubstatus) {
-            svaret = svaret.filter(item => item.pubstatus === args.pubstatus);
+        if (args.pubStatus) {
+            svaret = svaret.filter(item => item.pubStatus === args.pubStatus);
         } 
         if (args.language) {
             svaret = svaret.filter(item => item.language === args.language);
         } 
-        if (args.copyrightholder) {
-            svaret = svaret.filter(item => item.copyrightholder === args.copyrightholder);
+        if (args.copyrightHolder) {
+            svaret = svaret.filter(item => item.copyrightHolder === args.copyrightHolder);
         } 
         if (args.startAfter) {
             svaret = svaret.filter(item => item.versioncreated >= args.startAfter);

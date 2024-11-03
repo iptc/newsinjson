@@ -887,6 +887,87 @@
         "slugline": "bangla-oro"
     },
     {
+        "uri": "http://tt.se/media/job/5b93da21-5cf3-4082-bcc9-4b7939fbc75a",
+        "type": "planning",
+        "representationType": "full",
+        "profile": "INFO",
+        "version": "7",
+        "firstCreated": "2024-10-25T11:21:46+02:00",
+        "versionCreated": "2024-10-29T15:25:35+01:00",
+        "pubStatus": "usable",
+        "copyrightHolder": "TT",
+        "altIds": [
+            {
+                "role": "originaltransmissionreference",
+                "value": "5b93da21-5cf3-4082-bcc9-4b7939fbc75a"
+            },
+            {
+                "role": "newsvalue",
+                "value": "3"
+            },
+            {
+                "role": "week",
+                "value": "44"
+            }
+        ],
+        "language": "sv",
+        "urgency": 3,
+        "headlines": [
+            {"value": "Nordiska rådets session i Reykjavik"}
+        ],
+        "slugline": "norden-",
+        "subjects": [
+            {
+                "literal": "11000000",
+                "name": "Politik",
+                "rel": "classifies",
+                "uri": "http://tt.se/spec/subref/1.0/11000000"
+            },
+            {
+                "literal": "PLNNY",
+                "name": "Planering nyheter",
+                "rel": "product",
+                "uri": "http://tt.se/spec/product/1.0/PLNNY"
+            },
+            {
+                "literal": "PLNNYINR",
+                "name": "Planering Inrikes",
+                "rel": "product",
+                "uri": "http://tt.se/spec/product/1.0/PLNNYINR"
+            }
+        ],
+        "bodies": [
+            {
+                "role": "html5",
+                "contentType": "text/html",
+                "value": "<html><body><article><section><h1>Nordiska r&#xE5;dets session i Reykjavik</h1><div class=\"dat\"><span class=\"vignette\">Onsdag 30 Oktober 2024</span><span class=\"source\">TT</span></div><div class=\"bodytext\"><p/></div></section></article></body></html>"
+            },
+            {
+                "role": "richhtml5",
+                "contentType": "text/html",
+                "value": "<html><body><article><section><h1>Nordiska r&#xE5;dets session i Reykjavik</h1><div class=\"dat\"><span class=\"vignette\">Onsdag 30 Oktober 2024</span><span class=\"source\">TT</span></div><div class=\"bodytext\"><p/></div></section></article></body></html>"
+            }
+        ],
+        "genres": [
+            {
+                "uri": "http://tt.se/spec/sector/1.0/INR",
+                "name": "Inrikes"
+            }
+        ],
+        "plannedCoverage": [
+            {
+                "uri": "http://tt.se/media/assignment/ae9138f3-4307-4e3a-9bdb-c7b883e3c41e",
+                "title": "norden-: Vi bevakar på distans och skriver om det är nyhetsmässigt motiverat",
+                "dates": {
+                    "expectedStartDate": "2024-10-29",
+                    "expectedEndDate": "2024-10-29"
+                },
+                "pubStatus": "usable",
+                "type": "text"
+            }
+        ]
+    },
+    {
         "uri": "http://tt.se/media/event/0dae4b2d-3a03-4f24-a806-4a678ca35877",
         "pubStatus": "usable",
         "type": "event",
