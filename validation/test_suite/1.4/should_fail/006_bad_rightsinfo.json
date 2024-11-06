@@ -1,11 +1,11 @@
 {
-	"$standard": {
-	    "name": "ninjs",
-	    "version": "1.4",
-	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_1.4.json"
-	},
-	"uri": "http://ninjs.example.com/newsitems/ninjs1-4-tests-006",
-	"headline": "Bad rightsinfo block",
+    "$standard": {
+        "name": "ninjs",
+        "version": "1.4",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_1.4.json"
+    },
+    "uri": "http://ninjs.example.com/newsitems/ninjs1-4-tests-006",
+    "headline": "Bad rightsinfo block",
     "rightsinfo": {
         "langid": "http://w3.org/ns/odrl/2/",
         "linkedrights": "http://example.agency.com/rights/editorialUseOnly",
