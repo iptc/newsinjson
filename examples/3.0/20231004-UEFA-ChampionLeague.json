@@ -1,22 +1,23 @@
 {
+    "uri": "https://www.uefa.com/20231004-UEFA-ChampionsLeague", 
     "title": "Champions League 2023/2024 - Group E - Atlético de Madrid-Feyenoord",
     "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "Feyenoord met Atlético de Madrid on Estadio Metropolitano in Madrid on October 4, 2023 in a Group E match in the Champions League."
             }
     ],
-    "eventdetails": {
+    "eventDetails": {
         "dates": {
-            "startdate": "20231004T18:45:00+02:00"
+            "startDate": "2023-10-04T18:45:00+02:00"
         },
         "organiser": {"name": "Union of European Football Associations", "literal": "UEFA"}
     },
     "places": [
         {
             "name": "Estadio Metropolitano",
-            "contactinfo": [
+            "contactInfo": [
                 {
                     "address": {
                         "locality": "Madrid",
