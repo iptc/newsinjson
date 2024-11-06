@@ -1,10 +1,10 @@
 {
-	"standard": {
-	    "name": "ninjs",
-	    "version": "2.2",
-	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
-	},
-	"uri": "urn:004-ninjs2.2-recurring-event-test",
+    "standard": {
+        "name": "ninjs",
+        "version": "2.2",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+    },
+    "uri": "urn:004-ninjs2.2-recurring-event-test",
     "type": "event",
     "title": "Times Square Ball Drop",
     "eventdetails": {

@@ -1,10 +1,10 @@
 {
-	"standard": {
-	    "name": "ninjs",
-	    "version": "2.2",
-	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
-	},
-	"uri": "urn:007-ninjs2.2-planned-coverage-with-rendition-reuters-example-test",
+    "standard": {
+        "name": "ninjs",
+        "version": "2.2",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+    },
+    "uri": "urn:007-ninjs2.2-planned-coverage-with-rendition-reuters-example-test",
     "type": "planning",
     "plannedcoverage": [
         {
