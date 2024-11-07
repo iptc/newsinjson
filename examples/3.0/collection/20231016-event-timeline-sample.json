@@ -1,6 +1,6 @@
 [
     {
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/1",
         "title": "Athlete uses medicine containing prohibited substance",
         "descriptions": [
             {
@@ -23,7 +23,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/2",
         "title": "Athlete is tested Out-of-Competition",
         "descriptions": [
             {
@@ -46,7 +46,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/3",
         "title": "The sample returns a positive result",
         "descriptions": [
             {
@@ -69,7 +69,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/4",
         "title": "B-sample was analyzed and confirms the A-sample",
         "descriptions": [
             {
@@ -92,7 +92,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/5",
         "title": "Athlete is provisionally suspended",
         "descriptions": [
             {
@@ -115,7 +115,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/6",
         "title": "Provisionally suspension prolonged with two months",
         "descriptions": [
             {
@@ -138,7 +138,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/7",
         "title": "Public hearing at the Adjudication Committee of Anti-Doping Norway - day 1",
         "descriptions": [
             {
@@ -161,7 +161,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/8",
         "title": "Public hearing at the Adjudication Committee of Anti-Doping Norway - day 2",
         "descriptions": [
             {
@@ -184,7 +184,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/9",
         "title": "The Adjudication Committee of Anti-Doping Norway imposses decision",
         "descriptions": [
             {
@@ -207,7 +207,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/10",
         "title": "Athlete 13 months suspension starts",
         "descriptions": [
             {
@@ -230,7 +230,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/11",
         "title": "FIS filed a statement of appeal to CAS",
         "descriptions": [
             {
@@ -253,7 +253,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/12",
         "title": "Hearing at CAS",
         "descriptions": [
             {
@@ -276,7 +276,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/13",
         "title": "CAS suspends Athlete for 16 months",
         "descriptions": [
             {
@@ -305,7 +305,7 @@
     },
     {
         
-        "uri": "https://iptc.org/example/uri",
+        "uri": "https://iptc.org/example/uri/14",
         "title": "Athlete Start the 18 month suspension",
         "descriptions": [
             {
