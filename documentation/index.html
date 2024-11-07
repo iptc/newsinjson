@@ -1031,61 +1031,41 @@ United Kingdom</pre>
 <div class="paragraph">
 <p>These properties concern the structure, type and creation details of the content.</p>
 </div>
-<table class="tableblock frame-all grid-all fit-content">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col>
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 66.6666%;">
+<col style="width: 16.6668%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">ninjs 3.0<br>
 property</th>
+<th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
+property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Data type
+
+<a id="uri"></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ninjs 2.x<br>
-property</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ninjs 1.x
-property</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data type</p>
-<p class="tableblock"><a id="uri"></a></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for this news object</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The identifier for this news object</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p>
 <p class="tableblock"><a id="type"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The generic news type of this news object</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The generic news type of this news object</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>text</code><br>
 <code>audio</code><br>
@@ -1098,30 +1078,17 @@ property</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A short natural-language name for the item.</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A short natural-language name for the item.</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
 <p class="tableblock"><a id="standard"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">standard</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">standard</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">$standard</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">standard (2.x)<br>
+$standard (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An object with information about standard, version and schema this instance is valid against.<br>
 This property is an object with the following child properties:</p>
@@ -1157,20 +1124,13 @@ This property is an object with the following child properties:</p>
 </tr>
 </tbody>
 </table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">object</p>
+<p class="tableblock"><a id="altIds"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">altIds</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">altids</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">altid</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">altids (2.x)<br>
+altid (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use.<br>
@@ -1202,129 +1162,92 @@ This property is an object with the following child properties:<br></p>
 </tr>
 </tbody>
 </table></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array of objects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array of objects</p>
+<p class="tableblock"><a id="representationType"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">representationType</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">representationtype</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">representationtype</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the completeness of this representation of a news item.<br>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Indicates the completeness of this representation of a news item.<br>
 For a full document representation, the value should be <code>full</code>.<br>
-For a partial representation, for example a short extract provided as the results of an API call, the value <code>partial</code> should be used.</p></td>
-</tr>
-<tr>
+For a partial representation, for example a short extract provided as the results of an API call, the value <code>partial</code> should be used.<br>
+NOTE: in ninjs 1.x, the allowed values are "complete" and "incomplete".</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>full</code><br>
-<code>partial</code></p></td>
+<code>partial</code></p>
+<p class="tableblock"><a id="profile"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as <code>'text-only'</code> or <code>'text-photo'</code>. Profiles are typically provider-specific.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as <code>'text-only'</code> or <code>'text-photo'</code>. Profiles are typically provider-specific.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="version"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the news object which is identified by the uri property.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The version of the news object which is identified by the uri property.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="firstCreated"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">firstCreated</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">firstcreated</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates when the first version of the item was created.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Indicates when the first version of the item was created.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p>
+<p class="tableblock"><a id="versionCreated"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">versionCreated</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">versioncreated</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date and time when this version of the news object was created.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The date and time when this version of the news object was created.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p>
+<p class="tableblock"><a id="contentCreated"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contentCreated</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contentcreated</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date and time when the content of this ninjs object was originally created.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The date and time when the content of this ninjs object was originally created.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p>
+<p class="tableblock"><a id="embargoed"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">expires</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p>
+<p class="tableblock"><a id="expires"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">expires</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in ninjs 2.1)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">expires</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in ninjs 2.1)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p>
+<p class="tableblock"><a id="pubStatus"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pubStatus</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pubstatus</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The publishing status of the news object, its value is <code>usable</code> by default.</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The publishing status of the news object, its value is <code>usable</code> by default.</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>usable</code><br>
 <code>withheld</code><br>
@@ -1333,32 +1256,28 @@ For a partial representation, for example a short extract provided as the result
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">urgency</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">urgency</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p>
+<p class="tableblock"><a id="ednote"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ednote</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ednote</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="language"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The human language used by the content. The value should follow <a href="https://tools.ietf.org/html/bcp47">IETF BCP47</a> format.</p></td>
-</tr>
-<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The human language used by the content. The value should follow <a href="https://tools.ietf.org/html/bcp47">IETF BCP47</a> format.</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
@@ -1366,36 +1285,55 @@ For a partial representation, for example a short extract provided as the result
 </div>
 <div class="sect2">
 <h3 id="_rights_properties"><a class="anchor" href="#_rights_properties"></a>3.2. Rights properties</h3>
-<table class="tableblock frame-all grid-all fit-content">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col>
-<col>
-<col>
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 66.6666%;">
+<col style="width: 16.6668%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">ninjs 3.0<br>
+property</th>
+<th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
+property</th>
 <th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-left valign-top">Data type
+
+<a id="copyrightHolder"></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">copyrightHolder</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">copyrightholder</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The person or organisation claiming the intellectual property for the content.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The person or organisation claiming the intellectual property for the content.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="copyrightNotice"></a></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">copyrightNotice</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">copyrightnotice</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Any necessary copyright notice for claiming the intellectual property for the content.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Any necessary copyright notice for claiming the intellectual property for the content.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="usageTerms"></a></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">usageTerms</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">usageterms</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A natural-language statement about the usage terms pertaining to the content.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A natural-language statement about the usage terms pertaining to the content.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="rightsInfo"></a></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rightsInfo</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">rightsinfo</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An expression of rights to be applied to the content.<br>
@@ -1417,17 +1355,20 @@ This property is an object with the following child properties:<br></p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">langid</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">langId<br>
+(langid in 1.x and 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier for the used Rights Expression language.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">linkedrights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">linkedRights<br>
+(linkedrights in 1.x and 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A link from the current Item to Web resource with rights related information.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">encodedrights</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">encodedRights<br>
+(encodedrights in 1.x and 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contains a rights expression as defined by a Rights Expression Language.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
@@ -1446,24 +1387,32 @@ This property is an object with the following child properties:<br></p>
 <div class="paragraph">
 <p>Properties representing the actual story that will be shown to the audience.</p>
 </div>
-<table class="tableblock frame-all grid-all fit-content">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col>
-<col>
-<col>
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 66.6666%;">
+<col style="width: 16.6668%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">ninjs 3.0<br>
+property</th>
+<th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
+property</th>
 <th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-left valign-top">Data type
+
+<a id="headlines"></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">headlines</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headlines (2.x)<br>
+headline_&lt;type&gt; (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Array of objects containing various types of headlines.<br>
+<p>(in 2.x and 3.x) An array of objects containing various types of headlines.<br>
 <br>
 This property is an object with the following child properties:<br></p>
 </div>
@@ -1487,7 +1436,7 @@ This property is an object with the following child properties:<br></p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType (contenttype in 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this headline. (Previously known as MIME Type.)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
@@ -1498,20 +1447,28 @@ This property is an object with the following child properties:<br></p>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of objects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of objects</p>
+<p class="tableblock"><a id="slugline"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">slugline</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A human-readable identifier for the item.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">by</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">by</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name(s) of the creator(s) of the content</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bodies</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">bodies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bodies (2.x)<br>
+body_&lt;type&gt; (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of body objects with the content as text or with markup.<br>
 <br>
@@ -1537,70 +1494,31 @@ This property is an object with the following child properties:<br></p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType (contenttype in 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this body. (Previously known as MIME Type.)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The headline identified with the above role and contenttype. <strong>Required</strong> to exist in each array item.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The headline identified with the above role and contentType. <strong>Required</strong> to exist in each array item.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">charcount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">charCount (charcount in 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The total character count in the article excluding figure captions.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">wordcount</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wordCount (wordCount in 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The total number of words in the article excluding figure captions.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of objects</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">descriptions</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An array of one or more descriptions of the ninjs object. See also ednote
-for information from provider to reciever. Descriptions are seen as metadata.</p>
-</div>
-<div class="paragraph">
-<p>This property is an object with the following child properties:<br></p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Property name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Data type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">role</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The role of this description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA (Internet Assigned Numbers Authority) Media Type</a> of the content of this description. (Previously known as MIME Type.)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The descriptive text identified with the above role and contenttype. Required in each object in the array.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-</tr>
-</tbody>
-</table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of objects</p></td>
+<p>Array of objects</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">descriptions</p></td>
 </tr>
 </tbody>
 </table>
@@ -1612,19 +1530,26 @@ for information from provider to reciever. Descriptions are seen as metadata.</p
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 20%;">
-<col style="width: 60%;">
-<col style="width: 20%;">
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 66.6666%;">
+<col style="width: 16.6668%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">ninjs 3.0<br>
+property</th>
+<th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
+property</th>
 <th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-left valign-top">Data type
+
+<a id="located"></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">located</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">located</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The name of the location from which the content originates.</p>
@@ -1641,10 +1566,13 @@ See also <code>places</code> for locations which are mentioned in the content.
 </tr>
 </table>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="genres"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">genres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">genres (2.x)<br>
+genre (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The nature, intellectual or journalistic form of the content.<br></p>
 </div>
@@ -1682,10 +1610,13 @@ See also <code>places</code> for locations which are mentioned in the content.
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
+<p class="tableblock"><a id="people"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">people</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">people (2.x)<br>
+person (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of objects describing individual human beings.<br>
 This property is an array of objects with the following properties:</p>
@@ -1725,16 +1656,19 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contactinfo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contactInfo (contactinfo in 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contact and/or location information for the person as a ContactInfo structure.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_contact_info_structure">Contact Info structure</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
+<p class="tableblock"><a id="organisations"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">organisations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">organisations (2.x)<br>
+organisation (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party.<br>
 This property is an array of objects with the following properties:<br></p>
@@ -1798,16 +1732,19 @@ Array of objects with the properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contactinfo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contactInfo (contactinfo in 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contact and/or location information for the organisation as a ContactInfo structure.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_contact_info_structure">Contact Info structure</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
+<p class="tableblock"><a id="places"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">places</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">places (2.x)<br>
+place (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of named locations.<br>
 This property is an array of objects with the following properties:</p>
@@ -1847,12 +1784,12 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contactinfo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contactInfo (contactinfo in 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contact and/or location information for the place as a ContactInfo structure.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_contact_info_structure">Contact Info structure</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">geojson</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geoJSON (geojson in 2.x, geometry_&lt;type&gt; in 1.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An object holding geo data of this place. From ninjs 2.0 onwards, the
 contents of this object must conform to
 <a href="https://geojson.org/schema/GeoJSON.json">the GeoJSON format</a> defined in
@@ -1861,10 +1798,13 @@ contents of this object must conform to
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
+<p class="tableblock"><a id="subjects"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">subjects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subjects (2.x)<br>
+subject (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of objects holding concepts with a relationship to the content.<br>
 This property is an array of objects with the following properties:</p>
@@ -1920,10 +1860,13 @@ This property is an array of objects with the following properties:</p>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
+<p class="tableblock"><a id="events"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">events</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">events (2.x)<br>
+event (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of objects describing something which happens in a planned or unplanned manner.<br>
 This property is an array of objects with the following properties:</p>
@@ -1964,10 +1907,13 @@ This property is an array of objects with the following properties:</p>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
+<p class="tableblock"><a id="objects"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">objects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">objects (2.x)<br>
+object (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of objects describing something material, excluding persons.<br>
 This property is an array of objects with the following properties:</p>
@@ -2008,10 +1954,13 @@ This property is an array of objects with the following properties:</p>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
+<p class="tableblock"><a id="infoSources"></a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">infosources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">infoSources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">infosources (2.x)<br>
+infosource (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content.<br>
 This property is an array of objects with the following properties:</p>
@@ -2051,16 +2000,19 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contactinfo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contactInfo (contactinfo in 1.x and 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Contact and/or location information for the info source as a ContactInfo structure.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#_contact_info_structure">Contact Info structure</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
+<p class="tableblock"><a id="trustIndicators"></a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">trustindicators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trustIndicators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trustindicator (1.x)<br>
+trustindicators (2.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of objects to allow links to documents about trust indicators, intended to show
 the trustworthiness of the news provider.<br>
@@ -2218,11 +2170,136 @@ This property is an object with the following child properties:</p>
 </div>
 <div class="sect3">
 <h4 id="_properties_of_renditions"><a class="anchor" href="#_properties_of_renditions"></a>3.5.1. Properties of renditions</h4>
-<table class="tableblock frame-all grid-all fit-content">
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col>
-<col>
-<col>
+<col style="width: 8.3333%;">
+<col style="width: 8.3333%;">
+<col style="width: 66.6666%;">
+<col style="width: 16.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ninjs 3.0<br>
+property</th>
+<th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
+property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The name of this object in the array of renditions. Required</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">href</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">href</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The URL for accessing the rendition as a resource</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The IANA Media Type which applies to this rendition</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A title for the link to the rendition resource</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>For still and moving images: the height of the display area measured in pixels</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">width</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">width</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>For still and moving images: the width of the display area measured in pixels</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sizeInBytes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sizeinbytes</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The size of the rendition resource in bytes</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">duration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">duration</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The total time duration of the content in seconds (fractional seconds are allowed)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">format</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A refinement of a generic content type (i.e. IANA media type) by a literal string value.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">aspectRatio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
+(3.0 only)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Aspect ratio of the video file, which is the ratio of the width of video to its height, such as 16:9 and 4:3.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">videoCodec</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
+(3.0 only)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The video encoding system used to create the content. Suggested CV: <a href="https://cv.iptc.org/newscodes/videocodec/" class="bare">https://cv.iptc.org/newscodes/videocodec/</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">frameRate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
+(3.0 only)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The number of video frames per second, which is the rate at which the material should be shown in order to achieve the intended visual effect</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">poi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
+(3.0 only)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The point of interest of the rendition.
+This property is an object with the following child properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <thead>
 <tr>
@@ -2233,48 +2310,46 @@ This property is an object with the following child properties:</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of this object in the array of renditions. Required</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The x-coordinate of the point of interest of the rendition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The y-coordinate of the point of interest of the rendition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer</p></td>
+</tr>
+</tbody>
+</table></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">transportProtocol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
+(3.0 only)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The transport/flow type of the flow (B2B stream).</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">href</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The URL for accessing the rendition as a resource</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scanType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
+(3.0 only)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The scan type of the video. The only allowed values are 'progressive' and 'interlaced'.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
+<code>progressive</code><br>
+<code>interlaced</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">contenttype</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A media type which applies to the rendition</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A title for the link to the rendition resource</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For still and moving images: the height of the display area measured in pixels</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">width</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">For still and moving images: the width of the display area measured in pixels</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sizeinbytes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The size of the rendition resource in bytes</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">duration</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The total time duration of the content in seconds</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">format</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Binary format name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bitrate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
+(3.0 only)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The bitrate of the video. Should always include units, eg 400 kbps.</p>
+</div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>

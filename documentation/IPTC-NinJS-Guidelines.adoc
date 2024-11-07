@@ -354,25 +354,22 @@ The "uri" property is *required* at the top level. In some array objects, other 
 
 These properties concern the structure, type and creation details of the content.
 
-[%autowidth,options="header"]
+[cols="1,1,8a,2",options="header"]
 |===
 |ninjs 3.0 +
 property
-|ninjs 2.x +
+|ninjs 1.x / 2.x +
 property
-|ninjs 1.x
-property
-|Description|Data type
+|Description
+|Data type
 
 [[uri]]
-|uri
 |uri
 |uri
 |The identifier for this news object
 |URI
 
 [[type]]
-|type
 |type
 |type
 |The generic news type of this news object
@@ -388,14 +385,13 @@ property
 [[title]]
 |title
 |title
-|title
 |A short natural-language name for the item.
 |string
 
 [[standard]]
 |standard
-|standard
-|$standard
+|standard (2.x) +
+$standard (1.x)
 a|An object with information about standard, version and schema this instance is valid against. +
 This property is an object with the following child properties:
 
@@ -419,9 +415,10 @@ This property is an object with the following child properties:
 
 |object
 
+[[altIds]]
 |altIds
-|altids
-|altid
+|altids (2.x) +
+altid (1.x)
 a|Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use. +
 This property is an object with the following child properties: +
@@ -442,54 +439,61 @@ This property is an object with the following child properties: +
 
 |array of objects
 
+[[representationType]]
 |representationType
-|representationtype
 |representationtype
 |Indicates the completeness of this representation of a news item. +
 For a full document representation, the value should be `full`. +
-For a partial representation, for example a short extract provided as the results of an API call, the value `partial` should be used.
+For a partial representation, for example a short extract provided as the results of an API call, the value `partial` should be used. +
+NOTE: in ninjs 1.x, the allowed values are "complete" and "incomplete".
 |
 One of: +
 `full` +
 `partial`
 
-|profile
+[[profile]]
 |profile
 |profile
 |An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as `'text-only'` or `'text-photo'`. Profiles are typically provider-specific.
 |string
 
-|version
+[[version]]
 |version
 |version
 |The version of the news object which is identified by the uri property.
 |string
 
+[[firstCreated]]
 |firstCreated
 |firstcreated
 |Indicates when the first version of the item was created.
 |date-time
 
+[[versionCreated]]
 |versionCreated
 |versioncreated
 |The date and time when this version of the news object was created.
 |date-time
 
+[[contentCreated]]
 |contentCreated
 |contentcreated
 |The date and time when the content of this ninjs object was originally created.
 |date-time
 
+[[embargoed]]
 |embargoed
 |embargoed
 |The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.
 |date-time
 
+[[expires]]
 |expires
 |expires
 |The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in ninjs 2.1)
 |date-time
 
+[[pubStatus]]
 |pubStatus
 |pubstatus
 |The publishing status of the news object, its value is `usable` by default.
@@ -504,10 +508,14 @@ One of: +
 |The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest.
 |number
 
+[[ednote]]
+|ednote
 |ednote
 |A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user.
 |string
 
+[[language]]
+|language
 |language
 |The human language used by the content. The value should follow https://tools.ietf.org/html/bcp47[IETF BCP47] format.
 |string
@@ -516,22 +524,35 @@ One of: +
 
 === Rights properties
 
-[%autowidth,options="header"]
+[cols="1,1,8a,2",options="header"]
 |===
-|Property|Description|Data type
+|ninjs 3.0 +
+property
+|ninjs 1.x / 2.x +
+property
+|Description
+|Data type
 
+[[copyrightHolder]]
+|copyrightHolder
 |copyrightholder
 |The person or organisation claiming the intellectual property for the content.
 |string
 
+[[copyrightNotice]]
+|copyrightNotice
 |copyrightnotice
 |Any necessary copyright notice for claiming the intellectual property for the content.
 |string
 
+[[usageTerms]]
+|usageTerms
 |usageterms
 |A natural-language statement about the usage terms pertaining to the content.
 |string
 
+[[rightsInfo]]
+|rightsInfo
 |rightsinfo
 a|An expression of rights to be applied to the content. +
  +
@@ -541,15 +562,18 @@ This property is an object with the following child properties: +
 !===
 !Property name!Description!Data type
 
-!langid
+!langId +
+(langid in 1.x and 2.x)
 !Identifier for the used Rights Expression language.
 !uri
 
-!linkedrights
+!linkedRights +
+(linkedrights in 1.x and 2.x)
 !A link from the current Item to Web resource with rights related information.
 !uri
 
-!encodedrights
+!encodedRights +
+(encodedrights in 1.x and 2.x)
 !Contains a rights expression as defined by a Rights Expression Language.
 !string
 
@@ -565,12 +589,20 @@ For each array element under rightsinfo, one of either `linkedrights` or `encode
 
 Properties representing the actual story that will be shown to the audience.
 
-[%autowidth,options="header"]
+[cols="1,1,8a,2",options="header"]
 |===
-|Property|Description|Data type
+|ninjs 3.0 +
+property
+|ninjs 1.x / 2.x +
+property
+|Description
+|Data type
 
+[[headlines]]
 |headlines
-a|Array of objects containing various types of headlines. +
+|headlines (2.x) +
+headline_<type> (1.x)
+a|(in 2.x and 3.x) An array of objects containing various types of headlines. +
  +
 This property is an object with the following child properties: +
 
@@ -582,7 +614,7 @@ This property is an object with the following child properties: +
 !The role of this headline
 !string
 
-!contenttype
+!contentType (contenttype in 2.x)
 !The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this headline. (Previously known as MIME Type.)
 !string
 
@@ -594,15 +626,21 @@ This property is an object with the following child properties: +
 
 |Array of objects
 
+[[slugline]]
 |slugline
 |A human-readable identifier for the item.
 |string
 
+[[by]]
+|by
 |by
 |The name(s) of the creator(s) of the content
 |string
 
+[[bodies]]
 |bodies
+|bodies (2.x) +
+body_<type> (1.x)
 a|An array of body objects with the content as text or with markup. +
  +
 This property is an object with the following child properties: +
@@ -615,19 +653,19 @@ This property is an object with the following child properties: +
 !The role of this body
 !string
 
-!contenttype
+!contentType (contenttype in 2.x)
 !The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this body. (Previously known as MIME Type.)
 !string
 
 !value
-!The headline identified with the above role and contenttype. *Required* to exist in each array item.
+!The headline identified with the above role and contentType. *Required* to exist in each array item.
 !string
 
-!charcount
+!charCount (charcount in 2.x)
 !The total character count in the article excluding figure captions.
 !number
 
-!wordcount
+!wordCount (wordCount in 2.x)
 !The total number of words in the article excluding figure captions.
 !number
 
@@ -635,7 +673,10 @@ This property is an object with the following child properties: +
 
 |Array of objects
 
+[[descriptions]]
 |descriptions
+|descriptions (2.x) +
+description_<type> (1.x)
 a|An array of one or more descriptions of the ninjs object. See also ednote
 for information from provider to reciever. Descriptions are seen as metadata.
 
@@ -649,7 +690,7 @@ This property is an object with the following child properties: +
 !The role of this description
 !string
 
-!contenttype
+!contentType (contenttype in 2.x)
 !The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this description. (Previously known as MIME Type.)
 !string
 
@@ -667,10 +708,17 @@ This property is an object with the following child properties: +
 
 ninjs allows content to be marked up with one simple string-based metadata property `located`, plus several rich metadata properties that can link to pre-defined controlled vocabularies describing people, organisations, places subjects, objects and events.
 
-[cols="1,3a,1",options="header"]
+[cols="1,1,8a,2",options="header"]
 |===
-|Property name|Description|Data type
+|ninjs 3.0 +
+property
+|ninjs 1.x / 2.x +
+property
+|Description
+|Data type
 
+[[located]]
+|located
 |located
 a|The name of the location from which the content originates.
 
@@ -678,7 +726,10 @@ NOTE: See also `places` for locations which are mentioned in the content.
 
 |string
 
+[[genres]]
 |genres
+|genres (2.x) +
+genre (1.x)
 a|The nature, intellectual or journalistic form of the content. +
 
 This property is an array of objects with the following properties:
@@ -703,7 +754,10 @@ This property is an array of objects with the following properties:
 
 |array
 
+[[people]]
 |people
+|people (2.x) +
+person (1.x)
 | An array of objects describing individual human beings. +
 This property is an array of objects with the following properties:
 
@@ -727,7 +781,7 @@ This property is an array of objects with the following properties:
 !The code for the person as a literal value.
 !string
 
-!contactinfo
+!contactInfo (contactinfo in 2.x)
 !Contact and/or location information for the person as a ContactInfo structure.
 !<<Contact Info structure>>
 
@@ -735,7 +789,10 @@ This property is an array of objects with the following properties:
 
 |array
 
+[[organisations]]
 |organisations
+|organisations (2.x) +
+organisation (1.x)
 |An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party. +
 This property is an array of objects with the following properties: +
 
@@ -769,7 +826,7 @@ Array of objects with the properties:
 * `ticker`: Ticker symbol used for the financial instrument (string). This sub-property is allowed but deprecated. +
 !array
 
-!contactinfo
+!contactInfo (contactinfo in 2.x)
 !Contact and/or location information for the organisation as a ContactInfo structure.
 !<<Contact Info structure>>
 
@@ -777,7 +834,10 @@ Array of objects with the properties:
 
 |array
 
+[[places]]
 |places
+|places (2.x) +
+place (1.x)
 |An array of named locations. +
 This property is an array of objects with the following properties:
 
@@ -801,11 +861,11 @@ This property is an array of objects with the following properties:
 !The code for the place as a literal
 !string
 
-!contactinfo
+!contactInfo (contactinfo in 2.x)
 !Contact and/or location information for the place as a ContactInfo structure.
 !<<Contact Info structure>>
 
-!geojson
+!geoJSON (geojson in 2.x, geometry_<type> in 1.x)
 !An object holding geo data of this place. From ninjs 2.0 onwards, the
 contents of this object must conform to
 https://geojson.org/schema/GeoJSON.json[the GeoJSON format] defined in
@@ -817,7 +877,10 @@ https://datatracker.ietf.org/doc/html/rfc7946[RFC 7946].
 
 |array
 
+[[subjects]]
 |subjects
+|subjects (2.x) +
+subject (1.x)
 |An array of objects holding concepts with a relationship to the content. +
 This property is an array of objects with the following properties:
 
@@ -855,7 +918,10 @@ This property is an array of objects with the following properties:
 !===
 |array
 
+[[events]]
 |events
+|events (2.x) +
+event (1.x)
 |An array of objects describing something which happens in a planned or unplanned manner. +
 This property is an array of objects with the following properties:
 
@@ -882,7 +948,10 @@ This property is an array of objects with the following properties:
 
 |array
 
+[[objects]]
 |objects
+|objects (2.x) +
+object (1.x)
 |An array of objects describing something material, excluding persons. +
 This property is an array of objects with the following properties:
 
@@ -909,7 +978,10 @@ This property is an array of objects with the following properties:
 
 |array
 
-|infosources
+[[infoSources]]
+|infoSources
+|infosources (2.x) +
+infosource (1.x)
 |An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. +
 This property is an array of objects with the following properties:
 
@@ -933,7 +1005,7 @@ This property is an array of objects with the following properties:
 !The code for the infosource as a string literal
 !string
 
-!contactinfo
+!contactInfo (contactinfo in 1.x and 2.x)
 !Contact and/or location information for the info source as a ContactInfo structure.
 !<<Contact Info structure>>
 
@@ -941,7 +1013,10 @@ This property is an array of objects with the following properties:
 
 |array
 
-|trustindicators
+[[trustIndicators]]
+|trustIndicators
+|trustindicator (1.x) +
+trustindicators (2.x)
 |An array of objects to allow links to documents about trust indicators, intended to show
 the trustworthiness of the news provider. +
 This property is an array of objects with the following properties:
@@ -1036,18 +1111,118 @@ It contains a set of one or more keys, each with a name and an object as the val
 
 ==== Properties of renditions
 
-[%autowidth,options="header"]
+[cols="1,1,8a,2",options="header"]
 |===
-|Property name|Description|Data type
-|name|The name of this object in the array of renditions. Required|string
-|href|The URL for accessing the rendition as a resource|URI
-|contenttype|A media type which applies to the rendition|string
-|title|A title for the link to the rendition resource|string
-|height|For still and moving images: the height of the display area measured in pixels|number
-|width|For still and moving images: the width of the display area measured in pixels|number
-|sizeinbytes|The size of the rendition resource in bytes|number
-|duration|The total time duration of the content in seconds|number
-|format|Binary format name|string
+|ninjs 3.0 +
+property
+|ninjs 1.x / 2.x +
+property
+|Description
+|Data type
+
+|name
+|name
+|The name of this object in the array of renditions. Required
+|string
+
+|href
+|href
+|The URL for accessing the rendition as a resource
+|URI
+
+|contentType
+|contenttype
+|The IANA Media Type which applies to this rendition
+|string
+
+|title
+|title
+|A title for the link to the rendition resource
+|string
+
+|height
+|height
+|For still and moving images: the height of the display area measured in pixels
+|number
+
+|width
+|width
+|For still and moving images: the width of the display area measured in pixels
+|number
+
+|sizeInBytes
+|sizeinbytes
+|The size of the rendition resource in bytes
+|number
+
+|duration
+|duration
+|The total time duration of the content in seconds (fractional seconds are allowed)
+|number
+
+|format
+|format
+|A refinement of a generic content type (i.e. IANA media type) by a literal string value.
+|string
+
+|aspectRatio
+|n/a +
+(3.0 only)
+|Aspect ratio of the video file, which is the ratio of the width of video to its height, such as 16:9 and 4:3.
+|string
+
+|videoCodec
+|n/a +
+(3.0 only)
+|The video encoding system used to create the content. Suggested CV: https://cv.iptc.org/newscodes/videocodec/
+|string
+
+|frameRate
+|n/a +
+(3.0 only)
+|The number of video frames per second, which is the rate at which the material should be shown in order to achieve the intended visual effect
+|number
+
+|poi
+|n/a +
+(3.0 only)
+|The point of interest of the rendition.
+This property is an object with the following child properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+!x
+!The x-coordinate of the point of interest of the rendition.
+!integer
+
+!y
+!The y-coordinate of the point of interest of the rendition.
+!integer
+!===
+|object
+
+|transportProtocol
+|n/a +
+(3.0 only)
+|The transport/flow type of the flow (B2B stream).
+|string
+
+|scanType
+|n/a +
+(3.0 only)
+|The scan type of the video. The only allowed values are 'progressive' and 'interlaced'.
+|One of: +
+`progressive` +
+`interlaced`
+
+|bitrate
+|n/a +
+(3.0 only)
+|The bitrate of the video. Should always include units, eg 400 kbps.
+|string
+
 |===
 
 ==== Renditions example
