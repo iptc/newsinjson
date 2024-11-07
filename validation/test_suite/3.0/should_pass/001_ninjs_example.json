@@ -8,7 +8,7 @@
     "headlines": [
         {
             "role": "main",
-            "value": "Test of ninjs 2.2 properties"
+            "value": "Test of ninjs 3.0 properties"
         },
         {
             "role": "extension",

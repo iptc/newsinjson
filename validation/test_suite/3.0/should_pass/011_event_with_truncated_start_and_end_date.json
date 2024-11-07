@@ -1,8 +1,8 @@
 {
   "standard": {
     "name": "ninjs",
-    "version": "2.2",
-    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+    "version": "3.0",
+    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
   },
   "uri": "urn:nato.int:2023-nato-summit-press-conference",
   "type": "event",
