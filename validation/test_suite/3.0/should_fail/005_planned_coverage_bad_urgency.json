@@ -6,22 +6,22 @@
     },
     "uri": "urn:005-ninjs2.2-planned-coverage-test",
     "type": "planning",
-    "plannedcoverage": [
+    "plannedCoverage": [
         {
             "uri": "planning-times-square-001-text",
             "title": "Text article covering the ball drop",
-            "plannedcoveragestatus": "http://cv.iptc.org/newscodes/newscoveragestatus/int",
+            "plannedCoverageStatus": "http://cv.iptc.org/newscodes/newscoveragestatus/int",
             "type": "text",
             "event": "urn:004-ninjs2.2-recurring-event-test",
-            "itemcount": { "rangefrom": 1, "rangeto": 1 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
+            "itemCount": { "rangeFrom": 1, "rangeTo": 1 },
+
             "services": [
                 "all-items-feed",
                 "all-text-items-feed",
                 "text-highlights-feed"
             ],
             "urgency": 11,
-            "wordcount": 300,
+            "wordCount": 300,
             "language": "en-US",
             "audiences": [
                 {
@@ -34,9 +34,8 @@
             "uri": "planning-times-square-001-video",
             "type": "video",
             "event": "urn:004-ninjs2.2-recurring-event-test",
-            "itemcount": { "rangefrom": 1, "rangeto": 1 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
-            "services": [
+            "itemCount": { "rangeFrom": 1, "rangeTo": 1 },
+                        "services": [
                 "all-items-feed",
                 "all-video-items-feed",
                 "video-highlights-feed"
@@ -52,9 +51,8 @@
             "uri": "planning-times-square-001-all-photos",
             "type": "picture",
             "event": "times-square-event-001",
-            "itemcount": { "rangefrom": 5, "rangeto": 15 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
-            "services": [
+            "itemCount": { "rangeFrom": 5, "rangeTo": 15 },
+                        "services": [
                 "all-items-feed",
                 "all-photo-items-feed"
             ],
@@ -69,9 +67,8 @@
             "uri": "planning-times-square-001-top-photos",
             "type": "picture",
             "event": "times-square-event-001",
-            "itemcount": { "rangefrom": 1, "rangeto": 3 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
-            "services": [
+            "itemCount": { "rangeFrom": 1, "rangeTo": 3 },
+                        "services": [
                 "photo-highlights-feed"
             ],
             "audiences": [

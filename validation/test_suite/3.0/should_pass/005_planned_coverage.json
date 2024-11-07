@@ -6,81 +6,52 @@
     },
     "uri": "urn:005-ninjs2.2-planned-coverage-test",
     "type": "planning",
-    "plannedcoverage": [
+    "plannedCoverage": [
         {
             "uri": "planning-times-square-001-text",
             "title": "Text article covering the ball drop",
             "type": "text",
-            "itemcount": { "rangefrom": 1, "rangeto": 1 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
-            "services": [
-                "all-items-feed",
-                "all-text-items-feed",
-                "text-highlights-feed"
-            ],
-            "wordcount": 300,
+            "itemCount": { "rangeFrom": 1, "rangeTo": 1 },
+            "wordCount": 300,
             "language": "en-US",
             "audiences": [
                 {
                     "audience": "45-60",
                     "significance": 8
                 }
-            ],
-            "renditions": [
             ]
         },
         {
             "uri": "planning-times-square-001-video",
             "type": "video",
-            "itemcount": { "rangefrom": 1, "rangeto": 1 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
-            "services": [
-                "all-items-feed",
-                "all-video-items-feed",
-                "video-highlights-feed"
-            ],
+            "itemCount": { "rangeFrom": 1, "rangeTo": 1 },
             "audiences": [
                 {
                     "audience": "18-25",
                     "significance": 8
                 }
-            ],
-            "renditions": [
             ]
         },
         {
             "uri": "planning-times-square-001-all-photos",
             "type": "picture",
-            "itemcount": { "rangefrom": 5, "rangeto": 15 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
-            "services": [
-                "all-items-feed",
-                "all-photo-items-feed"
-            ],
+            "itemCount": { "rangeFrom": 5, "rangeTo": 15 },
             "audiences": [
                 {
                     "audience": "casual",
                     "significance": 7
                 }
-            ],
-            "renditions": [
             ]
         },
         {
             "uri": "planning-times-square-001-top-photos",
             "type": "picture",
-            "itemcount": { "rangefrom": 1, "rangeto": 3 },
-            "scheduled": "2024-01-01T00:30:00-04:00",
-            "services": [
-                "photo-highlights-feed"
-            ],
+            "itemCount": { "rangeFrom": 1, "rangeTo": 3 },
             "audiences": [
                 {
                     "audience": "casual",
                     "significance": 8
                 }
-            ],
-            "renditions": [
             ]
         }
     ]

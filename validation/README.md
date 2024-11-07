@@ -39,6 +39,7 @@ JavaScript `ajv` validator.
 * Install npm
 * From a command line, run
     $ npm i
+    $ cd validation/
     $ npm run test
 
 # License
