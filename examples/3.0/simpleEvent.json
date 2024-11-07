@@ -14,27 +14,27 @@
   ],
   "title": "Tackling Doping in Sport Conference",
   "version": "2",
-  "versioncreated": "2023-10-04T08:16:21+02:00",
-  "pubstatus": "usable",
+  "versionCreated": "2023-10-04T08:16:21+02:00",
+  "pubStatus": "usable",
   "urgency": 4,
-  "copyrightholder": "addb",
-  "copyrightnotice": "Copyright 2023, The Anti-Doping Database (www.addb.no).",
+  "copyrightHolder": "addb",
+  "copyrightNotice": "Copyright 2023, The Anti-Doping Database (www.addb.no).",
   "language": "en",
   "descriptions": [{
     "role": "text",
-    "contenttype": "text/plain",
+    "contentType": "text/plain",
     "value": "The two-day Tackling Doping in Sport Conference took place at Twickenham Stadium on Wednesday 16 and Thursday 17 March 2011, bringing together the world\u2019s leading experts in the field of anti-doping."
   }],
-  "eventdetails": {
+  "eventDetails": {
     "dates": {
-      "startdate": "2011-03-16",
-      "enddate": "2011-03-17"
+      "expectedStartDate": "2011-03-16",
+      "expectedEndDate": "2011-03-17"
     }
   },
   "places": [
     {
       "name": "Twickenham Stadium",
-      "contactinfo": [
+      "contactInfo": [
         {
           "address": {
             "locality": "London",

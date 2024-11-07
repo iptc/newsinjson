@@ -5,12 +5,10 @@ ninjs documents can be validated using [JSON Schema](http://json-schema.org).
 The IPTC maintains a schema for each release of the ninjs standard. IPTC ninjs
 schemas can be found [here](http://www.iptc.org/std/ninjs/).
 
-The most recent ninjs specification file for generation 1 is available at
-http://www.iptc.org/std/ninjs/ninjs-schema_1.3.json
-
-The most recent ninjs specification file for generation 2 is available at
-http://www.iptc.org/std/ninjs/ninjs-schema_2.0.json
-
+The most recent ninjs specification files areavailable at
+http://www.iptc.org/std/ninjs/ninjs-schema_1.5.json
+http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json
+http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json
 
 # Test Suite
 
@@ -26,8 +24,8 @@ properties defined in ninjs. Mainly useful during development of the schemas.
     $ pip3 install jsonschema
     $ validation/python/runtests.py
 
-This will run each of the files in the test suite against the ninjs-1.3 and
-ninjs-2.0 schemas.
+This will run each of the files in the test suite against the ninjs 1.x, 2.x
+and 3.x schemas.
 
 # JavaScript validator (using ajv)
 
@@ -39,6 +37,7 @@ JavaScript `ajv` validator.
 * Install npm
 * From a command line, run
     $ npm i
+    $ cd validation/
     $ npm run test
 
 # License

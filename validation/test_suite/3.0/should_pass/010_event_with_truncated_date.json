@@ -7,16 +7,15 @@
   "uri": "urn:nato.int:2023-nato-summit-press-conference",
   "type": "event",
   "title": "2023 NATO Summit Press Conference",
-  "eventdetails": {
+  "eventDetails": {
     "dates": {
-      "startdate": "2023-07-11T09:00:00Z",
-      "expectedstartdate": "2023-07-12"
+      "expectedStartDate": "2023-07-11"
     }
   },
   "places": [
     {
       "name": "LITEXPO",
-      "contactinfo": [
+      "contactInfo": [
         {
           "type": "physical",
           "address": {
