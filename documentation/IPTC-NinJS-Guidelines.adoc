@@ -11,8 +11,8 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :author: IPTC News in JSON Working Group
 :email: office@iptc.org
 :version-label: Covers version
-:revnumber: 2.1 and 1.5
-:revremark: Revised 2023-06-27
+:revnumber: 3.0, 2.1 and 1.5
+:revremark: Revised 2024-11-07
 :toc: left
 :toc-title: ninjs User Guide
 :toclevels: 2
@@ -37,11 +37,14 @@ We have created some tools to help get users started. These include a
 https://www.iptc.org/std/ninjs/generator/[simple ninjs generator] that shows
 how easily a real ninjs document can be created, and a <<Validating a ninjs document,JSON schema to validate ninjs objects>>.
 
-The latest version of the standard is 2.1. 
-https://iptc.org/std/ninjs/ninjs-schema_2.1.json[Version 2.1 of the ninjs
-schema] was made available in June 2023.
+The latest version of the standard is 3.0. 
+https://iptc.org/std/ninjs/ninjs-schema_3.0.json[Version 3.0 of the ninjs
+schema] was made available in November 2024.
 
-The latest version in the 1.x branch is 1.5, which was made avaialble in June 2023.
+The latest version in the 2.x branch is 2.1, which was made avaialble in June 2023.
+See below for more information on the <<Differences between ninjs 1.x and 2.x,differences between the 1.x and 2.x branches>>.
+
+The latest version in the 1.x branch is 1.5, which was also made avaialble in June 2023.
 See below for more information on the <<Differences between ninjs 1.x and 2.x,differences between the 1.x and 2.x branches>>.
 
 === Built for both APIs and data at rest
@@ -55,23 +58,25 @@ determined by a given provider.
 * ninjs allows the provider to indicate whether there are more properties
 available, if the recipient would like to request more, using the
 `representationtype: "partial"` construct.
-* Starting from version 2.0, the ninjs schema has been created in such a way
-that it can easily be converted into a schema for a binary data serialisation
+* Version 3.x of ninjs has been created to work well with both GraphQL and
+OpenAPI/Swagger, the two main standards for JSON-based APIs.
+* Versions 2.x and 3.x of the ninjs schema have been created in such a way
+that they can easily be converted into a schema for a binary data serialisation
 protocol such as https://developers.google.com/protocol-buffers[Protocol
 Buffers], https://avro.apache.org/[Avro], https://thrift.apache.org/[Thrift] or
 https://cbor.io/[CBOR] / https://datatracker.ietf.org/doc/html/rfc8610[CDDL]. We
-include a Protocol Buffers schema as an example.
+include a https://github.com/iptc/newsinjson/tree/main/protobufs[Protocol Buffers schema in the GitHub repository] as an example.
 . *Data at rest - such as in search engines or content management systems*
 * ninjs documents can convey a rich set of news publishing properties, such as
 information that is necessary for the pre-publishing workflow or custom
 properties that a particular provider wants to express in a standard way.
 * ninjs is designed to be customisable by a particular provider, so that they
-can express just what they require, without unnecessary overhead. Ninjs is
+can express just what they require, without unnecessary overhead. ninjs is
 suitable for use in JSON-native engines, such as
 http://www.mongodb.org/[MongoDB] or
 http://www.elasticsearch.org/[Elasticsearch].
 
-=== ninjs data model in a nutshell
+=== The ninjs data model in a nutshell
 
 As the below diagram shows, every ninjs object describes a *News Item*. All
 ninjs items must have a unique ID given by a *URI*. They can have administrative
@@ -102,14 +107,14 @@ include::includes/examples/001_simple_example.json[]
 You can make your own simple ninjs document using the
 https://www.iptc.org/std/ninjs/generator/[ninjs generator tool on iptc.org].
 
-=== Two versions of ninjs: ninjs 1.5 and ninjs 2.1
+=== Versions of ninjs: ninjs 3.0, 2.1 and 1.5
 
-IPTC manages two current versions of ninjs: the 2.x branch (where the latest
-version is 2.1) and the 1.x branch (where the latest version is currently
-1.5).
+IPTC manages three versions of ninjs: the 3.x branch (where the latest version
+is 3.0), the 2.x branch (where the latest version is 2.1) and the 1.x branch
+(where the latest version is 1.5).
 
 The 1.x series continues the version of ninjs that started with ninjs 1.0 in
-2013, adding new features in a way that is fully backwardscompatible. The
+2013, adding new features in a way that is fully backwards-compatible. The
 latest release in this series is 1.5, which includes new properties such as
 `contactinfo`, `symbol` and `symboltype` (<<ninjs 1.5,see the full list of
 changes>>). 
@@ -121,32 +126,42 @@ is intended to make ninjs easier for projects based on binary protocols such as
 Protocol Buffers and Avro. We also took the opportunity to make property names
 more consistent with NewsML-G2 and to add some fields to handle rights.
 
-We wanted to issue a new release which fixed these problems, but this meant
-breaking backwards compatibility with the 1.x versions of ninjs.  This is why
-we decided to maintain two parallel branches: 1.x and 2.x.
+The 3.x series includes support for news planning and events, including live
+events. It also adds support for live streamed renditions. In a major change,
+we also change the case of all ninjs properties to "camelCase" format, in
+keeping with JSON best practices, especially regarding GraphQL usage. ninjs 3.0 was
+created alongside the https://www.thedpp.com/lpx[LPX (Live Production Exchange)
+project from the DPP], with the help of experts from CNN, Reuters, Arqiva and more.
 
-All new users are strongly recommended to use version 2.1.
+All new users are strongly recommended to use version 3.0.
 
+ninjs 3.0 was approved by the IPTC Standards Committee on October 2nd, 2024.
 The 2.1 and 1.5 versions of ninjs were approved by the IPTC Standards Committee
 on May 17th, 2023.
 
-This document focuses on the 2.1 version, but those who must use version 1.5
-for backwards compatibility reasons can find the JSON Schema file for ninjs 1.5
-schema at https://iptc.org/std/ninjs/ninjs-schema_1.5.json.
+This document focuses on the 3.0 version, but includes notes where the 2.x and
+1.x versions differ. Those who must use version 2.x or 1.x for backwards
+compatibility reasons can find the JSON Schema file for ninjs 2.1 at
+https://iptc.org/std/ninjs/ninjs-schema_2.1.json and the schema file for ninjs 1.5
+at https://iptc.org/std/ninjs/ninjs-schema_1.5.json.
 
-=== Differences between ninjs 1.x and 2.x
+=== Differences between ninjs 1.x, 2.x and 3.x
 
-We maintain the 1.x branch for those who can't move to the new structure in 2.0.
-Most of the properties are the same as the ones in ninjs 2.x, with the exception
-of the multi-valued properties.
+We maintain the 1.x and 2.x branches for those who can't move to the new 3.0 version.
 
-==== patternProperties converted to arrays
+==== patternProperties vs arrays
 
-Some properties are implemented as "patternProperties" in the 1.x JSON Schema,
-which means that the name must start with a certain text string (such as `headline_`) but can end in any string (such as `subhead`).
-This can be used to distinguish objects from each other. In the 2.x version of the schema,
-we converted them to be simple arrays with well-defined names, and a `role` property
-that defines the type of the value.
+In the ninjs 1.x schema, some properties are implemented as "patternProperties",
+which means that the name must start with a certain text string (such as `headline_`)
+but can end in any string (such as `subhead`). This was used to distinguish objects
+from each other.
+
+This can cause problems with binary serialisations and queries based on the schema,
+including Protocol Buffers, Avro, CBOR and GraphQL which all require well-known, pre-
+defined property names.
+
+Therefore, in the 2.x and 3.x versions of the schema, we instead use simple arrays
+with well-defined names, and a `role` property that defines the type of the value.
 
 For example, a subheadline is defined in ninjs 1.x as
 
@@ -157,9 +172,9 @@ For example, a subheadline is defined in ninjs 1.x as
 }
 ----
 
-The same subheadline would be defined in ninjs 2.x as
+The same subheadline would be defined in ninjs 2.x or 3.x as
 
-[source,ninjs 2.x JSON]
+[source,ninjs 2.x or 3.x JSON]
 ----
 {
   "headlines": [
@@ -173,15 +188,17 @@ The same subheadline would be defined in ninjs 2.x as
 
 This applies to the following properties:
 
-*  `description_XXX` (1.x) / `descriptions` (2.x)
-* `body_XXX` (1.x) / `bodies` (2.x)
-* `headline_XXX` (1.x) / `headlines` (2.x)
+*  `description_XXX` (1.x) / `descriptions` (2.x, 3.x)
+* `body_XXX` (1.x) / `bodies` (2.x, 3.x)
+* `headline_XXX` (1.x) / `headlines` (2.x, 3.x)
 
 ==== Renditions and Associations converted to arrays
 
-The `renditions` and `associations` properties are arrays in ninjs 2.x and objects in ninjs 1.x.
+The `renditions` and `associations` properties are objects in ninjs 1.x,
+using the object name as the distinguishing element. This caused similar
+problems, so we use arrays in ninjs 2.x and 3.x.
 
-In ninjs 1.x a rendition may look like the following:
+For example, in ninjs 1.x a rendition may look like the following:
 
 [source,ninjs 1.x JSON]
 ----
@@ -194,9 +211,9 @@ In ninjs 1.x a rendition may look like the following:
 }
 ----
 
-The same rendition in ninjs 2.x would look like:
+The same rendition in ninjs 2.x or 3.x would look like:
 
-[source,ninjs 2.x JSON]
+[source,ninjs 2.x or 3.x JSON]
 ----
 {
   "renditions": [
@@ -208,55 +225,71 @@ The same rendition in ninjs 2.x would look like:
 }
 ----
 
-Associations work the same way in both ninjs 1.x and ninjs 2.x.
+Associations work the same way in all ninjs versions.
 
 ==== Property names converted to plural form
 
 In addition, the following property names were converted to plural form for ninjs 2.x.
 They were not changed in any other way.
 
-* `altid` (ninjs 1.x) / `altids` (ninjs 2.x)
-* `event` (ninjs 1.x) / `events` (ninjs 2.x)
-* `genre` (ninjs 1.x) / `genres` (ninjs 2.x)
-* `infosource` (ninjs 1.x) / `infosources` (ninjs 2.x)
-* `object` (ninjs 1.x) / `objects` (ninjs 2.x)
-* `organisation` (ninjs 1.x) / `organisations` (ninjs 2.x)
-* `person` (ninjs 1.x) / `people` (ninjs 2.x)
-* `place` (ninjs 1.x) / `places` (ninjs 2.x)
-* `subject` (ninjs 1.x) / `subjects` (ninjs 2.x) and
-* `trustindicator` (ninjs 1.x) / `trustindicators` (ninjs 2.x).
+In ninjs 3.x, property names were converted to camelCase.
+
+[%autowidth,options="header"]
+|===
+|ninjs 1.x | ninjs 2.x| ninjs 3.x
+
+| `altid` | `altids` | `altIds`
+| `event` | `events` | `events`
+| `genre` | `genres` | `genres`
+| `infosource` | `infosources` | `infoSources`
+| `object` | `objects` | `objects`
+| `organisation` | `organisations` | `organisations`
+| `person` | `people` | `people`
+| `place` | `places` | `places`
+| `subject` | `subjects` | `subjects`
+| `trustindicator` | `trustindicators` | `trustIndicators`
+|===
 
 === Which version of ninjs should I choose for my project?
 
 If you are starting a green-field project, we recommend using the latest
-version in the ninjs 2.x branch: currently ninjs 2.1.  This version should be
+version in the ninjs 3.x branch, currently ninjs 3.0.  This version should be
 easiest for developers to work with.
 
-If you are already using a 1.x version of ninjs, we recommend at least
-upgrading to the latest version in the 1.x branch, currently 1.5. This should
-be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions.
+If you are already using a 1.x or 2.x version of ninjs, we recommend at least
+upgrading to the latest version in that branch, currently 1.5 and 2.1. This
+should be an easy change, because all new minor versions in a branch are
+backwards-compatible with earlier minor versions in the same branch.
 
 === ninjs and other standards
 
 JSON is an increasingly popular
 http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/[alternative to]
 (or
-http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/[replacement for]) XML. ninjs is designed in such a way that it can be used either standalone or alongside other https://iptc.org/standards/[IPTC news markup formats] such as https://iptc.org/standards/newsml-g2/[NewsML-G2], https://iptc.org/standards/nitf/[NITF]
-https://iptc.org/standards/iptc-7901/[IPTC7901] and https://iptc.org/standards/rnews/[rNews].
+http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/[replacement
+for]) XML. ninjs is designed in such a way that it can be used either standalone
+or alongside other https://iptc.org/standards/[IPTC news markup formats] such as
+https://iptc.org/standards/newsml-g2/[NewsML-G2],
+https://iptc.org/standards/nitf/[NITF],
+https://iptc.org/standards/iptc-7901/[IPTC7901] and
+https://iptc.org/standards/rnews/[rNews].
 
 == About the IPTC ninjs User Guide
 
 === Copyright
 
-Copyright © 2023 IPTC, International Press Telecommunications Council.
+Copyright © 2024 IPTC, International Press Telecommunications Council.
 
 The IPTC ninjs User Guide document is published under the 
 http://creativecommons.org/licenses/by/4.0/[Creative Commons Attribution 4.0 license]
 - see the full license agreement at http://creativecommons.org/licenses/by/4.0/.
 
-By obtaining, using and/or copying this document, you (the licensee) agree that you have read, understood, and will comply with the terms and conditions of the license.
+By obtaining, using and/or copying this document, you (the licensee) agree that you
+have read, understood, and will comply with the terms and conditions of the license.
 
-Materials used in this guide are either in the public domain or are available with the permission of their respective copyright holders. All materials of this IPTC standard covered by copyright shall be licensable at no charge.
+Materials used in this guide are either in the public domain or are available with the
+permission of their respective copyright holders. All materials of this IPTC standard
+covered by copyright shall be licensable at no charge.
 
 === Acknowledgements
 
@@ -265,17 +298,18 @@ This document is the result of a team effort by members of the News in JSON Work
 Contributors to this document include:
 Paul Harman (Bloomberg),
 Johan Lindgren (TT),
-Stuart Myles (ex-AP), 
+Stuart Myles (previously with AP), 
 Brendan Quinn (IPTC),
-Michael Steidl (IPTC),
-Evan Sandhaus (ex-NYT), and
-Ian Young (PA Media / Alamy),
+Michael Steidl (previous with IPTC),
+Evan Sandhaus (previously with NYT), and
+Ian Young (PA Media / Alamy).
 
 === How to contact IPTC
 
-All users of ninjs are encouraged to Join the public IPTC ninjs discussion group: https://groups.io/g/iptc-ninjs/
+All users of ninjs are encouraged to join the public IPTC ninjs discussion group:
+https://groups.io/g/iptc-ninjs/
 
-Staff from IPTC Member organisations are welcome to join the 
+Staff from organisations who are members of the IPTC are welcome to join the 
 https://groups.io/g/iptc-news-in-json-dev[members-only discussion list for the
 ninjs development team].
 
@@ -286,14 +320,22 @@ You can also submit a message on our website: https://iptc.org/about-iptc/contac
 
 Visit the ninjs section on IPTC's website: https://iptc.org/standards/ninjs/
 
-To stay up to date on developments with ninjs and other areas, follow IPTC on Twitter: http://www.twitter.com/IPTC/[@IPTC]
+To stay up to date on developments with ninjs and other areas, follow IPTC on
+Twitter: http://www.twitter.com/IPTC/[@IPTC]
 
 === About IPTC
 
-The IPTC, based in London, brings together the world’s leading news agencies, publishers and industry vendors. It develops and promotes efficient technical standards to improve the management and exchange of information between content providers, intermediaries and consumers. The standards enable easy,
-cost-effective and rapid innovation and include the IPTC Photo Metadata standard, the Video Metadata Hub, the news exchange formats NewsML-G2, ninjs, SportsML-G2 and NITF, rNews for marking up online news, the rights expression language RightsML, and NewsCodes taxonomies for categorising news.
+The IPTC, based in London, brings together the world’s leading news agencies,
+publishers and industry vendors. It develops and promotes efficient technical
+standards to improve the management and exchange of information between content
+providers, intermediaries and consumers. IPTC standards enable easy, cost-effective
+and rapid innovation and include the IPTC Photo Metadata standard, the Video
+Metadata Hub, the news exchange formats NewsML-G2, ninjs, SportsML-G2 and NITF,
+rNews for marking up online news, the rights expression language RightsML,
+and NewsCodes taxonomies for categorising news.
 
-IPTC is a not-for-profit membership organisation registered in England. https://iptc.org/participate/[Find more about membership].
+IPTC is a not-for-profit membership organisation registered in England.
+https://iptc.org/participate/[Find more about joining IPTC].
 
 Business address:
 
@@ -314,12 +356,24 @@ These properties concern the structure, type and creation details of the content
 
 [%autowidth,options="header"]
 |===
-|Property|Description|Data type
+|ninjs 3.0 +
+property
+|ninjs 2.x +
+property
+|ninjs 1.x
+property
+|Description|Data type
 
+[[uri]]
+|uri
+|uri
 |uri
 |The identifier for this news object
 |URI
 
+[[type]]
+|type
+|type
 |type
 |The generic news type of this news object
 | One of: +
@@ -331,11 +385,17 @@ These properties concern the structure, type and creation details of the content
 `composite` +
 `component`
 
+[[title]]
+|title
+|title
 |title
 |A short natural-language name for the item.
 |string
 
+[[standard]]
 |standard
+|standard
+|$standard
 a|An object with information about standard, version and schema this instance is valid against. +
 This property is an object with the following child properties:
 
@@ -359,7 +419,9 @@ This property is an object with the following child properties:
 
 |object
 
+|altIds
 |altids
+|altid
 a|Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use. +
 This property is an object with the following child properties: +
@@ -380,6 +442,8 @@ This property is an object with the following child properties: +
 
 |array of objects
 
+|representationType
+|representationtype
 |representationtype
 |Indicates the completeness of this representation of a news item. +
 For a full document representation, the value should be `full`. +
@@ -390,33 +454,43 @@ One of: +
 `partial`
 
 |profile
+|profile
+|profile
 |An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as `'text-only'` or `'text-photo'`. Profiles are typically provider-specific.
 |string
 
 |version
+|version
+|version
 |The version of the news object which is identified by the uri property.
 |string
 
+|firstCreated
 |firstcreated
 |Indicates when the first version of the item was created.
 |date-time
 
+|versionCreated
 |versioncreated
 |The date and time when this version of the news object was created.
 |date-time
 
+|contentCreated
 |contentcreated
 |The date and time when the content of this ninjs object was originally created.
 |date-time
 
 |embargoed
+|embargoed
 |The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.
 |date-time
 
 |expires
+|expires
 |The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in ninjs 2.1)
 |date-time
 
+|pubStatus
 |pubstatus
 |The publishing status of the news object, its value is `usable` by default.
 |One of: +
@@ -425,6 +499,7 @@ One of: +
 `canceled`
 
 [[urgency]]
+|urgency
 |urgency
 |The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest.
 |number

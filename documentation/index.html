@@ -434,8 +434,8 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <div class="details">
 <span id="author" class="author">IPTC News in JSON Working Group</span><br>
 <span id="email" class="email"><a href="mailto:office@iptc.org">office@iptc.org</a></span><br>
-<span id="revnumber">covers version 2.1 and 1.5</span>
-<br><span id="revremark">Revised 2023-06-27</span>
+<span id="revnumber">covers version 3.0, 2.1 and 1.5</span>
+<br><span id="revremark">Revised 2024-11-07</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">ninjs User Guide</div>
@@ -443,11 +443,11 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <li><a href="#_introduction_ninjs_is_news_in_json">1. Introduction: ninjs is News in JSON</a>
 <ul class="sectlevel2">
 <li><a href="#_built_for_both_apis_and_data_at_rest">1.1. Built for both APIs and data at rest</a></li>
-<li><a href="#_ninjs_data_model_in_a_nutshell">1.2. ninjs data model in a nutshell</a></li>
+<li><a href="#_the_ninjs_data_model_in_a_nutshell">1.2. The ninjs data model in a nutshell</a></li>
 <li><a href="#_ninjs_object_building_blocks">1.3. ninjs object building blocks</a></li>
 <li><a href="#_a_simple_example">1.4. A simple example</a></li>
-<li><a href="#_two_versions_of_ninjs_ninjs_1_5_and_ninjs_2_1">1.5. Two versions of ninjs: ninjs 1.5 and ninjs 2.1</a></li>
-<li><a href="#_differences_between_ninjs_1_x_and_2_x">1.6. Differences between ninjs 1.x and 2.x</a></li>
+<li><a href="#_versions_of_ninjs_ninjs_3_0_2_1_and_1_5">1.5. Versions of ninjs: ninjs 3.0, 2.1 and 1.5</a></li>
+<li><a href="#_differences_between_ninjs_1_x_2_x_and_3_x">1.6. Differences between ninjs 1.x, 2.x and 3.x</a></li>
 <li><a href="#_which_version_of_ninjs_should_i_choose_for_my_project">1.7. Which version of ninjs should I choose for my project?</a></li>
 <li><a href="#_ninjs_and_other_standards">1.8. ninjs and other standards</a></li>
 </ul>
@@ -536,13 +536,17 @@ as <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>.</p>
 how easily a real ninjs document can be created, and a <a href="#_validating_a_ninjs_document">JSON schema to validate ninjs objects</a>.</p>
 </div>
 <div class="paragraph">
-<p>The latest version of the standard is 2.1.
-<a href="https://iptc.org/std/ninjs/ninjs-schema_2.1.json">Version 2.1 of the ninjs
-schema</a> was made available in June 2023.</p>
+<p>The latest version of the standard is 3.0.
+<a href="https://iptc.org/std/ninjs/ninjs-schema_3.0.json">Version 3.0 of the ninjs
+schema</a> was made available in November 2024.</p>
 </div>
 <div class="paragraph">
-<p>The latest version in the 1.x branch is 1.5, which was made avaialble in June 2023.
-See below for more information on the <a href="#_differences_between_ninjs_1_x_and_2_x">differences between the 1.x and 2.x branches</a>.</p>
+<p>The latest version in the 2.x branch is 2.1, which was made avaialble in June 2023.
+See below for more information on the <a href="#Differences between ninjs 1.x and 2.x">differences between the 1.x and 2.x branches</a>.</p>
+</div>
+<div class="paragraph">
+<p>The latest version in the 1.x branch is 1.5, which was also made avaialble in June 2023.
+See below for more information on the <a href="#Differences between ninjs 1.x and 2.x">differences between the 1.x and 2.x branches</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="_built_for_both_apis_and_data_at_rest"><a class="anchor" href="#_built_for_both_apis_and_data_at_rest"></a>1.1. Built for both APIs and data at rest</h3>
@@ -566,12 +570,16 @@ available, if the recipient would like to request more, using the
 <code>representationtype: "partial"</code> construct.</p>
 </li>
 <li>
-<p>Starting from version 2.0, the ninjs schema has been created in such a way
-that it can easily be converted into a schema for a binary data serialisation
+<p>Version 3.x of ninjs has been created to work well with both GraphQL and
+OpenAPI/Swagger, the two main standards for JSON-based APIs.</p>
+</li>
+<li>
+<p>Versions 2.x and 3.x of the ninjs schema have been created in such a way
+that they can easily be converted into a schema for a binary data serialisation
 protocol such as <a href="https://developers.google.com/protocol-buffers">Protocol
 Buffers</a>, <a href="https://avro.apache.org/">Avro</a>, <a href="https://thrift.apache.org/">Thrift</a> or
 <a href="https://cbor.io/">CBOR</a> / <a href="https://datatracker.ietf.org/doc/html/rfc8610">CDDL</a>. We
-include a Protocol Buffers schema as an example.</p>
+include a <a href="https://github.com/iptc/newsinjson/tree/main/protobufs">Protocol Buffers schema in the GitHub repository</a> as an example.</p>
 </li>
 </ul>
 </div>
@@ -587,7 +595,7 @@ properties that a particular provider wants to express in a standard way.</p>
 </li>
 <li>
 <p>ninjs is designed to be customisable by a particular provider, so that they
-can express just what they require, without unnecessary overhead. Ninjs is
+can express just what they require, without unnecessary overhead. ninjs is
 suitable for use in JSON-native engines, such as
 <a href="http://www.mongodb.org/">MongoDB</a> or
 <a href="http://www.elasticsearch.org/">Elasticsearch</a>.</p>
@@ -599,7 +607,7 @@ suitable for use in JSON-native engines, such as
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ninjs_data_model_in_a_nutshell"><a class="anchor" href="#_ninjs_data_model_in_a_nutshell"></a>1.2. ninjs data model in a nutshell</h3>
+<h3 id="_the_ninjs_data_model_in_a_nutshell"><a class="anchor" href="#_the_ninjs_data_model_in_a_nutshell"></a>1.2. The ninjs data model in a nutshell</h3>
 <div class="paragraph">
 <p>As the below diagram shows, every ninjs object describes a <strong>News Item</strong>. All
 ninjs items must have a unique ID given by a <strong>URI</strong>. They can have administrative
@@ -657,15 +665,15 @@ by an API call.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_two_versions_of_ninjs_ninjs_1_5_and_ninjs_2_1"><a class="anchor" href="#_two_versions_of_ninjs_ninjs_1_5_and_ninjs_2_1"></a>1.5. Two versions of ninjs: ninjs 1.5 and ninjs 2.1</h3>
+<h3 id="_versions_of_ninjs_ninjs_3_0_2_1_and_1_5"><a class="anchor" href="#_versions_of_ninjs_ninjs_3_0_2_1_and_1_5"></a>1.5. Versions of ninjs: ninjs 3.0, 2.1 and 1.5</h3>
 <div class="paragraph">
-<p>IPTC manages two current versions of ninjs: the 2.x branch (where the latest
-version is 2.1) and the 1.x branch (where the latest version is currently
-1.5).</p>
+<p>IPTC manages three versions of ninjs: the 3.x branch (where the latest version
+is 3.0), the 2.x branch (where the latest version is 2.1) and the 1.x branch
+(where the latest version is 1.5).</p>
 </div>
 <div class="paragraph">
 <p>The 1.x series continues the version of ninjs that started with ninjs 1.0 in
-2013, adding new features in a way that is fully backwardscompatible. The
+2013, adding new features in a way that is fully backwards-compatible. The
 latest release in this series is 1.5, which includes new properties such as
 <code>contactinfo</code>, <code>symbol</code> and <code>symboltype</code> (<a href="#_ninjs_1_5">see the full list of
 changes</a>).</p>
@@ -679,38 +687,50 @@ Protocol Buffers and Avro. We also took the opportunity to make property names
 more consistent with NewsML-G2 and to add some fields to handle rights.</p>
 </div>
 <div class="paragraph">
-<p>We wanted to issue a new release which fixed these problems, but this meant
-breaking backwards compatibility with the 1.x versions of ninjs.  This is why
-we decided to maintain two parallel branches: 1.x and 2.x.</p>
+<p>The 3.x series includes support for news planning and events, including live
+events. It also adds support for live streamed renditions. In a major change,
+we also change the case of all ninjs properties to "camelCase" format, in
+keeping with JSON best practices, especially regarding GraphQL usage. ninjs 3.0 was
+created alongside the <a href="https://www.thedpp.com/lpx">LPX (Live Production Exchange)
+project from the DPP</a>, with the help of experts from CNN, Reuters, Arqiva and more.</p>
 </div>
 <div class="paragraph">
-<p>All new users are strongly recommended to use version 2.1.</p>
+<p>All new users are strongly recommended to use version 3.0.</p>
 </div>
 <div class="paragraph">
-<p>The 2.1 and 1.5 versions of ninjs were approved by the IPTC Standards Committee
+<p>ninjs 3.0 was approved by the IPTC Standards Committee on October 2nd, 2024.
+The 2.1 and 1.5 versions of ninjs were approved by the IPTC Standards Committee
 on May 17th, 2023.</p>
 </div>
 <div class="paragraph">
-<p>This document focuses on the 2.1 version, but those who must use version 1.5
-for backwards compatibility reasons can find the JSON Schema file for ninjs 1.5
-schema at <a href="https://iptc.org/std/ninjs/ninjs-schema_1.5.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.5.json</a>.</p>
+<p>This document focuses on the 3.0 version, but includes notes where the 2.x and
+1.x versions differ. Those who must use version 2.x or 1.x for backwards
+compatibility reasons can find the JSON Schema file for ninjs 2.1 at
+<a href="https://iptc.org/std/ninjs/ninjs-schema_2.1.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_2.1.json</a> and the schema file for ninjs 1.5
+at <a href="https://iptc.org/std/ninjs/ninjs-schema_1.5.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.5.json</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_differences_between_ninjs_1_x_and_2_x"><a class="anchor" href="#_differences_between_ninjs_1_x_and_2_x"></a>1.6. Differences between ninjs 1.x and 2.x</h3>
+<h3 id="_differences_between_ninjs_1_x_2_x_and_3_x"><a class="anchor" href="#_differences_between_ninjs_1_x_2_x_and_3_x"></a>1.6. Differences between ninjs 1.x, 2.x and 3.x</h3>
 <div class="paragraph">
-<p>We maintain the 1.x branch for those who can&#8217;t move to the new structure in 2.0.
-Most of the properties are the same as the ones in ninjs 2.x, with the exception
-of the multi-valued properties.</p>
+<p>We maintain the 1.x and 2.x branches for those who can&#8217;t move to the new 3.0 version.</p>
 </div>
 <div class="sect3">
-<h4 id="_patternproperties_converted_to_arrays"><a class="anchor" href="#_patternproperties_converted_to_arrays"></a>1.6.1. patternProperties converted to arrays</h4>
+<h4 id="_patternproperties_vs_arrays"><a class="anchor" href="#_patternproperties_vs_arrays"></a>1.6.1. patternProperties vs arrays</h4>
 <div class="paragraph">
-<p>Some properties are implemented as "patternProperties" in the 1.x JSON Schema,
-which means that the name must start with a certain text string (such as <code>headline_</code>) but can end in any string (such as <code>subhead</code>).
-This can be used to distinguish objects from each other. In the 2.x version of the schema,
-we converted them to be simple arrays with well-defined names, and a <code>role</code> property
-that defines the type of the value.</p>
+<p>In the ninjs 1.x schema, some properties are implemented as "patternProperties",
+which means that the name must start with a certain text string (such as <code>headline_</code>)
+but can end in any string (such as <code>subhead</code>). This was used to distinguish objects
+from each other.</p>
+</div>
+<div class="paragraph">
+<p>This can cause problems with binary serialisations and queries based on the schema,
+including Protocol Buffers, Avro, CBOR and GraphQL which all require well-known, pre-
+defined property names.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, in the 2.x and 3.x versions of the schema, we instead use simple arrays
+with well-defined names, and a <code>role</code> property that defines the type of the value.</p>
 </div>
 <div class="paragraph">
 <p>For example, a subheadline is defined in ninjs 1.x as</p>
@@ -723,11 +743,11 @@ that defines the type of the value.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The same subheadline would be defined in ninjs 2.x as</p>
+<p>The same subheadline would be defined in ninjs 2.x or 3.x as</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-ninjs 2.x JSON hljs" data-lang="ninjs 2.x JSON">{
+<pre class="highlightjs highlight"><code class="language-ninjs 2.x or 3.x JSON hljs" data-lang="ninjs 2.x or 3.x JSON">{
   "headlines": [
     {
       "role": "subhead",
@@ -743,13 +763,13 @@ that defines the type of the value.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>description_XXX</code> (1.x) / <code>descriptions</code> (2.x)</p>
+<p><code>description_XXX</code> (1.x) / <code>descriptions</code> (2.x, 3.x)</p>
 </li>
 <li>
-<p><code>body_XXX</code> (1.x) / <code>bodies</code> (2.x)</p>
+<p><code>body_XXX</code> (1.x) / <code>bodies</code> (2.x, 3.x)</p>
 </li>
 <li>
-<p><code>headline_XXX</code> (1.x) / <code>headlines</code> (2.x)</p>
+<p><code>headline_XXX</code> (1.x) / <code>headlines</code> (2.x, 3.x)</p>
 </li>
 </ul>
 </div>
@@ -757,10 +777,12 @@ that defines the type of the value.</p>
 <div class="sect3">
 <h4 id="_renditions_and_associations_converted_to_arrays"><a class="anchor" href="#_renditions_and_associations_converted_to_arrays"></a>1.6.2. Renditions and Associations converted to arrays</h4>
 <div class="paragraph">
-<p>The <code>renditions</code> and <code>associations</code> properties are arrays in ninjs 2.x and objects in ninjs 1.x.</p>
+<p>The <code>renditions</code> and <code>associations</code> properties are objects in ninjs 1.x,
+using the object name as the distinguishing element. This caused similar
+problems, so we use arrays in ninjs 2.x and 3.x.</p>
 </div>
 <div class="paragraph">
-<p>In ninjs 1.x a rendition may look like the following:</p>
+<p>For example, in ninjs 1.x a rendition may look like the following:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -774,11 +796,11 @@ that defines the type of the value.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The same rendition in ninjs 2.x would look like:</p>
+<p>The same rendition in ninjs 2.x or 3.x would look like:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-ninjs 2.x JSON hljs" data-lang="ninjs 2.x JSON">{
+<pre class="highlightjs highlight"><code class="language-ninjs 2.x or 3.x JSON hljs" data-lang="ninjs 2.x or 3.x JSON">{
   "renditions": [
     {
       "name": "highres",
@@ -789,7 +811,7 @@ that defines the type of the value.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Associations work the same way in both ninjs 1.x and ninjs 2.x.</p>
+<p>Associations work the same way in all ninjs versions.</p>
 </div>
 </div>
 <div class="sect3">
@@ -798,53 +820,89 @@ that defines the type of the value.</p>
 <p>In addition, the following property names were converted to plural form for ninjs 2.x.
 They were not changed in any other way.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>altid</code> (ninjs 1.x) / <code>altids</code> (ninjs 2.x)</p>
-</li>
-<li>
-<p><code>event</code> (ninjs 1.x) / <code>events</code> (ninjs 2.x)</p>
-</li>
-<li>
-<p><code>genre</code> (ninjs 1.x) / <code>genres</code> (ninjs 2.x)</p>
-</li>
-<li>
-<p><code>infosource</code> (ninjs 1.x) / <code>infosources</code> (ninjs 2.x)</p>
-</li>
-<li>
-<p><code>object</code> (ninjs 1.x) / <code>objects</code> (ninjs 2.x)</p>
-</li>
-<li>
-<p><code>organisation</code> (ninjs 1.x) / <code>organisations</code> (ninjs 2.x)</p>
-</li>
-<li>
-<p><code>person</code> (ninjs 1.x) / <code>people</code> (ninjs 2.x)</p>
-</li>
-<li>
-<p><code>place</code> (ninjs 1.x) / <code>places</code> (ninjs 2.x)</p>
-</li>
-<li>
-<p><code>subject</code> (ninjs 1.x) / <code>subjects</code> (ninjs 2.x) and</p>
-</li>
-<li>
-<p><code>trustindicator</code> (ninjs 1.x) / <code>trustindicators</code> (ninjs 2.x).</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>In ninjs 3.x, property names were converted to camelCase.</p>
 </div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ninjs 1.x</th>
+<th class="tableblock halign-left valign-top">ninjs 2.x</th>
+<th class="tableblock halign-left valign-top">ninjs 3.x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>altid</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>altids</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>altIds</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>event</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>events</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>events</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>genre</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>genres</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>genres</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infosource</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infosources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infoSources</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>objects</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>objects</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>organisation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>organisations</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>organisations</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>person</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>people</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>people</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>place</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>places</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>places</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subject</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subjects</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subjects</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trustindicator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trustindicators</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>trustIndicators</code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_which_version_of_ninjs_should_i_choose_for_my_project"><a class="anchor" href="#_which_version_of_ninjs_should_i_choose_for_my_project"></a>1.7. Which version of ninjs should I choose for my project?</h3>
 <div class="paragraph">
 <p>If you are starting a green-field project, we recommend using the latest
-version in the ninjs 2.x branch: currently ninjs 2.1.  This version should be
+version in the ninjs 3.x branch, currently ninjs 3.0.  This version should be
 easiest for developers to work with.</p>
 </div>
 <div class="paragraph">
-<p>If you are already using a 1.x version of ninjs, we recommend at least
-upgrading to the latest version in the 1.x branch, currently 1.5. This should
-be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions.</p>
+<p>If you are already using a 1.x or 2.x version of ninjs, we recommend at least
+upgrading to the latest version in that branch, currently 1.5 and 2.1. This
+should be an easy change, because all new minor versions in a branch are
+backwards-compatible with earlier minor versions in the same branch.</p>
 </div>
 </div>
 <div class="sect2">
@@ -853,8 +911,13 @@ be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions
 <p>JSON is an increasingly popular
 <a href="http://blog.programmableweb.com/2011/05/25/1-in-5-apis-say-bye-xml/">alternative to</a>
 (or
-<a href="http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/">replacement for</a>) XML. ninjs is designed in such a way that it can be used either standalone or alongside other <a href="https://iptc.org/standards/">IPTC news markup formats</a> such as <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>, <a href="https://iptc.org/standards/nitf/">NITF</a>
-<a href="https://iptc.org/standards/iptc-7901/">IPTC7901</a> and <a href="https://iptc.org/standards/rnews/">rNews</a>.</p>
+<a href="http://blog.appfog.com/why-json-will-continue-to-push-xml-out-of-the-picture/">replacement
+for</a>) XML. ninjs is designed in such a way that it can be used either standalone
+or alongside other <a href="https://iptc.org/standards/">IPTC news markup formats</a> such as
+<a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>,
+<a href="https://iptc.org/standards/nitf/">NITF</a>,
+<a href="https://iptc.org/standards/iptc-7901/">IPTC7901</a> and
+<a href="https://iptc.org/standards/rnews/">rNews</a>.</p>
 </div>
 </div>
 </div>
@@ -865,7 +928,7 @@ be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions
 <div class="sect2">
 <h3 id="_copyright"><a class="anchor" href="#_copyright"></a>2.1. Copyright</h3>
 <div class="paragraph">
-<p>Copyright © 2023 IPTC, International Press Telecommunications Council.</p>
+<p>Copyright © 2024 IPTC, International Press Telecommunications Council.</p>
 </div>
 <div class="paragraph">
 <p>The IPTC ninjs User Guide document is published under the
@@ -873,10 +936,13 @@ be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions
 - see the full license agreement at <a href="http://creativecommons.org/licenses/by/4.0/" class="bare">http://creativecommons.org/licenses/by/4.0/</a>.</p>
 </div>
 <div class="paragraph">
-<p>By obtaining, using and/or copying this document, you (the licensee) agree that you have read, understood, and will comply with the terms and conditions of the license.</p>
+<p>By obtaining, using and/or copying this document, you (the licensee) agree that you
+have read, understood, and will comply with the terms and conditions of the license.</p>
 </div>
 <div class="paragraph">
-<p>Materials used in this guide are either in the public domain or are available with the permission of their respective copyright holders. All materials of this IPTC standard covered by copyright shall be licensable at no charge.</p>
+<p>Materials used in this guide are either in the public domain or are available with the
+permission of their respective copyright holders. All materials of this IPTC standard
+covered by copyright shall be licensable at no charge.</p>
 </div>
 </div>
 <div class="sect2">
@@ -888,20 +954,21 @@ be an easy change, because 1.5 is backwards-compatible with earlier 1.x versions
 <p>Contributors to this document include:
 Paul Harman (Bloomberg),
 Johan Lindgren (TT),
-Stuart Myles (ex-AP),
+Stuart Myles (previously with AP),
 Brendan Quinn (IPTC),
-Michael Steidl (IPTC),
-Evan Sandhaus (ex-NYT), and
-Ian Young (PA Media / Alamy),</p>
+Michael Steidl (previous with IPTC),
+Evan Sandhaus (previously with NYT), and
+Ian Young (PA Media / Alamy).</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_how_to_contact_iptc"><a class="anchor" href="#_how_to_contact_iptc"></a>2.3. How to contact IPTC</h3>
 <div class="paragraph">
-<p>All users of ninjs are encouraged to Join the public IPTC ninjs discussion group: <a href="https://groups.io/g/iptc-ninjs/" class="bare">https://groups.io/g/iptc-ninjs/</a></p>
+<p>All users of ninjs are encouraged to join the public IPTC ninjs discussion group:
+<a href="https://groups.io/g/iptc-ninjs/" class="bare">https://groups.io/g/iptc-ninjs/</a></p>
 </div>
 <div class="paragraph">
-<p>Staff from IPTC Member organisations are welcome to join the
+<p>Staff from organisations who are members of the IPTC are welcome to join the
 <a href="https://groups.io/g/iptc-news-in-json-dev">members-only discussion list for the
 ninjs development team</a>.</p>
 </div>
@@ -916,17 +983,25 @@ GitHub repository: <a href="https://github.com/iptc/newsinjson/issues" class="ba
 <p>Visit the ninjs section on IPTC&#8217;s website: <a href="https://iptc.org/standards/ninjs/" class="bare">https://iptc.org/standards/ninjs/</a></p>
 </div>
 <div class="paragraph">
-<p>To stay up to date on developments with ninjs and other areas, follow IPTC on Twitter: <a href="http://www.twitter.com/IPTC/">@IPTC</a></p>
+<p>To stay up to date on developments with ninjs and other areas, follow IPTC on
+Twitter: <a href="http://www.twitter.com/IPTC/">@IPTC</a></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_about_iptc"><a class="anchor" href="#_about_iptc"></a>2.4. About IPTC</h3>
 <div class="paragraph">
-<p>The IPTC, based in London, brings together the world’s leading news agencies, publishers and industry vendors. It develops and promotes efficient technical standards to improve the management and exchange of information between content providers, intermediaries and consumers. The standards enable easy,
-cost-effective and rapid innovation and include the IPTC Photo Metadata standard, the Video Metadata Hub, the news exchange formats NewsML-G2, ninjs, SportsML-G2 and NITF, rNews for marking up online news, the rights expression language RightsML, and NewsCodes taxonomies for categorising news.</p>
+<p>The IPTC, based in London, brings together the world’s leading news agencies,
+publishers and industry vendors. It develops and promotes efficient technical
+standards to improve the management and exchange of information between content
+providers, intermediaries and consumers. IPTC standards enable easy, cost-effective
+and rapid innovation and include the IPTC Photo Metadata standard, the Video
+Metadata Hub, the news exchange formats NewsML-G2, ninjs, SportsML-G2 and NITF,
+rNews for marking up online news, the rights expression language RightsML,
+and NewsCodes taxonomies for categorising news.</p>
 </div>
 <div class="paragraph">
-<p>IPTC is a not-for-profit membership organisation registered in England. <a href="https://iptc.org/participate/">Find more about membership</a>.</p>
+<p>IPTC is a not-for-profit membership organisation registered in England.
+<a href="https://iptc.org/participate/">Find more about joining IPTC</a>.</p>
 </div>
 <div class="paragraph">
 <p>Business address:</p>
@@ -959,25 +1034,58 @@ United Kingdom</pre>
 <table class="tableblock frame-all grid-all fit-content">
 <colgroup>
 <col>
-<col>
-<col>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Property</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-left valign-top">ninjs 3.0<br>
+property</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ninjs 2.x<br>
+property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ninjs 1.x
+property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data type</p>
+<p class="tableblock"><a id="uri"></a></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for this news object</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URI</p>
+<p class="tableblock"><a id="type"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The generic news type of this news object</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>text</code><br>
 <code>audio</code><br>
@@ -985,15 +1093,35 @@ United Kingdom</pre>
 <code>picture</code><br>
 <code>graphic</code><br>
 <code>composite</code><br>
-<code>component</code></p></td>
+<code>component</code></p>
+<p class="tableblock"><a id="title"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A short natural-language name for the item.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="standard"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">standard</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">$standard</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An object with information about standard, version and schema this instance is valid against.<br>
 This property is an object with the following child properties:</p>
@@ -1029,10 +1157,20 @@ This property is an object with the following child properties:</p>
 </tr>
 </tbody>
 </table></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">object</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">altIds</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">altids</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">altid</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use.<br>
@@ -1064,55 +1202,129 @@ This property is an object with the following child properties:<br></p>
 </tr>
 </tbody>
 </table></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array of objects</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">representationType</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">representationtype</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">representationtype</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the completeness of this representation of a news item.<br>
 For a full document representation, the value should be <code>full</code>.<br>
 For a partial representation, for example a short extract provided as the results of an API call, the value <code>partial</code> should be used.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>full</code><br>
 <code>partial</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">profile</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as <code>'text-only'</code> or <code>'text-photo'</code>. Profiles are typically provider-specific.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The version of the news object which is identified by the uri property.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">firstCreated</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">firstcreated</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Indicates when the first version of the item was created.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">versionCreated</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">versioncreated</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The date and time when this version of the news object was created.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentCreated</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">contentcreated</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The date and time when the content of this ninjs object was originally created.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">embargoed</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">expires</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">expires</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in ninjs 2.1)</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pubStatus</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">pubstatus</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The publishing status of the news object, its value is <code>usable</code> by default.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>usable</code><br>
 <code>withheld</code><br>
@@ -1121,17 +1333,32 @@ For a partial representation, for example a short extract provided as the result
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">urgency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">urgency</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ednote</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The human language used by the content. The value should follow <a href="https://tools.ietf.org/html/bcp47">IETF BCP47</a> format.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 </tbody>
