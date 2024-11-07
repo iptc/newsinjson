@@ -21,7 +21,7 @@ class NinjsGenerator extends React.Component {
         super(props);
         this.state = {
             output: '',
-            outputformat: 'ninjs2x',
+            outputformat: 'ninjs3x',
             firstcreated: '',
             representationtype: 'full',
             type: 'text',
@@ -58,7 +58,11 @@ class NinjsGenerator extends React.Component {
     }
     refreshOutput() {    
         var output;
-        if (this.state.outputformat == 'ninjs2x') {
+        if (this.state.outputformat == 'ninjs3x') {
+            this.state.qcodeVisible = false;
+            // output = this.getninjs2xOutput();
+            output = this.getninjsOutput("ninjs3x");
+        } else if (this.state.outputformat == 'ninjs2x') {
             this.state.qcodeVisible = false;
             // output = this.getninjs2xOutput();
             output = this.getninjsOutput("ninjs2x");
@@ -87,18 +91,29 @@ class NinjsGenerator extends React.Component {
                 "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.5.json"
             };
             standardkey = '$standard';
-        } else {
+        } else if (version == "ninjs2x") {
             standard = {
                 "name": "ninjs",
                 "version": "2.1",
                 "schema": "https://iptc.org/std/ninjs/ninjs-schema_2.1.json"
             };
             standardkey = 'standard';
+        } else if (version == "ninjs3x") {
+            standard = {
+                "name": "ninjs",
+                "version": "3.0",
+                "schema": "https://iptc.org/std/ninjs/ninjs-schema_3.0.json"
+            };
+            standardkey = 'standard';
         }
         jsonObj[standardkey] = standard;
 
         if (this.state.firstcreated) {
-            jsonObj['firstcreated'] = this.state.firstcreated;
+            if (version == "ninjs3x") {
+                jsonObj['firstCreated'] = this.state.firstcreated + 'T12:00:00+00:00';
+            } else {
+                jsonObj['firstcreated'] = this.state.firstcreated;
+            }
         }
         if (lang) {
             jsonObj['language'] = lang;
@@ -107,14 +122,20 @@ class NinjsGenerator extends React.Component {
             jsonObj['type'] = this.state.type;
         }
         if (this.state.representationtype) {
-            if (version == "ninjs1x") {
+            if (version == "ninjs3x") {
+                jsonObj['representationType'] = this.state.representationtype;
+            } else if (version == "ninjs1x") {
                 jsonObj['representationtype'] = this.state.representationtype == "full" ? "complete" : "incomplete";
             } else {
                 jsonObj['representationtype'] = this.state.representationtype;
             }
         }
         if (this.state.pubstatus) {
-            jsonObj['pubstatus'] = this.state.pubstatus;
+            if (version == "ninjs3x") {
+                jsonObj['pubStatus'] = this.state.pubstatus;
+            } else {
+                jsonObj['pubstatus'] = this.state.pubstatus;
+            }
         }
         if (this.state.urgency) {
             jsonObj['urgency'] = parseInt(this.state.urgency);
@@ -147,13 +168,25 @@ class NinjsGenerator extends React.Component {
             jsonObj['profile'] = this.state.profile;
         }
         if (this.state.copyrightholder) {
-            jsonObj['copyrightholder'] = this.state.copyrightholder;
+            if (version == "ninjs3x") {
+                jsonObj['copyrightHolder'] = this.state.copyrightholder;
+            } else {
+                jsonObj['copyrightholder'] = this.state.copyrightholder;
+            }
         }
         if (this.state.copyrightnotice) {
-            jsonObj['copyrightnotice'] = this.state.copyrightnotice;
+            if (version == "ninjs3x") {
+                jsonObj['copyrightNotice'] = this.state.copyrightnotice;
+            } else {
+                jsonObj['copyrightnotice'] = this.state.copyrightnotice;
+            }
         }
         if (this.state.usageterms) {
-            jsonObj['usageterms'] = this.state.usageterms;
+            if (version == "ninjs3x") {
+                jsonObj['usageTerms'] = this.state.usageterms;
+            } else {
+                jsonObj['usageterms'] = this.state.usageterms;
+            }
         }
         if (this.state.slugline) {
             jsonObj['slugline'] = this.state.slugline;
@@ -163,6 +196,13 @@ class NinjsGenerator extends React.Component {
                 jsonObj['body_text'] = this.state.bodytext;
                 jsonObj['charcount'] = this.state.bodytext.length;
                 jsonObj['wordcount'] = this.state.bodytext.split(' ').length;
+            } else if (version == "ninjs3x") {
+                jsonObj['bodies'] = [{
+                    "charCount": this.state.bodytext.length,
+                    "wordCount": this.state.bodytext.split(' ').length,
+                    "role": "main",
+                    "value": this.state.bodytext
+                }];
             } else {
                 jsonObj['bodies'] = [{
                     "charcount": this.state.bodytext.length,
@@ -228,15 +268,24 @@ class NinjsGenerator extends React.Component {
                 var altid_value = this.state.altid_value || "";
                 jsonObj['altids'] = {}
                 jsonObj['altids'][altid_role] =  altid_value;
-            } else {
+            } else if (version == "ninjs2x") {
                 jsonObj['altids'] = [{
+                    "role": this.state.altid_role || "",
+                    "value": this.state.altid_value || ""
+                }]
+            } else if (version == "ninjs3x") {
+                jsonObj['altIds'] = [{
                     "role": this.state.altid_role || "",
                     "value": this.state.altid_value || ""
                 }]
             }
         }
         if (this.state.ednote) {
-            jsonObj['ednote'] = this.state.ednote;
+            if (version == "ninjs3x") {
+                jsonObj['edNote'] = this.state.ednote;
+            } else {
+                jsonObj['ednote'] = this.state.ednote;
+            }
         }
         return JSON.stringify(jsonObj, null, '\t');
     }
@@ -660,12 +709,16 @@ class NinjsGenerator extends React.Component {
             <div className="outputbox">
                 <legend>{outputtext} &nbsp; <small><a href="#" onClick={this.copyToClipboard}>Copy to clipboard <i className="fas fa-copy" /></a></small></legend>
                 <div className="form-row">
-                    <div className="col-sm-6">
+                    <div className="col-sm-4">
                         Choose output format:
                     </div>
-                    <div className="col-sm-5">
+                    <div className="col-sm-8">
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" defaultChecked name="outputformat" id="ninjs2x" value="ninjs2x" title="Output format - ninjs 2.1" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
+                            <input className="form-check-input" type="radio" defaultChecked name="outputformat" id="ninjs3x" value="ninjs3x" title="Output format - ninjs 3.0" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
+                            <label className="form-check-label" htmlFor="ninjs3x">ninjs 3.0</label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs2x" value="ninjs2x" title="Output format - ninjs 2.1" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
                             <label className="form-check-label" htmlFor="ninjs2x">ninjs 2.1</label>
                         </div>
                         <div className="form-check form-check-inline">
