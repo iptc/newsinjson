@@ -444,6 +444,17 @@ class TestNinJSSchema(unittest.TestCase):
             folder_name=EXAMPLE_FILES_FOLDER_2_x
         )
 
+    def test_3_0_example_files_against_3_0_schema(self):
+        """
+        Run all files in EXAMPLE_FILES_FOLDER_3_x against the latest 3.x schema.
+        They should all pass. (They will not all pass against old versions
+        of the schema, as the examples use the latest features of ninjs)
+        """
+        self.folder_should_pass(
+            schema=self.latest_3_x_schema,
+            folder_name=EXAMPLE_FILES_FOLDER_3_x
+        )
+
     def test_documentation_examples_against_latest_schema(self):
         """
         Run all files in DOCUMENTATION_EXAMPLES_FOLDER against the latest 2.x

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://www.example.com/ninjs-extension#",
+  "$id": "https://www.example.com/ninjs-extension#",
   "type": "object",
   "title": "Example extension of ninjs",
   "description": "All properties from IPTC ninjs 2.1 are valid, plus some extra properties that we define here.",
