@@ -86,8 +86,9 @@ describing *people*, *places*, *genres*, *subjects*, *organisations* and
 
 The content itself can be a *body*, containing text, HTML or other
 representation of the text of a news item, *renditions* of the news item as
-images, videos or multimedia, or both body and renditions. *Associations* are a
-means of linking news items together.
+images, videos or multimedia, or both body and renditions.
+
+*Associations* are a means of linking news items together.
 
 image:ninjsScope-w800.jpg[ninjs Data Model diagram]
 
@@ -380,7 +381,9 @@ property
 `picture` +
 `graphic` +
 `composite` +
-`component`
+`component` +
+`event` +
+`planning`
 
 [[title]]
 |title
@@ -794,43 +797,7 @@ This property is an array of objects with the following properties:
 |organisations (2.x) +
 organisation (1.x)
 |An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party. +
-This property is an array of objects with the following properties: +
-
-[cols="3"]
-!===
-!Property name!Description!Data type
-
-!name
-!The name of the organisation
-!string
-
-!rel
-!The relationship of the content of the news object to the organisation
-!string
-
-!uri
-!The identifier of the organisation as a complete uri
-!URI
-
-!literal
-!The code for the organisation as a literal
-!string
-
-!symbols
-a!Symbols used for a financial instrument linked to the organisation at a specific market place. +
-Array of objects with the properties:
-
-* `exchange`: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)
-* `symboltype`: URI describing the type of the symbol. The CV http://cv.iptc.org/newscodes/financialinstrumentsymboltype is recommended.
-* `symbol`: Symbol identifier, including ticker symbols. We recommend using this sub-property.
-* `ticker`: Ticker symbol used for the financial instrument (string). This sub-property is allowed but deprecated. +
-!array
-
-!contactInfo (contactinfo in 2.x)
-!Contact and/or location information for the organisation as a ContactInfo structure.
-!<<Contact Info structure>>
-
-!===
+This property is an array of <<Organisation structure,organisation objects>>.
 
 |array
 
@@ -1072,7 +1039,7 @@ a|If this contactinfo object need to be qualified with what language it is in. T
 |string
 
 |address
-|The address of a person, place or organisation.
+|The address of a person, place or organisation. +
 This property is an object with the following child properties:
 
 [cols="3"]
@@ -1102,6 +1069,346 @@ This property is an object with the following child properties:
 
 |object
 |===
+
+==== Organisation Structure
+
+The Contact Info structure is used for the contents of the `contactinfo` property in items in the `people`, `organisations`, `places` and `infosources` arrays.
+
+[cols="1,3a,1",options="header"]
+|===
+|Property name|Description|Data type
+
+|name
+|The name of the organisation
+|string
+
+|rel
+|The relationship of the content of the news object to the organisation
+|string
+
+|uri
+|The identifier of the organisation as a complete uri
+|URI
+
+|literal
+|The code for the organisation as a literal
+|string
+
+|symbols
+a|Symbols used for a financial instrument linked to the organisation at a specific market place. +
+Array of objects with the properties:
+
+* `exchange`: Identifier for the marketplace which uses the ticker symbols of the ticker property (string)
+* `symboltype`: URI describing the type of the symbol. The CV http://cv.iptc.org/newscodes/financialinstrumentsymboltype is recommended.
+* `symbol`: Symbol identifier, including ticker symbols. We recommend using this sub-property.
+* `ticker`: Ticker symbol used for the financial instrument (string). This sub-property is allowed but deprecated. +
+|array
+
+|contactInfo (contactinfo in 2.x)
+|Contact and/or location information for the organisation as a ContactInfo structure.
+|<<Contact Info structure>>
+
+|===
+
+== Events and Planned Coverage
+
+NOTE: This section applies to ninjs 3.0 only.
+
+A news organisation may wish to distribute information about forthcoming events and planned news coverage in advance of the event. In this way, customers of the news organisation (for example, news outlets and broadcasters who are customers of a wire service) can plan to broadcast or republish the coverage, or plan their own coverage around the work of the upstream news provider.
+
+To handle this in ninjs, we introduce <<planning-events,events>> and <<planned-coverage,planned coverage>>. The event includes information about a real-world event that is being covered in some way. The planning item includes information about news coverage that the provider intends to release at some point in the future.
+
+[[planning-events]]
+=== Events
+
+A ninjs event conveys information about a real-world event that may (or may not) be covered by a news organisation: a press conference, a sports event, a webinar, an election.
+
+Information about the event may change over time. For example, we know that there will be a Summer Olympic Games in Brisbane in 2032, but we don't yet know the start time of the Opening Ceremony.
+
+While specifying an event, we can include as much or as little information as we have at the time.
+
+Here's an example of a simple event:
+
+[source,json]
+----
+include::includes/examples/008_event.json[]
+----
+
+The main new object to cover such events is the eventDetails object, which contains the following properties:
+
+[cols="1,3a,1",options="header"]
+|===
+|Property name|Description|Data type
+
+|eventStatus
+|Status of the event (as opposed to the status of coverage of the event). +
+Suggested CV: http://cv.iptc.org/newscodes/eventoccurstatus/ (which contains values such as "Planned, occurrence highly uncertain" and "Planned, then cancelled")
+|uri
+
+|plannedCoverageStatus
+|Status of the coverage (as opposed to the status of the event itself). +
+Suggested CV: http://cv.iptc.org/newscodes/newscoveragestatus/ (which contains values such as "coverage intended" and "coverage upon request")
+|uri
+
+|dates
+|Dates and times for this event.
+|<<dates-structure,Dates Structure>>
+
+|organiser
+|A person or organisation organising the event.
+|<<Organisation Structure>>
+
+|===
+
+Events include a rich <<dates-object,date structure>> which allows for uncertain start and end dates and times and also recurring events. The data model is based on https://iptc.org/std/NewsML-G2/specification/#introduction-to-eventsml-g2[EventsML-G2], part of the NewsML-G2 family of standards.
+
+NOTE: It's worth noting that this is different from the <<events>> metadata object used for news items. That object is intended to convey metadata about an event that is related to a published news item.
+
+[[planned-coverage]]
+=== Planned Coverage
+
+A ninjs item may contain a `plannedCoverage` property which contains an array of planned coverage items using the following structure:
+
+[cols="1,3a,1",options="header"]
+|===
+|Property name|Description|Data type
+
+|uri
+|The local identifier of the element which MUST be persistent for all versions of the item, i.e. for its entire lifecycle.",
+|string
+
+|title
+|A human-readable title for the planned content",
+|string
+
+|pubStatus
+|The publishing status of the plannedCoverage object, its value is *usable* by default. nar:pubStatus
+|string with possible values "usable", "withheld"
+
+|type
+|The generic news type of the planned content.
+| One of: +
+`text` +
+`audio` +
+`video` +
+`picture` +
+`graphic` +
+`composite` +
+`component` +
+`event` +
+`planning`
+
+|commissioned
+|Information about the commissioning of this content.
+|<<Commissioning Structure>>
+
+|dates
+|Dates and times for this planned content.
+|<<dates-structure,Dates Structure>>
+
+|audiences
+|Intended audiences for the planned content.
+Array of objects with the following structure:
+
+!===
+!audience
+1Intended audience(s) for the content.
+!string
+
+!significance
+!A qualifier which indicates the expected significance of the content for this specific audience.",
+!integer"
+
+!exclAudience
+!Excluded audience(s) for the planned content.",
+!Array of strings
+!===
+
+|edNote
+|Additional natural language information about the planned content addressed to the editorial people receiving and processing the item.
+|string
+
+|urgency
+|The editorial urgency of the planned content, as scoped by the parent element.
+|number (1-9)
+
+|language
+|The human language used by the planned content. The value should follow IETF BCP47.
+|string
+
+|itemCount": {
+|Number of planned items of this kind expressed by a range.
+This is an object with the following structure:
+
+!===
+
+!rangeFrom
+!integer"
+
+!rangeTo
+!integer"
+
+!===
+
+|wordCount": {
+|The count of words of textual content. nar:wordcount",
+|integer"
+
+|renditions": {
+|An array of objects showing the planned renditions of the news object.
+|Array of <<rendition objects>>
+
+|===
+
+==== Commissioning Structure
+
+[cols="1,3a,1",options="header"]
+|===
+|Property name|Description|Data type
+
+|uri
+
+|by
+|The person or party that commissioned the content.
+|string" 
+
+|on
+|The date at which the content was commissioned.
+|date-time
+          
+|references
+|Identifiers that help with the commissioning process such as purchase orders and work order numbers. +
+Array of objects with the following structure:
+
+!===
+
+!name
+!Name of the reference
+!string
+
+!value
+!Value of the reference
+!string
+!===
+
+|Array of objects
+
+|===
+
+[[dates-structure]]
+=== Dates for Events and Planning
+
+NOTE: This section applies to dates in events and news coverage planning items in ninjs 3.0 only.
+
+A news organisation may wish to distribute information about forthcoming events and planned news coverage that has not yet been finalised. Therefore dates and times may not yet be known.
+
+Also, events may recur at regular intervals.
+
+To handle this situation, in ninjs 3.0 we introduce a `dates` object which contains several properties:
+ 
+[cols="1,3a,1",options="header"]
+|===
+|Property name|Description|Data type
+
+|startDate
+a|The date and time at which the event starts (if known)
+|date-time
+
+|endDate
+a|The date and time at which the event ends (if known)
+|date-time
+
+|expectedStartDate
+a|The approximate date (and optionally time) at which the event or coverage is expected to start.
+|<<Truncated DateTime>>
+
+|expectedEndDate
+a|The approximate date (and optionally time) at which the event or coverage is expected to end.
+|<<Truncated DateTime>>
+
+|expectedDuration
+a|The time period that the event or coverage is expected to last. (Actual duration can be calculated from startDate and endDate)
+|string
+
+|expectedDuration
+a|Specifies recurrence information about the event. +
+This property is an object with the following child properties:
+
+[cols="3"]
+!===
+!Property name!Description!Data type
+
+[[recurrenceDates]]
+!recurrenceDates
+!Date(s) (and optionally times) on which the event occurs.
+!array of <<Truncated DateTime>>
+
+[[recurrenceRules]]
+!recurrenceRules
+!Rules that specify the recurrence of this event. +
+This property is an array of <<Recurrence Rules,Recurrence Rule>> objects.
+!Array of <<Recurrence Rules>>
+!===
+|object
+|===
+
+The above date object can be used for <<eventDetails/dates>> and <<plannedCoverage/dates>>.
+
+==== Truncated DateTime
+
+Used in expectedStartDate, expectedEndDate and the recurrenceDates property of <<Recurrence Rules>>, the "truncated DateTime" is a property that allows dates to be "truncated from the right", i.e. specified with resolution of only the year, year/month, year/month/day or other combinations.
+
+This is based on the equivalent https://www.iptc.org/std/NewsML-G2/guidelines/#TruncatedDateTime[TruncatedDateTime type in NewsML-G2] and is implemented in ninjs using a regular expression.
+
+The full list of allowed date/time parts is:
+
+* year only (xs:gYear, YYYY)
+* year/month (xs:gYearMonth, YYYY-MM)
+* year/month/day (xs:date YYYY-MM-DD)
+* full datetime (xs:dateTime, YYYY-MM-DDTHH:MM:SS+HH:MM)
+
+All of these can carry an optional timezone suffix.
+
+Note that this does NOT include ISO8601 month of year (xs:gMonth, --MM) or yearly day (xs:gMonthDay, --MM-DD) 
+
+Note that other date objects (startDate, endDate, firstCreated, versionCreated etc) require a fully-specified ISO8601 date and time.
+
+==== Recurrence Rules
+
+Used to specify recurring events within the <<recurrenceRules,recurrenceRules>> property.
+
+This follows the structure of EventsML-G2 / NewsML-G2 recurrence rules, which in turn
+follows the iCalendar specification.
+
+[cols="3"]
+|===
+|Property name|Description"Data type
+
+|frequency
+|The FREQ rule part identifies the type of recurrence rule.
+|string: one of: +
+`secondly`
+`minutely`
+`hourly`
+`daily`
+`weekly`
+`monthly`
+`yearly`
+
+
+|interval
+|The INTERVAL rule part contains a positive integer representing how often the recurrence rule repeats.
+|string
+
+|until
+|The UNTIL rule part defines a date-time value which bounds the recurrence rule in an inclusive manner.",
+|string"
+
+|count
+|The COUNT rule part defines the number of occurrences at which to range-bound the recurrence.
+|string
+|===
+
 
 === Renditions
 
@@ -1338,12 +1645,12 @@ should) copy and extend the IPTC ninjs schema.
 To do this, do the following:
 
 . make a copy of the schema file
-. change the URL of the "id" property of IPTC's ninjs 2.1 ...
+. change the URL of the "id" property of IPTC's ninjs 3.0 ...
 +
 [source,json]
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json#",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json#",
   "type" : "object",
   ...
 +
@@ -1371,7 +1678,7 @@ property explaining the reason for an embargo:
     "type": "string",
     "format": "date-time"
   },
-  "embargoedreason" : {
+  "embargoedReason" : {
     "description" : "Textual description of why article is embargoed.",
     "type" : "string"
   },
