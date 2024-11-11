@@ -60,7 +60,6 @@ class NinjsGenerator extends React.Component {
         var output;
         if (this.state.outputformat == 'ninjs3x') {
             this.state.qcodeVisible = false;
-            // output = this.getninjs2xOutput();
             output = this.getninjsOutput("ninjs3x");
         } else if (this.state.outputformat == 'ninjs2x') {
             this.state.qcodeVisible = false;
