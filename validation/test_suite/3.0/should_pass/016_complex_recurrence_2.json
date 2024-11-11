@@ -1,0 +1,46 @@
+{
+    "standard": {
+        "name": "ninjs",
+        "version": "3.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
+    },
+    "uri": "urn:016-ninjs3.0-complex-recurrence-2",
+    "type": "event",
+    "title": "IPTC News in JSON Working Group meetings 2024",
+    "descriptions": [
+        {
+            "role": "note",
+            "value": "Examples based on https://icalendar.org/iCalendar-RFC-5545/3-8-5-3-recurrence-rule.html"
+        }
+    ],
+    "eventDetails": {
+        "dates": {
+            "startDate": "2024-01-08T14:00:00Z",
+            "endDate": "2024-04-08T15:00:00Z",
+            "recurrence": {
+                "recurrenceRules": [
+                    {
+                        "frequency": "weekly",
+                        "interval": 2,
+                        "until": "2024-12-09T15:00:00Z"
+                    }
+                ]
+            }
+        },
+        "organiser": {
+            "name": "IPTC",
+            "uri": "https://www.iptc.org/"
+        }
+    },
+    "places": [
+        {
+            "name": "Online meeting via Zoom",
+            "contactInfo": [
+                {
+                    "type": "online",
+                    "value": "https://www.zoom.com/12345678"
+                }
+            ]
+        }
+    ]
+}
