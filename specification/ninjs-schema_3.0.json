@@ -67,15 +67,16 @@
                   },
                   "interval": {
                     "description": "The INTERVAL rule part contains a positive integer representing how often the recurrence rule repeats.",
-                    "type": "string"
+                    "type": "integer"
                   },
                   "until": {
                     "description": "The UNTIL rule part defines a date-time value which bounds the recurrence rule in an inclusive manner.",
-                    "type": "string"
+                    "type": "string",
+                    "format": "date-time"
                   },
                   "count": {
                     "description": "The COUNT rule part defines the number of occurrences at which to range-bound the recurrence.",
-                    "type": "string"
+                    "type": "integer"
                   }
                 }
               }
