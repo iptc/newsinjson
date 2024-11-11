@@ -4,7 +4,7 @@
         "version": "3.0",
         "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
     },
-    "uri": "urn:newsml:addb.no:20140226:0065-ninjs2.2-addb--event-test",
+    "uri": "urn:newsml:addb.no:20140226:0065-ninjs3.0-addb--event-test",
     "type": "event",
     "genres": [
         {

@@ -1,16 +1,16 @@
 {
     "standard": {
         "name": "ninjs",
-        "version": "2.2",
-        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+        "version": "3.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
     },
     "uri": "urn:003-nato.int:2023-nato-summit-press-conference",
     "type": "event",
     "title": "2023 NATO Summit Press Conference",
-    "eventdetails": {
+    "eventDetails": {
         "dates": {
-            "startdate": "2023-07-11T09:00:00Z",
-            "enddate": "2023-07-12T17:00:00Z"
+            "startDate": "2023-07-11T09:00:00Z",
+            "endDate": "2023-07-12T17:00:00Z"
         },
         "organiser": {
             "name": "NATO",
@@ -20,7 +20,7 @@
     "places": [
         {
             "name": "LITEXPO",
-            "contactinfo": [
+            "contactInfo": [
                 {
                     "type": "physical",
                     "address": {

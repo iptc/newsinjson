@@ -1,10 +1,10 @@
 {
   "standard": {
     "name": "ninjs",
-    "version": "2.2",
-    "schema": "https://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+    "version": "3.0",
+    "schema": "https://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
   },
-  "uri": "urn:newsml:addb.no:20110316:0002-ninjs2.2-addb--event-test",
+  "uri": "urn:newsml:addb.no:20110316:0002-ninjs3.0-addb--event-test",
   "type": "event",
   "genres": [
     {

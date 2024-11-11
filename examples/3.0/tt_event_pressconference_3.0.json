@@ -78,8 +78,8 @@
   ],
   "standard": {
     "name": "TTNINJS",
-    "version": "2.2",
-    "schema": "https://tt.se/spec/ttninjs/ttninjs-schema_2.2.json"
+    "version": "3.0",
+    "schema": "https://tt.se/spec/ttninjs/ttninjs-schema_3.0.json"
   },
   "genres": [
     {

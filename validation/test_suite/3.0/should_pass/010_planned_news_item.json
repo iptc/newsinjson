@@ -1,19 +1,19 @@
 {
   "standard": {
     "name": "ninjs",
-    "version": "2.2",
-    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+    "version": "3.0",
+    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
   },
   "uri": "http://ninjs.example.com/newsitems/ninjs2-2-tests",
   "descriptions": [
     {
       "role": "caption",
-      "value": "Extensible description test for ninjs 2.2 this item links to planned coverage via associations"
+      "value": "Extensible description test for ninjs 3.0 this item links to planned coverage via associations"
     }
   ],
   "associations": [
     {
-      "uri": "urn:005-ninjs2.2-planned-coverage-test",
+      "uri": "urn:005-ninjs3.0-planned-coverage-test",
       "name": "Planned coverage",
       "type": "planning"
     }

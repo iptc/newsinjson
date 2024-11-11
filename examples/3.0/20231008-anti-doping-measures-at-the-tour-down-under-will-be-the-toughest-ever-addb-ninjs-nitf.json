@@ -2,8 +2,8 @@
   "uri": "https://antidopingdatabase.com/news/anti-doping-measures-at-the-tour-down-under-will-be-the-toughest-ever",
   "standard": {
     "name": "ninjs",
-    "version": "2.2",
-    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+    "version": "3.0",
+    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
   },
   "type": "text",
   "representationType": "full",

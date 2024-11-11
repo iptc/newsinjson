@@ -1,17 +1,18 @@
 [
     {
+        "uri": "https://iptc.org/example/uri/1",
         "title": "Athlete uses medicine containing prohibited substance",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "The Norwegian team doctor bought a medicine  containing the antibiotic neomycin. The doctor also noticed that the prohibited substance was an ingredient, but did not identify it as a Prohibited Substance."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2016-09-03",
-                "enddate": "2016-09-03"
+                "estimatedStartDate": "2016-09-03",
+                "estimatedEndDate": "2016-09-03"
             }
         },
         "events": {
@@ -22,18 +23,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/2",
         "title": "Athlete is tested Out-of-Competition",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "Athlete underwent an unannounced doping control test conducted by the Norwegian Anti-Doping Committee. She provided blood and urine samples."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2016-09-16",
-                "enddate": "2016-09-16"
+                "estimatedStartDate": "2016-09-16",
+                "estimatedEndDate": "2016-09-16"
             }
         },
         "events": {
@@ -44,18 +46,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/3",
         "title": "The sample returns a positive result",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "A sample was tested by the Norwegian Doping Control Laboratory. The test report submitted on 30 September 2016 noted the presence of a Clostebol metabolite at an estimated concentration of 13 ng/mL"
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2016-09-30",
-                "enddate": "2016-09-30"
+                "estimatedStartDate": "2016-09-30",
+                "estimatedEndDate": "2016-09-30"
             }
         },
         "events": {
@@ -66,18 +69,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/4",
         "title": "B-sample was analyzed and confirms the A-sample",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "At the request of Anti-Doping Norway, the B sample was analyzed on 6 October 2016. This analysis confirmed the A sample results."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2016-10-06",
-                "enddate": "2016-10-06"
+                "estimatedStartDate": "2016-10-06",
+                "estimatedEndDate": "2016-10-06"
             }
         },
         "events": {
@@ -88,18 +92,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/5",
         "title": "Athlete is provisionally suspended",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "The Prosecution Committee for Anti-Doping Norway imposed a twomonth provisional suspension on Ms Athlete commencing that same date, until 18 December 2016."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2016-10-18",
-                "enddate": "2016-10-18"
+                "estimatedStartDate": "2016-10-18",
+                "estimatedEndDate": "2016-10-18"
             }
         },
         "events": {
@@ -110,18 +115,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/6",
         "title": "Provisionally suspension prolonged with two months",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "the Prosecution Committee suspended Ms Athlete for another two months, until 19 February 2017, pending a final judgment."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2016-12-12",
-                "enddate": "2016-12-12"
+                "estimatedStartDate": "2016-12-12",
+                "estimatedEndDate": "2016-12-12"
             }
         },
         "events": {
@@ -132,18 +138,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/7",
         "title": "Public hearing at the Adjudication Committee of Anti-Doping Norway - day 1",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "On 25 and 26 January 2017, The Adjudication Committee of Anti-Doping Norway (the “Adjudication Committee”) conducted a public hearing in Oslo. It heard testimony from numerous witnesses including Ms Athlete herself and Dr Bendiksen. Anti-Doping Norway requested a sanction of fourteen months to be imposed on Ms Athlete."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2017-01-25",
-                "enddate": "2017-01-25"
+                "estimatedStartDate": "2017-01-25",
+                "estimatedEndDate": "2017-01-25"
             }
         },
         "events": {
@@ -154,18 +161,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/8",
         "title": "Public hearing at the Adjudication Committee of Anti-Doping Norway - day 2",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "On 25 and 26 January 2017, The Adjudication Committee of Anti-Doping Norway (the “Adjudication Committee”) conducted a public hearing in Oslo. It heard testimony from numerous witnesses including Ms Athlete herself and Dr Bendiksen. Anti-Doping Norway requested a sanction of fourteen months to be imposed on Ms Athlete."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2017-01-26",
-                "enddate": "2017-01-26"
+                "estimatedStartDate": "2017-01-26",
+                "estimatedEndDate": "2017-01-26"
             }
         },
         "events": {
@@ -176,18 +184,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/9",
         "title": "The Adjudication Committee of Anti-Doping Norway imposses decision",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "On 10 February 2017, the Adjudication Committee issued its Decision. It noted that the facts of the case were undisputed by the parties involved. The Decision focused on the degree of fault to be attributed to Ms Athlete, and the proportionate sanction. The Adjudication Committee suspended Ms Athlete for thirteen months, commencing 18 October 2016."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2017-02-10",
-                "enddate": "2017-02-10"
+                "estimatedStartDate": "2017-02-10",
+                "estimatedEndDate": "2017-02-10"
             }
         },
         "events": {
@@ -198,18 +207,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/10",
         "title": "Athlete 13 months suspension starts",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "The Adjudication Committee suspended Ms Athlete for thirteen months, commencing 18 October 2016."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2016-10-18",
-                "enddate": "2018-01-18"
+                "estimatedStartDate": "2016-10-18",
+                "estimatedEndDate": "2018-01-18"
             }
         },
         "events": {
@@ -220,18 +230,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/11",
         "title": "FIS filed a statement of appeal to CAS",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "On 6 March 2017, the FIS filed a statement of appeal (serving as its appeal brief) against the Decision with the CAS against Ms. Athlete and the NIF. The statement of appeal/appeal brief contained, inter alia, a proposal for the matter to be decided by a Sole Arbitrator and a request for an expedited procedure."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2017-03-06",
-                "enddate": "2017-03-06"
+                "estimatedStartDate": "2017-03-06",
+                "estimatedEndDate": "2017-03-06"
             }
         },
         "events": {
@@ -242,18 +253,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/12",
         "title": "Hearing at CAS",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "On June 6, 2017, a hearing was held at the CAS Headquarters located in Lausanne, Switzerland."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2017-06-06",
-                "enddate": "2017-06-06"
+                "estimatedStartDate": "2017-06-06",
+                "estimatedEndDate": "2017-06-06"
             }
         },
         "events": {
@@ -264,18 +276,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/13",
         "title": "CAS suspends Athlete for 16 months",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "The Court of Arbitration for Sport decided to suspend Therese Athlete for 18 months."
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2017-08-21",
-                "enddate": "2017-08-21"
+                "estimatedStartDate": "2017-08-21",
+                "estimatedEndDate": "2017-08-21"
             },
             "organiser": {
                 "name": "Court of Arbitration for Sport",
@@ -292,18 +305,19 @@
     },
     {
         
+        "uri": "https://iptc.org/example/uri/14",
         "title": "Athlete Start the 18 month suspension",
         "descriptions": [
             {
                 "role": "text",
-                "contenttype": "text/plain",
+                "contentType": "text/plain",
                 "value": "The Athlete starts its 18 month suspension"
             }
         ],
-        "eventdetails": {
+        "eventDetails": {
             "dates": {
-                "startdate": "2016-10-18",
-                "enddate": "2018-04-18"
+                "estimatedStartDate": "2016-10-18",
+                "estimatedEndDate": "2018-04-18"
             },
             "organiser": {
                 "name": "Court of Arbitration for Sport",
