@@ -20,6 +20,7 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :sectnums:
 :sectanchors:
 :sectnumlevels: 3
+:tabs-sync-option:
 
 == Introduction: ninjs is News in JSON
 
@@ -100,10 +101,31 @@ image:ninjsillustration.jpg[ninjs Object Building Blocks diagram]
 ninjs can be very simple. This is an example of something that might be returned
 by an API call.
 
+
+[tabs]
+====
+ninjs 3.0::
++
 [source,json]
 ----
-include::includes/examples/001_simple_example.json[]
+include::includes/examples/3.0/001_simple_example.json[]
 ----
+
+ninjs 2.1::
++
+[source,json]
+----
+include::includes/examples/2.1/001_simple_example.json[]
+----
+
+ninjs 1.5::
++
+[source,json]
+----
+include::includes/examples/1.5/001_simple_example.json[]
+----
+
+====
 
 You can make your own simple ninjs document using the
 https://www.iptc.org/std/ninjs/generator/[ninjs generator tool on iptc.org].
@@ -365,14 +387,14 @@ property
 |Data type
 
 [[uri]]
-|uri
-|uri
+|`uri`
+|`uri`
 |The identifier for this news object
 |URI
 
 [[type]]
-|type
-|type
+|`type`
+|`type`
 |The generic news type of this news object
 | One of: +
 `text` +
@@ -386,15 +408,15 @@ property
 `planning`
 
 [[title]]
-|title
-|title
+|`title`
+|`title`
 |A short natural-language name for the item.
 |string
 
 [[standard]]
-|standard
-|standard (2.x) +
-$standard (1.x)
+|`standard`
+|`standard` (2.x) +
+`$standard` (1.x)
 a|An object with information about standard, version and schema this instance is valid against. +
 This property is an object with the following child properties:
 
@@ -402,15 +424,15 @@ This property is an object with the following child properties:
 !===
 !Property name!Description!Data type
 
-!name
+!`name`
 !The name of the standard, such as `ninjs`.
 !string
 
-!version
-!The version of the standard used, such as `2.1`.
+!`version`
+!The version of the standard used, such as `3.0`.
 !string
 
-!schema
+!`schema`
 !The uri of the JSON schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_2.1.json`
 !URI
 
@@ -419,9 +441,9 @@ This property is an object with the following child properties:
 |object
 
 [[altIds]]
-|altIds
-|altids (2.x) +
-altid (1.x)
+|`altIds`
+|`altids` (2.x) +
+`altid` (1.x)
 a|Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use. +
 This property is an object with the following child properties: +
@@ -430,11 +452,11 @@ This property is an object with the following child properties: +
 !===
 !Property name!Description!Data type
 
-!role
+!`role`
 !The role of the alternative id (such as "internal")
 !string
 
-!value
+!`value`
 !The alternative id value
 !string
 
@@ -443,8 +465,8 @@ This property is an object with the following child properties: +
 |array of objects
 
 [[representationType]]
-|representationType
-|representationtype
+|`representationType`
+|`representationtype`
 |Indicates the completeness of this representation of a news item. +
 For a full document representation, the value should be `full`. +
 For a partial representation, for example a short extract provided as the results of an API call, the value `partial` should be used. +
@@ -455,50 +477,50 @@ One of: +
 `partial`
 
 [[profile]]
-|profile
-|profile
+|`profile`
+|`profile`
 |An identifier for the structure of the news object. This can be any string but we suggest something identifying the structure of the content such as `'text-only'` or `'text-photo'`. Profiles are typically provider-specific.
 |string
 
 [[version]]
-|version
-|version
+|`version`
+|`version`
 |The version of the news object which is identified by the uri property.
 |string
 
 [[firstCreated]]
-|firstCreated
-|firstcreated
+|`firstCreated`
+|`firstcreated`
 |Indicates when the first version of the item was created.
 |date-time
 
 [[versionCreated]]
-|versionCreated
-|versioncreated
+|`versionCreated`
+|`versioncreated`
 |The date and time when this version of the news object was created.
 |date-time
 
 [[contentCreated]]
-|contentCreated
-|contentcreated
+|`contentCreated`
+|`contentcreated`
 |The date and time when the content of this ninjs object was originally created.
 |date-time
 
 [[embargoed]]
-|embargoed
-|embargoed
+|`embargoed`
+|`embargoed`
 |The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.
 |date-time
 
 [[expires]]
-|expires
-|expires
+|`expires`
+|`expires`
 |The date and time after which the Item is no longer considered editorially relevant by its provider. nar:expires (Added in ninjs 2.1)
 |date-time
 
 [[pubStatus]]
-|pubStatus
-|pubstatus
+|`pubStatus`
+|`pubstatus`
 |The publishing status of the news object, its value is `usable` by default.
 |One of: +
 `usable` +
@@ -506,20 +528,20 @@ One of: +
 `canceled`
 
 [[urgency]]
-|urgency
-|urgency
+|`urgency`
+|`urgency`
 |The editorial urgency of the content from 1 to 9. 1 represents the highest urgency, 9 the lowest.
 |number
 
 [[ednote]]
-|ednote
-|ednote
+|`edNote`
+|`ednote`
 |A note that is intended to be read by internal staff at the receiving organisation, but not published to the end-user.
 |string
 
 [[language]]
-|language
-|language
+|`language`
+|`language`
 |The human language used by the content. The value should follow https://tools.ietf.org/html/bcp47[IETF BCP47] format.
 |string
 
@@ -537,26 +559,26 @@ property
 |Data type
 
 [[copyrightHolder]]
-|copyrightHolder
-|copyrightholder
+|`copyrightHolder`
+|`copyrightholder`
 |The person or organisation claiming the intellectual property for the content.
 |string
 
 [[copyrightNotice]]
-|copyrightNotice
-|copyrightnotice
+|`copyrightNotice`
+|`copyrightnotice`
 |Any necessary copyright notice for claiming the intellectual property for the content.
 |string
 
 [[usageTerms]]
-|usageTerms
-|usageterms
+|`usageTerms`
+|`usageterms`
 |A natural-language statement about the usage terms pertaining to the content.
 |string
 
 [[rightsInfo]]
-|rightsInfo
-|rightsinfo
+|`rightsInfo`
+|`rightsinfo`
 a|An expression of rights to be applied to the content. +
  +
 This property is an object with the following child properties: +
@@ -565,18 +587,18 @@ This property is an object with the following child properties: +
 !===
 !Property name!Description!Data type
 
-!langId +
-(langid in 1.x and 2.x)
+!`langId` +
+(`langid` in 1.x and 2.x)
 !Identifier for the used Rights Expression language.
 !uri
 
-!linkedRights +
-(linkedrights in 1.x and 2.x)
+!`linkedRights` +
+(`linkedrights` in 1.x and 2.x)
 !A link from the current Item to Web resource with rights related information.
 !uri
 
-!encodedRights +
-(encodedrights in 1.x and 2.x)
+!`encodedRights` +
+(`encodedrights` in 1.x and 2.x)
 !Contains a rights expression as defined by a Rights Expression Language.
 !string
 
@@ -585,7 +607,6 @@ For each array element under rightsinfo, one of either `linkedrights` or `encode
 
 |Array of objects
 
-|string
 |===
 
 === Editorial properties
@@ -602,9 +623,9 @@ property
 |Data type
 
 [[headlines]]
-|headlines
-|headlines (2.x) +
-headline_<type> (1.x)
+|`headlines`
+|`headlines` (2.x) +
+`headline_<type>` (1.x)
 a|(in 2.x and 3.x) An array of objects containing various types of headlines. +
  +
 This property is an object with the following child properties: +
@@ -613,15 +634,15 @@ This property is an object with the following child properties: +
 !===
 !Property name!Description!Data type
 
-!role
+!`role`
 !The role of this headline
 !string
 
-!contentType (contenttype in 2.x)
+!`contentType` (contenttype in 2.x)
 !The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this headline. (Previously known as MIME Type.)
 !string
 
-!value
+!`value`
 !The headline identified with the above role and contenttype. Required in each object in the array.
 !string
 
@@ -630,20 +651,22 @@ This property is an object with the following child properties: +
 |Array of objects
 
 [[slugline]]
-|slugline
+|`slugline`
+|`slugline`
 |A human-readable identifier for the item.
 |string
 
 [[by]]
-|by
-|by
+|`by`
+|`by` (2.x) +
+`byline` (1.x)
 |The name(s) of the creator(s) of the content
 |string
 
 [[bodies]]
-|bodies
-|bodies (2.x) +
-body_<type> (1.x)
+|`bodies`
+|`bodies` (2.x) +
+`body_<type>` (1.x)
 a|An array of body objects with the content as text or with markup. +
  +
 This property is an object with the following child properties: +
@@ -652,23 +675,23 @@ This property is an object with the following child properties: +
 !===
 !Property name!Description!Data type
 
-!role
+!`role`
 !The role of this body
 !string
 
-!contentType (contenttype in 2.x)
+!`contentType` (contenttype in 2.x)
 !The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this body. (Previously known as MIME Type.)
 !string
 
-!value
+!`value`
 !The headline identified with the above role and contentType. *Required* to exist in each array item.
 !string
 
-!charCount (charcount in 2.x)
+!`charCount` (charcount in 2.x)
 !The total character count in the article excluding figure captions.
 !number
 
-!wordCount (wordCount in 2.x)
+!`wordCount` (wordCount in 2.x)
 !The total number of words in the article excluding figure captions.
 !number
 
@@ -677,9 +700,9 @@ This property is an object with the following child properties: +
 |Array of objects
 
 [[descriptions]]
-|descriptions
-|descriptions (2.x) +
-description_<type> (1.x)
+|`descriptions`
+|`descriptions` (2.x) +
+`description_<type>` (1.x)
 a|An array of one or more descriptions of the ninjs object. See also ednote
 for information from provider to reciever. Descriptions are seen as metadata.
 
@@ -689,15 +712,16 @@ This property is an object with the following child properties: +
 !===
 !Property name!Description!Data type
 
-!role
+!`role`
 !The role of this description
 !string
 
-!contentType (contenttype in 2.x)
+!`contentType` +
+(`contenttype` in 2.x)
 !The https://www.iana.org/assignments/media-types/media-types.xhtml[IANA (Internet Assigned Numbers Authority) Media Type] of the content of this description. (Previously known as MIME Type.)
 !string
 
-!value
+!`value`
 !The descriptive text identified with the above role and contenttype. Required in each object in the array.
 !string
 
@@ -721,8 +745,8 @@ property
 |Data type
 
 [[located]]
-|located
-|located
+|`located`
+|`located`
 a|The name of the location from which the content originates.
 
 NOTE: See also `places` for locations which are mentioned in the content.
@@ -730,9 +754,9 @@ NOTE: See also `places` for locations which are mentioned in the content.
 |string
 
 [[genres]]
-|genres
-|genres (2.x) +
-genre (1.x)
+|`genres`
+|`genres` (2.x) +
+`genre` (1.x)
 a|The nature, intellectual or journalistic form of the content. +
 
 This property is an array of objects with the following properties:
@@ -741,15 +765,15 @@ This property is an array of objects with the following properties:
 !===
 !Property name!Description!Data type
 
-!name
+!`name`
 !The human-readable name of the genre, such as `Press Release`.
 !string
 
-!uri
+!`uri`
 !The identifier of the genre as a complete uri
 !URI
 
-!literal
+!`literal`
 !The code for the genre as a string literal
 !string
 
@@ -758,9 +782,9 @@ This property is an array of objects with the following properties:
 |array
 
 [[people]]
-|people
-|people (2.x) +
-person (1.x)
+|`people`
+|`people` (2.x) +
+`person` (1.x)
 | An array of objects describing individual human beings. +
 This property is an array of objects with the following properties:
 
@@ -768,23 +792,24 @@ This property is an array of objects with the following properties:
 !===
 !Property name!Description!Data type
 
-!name
+!`name`
 !The name of a person
 !string
 
-!rel
+!`rel`
 !The relationship of the content of the news object to the person
 !string
 
-!uri
+!`uri`
 !The identifier for the person as a complete uri with the code.
 !URI
 
-!literal
+!`literal`
 !The code for the person as a literal value.
 !string
 
-!contactInfo (contactinfo in 2.x)
+!`contactInfo` +
+(`contactinfo` in 2.x)
 !Contact and/or location information for the person as a ContactInfo structure.
 !<<Contact Info structure>>
 
@@ -793,18 +818,18 @@ This property is an array of objects with the following properties:
 |array
 
 [[organisations]]
-|organisations
-|organisations (2.x) +
-organisation (1.x)
+|`organisations`
+|`organisations` (2.x) +
+`organisation` (1.x)
 |An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party. +
 This property is an array of <<Organisation structure,organisation objects>>.
 
 |array
 
 [[places]]
-|places
-|places (2.x) +
-place (1.x)
+|`places`
+|`places` (2.x) +
+`place` (1.x)
 |An array of named locations. +
 This property is an array of objects with the following properties:
 
@@ -812,28 +837,30 @@ This property is an array of objects with the following properties:
 !===
 !Property name!Description!Data type
 
-!name
+!`name`
 !The name of the place
 !string
 
-!rel
+!`rel`
 !The relationship of the content of the news object to the place
 !string
 
-!uri
+!`uri`
 !The identifier for the place as a complete uri
 !URI
 
-!literal
+!`literal`
 !The code for the place as a literal
 !string
 
-!contactInfo (contactinfo in 2.x)
+!`contactInfo` +
+(`contactinfo` in 2.x)
 !Contact and/or location information for the place as a ContactInfo structure.
 !<<Contact Info structure>>
 
-!geoJSON (geojson in 2.x, geometry_<type> in 1.x)
-!An object holding geo data of this place. From ninjs 2.0 onwards, the
+!`geoJSON` +
+(`geojson` in 2.x, `geometry_<type>` in 1.x)
+!An object holding geographic data of this place. From ninjs 2.0 onwards, the
 contents of this object must conform to
 https://geojson.org/schema/GeoJSON.json[the GeoJSON format] defined in
 https://datatracker.ietf.org/doc/html/rfc7946[RFC 7946].
@@ -845,9 +872,9 @@ https://datatracker.ietf.org/doc/html/rfc7946[RFC 7946].
 |array
 
 [[subjects]]
-|subjects
-|subjects (2.x) +
-subject (1.x)
+|`subjects`
+|`subjects` (2.x) +
+`subject` (1.x)
 |An array of objects holding concepts with a relationship to the content. +
 This property is an array of objects with the following properties:
 
@@ -855,40 +882,40 @@ This property is an array of objects with the following properties:
 !===
 !Property name!Description!Data type
 
-!name
+!`name`
 !The name of the subject
 !string
 
-!rel
+!`rel`
 !The relationship of the content of the news object to the subject
 !string
 
-!uri
+!`uri`
 !The identifier of the subject as a complete uri
 !URI
 
-!literal
+!`literal`
 !The code for the subject as a string literal
 !string
 
-!creator
+!`creator`
 !Specifies which entity (person, organisation or system) that has created or last edited the property.
 !string
 
-!relevance
+!`relevance`
 !The relevance of the metadata to the news content to which it is attached.
 !integer (range 0-100)
 
-!confidence
+!`confidence`
 !The confidence with which the metadata has been assigned.
 !integer (range 0-100)
 !===
 |array
 
 [[events]]
-|events
-|events (2.x) +
-event (1.x)
+|`events`
+|`events` (2.x) +
+`event` (1.x)
 |An array of objects describing something which happens in a planned or unplanned manner. +
 This property is an array of objects with the following properties:
 
@@ -896,19 +923,19 @@ This property is an array of objects with the following properties:
 !===
 !Property name!Description!Data type
 
-!name
+!`name`
 !The name of the event
 !string
 
-!rel
+!`rel`
 !The relationship of the content of the news object to the event
 !string
 
-!uri
+!`uri`
 !The identifier for the event as a complete uri
 !URI
 
-!literal
+!`literal`
 !The code for the event as a string literal
 !string
 !===
@@ -916,9 +943,9 @@ This property is an array of objects with the following properties:
 |array
 
 [[objects]]
-|objects
-|objects (2.x) +
-object (1.x)
+|`objects`
+|`objects` (2.x) +
+`object` (1.x)
 |An array of objects describing something material, excluding persons. +
 This property is an array of objects with the following properties:
 
@@ -926,19 +953,19 @@ This property is an array of objects with the following properties:
 !===
 !Property name!Description!Data type
 
-!name
+!`name`
 !The name of the object
 !string
 
-!rel
+!`rel`
 !The relationship of the content of the news object to the object
 !string
 
-!uri
+!`uri`
 !The identifier for the object as a complete uri
 !URI
 
-!literal
+!`literal`
 !The code for the object as a string literal
 !string
 !===
@@ -946,9 +973,9 @@ This property is an array of objects with the following properties:
 |array
 
 [[infoSources]]
-|infoSources
-|infosources (2.x) +
-infosource (1.x)
+|`infoSources`
+|`infosources` (2.x) +
+`infosource` (1.x)
 |An array of parties (person or organisation) which originated, modified, enhanced, distributed, aggregated or supplied the content or provided some information used to create or enhance the content. +
 This property is an array of objects with the following properties:
 
@@ -956,23 +983,24 @@ This property is an array of objects with the following properties:
 !===
 !Property name!Description!Data type
 
-!name
+!`name`
 !The name of the infosource
 !string
 
-!role
+!`role`
 !The role the infosource in relationship to the content as a uri.
 !string
 
-!uri
+!`uri`
 !The identifier of the infosource as a complete uri
 !URI
 
-!literal
+!`literal`
 !The code for the infosource as a string literal
 !string
 
-!contactInfo (contactinfo in 1.x and 2.x)
+!`contactInfo` +
+(`contactinfo` in 1.x and 2.x)
 !Contact and/or location information for the info source as a ContactInfo structure.
 !<<Contact Info structure>>
 
@@ -981,9 +1009,9 @@ This property is an array of objects with the following properties:
 |array
 
 [[trustIndicators]]
-|trustIndicators
-|trustindicator (1.x) +
-trustindicators (2.x)
+|`trustIndicators`
+|`trustindicator` (1.x) +
+`trustindicators` (2.x)
 |An array of objects to allow links to documents about trust indicators, intended to show
 the trustworthiness of the news provider. +
 This property is an array of objects with the following properties:
@@ -992,21 +1020,22 @@ This property is an array of objects with the following properties:
 !===
 !Property name!Description!Data type
 
-!role
-!The role of the trust indicator as a complete uri, such as `http://cv.iptc.org/newscodes/trustindicator/editorialPolicy`
+!`role`
+!The role of the trust indicator as a complete uri, such as
+`http://cv.iptc.org/newscodes/` +
+`trustindicator/editorialPolicy`
 !URI
 
-!href
-!The URL for accessing the trust indicator resource, such as `https://www.bbc.com/editorialguidelines/`
+!`href`
+!The URL for accessing the trust indicator resource, such as `https://www.bbc.co.uk/editorialguidelines/`
 !string
 
-!title
+!`title`
 !The name of the resource being referenced, such as `BBC Editorial Guidelines`
 !string
 !===
 
 |array
-
 
 |===
 
@@ -1018,27 +1047,27 @@ The Contact Info structure is used for the contents of the `contactinfo` propert
 |===
 |Property name|Description|Data type
 
-|type
+|`type`
 a|Type would be method of communication like phone, mobile, address etc.
 |string
 
-|role
+|`role`
 a|Role refers to type and could be private, office etc
 |string
 
-|lang
+|`lang`
 a|If this contactinfo object need to be qualified with what language it is in. The value should follow IETF BCP47.
 |string
 
-|name
+|`name`
 |Human readable name of the contact method, like name for a web page, name of persons twitter account etc
 |string
 
-|value
+|`value`
 |Actual phone number, email address, web url etc.
 |string
 
-|address
+|`address`
 |The address of a person, place or organisation. +
 This property is an object with the following child properties:
 
@@ -1046,23 +1075,24 @@ This property is an object with the following child properties:
 !===
 !Property name!Description!Data type
 
-!lines
+!`lines`
 !An array of lines to construct an address. The order is important to construct a correct address.
 !array
 
-!locality
+!`locality`
 !A city/town/village etc. part of the address.
 !string
 
-!area
+!`area`
 !A subdivision of a country part of the address.
 !string
 
-!postalcode
+!`postalCode` +
+(`postalcode` in 1.x / 2.x)
 !A postal code part of the address.
 !string
 
-!country
+!`country`
 !A country part of the address.
 !string
 !===
@@ -1078,23 +1108,23 @@ The Contact Info structure is used for the contents of the `contactinfo` propert
 |===
 |Property name|Description|Data type
 
-|name
+|`name`
 |The name of the organisation
 |string
 
-|rel
+|`rel`
 |The relationship of the content of the news object to the organisation
 |string
 
-|uri
+|`uri`
 |The identifier of the organisation as a complete uri
 |URI
 
-|literal
+|`literal`
 |The code for the organisation as a literal
 |string
 
-|symbols
+|`symbols`
 a|Symbols used for a financial instrument linked to the organisation at a specific market place. +
 Array of objects with the properties:
 
@@ -1104,7 +1134,8 @@ Array of objects with the properties:
 * `ticker`: Ticker symbol used for the financial instrument (string). This sub-property is allowed but deprecated. +
 |array
 
-|contactInfo (contactinfo in 2.x)
+|`contactInfo` +
+(`contactinfo` in 2.x)
 |Contact and/or location information for the organisation as a ContactInfo structure.
 |<<Contact Info structure>>
 
@@ -1129,10 +1160,23 @@ While specifying an event, we can include as much or as little information as we
 
 Here's an example of a simple event:
 
+[tabs]
+====
+ninjs 3.0::
++
 [source,json]
 ----
-include::includes/examples/008_event.json[]
+include::includes/examples/3.0/008_event.json[]
 ----
+
+ninjs 2.1::
++
+Planned news events are not handled in ninjs 2.1.
+
+ninjs 1.5::
++
+Planned news events are not handled in ninjs 1.5.
+====
 
 The main new object to cover such events is the eventDetails object, which contains the following properties:
 
@@ -1140,21 +1184,21 @@ The main new object to cover such events is the eventDetails object, which conta
 |===
 |Property name|Description|Data type
 
-|eventStatus
+|`eventStatus`
 |Status of the event (as opposed to the status of coverage of the event). +
 Suggested CV: http://cv.iptc.org/newscodes/eventoccurstatus/ (which contains values such as "Planned, occurrence highly uncertain" and "Planned, then cancelled")
 |uri
 
-|plannedCoverageStatus
+|`plannedCoverageStatus`
 |Status of the coverage (as opposed to the status of the event itself). +
 Suggested CV: http://cv.iptc.org/newscodes/newscoveragestatus/ (which contains values such as "coverage intended" and "coverage upon request")
 |uri
 
-|dates
+|`dates`
 |Dates and times for this event.
 |<<dates-structure,Dates Structure>>
 
-|organiser
+|`organiser`
 |A person or organisation organising the event.
 |<<Organisation Structure>>
 
@@ -1162,7 +1206,7 @@ Suggested CV: http://cv.iptc.org/newscodes/newscoveragestatus/ (which contains v
 
 Events include a rich <<dates-object,date structure>> which allows for uncertain start and end dates and times and also recurring events. The data model is based on https://iptc.org/std/NewsML-G2/specification/#introduction-to-eventsml-g2[EventsML-G2], part of the NewsML-G2 family of standards.
 
-NOTE: It's worth noting that this is different from the <<events>> metadata object used for news items. That object is intended to convey metadata about an event that is related to a published news item.
+NOTE: It's worth noting that this is different from the <<events,events>> metadata object used for news items. That object is intended to convey metadata about an event that is related to a published news item.
 
 [[planned-coverage]]
 === Planned Coverage
@@ -1171,21 +1215,22 @@ A ninjs item may contain a `plannedCoverage` property which contains an array of
 
 [cols="1,3a,1",options="header"]
 |===
-|Property name|Description|Data type
+|Property name +
+(3.0 only)|Description|Data type
 
-|uri
+|`uri`
 |The local identifier of the element which MUST be persistent for all versions of the item, i.e. for its entire lifecycle.",
 |string
 
-|title
+|`title`
 |A human-readable title for the planned content",
 |string
 
-|pubStatus
+|`pubStatus`
 |The publishing status of the plannedCoverage object, its value is *usable* by default. nar:pubStatus
 |string with possible values "usable", "withheld"
 
-|type
+|`type`
 |The generic news type of the planned content.
 | One of: +
 `text` +
@@ -1198,65 +1243,77 @@ A ninjs item may contain a `plannedCoverage` property which contains an array of
 `event` +
 `planning`
 
-|commissioned
+|`commissioned`
 |Information about the commissioning of this content.
-|<<Commissioning Structure>>
+|<<Commissioning Structure,Commissioning Structure>>
 
-|dates
+|`dates`
 |Dates and times for this planned content.
 |<<dates-structure,Dates Structure>>
 
-|audiences
-|Intended audiences for the planned content.
+|`audiences`
+a|Intended audiences for the planned content. +
+
 Array of objects with the following structure:
 
+[cols="3"]
 !===
-!audience
-1Intended audience(s) for the content.
+!Property name!Description!Data type
+
+!`audience`
+!Intended audience(s) for the content.
 !string
 
-!significance
-!A qualifier which indicates the expected significance of the content for this specific audience.",
-!integer"
+!`significance`
+!A qualifier which indicates the expected significance of the content for this specific audience.
+!integer
 
-!exclAudience
-!Excluded audience(s) for the planned content.",
+!`exclAudience`
+!Excluded audience(s) for the planned content.
 !Array of strings
+
 !===
 
-|edNote
+|Array of objects
+
+|`edNote`
 |Additional natural language information about the planned content addressed to the editorial people receiving and processing the item.
 |string
 
-|urgency
+|`urgency`
 |The editorial urgency of the planned content, as scoped by the parent element.
 |number (1-9)
 
-|language
+|`language`
 |The human language used by the planned content. The value should follow IETF BCP47.
 |string
 
-|itemCount": {
+|itemCount`
 |Number of planned items of this kind expressed by a range.
 This is an object with the following structure:
 
+[cols="3"]
 !===
+!Property name!Description!Data type
 
-!rangeFrom
-!integer"
+!`rangeFrom`
+!Lower bound of the range.
+!integer
 
-!rangeTo
-!integer"
+!`rangeTo`
+!Upper bound of the range.
+!integer
 
 !===
+|object
 
-|wordCount": {
-|The count of words of textual content. nar:wordcount",
-|integer"
+|`wordCount`
+|The count of words of textual content.
+|integer
 
-|renditions": {
+|`renditions`
 |An array of objects showing the planned renditions of the news object.
-|Array of <<rendition objects>>
+|Array of <<rendition objects,rendition objects>>
 
 |===
 
@@ -1264,29 +1321,30 @@ This is an object with the following structure:
 
 [cols="1,3a,1",options="header"]
 |===
-|Property name|Description|Data type
+|Property name +
+(3.0 only)|Description|Data type
 
-|uri
-
-|by
+|`by`
 |The person or party that commissioned the content.
-|string" 
+|string
 
-|on
+|`on`
 |The date at which the content was commissioned.
 |date-time
           
-|references
+|`references`
 |Identifiers that help with the commissioning process such as purchase orders and work order numbers. +
 Array of objects with the following structure:
 
+[cols="3"]
 !===
+!Property name!Description!Data type
 
-!name
+!`name`
 !Name of the reference
 !string
 
-!value
+!`value`
 !Value of the reference
 !string
 !===
@@ -1308,29 +1366,30 @@ To handle this situation, in ninjs 3.0 we introduce a `dates` object which conta
  
 [cols="1,3a,1",options="header"]
 |===
-|Property name|Description|Data type
+|Property name +
+(3.0 only)|Description|Data type
 
-|startDate
+|`startDate`
 a|The date and time at which the event starts (if known)
 |date-time
 
-|endDate
+|`endDate`
 a|The date and time at which the event ends (if known)
 |date-time
 
-|expectedStartDate
+|`expectedStartDate`
 a|The approximate date (and optionally time) at which the event or coverage is expected to start.
 |<<Truncated DateTime>>
 
-|expectedEndDate
+|`expectedEndDate`
 a|The approximate date (and optionally time) at which the event or coverage is expected to end.
 |<<Truncated DateTime>>
 
-|expectedDuration
+|`expectedDuration`
 a|The time period that the event or coverage is expected to last. (Actual duration can be calculated from startDate and endDate)
 |string
 
-|expectedDuration
+|`recurrence`
 a|Specifies recurrence information about the event. +
 This property is an object with the following child properties:
 
@@ -1339,12 +1398,12 @@ This property is an object with the following child properties:
 !Property name!Description!Data type
 
 [[recurrenceDates]]
-!recurrenceDates
+!`recurrenceDates`
 !Date(s) (and optionally times) on which the event occurs.
 !array of <<Truncated DateTime>>
 
 [[recurrenceRules]]
-!recurrenceRules
+!`recurrenceRules`
 !Rules that specify the recurrence of this event. +
 This property is an array of <<Recurrence Rules,Recurrence Rule>> objects.
 !Array of <<Recurrence Rules>>
@@ -1380,35 +1439,35 @@ Used to specify recurring events within the <<recurrenceRules,recurrenceRules>> 
 This follows the structure of EventsML-G2 / NewsML-G2 recurrence rules, which in turn
 follows the iCalendar specification.
 
-[cols="3"]
+[cols="1,3a,1",options="header"]
 |===
-|Property name|Description"Data type
+|Property name +
+(3.0 only)|Description|Data type
 
-|frequency
+|`frequency`
 |The FREQ rule part identifies the type of recurrence rule.
 |string: one of: +
-`secondly`
-`minutely`
-`hourly`
-`daily`
-`weekly`
-`monthly`
+`secondly` +
+`minutely` +
+`hourly` +
+`daily` +
+`weekly` +
+`monthly` +
 `yearly`
 
-
-|interval
+|`interval`
 |The INTERVAL rule part contains a positive integer representing how often the recurrence rule repeats.
-|string
+|integer
 
-|until
+|`until`
 |The UNTIL rule part defines a date-time value which bounds the recurrence rule in an inclusive manner.",
-|string"
+|date-time
 
-|count
+|`count`
 |The COUNT rule part defines the number of occurrences at which to range-bound the recurrence.
-|string
-|===
+|integer
 
+|===
 
 === Renditions
 
@@ -1427,70 +1486,74 @@ property
 |Description
 |Data type
 
-|name
-|name
-|The name of this object in the array of renditions. Required
+|`name`
+|`name` (2.x) +
+_Name of object_ (1.x)
+|The name of this object in the array of renditions. Required.
 |string
 
-|href
-|href
-|The URL for accessing the rendition as a resource
+|`href`
+|`href`
+|The URL for accessing the rendition as a resource.
 |URI
 
-|contentType
-|contenttype
-|The IANA Media Type which applies to this rendition
+|`contentType`
+|`contenttype`
+|The IANA Media Type which applies to this rendition.
 |string
 
-|title
-|title
-|A title for the link to the rendition resource
+|`title`
+|`title`
+|A title for the link to the rendition resource.
 |string
 
-|height
-|height
-|For still and moving images: the height of the display area measured in pixels
-|number
+|`height`
+|`height`
+|For still and moving images: the height of the display area measured in pixels.
+|integer (3.0) +
+number (1.x, 2.x)
 
-|width
-|width
-|For still and moving images: the width of the display area measured in pixels
-|number
+|`width`
+|`width`
+|For still and moving images: the width of the display area measured in pixels.
+|integer (3.0) +
+number (1.x, 2.x)
 
-|sizeInBytes
-|sizeinbytes
-|The size of the rendition resource in bytes
-|number
+|`sizeInBytes`
+|`sizeinbytes`
+|The size of the rendition resource in bytes.
+|integer (3.0) +
+number (1.x, 2.x)
 
-|duration
-|duration
+|`duration`
+|`duration`
 |The total time duration of the content in seconds (fractional seconds are allowed)
 |number
 
-|format
-|format
+|`format`
+|`format`
 |A refinement of a generic content type (i.e. IANA media type) by a literal string value.
 |string
 
-|aspectRatio
+|`aspectRatio`
 |n/a +
 (3.0 only)
 |Aspect ratio of the video file, which is the ratio of the width of video to its height, such as 16:9 and 4:3.
 |string
 
-|videoCodec
+|`videoCodec`
 |n/a +
 (3.0 only)
-|The video encoding system used to create the content. Suggested CV: https://cv.iptc.org/newscodes/videocodec/
+|The video encoding system used to create the content. Suggested CV: http://cv.iptc.org/newscodes/videocodec/
 |string
 
-|frameRate
+|`frameRate`
 |n/a +
 (3.0 only)
 |The number of video frames per second, which is the rate at which the material should be shown in order to achieve the intended visual effect
 |number
 
-|poi
+|`poi`
 |n/a +
 (3.0 only)
 |The point of interest of the rendition.
@@ -1500,23 +1563,23 @@ This property is an object with the following child properties:
 !===
 !Property name!Description!Data type
 
-!x
+!`x`
 !The x-coordinate of the point of interest of the rendition.
 !integer
 
-!y
+!`y`
 !The y-coordinate of the point of interest of the rendition.
 !integer
 !===
 |object
 
-|transportProtocol
+|`transportProtocol`
 |n/a +
 (3.0 only)
 |The transport/flow type of the flow (B2B stream).
 |string
 
-|scanType
+|`scanType`
 |n/a +
 (3.0 only)
 |The scan type of the video. The only allowed values are 'progressive' and 'interlaced'.
@@ -1524,7 +1587,7 @@ This property is an object with the following child properties:
 `progressive` +
 `interlaced`
 
-|bitrate
+|`bitrate`
 |n/a +
 (3.0 only)
 |The bitrate of the video. Should always include units, eg 400 kbps.
@@ -1534,10 +1597,30 @@ This property is an object with the following child properties:
 
 ==== Renditions example
 
+[tabs]
+====
+ninjs 3.0::
++
 [source,json]
 ----
-include::includes/examples/002_renditions_example.json[]
+include::includes/examples/3.0/002_renditions_example.json[]
 ----
+
+ninjs 2.1::
++
+[source,json]
+----
+include::includes/examples/2.1/002_renditions_example.json[]
+----
+
+ninjs 1.5::
++
+[source,json]
+----
+include::includes/examples/1.5/002_renditions_example.json[]
+----
+
+====
 
 === Associations
 
@@ -1549,10 +1632,30 @@ This can be used to link news items together, or to associate images with a text
 
 This example shows a press release. The body of the story is in the single object in the `bodies` property. A logo and an image are associated to the story. Both the logo and the image have two renditions, a "thumbnail" and a "highres" version.
 
+[tabs]
+====
+ninjs 3.0::
++
 [source,json]
 ----
-include::includes/examples/003_associations_example.json[]
+include::includes/examples/3.0/003_associations_example.json[]
 ----
+
+ninjs 2.1::
++
+[source,json]
+----
+include::includes/examples/2.1/003_associations_example.json[]
+----
+
+ninjs 1.5::
++
+[source,json]
+----
+include::includes/examples/1.5/003_associations_example.json[]
+----
+
+====
 
 == ninjs Examples
 
@@ -1567,20 +1670,58 @@ Key features:
 * `by` and `headlines` are typical text news metadata
 * The text of article itself is represented by `bodies`, in two format variants: plain text and HTML.
 
+[tabs]
+====
+ninjs 3.0::
++
 [source,json]
 ----
-include::includes/examples/004_simple_text_article.json[]
+include::includes/examples/3.0/004_simple_text_article.json[]
 ----
+
+ninjs 2.1::
++
+[source,json]
+----
+include::includes/examples/2.1/004_simple_text_article.json[]
+----
+
+ninjs 1.5::
++
+[source,json]
+----
+include::includes/examples/1.5/004_simple_text_article.json[]
+----
+====
 
 ==== A more complex example
 
 * Metadata about the content are added to the example above.
 * `person`, `place` and `organisation` employ a structure which provides human readable names for the entity but also machine readable identifiers by the `scheme` and `code` properties. 
 
+[tabs]
+====
+ninjs 3.0::
++
 [source,json]
 ----
-include::includes/examples/005_complex_text_article.json[]
+include::includes/examples/3.0/005_complex_text_article.json[]
 ----
+
+ninjs 2.1::
++
+[source,json]
+----
+include::includes/examples/2.1/005_complex_text_article.json[]
+----
+
+ninjs 1.5::
++
+[source,json]
+----
+include::includes/examples/1.5/005_complex_text_article.json[]
+----
+====
 
 ==== More Examples on GitHub
 
@@ -1599,10 +1740,30 @@ Key features:
 * "by", "headlines", "descriptions" (in plain text and HTML format) are typical photo metadata
 * The image itself is represented by "renditions". Two are available in this example: a main version and a small version.
 
+[tabs]
+====
+ninjs 3.0::
++
 [source,json]
 ----
-include::includes/examples/006_photo_only.json[]
+include::includes/examples/3.0/006_photo_only.json[]
 ----
+
+ninjs 2.1::
++
+[source,json]
+----
+include::includes/examples/2.1/006_photo_only.json[]
+----
+
+ninjs 1.5::
++
+[source,json]
+----
+include::includes/examples/1.5/006_photo_only.json[]
+----
+
+====
 
 === Multimedia example
 
@@ -1614,10 +1775,30 @@ The ninjs object includes:
 * a main picture illustrating the text news (in ninjs terms: associated with the text news)
 * a portrait of a person the text news is about (also: associated)
 
+[tabs]
+====
+ninjs 3.0::
++
 [source,json]
 ----
-include::includes/examples/007_multimedia.json[]
+include::includes/examples/3.0/007_multimedia.json[]
 ----
+
+ninjs 2.1::
++
+[source,json]
+----
+include::includes/examples/2.1/007_multimedia.json[]
+----
+
+ninjs 1.5::
++
+[source,json]
+----
+include::includes/examples/1.5/007_multimedia.json[]
+----
+
+====
 
 == ninjs Best Practices and How Tos
 
@@ -1757,52 +1938,52 @@ Here is a summary of the properties shared by ninjs and NewsML-G2:
 
 [%autowidth,options="header"]
 |===
-|ninjs 2.x property name|NewsML-G2 equivalent
-|uri|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#identification-and-versioning[nar:newsItem@guid]
-|type|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-class-itemclass[nar:itemClass]
-|title|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-title[nar:itemMeta/title]
-|altids|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#alternative-identifier-altid[nar:altId]
-|profile|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#profile-profile[nar:profile]
-|version|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#identification-and-versioning[nar:newsItem@version]
-|firstcreated|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-first-created---firstcreated[nar:firstCreated]
-|versioncreated|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-version-created---versioncreated[nar:versionCreated]
-|expires|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#expires[nar:expires]
-|embargoed|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-item-embargo-ends-embargoed[nar:embargoed]
-|pubstatus|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#publish-status-pubstatus[nar:pubStatus]
-|urgency|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#urgency-urgency[nar:urgency]
-|ednote|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#editorial-note[nar:edNote]
-|language|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#language-language[nar:language]
-|copyrightholder|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:copyrightHolder]
-|copyrightnotice|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:copyrightnotice]
-|usageterms|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#usage-terms-usageterms[nar:usageTerms]
-|rightsinfo|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:rightsInfo]
-|headlines|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#headline-headline[nar:headline] with @role
-|headlines@contenttype|nar:contentType
-|slugline|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#slugline-slugline[nar:slugline]
-|by|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#by---by[nar:by]
-|bodies|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#newsitem-content[nar:data or nar:inlineXML]
-|bodies@charcount|nar:charcount
-|bodies@wordcount|nar:wordcount
-|bodies@contenttype|nar:contentType
-|descriptions|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#description-description[nar:description]
-|descriptions@contenttype|nar:contentType
-|located|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#located-located[nar:located]
-|genre|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#genre-genre[nar:genre]
-|person|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
-|organisation|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
-|place|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
-|subject|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
-|object|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
-|infosource|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#information-source-infosource[nar:infoSource]
-|trustindicator|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-links[nar:link] with @rel
-|renditions|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#remote-content-remotecontent[nar:remoteContent]
-|renditions@href|nar:remoteContent@ref
-|renditions@contenttype|nar:remoteContent@contenttype
-|renditions@height|nar:remoteContent@height
-|renditions@width|nar:remoteContent@width
-|renditions@format|nar:remoteContent@format
-|renditions@duration|nar:remoteContent@duration
-|associations|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-links[nar:link]
+|ninjs 3.x property name|ninjs 2.x property name|NewsML-G2 equivalent
+|`uri`|`uri`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#identification-and-versioning[nar:newsItem@guid]
+|`type`|`type`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-class-itemclass[nar:itemClass]
+|`title`|title`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-title[nar:itemMeta/title]
+|`altIds`|`altids`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#alternative-identifier-altid[nar:altId]
+|`profile`|`profile`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#profile-profile[nar:profile]
+|`version`|`version`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#identification-and-versioning[nar:newsItem@version]
+|`firstCreated`|`firstcreated`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-first-created---firstcreated[nar:firstCreated]
+|`versionCreated`|`versioncreated`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-version-created---versioncreated[nar:versionCreated]
+|`expires`|`expires`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#expires[nar:expires]
+|`embargoedUntil`|`embargoed`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#date-item-embargo-ends-embargoed[nar:embargoed]
+|`pubStatus`|`pubstatus`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#publish-status-pubstatus[nar:pubStatus]
+|`urgency`|`urgency`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#urgency-urgency[nar:urgency]
+|`edNote`|`ednote`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#editorial-note[nar:edNote]
+|`language`|`language`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#language-language[nar:language]
+|`copyrightHolder`|`copyrightholder`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:copyrightHolder]
+|`copyrightNotice`|`copyrightnotice`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:copyrightnotice]
+|`usageTerms`|`usageterms`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#usage-terms-usageterms[nar:usageTerms]
+|`rightsInfo`|`rightsinfo`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#rights-information[nar:rightsInfo]
+|`headlines`|`headlines`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#headline-headline[nar:headline] with @role
+|`headlines`/`contentType`|`headlines`/`contenttype`|nar:contentType
+|`slugline`|`slugline`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#slugline-slugline[nar:slugline]
+|`by`|`by`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#by---by[nar:by]
+|`bodies`|`bodies`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#newsitem-content[nar:data or nar:inlineXML]
+|`bodies`/`charCount`|`bodies`/`charcount`|nar:charcount
+|`bodies`/`wordCount`|`bodies`/`wordcount`|nar:wordcount
+|`bodies`/`contentType`|`bodies`/`contenttype`|nar:contentType
+|`descriptions`|`descriptions`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#description-description[nar:description]
+|`descriptions`/`contentType`|`descriptions`/`contenttype`|nar:contentType
+|`located`|`located`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#located-located[nar:located]
+|`genre`|`genre`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#genre-genre[nar:genre]
+|`people`|`people`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|`organisations`|`organisations`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|`places`|`places`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|`subjects`|`subjects`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|`objects`|`objects`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#subject-subject[nar:subject]
+|`infoSources`|`infosource`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#information-source-infosource[nar:infoSource]
+|`trustIndicators`|`trustindicators`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-links[nar:link] with @rel
+|`renditions`|`renditions`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#remote-content-remotecontent[nar:remoteContent]
+|`renditions`/`href`|`renditions`/`href`|nar:remoteContent@ref
+|`renditions`/`contentType`|`renditions`/`contenttype`|nar:remoteContent@contenttype
+|`renditions`/`height`|`renditions`/`height`|nar:remoteContent@height
+|`renditions`/`width`|`renditions`/`width`|nar:remoteContent@width
+|`renditions`/`format`|`renditions`/`format`|nar:remoteContent@format
+|`renditions`/`duration`|`renditions`/`duration`|nar:remoteContent@duration
+|`associations`|`associations`|https://www.iptc.org/std/NewsML-G2/2.31/specification/NewsML-G2-2.31-specification.html#item-links[nar:link]
 |===
 
 == ninjs Revision History
@@ -1878,6 +2059,16 @@ https://iptc.org/std/ninjs/ninjs-schema_2.1.json[Version 2.1 of the ninjs schema
 ninjs 2.1 includes the new `contactInfo` type which can be applied to the `people`, `organisations`, `places` and `infosources` properties. ninjs 2.1 also includes the new `symboltype` and `symbol` properties under `symbols`, and new properties `creator`, `relevance` and `confidence` under `subjects`. The `ticker` sub-property under `symbols` is now deprecated.
 
 In addition, some changes to the schema were made to fix a validation bug in previous versions. In order to accommodate these changes, the ninjs 2.1 schema uses the `https://json-schema.org/draft/2020-12/schema` version of JSON Schema.
+
+=== ninjs 3.0
+
+https://iptc.org/std/ninjs/ninjs-schema_3.0.json[Version 3.0 of the ninjs schema] was approved by the IPTC Standards Committee in October 2024 and made available in November 2024.
+
+ninjs 3.0 is a comprehensive update including several major new features:
+* Support for <<Events and Planned Coverage,news events and planned news coverage>>, including expected dates (to be used when exact dates and times are not known), event recurrence information and support for commissioning information on planned coverage
+* Switch to camelCase for all properties, to better align with JSON and GraphQL best practice
+* Additional rendition properties such as `videoCodec`, `frameRate`, `scanType` and `transportProtocol` to better support video content, including live streamed video
+* Removal of deprecated properties such as `ticker` and tidying up of descriptions throughout
 
 == Additional Resources
 
