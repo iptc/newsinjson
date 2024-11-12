@@ -1,0 +1,192 @@
+{
+  "uri" : "http://ninjs.example.com/newsitems/20130709cplx456",
+  "type" : "composite",
+  "profile" : "text-photo",
+  "versioncreated" : "2013-07-09T10:39:00Z",
+  "copyrightnotice" : "Copyright 2013 The News Agency, www.tnag.org - all rights reserved.",
+  "language" : "en",
+  "people" : [
+    {
+      "name" : "Francesco Schettino",
+      "rel" : "about",
+      "uri" : "http://www.wikidata.org/entity/Q4421821"
+    }
+  ],
+  "places" : [
+    {
+      "name" : "Grossetto",
+      "rel" : "mentions"
+    },
+    {
+      "name" : "Tuscany",
+      "rel" : "mentions"
+    },
+    {
+      "name" : "Italy",
+      "rel" : "mentions",
+      "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
+    }
+  ],
+  "organisations" : [
+    {
+      "name" : "Costa Crociere SpA",
+      "rel" : "mentions"
+    }
+  ],
+  "by" : "Paulo Santalucia and Frances d'Emilio",
+  "located" : "Grossetto, Italy",
+  "headlines" : [
+    {
+      "value": "Captain of wrecked cruise ship on trial in Italy"
+    }
+  ],
+  "bodies": [
+    {
+      "role": "text",
+      "contenttype": "text/plain",
+      "value": "GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy. The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio. His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike. Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing."
+    },
+    {
+      "role": "text",
+      "contenttype" : "application/xhtml+xml",
+      "value": "<p>GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.</p> <p>The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.</p> <p>His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.</p> <p>Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,200 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.</p>"
+    }
+  ],
+  "associations" : [
+    {
+      "name": "mainpic",
+      "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
+      "type" : "picture",
+      "versioncreated" : "2013-07-08T08:12:00Z",
+      "copyrightnotice" : "Copyright 2013 The News Agency, www.tna.org - all rights reserved.",
+      "objects" : [
+        {
+          "name" : "Costa Concordia",
+          "rel" : "about",
+          "uri" : "http://www.wikidata.org/entity/Q190542"
+        }
+      ],
+      "places" : [
+        {
+          "name" : "Giglio",
+          "rel" : "mentions"
+        },
+        {
+          "name" : "Tuscany",
+          "rel" : "mentions"
+        },
+        {
+          "name" : "Italy",
+          "rel" : "mentions",
+          "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
+        }
+      ],
+      "organisations" : [
+        {
+          "name" : "Costa Crociere SpA",
+          "rel" : "mentions"
+        }
+      ],
+      "by" : "Paulo Santalucia",
+      "headlines" : [
+        {
+          "value": "Costa Concordia cruise ship"
+        }
+      ],
+      "descriptions": [
+        {
+          "role": "text",
+          "contenttype": "text/plain",
+          "value": "The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy, Monday, July 8, 2013.  The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early."
+        },
+        {
+          "role": "richtext",
+          "contenttype": "application/xhtml+xml",
+          "value": "<p>The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy,</ br> Monday, July 8, 2013. The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early. </p>"
+        }
+      ],
+      "renditions" : [
+        {
+          "name": "main",
+          "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904edbb3a-big.jpg",
+          "contenttype": "image/jpg",
+          "title" : "Mid Resolution",
+          "height" : 281,
+          "width" : 429
+        },
+        {
+          "name": "small",
+          "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904edbb3a-small.jpg",
+          "contenttype": "image/jpg",
+          "title" : "Low Resolution",
+          "height" : 117,
+          "width" : 179
+        }
+      ]
+    },
+    {
+      "name": "portrait",
+      "uri" : "http://ninjs.example.com/newsitems/20130709simpPh456",
+      "type" : "picture",
+      "versioncreated" : "2013-07-09T10:12:00Z",
+      "copyrightnotice" : "Copyright 2013 The News Agency, www.tna.org - all rights reserved.",
+      "people" : [
+        {
+          "name" : "Francesco Schettino",
+          "rel" : "about",
+          "uri" : "http://www.wikidata.org/entity/Q4421821"
+        }
+      ],
+      "places" : [
+        {
+          "name" : "Grossetto",
+          "rel" : "mentions"
+        },
+        {
+          "name" : "Tuscany",
+          "rel" : "mentions"
+        },
+        {
+          "name" : "Italy",
+          "rel" : "mentions",
+          "uri" : "http://cvx.iptc.org/iso3166-1a2/it"
+        }
+      ],
+      "organisations" : [
+        {
+          "name" : "Costa Crociere SpA",
+          "rel" : "mentions"
+        }
+      ],
+      "by" : "Paulo Santalucia",
+      "headlines" : [
+        {
+          "value": "Francesco Schettino at court"
+        }
+      ],
+      "descriptions": [
+        {
+          "value": "Francesco Schettino the captain of the Costa Concordia cruise ship at court in Grossetto, Italy, on 9 July 2013"
+        }
+      ],
+      "renditions" : [
+        {
+          "name": "main",
+          "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904xyz000-big.jpg",
+          "contenttype": "image/jpg",
+          "title" : "Mid Resolution",
+          "height" : 430,
+          "width" : 280
+        },
+        {
+          "name": "small",
+          "href" : "http://hosted.ap.org/photos/2/2643c588-dc8d-4923-bebd-e3b904xyz000-small.jpg",
+          "contenttype": "image/jpg",
+          "title" : "Low Resolution",
+          "height" : 180,
+          "width" : 120
+        }
+      ]
+    }
+  ]
+}
