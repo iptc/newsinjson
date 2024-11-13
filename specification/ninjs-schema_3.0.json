@@ -31,7 +31,7 @@
           "$ref": "#/$defs/truncatedDateTimeType"
         },
         "expectedDuration": {
-          "description": "The time period that the event or coverage is expected to last. (Actual duration can be calculated from startDate and endDate)",
+          "description": "The time period that the event or coverage is expected to last. Must use the iCalendar duration format (RFC 5545). (Actual duration can be calculated from startDate and endDate)",
           "type": "string"
         },
         "recurrence": {

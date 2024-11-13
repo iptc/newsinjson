@@ -1,0 +1,35 @@
+{
+    "standard": {
+        "name": "ninjs",
+        "version": "3.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
+    },
+    "uri": "urn:017-ninjs3.0-expected-duration",
+    "type": "event",
+    "title": "IPTC News in JSON Working Group meetings 2024",
+    "descriptions": [
+        {
+            "role": "note",
+            "value": "Examples based on https://icalendar.org/iCalendar-RFC-5545/3-8-5-3-recurrence-rule.html"
+        }
+    ],
+    "eventDetails": {
+        "dates": {
+            "startDate": "2024-01-08T14:00:00Z",
+            "expectedDuration": "PT1H",
+            "recurrence": {
+                "recurrenceRules": [
+                    {
+                        "frequency": "weekly",
+                        "interval": 2,
+                        "until": "2024-12-09T15:00:00Z"
+                    }
+                ]
+            }
+        },
+        "organiser": {
+            "name": "IPTC",
+            "uri": "https://www.iptc.org/"
+        }
+    }
+}
