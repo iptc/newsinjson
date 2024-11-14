@@ -1,0 +1,77 @@
+{
+    "standard": {
+        "name": "ninjs",
+        "version": "3.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
+    },
+    "uri": "urn:015-ninjs3.0-complex-recurrence",
+    "type": "event",
+    "title": "IPTC Spring Meeting 2024",
+    "descriptions": [
+        {
+            "role": "note",
+            "value": "Examples based on https://icalendar.org/iCalendar-RFC-5545/3-8-5-3-recurrence-rule.html"
+        }
+    ],
+    "eventDetails": {
+        "eventStatus": "http://cv.iptc.org/newscodes/speventstatus/post-event",
+        "dates": {
+            "startDate": "2024-04-15T09:00:00-04:00",
+            "endDate": "2024-04-15T17:00:00-04:00",
+            "recurrence": {
+                "recurrenceRules": [
+                    {
+                        "frequency": "daily",
+                        "count": 3
+                    }
+                ]
+            }
+        },
+        "organiser": {
+            "name": "IPTC",
+            "uri": "https://www.iptc.org/"
+        }
+    },
+    "places": [
+        {
+            "name": "New York Times Conference Center",
+            "contactInfo": [
+                {
+                    "type": "physical",
+                    "address": {
+                        "lines": [
+                            "15th Floor",
+                            "The New York Times",
+                            "620 8th Avenue"
+                        ],
+                        "locality": "New York",
+                        "area": "New York",
+                        "postalCode": "20018",
+                        "country": "United States"
+                    }
+                },
+                {
+                    "type": "online",
+                    "value": "https://nytconferencecenter.com/"
+                }
+            ]
+        },
+        {
+            "name": "The Associated Press",
+            "contactInfo": [
+                {
+                    "type": "physical",
+                    "address": {
+                        "lines": [
+                            "200 Liberty Street"
+                        ],
+                        "locality": "New York",
+                        "area": "New York",
+                        "postalCode": "10281",
+                        "country": "United States"
+                    }
+                }
+            ]
+        }
+    ]
+}

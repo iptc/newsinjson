@@ -1,10 +1,10 @@
 {
-	"$standard": {
-	    "name": "ninjs",
-	    "version": "1.4",
-	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_1.4.json"
-	},
-	"uri": "http://ninjs.example.com/newsitems/ninjs1-4-tests-fail-001",
-	"headline": "Malformed content created 1",
+    "$standard": {
+        "name": "ninjs",
+        "version": "1.4",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_1.4.json"
+    },
+    "uri": "http://ninjs.example.com/newsitems/ninjs1-4-tests-fail-001",
+    "headline": "Malformed content created 1",
     "contentcreated": { "start": "2022-04-21" }
 }

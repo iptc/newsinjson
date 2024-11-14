@@ -1,0 +1,43 @@
+{
+    "standard": {
+        "name": "ninjs",
+        "version": "3.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
+    },
+    "uri": "urn:012-ninjs3.0-recurring-event-test",
+    "type": "event",
+    "title": "Times Square Ball Drop",
+    "eventDetails": {
+        "eventStatus": "https://cv.iptc.org/newscodes/speventstatus/pre-event",
+        "dates": {
+            "startDate": "2023-12-31T23:59:59-04:00",
+            "endDate": "2024-01-01T00:00:00-04:00",
+            "recurrence": {
+                "recurrenceRules": [
+                    {
+                        "frequency": "yearly"
+                    }
+                ]
+            }
+        },
+        "organiser": {
+            "name": "Times Square Alliance Countdown Entertainment",
+            "uri": "https://timessquareball.net/"
+        }
+    },
+    "places": [
+        {
+            "name": "Times Square",
+            "contactInfo": [
+                {
+                    "type": "physical",
+                    "address": {
+                        "locality": "New York",
+                        "area": "New York",
+                        "country": "United States"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,21 +1,21 @@
 {
-	"standard": {
-	    "name": "ninjs",
-	    "version": "2.1",
-	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json"
-	},
-	"uri": "http://ninjs.example.com/newsitems/ninjs1-4-tests-001",
-	"headlines": [
+    "standard": {
+        "name": "ninjs",
+        "version": "2.1",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json"
+    },
+    "uri": "http://ninjs.example.com/newsitems/ninjs1-4-tests-001",
+    "headlines": [
         {
             "role": "main",
             "value": "Test of three new properties"
         },
         {
             "role": "test",
-	        "value": "Extensible headline test"
+            "value": "Extensible headline test"
         }
     ],
-	"descriptions": [
+    "descriptions": [
         {
             "role": "test",
             "value": "Extensible description test"

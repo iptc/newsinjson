@@ -1,0 +1,6 @@
+{
+  "standard": {
+    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
+  },
+  "uri": "https://www.iptc.org/003-schema-only"
+}

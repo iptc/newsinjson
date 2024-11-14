@@ -1,0 +1,26 @@
+{
+    "standard": {
+        "name": "ninjs",
+        "version": "3.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
+    },
+    "uri": "urn:018-ninjs3.0-expected-duration-2",
+    "type": "event",
+    "title": "Australia vs England Ashes cricket: First Test",
+    "descriptions": [
+        {
+            "role": "note",
+            "value": "Test cricket matches may take up to 5 days but the 5th day may not be played, based on previous results. So we mark this with an expected start date and expected duration. Alternatively this could be marked with expected start and end dates."
+        }
+    ],
+    "eventDetails": {
+        "dates": {
+            "expectedStartDate": "2024-11-21",
+            "expectedDuration": "P5D"
+        },
+        "organiser": {
+            "name": "ICC",
+            "uri": "https://www.icc-cricket.com/"
+        }
+    }
+}

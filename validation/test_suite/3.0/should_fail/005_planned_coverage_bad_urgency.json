@@ -1,0 +1,82 @@
+{
+    "standard": {
+        "name": "ninjs",
+        "version": "2.2",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_2.2.json"
+    },
+    "uri": "urn:005-ninjs2.2-planned-coverage-test",
+    "type": "planning",
+    "plannedCoverage": [
+        {
+            "uri": "planning-times-square-001-text",
+            "title": "Text article covering the ball drop",
+            "plannedCoverageStatus": "http://cv.iptc.org/newscodes/newscoveragestatus/int",
+            "type": "text",
+            "event": "urn:004-ninjs2.2-recurring-event-test",
+            "itemCount": { "rangeFrom": 1, "rangeTo": 1 },
+
+            "services": [
+                "all-items-feed",
+                "all-text-items-feed",
+                "text-highlights-feed"
+            ],
+            "urgency": 11,
+            "wordCount": 300,
+            "language": "en-US",
+            "audiences": [
+                {
+                    "audience": "45-60",
+                    "significance": 8
+                }
+            ]
+        },
+        {
+            "uri": "planning-times-square-001-video",
+            "type": "video",
+            "event": "urn:004-ninjs2.2-recurring-event-test",
+            "itemCount": { "rangeFrom": 1, "rangeTo": 1 },
+                        "services": [
+                "all-items-feed",
+                "all-video-items-feed",
+                "video-highlights-feed"
+            ],
+            "audiences": [
+                {
+                    "audience": "18-25",
+                    "significance": 8
+                }
+            ]
+        },
+        {
+            "uri": "planning-times-square-001-all-photos",
+            "type": "picture",
+            "event": "times-square-event-001",
+            "itemCount": { "rangeFrom": 5, "rangeTo": 15 },
+                        "services": [
+                "all-items-feed",
+                "all-photo-items-feed"
+            ],
+            "audiences": [
+                {
+                    "audience": "casual",
+                    "significance": 7
+                }
+            ]
+        },
+        {
+            "uri": "planning-times-square-001-top-photos",
+            "type": "picture",
+            "event": "times-square-event-001",
+            "itemCount": { "rangeFrom": 1, "rangeTo": 3 },
+                        "services": [
+                "photo-highlights-feed"
+            ],
+            "audiences": [
+                {
+                    "audience": "casual",
+                    "significance": 8
+                }
+            ]
+        }
+    ]
+}

@@ -1,21 +1,21 @@
 {
-	"uri": "http://test.tt.se/12345678",
+    "uri": "http://test.tt.se/12345678",
     "title": "a rightsinfo block should not contain both linkedrights and encodedrights",
-	"rightsinfo": {
-		"langid": "http://w3.org/ns/odrl/2/",
-		"linkedrights": "http://tt.se/rights",
-		"encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.com/policy:3433\",\"conflict\":\"perm\",\"prohibitions\":[{\"target\":\"http://example.com/image:1234908\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.com/cv/party/pamediagroup\",\"assignee\":\"http://example.com/cv/partygroup/pamediagrouppartners\"}]}"
-	},
-	"associations": [
-		{
-			"name": "Example association with rights",
-			"uri": "http://test.tt.se/associations/association01",
+    "rightsinfo": {
+        "langid": "http://w3.org/ns/odrl/2/",
+        "linkedrights": "http://tt.se/rights",
+        "encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.com/policy:3433\",\"conflict\":\"perm\",\"prohibitions\":[{\"target\":\"http://example.com/image:1234908\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.com/cv/party/pamediagroup\",\"assignee\":\"http://example.com/cv/partygroup/pamediagrouppartners\"}]}"
+    },
+    "associations": [
+        {
+            "name": "Example association with rights",
+            "uri": "http://test.tt.se/associations/association01",
             "title": "a rightsinfo block should not contain both linkedrights and encodedrights",
-			"rightsinfo": {
-				"langid": "http://w3.org/ns/odrl/2/",
-		        "linkedrights": "http://tt.se/rights",
-				"encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.com/policy:3433\",\"conflict\":\"perm\",\"prohibitions\":[{\"target\":\"http://example.com/image:1234908\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.com/cv/party/pamediagroup\",\"assignee\":\"http://example.com/cv/partygroup/pamediagrouppartners\"}]}"
-			}
-		}
-	]
+            "rightsinfo": {
+                "langid": "http://w3.org/ns/odrl/2/",
+                "linkedrights": "http://tt.se/rights",
+                "encodedrights": "{\"policytype\":\"http://www.w3.org/ns/odrl/2/Agreement\",\"policyid\":\"http://example.com/policy:3433\",\"conflict\":\"perm\",\"prohibitions\":[{\"target\":\"http://example.com/image:1234908\",\"action\":\"http://www.w3.org/ns/odrl/2/commercialize\",\"assigner\":\"http://example.com/cv/party/pamediagroup\",\"assignee\":\"http://example.com/cv/partygroup/pamediagrouppartners\"}]}"
+            }
+        }
+    ]
 }

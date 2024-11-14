@@ -1,0 +1,59 @@
+{
+    "standard": {
+        "name": "ninjs",
+        "version": "3.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
+    },
+    "uri": "urn:newsml:addb.no:20140226:0065-ninjs3.0-addb--event-test",
+    "type": "event",
+    "genres": [
+        {
+            "literal": "CGS",
+            "name": "Congress"
+        }
+    ],
+    "title": "4th International Congress \\\"Sport, Doping & Society\\\"",
+    "version": "2",
+    "versionCreated": "2023-10-05T08:45:55+02:00",
+    "pubStatus": "usable",
+    "urgency": 4,
+    "language": "en",
+    "descriptions": [
+        {
+            "role": "text",
+            "contentType": "text/plain",
+            "value": "4th International Congress \\\"Sport, Doping & Society\\\"\r\nCongreso en Universidad Polit\u00e9cnica de Madrid\r\nWe would like to invite you to participate in the 4th International Congress \\'Sport, Doping & Society\\' that will be held in Madrid, Spain on February 26 \u2013 March 1, 2014. This Congress is organized by the Technical University of Madrid (UPM) and the Spanish Agency for Health Protection in Sport (AEPSAD). Under the theme \u201cLooking to the future\u201d, it will be presented the results of scientific researches and new methodologies in the field of doping in sport from the specific perspective of Social and Human Sciences: history, law, psychology, sociology, philosophy, media, education, economy and others subjects and other specific areas.\r\n\r\nWe encourage scientists to submit an abstract in any of the three official languages of the Congress: English, Spanish or French (no simultaneous translation is provided except for the plenary sessions). Deadline for abstract submission and Young Researchers Award-application (addressed for young scientist up to the age of 35) is November 30, 2013. All accepted abstracts will be published in the scientific journal \\\"Materiales para la Historia del Deporte\\\" (ISSN: 1887-9586)."
+        }
+    ],
+    "eventDetails": {
+        "dates": {
+            "expectedStartDate": "2014-02-26",
+            "expectedEndDate": "2014-03-01"
+        },
+        "organiser": {"name": "Spanish Agency for the Protection of Health in Sport"}
+    },
+    "places": [
+        {
+            "name": "Technical University of Madrid",
+            "contactInfo": [
+                {
+                    "address": {
+                        "locality": "Madrid",
+                        "country": "Spain"
+                    }
+                },
+                {
+                    "type": "url",
+                    "value": "http://www.deportedopajesociedad.com/modules.php?name=webstructure&lang=EN&idwebstructure=6"
+                }
+            ]
+        }
+    ],
+    "organisations": [
+        {
+            "name": "Spanish Agency for the Protection of Health in Sport",
+            "literal": "AEPSAD",
+            "uri": "https://www.aepsad.gob.es"
+        }
+    ]
+}

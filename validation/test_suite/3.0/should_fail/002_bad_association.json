@@ -1,0 +1,26 @@
+{
+  "uri": "http://ninjs.example.com/064_associations_multiple",
+  "version": "1",
+  "versioncreated": "2013-05-16T04:01:00Z",
+  "headlines": [
+    {
+      "role": "main",
+      "value": "Dell Redefines Workstation Computing Boundaries with Smallest Tower and Most Powerful Rack Workstations"
+    }
+  ],
+  "bodies": [
+    {
+      "role": "main",
+      "contenttype": "text/html",
+      "value": "..."
+    }
+  ],
+  "associations": [
+    {
+      "uri":"http://mms.businesswire.com/media/newsItemId/en/221373/3/dell_blue_rgb.jpg",
+      "i_can_put_anything": "here and it doesn't complain",
+      "type":"graphic",
+      "versioncreated": "2013-05-16T04:01:00Z"
+    }
+  ]
+}

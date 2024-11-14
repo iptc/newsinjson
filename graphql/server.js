@@ -11,19 +11,19 @@ var schema = buildSchema(`
     type NINJS {
         uri: String!
         type: String
-        representationtype: String
+        representationType: String
         profile: String
         version: String
-        firstcreated: String
-        versioncreated: String
-        contentcreated: String
-        embargoed: String
-        pubstatus: String
+        firstCreated: String
+        versionCreated: String
+        contentCreated: String
+        embargoedUntil: String
+        pubStatus: String
         urgency: Int
-        copyrightholder: String
-        copyrightnotice: String
-        usageterms: String
-        ednote: String
+        copyrightHolder: String
+        copyrightNotice: String
+        usageTerms: String
+        edNote: String
         language: String
         descriptions: [DescriptionType]
         bodies: [BodyType]
@@ -33,23 +33,26 @@ var schema = buildSchema(`
         places: [PlaceType]
         subjects: [SubjectType]
         events: [EventType]
+        eventDetails: EventDetailType
+        plannedCoverage: [PlannedCoverageType]
         objects: [ObjectType]
-        infosources: [InfosourceType]
+        infoSources: [InfosourceType]
         title: String
         by: String
         slugline: String
         located: String
         renditions: [RenditionType]
-        altids: [AltIDType]
-        trustindicators: [TrustindicatorType]
+        altIds: [AltIDType]
+        trustIndicators: [TrustindicatorType]
         genres: [GenreType]
-        rightsinfo: RightsType
+        expires: String
+        rightsInfo: RightsType
       }
 
       type RightsType {
-        langid: String
-        linkedrights: String
-        encodedrights: String
+        langId: String
+        linkedRights: String
+        encodedRights: String
       }
 
       type AltIDType {
@@ -60,32 +63,93 @@ var schema = buildSchema(`
       type RenditionType {
         name: String!
         href: String
-        contenttype: String
+        contentType: String
         title: String
         height: Float
         width: Float
-        sizeinbytes: Float
+        sizeInBytes: Float
         duration: Float
         format: String
+        aspectRatio: String
+        videoCodec: String
+        frameRate: Float
+        poi: PoiType
+        transportProtocol: String
+        scanType: String
+        bitrate: String
+      }
+      
+      type PoiType {
+          x: Int
+          y: Int
       }
 
       type HeadlineType {
         role: String
-        contenttype: String
+        contentType: String
         value: String!
+      }
+      
+      type DateObjectType {
+          startDate: String
+          endDate: String
+          expectedStartDate: String
+          expectedEndDate: String
+          expectedDuration: String
+          recurrence: RecurrenceType
+      }
+      
+      type RecurrenceType {
+          recurrenceDates: [String]
+          recurrenceRules: [recurrenceRuleType]
+      } 
+      
+      type recurrenceRuleType {
+          frequency: String
+          interval: String
+          until: String
+          count: String
+      }
+      
+      type ContactInfoType {
+          type: String
+          role: String
+          lang: String
+          name: String
+          value: String
+          address: AddressType
+      }
+      
+      type AddressType {
+          lines: [String]
+          locality: String
+          area: String
+          postalCode: String
+          country: String
+      }
+      
+      type CommissionedType {
+          by: String
+          on: String
+          references: [ReferenceType]
+      }
+      
+      type ReferenceType {
+          name: String
+          value: String
       }
 
       type BodyType {
         role: String
-        contenttype: String
-        charcount: Int
-        wordcount: Int
+        contentType: String
+        charCount: Int
+        wordCount: Int
         value: String!
       }
 
       type DescriptionType {
         role: String
-        contenttype: String
+        contentType: String
         value: String!
       }
     
@@ -94,6 +158,7 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
+        contactInfo: [ContactInfoType]
       }
 
       type OrganisationType {
@@ -102,11 +167,14 @@ var schema = buildSchema(`
         rel: String
         uri: String
         symbols: [OrgSymbolsType]
+        contactInfo: [ContactInfoType]
       }
 
       type OrgSymbolsType {
         ticker: String
         exchange: String
+        symbolType: String
+        symbol: String
       }
 
       type PlaceType {
@@ -114,7 +182,8 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
-        geometry_geojson: GeoType
+        contactInfo: [ContactInfoType]
+        geoJSON: GeoType
       }
 
       type GeoType {
@@ -127,13 +196,50 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
+        creator: String
+        relevance: Int
+        confidence: Int
       }
     
       type EventType {
+        id: String
         literal: String
         name: String
         rel: String
         uri: String
+      }
+      
+      type EventDetailType {
+          eventStatus: String
+          plannedCoverageStatus: String
+          dates: DateObjectType
+          organiser: OrganisationType
+      }
+      
+      type PlannedCoverageType {
+          uri: String
+          title: String
+          pubStatus: String
+          type: String
+          comissioned: CommissionedType
+          audiences: [AudienceType]
+          exclAudience: [String]
+          edNote: String
+          urgency: Int
+          language: String
+          itemCount: ItemCountType
+          wordCount: Int
+          renditions: [RenditionType]
+      }
+      
+      type ItemCountType {
+          rangeFrom: Int
+          rangeTo: Int
+      }
+      
+      type AudienceType {
+          audience: String
+          significance: Int
       }
     
       type ObjectType {
@@ -148,8 +254,9 @@ var schema = buildSchema(`
         name: String
         rel: String
         uri: String
+        contactInfo: [ContactInfoType]
       }
-
+      
       type TrustindicatorType {
         role: String
         title: String
@@ -164,13 +271,14 @@ var schema = buildSchema(`
     
 
       type Query {
-        ninjs(uri: String, 
+        ninjs(uri: String,
+            type: String,
             urgency: Int, 
-            pubstatus: String,
+            pubStatus: String,
             language: String,
             startAfter: String,
             startBefore: String,
-            copyrightholder: String,
+            copyrightHolder: String,
             topicid: String,
             filter: String): [NINJS]
     }
@@ -183,17 +291,20 @@ var getItems = function(args) {
     if (args.uri) {
         svaret = svaret.filter(item => item.uri === args.uri);
     } else { 
+        if (args.type) {
+            svaret = svaret.filter(item => item.type === args.type);
+        } 
         if (args.urgency) {
             svaret = svaret.filter(item => item.urgency === args.urgency);
         } 
-        if (args.pubstatus) {
-            svaret = svaret.filter(item => item.pubstatus === args.pubstatus);
+        if (args.pubStatus) {
+            svaret = svaret.filter(item => item.pubStatus === args.pubStatus);
         } 
         if (args.language) {
             svaret = svaret.filter(item => item.language === args.language);
         } 
-        if (args.copyrightholder) {
-            svaret = svaret.filter(item => item.copyrightholder === args.copyrightholder);
+        if (args.copyrightHolder) {
+            svaret = svaret.filter(item => item.copyrightHolder === args.copyrightHolder);
         } 
         if (args.startAfter) {
             svaret = svaret.filter(item => item.versioncreated >= args.startAfter);
