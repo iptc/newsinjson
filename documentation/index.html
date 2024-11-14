@@ -547,7 +547,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <span id="author" class="author">IPTC News in JSON Working Group</span><br>
 <span id="email" class="email"><a href="mailto:office@iptc.org">office@iptc.org</a></span><br>
 <span id="revnumber">covers version 3.0, 2.1 and 1.5</span>
-<br><span id="revremark">Revised 2024-11-07</span>
+<br><span id="revremark">Revised 2024-11-26</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">ninjs User Guide</div>
@@ -686,8 +686,7 @@ determined by a given provider.</p>
 </li>
 <li>
 <p>ninjs allows the provider to indicate whether there are more properties
-available, if the recipient would like to request more, using the
-<code>representationtype: "partial"</code> construct.</p>
+available using the <code>representationtype: "partial"</code> construct.</p>
 </li>
 <li>
 <p>Version 3.x of ninjs has been created to work well with both GraphQL and
@@ -729,19 +728,21 @@ suitable for use in JSON-native engines, such as
 <div class="sect2">
 <h3 id="_the_ninjs_data_model_in_a_nutshell"><a class="anchor" href="#_the_ninjs_data_model_in_a_nutshell"></a>1.2. The ninjs data model in a nutshell</h3>
 <div class="paragraph">
-<p>As the below diagram shows, every ninjs object describes a <strong>News Item</strong>. All
+<p>As the below diagram shows, every ninjs object describes an <strong>Item</strong> - either a
+<strong>News Item</strong>, <strong>Planning Item</strong> or <strong>Event</strong>. All
 ninjs items must have a unique ID given by a <strong>URI</strong>. They can have administrative
-metadata, describing who created the news item and when, descriptive metadata
-describing <strong>people</strong>, <strong>places</strong>, <strong>genres</strong>, <strong>subjects</strong>, <strong>organisations</strong> and
-<strong>events</strong> related to the news item.</p>
+metadata (describing who created the news item and when), descriptive metadata
+(describing <strong>people</strong>, <strong>places</strong>, <strong>genres</strong>, <strong>subjects</strong>, <strong>organisations</strong> and
+<strong>events</strong> related to the item) and rights-based metadata (<strong>copyright</strong>, <strong>licensing</strong>
+and <strong>usage terms</strong>).</p>
 </div>
 <div class="paragraph">
-<p>The content itself can be a <strong>body</strong>, containing text, HTML or other
+<p>The content of the item can be a <strong>body</strong>, containing text, HTML or other
 representation of the text of a news item, <strong>renditions</strong> of the news item as
 images, videos or multimedia, or both body and renditions.</p>
 </div>
 <div class="paragraph">
-<p><strong>Associations</strong> are a means of linking news items together.</p>
+<p><strong>Associations</strong> are a means of linking ninjs items together.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./images/ninjsScope-w800.jpg" alt="ninjs Data Model diagram"></span></p>
@@ -839,7 +840,8 @@ by an API call.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>You can make your own simple ninjs document using the
+<p>You can make your own ninjs documents for demonstration or testing purposes
+using the
 <a href="https://www.iptc.org/std/ninjs/generator/">ninjs generator tool on iptc.org</a>.</p>
 </div>
 </div>
@@ -1203,7 +1205,14 @@ United Kingdom</pre>
 <p>Here we document each property that can be used in a ninjs object.</p>
 </div>
 <div class="paragraph">
-<p>The "uri" property is <strong>required</strong> at the top level. In some array objects, other properties may be required.</p>
+<p>The "uri" property is <strong>required</strong> at the top level. In some array objects, other
+properties may be required; for example, if <code>rightsInfo</code> is used, then either
+<code>linkedRights</code> or <code>encodedRights</code> is required.</p>
+</div>
+<div class="paragraph">
+<p>These tables primarily describe the ninjs 3.0 schema. Where possible, we note
+differences in the 1.x and 2.x schemas, but the ultimate reference for each
+version of ninjs is the relevant JSON Schema file.</p>
 </div>
 <div class="sect2">
 <h3 id="_administrative_properties"><a class="anchor" href="#_administrative_properties"></a>3.1. Administrative properties</h3>
@@ -1254,7 +1263,9 @@ property</th>
 <code>composite</code><br>
 <code>component</code><br>
 <code>event</code><br>
-<code>planning</code></p>
+(3.0 only)<br>
+<code>planning</code><br>
+(3.0 only)</p>
 <p class="tableblock"><a id="title"></a></p></td>
 </tr>
 <tr>
@@ -1300,7 +1311,7 @@ This property is an object with the following child properties:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>schema</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the JSON schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_2.1.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_2.1.json</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the JSON schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_3.0.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_3.0.json</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
@@ -1315,7 +1326,7 @@ This property is an object with the following child properties:</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Alternative identifiers for the item. It is up to the individual provider to
 name and set type on the alternative identifiers they like to use.<br>
-This property is an object with the following child properties:<br></p>
+In ninjs 2.x and 3.x, this property is an object with the following child properties:<br></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1343,7 +1354,8 @@ This property is an object with the following child properties:<br></p>
 </tr>
 </tbody>
 </table></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">array of objects</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array of objects (2.x, 3.x)<br>
+JSON object (1.x)</p>
 <p class="tableblock"><a id="representationType"></a></p></td>
 </tr>
 <tr>
@@ -1353,7 +1365,7 @@ This property is an object with the following child properties:<br></p>
 <p>Indicates the completeness of this representation of a news item.<br>
 For a full document representation, the value should be <code>full</code>.<br>
 For a partial representation, for example a short extract provided as the results of an API call, the value <code>partial</code> should be used.<br>
-NOTE: in ninjs 1.x, the allowed values are "complete" and "incomplete".</p>
+NOTE: in ninjs 1.x, the allowed values are <code>complete</code> and <code>incomplete</code>.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">One of:<br>
 <code>full</code><br>
@@ -2897,7 +2909,7 @@ This section applies to dates in events and news coverage planning items in ninj
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>expectedDuration</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The time period that the event or coverage is expected to last. (Actual duration can be calculated from startDate and endDate)</p>
+<p>The time period that the event or coverage is expected to last. Must use the <a href="https://www.rfc-editor.org/rfc/rfc5545#section-3.3.6">iCalendar duration format (RFC 5545)</a>. (Actual duration can be calculated from startDate and endDate)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
@@ -4791,7 +4803,8 @@ ninjs documents, can be found in the
 <h3 id="_online_ninjs_generator_tool"><a class="anchor" href="#_online_ninjs_generator_tool"></a>7.3. Online "ninjs generator" tool</h3>
 <div class="paragraph">
 <p>The IPTC has created a simple form-based tool that can be used to generate
-sample ninjs documents. It supports both ninjs 1.5 and ninjs 2.1.</p>
+sample ninjs documents. It supports ninjs versions 1.5, 2.1 and 3.0, so it
+is also a handy way to see the differences between each schema version.</p>
 </div>
 <div class="paragraph">
 <p>The tool can be accessed at <a href="https://iptc.org/std/ninjs/generator/" class="bare">https://iptc.org/std/ninjs/generator/</a>.</p>
@@ -4801,7 +4814,9 @@ sample ninjs documents. It supports both ninjs 1.5 and ninjs 2.1.</p>
 <h3 id="_typescript_type_definition"><a class="anchor" href="#_typescript_type_definition"></a>7.4. TypeScript type definition</h3>
 <div class="paragraph">
 <p>Ian Young of PA Media Group has created a
-<a href="https://www.npmjs.com/package/@pa-media-group/iptc-ninjs-2-type">TypeScript type for ninjs 2</a> that can be used to ease development with ninjs in TypeScript.</p>
+<a href="https://www.npmjs.com/package/@pa-media-group/iptc-ninjs-2-type">TypeScript type for ninjs 2</a>
+that can be used to ease development with ninjs in TypeScript. We plan to
+release a type for ninjs 3.0 soon.</p>
 </div>
 </div>
 </div>
