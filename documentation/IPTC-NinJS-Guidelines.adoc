@@ -1197,7 +1197,7 @@ The main new object to cover such events is the eventDetails object, which conta
 
 |`eventStatus`
 |Status of the event (as opposed to the status of coverage of the event). +
-Suggested CV: http://cv.iptc.org/newscodes/eventoccurstatus/ (which contains values such as "Planned, occurrence highly uncertain" and "Planned, then cancelled")
+Suggested CV: http://cv.iptc.org/newscodes/eventstatus/ (which contains values such as "scheduled" and "canceled")
 |uri
 
 |`plannedCoverageStatus`
