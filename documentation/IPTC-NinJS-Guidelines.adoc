@@ -1919,7 +1919,7 @@ maintains schemas for each version of the ninjs standard. These schemas can be
 used to validate ninjs documents. 
 
 The latest IPTC ninjs schema is available for download at
-https://iptc.org/std/ninjs/ninjs-schema_2.1.json
+https://iptc.org/std/ninjs/ninjs-schema_3.0.json
 
 === Sample Code
 
