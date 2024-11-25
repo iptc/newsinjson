@@ -787,7 +787,7 @@
           "properties": {
             "eventStatus": {
               "type": "string",
-              "description": "Status of the event (as opposed to the status of coverage of the event). Suggested CV: http://cv.iptc.org/newscodes/eventoccurstatus/",
+              "description": "Status of the event (as opposed to the status of coverage of the event). Suggested CV: http://cv.iptc.org/newscodes/eventstatus/",
               "format": "uri"
             },
             "plannedCoverageStatus": {
