@@ -8,7 +8,7 @@
     "type": "planning",
     "plannedCoverage": [
         {
-            "uri": "planning-times-square-001-text",
+            "uri": "urn:planning-times-square-001-text",
             "title": "Text article covering the ball drop",
             "type": "text",
             "itemCount": { "rangeFrom": 1, "rangeTo": 1 },
@@ -22,7 +22,7 @@
             ]
         },
         {
-            "uri": "planning-times-square-001-video",
+            "uri": "urn:planning-times-square-001-video",
             "type": "video",
             "itemCount": { "rangeFrom": 1, "rangeTo": 1 },
             "audiences": [
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "uri": "planning-times-square-001-all-photos",
+            "uri": "urn:planning-times-square-001-all-photos",
             "type": "picture",
             "itemCount": { "rangeFrom": 5, "rangeTo": 15 },
             "audiences": [
@@ -44,7 +44,7 @@
             ]
         },
         {
-            "uri": "planning-times-square-001-top-photos",
+            "uri": "urn:planning-times-square-001-top-photos",
             "type": "picture",
             "itemCount": { "rangeFrom": 1, "rangeTo": 3 },
             "audiences": [

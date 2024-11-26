@@ -8,7 +8,7 @@
   "type": "planning",
   "plannedCoverage": [
     {
-      "uri": "planning-times-square-001-text",
+      "uri": "urn:planning-times-square-001-text",
       "title": "Text article covering the ball drop",
       "type": "text",
       "itemCount": {
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "uri": "planning-times-square-001-all-photos",
+      "uri": "urn:planning-times-square-001-all-photos",
       "type": "picture",
       "itemCount": {
         "rangeFrom": 5,
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "uri": "planning-times-square-001-top-photos",
+      "uri": "urn:planning-times-square-001-top-photos",
       "type": "picture",
       "itemCount": {
         "rangeFrom": 1,
