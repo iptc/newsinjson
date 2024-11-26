@@ -49,10 +49,10 @@ properties were integrated into the "places" object.
 
 The 3.x series is a major update to ninjs, which is not backwards compatible.
 
-Version 3.0 offers three document types, the existing "newsItem" and a new 
-document types event and planning. For improved readability and for aligning 
-with general best practise for variable naming and graphQL the properties now
-use camel case.
+Version 3.0 offers three document types, the existing "news item" and new 
+document types for events and planning items. For improved readability and
+to align with general best practice for variable naming and graphQL the
+properties now use "camelCase".
 
 The 3.0 version of ninjs was approved by the IPTC Standards Committee on
 October 2nd, 2024.
@@ -77,6 +77,8 @@ We also show how a code library can be automatically generated from
 the protobufs schema and we include an example Python script showing
 how a ninjs Protobufs document can be written and read via code.
 
+Please note that this has not yet been updated for ninjs 3.0.
+
 See [the protobufs README](/protobufs/README.md) for details.
 
 Unit tests
@@ -93,7 +95,7 @@ We automatically run unit tests on every commit using CircleCI. The
 badge above the title on this page indicates the current status of the
 unit tests.
 
-Additionaly the same unit test suite can be run via Javascript with the following: -
+Additionaly the same unit test suite can be run via Javascript with the following:
 
     npm install
     npm test
@@ -114,5 +116,6 @@ ninjs Generator
 ---------------
 
 In the `generator` folder is the source code to the ninjs generator, a
-user-facing tool to generate sample ninjs files of either 1.5 or 2.1 version,  which is hosted at
-https://www.iptc.org/std/ninjs/generator/. 
+user-facing tool to generate sample ninjs files in either ninjs 1.5, 2.1 or 3.0.
+
+The tool is hosted at https://www.iptc.org/std/ninjs/generator/
