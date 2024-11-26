@@ -1,0 +1,31 @@
+{
+    "standard": {
+        "name": "ninjs",
+        "version": "3.0",
+        "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json"
+    },
+    "uri": "http://ninjs.example.com/newsitems/ninjs3-0-tests",
+    "headlines": [
+        {
+            "role": "main",
+            "value": "Test of ninjs 3.0 properties"
+        },
+        {
+            "role": "extension",
+            "value": "Extensible headline test"
+        }
+    ],
+    "descriptions": [
+        {
+            "role": "caption",
+            "value": "Extensible description test"
+        }
+    ],
+    "trustIndicators": [
+     {
+        "role" : "http://cv.iptc.org/newscodes/trustindicator/editorialPolicy",
+        "title" : "The BBC's Editorial Standards",
+        "href": "https://www.bbc.com/editorialguidelines/guidelines/editorial-standards"
+     }
+   ]
+}

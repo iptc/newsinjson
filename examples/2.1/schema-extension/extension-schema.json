@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.example.com/ninjs-extension#",
+  "type": "object",
+  "title": "Example extension of ninjs",
+  "description": "All properties from IPTC ninjs 2.1 are valid, plus some extra properties that we define here.",
+  "allOf": [
+    { "$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json#/$defs/ninjsType" }
+  ],
+  "properties": {
+    "foo": {
+        "type": "string"
+    }
+  }
+}
