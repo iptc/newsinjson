@@ -480,7 +480,9 @@
         "urgency": {
           "title": "Urgency",
           "description": "The editorial urgency of the content. Values from 1 to 9. 1 represents the highest urgency, 9 the lowest.",
-          "type": "number"
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9
         },
         "copyrightHolder": {
           "title": "Copyright holder",
@@ -880,7 +882,7 @@
               },
               "urgency": {
                 "description": "The editorial urgency of the planned content, as scoped by the parent element.",
-                "type": "number",
+                "type": "integer",
                 "minimum": 1,
                 "maximum": 9
               },
