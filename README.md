@@ -42,20 +42,20 @@ meant breaking backwards-compatibility with the 1.x versions of ninjs.
 This is why we increased the major version number to 2.0.
 
 The 2.0 version of ninjs was approved by the IPTC Standards Committee on
-October 20th, 2021.
-
-An errata update was made in May 2022 to fix a problem with the way GeoJSON
-properties were integrated into the "places" object.
+October 20th, 2021. An erratum update was made in May 2022 to fix a
+problem with the way GeoJSON properties were integrated into the "places"
+object. Version 2.1 was approved in May 2023.
 
 The 3.x series is a major update to ninjs, which is not backwards compatible.
 
-Version 3.0 offers three document types, the existing "news item" and new 
+Version 3.0 offers three document types: the existing "news item" and new 
 document types for events and planning items. For improved readability and
 to align with general best practice for variable naming and graphQL the
 properties now use "camelCase".
 
 The 3.0 version of ninjs was approved by the IPTC Standards Committee on
-October 2nd, 2024.
+October 2nd, 2024. An erratum update (version 3.0.1) was made in February
+2025 to correct the datatype of the "urgency" property.
 
 Which version should I choose for my project?
 -------------------------
