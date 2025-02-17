@@ -88,28 +88,20 @@
         {
           "oneOf": [
             {
-              "required": [
-                "startDate"
-              ]
+              "required": ["startDate"]
             },
             {
-              "required": [
-                "expectedStartDate"
-              ]
+              "required": ["expectedStartDate"]
             }
           ]
         },
         {
           "oneOf": [
             {
-              "required": [
-                "endDate"
-              ]
+              "required": ["endDate"]
             },
             {
-              "required": [
-                "expectedEndDate"
-              ]
+              "required": ["expectedEndDate"]
             }
           ]
         }
@@ -173,14 +165,10 @@
       },
       "oneOf": [
         {
-          "required": [
-            "value"
-          ]
+          "required": ["value"]
         },
         {
-          "required": [
-            "address"
-          ]
+          "required": ["address"]
         }
       ]
     },
@@ -291,9 +279,7 @@
       "type": "object",
       "additionalProperties": false,
       "description": "A specific rendition of the content of the news object.",
-      "required": [
-        "name"
-      ],
+      "required": ["name"],
       "properties": {
         "name": {
           "title": "Name",
@@ -383,10 +369,7 @@
           "title": "Scan type (video profile)",
           "description": "The scan type of the video i.e. progressive or interlaced.",
           "type": "string",
-          "enum": [
-            "progressive",
-            "interlaced"
-          ]
+          "enum": ["progressive", "interlaced"]
         },
         "bitrate": {
           "title": "Bitrate",
@@ -428,10 +411,7 @@
           "title": "Representation type",
           "description": "Indicates how complete this representation of a news item is.",
           "type": "string",
-          "enum": [
-            "full",
-            "partial"
-          ]
+          "enum": ["full", "partial"]
         },
         "profile": {
           "title": "Profile",
@@ -471,11 +451,7 @@
           "title": "Publication status",
           "description": "The publishing status of the news object. Default value is 'usable'.",
           "type": "string",
-          "enum": [
-            "usable",
-            "withheld",
-            "canceled"
-          ]
+          "enum": ["usable", "withheld", "canceled"]
         },
         "urgency": {
           "title": "Urgency",
@@ -515,9 +491,7 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "value"
-            ],
+            "required": ["value"],
             "additionalProperties": false,
             "properties": {
               "role": {
@@ -544,9 +518,7 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "value"
-            ],
+            "required": ["value"],
             "additionalProperties": false,
             "properties": {
               "role": {
@@ -583,9 +555,7 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "value"
-            ],
+            "required": ["value"],
             "additionalProperties": false,
             "properties": {
               "role": {
@@ -830,11 +800,7 @@
                 "title": "Publication status",
                 "description": "The publishing status of the plannedCoverage object. Default value is 'usable'.",
                 "type": "string",
-                "enum": [
-                  "usable",
-                  "withheld",
-                  "canceled"
-                ]
+                "enum": ["usable", "withheld", "canceled"]
               },
               "type": {
                 "type": "string",
@@ -1036,10 +1002,7 @@
                 "type": "string"
               }
             },
-            "required": [
-              "name",
-              "uri"
-            ],
+            "required": ["name", "uri"],
             "unevaluatedProperties": false
           }
         },
@@ -1142,6 +1105,29 @@
             }
           }
         },
+        "digitalSourceType": {
+          "title": "Digital Source Type",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "Name",
+              "description": "The name of the digital source type.",
+              "type": "string"
+            },
+            "uri": {
+              "title": "URI",
+              "description": "The identifier of the digital source type as a complete URI. Suggested CV: http://cv.iptc.org/newscodes/digitalsourcetype/",
+              "type": "string",
+              "format": "uri"
+            },
+            "literal": {
+              "title": "Literal",
+              "description": "An identifier for the digital source type as a free-text string.",
+              "type": "string"
+            }
+          }
+        },
         "expires": {
           "title": "Expires",
           "description": "The date and time after which the Item is no longer considered editorially relevant by its provider.",
@@ -1174,14 +1160,10 @@
           },
           "oneOf": [
             {
-              "required": [
-                "linkedRights"
-              ]
+              "required": ["linkedRights"]
             },
             {
-              "required": [
-                "encodedRights"
-              ]
+              "required": ["encodedRights"]
             }
           ]
         }
@@ -1190,8 +1172,6 @@
     "unevaluatedProperties": false
   },
   "$ref": "#/$defs/ninjsType",
-  "required": [
-    "uri"
-  ],
+  "required": ["uri"],
   "unevaluatedProperties": false
 }
