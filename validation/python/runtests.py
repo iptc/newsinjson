@@ -44,7 +44,7 @@ DOCUMENTATION_EXAMPLES_FOLDER_2_x = os.path.join(
     '..', '..', 'documentation', 'includes', 'examples', '2.1'
 )
 DOCUMENTATION_EXAMPLES_FOLDER_3_x = os.path.join(
-    '..', '..', 'documentation', 'includes', 'examples', '3.0'
+    '..', '..', 'documentation', 'includes', 'examples', '3.0', '3.1'
 )
 
 class TestNinJSSchema(unittest.TestCase):
@@ -105,6 +105,10 @@ class TestNinJSSchema(unittest.TestCase):
             specification_path,
             'ninjs-schema_3.0.json',
         )
+        ninjs31_schema_filename = os.path.join(
+            specification_path,
+            'ninjs-schema_3.1.json',
+        )
         ninjs1xdev_schema_filename = os.path.join(
             specification_path,
             'ninjs-schema-dev_0.2_v1.5.json'
@@ -133,6 +137,8 @@ class TestNinJSSchema(unittest.TestCase):
         #    self.ninjs22_schema = json.load(schemafile)
         with open(ninjs30_schema_filename) as schemafile:
             self.ninjs30_schema = json.load(schemafile)
+        with open(ninjs31_schema_filename) as schemafile:
+            self.ninjs31_schema = json.load(schemafile)
         with open(ninjs1xdev_schema_filename) as schemafile:
             self.ninjs1xdev_schema = json.load(schemafile)
         with open(ninjs2xdev_schema_filename) as schemafile:
@@ -140,7 +146,7 @@ class TestNinJSSchema(unittest.TestCase):
 
         self.latest_1_x_schema = self.ninjs15_schema
         self.latest_2_x_schema = self.ninjs21_schema
-        self.latest_3_x_schema = self.ninjs30_schema
+        self.latest_3_x_schema = self.ninjs31_schema
 
         return super(TestNinJSSchema, self).__init__(*args, **kwargs)
 
@@ -222,6 +228,7 @@ class TestNinJSSchema(unittest.TestCase):
         self.assertIsNone(jsonschema.validate({"uri": "test2.1"}, self.ninjs21_schema))
         # self.assertIsNone(jsonschema.validate({"uri": "test2.2"}, self.ninjs22_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test3.0"}, self.ninjs30_schema))
+        self.assertIsNone(jsonschema.validate({"uri": "test3.1"}, self.ninjs31_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test-1.x-dev"}, self.ninjs1xdev_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test-2.x-dev"}, self.ninjs2xdev_schema))
 
@@ -503,7 +510,7 @@ class TestNinJSSchema(unittest.TestCase):
         1.x dev schema.
         They should all pass (ie they are all valid against the schema).
 
-        Also run 1.0, 1.1, 1.2, 1.3, 1.4 and 1.5 tests against the dev 
+        Also run 1.0, 1.1, 1.2, 1.3, 1.4 and 1.5 tests against the dev
         schema, because it should be backwards compatible.
         """
         self.folder_should_pass(
@@ -674,6 +681,26 @@ class TestNinJSSchema(unittest.TestCase):
         self.folder_should_fail(
             schema=self.ninjs30_schema,
             folder_name=os.path.join('3.0', 'should_fail')
+        )
+
+    def test_passing_3_1_unit_tests_against_3_1_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/3.0/should_pass against the 3.0 schema.
+        They should all pass (ie they are all valid against the schema).
+        """
+        self.folder_should_pass(
+            schema=self.ninjs31_schema,
+            folder_name=os.path.join('3.1', 'should_pass'),
+        )
+
+    def test_failing_3_1_unit_tests_against_3_1_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/3.0/should_fail against the 3.0 schema.
+        They should all fail (ie they are all invalid in some way).
+        """
+        self.folder_should_fail(
+            schema=self.ninjs31_schema,
+            folder_name=os.path.join('3.1', 'should_fail')
         )
 
 

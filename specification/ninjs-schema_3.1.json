@@ -1184,6 +1184,30 @@
               ]
             }
           ]
+        },
+        "digitalSourceType": {
+          "title": "Digital Source Type",
+          "description": "Indicates from which source a digital image was created",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "Name",
+              "description": "The name of the digital source type.",
+              "type": "string"
+            },
+            "uri": {
+              "title": "URI",
+              "description": "The identifier of the digital source type as a complete URI. Suggested CV: http://cv.iptc.org/newscodes/digitalsourcetype/",
+              "type": "string",
+              "format": "uri"
+            },
+            "literal": {
+              "title": "Literal",
+              "description": "An identifier for the digital source type as a free-text string.",
+              "type": "string"
+            }
+          }
         }
       }
     },
