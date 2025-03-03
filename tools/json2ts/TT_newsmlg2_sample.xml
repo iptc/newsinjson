@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newsMessage>
+    <!-- spec at http://tt.se/spec/newsml -->
+    <header>
+        <sent>2021-09-19T21:24:39+02:00</sent>
+        <sender>tt.se</sender>
+        <signal qcode="nmsig:atomic"/>
+    </header>
+    <itemSet>
+        <packageItem guid="http://tt.se/media/text/210919-janguillou-879f202b-pack" version="1" standard="NewsML-G2" standardversion="2.28" xml:lang="sv">
+            <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_33.xml"/>
+            <catalogRef href="http://tt.se/spec/catalog/catalog.tt-g2.1_0.xml"/>
+            <itemMeta>
+                <itemClass qcode="ninat:text"/>
+                <provider qcode="nprov:TT"/>
+                <versionCreated>2021-09-19T20:57:43+02:00</versionCreated>
+                <pubStatus qcode="stat:usable"/>
+            </itemMeta>
+            <groupSet root="root">
+                <group id="root" role="group:main">
+                    <itemRef residref="http://tt.se/media/text/210919-janguillou-879f202b"/>
+                    <groupRef idref="media"/>
+                </group>
+                <group id="media" role="group:package" mode="pgrmod:bag">
+                    <itemRef residref="http://tt.se/media/image/sdlm1btzmKu8WU">
+                        <altId type="tt:associd">a001</altId>
+                    </itemRef>
+                </group>
+            </groupSet>
+        </packageItem>
+        <newsItem guid="http://tt.se/media/text/210919-janguillou-879f202b" version="1" standard="NewsML-G2" standardversion="2.28">
+            <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_33.xml"/>
+            <catalogRef href="http://tt.se/spec/catalog/catalog.tt-g2.1_0.xml"/>
+            <rightsInfo>
+                <copyrightHolder uri="http://tt.se/copyright">
+                    <name>TT</name>
+                </copyrightHolder>
+            </rightsInfo>
+            <itemMeta>
+                <itemClass qcode="ninat:text"/>
+                <provider qcode="nprov:TT"/>
+                <versionCreated>2021-09-19T20:57:43+02:00</versionCreated>
+                <pubStatus qcode="stat:usable"/>
+                <edNote>Utbyggd, bland annat med kommentarer från anhöriga. Ny bild.</edNote>
+            </itemMeta>
+            <contentMeta>
+                <!-- urgency is defined at http://tt.se/spec/prio/1.0 -->
+                <urgency>3</urgency>
+                <contentCreated>2021-09-19T20:57:43+02:00</contentCreated>
+                <language tag="sv"/>
+                <subject type="cpnat:abstract" qcode="medtop:20000013" typeuri="http://tt.se/spec/subref/1.0/">
+                    <name>Litteratur</name>
+                </subject>
+                <subject type="cpnat:abstract" qcode="medtop:01000000" typeuri="http://tt.se/spec/subref/1.0/">
+                    <name>Konst, kultur och nöje</name>
+                </subject>
+                <subject type="cpnat:person" typeuri="http://tt.se/spec/person/1.0/">
+                    <name>Jan Guillou</name>
+                </subject>
+                <subject type="cpnat:person" typeuri="http://tt.se/spec/person/1.0/">
+                    <name>Erik Ponti</name>
+                </subject>
+                <subject type="cpnat:person" typeuri="http://tt.se/spec/person/1.0/">
+                    <name>Hamilton</name>
+                </subject>
+                <subject type="cpnat:place" typeuri="http://tt.se/spec/place/1.0/" literal="plc_dresden">
+                    <name>Dresden</name>
+                </subject>
+                <subject type="cpnat:organisation" typeuri="http://tt.se/spec/organisation/1.0/">
+                    <name>Aftonbladet</name>
+                </subject>
+                <slugline>janguillou</slugline>
+                <headline>Jan Guillou skriver på ny "Hamilton"-bok</headline>
+                <by>Johan Lindgren/TT</by>
+                <description role="drol:caption">Jan Guillou arbetar just nu med det sista kapitlet i en kommande "Hamilton"-bok, som han kallar för "ett pensionärsäventyr", skriver Aftonbladet . – Hamilton har just genomgått en höftledsoperation, så han går omkring med krycka, och Erik Ponti har oper</description>
+                <contentMetaExtProperty type="ttext:charcount" literal="815"/>
+                <contentMetaExtProperty type="ttext:originaltransmissionreference" literal="879f202b-10f6-41f3-8092-31e35b3725fb"/>
+            </contentMeta>
+            <assert literal="plc_dresden">
+                <type qcode="cpnat:geoArea"/>
+                <name>Dresden</name>
+                <geoAreaDetails>
+                    <position latitude="51.05" longitude="13.74"/>
+                </geoAreaDetails>
+            </assert>
+            <contentSet>
+                <inlineXML contenttype="text/html" contenttypevariant="richhtml5"><html><head><title>Jan Guillou skriver på ny "Hamilton"-bok</title></head><body><article> <section data-charcount="1299"> <h1>Jan Guillou skriver på ny "Hamilton"-bok</h1><div class="dat"><span class="vignette">Litteratur</span><span class="source">TT</span></div><div class="bodytext"> <figure><img uri="sdlm1btzmKu8WU" src="https://thumbnail.tt.se/media/text/210919-janguillou-879f202b/a001_NormalThumbnail.jpg" alt="Journalisten och författaren Jan Guillou jobbar på en ny bok om agenten Hamilton. Arkivbild." data-assoc-ref="a001" data-uri="http://tt.se/media/image/sdlm1btzmKu8WU" data-preview-src="https://beta.tt.se/media/text/210919-janguillou-879f202b/a001_NormalPreview.jpg"/><div class="byline">Naina Helén Jåma/TT</div><figcaption>Journalisten och författaren Jan Guillou jobbar på en ny bok om agenten Hamilton. Arkivbild.</figcaption></figure><p>Jan Guillou arbetar just nu med det sista kapitlet i en kommande "Hamilton"-bok, som han kallar för "ett pensionärsäventyr", skriver <a href="https://www.aftonbladet.se/nojesbladet/a/8Q9LMA/jan-guillou-skriver-ny-hamilton-bok-ett-pensionarsaventyr">Aftonbladet</a>.</p><blockquote>Hamilton har just genomgått en höftledsoperation, så han går omkring med krycka, och Erik Ponti har opererat ryggen och haltar omkring med käpp, säger författaren till tidningen.</blockquote><p>Boken blir den elfte i serien om superagenten, men enligt Guillou ska den snarare räknas som en fristående del.</p><blockquote>Jag skriver i en annan stil som jag aldrig har provat på tidigare, med en annan teknik och det här är en pensionärsbok.</blockquote><p>Boken, ”Den som dödade helvetets änglar”, är planerad att släppas i januari nästa år. Den 77-årige författaren stänger heller inte dörren för att det kan komma fler böcker om pensionärsduon framöver.</p></div> </section> </article></body></html></inlineXML>
+            </contentSet>
+        </newsItem>
+        <newsItem guid="http://tt.se/media/image/sdlm1btzmKu8WU" version="1" standard="NewsML-G2" standardversion="2.28">
+            <catalogRef href="http://www.iptc.org/std/catalog/catalog.IPTC-G2-Standards_33.xml"/>
+            <catalogRef href="http://tt.se/spec/catalog/catalog.tt-g2.1_0.xml"/>
+            <itemMeta>
+                <itemClass qcode="ninat:picture"/>
+                <provider qcode="nprov:TT"/>
+                <!-- This <versionCreated> is faked to make the XML validate. It does not reflect the creation time of this <newsItem>. -->
+                <versionCreated>2021-09-19T20:57:43+02:00</versionCreated>
+            </itemMeta>
+            <contentMeta>
+                <description role="drol:caption">Journalisten och författaren Jan Guillou jobbar på en ny bok om agenten Hamilton. Arkivbild.</description>
+                <contentMetaExtProperty type="ttext:representationtype" literal="incomplete"/>
+                <by>Lucasfilm Games</by>
+            </contentMeta>
+            <contentSet>
+                <remoteContent href="https://beta.tt.se/media/text/210919-janguillou-879f202b/a001_NormalHires.jpg" contenttype="image/jpeg" rendition="rnd:highRes" size="6223550" width="4928" height="3280">
+                    <remoteContentExtProperty type="ttrend:variant" literal="Normal"/>
+                    <remoteContentExtProperty type="ttrend:usage" literal="Hires"/>
+                </remoteContent>
+                <remoteContent href="https://beta.tt.se/media/text/210919-janguillou-879f202b/a001_NormalPreview.jpg" contenttype="image/jpeg" rendition="rnd:preview" size="156675" width="1024" height="682">
+                    <remoteContentExtProperty type="ttrend:variant" literal="Normal"/>
+                    <remoteContentExtProperty type="ttrend:usage" literal="Preview"/>
+                </remoteContent>
+                <remoteContent href="https://beta.tt.se/media/text/210919-janguillou-879f202b/a001_WatermarkPreview.jpg" contenttype="image/jpeg" size="156675" width="1024" height="682">
+                    <remoteContentExtProperty type="ttrend:variant" literal="Watermark"/>
+                    <remoteContentExtProperty type="ttrend:usage" literal="Preview"/>
+                </remoteContent>
+                <remoteContent href="https://thumbnail.tt.se/media/text/210919-janguillou-879f202b/a001_NormalThumbnail.jpg" contenttype="image/jpeg" rendition="rnd:thumbnail" size="15076" width="256" height="171">
+                    <remoteContentExtProperty type="ttrend:variant" literal="Normal"/>
+                    <remoteContentExtProperty type="ttrend:usage" literal="Thumbnail"/>
+                </remoteContent>
+            </contentSet>
+        </newsItem>
+    </itemSet>
+</newsMessage>
