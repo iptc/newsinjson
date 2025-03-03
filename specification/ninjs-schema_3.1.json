@@ -1187,7 +1187,7 @@
         },
         "digitalSourceType": {
           "title": "Digital Source Type",
-          "description": "Indicates from which source a digital image was created",
+          "description": "Indicates the source type from which the content was created",
           "type": "object",
           "additionalProperties": false,
           "properties": {
