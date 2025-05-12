@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json#",
+  "$id": "http://www.iptc.org/std/ninjs/ninjs-schema_3.1.json#",
   "type": "object",
   "title": "IPTC ninjs - News in JSON - version 3.0.1",
   "description": "A news item as JSON object -- copyright 2024 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
@@ -1184,6 +1184,30 @@
               ]
             }
           ]
+        },
+        "digitalSourceType": {
+          "title": "Digital Source Type",
+          "description": "Indicates the source type from which the content was created",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "title": "Name",
+              "description": "The name of the digital source type.",
+              "type": "string"
+            },
+            "uri": {
+              "title": "URI",
+              "description": "The identifier of the digital source type as a complete URI. Suggested CV: http://cv.iptc.org/newscodes/digitalsourcetype/",
+              "type": "string",
+              "format": "uri"
+            },
+            "literal": {
+              "title": "Literal",
+              "description": "An identifier for the digital source type as a free-text string.",
+              "type": "string"
+            }
+          }
         }
       }
     },
