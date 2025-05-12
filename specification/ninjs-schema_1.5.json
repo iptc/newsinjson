@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://www.iptc.org/std/ninjs/ninjs-schema_1.5.json#",
   "type": "object",
-  "title": "IPTC ninjs - News in JSON - version 1.5.1 (approved at IPTC Standards Committee May 2023)",
+  "title": "IPTC ninjs - News in JSON - version 1.5.1",
   "description": "A news item as JSON object -- copyright 2023 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
   "additionalProperties": false,
   "required": ["uri"],
@@ -47,19 +47,19 @@
             "locality": {
               "description": "A city/town/village etc. part of the address.",
               "type": "string"
-            },
+              },
             "area": {
               "description": "A subdivision of a country part of the address.",
               "type": "string"
-            },
+              },
             "postalcode": {
               "description": "A postal code part of the address.",
               "type": "string"
-            },
+              },
             "country": {
               "description": "A country part of the address.",
               "type": "string"
-            }
+              }
           }
         }
       },
@@ -120,7 +120,10 @@
       "title": "Representation type",
       "description": "Indicates how complete this representation of a news item is. No mapping to nar. Specific for ninjs.",
       "type": "string",
-      "enum": ["complete", "incomplete"]
+      "enum": [
+        "complete",
+        "incomplete"
+      ]
     },
     "profile": {
       "title": "Profile",
@@ -160,7 +163,11 @@
       "title": "Publication status",
       "description": "The publishing status of the news object, its value is *usable* by default. nar:pubStatus",
       "type": "string",
-      "enum": ["usable", "withheld", "canceled"]
+      "enum": [
+        "usable",
+        "withheld",
+        "canceled"
+      ]
     },
     "urgency": {
       "title": "Urgency",
@@ -225,7 +232,7 @@
           },
           "contactinfo": {
             "type": "array",
-            "items": { "$ref": "#/definitions/contactinfoType" }
+            "items": {"$ref": "#/definitions/contactinfoType"}
           }
         }
       }
@@ -293,7 +300,7 @@
           },
           "contactinfo": {
             "type": "array",
-            "items": { "$ref": "#/definitions/contactinfoType" }
+            "items": {"$ref": "#/definitions/contactinfoType"}
           }
         }
       }
@@ -335,7 +342,7 @@
           },
           "contactinfo": {
             "type": "array",
-            "items": { "$ref": "#/definitions/contactinfoType" }
+            "items": {"$ref": "#/definitions/contactinfoType"}
           }
         }
       }
@@ -486,7 +493,7 @@
           },
           "contactinfo": {
             "type": "array",
-            "items": { "$ref": "#/definitions/contactinfoType" }
+            "items": {"$ref": "#/definitions/contactinfoType"}
           }
         }
       }
@@ -587,7 +594,7 @@
       "type": "object",
       "additionalProperties": false,
       "patternProperties": {
-        "^[a-zA-Z0-9_]+": { "$ref": "#" }
+        "^[a-zA-Z0-9_]+": {"$ref": "#"}
       }
     },
     "altids": {
