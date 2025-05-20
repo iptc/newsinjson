@@ -758,7 +758,7 @@ class TestNinJSSchema(unittest.TestCase):
 
     def test_failing_3_1_unit_tests_against_3_1_schema(self):
         """
-        Run files in TEST_FILES_FOLDER/3.0/should_fail against the 3.0 schema.
+        Run files in TEST_FILES_FOLDER/3.1/should_fail against the 3.1 schema.
         They should all fail (ie they are all invalid in some way).
         """
         self.folder_should_fail(
