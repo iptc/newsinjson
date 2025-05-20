@@ -44,7 +44,7 @@ DOCUMENTATION_EXAMPLES_FOLDER_2_x = os.path.join(
     '..', '..', 'documentation', 'includes', 'examples', '2.1'
 )
 DOCUMENTATION_EXAMPLES_FOLDER_3_x = os.path.join(
-    '..', '..', 'documentation', 'includes', 'examples', '3.0', '3.1'
+    '..', '..', 'documentation', 'includes', 'examples', '3.1'
 )
 
 class TestNinJSSchema(unittest.TestCase):
@@ -444,7 +444,7 @@ class TestNinJSSchema(unittest.TestCase):
     
     def test_all_passing_unit_test_files_against_1_6_schema(self):
         """
-        Run files in TEST_FILES_FOLDER/1.5 & 6/should_pass against the 1.6 schema.
+        Run files in TEST_FILES_FOLDER/1.6/should_pass against the 1.6 schema.
         They should all pass (ie they are all valid against the schema).
 
         Also run 1.0, 1.1, 1.2, 1.3, 1.4 and 1.5/should_pass against the 1.6
@@ -481,14 +481,10 @@ class TestNinJSSchema(unittest.TestCase):
 
     def test_failing_unit_test_files_against_1_6_schema(self):
         """
-        Run files in TEST_FILES_FOLDER/1.5 & 6/should_fail against the 1.6 schema.
+        Run files in TEST_FILES_FOLDER/1.6/should_fail against the 1.6 schema.
         They should all fail (ie they are all invalid in some way).
 
         """
-        self.folder_should_fail(
-            schema=self.ninjs16_schema,
-            folder_name=os.path.join('1.5', 'should_fail')
-        )
         self.folder_should_fail(
             schema=self.ninjs16_schema,
             folder_name=os.path.join('1.6', 'should_fail')
@@ -755,10 +751,14 @@ class TestNinJSSchema(unittest.TestCase):
             schema=self.ninjs31_schema,
             folder_name=os.path.join('3.1', 'should_pass'),
         )
+        self.folder_should_pass(
+            schema=self.ninjs30_schema,
+            folder_name=os.path.join('3.0', 'should_pass'),
+        )
 
     def test_failing_3_1_unit_tests_against_3_1_schema(self):
         """
-        Run files in TEST_FILES_FOLDER/3.0/should_fail against the 3.0 schema.
+        Run files in TEST_FILES_FOLDER/3.1/should_fail against the 3.1 schema.
         They should all fail (ie they are all invalid in some way).
         """
         self.folder_should_fail(
