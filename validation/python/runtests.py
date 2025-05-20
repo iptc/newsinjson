@@ -44,7 +44,7 @@ DOCUMENTATION_EXAMPLES_FOLDER_2_x = os.path.join(
     '..', '..', 'documentation', 'includes', 'examples', '2.1'
 )
 DOCUMENTATION_EXAMPLES_FOLDER_3_x = os.path.join(
-    '..', '..', 'documentation', 'includes', 'examples', '3.0', '3.1'
+    '..', '..', 'documentation', 'includes', 'examples', '3.1'
 )
 
 class TestNinJSSchema(unittest.TestCase):
