@@ -1,26 +1,26 @@
 {
-    "uri": "http://tt.se/media/text/210526-militarovning-a0f2d045",
-    "type": "text",
-    "representationtype": "complete",
-    "organisation": [
+  "uri": "http://tt.se/media/text/210526-militarovning-a0f2d045",
+  "type": "text",
+  "representationtype": "complete",
+  "organisation": [
+    {
+      "name": "Eutelsat Communications",
+      "symbols": [
         {
-            "name": "Eutelsat Communications",
-            "symbols": [
-                {
-                    "symboltype": "Ticker",
-                    "symbol": "ETL",
-                    "exchange": "BOURSE"
-                },
-                {
-                    "symboltype": "ISIN",
-                    "symbol": "FR0010221234"
-                }
-            ]
+          "symboltype": "urn:Ticker",
+          "symbol": "ETL",
+          "exchange": "BOURSE"
+        },
+        {
+          "symboltype": "urn:ISIN",
+          "symbol": "FR0010221234"
         }
-    ],
-    "$standard": {
-        "name": "ninjs",
-        "version": "1.5",
-        "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.5.json"
+      ]
     }
+  ],
+  "$standard": {
+    "name": "ninjs",
+    "version": "1.5",
+    "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.5.json"
+  }
 }

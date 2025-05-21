@@ -1,0 +1,8 @@
+{
+  "uri": "urn:001-test-good-top-level-urgency",
+  "digitalsourcetype": {
+    "name": "Digital Source Type",
+    "literal": "digitalCreation",
+    "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/digitalCreation"
+  }
+}
