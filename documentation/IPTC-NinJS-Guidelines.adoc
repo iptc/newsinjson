@@ -2119,6 +2119,7 @@ In addition, some changes to the schema were made to fix a validation bug in pre
 https://iptc.org/std/ninjs/ninjs-schema_3.0.json[Version 3.0 of the ninjs schema] was approved by the IPTC Standards Committee in October 2024 and made available in November 2024.
 
 ninjs 3.0 was a comprehensive update including several major new features:
+
 * Support for <<Events and Planned Coverage,news events and planned news coverage>>, including expected dates (to be used when exact dates and times are not known), event recurrence information and support for commissioning information on planned coverage
 * Switch to camelCase for all properties, to better align with JSON and GraphQL best practice
 * Additional rendition properties such as `videoCodec`, `frameRate`, `scanType` and `transportProtocol` to better support video content, including live streamed video
