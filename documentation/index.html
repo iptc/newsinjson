@@ -659,14 +659,14 @@ how easily a real ninjs document can be created, and a <a href="#_validating_a_n
 <div class="paragraph">
 <p>The latest version of the standard is 3.1.
 <a href="https://iptc.org/std/ninjs/ninjs-schema_3.1.json">Version 3.1 of the ninjs
-schema</a> was made available in November 2024.</p>
+schema</a> was made available in June 2025.</p>
 </div>
 <div class="paragraph">
-<p>The latest version in the 2.x branch is 2.1, which was made avaialble in June 2023.
+<p>The latest version in the 2.x branch is 2.2, which was made available in June 2025.
 See below for more information on the <a href="#Differences between ninjs 1.x and 2.x">differences between the 1.x and 2.x branches</a>.</p>
 </div>
 <div class="paragraph">
-<p>The latest version in the 1.x branch is 1.5, which was also made avaialble in June 2023.
+<p>The latest version in the 1.x branch is 1.6, which was also made available in June 2025.
 See below for more information on the <a href="#Differences between ninjs 1.x and 2.x">differences between the 1.x and 2.x branches</a>.</p>
 </div>
 <div class="sect2">
@@ -870,7 +870,7 @@ more consistent with NewsML-G2 and to add some fields to handle rights.</p>
 <p>The 3.x series includes support for news planning and events, including live
 events. It also adds support for live streamed renditions. In a major change,
 we also change the case of all ninjs properties to "camelCase" format, in
-keeping with JSON best practices, especially regarding GraphQL usage. ninjs 3.0 was
+keeping with JSON best practices, especially regarding GraphQL usage. ninjs 3.x was
 created alongside the <a href="https://www.thedpp.com/lpx">LPX (Live Production Exchange)
 project from the DPP</a>, with the help of experts from CNN, Reuters, Arqiva and more.</p>
 </div>
@@ -1074,12 +1074,12 @@ They were not changed in any other way.</p>
 <h3 id="_which_version_of_ninjs_should_i_choose_for_my_project"><a class="anchor" href="#_which_version_of_ninjs_should_i_choose_for_my_project"></a>1.7. Which version of ninjs should I choose for my project?</h3>
 <div class="paragraph">
 <p>If you are starting a green-field project, we recommend using the latest
-version in the ninjs 3.x branch, currently ninjs 3.0.  This version should be
+version in the ninjs 3.x branch, currently ninjs 3.1.  This version should be
 easiest for developers to work with.</p>
 </div>
 <div class="paragraph">
 <p>If you are already using a 1.x or 2.x version of ninjs, we recommend at least
-upgrading to the latest version in that branch, currently 1.5 and 2.1. This
+upgrading to the latest version in that branch, currently 1.6 and 2.2. This
 should be an easy change, because all new minor versions in a branch are
 backwards-compatible with earlier minor versions in the same branch.</p>
 </div>
@@ -1263,9 +1263,9 @@ property</th>
 <code>composite</code><br>
 <code>component</code><br>
 <code>event</code><br>
-(3.0 only)<br>
+(3.x only)<br>
 <code>planning</code><br>
-(3.0 only)</p>
+(3.x only)</p>
 <p class="tableblock"><a id="title"></a></p></td>
 </tr>
 <tr>
@@ -1306,12 +1306,12 @@ This property is an object with the following child properties:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>version</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the standard used, such as <code>3.0</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the standard used, such as <code>3.1</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>schema</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the JSON schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_3.0.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_3.0.json</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the JSON schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_3.1.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_3.1.json</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
@@ -1487,7 +1487,7 @@ NOTE: in ninjs 1.x, the allowed values are <code>complete</code> and <code>incom
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">ninjs 3.0<br>
+<th class="tableblock halign-left valign-top">ninjs 3.x<br>
 property</th>
 <th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
 property</th>
@@ -1598,7 +1598,7 @@ This property is an object with the following child properties:<br></p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">ninjs 3.0<br>
+<th class="tableblock halign-left valign-top">ninjs 3.x<br>
 property</th>
 <th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
 property</th>
@@ -1730,7 +1730,7 @@ This property is an object with the following child properties:<br></p>
 <code>description_&lt;type&gt;</code> (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>An array of one or more descriptions of the ninjs object. See also ednote
-for information from provider to reciever. Descriptions are seen as metadata.</p>
+for information from provider to receiver. Descriptions are seen as metadata.</p>
 </div>
 <div class="paragraph">
 <p>This property is an object with the following child properties:<br></p>
@@ -1775,7 +1775,7 @@ for information from provider to reciever. Descriptions are seen as metadata.</p
 <div class="sect2">
 <h3 id="_metadata_properties"><a class="anchor" href="#_metadata_properties"></a>3.4. Metadata properties</h3>
 <div class="paragraph">
-<p>ninjs allows content to be marked up with one simple string-based metadata property <code>located</code>, plus several rich metadata properties that can link to pre-defined controlled vocabularies describing people, organisations, places subjects, objects and events.</p>
+<p>ninjs allows content to be marked up with one simple string-based metadata property <code>located</code>, plus several rich metadata properties that can link to pre-defined controlled vocabularies describing people, organisations, places, subjects, objects and events.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1786,7 +1786,7 @@ for information from provider to reciever. Descriptions are seen as metadata.</p
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">ninjs 3.0<br>
+<th class="tableblock halign-left valign-top">ninjs 3.x<br>
 property</th>
 <th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
 property</th>
@@ -1920,7 +1920,7 @@ This property is an array of objects with the following properties:</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>organisations</code> (2.x)<br>
 <code>organisation</code> (1.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party.<br>
+<p>An array of objects describing administrative and functional structures which may act as a business, as a political party or not-for-profit party.<br>
 This property is an array of <a href="#Organisation structure">organisation objects</a>.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array</p>
@@ -2327,7 +2327,7 @@ This property is an array of objects with the following properties:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Type would be method of communication like phone, mobile, address etc.</p>
+<p>Type would be a method of communication like phone, mobile, address etc.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
@@ -2341,7 +2341,7 @@ This property is an array of objects with the following properties:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>lang</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If this contactinfo object need to be qualified with what language it is in. The value should follow IETF BCP47.</p>
+<p>If this contactinfo object needs to be qualified with what language it is in. The value should follow IETF BCP47.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
@@ -2507,7 +2507,7 @@ Array of objects with the properties:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This section applies to ninjs 3.0 only.
+This section applies to ninjs 3.x only.
 </td>
 </tr>
 </table>
@@ -2673,7 +2673,7 @@ It&#8217;s worth noting that this is different from the <a href="#events">events
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Property name<br>
-(3.0 only)</th>
+(3.x only)</th>
 <th class="tableblock halign-left valign-top">Description</th>
 <th class="tableblock halign-left valign-top">Data type</th>
 </tr>
@@ -2853,7 +2853,7 @@ This is an object with the following structure:</p>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Property name<br>
-(3.0 only)</th>
+(3.x only)</th>
 <th class="tableblock halign-left valign-top">Description</th>
 <th class="tableblock halign-left valign-top">Data type</th>
 </tr>
@@ -2943,7 +2943,7 @@ This section applies to dates in events and news coverage planning items in ninj
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Property name<br>
-(3.0 only)</th>
+(3.x only)</th>
 <th class="tableblock halign-left valign-top">Description</th>
 <th class="tableblock halign-left valign-top">Data type</th>
 </tr>
@@ -3079,7 +3079,7 @@ follows the iCalendar specification.</p>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Property name<br>
-(3.0 only)</th>
+(3.x only)</th>
 <th class="tableblock halign-left valign-top">Description</th>
 <th class="tableblock halign-left valign-top">Data type</th>
 </tr>
@@ -3191,7 +3191,7 @@ property</th>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>For still and moving images: the height of the display area measured in pixels.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">integer (3.0)<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (3.x)<br>
 number (1.x, 2.x)</p></td>
 </tr>
 <tr>
@@ -3200,7 +3200,7 @@ number (1.x, 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>For still and moving images: the width of the display area measured in pixels.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">integer (3.0)<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (3.x)<br>
 number (1.x, 2.x)</p></td>
 </tr>
 <tr>
@@ -3209,7 +3209,7 @@ number (1.x, 2.x)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The size of the rendition resource in bytes.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">integer (3.0)<br>
+<td class="tableblock halign-left valign-top"><p class="tableblock">integer (3.x)<br>
 number (1.x, 2.x)</p></td>
 </tr>
 <tr>
@@ -3231,7 +3231,7 @@ number (1.x, 2.x)</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>aspectRatio</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
-(3.0 only)</p></td>
+(3.x only)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Aspect ratio of the video file, which is the ratio of the width of video to its height, such as 16:9 and 4:3.</p>
 </div></div></td>
@@ -3240,7 +3240,7 @@ number (1.x, 2.x)</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>videoCodec</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
-(3.0 only)</p></td>
+(3.x only)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The video encoding system used to create the content. Suggested CV: <a href="http://cv.iptc.org/newscodes/videocodec/" class="bare">http://cv.iptc.org/newscodes/videocodec/</a></p>
 </div></div></td>
@@ -3249,7 +3249,7 @@ number (1.x, 2.x)</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>frameRate</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
-(3.0 only)</p></td>
+(3.x only)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The number of video frames per second, which is the rate at which the material should be shown in order to achieve the intended visual effect</p>
 </div></div></td>
@@ -3258,7 +3258,7 @@ number (1.x, 2.x)</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>poi</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
-(3.0 only)</p></td>
+(3.x only)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The point of interest of the rendition.
 This property is an object with the following child properties:</p>
@@ -3294,7 +3294,7 @@ This property is an object with the following child properties:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>transportProtocol</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
-(3.0 only)</p></td>
+(3.x only)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The transport/flow type of the flow (B2B stream).</p>
 </div></div></td>
@@ -3303,7 +3303,7 @@ This property is an object with the following child properties:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>scanType</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
-(3.0 only)</p></td>
+(3.x only)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The scan type of the video. The only allowed values are 'progressive' and 'interlaced'.</p>
 </div></div></td>
@@ -3314,7 +3314,7 @@ This property is an object with the following child properties:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>bitrate</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">n/a<br>
-(3.0 only)</p></td>
+(3.x only)</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The bitrate of the video. Should always include units, eg 400 kbps.</p>
 </div></div></td>
@@ -3636,7 +3636,7 @@ This property is an object with the following child properties:</p>
 <p><code>by</code> and <code>headlines</code> are typical text news metadata</p>
 </li>
 <li>
-<p>The text of article itself is represented by <code>bodies</code>, in two format variants: plain text and HTML.</p>
+<p>The text of the article itself is represented by <code>bodies</code>, in two format variants: plain text and HTML.</p>
 </li>
 </ul>
 </div>
@@ -4718,7 +4718,7 @@ repository</a>.</p>
 <div class="sect2">
 <h3 id="_best_practice_for_identifying_objects_in_arrays"><a class="anchor" href="#_best_practice_for_identifying_objects_in_arrays"></a>6.1. Best Practice for identifying objects in arrays</h3>
 <div class="paragraph">
-<p>The first generation of ninjs used patternproperties to identify and name bodies, headlines etc. With 2.0 these are now arrays of objects. If you, for example, only have one headline you only need to use the value property. If there are more than one headline you can use the role and/or contenttype properties to convey to the receivers of your items what each object is meant for and what format it has.</p>
+<p>The first generation of ninjs used patternproperties to identify and name bodies, headlines etc. With 2.x and 3.x these are now arrays of objects. If, for example, you only have one headline, you only need to use the value property. If there are multiple headlines you can use the role and/or contenttype properties to convey to the receivers of your items what each headline is meant for and what format it has.</p>
 </div>
 </div>
 <div class="sect2">
@@ -4749,12 +4749,12 @@ should) copy and extend the IPTC ninjs schema.</p>
 <p>make a copy of the schema file</p>
 </li>
 <li>
-<p>change the URL of the "id" property of IPTC&#8217;s ninjs 3.0 &#8230;&#8203;</p>
+<p>change the URL of the "id" property of IPTC&#8217;s ninjs 3.1 &#8230;&#8203;</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json#",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_3.1.json#",
   "type" : "object",
   ...</code></pre>
 </div>
@@ -4859,7 +4859,7 @@ used to validate ninjs documents.</p>
 </div>
 <div class="paragraph">
 <p>The latest IPTC ninjs schema is available for download at
-<a href="https://iptc.org/std/ninjs/ninjs-schema_3.0.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_3.0.json</a></p>
+<a href="https://iptc.org/std/ninjs/ninjs-schema_3.1.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_3.1.json</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -4874,7 +4874,7 @@ ninjs documents, can be found in the
 <h3 id="_online_ninjs_generator_tool"><a class="anchor" href="#_online_ninjs_generator_tool"></a>7.3. Online "ninjs generator" tool</h3>
 <div class="paragraph">
 <p>The IPTC has created a simple form-based tool that can be used to generate
-sample ninjs documents. It supports ninjs versions 1.5, 2.1 and 3.0, so it
+sample ninjs documents. It supports ninjs versions 1.6, 2.2 and 3.1, so it
 is also a handy way to see the differences between each schema version.</p>
 </div>
 <div class="paragraph">
@@ -4887,7 +4887,7 @@ is also a handy way to see the differences between each schema version.</p>
 <p>Ian Young of PA Media Group has created a
 <a href="https://www.npmjs.com/package/@pa-media-group/iptc-ninjs-2-type">TypeScript type for ninjs 2</a>
 that can be used to ease development with ninjs in TypeScript. We plan to
-release a type for ninjs 3.0 soon.</p>
+release a type for ninjs 3.x soon.</p>
 </div>
 </div>
 </div>

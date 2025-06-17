@@ -40,12 +40,12 @@ how easily a real ninjs document can be created, and a <<Validating a ninjs docu
 
 The latest version of the standard is 3.1. 
 https://iptc.org/std/ninjs/ninjs-schema_3.1.json[Version 3.1 of the ninjs
-schema] was made available in November 2024.
+schema] was made available in June 2025.
 
-The latest version in the 2.x branch is 2.1, which was made avaialble in June 2023.
+The latest version in the 2.x branch is 2.2, which was made available in June 2025.
 See below for more information on the <<Differences between ninjs 1.x and 2.x,differences between the 1.x and 2.x branches>>.
 
-The latest version in the 1.x branch is 1.5, which was also made avaialble in June 2023.
+The latest version in the 1.x branch is 1.6, which was also made available in June 2025.
 See below for more information on the <<Differences between ninjs 1.x and 2.x,differences between the 1.x and 2.x branches>>.
 
 === Built for both APIs and data at rest
@@ -152,7 +152,7 @@ more consistent with NewsML-G2 and to add some fields to handle rights.
 The 3.x series includes support for news planning and events, including live
 events. It also adds support for live streamed renditions. In a major change,
 we also change the case of all ninjs properties to "camelCase" format, in
-keeping with JSON best practices, especially regarding GraphQL usage. ninjs 3.0 was
+keeping with JSON best practices, especially regarding GraphQL usage. ninjs 3.x was
 created alongside the https://www.thedpp.com/lpx[LPX (Live Production Exchange)
 project from the DPP], with the help of experts from CNN, Reuters, Arqiva and more.
 
@@ -275,11 +275,11 @@ In ninjs 3.x, property names were converted to camelCase.
 === Which version of ninjs should I choose for my project?
 
 If you are starting a green-field project, we recommend using the latest
-version in the ninjs 3.x branch, currently ninjs 3.0.  This version should be
+version in the ninjs 3.x branch, currently ninjs 3.1.  This version should be
 easiest for developers to work with.
 
 If you are already using a 1.x or 2.x version of ninjs, we recommend at least
-upgrading to the latest version in that branch, currently 1.5 and 2.1. This
+upgrading to the latest version in that branch, currently 1.6 and 2.2. This
 should be an easy change, because all new minor versions in a branch are
 backwards-compatible with earlier minor versions in the same branch.
 
@@ -412,9 +412,9 @@ property
 `composite` +
 `component` +
 `event` +
-(3.0 only) +
+(3.x only) +
 `planning` +
-(3.0 only)
+(3.x only)
 
 [[title]]
 |`title`
@@ -438,11 +438,11 @@ This property is an object with the following child properties:
 !string
 
 !`version`
-!The version of the standard used, such as `3.0`.
+!The version of the standard used, such as `3.1`.
 !string
 
 !`schema`
-!The uri of the JSON schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_3.0.json`
+!The uri of the JSON schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_3.1.json`
 !URI
 
 !===
@@ -561,7 +561,7 @@ One of: +
 
 [cols="1,1,8a,2",options="header"]
 |===
-|ninjs 3.0 +
+|ninjs 3.x +
 property
 |ninjs 1.x / 2.x +
 property
@@ -631,7 +631,7 @@ Properties representing the actual story that will be shown to the audience.
 
 [cols="1,1,8a,2",options="header"]
 |===
-|ninjs 3.0 +
+|ninjs 3.x +
 property
 |ninjs 1.x / 2.x +
 property
@@ -720,7 +720,7 @@ This property is an object with the following child properties: +
 |`descriptions` (2.x) +
 `description_<type>` (1.x)
 a|An array of one or more descriptions of the ninjs object. See also ednote
-for information from provider to reciever. Descriptions are seen as metadata.
+for information from provider to receiver. Descriptions are seen as metadata.
 
 This property is an object with the following child properties: +
 
@@ -749,11 +749,11 @@ This property is an object with the following child properties: +
 
 === Metadata properties
 
-ninjs allows content to be marked up with one simple string-based metadata property `located`, plus several rich metadata properties that can link to pre-defined controlled vocabularies describing people, organisations, places subjects, objects and events.
+ninjs allows content to be marked up with one simple string-based metadata property `located`, plus several rich metadata properties that can link to pre-defined controlled vocabularies describing people, organisations, places, subjects, objects and events.
 
 [cols="1,1,8a,2",options="header"]
 |===
-|ninjs 3.0 +
+|ninjs 3.x +
 property
 |ninjs 1.x / 2.x +
 property
@@ -837,7 +837,7 @@ This property is an array of objects with the following properties:
 |`organisations`
 |`organisations` (2.x) +
 `organisation` (1.x)
-|An array of objects describing administrative and functional structures which may act as as a business, as a political party or not-for-profit party. +
+|An array of objects describing administrative and functional structures which may act as a business, as a political party or not-for-profit party. +
 This property is an array of <<Organisation structure,organisation objects>>.
 
 |array
@@ -1098,7 +1098,7 @@ The Contact Info structure is used for the contents of the `contactinfo` propert
 |Property name|Description|Data type
 
 |`type`
-a|Type would be method of communication like phone, mobile, address etc.
+a|Type would be a method of communication like phone, mobile, address etc.
 |string
 
 |`role`
@@ -1106,7 +1106,7 @@ a|Role refers to type and could be private, office etc
 |string
 
 |`lang`
-a|If this contactinfo object need to be qualified with what language it is in. The value should follow IETF BCP47.
+a|If this contactinfo object needs to be qualified with what language it is in. The value should follow IETF BCP47.
 |string
 
 |`name`
@@ -1193,7 +1193,7 @@ Array of objects with the properties:
 
 == Events and Planned Coverage
 
-NOTE: This section applies to ninjs 3.0 only.
+NOTE: This section applies to ninjs 3.x only.
 
 A news organisation may wish to distribute information about forthcoming events and planned news coverage in advance of the event. In this way, customers of the news organisation (for example, news outlets and broadcasters who are customers of a wire service) can plan to broadcast or republish the coverage, or plan their own coverage around the work of the upstream news provider.
 
@@ -1266,7 +1266,7 @@ A ninjs item may contain a `plannedCoverage` property which contains an array of
 [cols="1,3a,1",options="header"]
 |===
 |Property name +
-(3.0 only)|Description|Data type
+(3.x only)|Description|Data type
 
 |`uri`
 |The local identifier of the element which MUST be persistent for all versions of the item, i.e. for its entire lifecycle.",
@@ -1372,7 +1372,7 @@ This is an object with the following structure:
 [cols="1,3a,1",options="header"]
 |===
 |Property name +
-(3.0 only)|Description|Data type
+(3.x only)|Description|Data type
 
 |`by`
 |The person or party that commissioned the content.
@@ -1417,7 +1417,7 @@ To handle this situation, in ninjs 3.x we introduce a `dates` object which conta
 [cols="1,3a,1",options="header"]
 |===
 |Property name +
-(3.0 only)|Description|Data type
+(3.x only)|Description|Data type
 
 |`startDate`
 a|The date and time at which the event starts (if known)
@@ -1492,7 +1492,7 @@ follows the iCalendar specification.
 [cols="1,3a,1",options="header"]
 |===
 |Property name +
-(3.0 only)|Description|Data type
+(3.x only)|Description|Data type
 
 |`frequency`
 |The FREQ rule part identifies the type of recurrence rule.
@@ -1560,19 +1560,19 @@ _Name of object_ (1.x)
 |`height`
 |`height`
 |For still and moving images: the height of the display area measured in pixels.
-|integer (3.0) +
+|integer (3.x) +
 number (1.x, 2.x)
 
 |`width`
 |`width`
 |For still and moving images: the width of the display area measured in pixels.
-|integer (3.0) +
+|integer (3.x) +
 number (1.x, 2.x)
 
 |`sizeInBytes`
 |`sizeinbytes`
 |The size of the rendition resource in bytes.
-|integer (3.0) +
+|integer (3.x) +
 number (1.x, 2.x)
 
 |`duration`
@@ -1587,25 +1587,25 @@ number (1.x, 2.x)
 
 |`aspectRatio`
 |n/a +
-(3.0 only)
+(3.x only)
 |Aspect ratio of the video file, which is the ratio of the width of video to its height, such as 16:9 and 4:3.
 |string
 
 |`videoCodec`
 |n/a +
-(3.0 only)
+(3.x only)
 |The video encoding system used to create the content. Suggested CV: http://cv.iptc.org/newscodes/videocodec/
 |string
 
 |`frameRate`
 |n/a +
-(3.0 only)
+(3.x only)
 |The number of video frames per second, which is the rate at which the material should be shown in order to achieve the intended visual effect
 |number
 
 |`poi`
 |n/a +
-(3.0 only)
+(3.x only)
 |The point of interest of the rendition.
 This property is an object with the following child properties:
 
@@ -1625,13 +1625,13 @@ This property is an object with the following child properties:
 
 |`transportProtocol`
 |n/a +
-(3.0 only)
+(3.x only)
 |The transport/flow type of the flow (B2B stream).
 |string
 
 |`scanType`
 |n/a +
-(3.0 only)
+(3.x only)
 |The scan type of the video. The only allowed values are 'progressive' and 'interlaced'.
 |One of: +
 `progressive` +
@@ -1639,7 +1639,7 @@ This property is an object with the following child properties:
 
 |`bitrate`
 |n/a +
-(3.0 only)
+(3.x only)
 |The bitrate of the video. Should always include units, eg 400 kbps.
 |string
 
@@ -1718,7 +1718,7 @@ Key features:
 * A `uri` must be present as an identifier for this content
 * `type` indicates that the generic content type is 'text'
 * `by` and `headlines` are typical text news metadata
-* The text of article itself is represented by `bodies`, in two format variants: plain text and HTML.
+* The text of the article itself is represented by `bodies`, in two format variants: plain text and HTML.
 
 [tabs]
 ====
@@ -1856,7 +1856,7 @@ Here we describe some best practices for working with ninjs in your own organisa
 
 === Best Practice for identifying objects in arrays
 
-The first generation of ninjs used patternproperties to identify and name bodies, headlines etc. With 2.0 these are now arrays of objects. If you, for example, only have one headline you only need to use the value property. If there are more than one headline you can use the role and/or contenttype properties to convey to the receivers of your items what each object is meant for and what format it has.
+The first generation of ninjs used patternproperties to identify and name bodies, headlines etc. With 2.x and 3.x these are now arrays of objects. If, for example, you only have one headline, you only need to use the value property. If there are multiple headlines you can use the role and/or contenttype properties to convey to the receivers of your items what each headline is meant for and what format it has.
 
 === How to escape XML content for inclusion in JSON objects
 
@@ -1876,12 +1876,12 @@ should) copy and extend the IPTC ninjs schema.
 To do this, do the following:
 
 . make a copy of the schema file
-. change the URL of the "id" property of IPTC's ninjs 3.0 ...
+. change the URL of the "id" property of IPTC's ninjs 3.1 ...
 +
 [source,json]
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json#",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_3.1.json#",
   "type" : "object",
   ...
 +
@@ -1958,7 +1958,7 @@ maintains schemas for each version of the ninjs standard. These schemas can be
 used to validate ninjs documents. 
 
 The latest IPTC ninjs schema is available for download at
-https://iptc.org/std/ninjs/ninjs-schema_3.0.json
+https://iptc.org/std/ninjs/ninjs-schema_3.1.json
 
 === Sample Code
 
@@ -1969,7 +1969,7 @@ https://github.com/iptc/newsinjson[IPTC newsinjson github repository].
 === Online "ninjs generator" tool
 
 The IPTC has created a simple form-based tool that can be used to generate
-sample ninjs documents. It supports ninjs versions 1.5, 2.1 and 3.0, so it
+sample ninjs documents. It supports ninjs versions 1.6, 2.2 and 3.1, so it
 is also a handy way to see the differences between each schema version.
 
 The tool can be accessed at https://iptc.org/std/ninjs/generator/.
@@ -1979,7 +1979,7 @@ The tool can be accessed at https://iptc.org/std/ninjs/generator/.
 Ian Young of PA Media Group has created a 
 https://www.npmjs.com/package/@pa-media-group/iptc-ninjs-2-type[TypeScript type for ninjs 2]
 that can be used to ease development with ninjs in TypeScript. We plan to
-release a type for ninjs 3.0 soon.
+release a type for ninjs 3.x soon.
 
 == Mapping between ninjs and NewsML-G2
 
