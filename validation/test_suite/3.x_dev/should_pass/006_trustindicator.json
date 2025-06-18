@@ -1,0 +1,15 @@
+{
+    "uri": "urn:006_trustindicator.json",
+    "trustIndicators": [
+        {
+            "role": "http://cv.iptc.org/newscodes/trustindicator/editorialPolicy",
+            "title": "BBC News Editorial Guidelines",
+            "href": "https://www.bbc.co.uk/editorialguidelines/"
+        },
+        {
+            "role": "http://cv.iptc.org/newscodes/trustindicator/ownershipFundingInfo",
+            "title": "Wahington Post Ownership Structure",
+            "href": "https://www.washingtonpost.com/policies-and-standards/#ownershipstructure"
+        }
+    ]
+}
