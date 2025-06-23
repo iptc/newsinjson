@@ -86,22 +86,22 @@ class NinjsGenerator extends React.Component {
         if (version == "ninjs1x") {
             standard = {
                 "name": "ninjs",
-                "version": "1.5",
-                "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.5.json"
+                "version": "1.6",
+                "schema": "https://iptc.org/std/ninjs/ninjs-schema_1.6.json"
             };
             standardkey = '$standard';
         } else if (version == "ninjs2x") {
             standard = {
                 "name": "ninjs",
-                "version": "2.1",
-                "schema": "https://iptc.org/std/ninjs/ninjs-schema_2.1.json"
+                "version": "2.2",
+                "schema": "https://iptc.org/std/ninjs/ninjs-schema_2.2.json"
             };
             standardkey = 'standard';
         } else if (version == "ninjs3x") {
             standard = {
                 "name": "ninjs",
-                "version": "3.0",
-                "schema": "https://iptc.org/std/ninjs/ninjs-schema_3.0.json"
+                "version": "3.1",
+                "schema": "https://iptc.org/std/ninjs/ninjs-schema_3.1.json"
             };
             standardkey = 'standard';
         }
@@ -713,16 +713,16 @@ class NinjsGenerator extends React.Component {
                     </div>
                     <div className="col-sm-8">
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" defaultChecked name="outputformat" id="ninjs3x" value="ninjs3x" title="Output format - ninjs 3.0" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
-                            <label className="form-check-label" htmlFor="ninjs3x">ninjs 3.0</label>
+                            <input className="form-check-input" type="radio" defaultChecked name="outputformat" id="ninjs3x" value="ninjs3x" title="Output format - ninjs 3.1" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
+                            <label className="form-check-label" htmlFor="ninjs3x">ninjs 3.1</label>
                         </div>
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs2x" value="ninjs2x" title="Output format - ninjs 2.1" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
-                            <label className="form-check-label" htmlFor="ninjs2x">ninjs 2.1</label>
+                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs2x" value="ninjs2x" title="Output format - ninjs 2.2" onChange={this.handleInputChange} tabIndex="23" />&nbsp;
+                            <label className="form-check-label" htmlFor="ninjs2x">ninjs 2.2</label>
                         </div>
                         <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs1x" value="ninjs1x" title="Output format - ninjs 1.5" onChange={this.handleInputChange} tabIndex="24" />&nbsp;
-                            <label className="form-check-label" htmlFor="ninjs1x">ninjs 1.5</label>
+                            <input className="form-check-input" type="radio" name="outputformat" id="ninjs1x" value="ninjs1x" title="Output format - ninjs 1.6" onChange={this.handleInputChange} tabIndex="24" />&nbsp;
+                            <label className="form-check-label" htmlFor="ninjs1x">ninjs 1.6</label>
                         </div>
                     </div>
                 </div>

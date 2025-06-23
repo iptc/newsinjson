@@ -115,11 +115,15 @@ class TestNinJSSchema(unittest.TestCase):
         )
         ninjs1xdev_schema_filename = os.path.join(
             specification_path,
-            'ninjs-schema-dev_0.2_v1.5.json'
+            'ninjs-schema-dev_0.2_v1.6.json'
         )
         ninjs2xdev_schema_filename = os.path.join(
             specification_path,
-            'ninjs-schema-dev_0.1_v2.1.json'
+            'ninjs-schema-dev_0.1_v2.2.json'
+        )
+        ninjs3xdev_schema_filename = os.path.join(
+            specification_path,
+            'ninjs-schema-dev_0.3_v3.1.json'
         )
         with open(ninjs10_schema_filename) as schemafile:
             self.ninjs10_schema = json.load(schemafile)
@@ -149,6 +153,8 @@ class TestNinJSSchema(unittest.TestCase):
             self.ninjs1xdev_schema = json.load(schemafile)
         with open(ninjs2xdev_schema_filename) as schemafile:
             self.ninjs2xdev_schema = json.load(schemafile)
+        with open(ninjs3xdev_schema_filename) as schemafile:
+            self.ninjs3xdev_schema = json.load(schemafile)
 
         self.latest_1_x_schema = self.ninjs16_schema
         self.latest_2_x_schema = self.ninjs22_schema
@@ -238,6 +244,7 @@ class TestNinJSSchema(unittest.TestCase):
         self.assertIsNone(jsonschema.validate({"uri": "test3.1"}, self.ninjs31_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test-1.x-dev"}, self.ninjs1xdev_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test-2.x-dev"}, self.ninjs2xdev_schema))
+        self.assertIsNone(jsonschema.validate({"uri": "test-3.x-dev"}, self.ninjs3xdev_schema))
 
     def test_all_passing_unit_test_files_against_10_schema(self):
         """
@@ -565,7 +572,7 @@ class TestNinJSSchema(unittest.TestCase):
         1.x dev schema.
         They should all pass (ie they are all valid against the schema).
 
-        Also run 1.0, 1.1, 1.2, 1.3, 1.4 and 1.5 tests against the dev
+        Also run 1.0, 1.1, 1.2, 1.3, 1.4, 1.5 and 1.6 tests against the dev
         schema, because it should be backwards compatible.
         """
         self.folder_should_pass(
@@ -594,6 +601,10 @@ class TestNinJSSchema(unittest.TestCase):
         )
         self.folder_should_pass(
             schema=self.ninjs1xdev_schema,
+            folder_name=os.path.join('1.6', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs1xdev_schema,
             folder_name=os.path.join('1.x_dev', 'should_pass')
         )
 
@@ -616,6 +627,9 @@ class TestNinJSSchema(unittest.TestCase):
         2.x dev schema.
         They should all pass (ie they are all valid against the schema).
 
+        Also run 2.0, 2.1 and 2.2 tests against the dev
+        schema, because it should be backwards compatible.
+ 
         We do *not* run 1.x tests against the 2.x schema as it is
         NOT backwards compatible.
         """
@@ -623,7 +637,19 @@ class TestNinJSSchema(unittest.TestCase):
             schema=self.ninjs2xdev_schema,
             folder_name=os.path.join('2.x_dev', 'should_pass')
         )
-
+        self.folder_should_pass(
+            schema=self.ninjs2xdev_schema,
+            folder_name=os.path.join('2.0', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs2xdev_schema,
+            folder_name=os.path.join('2.1', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs2xdev_schema,
+            folder_name=os.path.join('2.2', 'should_pass')
+        )
+ 
     def test_failing_unit_test_files_against_2_x_dev_schema(self):
         """
         Run files in TEST_FILES_FOLDER/2.x_dev/should_fail against the
@@ -633,6 +659,42 @@ class TestNinJSSchema(unittest.TestCase):
         self.folder_should_fail(
             schema=self.ninjs2xdev_schema,
             folder_name=os.path.join('2.x_dev', 'should_fail')
+        )
+
+    def test_all_passing_unit_test_files_against_3_x_dev_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/3.x_dev/should_pass against the
+        3.x dev schema.
+        They should all pass (ie they are all valid against the schema).
+
+        Also run 3.0 and 3.1 tests against the dev
+        schema, because it should be backwards compatible.
+ 
+        We do *not* run 1.x or 2.x tests against the 3.x schema as it is
+        NOT backwards compatible.
+        """
+        self.folder_should_pass(
+            schema=self.ninjs3xdev_schema,
+            folder_name=os.path.join('3.x_dev', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs3xdev_schema,
+            folder_name=os.path.join('3.0', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs3xdev_schema,
+            folder_name=os.path.join('3.1', 'should_pass')
+        )
+ 
+    def test_failing_unit_test_files_against_3_x_dev_schema(self):
+        """
+        Run files in TEST_FILES_FOLDER/3.x_dev/should_fail against the
+        3.x dev schema.
+        They should all fail (ie they are all invalid in some way).
+        """
+        self.folder_should_fail(
+            schema=self.ninjs3xdev_schema,
+            folder_name=os.path.join('3.x_dev', 'should_fail')
         )
 
     def test_passing_2_0_unit_tests_against_2_0_schema(self):

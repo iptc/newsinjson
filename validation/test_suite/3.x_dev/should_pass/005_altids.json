@@ -1,0 +1,23 @@
+{
+    "uri": "urn:005_altids.json",
+    "headlines": [
+        {
+            "role": "main",
+            "value": "my new article"
+        }
+    ],
+    "altIds": [
+        {
+            "role": "mySystem",
+            "value": "A12345"
+        },
+        {
+            "role": "anything",
+            "value": "any id"
+        },
+        {
+            "role": "there are no restrictions",
+            "value": "on what roles and values we can use"
+        }
+    ]
+}

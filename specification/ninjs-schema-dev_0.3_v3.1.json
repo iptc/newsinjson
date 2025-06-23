@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://www.iptc.org/std/ninjs/ninjs-schema_3.1.json#",
+  "$id": "http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.3_3.1.json#",
   "type": "object",
-  "title": "IPTC ninjs - News in JSON - version 3.1",
+  "title": "IPTC ninjs - News in JSON - version 3.1 (development version)",
   "description": "A news item as JSON object -- copyright 2025 IPTC - International Press Telecommunications Council - www.iptc.org - This document is published under the Creative Commons Attribution 4.0 license, see  http://creativecommons.org/licenses/by/4.0/",
   "$defs": {
     "datesObjectType": {
@@ -1138,6 +1138,73 @@
                 "title": "Literal",
                 "description": "An identifier for the genre as a free-text string.",
                 "type": "string"
+              }
+            }
+          }
+        },
+        "advices": {
+          "type": "array",
+          "title": "Advices",
+          "description": "Editorial advice to the receiver of the news object. Only in dev so far. Tests with the C-POP project.",
+          "items": {
+            "description": "One advice item",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "role": {
+                "title": "Role",
+                "description": "Role of this advice.",
+                "type": "string",
+                "enum": [
+                  "publish"
+                ]
+              },
+              "environments": {
+                "type": "array", 
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "scheme": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                }
+              },
+              "importance": {
+                "type": "object",
+                "description": "Advice regarding the importance of the content from an emotional perspective. Experimental vocabulary, part of the C-POP project.",
+                "additionalProperties": false,
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "description": "Present values are: essential, useful and entertaining."
+                  },
+                  "scheme": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "http://cv.iptc.org/newscodes/advice-importance"
+                  }
+                }
+              },
+              "lifetime": {
+                "type": "object",
+                "description": "Advice regarding the length of time that the content is considered to be relevant. Experimental vocabulary, part of the C-POP project.",
+                "additionalProperties": false,
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "description": "Present values are: short, medium, long and evergreen."
+                  },
+                  "scheme": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "http://cv.iptc.org/newscodes/advice-lifetime"
+                  }
+                }
               }
             }
           }
