@@ -1,10 +1,10 @@
 {
 	"$standard": {
 	    "name": "ninjs",
-	    "version": "1.4",
-	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_1.4.json"
+	    "version": "1.6",
+	    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_1.6.json"
 	},
-	"uri": "http://ninjs.example.com/newsitems/ninjs1-4-tests",
+	"uri": "http://ninjs.example.com/newsitems/ninjs1-6-tests",
 	"headline": "Test of three new properties",
 	"headline_test_text": "Extensible headline test",
 	"description_caption_xhtml": "Extensible description test",
