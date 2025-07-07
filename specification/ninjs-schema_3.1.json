@@ -414,6 +414,9 @@
     "ninjsType": {
       "description": "The root schema of ninjs as a type to make it possible to combine schema parts.",
       "type": "object",
+      "required": [
+        "uri"
+      ],
       "properties": {
         "uri": {
           "title": "Uniform Resource Identifier",
@@ -1037,8 +1040,7 @@
               }
             },
             "required": [
-              "name",
-              "uri"
+              "name"
             ],
             "unevaluatedProperties": false
           }
@@ -1213,8 +1215,5 @@
     }
   },
   "$ref": "#/$defs/ninjsType",
-  "required": [
-    "uri"
-  ],
   "unevaluatedProperties": false
 }
