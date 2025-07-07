@@ -1210,8 +1210,7 @@
           }
         }
       }
-    },
-    "unevaluatedProperties": false
+    }
   },
   "$ref": "#/$defs/ninjsType",
   "required": [
