@@ -156,7 +156,7 @@
     ],
     "standard": {
         "name": "TTNINJS",
-        "version": "2.1",
-        "schema": "https://tt.se/spec/ttninjs/ttninjs-schema_2.1.json"
+        "version": "2.2",
+        "schema": "https://tt.se/spec/ttninjs/ttninjs-schema_2.2.json"
     }
 }
