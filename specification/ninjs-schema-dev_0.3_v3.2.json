@@ -392,6 +392,43 @@
           "title": "Bitrate",
           "description": "The bitrate of the video. Should always include units, e.g. 400 kbps.",
           "type": "string"
+        },
+        "resources": {
+          "title": "Resources",
+          "description": "Components within the rendition such as audio tracks or subtitle data.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/resourceType"
+          }
+        }
+      }
+    },
+    "resourceType": {
+      "title": "Resource type",
+      "description": "An item in a resources array within a rendition.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [ ],
+      "properties": {
+        "role": {
+          "title": "Role",
+          "description": "The role of this resource amongst the available resources: e.g. 'commentary' or 'subtitles'.",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "description": "A human-readable title for this resource such as 'English commentary'.",
+          "type": "string"
+        },
+        "language": {
+          "title": "Language",
+          "description": "The human language used by the content. The value should follow IETF BCP47.",
+          "type": "string"
+        },
+        "contentType": {
+          "title": "Content Type",
+          "description": "The IANA (Internet Assigned Numbers Authority) media type of the content of this description. Previously known as MIME Type.",
+          "type": "string"
         }
       }
     },
