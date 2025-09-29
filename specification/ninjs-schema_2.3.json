@@ -96,7 +96,7 @@
           "description": "The human language used by the content. The value should follow IETF BCP47.",
           "type": "string"
         },
-        "contentType": {
+        "contenttype": {
           "title": "Content Type",
           "description": "The IANA (Internet Assigned Numbers Authority) media type of the content of this description. Previously known as MIME Type.",
           "type": "string"
