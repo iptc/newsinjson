@@ -14,30 +14,30 @@
           "role": "https://example.com/cv/commentary",
           "title": "English commentary",
           "language": "en",
-          "contentType": "audio/aac"
+          "contenttype": "audio/aac"
         },
         {
           "role": "https://example.com/cv/commentary",
           "title": "French commentary",
           "language": "fr",
-          "contentType": "audio/aac"
+          "contenttype": "audio/aac"
         },
         {
           "role": "https://example.com/cv/ambientsound",
           "title": "Ambient sound",
-          "contentType": "audio/aac"                
+          "contenttype": "audio/aac"                
         },
         {
           "role": "https://example.com/cv/subtitle",
           "language": "en",
           "title": "English Subtitles",
-          "contentType": "text/vtt"
+          "contenttype": "text/vtt"
         },
         {
           "role": "https://example.com/cv/signed",
           "language": "sgn-GB",
           "title": "British sign language",
-          "contentType": "video/mp4"
+          "contenttype": "video/mp4"
         }
       ]
     }
