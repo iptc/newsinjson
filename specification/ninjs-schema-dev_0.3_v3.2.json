@@ -408,7 +408,6 @@
       "description": "An item in a resources array within a rendition.",
       "type": "object",
       "additionalProperties": false,
-      "required": [ ],
       "properties": {
         "role": {
           "title": "Role",
