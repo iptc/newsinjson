@@ -688,6 +688,58 @@
                 "description": "A refinement of a generic content type (i.e. IANA media type) by a literal string value. nar:remoteContent@contenttypevariant and nar:remoteContent@format",
                 "type": "string"
               },
+              "aspectratio": {
+                "title": "Aspect ratio",
+                "description": "Aspect ratio of an image or video file, which is the ratio of the pixel width to its height, such as 16:9 and 4:3.",
+                "type": "string"
+              },
+              "videocodec": {
+                "title": "Video codec",
+                "description": "The video encoding system used to create the content. Suggested CV: http://cv.iptc.org/newscodes/videocodec/",
+                "type": "string"
+              },
+              "framerate": {
+                "title": "Frame rate",
+                "description": "The number of video frames per second, which is the rate at which the material should be shown in order to achieve the intended visual effect.",
+                "type": "number"
+              },
+              "poi": {
+                "type": "object",
+                "additionalProperties": false,
+                "title": "Point of Interest",
+                "description": "The main point of interest of the rendition, expressed in pixels from the top left.",
+                "properties": {
+                  "x": {
+                    "title": "X",
+                    "description": "The x-coordinate of the point of interest of the rendition.",
+                    "type": "integer"
+                  },
+                  "y": {
+                    "title": "Y",
+                    "description": "The y-coordinate of the point of interest of the rendition.",
+                    "type": "integer"
+                  }
+                }
+              },
+              "transportprotocol": {
+                "title": "Transport protocol",
+                "description": "The transport/flow type of the flow (B2B stream).",
+                "type": "string"
+              },
+              "scantype": {
+                "title": "Scan type (video profile)",
+                "description": "The scan type of the video i.e. progressive or interlaced.",
+                "type": "string",
+                "enum": [
+                  "progressive",
+                  "interlaced"
+                ]
+              },
+              "bitrate": {
+                "title": "Bitrate",
+                "description": "The bitrate of the video. Should always include units, e.g. 400 kbps.",
+                "type": "string"
+              },
               "resources": {
                 "title": "Resources",
                 "description": "Components within the rendition such as audio tracks or subtitle data.",

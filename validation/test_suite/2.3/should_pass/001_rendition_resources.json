@@ -11,10 +11,15 @@
   "renditions": [
     {
       "name": "SRT",
+      "transportprotocol": "srtlistener",
       "href": "srt://128.0.0.1:9000",
       "contenttype": "video/MP2T",
+      "bitrate": "400 kbps",
+      "videocodec": "AVC",
+      "framerate": 60,
       "width": 1920,
       "height": 1080,
+      "scantype": "progressive",
       "resources": [
         {
           "role": "https://example.com/cv/commentary",
