@@ -1,0 +1,45 @@
+{
+  "uri": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4?qt=H1Kdh42orF&et=0a3aza9c0",
+  "type": "video",    
+  "language": "en",
+  "headline_main": "House leaders double down on impeachment positions",
+  "renditions": {
+    "SRT": {
+      "href": "srt://128.0.0.1:9000",
+      "mimetype": "video/MP2T",
+      "width": 1920,
+      "height": 1080,
+      "resources": [
+        {
+          "role": "https://example.com/cv/commentary",
+          "title": "English commentary",
+          "language": "en",
+          "contenttype": "audio/aac"
+        },
+        {
+          "role": "https://example.com/cv/commentary",
+          "title": "French commentary",
+          "language": "fr",
+          "contenttype": "audio/aac"
+        },
+        {
+          "role": "https://example.com/cv/ambientsound",
+          "title": "Ambient sound",
+          "contenttype": "audio/aac"                
+        },
+        {
+          "role": "https://example.com/cv/subtitle",
+          "language": "en",
+          "title": "English Subtitles",
+          "contenttype": "text/vtt"
+        },
+        {
+          "role": "https://example.com/cv/signed",
+          "language": "sgn-GB",
+          "title": "British sign language",
+          "contenttype": "video/mp4"
+        }
+      ]
+    }
+  }
+}

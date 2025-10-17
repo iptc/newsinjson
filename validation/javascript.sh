@@ -27,6 +27,20 @@ validate_folder_against_schema () {
 
 cd "$(dirname "$0")"
 
+echo "--- ninjs 3.2 tests ---"
+echo
+
+echo "The following tests should pass:"
+validate_folder_against_schema draft2020 'test_suite/3.2/should_pass' '../specification/ninjs-schema_3.2.json' valid
+validate_folder_against_schema draft2020 'test_suite/3.1/should_pass' '../specification/ninjs-schema_3.2.json' valid
+validate_folder_against_schema draft2020 'test_suite/3.0/should_pass' '../specification/ninjs-schema_3.2.json' valid
+validate_folder_against_schema draft2020 '../examples/3.0' '../specification/ninjs-schema_3.1.json' valid
+
+echo "The following examples should fail validation:"
+validate_folder_against_schema draft2020 'test_suite/3.2/should_fail' '../specification/ninjs-schema_3.2.json' invalid
+validate_folder_against_schema draft2020 'test_suite/3.1/should_fail' '../specification/ninjs-schema_3.2.json' invalid
+validate_folder_against_schema draft2020 'test_suite/3.0/should_fail' '../specification/ninjs-schema_3.2.json' invalid
+
 echo "--- ninjs 3.1 tests ---"
 echo
 
