@@ -6,9 +6,9 @@ The IPTC maintains a schema for each release of the ninjs standard. IPTC ninjs
 schemas can be found [here](http://www.iptc.org/std/ninjs/).
 
 The most recent ninjs specification files areavailable at
-http://www.iptc.org/std/ninjs/ninjs-schema_1.5.json
-http://www.iptc.org/std/ninjs/ninjs-schema_2.1.json
-http://www.iptc.org/std/ninjs/ninjs-schema_3.0.json
+http://www.iptc.org/std/ninjs/ninjs-schema_1.7.json
+http://www.iptc.org/std/ninjs/ninjs-schema_2.3.json
+http://www.iptc.org/std/ninjs/ninjs-schema_3.2.json
 
 # Test Suite
 

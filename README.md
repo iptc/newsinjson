@@ -20,14 +20,14 @@ The `examples` folder contains example files, including some supplied
 by Business Wire. Examples show how NewsML 1.2 files convert to their
 equivalents in ninjs.
 
-Three versions of ninjs: ninjs 1.6, ninjs 2.2 and ninjs 3.1
+Three versions of ninjs: ninjs 1.7, ninjs 2.3 and ninjs 3.2
 -------------------------
 
 This repository specifies all versions of ninjs.
 
 The 1.x series adds new features to the version of ninjs that started
 with ninjs 1.0 back in 2013, in a way that is fully backwards
-compatible. The latest release in this series is 1.6.
+compatible. The latest release in this series is 1.7.
 
 The 2.x series fixes some issues that made the 1.x series tricky for
 developers to work with. The main change is that we avoid the use of
@@ -42,36 +42,34 @@ meant breaking backwards-compatibility with the 1.x versions of ninjs.
 This is why we increased the major version number to 2.0.
 
 The 2.0 version of ninjs was approved by the IPTC Standards Committee on
-October 20th, 2021. An erratum update was made in May 2022 to fix a
-problem with the way GeoJSON properties were integrated into the "places"
-object. Version 2.1 was approved in May 2023 and 2.2 in May 2025.
+October 20th, 2021. The latest in this series is version 2.3, approved
+in October 2025.
 
 The 3.x series is a major update to ninjs, which is not backwards compatible.
 
-Version 3.0 offers three document types: the existing "news item" and new 
+Version 3.x offers three document types: the existing "news item" and new 
 document types for events and planning items. For improved readability and
 to align with general best practice for variable naming and graphQL the
 properties now use "camelCase".
 
-The 3.0 version of ninjs was approved by the IPTC Standards Committee on
-October 2nd, 2024. An erratum update (version 3.0.1) was made in February
-2025 to correct the datatype of the "urgency" property.
+The 3.0 version of ninjs was approved by the IPTC Standards Committee in
+October 2024. The latest in the series is 3.2, approved in October 2025.
 
-Versions 1.6, 2.2 and 3.1, approved in May 2025, add the digitalSourceType
-property to all versions of ninjs.
+Versions 1.7, 2.2 and 3.1, approved in October 2025, add the "resources"
+array to "renditions" in all versions of ninjs.
 
 Which version should I choose for my project?
 -------------------------
 
-If you are starting a green-field project, we recommend using ninjs 3.1.
+If you are starting a green-field project, we recommend using ninjs 3.2.
 This version should be easiest for developers to work with.
 
 If you are already using a 1.x version of ninjs, we recommend at least
-upgrading to version 1.6. This should be an easy change, because 1.6 is
+upgrading to version 1.7. This should be an easy change, because 1.7 is
 backwards-compatible with all previous versions of 1.x.
 
 Similarly, if you are already using a 2.x version of ninjs, we recommend
-using version 2.2 if you cannot upgrade to the 3.x branch.
+using version 2.3 if you cannot upgrade to the 3.x branch.
 
 Protocol Buffers demo
 ---------------------
@@ -109,7 +107,7 @@ Additionaly the same unit test suite can be run via Javascript with the followin
 Dev schema
 ----------
 
-"Development" versions of the 1.5 schema and 2.0 schema are available
+"Development" versions of the 1.x schema and 2.x schemas are available
 in the `specification` folder and at 
 http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.1_v2.0.json
 http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.2_v1.4.json
@@ -122,6 +120,6 @@ ninjs Generator
 ---------------
 
 In the `generator` folder is the source code to the ninjs generator, a
-user-facing tool to generate sample ninjs files in either ninjs 1.6, 2.2 or 3.1.
+user-facing tool to generate sample ninjs files in either ninjs 1.7, 2.3 or 3.2.
 
 The tool is hosted at https://www.iptc.org/std/ninjs/generator/
