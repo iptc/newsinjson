@@ -1,0 +1,146 @@
+{
+    "uri": "https://internal-repository-xxxx/2.1234567",
+    "profile": "asset",
+    "type": "picture",
+    "version": "1",
+    "representationtype": "full",
+    "firstcreated": "2020-10-27T15:35:19Z",
+    "versioncreated": "2020-10-27T15:35:19Z",
+    "pubstatus": "usable",
+    "language": "en",
+    "by": "Insidefoto",
+    "headlines": [
+        {
+            "role": "main",
+            "value": "Italy: Italy Demonstration of the workers congresses and conferences"
+        }
+    ],
+    "descriptions": [
+        {
+            "role": "writer",
+            "value": "www.insidefoto.com"
+        },
+        {
+            "role": "text",
+            "value": "Demonstration of the workers of congresses and conferences against he measures taken by the Government that closed all the sporting centers to contrast the Covid-19 emergency.\nRome (Italy), October 27th 2020\nPhoto Samantha Zucchi /Insidefoto/Sipa USA)"
+        }
+    ],
+    "bodies": [
+        {
+            "role": "text",
+            "contenttype": "text/plain",
+            "value": "Demonstration of the workers of congresses and conferences against he measures taken by the Government that closed all the sporting centers to contrast the Covid-19 emergency.\nRome (Italy), October 27th 2020\nPhoto Samantha Zucchi /Insidefoto/Sipa USA)"
+        },
+        {
+            "role": "xhtml",
+            "contenttype": "text/html",
+            "value": "<body><p>GROSSETO, Italy (AP) -- The trial of the captain of the shipwrecked Costa Concordia cruise liner has begun in a theater converted into a courtroom in Tuscany to accommodate all the survivors and relatives of the 32 victims who want to see justice carried out in the 2012 tragedy.</p><p>The sole defendant, Francesco Schettino, his eyes shaded by sunglasses and slipping into a back door, made no comment to reporters as he arrived for his trial Tuesday on charges of multiple manslaughter, abandoning ship and causing the shipwreck near the island of Giglio.</p><p>His lawyer, Domenico Pepe, told reporters that, as expected, the judge was postponing the hearing due to an eight-day nationwide lawyers' strike.</p><p>Pepe said some 1,000 witnesses are expected to eventually testify. Many of them are expected to be from among the 4,2000 passengers and crew aboard the ship that struck a jagged reef off Giglio, took on water and capsized. Schettino has denied wrongdoing.</p></body>"
+        }
+    ],
+    "copyrightholder": "SIPA USA",
+    "copyrightnotice": "SIPA USA/PA Images",
+    "usageterms": "*** World Rights Except Italy ***",
+    "subjects": [
+        {
+            "literal": "paimagescategory:a",
+            "name": "News",
+            "uri": "http://images-repository/v1/subject/paimagescategory:a",
+            "rel": "partOf"
+        },
+        {
+            "literal": "paimagescategory:a:general-news",
+            "name": "General News",
+            "uri": "http://images-repository/v1/subject/paimagescategory:a:general-news",
+            "rel": "partOf"
+        },
+        {
+            "literal": "paimageskeyword:rome",
+            "name": "rome",
+            "uri": "http://images-repository/v1/subject/paimageskeyword:rome",
+            "rel": "about"
+        },
+        {
+            "literal": "paimageskeyword:italy",
+            "name": "italy",
+            "uri": "http://images-repository/v1/subject/paimageskeyword:italy",
+            "rel": "about"
+        },
+        {
+            "literal": "paimageskeyword:politics",
+            "name": "politics",
+            "uri": "http://images-repository/v1/subject/paimageskeyword:politics",
+            "rel": "about"
+        },
+        {
+            "literal": "paimageskeyword:face-masks",
+            "name": "face masks",
+            "uri": "http://images-repository/v1/subject/paimageskeyword:face-masks",
+            "rel": "about"
+        },
+        {
+            "literal": "paimageskeyword:covid-19",
+            "name": "covid-19",
+            "uri": "http://images-repository/v1/subject/paimageskeyword:covid-19",
+            "rel": "about"
+        },
+        {
+            "literal": "paimageskeyword:man",
+            "name": "man",
+            "uri": "http://images-repository/v1/subject/paimageskeyword:man",
+            "rel": "about"
+        },
+        {
+            "literal": "paimageskeyword:woman",
+            "name": "woman",
+            "uri": "http://images-repository/v1/subject/paimageskeyword:woma",
+            "rel": "about"
+        },
+        {
+            "literal": "paimageskeyword:women",
+            "name": "women",
+            "uri": "http://images-repository/v1/subject/paimageskeyword:women",
+            "rel": "about"
+        }
+    ],
+    "places": [
+        {
+            "literal": "city:rome",
+            "name": "Rome",
+            "uri": "http://images-repository/v1/place/city:rome",
+            "rel": "mentions"
+        }
+    ],
+    "objects": [
+        {
+            "literal": "2.1234567",
+            "uri": "https://www.paimages.co.uk/2.1234567",
+            "rel": "source"
+        },
+        {
+            "literal": "paimagescopyright:573",
+            "uri": "http://images-repository/v1/object/paimagescopyright:573",
+            "rel": "classifiedAs",
+            "name": "SIPA USA"
+        },
+        {
+            "literal": "paimagescontributor:sipausa",
+            "uri": "http://images-repository/v1/object/paimagescontributor:sipausa",
+            "rel": "contributedBy"
+        },
+        {
+            "literal": "filename:sipa-20201027-153349-sipausa_11111111.jpg",
+            "uri": "http://images-repository/v1/object/filename:sipa-20201027-153349-sipausa_11111111.jpg",
+            "rel": "suppliedAs",
+            "name": "sipa-20201027-153349-sipausa_11111111.jpg"
+        }
+    ],
+    "renditions": [
+        {
+            "name": "supplied",
+            "href": "https://XXXXXX.amazonaws.com/sipa-20201027-153349-sipausa_31238900.jpg?AWSAccessKeyId=XXXX&Expires=1621756446&Signature=XXXX",
+            "contenttype": "image/jpeg",
+            "width": 3543,
+            "height": 2362
+        }
+    ]
+}

@@ -1,0 +1,157 @@
+{
+    "uri": "http://tt.se/media/text/210526-militarovning-a0f2d045",
+    "type": "text",
+    "altIds": [ {"role": "originaltransmissionreference", "value": "a0f2d045-1058-46d1-9f9a-ad80ed1bc86f"}],
+    "representationType": "full",
+    "genres": [
+        {
+            "literal": "INR",
+            "uri": "http://tt.se/spec/sector/1.0/INR",
+            "name": "Inrikes"
+        }
+    ],
+    "profile": "PUBL",
+    "version": "1",
+    "versionCreated": "2021-05-26T13:40:18+02:00",
+    "pubStatus": "usable",
+    "copyrightHolder": "TT",
+    "language": "sv",
+    "urgency": 3,
+    "slugline": "militärövning",
+    "headlines": [
+      {
+          "role": "main",
+          "value": "Militärövning i jätteformat hålls 2023"
+      }  
+    ],
+    "descriptions": [
+        {
+            "role": "text",
+            "value": "Pandemin satte stopp för den stora internationella militärövningen Aurora 2020 förra våren. Redan då sade Försvarsmakten att den skulle genomföras senare och nu står det klart att det blir 2023, rapporterar Sydöstran . \u2013 Aurora 2023 kommer att genomföra"
+        }
+    ],
+    "bodies": [
+        {
+            "role": "text",
+            "charCount": 985,
+            "contentType": "text/plain",
+            "value": "Militärövning i jätteformat hålls 2023\nFörsvar TT\nPandemin satte stopp för den stora internationella militärövningen Aurora 2020 förra våren. Redan då sade Försvarsmakten att den skulle genomföras senare och nu står det klart att det blir 2023, rapporterar Sydöstran.\n\u2013 Aurora 2023 kommer att genomföras ungefär samma period som Aurora 20 var tänkt, det vill säga i april-maj, med fokus på södra Sverige och Gotland. Men hela landet kommer i olika omfattning att beröras, säger Jonas Svensson, kommunikationschef för Aurora 23, till TT.\nAurora 20 skulle omfatta 25\u2009000 deltagare från totalt 13 nationer och bli den största svenska försvarsövningen på decennier. Mycket är fortfarande oklart när det gäller Aurora 23 då planeringen pågår just nu, berättar Jonas Svensson.\n\u2013 Precis som den gången har vi inlett en dialog med ett antal internationella partners, inte minst Finland. Men det är alldeles för tidigt att säga i vilken omfattning och vilka internationella partners som deltar."
+        },
+        {
+            "role": "html5",
+            "contentType": "text/html",
+            "charCount": 1170,
+            "value": "<html><head><title>Militärövning i jätteformat hålls 2023</title></head><body><article> <section data-charCount=\"1751\"> <h1>Militärövning i jätteformat hålls 2023</h1><div class=\"dat\"><span class=\"vignette\">Försvar</span><span class=\"source\">TT</span></div><div class=\"bodytext\"> <p>Pandemin satte stopp för den stora internationella militärövningen Aurora 2020 förra våren. Redan då sade Försvarsmakten att den skulle genomföras senare och nu står det klart att det blir 2023, rapporterar <a href=\"https://www.sydostran.se/nyheter/beskedet-da-genomfors-forsvarsmaktens-jatteovning-13d95038/\">Sydöstran</a>.</p><blockquote>Aurora 2023 kommer att genomföras ungefär samma period som Aurora 20 var tänkt, det vill säga i april-maj, med fokus på södra Sverige och Gotland. Men hela landet kommer i olika omfattning att beröras, säger Jonas Svensson, kommunikationschef för Aurora 23, till TT.</blockquote> <p>Aurora 20 skulle omfatta 25 000 deltagare från totalt 13 nationer och bli den största svenska försvarsövningen på decennier. Mycket är fortfarande oklart när det gäller Aurora 23 då planeringen pågår just nu, berättar Jonas Svensson.</p><blockquote>Precis som den gången har vi inlett en dialog med ett antal internationella partners, inte minst Finland. Men det är alldeles för tidigt att säga i vilken omfattning och vilka internationella partners som deltar.</blockquote></div> <figure><img uri=\"sdlk2sirkPaauM\" src=\"https://thumbnail.tt.se/media/text/210526-militarovning-a0f2d045/a001_NormalThumbnail.jpg\" alt=\"En stor internationell försvarsövning planeras 2023 med fokus på södra Sverige och Gotland. Arkivbild från militärövningen Aurora 17.\" data-assoc-ref=\"a001\" data-uri=\"http://tt.se/media/image/sdlk2sirkPaauM\" data-preview-src=\"https://beta.tt.se/media/text/210526-militarovning-a0f2d045/a001_NormalPreview.jpg\"/><div class=\"byline\">Karl Melander/TT</div><figcaption>En stor internationell försvarsövning planeras 2023 med fokus på södra Sverige och Gotland. Arkivbild från militärövningen Aurora 17.</figcaption></figure> </section> </article></body></html>"
+        },
+        {
+            "role": "ttnitf",
+            "contentType": "application/xml",
+            "charCount": 1170,
+            "value": "<TTNITF><HEAD><MODVER ID=\"1:00\" VER=\"04\"><DEST ID=\"1:05\">ALL</DEST><FIFO ID=\"1:20\" FFNO=\"27\"><FIFOVER ID=\"1:22\" FFVERNO=\"03\"><SERVID ID=\"1:30\">TT</SERVID><NR ID=\"1:40\">a0f2d045-1058-46d1-9f9a-ad80ed1bc86f</NR><PRODID ID=\"1:50\" TKOD=\"INR\"><DATESENT ID=\"1:70\">20210526</DATESENT><TIMESENT ID=\"1:80\">134018+0200</TIMESENT><UNO ID=\"1:100\">20210526:TT:a0f2d045:0</UNO><RECVER ID=\"2:00\" VERNO=\"04\"><TEXTTYP ID=\"2:03\">01:PUBL</TEXTTYP><SLUGG ID=\"2:05\">milit&auml;r&ouml;vning</SLUGG><URG ID=\"2:10\" PRIO=\"3\"><SUBREF ID=\"2:12\">TT:16000000:ORO</SUBREF><HEADLINE ID=\"2:105\">Milit&auml;r&ouml;vning i j&auml;tteformat h&aring;lls 2023</HEADLINE><HSOURCE ID=\"2:115\">TT</HSOURCE><CAPTION ID=\"2:120\">Pandemin satte stopp f&ouml;r den stora internationella milit&auml;r&ouml;vningen Aurora 2020 f&ouml;rra v&aring;ren. Redan d&aring; sade F&ouml;rsvarsmakten att den skulle genomf&ouml;ras senare och nu st&aring;r det klart att det blir 2023, rapporterar Syd&ouml;stran . &tstr; Aurora 2023 kommer att genomf&ouml;ra</CAPTION><WRITER ID=\"2:122\">mir</WRITER><LANG ID=\"2:135\">sv</LANG><SIZEMODE ID=\"7:10\" SIZMOD=\"1\"><MAXSUBSIZE ID=\"7:20\">2940</MAXSUBSIZE><SIZEANNO ID=\"7:90\">985</SIZEANNO></HEAD><BODY ID=\"8:10\"><TEXT><RUBRIK>Milit&auml;r&ouml;vning i j&auml;tteformat h&aring;lls 2023</RUBRIK><DAT><ORT>F&ouml;rsvar</ORT><SOURCE>TT</SOURCE></DAT><BRODTEXT> <P>Pandemin satte stopp f&ouml;r den stora internationella milit&auml;r&ouml;vningen Aurora 2020 f&ouml;rra v&aring;ren. Redan d&aring; sade F&ouml;rsvarsmakten att den skulle genomf&ouml;ras senare och nu st&aring;r det klart att det blir 2023, rapporterar Syd&ouml;stran.</P><CITAT>Aurora 2023 kommer att genomf&ouml;ras ungef&auml;r samma period som Aurora 20 var t&auml;nkt, det vill s&auml;ga i april-maj, med fokus p&aring; s&ouml;dra Sverige och Gotland. Men hela landet kommer i olika omfattning att ber&ouml;ras, s&auml;ger Jonas Svensson, kommunikationschef f&ouml;r Aurora 23, till TT.</CITAT> <P>Aurora 20 skulle omfatta 25&nbsp;000 deltagare fr&aring;n totalt 13 nationer och bli den st&ouml;rsta svenska f&ouml;rsvars&ouml;vningen p&aring; decennier. Mycket &auml;r fortfarande oklart n&auml;r det g&auml;ller Aurora 23 d&aring; planeringen p&aring;g&aring;r just nu, ber&auml;ttar Jonas Svensson.</P><CITAT>Precis som den g&aring;ngen har vi inlett en dialog med ett antal internationella partners, inte minst Finland. Men det &auml;r alldeles f&ouml;r tidigt att s&auml;ga i vilken omfattning och vilka internationella partners som deltar.</CITAT></BRODTEXT><BILD><BILDFIL>http://tt.se/media/image/sdlk2sirkPaauM</BILDFIL><BILDTEXT><P>En stor internationell f&ouml;rsvars&ouml;vning planeras 2023 med fokus p&aring; s&ouml;dra Sverige och Gotland. Arkivbild fr&aring;n milit&auml;r&ouml;vningen Aurora 17.</P></BILDTEXT><BILDSKAPARE>Karl Melander/TT</BILDSKAPARE></BILD></TEXT></BODY><ENDSIZE ID=\"9:10\">985</ENDSIZE></TTNITF>"
+        },
+        {
+            "role": "richhtml5",
+            "contentType": "text/html",
+            "charCount": 1170,
+            "value": "<html><head><title>Militärövning i jätteformat hålls 2023</title></head><body><article> <section data-charCount=\"1536\"> <h1>Militärövning i jätteformat hålls 2023</h1><div class=\"dat\"><span class=\"vignette\">Försvar</span><span class=\"source\">TT</span></div><div class=\"bodytext\"> <figure><img uri=\"sdlk2sirkPaauM\" src=\"https://thumbnail.tt.se/media/text/210526-militarovning-a0f2d045/a001_NormalThumbnail.jpg\" alt=\"En stor internationell försvarsövning planeras 2023 med fokus på södra Sverige och Gotland. Arkivbild från militärövningen Aurora 17.\" data-assoc-ref=\"a001\" data-uri=\"http://tt.se/media/image/sdlk2sirkPaauM\" data-preview-src=\"https://beta.tt.se/media/text/210526-militarovning-a0f2d045/a001_NormalPreview.jpg\"/><div class=\"byline\">Karl Melander/TT</div><figcaption>En stor internationell försvarsövning planeras 2023 med fokus på södra Sverige och Gotland. Arkivbild från militärövningen Aurora 17.</figcaption></figure><p>Pandemin satte stopp för den stora internationella militärövningen Aurora 2020 förra våren. Redan då sade Försvarsmakten att den skulle genomföras senare och nu står det klart att det blir 2023, rapporterar <a href=\"https://www.sydostran.se/nyheter/beskedet-da-genomfors-forsvarsmaktens-jatteovning-13d95038/\">Sydöstran</a>.</p><blockquote>Aurora 2023 kommer att genomföras ungefär samma period som Aurora 20 var tänkt, det vill säga i april-maj, med fokus på södra Sverige och Gotland. Men hela landet kommer i olika omfattning att beröras, säger Jonas Svensson, kommunikationschef för Aurora 23, till TT.</blockquote><p>Aurora 20 skulle omfatta 25 000 deltagare från totalt 13 nationer och bli den största svenska försvarsövningen på decennier. Mycket är fortfarande oklart när det gäller Aurora 23 då planeringen pågår just nu, berättar Jonas Svensson.</p><blockquote>Precis som den gången har vi inlett en dialog med ett antal internationella partners, inte minst Finland. Men det är alldeles för tidigt att säga i vilken omfattning och vilka internationella partners som deltar.</blockquote></div> </section> </article></body></html>\n        \n    "
+        }
+    ],
+    "associations": [
+        { "name": "a001",
+          "by": "Karl Melander/TT",
+          "descriptions": [{"value": "En stor internationell försvarsövning planeras 2023 med fokus på södra Sverige och Gotland. Arkivbild från militärövningen Aurora 17."}],
+          "representationType": "partial",
+          "type": "picture",
+          "uri": "http://tt.se/media/image/sdlk2sirkPaauM",
+    
+          "renditions": [
+            { "name":"r00", 
+              "title": "Hires",
+              "contentType": "image/jpeg",
+              "href": "https://beta.tt.se/media/text/210526-militarovning-a0f2d045/a001_NormalHires.jpg",
+              "sizeInBytes": 10326191,
+              "width": 4724,
+              "height": 3149
+            },
+            { "name":"r01",
+              "title": "Preview",
+              "contentType": "image/jpeg",
+              "href": "https://beta.tt.se/media/text/210526-militarovning-a0f2d045/a001_NormalPreview.jpg",
+              "sizeInBytes": 398957,
+              "width": 1024,
+              "height": 683
+            },
+            { "name":"r02",
+              "title": "Preview",
+              "contentType": "image/jpeg",
+              "href": "https://beta.tt.se/media/text/210526-militarovning-a0f2d045/a001_WatermarkPreview.jpg",
+              "sizeInBytes": 398957,
+              "width": 1024,
+              "height": 683
+            },
+            { "name":"r03",
+              "title": "Thumbnail",
+              "contentType": "image/jpeg",
+              "href": "https://thumbnail.tt.se/media/text/210526-militarovning-a0f2d045/a001_NormalThumbnail.jpg",
+              "sizeInBytes": 32491,
+              "width": 256,
+              "height": 171
+            }
+        ]
+      }
+    ],
+    "people": [
+        {
+            "name": "Jonas Svensson",
+            "contactInfo": [
+              {
+              "type":"phone",
+              "role": "work",
+              "value": "+46 (0)8-7887500"
+              }
+            ]
+        }
+    ],
+    "organisations": [
+        {
+            "name": "Aurora"
+        }
+    ],
+    "subjects": [
+        {
+            "literal": "16000000",
+            "name": "Krig, konflikter och oroligheter",
+            "uri": "http://tt.se/spec/subref/1.0/16000000",
+            "rel": "classifies",
+            "creator": "system",
+            "relevance": 98,
+            "confidence": 58
+        }
+    ],
+    "expires": "2023-05-31T00:00:00+02:00",
+    "places": [
+        {
+            "name": "Sverige"
+        },
+        {
+            "geoJSON": {
+                "coordinates": [
+                    18.2979,
+                    57.6381
+                ],
+                "type": "Point"
+            },
+            "name": "Gotland"
+        },
+        {
+            "geoJSON": {
+                "coordinates": [
+                    25.748151,
+                    61.92411
+                ],
+                "type": "Point"
+            },
+            "name": "Finland"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "uri": "http://www.businesswire.com/news/home/20130605006126/zh",
+    "type": "text",
+    "version": "1",
+    "versioncreated": "2013-06-05T21:00:00Z",
+    "language": "zh",
+    "subjects": [
+        {
+            "name": "United States",
+            "rel": "about"
+        },
+        {
+            "name": "Technology",
+            "rel": "about"
+        },
+        {
+            "name": "Consumer Electronics",
+            "rel": "about"
+        },
+        {
+            "name": "North America",
+            "rel": "about"
+        },
+        {
+            "name": "Hardware",
+            "rel": "about"
+        },
+        {
+            "name": "Audio/Video",
+            "rel": "about"
+        },
+        {
+            "name": "Nanotechnology",
+            "rel": "about"
+        },
+        {
+            "name": "Semiconductor",
+            "rel": "about"
+        },
+        {
+            "name": "California",
+            "rel": "about"
+        },
+        {
+            "name": "Award",
+            "rel": "about"
+        },
+        {
+            "name": "Manufacturing",
+            "rel": "about"
+        },
+        {
+            "name": "Chemicals/Plastics",
+            "rel": "about"
+        },
+        {
+            "name": "Engineering",
+            "rel": "about"
+        }
+    ],
+    "headlines": [
+        {
+            "role": "main",
+            "value": "Cambrios被Gartner評選為「最酷供應商」"
+        }
+    ],
+    "bodies": [
+        {
+            "role": "xhtml",
+            "contenttype": "text/html",
+            "value": "\n      (美國商業資訊)--為透明及軟性導體市場提供銀奈米線解決方案的領導廠商Cambrios Technologies \n      Corporation今天宣布，該公司最近被Gartner評選為「最酷供應商」(Cool Vendor)。\n    "
+        }
+    ]
+}

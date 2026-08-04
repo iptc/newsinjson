@@ -1,0 +1,33 @@
+{
+  "uri": "urn:ap:content:b2b6c3f4642f46deac7509d4db315ca0",
+  "type": "picture",
+  "title": "Turkey Islamic State",
+  "renditions": {
+    "main": {
+      "title": "Full Resolution",
+      "format": "JPEG Baseline",
+      "mimetype": "image/jpeg",
+      "width": 3000,
+      "height": 2208,
+      "sizeinbytes": 4764958,
+      "href": "https://na.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+      "extensions": {
+        "mirror:eu": "https://eu.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "mirror:asia": "https://asia.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "backup": "https://backup.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "rights:embargo": "2024-11-20T00:00:00Z",
+        "rights:territory": "worldwide",
+        "cdn:expires": "2024-12-01T00:00:00Z",
+        "hash:sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "preview": {
+      "title": "Preview",
+      "format": "JPEG Baseline",
+      "mimetype": "image/jpeg",
+      "width": 512,
+      "height": 377,
+      "href": "https://cdn.ap.org/media/b2b6c3f4642f46deac7509d4db315ca0/preview.jpg"
+    }
+  }
+}

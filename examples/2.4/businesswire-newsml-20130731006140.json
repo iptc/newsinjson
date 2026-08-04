@@ -1,0 +1,147 @@
+
+{
+    "uri": "http://www.businesswire.com/news/home/20130731006140/en",
+    "type": "composite",
+    "version": "1",
+    "versioncreated": "2013-07-31T15:32:00Z",
+    "language": "en",
+    "subjects": [
+        {
+            "name": "Other Consumer",
+            "rel": "about"
+        },
+        {
+            "name": "United States",
+            "rel": "about"
+        },
+        {
+            "name": "North America",
+            "rel": "about"
+        },
+        {
+            "name": "Restaurant/Bar",
+            "rel": "about"
+        },
+        {
+            "name": "Product/Service",
+            "rel": "about"
+        },
+        {
+            "name": "Photo/Multimedia",
+            "rel": "about"
+        },
+        {
+            "name": "Missouri",
+            "rel": "about"
+        },
+        {
+            "name": "Retail",
+            "rel": "about"
+        },
+        {
+            "name": "Food/Beverage",
+            "rel": "about"
+        },
+        {
+            "name": "Consumer",
+            "rel": "about"
+        }
+    ],
+    "headlines": [
+        {
+            "role": "main",
+            "value": "Lunch Taking a Toll? Let Applebee\u2019s® Industrial Strength Lunch Decoy Stand In"
+        }
+    ],
+    "bodies": [
+        {
+            "role": "xhtml",
+            "contenttype": "text/html",
+            "value": "With more Applebee\u2019s<sup >®</sup> Lunch Combos than ever \u2013 enough to try \n      a new combination every workday for a year \u2013 America\u2019s favorite \n      neighborhood grill and bar this week unveiled a stronger, longer-lasting \n      Industrial Strength Lunch Decoy that is 20 percent thicker than the \n      original, which sold out in weeks last summer."
+        }
+    ],
+    "associations": [
+        {
+            "name": "logo",                       
+            "uri": "http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
+            "type": "graphic",
+            "versioncreated": "2013-07-31T15:32:00Z",
+            "renditions": [
+                {
+                    "name": "thumbnail",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/372964/2/AB_LOGO_thumbnail.jpg",
+                    "contenttype": "image/jpeg",
+                    "height": 70,
+                    "width": 107,
+                    "sizeinbytes": 6753
+                },
+                {
+                    "name": "viewimage",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/372964/3/AB_LOGO_viewimage.jpg",
+                    "contenttype": "image/jpeg",
+                    "height": 94,
+                    "width": 144,
+                    "sizeinbytes": 10330
+                },
+                {
+                    "name": "lowres",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/372964/4/AB_LOGO_webready.jpg",
+                    "contenttype": "image/jpeg",
+                    "height": 141,
+                    "width": 216,
+                    "sizeinbytes": 17930
+                }
+            ]
+        },
+        {
+            "name": "video",
+            "uri": "http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg",
+            "type": "video",
+            "versioncreated": "2013-07-31T15:32:00Z",
+            "renditions": [
+                {
+                    "name": "thumbnail",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/377719/2/Applebees-72.jpg",
+                    "contenttype": "image/jpeg",
+                    "height": 41,
+                    "width": 72,
+                    "sizeinbytes": 28094
+                },
+                {
+                    "name": "viewimage",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/377719/3/Applebees-144.jpg",
+                    "contenttype": "image/jpeg",
+                    "height": 81,
+                    "width": 144,
+                    "sizeinbytes": 42098
+                },
+                {
+                    "name": "highres",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/377719/5/Applebees-640.jpg",
+                    "contenttype": "image/jpeg",
+                    "height": 360,
+                    "width": 640,
+                    "sizeinbytes": 197827
+                },
+                {
+                    "name": "wmv",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/377719/11/1730461_Lunch_Decoy_Extended_WMV+1Mbps.wmv",
+                    "contenttype": "video/x-ms-wmv",
+                    "sizeinbytes": 14390033
+                },
+                {
+                    "name": "mov",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/377719/13/1730461_Lunch_Decoy_Extended_QT+360p+%2816x9%29.mov",
+                    "contenttype": "video/quicktime",
+                    "sizeinbytes": 13462929
+                },
+                {
+                    "name": "mp4",
+                    "href": "http://mms.businesswire.com/media/newsItemId/en/377719/19/1730461_Lunch_Decoy_Extended_MP4+1Mbps+import.mp4",
+                    "contenttype": "video/mp4",
+                    "sizeinbytes": 12673045
+                }
+            ]
+        }
+    ]
+}

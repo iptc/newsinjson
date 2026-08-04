@@ -1,0 +1,10 @@
+{
+  "uri": "http://ninjs.example.com/newsitems/ninjs3-2-tests-fail-001",
+  "headlines": [
+    {
+      "role": "main",
+      "value": "Malformed contentDigitised 1"
+    }
+  ],
+  "contentDigitised": { "start": "2022-04-21" }
+}
