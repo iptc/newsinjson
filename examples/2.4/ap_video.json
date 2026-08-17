@@ -1,0 +1,226 @@
+{
+    "uri": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4?qt=H1Kdh42orF&et=0a3aza9c0",
+    "type": "video",
+    "version": "0",
+    "firstcreated": "2019-11-14T18:50:56Z",
+    "versioncreated": "2019-11-14T18:50:57Z",
+    "pubstatus": "usable",
+    "copyrightnotice": "Copyright 2019 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+    "usageterms": "This content is intended for editorial use only. For other uses, additional clearances may be required. International: AP Clients Only | US: AP Clients Only / This video may not be edited",
+    "ednote": "APWhollyOwned",
+    "language": "en",
+    "descriptions": [
+        {
+            "role": "caption",
+            "value": "As the Trump impeachment hearings go public, House Democrats are refining the case against the president to a simple allegation: Bribery. Meanwhile, Republicans are dismissing the testimony so far as hearsay, at best second-hand information. (Nov. 14)"
+        }
+    ],
+    "headlines": [
+        {
+            "role": "main",
+            "value": "House leaders double down on impeachment positions"
+        }
+    ],
+    "people": [
+        {
+            "literal": "850c8ab4e24d4c128250621e377c83dd",
+            "name": "Nancy Pelosi",
+            "uri": "http://cv.ap.org/id/850c8ab4e24d4c128250621e377c83dd"
+        },
+        {
+            "literal": "42fcd5108d2610048a34f7ae5e3ffd3e",
+            "name": "Joe Biden",
+            "uri": "http://cv.ap.org/id/42fcd5108d2610048a34f7ae5e3ffd3e"
+        },
+        {
+            "literal": "a6331b54c46e4ca8b79fa40fada95db5",
+            "name": "Donald Trump",
+            "uri": "http://cv.ap.org/id/a6331b54c46e4ca8b79fa40fada95db5"
+        }
+    ],
+    "places": [
+        {
+            "literal": "661cd9087d5b10048265c076b8e3055c",
+            "name": "Ukraine",
+            "uri": "http://cv.ap.org/id/661cd9087d5b10048265c076b8e3055c",
+            "geojson": {
+                "type": "Point",
+                "coordinates": [
+                    32,
+                    49
+                ]
+            }
+        },
+        {
+            "literal": "6618c9f87d5b10048200c076b8e3055c",
+            "name": "Eastern Europe",
+            "uri": "http://cv.ap.org/id/6618c9f87d5b10048200c076b8e3055c"
+        },
+        {
+            "literal": "661850e07d5b100481f4c076b8e3055c",
+            "name": "Europe",
+            "uri": "http://cv.ap.org/id/661850e07d5b100481f4c076b8e3055c",
+            "geojson": {
+                "type": "Point",
+                "coordinates": [
+                    9.14062,
+                    48.69096
+                ]
+            }
+        }
+    ],
+    "subjects": [
+        {
+            "literal": "a",
+            "name": "National"
+        },
+        {
+            "literal": "9c0bd01cd7c84527bad1319c99abb3ea",
+            "name": "Bribery, graft and conflicts of interest",
+            "uri": "http://cv.ap.org/id/9c0bd01cd7c84527bad1319c99abb3ea"
+        },
+        {
+            "literal": "48612b807c2b4b93bbbacbf54f547ad5",
+            "name": "Crime",
+            "uri": "http://cv.ap.org/id/48612b807c2b4b93bbbacbf54f547ad5"
+        },
+        {
+            "literal": "f25af2d07e4e100484f5df092526b43e",
+            "name": "General news",
+            "uri": "http://cv.ap.org/id/f25af2d07e4e100484f5df092526b43e"
+        },
+        {
+            "literal": "6e70a850885f10048d0dcb8225d5863e",
+            "name": "Military legal affairs",
+            "uri": "http://cv.ap.org/id/6e70a850885f10048d0dcb8225d5863e"
+        },
+        {
+            "literal": "3b7438807d7010048477ba7fa5283c3e",
+            "name": "Military and defense",
+            "uri": "http://cv.ap.org/id/3b7438807d7010048477ba7fa5283c3e"
+        },
+        {
+            "literal": "86aad5207dac100488ecba7fa5283c3e",
+            "name": "Government and politics",
+            "uri": "http://cv.ap.org/id/"
+        },
+        {
+            "literal": "b6559a30872a10048eadd7c656897a02",
+            "name": "Political corruption",
+            "uri": "http://cv.ap.org/id/86aad5207dac100488ecba7fa5283c3e"
+        },
+        {
+            "literal": "86bc3e287dac1004895dba7fa5283c3e",
+            "name": "Political issues",
+            "uri": "http://cv.ap.org/id/86bc3e287dac1004895dba7fa5283c3e"
+        },
+        {
+            "literal": "86c17a007dac1004898fba7fa5283c3e",
+            "name": "Impeachments",
+            "uri": "http://cv.ap.org/id/86c17a007dac1004898fba7fa5283c3e"
+        }
+    ],
+    "infosources": [
+        {"name": "ASSOCIATED PRESS"}
+    ],
+    "title": "US Pelosi McCarthy (CR)",
+    "slugline": "US Pelosi McCarthy (CR)",
+    "located": "Washington",
+    "renditions": [
+        {
+            "name": "main",
+            "title": "Full Resolution (MP4 640x360)",
+            "format": "MPEG",
+            "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?role=main&qt=H1Kdh42orF&cid=e2da4d19d5dc4378a17ab6157e83f906&pt=Nnw3NDAyNHwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+            "sizeinbytes": 1880522908,
+            "width": 640,
+            "height": 360,
+            "duration": 128929,
+            "contenttype": "video/mpeg"
+        },
+        {
+            "name": "main_1080_29",
+            "title": "Full Resolution (MP4 1920x1080)",
+            "format": "MPEG",
+            "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?role=main&qt=H1Kdh42orF&cid=714e0b23feed42318f07705982a533dd&pt=Nnw3NDAyNHwxfDB8LQ&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e",
+            "sizeinbytes": 1880522908,
+            "width": 1920,
+            "height": 1080,
+            "contenttype": "video/mpeg"
+        },
+        {
+            "name": "preview",
+            "title": "Preview (JPG 1920x1080)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/preview/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_1920x1080.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~030addea5c734b8f8126a1e391db7872!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_1920x1080.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 1920,
+            "height": 1080,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "preview_300",
+            "title": "Preview (JPG 400x300)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/preview/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_400x300.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~c262fedd77294a1d89edabe9134f9206!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_400x300.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Preview!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 400,
+            "height": 300,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "thumbnail",
+            "title": "Thumbnail (JPG 105x70)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~e4c4b7d20ebd4179a6bde4e48fb42c58!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 105,
+            "height": 70,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "thumbnail_69",
+            "title": "Thumbnail (JPG 92x69)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_092x069.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~12f5743ecd7a42ecb02fb0de33bfce16!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_092x069.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 92,
+            "height": 69,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "thumbnail_70",
+            "title": "Thumbnail (JPG 105x70)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_105x070.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~41474a970b234153b091dbf998388b98!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_105x070.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 105,
+            "height": 70,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "thumbnail_135",
+            "title": "Thumbnail (JPG 180x135)",
+            "format": "JPEG Baseline",
+            "href": "http://mapi.associatedpress.com/v1/items/0cc82c1e6d284848bf862fdfae3c43c4/thumbnail/US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_180x135.jpg?nfe=true&app=MPK&tag=iid~0cc82c1e6d284848bf862fdfae3c43c4!rsn~0!cid~ccc561499bc849a9b8bd6aea5b1e1c67!ofn~US%20PELOSI%20MCCARTHY%2020191114cr_1114T132831_180x135.jpg!orgId~49651!qt~H1Kdh42orF!orgNm~AP%20Staff%20Information%20Management!role~Thumbnail!mt~video!fmt~JPEG%20Baseline",
+            "sizeinbytes": 1880522908,
+            "width": 180,
+            "height": 135,
+            "contenttype": "image/jpeg"
+        },
+        {
+            "name": "caption_nitf",
+            "title": "NITF Caption Download",
+            "format": "IIM",
+            "contenttype": "text/xml",
+            "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=caption&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
+        },
+        {
+            "name": "script_nitf",
+            "title": "NITF Script Download",
+            "format": "IIM",
+            "contenttype": "text/xml",
+            "href": "http://api.ap.org/media/v/content/0cc82c1e6d284848bf862fdfae3c43c4.0/download?qt=H1Kdh42orF&type=text&format=nitf&text=script&et=0a3aza9c0&ai=2cc1cee3495f548653f5d38130750408/2f420045618b4106b6fa7419a3d75b8e"
+        }
+    ]
+}

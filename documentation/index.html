@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.24">
+<meta name="generator" content="Asciidoctor 2.0.26">
 <meta name="author" content="IPTC News in JSON Working Group">
 <title>NinJS User Guide</title>
 <style>
@@ -546,8 +546,8 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <div class="details">
 <span id="author" class="author">IPTC News in JSON Working Group</span><br>
 <span id="email" class="email"><a href="mailto:office@iptc.org">office@iptc.org</a></span><br>
-<span id="revnumber">covers version 3.2, 2.3 and 1.7</span>
-<br><span id="revremark">Revised 2025-11-05</span>
+<span id="revnumber">covers version 3.3, 2.4 and 1.8</span>
+<br><span id="revremark">Revised 2026-08-03</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">ninjs User Guide</div>
@@ -558,7 +558,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <li><a href="#_the_ninjs_data_model_in_a_nutshell">1.2. The ninjs data model in a nutshell</a></li>
 <li><a href="#_ninjs_object_building_blocks">1.3. ninjs object building blocks</a></li>
 <li><a href="#_a_simple_example">1.4. A simple example</a></li>
-<li><a href="#_versions_of_ninjs_ninjs_3_2_2_3_and_1_7">1.5. Versions of ninjs: ninjs 3.2, 2.3 and 1.7</a></li>
+<li><a href="#_versions_of_ninjs_ninjs_3_3_2_4_and_1_8">1.5. Versions of ninjs: ninjs 3.3, 2.4 and 1.8</a></li>
 <li><a href="#_differences_between_ninjs_1_x_2_x_and_3_x">1.6. Differences between ninjs 1.x, 2.x and 3.x</a></li>
 <li><a href="#_which_version_of_ninjs_should_i_choose_for_my_project">1.7. Which version of ninjs should I choose for my project?</a></li>
 <li><a href="#_ninjs_and_other_standards">1.8. ninjs and other standards</a></li>
@@ -587,10 +587,11 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <li><a href="#dates-structure">4.3. Dates for Events and Planning</a></li>
 </ul>
 </li>
-<li><a href="#_renditions">5. Renditions</a>
+<li><a href="#renditions">5. Renditions</a>
 <ul class="sectlevel2">
 <li><a href="#_properties_of_renditions">5.1. Properties of renditions</a></li>
-<li><a href="#_renditions_example">5.2. Renditions example</a></li>
+<li><a href="#_renditions_examples">5.2. Renditions examples</a></li>
+<li><a href="#rendition-extensions">5.3. Rendition extensions</a></li>
 </ul>
 </li>
 <li><a href="#_associations">6. Associations</a>
@@ -634,6 +635,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <li><a href="#_ninjs_3_0">11.9. ninjs 3.0</a></li>
 <li><a href="#_ninjs_3_1_2_2_and_1_6">11.10. ninjs 3.1, 2.2 and 1.6</a></li>
 <li><a href="#_ninjs_3_2_2_3_and_1_7">11.11. ninjs 3.2, 2.3 and 1.7</a></li>
+<li><a href="#_ninjs_3_3_2_4_and_1_8">11.12. ninjs 3.3, 2.4 and 1.8</a></li>
 </ul>
 </li>
 <li><a href="#_additional_resources">12. Additional Resources</a>
@@ -667,16 +669,19 @@ as <a href="https://iptc.org/standards/newsml-g2/">NewsML-G2</a>.</p>
 how easily a real ninjs document can be created, and a <a href="#_validating_a_ninjs_document">JSON schema to validate ninjs objects</a>.</p>
 </div>
 <div class="paragraph">
-<p>The latest version of the standard is 3.2.
+<p>The latest approved version of the standard is 3.2.
 <a href="https://iptc.org/std/ninjs/ninjs-schema_3.2.json">Version 3.2 of the ninjs
-schema</a> was made available in November 2025.</p>
+schema</a> was made available in November 2025. Version 3.3 is currently in
+development and has not yet been approved.</p>
 </div>
 <div class="paragraph">
-<p>The latest version in the 2.x branch is 2.3, which was made available in November 2025.
+<p>The latest approved version in the 2.x branch is 2.3, which was made available in November 2025.
+Version 2.4 is currently in development.
 See below for more information on the <a href="#Differences between ninjs 1.x and 2.x">differences between the 1.x and 2.x branches</a>.</p>
 </div>
 <div class="paragraph">
-<p>The latest version in the 1.x branch is 1.7, which was also made available in November 2025.
+<p>The latest approved version in the 1.x branch is 1.7, which was also made available in November 2025.
+Version 1.8 is currently in development.
 See below for more information on the <a href="#Differences between ninjs 1.x and 2.x">differences between the 1.x and 2.x branches</a>.</p>
 </div>
 <div class="sect2">
@@ -775,18 +780,18 @@ by an API call.</p>
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_1_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_1_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_1_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_1_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_1_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_1_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_1_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_1_ninjs_3_2">
+<div id="_tabs_1_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_1_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -810,7 +815,7 @@ by an API call.</p>
 </div>
 </div>
 </div>
-<div id="_tabs_1_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_1_ninjs_2_3">
+<div id="_tabs_1_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_1_ninjs_2_4">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -834,7 +839,7 @@ by an API call.</p>
 </div>
 </div>
 </div>
-<div id="_tabs_1_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_1_ninjs_1_7">
+<div id="_tabs_1_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_1_ninjs_1_8">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -857,16 +862,17 @@ using the
 </div>
 </div>
 <div class="sect2">
-<h3 id="_versions_of_ninjs_ninjs_3_2_2_3_and_1_7"><a class="anchor" href="#_versions_of_ninjs_ninjs_3_2_2_3_and_1_7"></a>1.5. Versions of ninjs: ninjs 3.2, 2.3 and 1.7</h3>
+<h3 id="_versions_of_ninjs_ninjs_3_3_2_4_and_1_8"><a class="anchor" href="#_versions_of_ninjs_ninjs_3_3_2_4_and_1_8"></a>1.5. Versions of ninjs: ninjs 3.3, 2.4 and 1.8</h3>
 <div class="paragraph">
 <p>IPTC manages three versions of ninjs: the 3.x branch (where the latest version
-is 3.2), the 2.x branch (where the latest version is 2.3) and the 1.x branch
-(where the latest version is 1.7).</p>
+is 3.3), the 2.x branch (where the latest version is 2.4) and the 1.x branch
+(where the latest version is 1.8).</p>
 </div>
 <div class="paragraph">
 <p>The 1.x series continues the version of ninjs that started with ninjs 1.0 in
 2013, adding new features in a way that is fully backwards-compatible. The
-latest release in this series is 1.7, which adds <a href="#resources">[resources]</a> under <a href="#renditions">[renditions]</a>.</p>
+latest release in this series is 1.8, which adds <a href="#contentDigitised"><code>contentDigitised</code></a> and
+<a href="#rendition-extensions">rendition extensions</a>.</p>
 </div>
 <div class="paragraph">
 <p>The 2.x series fixes some issues that made the 1.x series tricky for some
@@ -885,18 +891,19 @@ created alongside the <a href="https://www.thedpp.com/lpx">LPX (Live Production 
 project from the DPP</a>, with the help of experts from CNN, Reuters, Arqiva and more.</p>
 </div>
 <div class="paragraph">
-<p>All new users are strongly recommended to use version 3.2.</p>
+<p>All new users are strongly recommended to use version 3.3.</p>
 </div>
 <div class="paragraph">
 <p>ninjs 3.2, 2.3 and 1.7 were approved by the IPTC Standards Committee on October
-16th, 2025.</p>
+16th, 2025. Versions 3.3, 2.4 and 1.8 add <a href="#contentDigitised"><code>contentDigitised</code></a> and
+<a href="#rendition-extensions">rendition extensions</a>, and have not yet been approved.</p>
 </div>
 <div class="paragraph">
-<p>This document focuses on the 3.2 version, but includes notes where the 2.x and
+<p>This document focuses on the 3.3 version, but includes notes where the 2.x and
 1.x versions differ. Those who must use version 2.x or 1.x for backwards
-compatibility reasons can find the JSON Schema file for ninjs 2.3 at
-<a href="https://iptc.org/std/ninjs/ninjs-schema_2.3.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_2.3.json</a> and the schema file for ninjs 1.7
-at <a href="https://iptc.org/std/ninjs/ninjs-schema_1.7.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.7.json</a>.</p>
+compatibility reasons can find the JSON Schema file for ninjs 2.4 at
+<a href="https://iptc.org/std/ninjs/ninjs-schema_2.4.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_2.4.json</a> and the schema file for ninjs 1.8
+at <a href="https://iptc.org/std/ninjs/ninjs-schema_1.8.json" class="bare">https://iptc.org/std/ninjs/ninjs-schema_1.8.json</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1084,7 +1091,7 @@ They were not changed in any other way.</p>
 <h3 id="_which_version_of_ninjs_should_i_choose_for_my_project"><a class="anchor" href="#_which_version_of_ninjs_should_i_choose_for_my_project"></a>1.7. Which version of ninjs should I choose for my project?</h3>
 <div class="paragraph">
 <p>If you are starting a green-field project, we recommend using the latest
-version in the ninjs 3.x branch, currently ninjs 3.2.  This version should be
+version in the ninjs 3.x branch, currently ninjs 3.3.  This version should be
 easiest for developers to work with.</p>
 </div>
 <div class="paragraph">
@@ -1220,7 +1227,7 @@ properties may be required; for example, if <code>rightsInfo</code> is used, the
 <code>linkedRights</code> or <code>encodedRights</code> is required.</p>
 </div>
 <div class="paragraph">
-<p>These tables primarily describe the ninjs 3.2 schema. Where possible, we note
+<p>These tables primarily describe the ninjs 3.3 schema. Where possible, we note
 differences in the 1.x and 2.x schemas, but the ultimate reference for each
 version of ninjs is the relevant JSON Schema file.</p>
 </div>
@@ -1238,7 +1245,7 @@ version of ninjs is the relevant JSON Schema file.</p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">ninjs 3.2<br>
+<th class="tableblock halign-left valign-top">ninjs 3.3<br>
 property</th>
 <th class="tableblock halign-left valign-top">ninjs 1.x / 2.x<br>
 property</th>
@@ -1316,12 +1323,12 @@ This property is an object with the following child properties:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>version</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the standard used, such as <code>3.2</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the standard used, such as <code>3.3</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>schema</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the JSON schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_3.2.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_3.2.json</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri of the JSON schema to use for validation, such as <code><a href="https://www.iptc.org/std/ninjs/ninjs-schema_3.3.json" class="bare">https://www.iptc.org/std/ninjs/ninjs-schema_3.3.json</a></code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">URI</p></td>
 </tr>
 </tbody>
@@ -1423,6 +1430,15 @@ NOTE: in ninjs 1.x, the allowed values are <code>complete</code> and <code>incom
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentcreated</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The date and time when the content of this ninjs object was originally created.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p>
+<p class="tableblock"><a id="contentDigitised"></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentDigitised</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentdigitised</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The date and time when the content of this ninjs object was originally digitised, for example an old photograph that has been scanned. (Added in ninjs 3.3, 2.4 and 1.8.)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p>
 <p class="tableblock"><a id="embargoed"></a></p></td>
@@ -2546,25 +2562,25 @@ This section applies to ninjs 3.x only.
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_2_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_2_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_2_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_2_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_2_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_2_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_2_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_2_ninjs_3_2">
+<div id="_tabs_2_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_2_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "standard": {
     "name": "ninjs",
-    "version": "3.2",
-    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.2.json"
+    "version": "3.3",
+    "schema": "http://www.iptc.org/std/ninjs/ninjs-schema_3.3.json"
   },
   "uri": "urn:nato.int:2023-nato-summit-press-conference",
   "type": "event",
@@ -2592,12 +2608,12 @@ This section applies to ninjs 3.x only.
 </div>
 </div>
 </div>
-<div id="_tabs_2_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_2_ninjs_2_3">
+<div id="_tabs_2_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_2_ninjs_2_4">
 <div class="paragraph">
 <p>Planned news events are not handled in ninjs 2.2.</p>
 </div>
 </div>
-<div id="_tabs_2_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_2_ninjs_1_7">
+<div id="_tabs_2_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_2_ninjs_1_8">
 <div class="paragraph">
 <p>Planned news events are not handled in ninjs 1.6.</p>
 </div>
@@ -3137,7 +3153,7 @@ follows the iCalendar specification.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_renditions"><a class="anchor" href="#_renditions"></a>5. Renditions</h2>
+<h2 id="renditions"><a class="anchor" href="#renditions"></a>5. Renditions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>renditions</code> property is a wrapper for different renditions of content of the news object, such as articles, images, videos or PDF documents.</p>
@@ -3331,7 +3347,8 @@ This property is an object with the following child properties:</p>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>The bitrate of the video. Should always include units, eg 400 kbps.</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">string</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string</p>
+<p class="tableblock"><a id="resources"></a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>resources</code></p></td>
@@ -3380,11 +3397,31 @@ This property is an object with the following child properties:</p>
 </table></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">array of objects</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>extensions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>extensions</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Provider-specific extension properties for this rendition, expressed as string keys with string values. See <a href="#rendition-extensions">Rendition extensions</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+added in ninjs 3.3, 2.4 and 1.8.
+</td>
+</tr>
+</table>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">object with string values</p></td>
+</tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_renditions_example"><a class="anchor" href="#_renditions_example"></a>5.2. Renditions example</h3>
+<h3 id="_renditions_examples"><a class="anchor" href="#_renditions_examples"></a>5.2. Renditions examples</h3>
 <div class="paragraph">
 <p>A simple rendition example:</p>
 </div>
@@ -3392,18 +3429,18 @@ This property is an object with the following child properties:</p>
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_3_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_3_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_3_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_3_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_3_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_3_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_3_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_3_ninjs_3_2">
+<div id="_tabs_3_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_3_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3435,7 +3472,7 @@ This property is an object with the following child properties:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_3_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_3_ninjs_2_3">
+<div id="_tabs_3_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_3_ninjs_2_4">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3467,7 +3504,7 @@ This property is an object with the following child properties:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_3_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_3_ninjs_1_7">
+<div id="_tabs_3_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_3_ninjs_1_8">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3503,18 +3540,18 @@ to handle multi-track media such as streaming video:</p>
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_4_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_4_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_4_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_4_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_4_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_4_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_4_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_4_ninjs_3_2">
+<div id="_tabs_4_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_4_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3576,7 +3613,7 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_4_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_4_ninjs_2_3">
+<div id="_tabs_4_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_4_ninjs_2_4">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3638,7 +3675,7 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_4_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_4_ninjs_1_7">
+<div id="_tabs_4_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_4_ninjs_1_8">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3697,6 +3734,298 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="rendition-extensions"><a class="anchor" href="#rendition-extensions"></a>5.3. Rendition extensions</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>extensions</code> was added in ninjs 3.3, 2.4 and 1.8. Earlier versions of ninjs do not
+permit it.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Providers frequently hold metadata about an individual rendition that is specific to their
+own delivery platform rather than to news itself: mirror or backup locations for the same
+resource, rights qualifiers, CDN expiry times, or content hashes. Because every rendition
+object in ninjs sets <code>additionalProperties</code> to <code>false</code>, there is no legal place to put
+such values.</p>
+</div>
+<div class="paragraph">
+<p>The <code>extensions</code> property is a declared extension point for exactly this purpose. It is an
+object whose keys are strings and whose values are <strong>always strings</strong>:</p>
+</div>
+<div id="_tabs_5" class="openblock tabs is-sync is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
+</li>
+<li id="_tabs_5_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
+</li>
+<li id="_tabs_5_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_5_ninjs_3_3">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "uri": "urn:ap:content:b2b6c3f4642f46deac7509d4db315ca0",
+  "type": "picture",
+  "title": "Turkey Islamic State",
+  "renditions": [
+    {
+      "name": "main",
+      "title": "Full Resolution",
+      "format": "JPEG Baseline",
+      "contentType": "image/jpeg",
+      "width": 3000,
+      "height": 2208,
+      "sizeInBytes": 4764958,
+      "href": "https://na.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+      "extensions": {
+        "mirror:eu": "https://eu.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "mirror:asia": "https://asia.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "backup": "https://backup.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "rights:embargo": "2024-11-20T00:00:00Z",
+        "rights:territory": "worldwide",
+        "cdn:expires": "2024-12-01T00:00:00Z",
+        "hash:sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "preview",
+      "title": "Preview",
+      "format": "JPEG Baseline",
+      "contentType": "image/jpeg",
+      "width": 512,
+      "height": 377,
+      "href": "https://cdn.ap.org/media/b2b6c3f4642f46deac7509d4db315ca0/preview.jpg"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_5_ninjs_2_4">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "uri": "urn:ap:content:b2b6c3f4642f46deac7509d4db315ca0",
+  "type": "picture",
+  "title": "Turkey Islamic State",
+  "renditions": [
+    {
+      "name": "main",
+      "title": "Full Resolution",
+      "format": "JPEG Baseline",
+      "contenttype": "image/jpeg",
+      "width": 3000,
+      "height": 2208,
+      "sizeinbytes": 4764958,
+      "href": "https://na.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+      "extensions": {
+        "mirror:eu": "https://eu.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "mirror:asia": "https://asia.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "backup": "https://backup.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "rights:embargo": "2024-11-20T00:00:00Z",
+        "rights:territory": "worldwide",
+        "cdn:expires": "2024-12-01T00:00:00Z",
+        "hash:sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "preview",
+      "title": "Preview",
+      "format": "JPEG Baseline",
+      "contenttype": "image/jpeg",
+      "width": 512,
+      "height": 377,
+      "href": "https://cdn.ap.org/media/b2b6c3f4642f46deac7509d4db315ca0/preview.jpg"
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_5_ninjs_1_8">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "uri": "urn:ap:content:b2b6c3f4642f46deac7509d4db315ca0",
+  "type": "picture",
+  "title": "Turkey Islamic State",
+  "renditions": {
+    "main": {
+      "title": "Full Resolution",
+      "format": "JPEG Baseline",
+      "mimetype": "image/jpeg",
+      "width": 3000,
+      "height": 2208,
+      "sizeinbytes": 4764958,
+      "href": "https://na.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+      "extensions": {
+        "mirror:eu": "https://eu.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "mirror:asia": "https://asia.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "backup": "https://backup.api.ap.org/media/v/content/b2b6c3f4642f46deac7509d4db315ca0/main.jpg",
+        "rights:embargo": "2024-11-20T00:00:00Z",
+        "rights:territory": "worldwide",
+        "cdn:expires": "2024-12-01T00:00:00Z",
+        "hash:sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "preview": {
+      "title": "Preview",
+      "format": "JPEG Baseline",
+      "mimetype": "image/jpeg",
+      "width": 512,
+      "height": 377,
+      "href": "https://cdn.ap.org/media/b2b6c3f4642f46deac7509d4db315ca0/preview.jpg"
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In ninjs 1.x, where <code>renditions</code> is an object keyed by rendition name rather than an array,
+<code>extensions</code> sits inside each named rendition in the same way.</p>
+</div>
+<div class="paragraph">
+<p>Two conventions apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Keys SHOULD be namespaced with a provider or purpose prefix followed by a colon, as in
+<code>mirror:eu</code> or <code>hash:sha256</code>, so that extensions from different sources cannot collide.
+This is a convention rather than a schema rule — the schema accepts any string key.</p>
+</li>
+<li>
+<p>Values are restricted to strings. A number, boolean, array or nested object is invalid,
+so <code>"cdn:ttl": 3600</code> must be written <code>"cdn:ttl": "3600"</code>. This restriction keeps
+<code>extensions</code> cleanly mappable onto the binary encodings that ninjs 2.x and 3.x are
+designed to support, where it becomes a simple string-to-string map.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Following the approach taken in other IPTC standards, including NewsML-G2, the ninjs
+schema deliberately does not constrain what goes inside <code>extensions</code>. The standard
+guarantees the <strong>shape</strong>; the meaning is the provider&#8217;s to define, and to validate.</p>
+</div>
+<div class="sect3">
+<h4 id="_validating_your_extensions"><a class="anchor" href="#_validating_your_extensions"></a>5.3.1. Validating your extensions</h4>
+<div class="paragraph">
+<p>If you want your own extension keys validated rather than merely permitted, publish a
+profile schema that layers additional constraints on top of ninjs, instead of copying and
+editing the ninjs schema itself. A profile tracks the upstream schema; a copy does not.</p>
+</div>
+<div class="paragraph">
+<p>The technique is <code>allOf</code> plus <code>$ref</code>. The first branch validates the whole document
+against ninjs as normal; the second re-validates just the rendition objects, this time
+with your own rules applied to <code>extensions</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/ninjs-extensions/renditions/v1.json",
+  "title": "Example rendition extensions profile",
+
+  "$defs": {
+    "exampleRenditionExtensions": {
+      "description": "Provider-specific metadata carried in a rendition's extensions object.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["example:assetId"],
+      "properties": {
+        "example:assetId": {
+          "description": "The provider's internal identifier for this asset.",
+          "type": "string",
+          "pattern": "^[A-Z0-9]{8,12}$"
+        },
+        "example:processingStatus": {
+          "type": "string",
+          "enum": ["pending", "processing", "approved", "rejected", "withdrawn"]
+        },
+        "example:ingestTimestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+
+    "renditionTypeWithExtensions": {
+      "allOf": [
+        { "$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_3.3.json#/$defs/renditionType" },
+        {
+          "properties": {
+            "extensions": { "$ref": "#/$defs/exampleRenditionExtensions" }
+          },
+          "required": ["extensions"]
+        }
+      ]
+    }
+  },
+
+  "allOf": [
+    {
+      "$comment": "Pass 1: validate the whole document against ninjs.",
+      "$ref": "http://www.iptc.org/std/ninjs/ninjs-schema_3.3.json#"
+    },
+    {
+      "$comment": "Pass 2: additionally constrain the contents of each rendition's extensions.",
+      "properties": {
+        "renditions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/renditionTypeWithExtensions" }
+        }
+      }
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This profile is stricter than ninjs in three ways that ninjs itself deliberately is not:
+<code>extensions</code> becomes required on every rendition, only the listed keys are permitted
+(<code>additionalProperties</code> is <code>false</code>), and individual keys gain patterns, enumerations and
+formats. A document valid against this profile is by construction also valid ninjs.</p>
+</div>
+<div class="paragraph">
+<p>Note that <code>format</code> and <code>pattern</code> apply to the <strong>string</strong> value, which is why restricting
+extension values to strings does not prevent you from validating dates, numbers or
+identifiers precisely.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+use the <code><a href="#standard">standard</a></code> property to declare which profile a given document
+claims to conform to. For extensions that go beyond what <code>extensions</code> can express — new
+top-level properties, for instance — see
+<a href="#_how_to_create_provider_specific_extensions">How to create provider-specific extensions</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -3713,22 +4042,22 @@ to handle multi-track media such as streaming video:</p>
 <div class="paragraph">
 <p>This example shows a press release. The body of the story is in the single object in the <code>bodies</code> property. A logo and an image are associated to the story. Both the logo and the image have two renditions, a "thumbnail" and a "highres" version.</p>
 </div>
-<div id="_tabs_5" class="openblock tabs is-sync is-loading">
+<div id="_tabs_6" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_5_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_6_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_5_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_6_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_5_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_6_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_5_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_5_ninjs_3_2">
+<div id="_tabs_6_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_6_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3784,7 +4113,7 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_5_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_5_ninjs_2_3">
+<div id="_tabs_6_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_6_ninjs_2_4">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3840,7 +4169,7 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_5_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_5_ninjs_1_7">
+<div id="_tabs_6_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_6_ninjs_1_8">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3905,22 +4234,22 @@ to handle multi-track media such as streaming video:</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_6" class="openblock tabs is-sync is-loading">
+<div id="_tabs_7" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_6_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_7_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_6_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_7_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_6_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_7_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_6_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_6_ninjs_3_2">
+<div id="_tabs_7_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_7_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3950,7 +4279,7 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_6_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_6_ninjs_2_3">
+<div id="_tabs_7_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_7_ninjs_2_4">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -3980,7 +4309,7 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_6_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_6_ninjs_1_7">
+<div id="_tabs_7_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_7_ninjs_1_8">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -4010,22 +4339,22 @@ to handle multi-track media such as streaming video:</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_7" class="openblock tabs is-sync is-loading">
+<div id="_tabs_8" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_7_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_8_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_7_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_8_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_7_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_8_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_7_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_7_ninjs_3_2">
+<div id="_tabs_8_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_8_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -4087,7 +4416,7 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_7_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_7_ninjs_2_3">
+<div id="_tabs_8_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_8_ninjs_2_4">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -4149,7 +4478,7 @@ to handle multi-track media such as streaming video:</p>
 </div>
 </div>
 </div>
-<div id="_tabs_7_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_7_ninjs_1_7">
+<div id="_tabs_8_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_8_ninjs_1_8">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -4233,28 +4562,30 @@ repository</a>.</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_8" class="openblock tabs is-sync is-loading">
+<div id="_tabs_9" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_8_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_9_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_8_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_9_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_8_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_9_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_8_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_8_ninjs_3_2">
+<div id="_tabs_9_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_9_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
   "type" : "picture",
   "versionCreated" : "2013-07-08T08:12:00Z",
+  "contentCreated" : "2013-07-08T07:30:00Z",
+  "contentDigitised" : "2013-07-08T07:30:00Z",
   "by" : "Paulo Santalucia",
   "headlines" : [
     {
@@ -4296,13 +4627,15 @@ repository</a>.</p>
 </div>
 </div>
 </div>
-<div id="_tabs_8_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_8_ninjs_2_3">
+<div id="_tabs_9_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_9_ninjs_2_4">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
   "type" : "picture",
   "versioncreated" : "2013-07-08T08:12:00Z",
+  "contentcreated" : "2013-07-08T07:30:00Z",
+  "contentdigitised" : "2013-07-08T07:30:00Z",
   "by" : "Paulo Santalucia",
   "headlines" : [
     {
@@ -4344,13 +4677,15 @@ repository</a>.</p>
 </div>
 </div>
 </div>
-<div id="_tabs_8_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_8_ninjs_1_7">
+<div id="_tabs_9_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_9_ninjs_1_8">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "uri" : "http://ninjs.example.com/newsitems/20130709simpPh123",
   "type" : "picture",
   "versioncreated" : "2013-07-08T08:12:00Z",
+  "contentcreated" : "2013-07-08T07:30:00Z",
+  "contentdigitised" : "2013-07-08T07:30:00Z",
   "byline" : "Paulo Santalucia",
   "headline_main" : "Costa Concordia cruise ship",
   "description_text": "The Costa Concordia cruise ship lies on its side in the waters of the Tuscan island of Giglio, Italy, Monday, July 8, 2013. The luxury cruise ship ran aground off the coast of Tuscany on Jan 13, 2012, sending water pouring in through a 160-foot (50-meter) gash in the hull and forcing the evacuation of some 4,200 people from the listing vessel early.",
@@ -4399,22 +4734,22 @@ repository</a>.</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_9" class="openblock tabs is-sync is-loading">
+<div id="_tabs_10" class="openblock tabs is-sync is-loading">
 <div class="content">
 <div class="ulist tablist">
 <ul>
-<li id="_tabs_9_ninjs_3_2" class="tab">
-<p>ninjs 3.2</p>
+<li id="_tabs_10_ninjs_3_3" class="tab">
+<p>ninjs 3.3</p>
 </li>
-<li id="_tabs_9_ninjs_2_3" class="tab">
-<p>ninjs 2.3</p>
+<li id="_tabs_10_ninjs_2_4" class="tab">
+<p>ninjs 2.4</p>
 </li>
-<li id="_tabs_9_ninjs_1_7" class="tab">
-<p>ninjs 1.7</p>
+<li id="_tabs_10_ninjs_1_8" class="tab">
+<p>ninjs 1.8</p>
 </li>
 </ul>
 </div>
-<div id="_tabs_9_ninjs_3_2--panel" class="tabpanel" aria-labelledby="_tabs_9_ninjs_3_2">
+<div id="_tabs_10_ninjs_3_3--panel" class="tabpanel" aria-labelledby="_tabs_10_ninjs_3_3">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -4612,7 +4947,7 @@ repository</a>.</p>
 </div>
 </div>
 </div>
-<div id="_tabs_9_ninjs_2_3--panel" class="tabpanel" aria-labelledby="_tabs_9_ninjs_2_3">
+<div id="_tabs_10_ninjs_2_4--panel" class="tabpanel" aria-labelledby="_tabs_10_ninjs_2_4">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -4810,7 +5145,7 @@ repository</a>.</p>
 </div>
 </div>
 </div>
-<div id="_tabs_9_ninjs_1_7--panel" class="tabpanel" aria-labelledby="_tabs_9_ninjs_1_7">
+<div id="_tabs_10_ninjs_1_8--panel" class="tabpanel" aria-labelledby="_tabs_10_ninjs_1_8">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -5004,6 +5339,20 @@ The resulting object is not yet a valid ninjs object, however it will be valid J
 <p>In some cases, your news releases may have content that does not fit into the
 objects that are defined in the ninjs standard. In these cases, you can (and
 should) copy and extend the IPTC ninjs schema.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+if the content you need to add is provider-specific metadata about a <strong>rendition</strong>,
+see <a href="#rendition-extensions">Rendition extensions</a> first. That property is a declared
+extension point, so it needs neither a copy of the schema nor a new top-level property.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>To do this, do the following:</p>
@@ -5608,7 +5957,19 @@ Architecture</a>, so they share many properties.</p>
 <a href="https://iptc.org/std/ninjs/ninjs-schema_1.7.json">Version 1.7</a> of the ninjs schema were approved by the IPTC Standards Committee in October 2025 and made available in November 2025.</p>
 </div>
 <div class="paragraph">
-<p>All three versions were updated to add a new section within <a href="#renditions">[renditions]</a> called <a href="#resources">[resources]</a>. This allows providers to specify components within a media item, such as different audio or subtitle tracks within a video stream or video file.</p>
+<p>All three versions were updated to add a new section within <a href="#renditions">Renditions</a> called <a href="#resources"><code>resources</code></a>. This allows providers to specify components within a media item, such as different audio or subtitle tracks within a video stream or video file.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ninjs_3_3_2_4_and_1_8"><a class="anchor" href="#_ninjs_3_3_2_4_and_1_8"></a>11.12. ninjs 3.3, 2.4 and 1.8</h3>
+<div class="paragraph">
+<p>Version 3.3, Version 2.4 and Version 1.8 of the ninjs schema are in development and have not yet been approved by the IPTC Standards Committee.</p>
+</div>
+<div class="paragraph">
+<p>All three versions add a new property, <a href="#contentDigitised"><code>contentDigitised</code></a>, recording the date and time at which the content was originally digitised. This distinguishes the moment of digitisation from the moment of creation held in <a href="#contentCreated"><code>contentCreated</code></a>, which matters for material such as scanned archive photographs.</p>
+</div>
+<div class="paragraph">
+<p>All three versions also add <a href="#rendition-extensions"><code>extensions</code></a> within <a href="#renditions">Renditions</a>. This is a declared extension point that lets providers attach their own string-valued metadata to an individual rendition — mirror or backup locations, rights qualifiers, CDN expiry times or content hashes — without copying and forking the ninjs schema.</p>
 </div>
 </div>
 </div>

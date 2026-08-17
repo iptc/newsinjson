@@ -1,0 +1,11 @@
+{
+  "uri": "http://ninjs.example.com/newsitems/ninjs3-2-tests-002",
+  "type": "picture",
+  "headlines": [
+    {
+      "role": "main",
+      "value": "Test of contentDigitised property"
+    }
+  ],
+  "contentDigitised": "2022-04-21T12:00:00+00:00"
+}

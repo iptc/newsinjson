@@ -1,0 +1,15 @@
+{
+    "uri": "urn:007_rendition_extensions_nonstring.json",
+    "type": "picture",
+    "title": "Rendition extension values must be strings",
+    "renditions": {
+        "main": {
+            "mimetype": "image/jpeg",
+            "href": "https://example.com/media/main.jpg",
+            "extensions": {
+                "mirror:eu": "https://eu.example.com/media/main.jpg",
+                "cdn:ttl": 3600
+            }
+        }
+    }
+}

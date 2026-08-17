@@ -1,0 +1,54 @@
+{
+    "uri": "urn:8d19cf88-b3ab-4972-8fec-1207599f2872",
+    "type": "text",
+    "profile": "Standard",
+    "version": "6",
+    "firstcreated": "2019-08-09T09:30:04Z",
+    "versioncreated": "2019-08-09T09:46:53Z",
+    "pubstatus": "usable",
+    "urgency": 5,
+    "copyrightholder": "NTB",
+    "copyrightnotice": "",
+    "usageterms": "",
+    "ednote": "Noe utvidet.",
+    "language": "nb-NO",
+    "descriptions": [
+        {
+            "role": "text",
+            "contenttype": "text/plain",
+            "value": "IT-giganten Google har kjøpt en tomt på nærmere 2.000 mål i Skien i tilfelle det blir behov for flere datasentre i Europa. "
+        }
+    ],
+    "headlines": [
+        {
+            "role": "main",
+            "value": "Google har kjøpt giganttomt i Skien"
+        }
+    ],
+    "places": [
+        {
+            "name": "Telemark",
+            "literal": "Telemark"
+        }
+    ],
+    "subjects": [
+        {
+            "name": "Innenriks",
+            "literal": "Innenriks"
+        },
+        {
+            "name": "Teknologi",
+            "literal": "13010000"
+        },
+        {
+            "name": "Industri",
+            "literal": "04011000"
+        },
+        {
+            "name": "Olje og energi",
+            "literal": "04005000"
+        }
+    ],
+    "by": "NTB",
+    "slugline": "skien-google"
+}
