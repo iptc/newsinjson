@@ -1,0 +1,14 @@
+{
+  "uri": "http://ninjs.example.com/newsitems/ninjs-3x-working-draft-pass-002",
+  "renditions": [
+    {
+      "name": "main",
+      "href": "https://example.com/photos/1234-big.jpg",
+      "contentType": "image/jpeg",
+      "extensions": {
+        "mirror:eu": "https://eu.example.com/photos/1234-big.jpg",
+        "hash:sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ]
+}

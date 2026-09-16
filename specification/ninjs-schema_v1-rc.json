@@ -672,6 +672,14 @@
               "items": {
                 "$ref": "#/definitions/resourceType"
               }
+            },
+            "extensions": {
+              "title": "Extensions",
+              "description": "Provider-specific extension properties for this rendition, expressed as string keys with string values. Keys SHOULD be namespaced with a provider or purpose prefix, for example 'mirror:eu'. This schema does not constrain the contents. A provider that wants to validate its own extensions should publish a profile schema which layers on top of ninjs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
             }
           }
         }
