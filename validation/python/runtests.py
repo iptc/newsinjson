@@ -928,6 +928,9 @@ class TestNinJSSchema(unittest.TestCase):
         1.x dev schema.
         They should all pass (ie they are all valid against the schema).
 
+        Also run TEST_FILES_FOLDER/1/should_pass, because the dev schema
+        carries every candidate change that the 1.x working draft carries.
+
         Also run 1.0, 1.1, 1.2, 1.3, 1.4, 1.5 and 1.6 tests against the dev
         schema, because it should be backwards compatible.
         """
@@ -967,6 +970,10 @@ class TestNinJSSchema(unittest.TestCase):
             schema=self.ninjs1xdev_schema,
             folder_name=os.path.join('1.x_dev', 'should_pass')
         )
+        self.folder_should_pass(
+            schema=self.ninjs1xdev_schema,
+            folder_name=os.path.join('1', 'should_pass')
+        )
 
     def test_failing_unit_test_files_against_1_x_dev_schema(self):
         """
@@ -974,11 +981,18 @@ class TestNinJSSchema(unittest.TestCase):
         1.x dev schema.
         They should all fail (ie they are all invalid in some way).
 
+        Also run TEST_FILES_FOLDER/1/should_fail, because the dev schema
+        must reject what the 1.x working draft rejects.
+
         We use "subTest" so we can see which file failed in test output.
         """
         self.folder_should_fail(
             schema=self.ninjs1xdev_schema,
             folder_name=os.path.join('1.x_dev', 'should_fail')
+        )
+        self.folder_should_fail(
+            schema=self.ninjs1xdev_schema,
+            folder_name=os.path.join('1', 'should_fail')
         )
 
     def test_all_passing_unit_test_files_against_2_x_dev_schema(self):
@@ -986,6 +1000,9 @@ class TestNinJSSchema(unittest.TestCase):
         Run files in TEST_FILES_FOLDER/2.x_dev/should_pass against the
         2.x dev schema.
         They should all pass (ie they are all valid against the schema).
+
+        Also run TEST_FILES_FOLDER/2/should_pass, because the dev schema
+        carries every candidate change that the 2.x working draft carries.
 
         Also run 2.0, 2.1 and 2.2 tests against the dev
         schema, because it should be backwards compatible.
@@ -996,6 +1013,10 @@ class TestNinJSSchema(unittest.TestCase):
         self.folder_should_pass(
             schema=self.ninjs2xdev_schema,
             folder_name=os.path.join('2.x_dev', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs2xdev_schema,
+            folder_name=os.path.join('2', 'should_pass')
         )
         self.folder_should_pass(
             schema=self.ninjs2xdev_schema,
@@ -1019,10 +1040,17 @@ class TestNinJSSchema(unittest.TestCase):
         Run files in TEST_FILES_FOLDER/2.x_dev/should_fail against the
         2.x dev schema.
         They should all fail (ie they are all invalid in some way).
+
+        Also run TEST_FILES_FOLDER/2/should_fail, because the dev schema
+        must reject what the 2.x working draft rejects.
         """
         self.folder_should_fail(
             schema=self.ninjs2xdev_schema,
             folder_name=os.path.join('2.x_dev', 'should_fail')
+        )
+        self.folder_should_fail(
+            schema=self.ninjs2xdev_schema,
+            folder_name=os.path.join('2', 'should_fail')
         )
 
     def test_all_passing_unit_test_files_against_3_x_dev_schema(self):
@@ -1030,6 +1058,9 @@ class TestNinJSSchema(unittest.TestCase):
         Run files in TEST_FILES_FOLDER/3.x_dev/should_pass against the
         3.x dev schema.
         They should all pass (ie they are all valid against the schema).
+
+        Also run TEST_FILES_FOLDER/3/should_pass, because the dev schema
+        carries every candidate change that the 3.x working draft carries.
 
         Also run 3.0 and 3.1 tests against the dev
         schema, because it should be backwards compatible.
@@ -1040,6 +1071,10 @@ class TestNinJSSchema(unittest.TestCase):
         self.folder_should_pass(
             schema=self.ninjs3xdev_schema,
             folder_name=os.path.join('3.x_dev', 'should_pass')
+        )
+        self.folder_should_pass(
+            schema=self.ninjs3xdev_schema,
+            folder_name=os.path.join('3', 'should_pass')
         )
         self.folder_should_pass(
             schema=self.ninjs3xdev_schema,
@@ -1059,10 +1094,17 @@ class TestNinJSSchema(unittest.TestCase):
         Run files in TEST_FILES_FOLDER/3.x_dev/should_fail against the
         3.x dev schema.
         They should all fail (ie they are all invalid in some way).
+
+        Also run TEST_FILES_FOLDER/3/should_fail, because the dev schema
+        must reject what the 3.x working draft rejects.
         """
         self.folder_should_fail(
             schema=self.ninjs3xdev_schema,
             folder_name=os.path.join('3.x_dev', 'should_fail')
+        )
+        self.folder_should_fail(
+            schema=self.ninjs3xdev_schema,
+            folder_name=os.path.join('3', 'should_fail')
         )
 
     def test_passing_2_0_unit_tests_against_2_0_schema(self):
