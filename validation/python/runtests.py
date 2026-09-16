@@ -608,6 +608,10 @@ class TestNinJSSchema(unittest.TestCase):
         working draft schema. They should all fail. Candidate changes add
         their negative cases here, alongside the positive cases in
         TEST_FILES_FOLDER/1/should_pass.
+
+        These files also run against the 1.x dev schema. Read the caveat on
+        test_failing_unit_test_files_against_1_x_dev_schema before you add
+        one.
         """
         self.folder_should_fail(
             schema=self.ninjs1_schema,
@@ -756,6 +760,10 @@ class TestNinJSSchema(unittest.TestCase):
         working draft schema. They should all fail. Candidate changes add
         their negative cases here, alongside the positive cases in
         TEST_FILES_FOLDER/2/should_pass.
+
+        These files also run against the 2.x dev schema. Read the caveat on
+        test_failing_unit_test_files_against_2_x_dev_schema before you add
+        one.
         """
         self.folder_should_fail(
             schema=self.ninjs2_schema,
@@ -869,6 +877,10 @@ class TestNinJSSchema(unittest.TestCase):
         working draft schema. They should all fail. Candidate changes add
         their negative cases here, alongside the positive cases in
         TEST_FILES_FOLDER/3/should_pass.
+
+        These files also run against the 3.x dev schema. Read the caveat on
+        test_failing_unit_test_files_against_3_x_dev_schema before you add
+        one.
         """
         self.folder_should_fail(
             schema=self.ninjs3_schema,
@@ -984,6 +996,11 @@ class TestNinJSSchema(unittest.TestCase):
         Also run TEST_FILES_FOLDER/1/should_fail, because the dev schema
         must reject what the 1.x working draft rejects.
 
+        A fixture in TEST_FILES_FOLDER/1/should_fail must not depend on a
+        property that only the dev schema declares. The working draft rejects
+        the unknown property, but the dev schema accepts it. This test then
+        reports an error, because the fixture is valid against the dev schema.
+
         We use "subTest" so we can see which file failed in test output.
         """
         self.folder_should_fail(
@@ -1043,6 +1060,11 @@ class TestNinJSSchema(unittest.TestCase):
 
         Also run TEST_FILES_FOLDER/2/should_fail, because the dev schema
         must reject what the 2.x working draft rejects.
+
+        A fixture in TEST_FILES_FOLDER/2/should_fail must not depend on a
+        property that only the dev schema declares. The working draft rejects
+        the unknown property, but the dev schema accepts it. This test then
+        reports an error, because the fixture is valid against the dev schema.
         """
         self.folder_should_fail(
             schema=self.ninjs2xdev_schema,
@@ -1097,6 +1119,11 @@ class TestNinJSSchema(unittest.TestCase):
 
         Also run TEST_FILES_FOLDER/3/should_fail, because the dev schema
         must reject what the 3.x working draft rejects.
+
+        A fixture in TEST_FILES_FOLDER/3/should_fail must not depend on a
+        property that only the dev schema declares. The working draft rejects
+        the unknown property, but the dev schema accepts it. This test then
+        reports an error, because the fixture is valid against the dev schema.
         """
         self.folder_should_fail(
             schema=self.ninjs3xdev_schema,
