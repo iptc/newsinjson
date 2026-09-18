@@ -1,0 +1,12 @@
+{
+  "uri": "http://ninjs.example.com/newsitems/ninjs-3x-working-draft-fail-002",
+  "renditions": [
+    {
+      "name": "main",
+      "href": "https://example.com/photos/1234-big.jpg",
+      "extensions": {
+        "mirror:count": 3
+      }
+    }
+  ]
+}
