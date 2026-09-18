@@ -1,0 +1,41 @@
+{
+  "uri": "http://ninjs.example.com/newsitems/ninjs-3x-working-draft-pass-003",
+  "digitalSourceType": {
+    "name": "trained algorithmic media",
+    "uri": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia"
+  },
+  "aiInfo": [
+    {
+      "name": "gen1",
+      "system": {
+        "name": "DALL-E",
+        "uri": "urn:ex-model:DALL-E",
+        "version": "v1.0.2",
+        "provider": { "name": "OpenAI", "uri": "urn:ex-prov:OpenAI" }
+      },
+      "promptInfo": {
+        "value": "Create an image of a field of sunflowers",
+        "uri": "https://prompts.example.com/image-sunflowers",
+        "version": "1.0"
+      },
+      "promptWriter": {
+        "name": "Agence France-Presse",
+        "uri": "http://cv.iptc.org/newscodes/newsprovider/AFP",
+        "role": "main"
+      }
+    }
+  ],
+  "headlines": [
+    { "role": "main", "value": "Sunflowers at dawn" }
+  ],
+  "bodies": [
+    { "role": "main", "contentType": "text/plain", "value": "Written by a journalist." },
+    { "role": "summary", "contentType": "text/plain", "value": "A summary.", "aiInfoRef": "gen1" }
+  ],
+  "renditions": [
+    { "name": "main", "href": "https://example.com/autogen/Image001.jpg", "contentType": "image/jpeg", "aiInfoRef": "gen1" }
+  ],
+  "subjects": [
+    { "name": "climate change", "uri": "http://cv.iptc.org/newscodes/mediatopic/20000418", "aiInfoRef": "gen1" }
+  ]
+}
