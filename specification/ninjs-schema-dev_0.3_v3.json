@@ -231,6 +231,11 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "aiInfoRef": {
+          "title": "AI information reference",
+          "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+          "type": "string"
+        },
         "name": {
           "title": "Name",
           "description": "The name of the organisation",
@@ -295,6 +300,11 @@
         "name"
       ],
       "properties": {
+        "aiInfoRef": {
+          "title": "AI information reference",
+          "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+          "type": "string"
+        },
         "name": {
           "title": "Name",
           "description": "The name of this object in the array of renditions, for example 'thumbnail'. Suggested CV: http://cv.iptc.org/newscodes/rendition/",
@@ -556,6 +566,11 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "role": {
                 "title": "Role",
                 "description": "The role of this description.",
@@ -585,6 +600,11 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "role": {
                 "title": "Role",
                 "description": "The role of this body.",
@@ -624,6 +644,11 @@
             ],
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "role": {
                 "title": "Role",
                 "description": "The role of this headline",
@@ -650,6 +675,11 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "name": {
                 "title": "Name",
                 "description": "The name of a person",
@@ -696,6 +726,11 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "name": {
                 "title": "Name",
                 "description": "The name of the place",
@@ -737,6 +772,11 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "name": {
                 "title": "Name",
                 "description": "The name of the subject.",
@@ -788,6 +828,11 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "id": {
                 "title": "ID",
                 "description": "An ID for the event.",
@@ -962,6 +1007,11 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "name": {
                 "title": "Name",
                 "description": "The name of the object.",
@@ -1160,6 +1210,11 @@
             "type": "object",
             "additionalProperties": false,
             "properties": {
+              "aiInfoRef": {
+                "title": "AI information reference",
+                "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced the content of this object. JSON Schema cannot check that the name exists, so the provider must check it.",
+                "type": "string"
+              },
               "name": {
                 "title": "Name",
                 "description": "The name of the genre.",
@@ -1311,6 +1366,132 @@
               "type": "string"
             }
           }
+        },
+        "aiInfo": {
+          "title": "AI information",
+          "description": "An array of descriptions of the artificial intelligence that created or enhanced content in this news object. An aiInfoRef property elsewhere in this news object holds the name of one entry. It maps to nar:aiInfo.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "title": "Name",
+                "description": "The name of this entry. An aiInfoRef property elsewhere in this news object holds this value. The name is unique within this news object.",
+                "type": "string"
+              },
+            "system": {
+              "title": "System",
+              "description": "The artificial intelligence system that generated the content. It maps to nar:aiInfo/system.",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "title": "Name",
+                  "description": "The name of the system.",
+                  "type": "string"
+                },
+                "uri": {
+                  "title": "URI",
+                  "description": "The identifier of the system as a complete URI.",
+                  "type": "string"
+                },
+                "literal": {
+                  "title": "Literal",
+                  "description": "An identifier for the system as a free-text string.",
+                  "type": "string"
+                },
+              "version": {
+                "title": "Version",
+                "description": "The version of the system. It maps to nar:aiInfo/system/@versioninfo.",
+                "type": "string"
+              },
+              "provider": {
+                "title": "Provider",
+                "description": "The party that provides the system. It maps to nar:aiInfo/system/provider.",
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "title": "Name",
+                    "description": "The name of the provider.",
+                    "type": "string"
+                  },
+                  "uri": {
+                    "title": "URI",
+                    "description": "The identifier of the provider as a complete URI.",
+                    "type": "string"
+                  },
+                  "literal": {
+                    "title": "Literal",
+                    "description": "An identifier for the provider as a free-text string.",
+                    "type": "string"
+                  }
+                }
+              }
+              }
+            },
+            "promptInfo": {
+              "title": "Prompt information",
+              "description": "The overall sense of what the system was asked to produce. It is not a breakdown of the individual prompts that built the content. It maps to nar:aiInfo/promptInfo.",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "title": "Value",
+                  "description": "The text of the prompt information.",
+                  "type": "string"
+                },
+                "uri": {
+                  "title": "URI",
+                  "description": "The identifier of the prompt as a complete URI. Use it when the prompt comes from a prompt library.",
+                  "type": "string"
+                },
+                "version": {
+                  "title": "Version",
+                  "description": "The version of the prompt.",
+                  "type": "string"
+                }
+              }
+            },
+            "promptWriter": {
+              "title": "Prompt writer",
+              "description": "The party, person or organisation, that wrote the prompt information. It maps to nar:aiInfo/promptWriter.",
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "title": "Name",
+                  "description": "The name of the prompt writer.",
+                  "type": "string"
+                },
+                "uri": {
+                  "title": "URI",
+                  "description": "The identifier of the prompt writer as a complete URI.",
+                  "type": "string"
+                },
+                "literal": {
+                  "title": "Literal",
+                  "description": "An identifier for the prompt writer as a free-text string.",
+                  "type": "string"
+                },
+              "role": {
+                "title": "Role",
+                "description": "The role of this party in relation to the prompt.",
+                "type": "string"
+              }
+              }
+            }
+            }
+          }
+        },
+        "aiInfoRef": {
+          "title": "AI information reference",
+          "description": "The name of an entry in the aiInfo array of this news object. It states that artificial intelligence created or enhanced this news object as a whole. JSON Schema cannot check that the name exists, so the provider must check it.",
+          "type": "string"
         }
       }
     },
