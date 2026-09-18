@@ -1,0 +1,40 @@
+{
+  "uri": "http://ninjs.example.com/newsitems/ninjs-1x-working-draft-pass-003",
+  "aiinfo": [
+    {
+      "name": "gen1",
+      "system": {
+        "name": "DALL-E",
+        "uri": "urn:ex-model:DALL-E",
+        "version": "v1.0.2",
+        "provider": {
+          "name": "OpenAI",
+          "uri": "urn:ex-prov:OpenAI"
+        }
+      },
+      "promptinfo": {
+        "value": "Create an image of a field of sunflowers",
+        "uri": "https://prompts.example.com/image-sunflowers",
+        "version": "1.0"
+      },
+      "promptwriter": {
+        "name": "Agence France-Presse",
+        "uri": "http://cv.iptc.org/newscodes/newsprovider/AFP",
+        "role": "main"
+      }
+    }
+  ],
+  "subject": [
+    {
+      "name": "weather",
+      "aiinforef": "gen1"
+    }
+  ],
+  "renditions": {
+    "main": {
+      "href": "https://example.com/a.jpg",
+      "mimetype": "image/jpeg",
+      "aiinforef": "gen1"
+    }
+  }
+}
