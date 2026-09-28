@@ -12,10 +12,12 @@ ninjs records when content was made (`contentCreated`) and when the news
 object was first created or changed (`firstCreated`, `versionCreated`). It
 cannot record when analogue content became digital.
 
-A scanned photograph from the 1940s has two dates: the 1940s, when the
-photographer took it, and the recent date of the scan. Archives and picture
-libraries need both dates. Today a provider must either put the scan date in
-`contentCreated`, which is wrong, or leave it out.
+A scanned photograph from the 1940s has two dates. The first date is in the
+1940s, when the photographer took it. The second date is the recent date of
+the scan. Archives and picture libraries need both dates.
+
+Today a provider must put the scan date in `contentCreated`, or leave it out.
+The scan date in `contentCreated` is wrong.
 
 ### Origin
 
