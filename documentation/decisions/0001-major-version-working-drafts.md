@@ -34,8 +34,8 @@ cannot easily accept one change and reject another.
 
 ### Option 3: One working draft file per major version
 
-Copy the latest approved schema of each branch to `ninjs-schema_1.json`,
-`ninjs-schema_2.json` and `ninjs-schema_3.json`. Do the same for the
+Copy the latest approved schema of each branch to `ninjs-schema_v1-rc.json`,
+`ninjs-schema_v2-rc.json` and `ninjs-schema_v3-rc.json`. Do the same for the
 development schemas. Each candidate change is a separate pull request against
 these files. Cut a numbered minor version only at ratification, and only with
 the accepted changes.

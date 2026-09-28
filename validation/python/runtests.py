@@ -127,15 +127,15 @@ class TestNinJSSchema(unittest.TestCase):
         )
         ninjs1_schema_filename = os.path.join(
             specification_path,
-            'ninjs-schema_1.json',
+            'ninjs-schema_v1-rc.json',
         )
         ninjs2_schema_filename = os.path.join(
             specification_path,
-            'ninjs-schema_2.json',
+            'ninjs-schema_v2-rc.json',
         )
         ninjs3_schema_filename = os.path.join(
             specification_path,
-            'ninjs-schema_3.json',
+            'ninjs-schema_v3-rc.json',
         )
         ninjs1xdev_schema_filename = os.path.join(
             specification_path,
