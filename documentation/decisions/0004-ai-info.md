@@ -42,9 +42,7 @@ to point at.
 
 Option A2. The mixed provenance case is the main reason for the change.
 
-This choice answers a question that G2 has not answered. CR00222 section 5a
-asks "Should we add `@contentrefs`?". Issue 143 records the discussion as
-unresolved on 11 September 2026.
+This choice answers a question that G2 has not answered.
 
 ## Decision B: The key of an aiInfo entry
 
@@ -113,8 +111,7 @@ number.
 1. Does ninjs lead G2 on the direction of the link?
 2. Does the NAR working group accept `promptInfo` as an object?
 3. How does `aiInfo` relate to `digitalSourceType`? Must the two agree?
-4. Must the AI system also appear in `infoSources`? Issue 143 records the
-   IPTC position that AI is a contributor, not a creator.
+4. Must the AI system also appear in `infoSources`?
 5. Is a named person appropriate as `promptWriter`?
 6. `AiInfoType` allows `##other`. Does `aiInfo` need an extension point like
    the one in [0003](0003-rendition-extensions.md)?
