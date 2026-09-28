@@ -9,7 +9,8 @@
 ## Context
 
 Providers must state which artificial intelligence created or enhanced the
-content of a news object, and which part of the content it created.
+content of a news object. They must also state which part of the content it
+created.
 
 NewsML-G2 CR00222 proposes `AiInfoType`. It describes the system, its
 provider, the prompt and the prompt writer. G2 links content to an `aiInfo`
@@ -86,8 +87,9 @@ number.
 
 - Every member except `name` is optional. This matches the 0..1
   cardinality of each member of `AiInfoType`.
-- `system`, `provider` and `promptWriter` use the ninjs concept shape of
-  `name`, `uri` and `literal`, like `genres` and `infoSources`.
+- `system`, `provider` and `promptWriter` use the ninjs concept shape. This
+  shape has `name`, `uri` and `literal`. `genres` and `infoSources` use the
+  same shape.
 - `role` is an open string, like every other role in ninjs.
 - Each description states its `nar:` mapping.
 - This record uses the 3.x names. 1.x and 2.x use lowercase names, for
