@@ -26,6 +26,11 @@ decision replaces a record, set the old status to `Superseded by NNNN`.
 To see all records, list this folder. This folder has no index file, so
 records from parallel pull requests do not conflict.
 
+The folder shows only merged records. Before you choose a number, also
+check the open pull requests for numbers that they use. If two pull
+requests use the same number, the second pull request to merge takes the
+next free number.
+
 ## Status
 
 - **Proposed**: a pull request contains the change. The IPTC Standards
