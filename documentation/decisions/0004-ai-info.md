@@ -92,14 +92,17 @@ number.
   `name`, `uri` and `literal`, like `genres` and `infoSources`.
 - `role` is an open string, like every other role in ninjs.
 - Each description states its `nar:` mapping.
+- This record uses the 3.x names. 1.x and 2.x use lowercase names, for
+  example `aiinfo`, `aiinforef`, `promptinfo` and `promptwriter`.
 
 ## Consequences
 
 - 1.x cannot state which part of the content an AI created. Every content
   property in 1.x is a plain string or a `patternProperties` key. A 1.x
   provider states `aiInfoRef` on the news object only.
-- In 2.x and 3.x, `by`, `slugline`, `edNote` and `title` are plain strings,
-  so they cannot carry `aiInfoRef` either.
+- In 2.x, `by`, `slugline`, `ednote` and `title` are plain strings. In 3.x,
+  `by`, `slugline`, `edNote` and `title` are plain strings. They cannot carry
+  `aiInfoRef` either.
 - JSON Schema cannot check that an `aiInfoRef` value names an existing
   entry. The provider must check it.
 - ninjs is different from G2 in the link direction and in the shape of
