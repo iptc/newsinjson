@@ -13,22 +13,27 @@ not define. Examples are a mirror URL or a checksum.
 The rendition object sets `additionalProperties` to `false` in every branch.
 A provider cannot add such data today.
 
-The Guidelines already describe one extension mechanism: copy the schema,
-change its `id`, add typed properties, and publish the result.
+The Guidelines already describe one extension mechanism:
+
+1. Copy the schema.
+2. Change its `id`.
+3. Add typed properties.
+4. Publish the result.
+
 `examples/2.3/schema-extension/` demonstrates it.
 
 ## Options considered
 
 ### Option 1: Use the existing schema extension mechanism
 
-This needs no schema change, and the provider gets typed properties. But the
+This needs no schema change. The provider gets typed properties. But the
 provider must mint and publish a new schema id. This is disproportionate for
 one mirror URL on one rendition.
 
 ### Option 2: Set additionalProperties to true on the rendition
 
 This is the smallest change. But ninjs then cannot detect a misspelt
-property name on a rendition, and provider data mixes with standard data.
+property name on a rendition. Provider data also mixes with standard data.
 
 ### Option 3: Add an extensions object with string values
 
