@@ -497,6 +497,12 @@
           "type": "string",
           "format": "date-time"
         },
+        "contentDigitised": {
+          "title": "Content digitised",
+          "description": "The date and time when the content of this ninjs object was digitised. For example the date when an old photo was scanned. This is not the date when the original content was made. Use contentCreated for that date.",
+          "type": "string",
+          "format": "date-time"
+        },
         "embargoedUntil": {
           "title": "Embargoed until",
           "description": "The date and time before which all versions of the news object are embargoed. If absent, this object is not embargoed.",
