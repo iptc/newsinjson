@@ -52,22 +52,23 @@ also excludes the digitisation date from "Date Created" explicitly.
 This matches the shape of `contentCreated`. The change is additive and
 optional, so every valid document stays valid.
 
-### Option 3: Add a property that accepts a date or a date-time
-
-A digitisation date is often known only to the year or to the day. A
-`date-time` value cannot express this. The Photo Metadata Standard allows a
-truncated value for "Date Created".
+### Option 3: Add a property that accepts a truncated date-time
 
 The 3.x branch already defines `truncatedDateTimeType`. It accepts a year, a
-year and month, a date, or a full date-time. The event properties
-`expectedStartDate`, `expectedEndDate` and `recurrenceDates` use it. The 1.x
-and 2.x branches have no such type.
+year and month, a date, or a full date-time. The 1.x and 2.x branches have no
+such type.
 
-But `contentCreated` uses `date-time` in every branch. A truncated
-`contentDigitised` beside a full `contentCreated` makes the pair
-inconsistent. The two dates of one object then have different precision
-rules. The 1.x and 2.x branches also need a new type, with a different shape
-from 3.x.
+The 3.x branch uses this type for event dates that are in the future:
+`expectedStartDate`, `expectedEndDate` and `recurrenceDates`. A planner often
+does not know the exact day or time of a future event.
+
+A scan date is different. The scan occurs at a known time. The scanner or the
+archive workflow usually records the full date and time. The working group
+does not think that this property needs the flexibility of a truncated value.
+
+A truncated `contentDigitised` beside a full `contentCreated` also makes the
+pair inconsistent. The two dates of one object then have different precision
+rules. The 1.x and 2.x branches also need a new type.
 
 ## Names considered
 
@@ -96,6 +97,10 @@ value. The property holds a date-time value, as `contentCreated` does.
 Option 2, with the name `contentDigitised`. The property is an optional
 string with `format: date-time`.
 
+The type matches `contentCreated`. The working group considered the truncated
+date-time of option 3. It chose consistency with `contentCreated`, because a
+scan date is usually known in full.
+
 The working group prefers consistency inside ninjs to alignment of the name
 with the Photo Metadata Standard. The NewsML-G2 mapping and a future photo or
 video metadata mapping can connect the names.
@@ -119,10 +124,7 @@ which matches `contentcreated`. 3.x uses `contentDigitised`, which matches
 
 ## Open questions
 
-1. Does the committee want `contentCreated` and `contentDigitised` to accept
-   truncated values? In 3.x they can reuse `truncatedDateTimeType`. That is a
-   separate decision with its own record.
-2. If the Photo Metadata Working Group adds a digitisation date, does it
+1. If the Photo Metadata Working Group adds a digitisation date, does it
    use the same definition? The two standards must agree on the meaning,
    even with different names.
 
