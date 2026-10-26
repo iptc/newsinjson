@@ -20,14 +20,14 @@ The `examples` folder contains example files, including some supplied
 by Business Wire. Examples show how NewsML 1.2 files convert to their
 equivalents in ninjs.
 
-Three versions of ninjs: ninjs 1.7, ninjs 2.3 and ninjs 3.2
+Three versions of ninjs: ninjs 1.8, ninjs 2.4 and ninjs 3.3
 -------------------------
 
 This repository specifies all versions of ninjs.
 
 The 1.x series adds new features to the version of ninjs that started
 with ninjs 1.0 back in 2013, in a way that is fully backwards
-compatible. The latest release in this series is 1.7.
+compatible. The latest release in this series is 1.8.
 
 The 2.x series fixes some issues that made the 1.x series tricky for
 developers to work with. The main change is that we avoid the use of
@@ -42,8 +42,8 @@ meant breaking backwards-compatibility with the 1.x versions of ninjs.
 This is why we increased the major version number to 2.0.
 
 The 2.0 version of ninjs was approved by the IPTC Standards Committee on
-October 20th, 2021. The latest in this series is version 2.3, approved
-in October 2025.
+October 20th, 2021. The latest in this series is version 2.4, approved
+in October 2026.
 
 The 3.x series is a major update to ninjs, which is not backwards compatible.
 
@@ -53,23 +53,28 @@ to align with general best practice for variable naming and graphQL the
 properties now use "camelCase".
 
 The 3.0 version of ninjs was approved by the IPTC Standards Committee in
-October 2024. The latest in the series is 3.2, approved in October 2025.
+October 2024. The latest in the series is 3.3, approved in October 2026.
 
 Versions 1.7, 2.2 and 3.1, approved in October 2025, add the "resources"
 array to "renditions" in all versions of ninjs.
 
+Versions 1.8, 2.4 and 3.3, approved in October 2026, add two properties to
+all versions of ninjs. "contentDigitised" ("contentdigitised" in 1.x and
+2.x) records when the content was digitised. "extensions" on a rendition
+carries provider-specific string values.
+
 Which version should I choose for my project?
 -------------------------
 
-If you are starting a green-field project, we recommend using ninjs 3.2.
+If you are starting a green-field project, we recommend using ninjs 3.3.
 This version should be easiest for developers to work with.
 
 If you are already using a 1.x version of ninjs, we recommend at least
-upgrading to version 1.7. This should be an easy change, because 1.7 is
+upgrading to version 1.8. This should be an easy change, because 1.8 is
 backwards-compatible with all previous versions of 1.x.
 
 Similarly, if you are already using a 2.x version of ninjs, we recommend
-using version 2.3 if you cannot upgrade to the 3.x branch.
+using version 2.4 if you cannot upgrade to the 3.x branch.
 
 Protocol Buffers demo
 ---------------------
@@ -108,6 +113,6 @@ ninjs Generator
 ---------------
 
 In the `generator` folder is the source code to the ninjs generator, a
-user-facing tool to generate sample ninjs files in either ninjs 1.7, 2.3 or 3.2.
+user-facing tool to generate sample ninjs files in either ninjs 1.8, 2.4 or 3.3.
 
 The tool is hosted at https://www.iptc.org/std/ninjs/generator/
