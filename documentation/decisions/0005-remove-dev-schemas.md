@@ -2,7 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-10-26
-- Pull request: #NNN
+- Pull request: #253
 - Branches: 1.x, 2.x, 3.x
 
 ## Context
