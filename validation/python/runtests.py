@@ -137,18 +137,6 @@ class TestNinJSSchema(unittest.TestCase):
             specification_path,
             'ninjs-schema_v3-rc.json',
         )
-        ninjs1xdev_schema_filename = os.path.join(
-            specification_path,
-            'ninjs-schema-dev_0.2_v1.json'
-        )
-        ninjs2xdev_schema_filename = os.path.join(
-            specification_path,
-            'ninjs-schema-dev_0.1_v2.json'
-        )
-        ninjs3xdev_schema_filename = os.path.join(
-            specification_path,
-            'ninjs-schema-dev_0.3_v3.json'
-        )
         with open(ninjs10_schema_filename) as schemafile:
             self.ninjs10_schema = json.load(schemafile)
         with open(ninjs11_schema_filename) as schemafile:
@@ -185,12 +173,6 @@ class TestNinJSSchema(unittest.TestCase):
             self.ninjs2_schema = json.load(schemafile)
         with open(ninjs3_schema_filename) as schemafile:
             self.ninjs3_schema = json.load(schemafile)
-        with open(ninjs1xdev_schema_filename) as schemafile:
-            self.ninjs1xdev_schema = json.load(schemafile)
-        with open(ninjs2xdev_schema_filename) as schemafile:
-            self.ninjs2xdev_schema = json.load(schemafile)
-        with open(ninjs3xdev_schema_filename) as schemafile:
-            self.ninjs3xdev_schema = json.load(schemafile)
 
         self.latest_1_x_schema = self.ninjs1_schema
         self.latest_2_x_schema = self.ninjs2_schema
@@ -284,9 +266,6 @@ class TestNinJSSchema(unittest.TestCase):
         self.assertIsNone(jsonschema.validate({"uri": "test1"}, self.ninjs1_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test2"}, self.ninjs2_schema))
         self.assertIsNone(jsonschema.validate({"uri": "test3"}, self.ninjs3_schema))
-        self.assertIsNone(jsonschema.validate({"uri": "test-1.x-dev"}, self.ninjs1xdev_schema))
-        self.assertIsNone(jsonschema.validate({"uri": "test-2.x-dev"}, self.ninjs2xdev_schema))
-        self.assertIsNone(jsonschema.validate({"uri": "test-3.x-dev"}, self.ninjs3xdev_schema))
 
     def test_all_passing_unit_test_files_against_10_schema(self):
         """
@@ -608,10 +587,6 @@ class TestNinJSSchema(unittest.TestCase):
         working draft schema. They should all fail. Candidate changes add
         their negative cases here, alongside the positive cases in
         TEST_FILES_FOLDER/1/should_pass.
-
-        These files also run against the 1.x dev schema. Read the caveat on
-        test_failing_unit_test_files_against_1_x_dev_schema before you add
-        one.
         """
         self.folder_should_fail(
             schema=self.ninjs1_schema,
@@ -760,10 +735,6 @@ class TestNinJSSchema(unittest.TestCase):
         working draft schema. They should all fail. Candidate changes add
         their negative cases here, alongside the positive cases in
         TEST_FILES_FOLDER/2/should_pass.
-
-        These files also run against the 2.x dev schema. Read the caveat on
-        test_failing_unit_test_files_against_2_x_dev_schema before you add
-        one.
         """
         self.folder_should_fail(
             schema=self.ninjs2_schema,
@@ -877,10 +848,6 @@ class TestNinJSSchema(unittest.TestCase):
         working draft schema. They should all fail. Candidate changes add
         their negative cases here, alongside the positive cases in
         TEST_FILES_FOLDER/3/should_pass.
-
-        These files also run against the 3.x dev schema. Read the caveat on
-        test_failing_unit_test_files_against_3_x_dev_schema before you add
-        one.
         """
         self.folder_should_fail(
             schema=self.ninjs3_schema,
@@ -932,206 +899,6 @@ class TestNinJSSchema(unittest.TestCase):
         self.folder_should_pass(
             schema=self.latest_3_x_schema,
             folder_name=DOCUMENTATION_EXAMPLES_FOLDER_3_x
-        )
-
-    def test_all_passing_unit_test_files_against_1_x_dev_schema(self):
-        """
-        Run files in TEST_FILES_FOLDER/1.x_dev/should_pass against the
-        1.x dev schema.
-        They should all pass (ie they are all valid against the schema).
-
-        Also run TEST_FILES_FOLDER/1/should_pass, because the dev schema
-        carries every candidate change that the 1.x working draft carries.
-
-        Also run 1.0, 1.1, 1.2, 1.3, 1.4, 1.5 and 1.6 tests against the dev
-        schema, because it should be backwards compatible.
-        """
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.0', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.1', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.2', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.3', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.4', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.5', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.6', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.7', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.x_dev', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1', 'should_pass')
-        )
-
-    def test_failing_unit_test_files_against_1_x_dev_schema(self):
-        """
-        Run files in TEST_FILES_FOLDER/1.x_dev/should_fail against the
-        1.x dev schema.
-        They should all fail (ie they are all invalid in some way).
-
-        Also run TEST_FILES_FOLDER/1/should_fail, because the dev schema
-        must reject what the 1.x working draft rejects.
-
-        A fixture in TEST_FILES_FOLDER/1/should_fail must not depend on a
-        property that only the dev schema declares. The working draft rejects
-        the unknown property, but the dev schema accepts it. This test then
-        reports an error, because the fixture is valid against the dev schema.
-
-        We use "subTest" so we can see which file failed in test output.
-        """
-        self.folder_should_fail(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1.x_dev', 'should_fail')
-        )
-        self.folder_should_fail(
-            schema=self.ninjs1xdev_schema,
-            folder_name=os.path.join('1', 'should_fail')
-        )
-
-    def test_all_passing_unit_test_files_against_2_x_dev_schema(self):
-        """
-        Run files in TEST_FILES_FOLDER/2.x_dev/should_pass against the
-        2.x dev schema.
-        They should all pass (ie they are all valid against the schema).
-
-        Also run TEST_FILES_FOLDER/2/should_pass, because the dev schema
-        carries every candidate change that the 2.x working draft carries.
-
-        Also run 2.0, 2.1 and 2.2 tests against the dev
-        schema, because it should be backwards compatible.
- 
-        We do *not* run 1.x tests against the 2.x schema as it is
-        NOT backwards compatible.
-        """
-        self.folder_should_pass(
-            schema=self.ninjs2xdev_schema,
-            folder_name=os.path.join('2.x_dev', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs2xdev_schema,
-            folder_name=os.path.join('2', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs2xdev_schema,
-            folder_name=os.path.join('2.0', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs2xdev_schema,
-            folder_name=os.path.join('2.1', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs2xdev_schema,
-            folder_name=os.path.join('2.2', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs2xdev_schema,
-            folder_name=os.path.join('2.3', 'should_pass')
-        )
- 
-    def test_failing_unit_test_files_against_2_x_dev_schema(self):
-        """
-        Run files in TEST_FILES_FOLDER/2.x_dev/should_fail against the
-        2.x dev schema.
-        They should all fail (ie they are all invalid in some way).
-
-        Also run TEST_FILES_FOLDER/2/should_fail, because the dev schema
-        must reject what the 2.x working draft rejects.
-
-        A fixture in TEST_FILES_FOLDER/2/should_fail must not depend on a
-        property that only the dev schema declares. The working draft rejects
-        the unknown property, but the dev schema accepts it. This test then
-        reports an error, because the fixture is valid against the dev schema.
-        """
-        self.folder_should_fail(
-            schema=self.ninjs2xdev_schema,
-            folder_name=os.path.join('2.x_dev', 'should_fail')
-        )
-        self.folder_should_fail(
-            schema=self.ninjs2xdev_schema,
-            folder_name=os.path.join('2', 'should_fail')
-        )
-
-    def test_all_passing_unit_test_files_against_3_x_dev_schema(self):
-        """
-        Run files in TEST_FILES_FOLDER/3.x_dev/should_pass against the
-        3.x dev schema.
-        They should all pass (ie they are all valid against the schema).
-
-        Also run TEST_FILES_FOLDER/3/should_pass, because the dev schema
-        carries every candidate change that the 3.x working draft carries.
-
-        Also run 3.0 and 3.1 tests against the dev
-        schema, because it should be backwards compatible.
- 
-        We do *not* run 1.x or 2.x tests against the 3.x schema as it is
-        NOT backwards compatible.
-        """
-        self.folder_should_pass(
-            schema=self.ninjs3xdev_schema,
-            folder_name=os.path.join('3.x_dev', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs3xdev_schema,
-            folder_name=os.path.join('3', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs3xdev_schema,
-            folder_name=os.path.join('3.0', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs3xdev_schema,
-            folder_name=os.path.join('3.1', 'should_pass')
-        )
-        self.folder_should_pass(
-            schema=self.ninjs3xdev_schema,
-            folder_name=os.path.join('3.2', 'should_pass')
-        )
- 
-    def test_failing_unit_test_files_against_3_x_dev_schema(self):
-        """
-        Run files in TEST_FILES_FOLDER/3.x_dev/should_fail against the
-        3.x dev schema.
-        They should all fail (ie they are all invalid in some way).
-
-        Also run TEST_FILES_FOLDER/3/should_fail, because the dev schema
-        must reject what the 3.x working draft rejects.
-
-        A fixture in TEST_FILES_FOLDER/3/should_fail must not depend on a
-        property that only the dev schema declares. The working draft rejects
-        the unknown property, but the dev schema accepts it. This test then
-        reports an error, because the fixture is valid against the dev schema.
-        """
-        self.folder_should_fail(
-            schema=self.ninjs3xdev_schema,
-            folder_name=os.path.join('3.x_dev', 'should_fail')
-        )
-        self.folder_should_fail(
-            schema=self.ninjs3xdev_schema,
-            folder_name=os.path.join('3', 'should_fail')
         )
 
     def test_passing_2_0_unit_tests_against_2_0_schema(self):

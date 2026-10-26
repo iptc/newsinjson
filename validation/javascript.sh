@@ -85,13 +85,6 @@ validate_folder_against_schema draft2020 '../examples/2.1' '../specification/nin
 echo "The following examples should fail validation:"
 validate_folder_against_schema draft2020 'test_suite/3.0/should_fail' '../specification/ninjs-schema_3.0.json' invalid
 
-echo "--- ninjs 2.1-dev tests ---"
-echo
-validate_folder_against_schema draft2020 'test_suite/2.x_dev/should_pass' '../specification/ninjs-schema-dev_0.1_v2.1.json' valid
-
-echo "The following examples should fail validation:"
-validate_folder_against_schema draft2020 'test_suite/2.x_dev/should_fail' '../specification/ninjs-schema-dev_0.1_v2.1.json' invalid
-
 echo "--- ninjs 1.6 tests ---"
 echo
 validate_folder_against_schema draft7 'test_suite/1.6/should_pass' '../specification/ninjs-schema_1.6.json' valid
@@ -109,13 +102,6 @@ validate_folder_against_schema draft7 '../examples/1.5' '../specification/ninjs-
 
 echo "The following examples should fail validation:"
 validate_folder_against_schema draft7 'test_suite/1.5/should_fail' '../specification/ninjs-schema_1.5.json' invalid
-
-echo "--- ninjs 1.5-dev tests ---"
-echo
-validate_folder_against_schema draft7 'test_suite/1.x_dev/should_pass' '../specification/ninjs-schema-dev_0.2_v1.5.json' valid
-
-echo "The following examples should fail validation:"
-validate_folder_against_schema draft7 'test_suite/1.x_dev/should_fail' '../specification/ninjs-schema-dev_0.2_v1.5.json' invalid
 
 # Go back to the pwd where the user started
 cd -

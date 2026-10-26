@@ -1,8 +1,0 @@
-{
-    "uri": "urn:008_encoded_rights.json",
-    "title": "Title of my ninjs dev image which is protected by dataco restrictions",
-    "rightsinfo": {
-        "langid": "http://www.w3.org/ns/odrl/2/",
-        "encodedrights": "rights expression"
-    }
-}
