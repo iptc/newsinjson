@@ -1,6 +1,6 @@
 # 0001. Edit candidate changes in one working draft per major version
 
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-09-16
 - Pull request: #248
 - Branches: 1.x, 2.x, 3.x
@@ -70,4 +70,6 @@ draft differs from its source only in `$id` and `title`.
 
 ## Committee outcome
 
-Not yet decided.
+- Date: 2026-10-26
+- Decision: Accepted. The committee approved this process for future
+  minor versions.
