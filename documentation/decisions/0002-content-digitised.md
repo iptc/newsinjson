@@ -1,6 +1,6 @@
 # 0002. Add contentDigitised to record when content was digitised
 
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-09-18
 - Pull request: #249
 - Issue: #246
@@ -130,4 +130,6 @@ which matches `contentcreated`. 3.x uses `contentDigitised`, which matches
 
 ## Committee outcome
 
-Not yet decided.
+- Date: 2026-10-26
+- Decision: Accepted. The committee approved `contentDigitised` as a
+  feature for the 1.x, 2.x and 3.x branches.
