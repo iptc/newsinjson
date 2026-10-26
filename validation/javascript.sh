@@ -27,6 +27,39 @@ validate_folder_against_schema () {
 
 cd "$(dirname "$0")"
 
+echo "--- ninjs 3.3 tests ---"
+echo
+
+echo "The following tests should pass:"
+validate_folder_against_schema draft2020 'test_suite/3.3/should_pass' '../specification/ninjs-schema_3.3.json' valid
+validate_folder_against_schema draft2020 'test_suite/3.2/should_pass' '../specification/ninjs-schema_3.3.json' valid
+validate_folder_against_schema draft2020 'test_suite/3.1/should_pass' '../specification/ninjs-schema_3.3.json' valid
+validate_folder_against_schema draft2020 'test_suite/3.0/should_pass' '../specification/ninjs-schema_3.3.json' valid
+validate_folder_against_schema draft2020 '../examples/3.3' '../specification/ninjs-schema_3.3.json' valid
+
+echo "The following examples should fail validation:"
+validate_folder_against_schema draft2020 'test_suite/3.3/should_fail' '../specification/ninjs-schema_3.3.json' invalid
+
+echo "--- ninjs 2.4 tests ---"
+echo
+
+echo "The following tests should pass:"
+validate_folder_against_schema draft2020 'test_suite/2.4/should_pass' '../specification/ninjs-schema_2.4.json' valid
+validate_folder_against_schema draft2020 '../examples/2.4' '../specification/ninjs-schema_2.4.json' valid
+
+echo "The following examples should fail validation:"
+validate_folder_against_schema draft2020 'test_suite/2.4/should_fail' '../specification/ninjs-schema_2.4.json' invalid
+
+echo "--- ninjs 1.8 tests ---"
+echo
+
+echo "The following tests should pass:"
+validate_folder_against_schema draft7 'test_suite/1.8/should_pass' '../specification/ninjs-schema_1.8.json' valid
+validate_folder_against_schema draft7 '../examples/1.8' '../specification/ninjs-schema_1.8.json' valid
+
+echo "The following examples should fail validation:"
+validate_folder_against_schema draft7 'test_suite/1.8/should_fail' '../specification/ninjs-schema_1.8.json' invalid
+
 echo "--- ninjs 3.2 tests ---"
 echo
 

@@ -133,3 +133,4 @@ which matches `contentcreated`. 3.x uses `contentDigitised`, which matches
 - Date: 2026-10-26
 - Decision: Accepted. The committee approved `contentDigitised` as a
   feature for the 1.x, 2.x and 3.x branches.
+- Release: ninjs 1.8, 2.4 and 3.3.

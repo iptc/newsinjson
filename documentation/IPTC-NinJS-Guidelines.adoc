@@ -11,8 +11,8 @@ keywords: iptc, news, story, article, media, json, javascript, markup, schema, m
 :author: IPTC News in JSON Working Group
 :email: office@iptc.org
 :version-label: Covers version
-:revnumber: 3.2, 2.3 and 1.7
-:revremark: Revised 2025-11-05
+:revnumber: 3.3, 2.4 and 1.8
+:revremark: Revised 2026-10-26
 :toc: left
 :toc-title: ninjs User Guide
 :toclevels: 2
@@ -38,14 +38,15 @@ We have created some tools to help get users started. These include a
 https://www.iptc.org/std/ninjs/generator/[simple ninjs generator] that shows
 how easily a real ninjs document can be created, and a <<Validating a ninjs document,JSON schema to validate ninjs objects>>.
 
-The latest version of the standard is 3.2. 
-https://iptc.org/std/ninjs/ninjs-schema_3.2.json[Version 3.2 of the ninjs
-schema] was made available in November 2025.
+The latest version of the standard is 3.3. 
+The IPTC approved
+https://iptc.org/std/ninjs/ninjs-schema_3.3.json[version 3.3 of the ninjs
+schema] in October 2026.
 
-The latest version in the 2.x branch is 2.3, which was made available in November 2025.
+The latest version in the 2.x branch is 2.4. The IPTC approved it in October 2026.
 See below for more information on the <<Differences between ninjs 1.x and 2.x,differences between the 1.x and 2.x branches>>.
 
-The latest version in the 1.x branch is 1.7, which was also made available in November 2025.
+The latest version in the 1.x branch is 1.8. The IPTC also approved it in October 2026.
 See below for more information on the <<Differences between ninjs 1.x and 2.x,differences between the 1.x and 2.x branches>>.
 
 === Built for both APIs and data at rest
@@ -105,25 +106,25 @@ by an API call.
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/001_simple_example.json[]
+include::includes/examples/3.3/001_simple_example.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 [source,json]
 ----
-include::includes/examples/2.3/001_simple_example.json[]
+include::includes/examples/2.4/001_simple_example.json[]
 ----
 
-ninjs 1.7::
+ninjs 1.8::
 +
 [source,json]
 ----
-include::includes/examples/1.7/001_simple_example.json[]
+include::includes/examples/1.8/001_simple_example.json[]
 ----
 
 ====
@@ -132,15 +133,16 @@ You can make your own ninjs documents for demonstration or testing purposes
 using the
 https://www.iptc.org/std/ninjs/generator/[ninjs generator tool on iptc.org].
 
-=== Versions of ninjs: ninjs 3.2, 2.3 and 1.7
+=== Versions of ninjs: ninjs 3.3, 2.4 and 1.8
 
 IPTC manages three versions of ninjs: the 3.x branch (where the latest version
-is 3.2), the 2.x branch (where the latest version is 2.3) and the 1.x branch
-(where the latest version is 1.7).
+is 3.3), the 2.x branch (where the latest version is 2.4) and the 1.x branch
+(where the latest version is 1.8).
 
 The 1.x series continues the version of ninjs that started with ninjs 1.0 in
 2013, adding new features in a way that is fully backwards-compatible. The
-latest release in this series is 1.7, which adds <<resources>> under <<renditions>>.
+latest release in this series is 1.8. It adds the <<contentDigitised>> property
+and the <<extensions>> property of <<renditions>>.
 
 The 2.x series fixes some issues that made the 1.x series tricky for some
 developers to work with. The main change is that ninjs 2.x avoids the use of
@@ -156,16 +158,16 @@ keeping with JSON best practices, especially regarding GraphQL usage. ninjs 3.x 
 created alongside the https://www.thedpp.com/lpx[LPX (Live Production Exchange)
 project from the DPP], with the help of experts from CNN, Reuters, Arqiva and more.
 
-All new users are strongly recommended to use version 3.2.
+We recommend version 3.3 for all new users.
 
-ninjs 3.2, 2.3 and 1.7 were approved by the IPTC Standards Committee on October
-16th, 2025.
+The IPTC Standards Committee approved ninjs 3.3, 2.4 and 1.8 on October 26th,
+2026.
 
-This document focuses on the 3.2 version, but includes notes where the 2.x and
+This document focuses on the 3.3 version, but includes notes where the 2.x and
 1.x versions differ. Those who must use version 2.x or 1.x for backwards
-compatibility reasons can find the JSON Schema file for ninjs 2.3 at
-https://iptc.org/std/ninjs/ninjs-schema_2.3.json and the schema file for ninjs 1.7
-at https://iptc.org/std/ninjs/ninjs-schema_1.7.json.
+compatibility reasons can find the JSON Schema file for ninjs 2.4 at
+https://iptc.org/std/ninjs/ninjs-schema_2.4.json and the schema file for ninjs 1.8
+at https://iptc.org/std/ninjs/ninjs-schema_1.8.json.
 
 === Differences between ninjs 1.x, 2.x and 3.x
 
@@ -275,11 +277,11 @@ In ninjs 3.x, property names were converted to camelCase.
 === Which version of ninjs should I choose for my project?
 
 If you are starting a green-field project, we recommend using the latest
-version in the ninjs 3.x branch, currently ninjs 3.2.  This version should be
+version in the ninjs 3.x branch, currently ninjs 3.3.  This version should be
 easiest for developers to work with.
 
 If you are already using a 1.x or 2.x version of ninjs, we recommend at least
-upgrading to the latest version in that branch, currently 1.6 and 2.2. This
+upgrading to the latest version in that branch, currently 1.8 and 2.4. This
 should be an easy change, because all new minor versions in a branch are
 backwards-compatible with earlier minor versions in the same branch.
 
@@ -376,7 +378,7 @@ The "uri" property is *required* at the top level. In some array objects, other
 properties may be required; for example, if `rightsInfo` is used, then either
 `linkedRights` or `encodedRights` is required.
 
-These tables primarily describe the ninjs 3.2 schema. Where possible, we note
+These tables primarily describe the ninjs 3.3 schema. Where possible, we note
 differences in the 1.x and 2.x schemas, but the ultimate reference for each
 version of ninjs is the relevant JSON Schema file.
 
@@ -386,7 +388,7 @@ These properties concern the structure, type and creation details of the content
 
 [cols="1,1,8a,2",options="header"]
 |===
-|ninjs 3.2 +
+|ninjs 3.3 +
 property
 |ninjs 1.x / 2.x +
 property
@@ -438,11 +440,11 @@ This property is an object with the following child properties:
 !string
 
 !`version`
-!The version of the standard used, such as `3.2`.
+!The version of the standard used, such as `3.3`.
 !string
 
 !`schema`
-!The uri of the JSON schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_3.2.json`
+!The uri of the JSON schema to use for validation, such as `https://www.iptc.org/std/ninjs/ninjs-schema_3.3.json`
 !URI
 
 !===
@@ -514,6 +516,12 @@ One of: +
 |`contentCreated`
 |`contentcreated`
 |The date and time when the content of this ninjs object was originally created.
+|date-time
+
+[[contentDigitised]]
+|`contentDigitised`
+|`contentdigitised`
+|The date and time when the content of this ninjs object was digitised. For example, the date when an old photo was scanned. This is not the date when the original content was made. Use <<contentCreated>> for that date. (Added in ninjs 3.3, 2.4 and 1.8)
 |date-time
 
 [[embargoed]]
@@ -1212,18 +1220,18 @@ Here's an example of a simple event:
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/008_event.json[]
+include::includes/examples/3.3/008_event.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 Planned news events are not handled in ninjs 2.2.
 
-ninjs 1.7::
+ninjs 1.8::
 +
 Planned news events are not handled in ninjs 1.6.
 ====
@@ -1673,6 +1681,11 @@ This property is an array of objects with the following child properties:
 
 |array of objects
 
+|[[extensions]]`extensions`
+|`extensions`
+|Provider-specific extension properties for this rendition, with string keys and string values. Keys SHOULD have a provider or purpose prefix, for example `mirror:eu`. The schema does not check the contents. A provider that wants to validate its own extensions can publish a profile schema on top of ninjs. (Added in ninjs 3.3, 2.4 and 1.8)
+|object with string values
+
 |===
 
 === Renditions examples
@@ -1681,25 +1694,25 @@ A simple rendition example:
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/002_renditions_example.json[]
+include::includes/examples/3.3/002_renditions_example.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 [source,json]
 ----
-include::includes/examples/2.3/002_renditions_example.json[]
+include::includes/examples/2.4/002_renditions_example.json[]
 ----
 
-ninjs 1.7::
+ninjs 1.8::
 +
 [source,json]
 ----
-include::includes/examples/1.7/002_renditions_example.json[]
+include::includes/examples/1.8/002_renditions_example.json[]
 ----
 
 ====
@@ -1709,25 +1722,25 @@ to handle multi-track media such as streaming video:
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/009_rendition_resources_example.json[]
+include::includes/examples/3.3/009_rendition_resources_example.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 [source,json]
 ----
-include::includes/examples/2.3/009_rendition_resources_example.json[]
+include::includes/examples/2.4/009_rendition_resources_example.json[]
 ----
 
-ninjs 1.7::
+ninjs 1.8::
 +
 [source,json]
 ----
-include::includes/examples/1.7/009_rendition_resources_example.json[]
+include::includes/examples/1.8/009_rendition_resources_example.json[]
 ----
 
 ====
@@ -1745,25 +1758,25 @@ This example shows a press release. The body of the story is in the single objec
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/003_associations_example.json[]
+include::includes/examples/3.3/003_associations_example.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 [source,json]
 ----
-include::includes/examples/2.3/003_associations_example.json[]
+include::includes/examples/2.4/003_associations_example.json[]
 ----
 
-ninjs 1.7::
+ninjs 1.8::
 +
 [source,json]
 ----
-include::includes/examples/1.7/003_associations_example.json[]
+include::includes/examples/1.8/003_associations_example.json[]
 ----
 
 ====
@@ -1783,25 +1796,25 @@ Key features:
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/004_simple_text_article.json[]
+include::includes/examples/3.3/004_simple_text_article.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 [source,json]
 ----
-include::includes/examples/2.3/004_simple_text_article.json[]
+include::includes/examples/2.4/004_simple_text_article.json[]
 ----
 
-ninjs 1.7::
+ninjs 1.8::
 +
 [source,json]
 ----
-include::includes/examples/1.7/004_simple_text_article.json[]
+include::includes/examples/1.8/004_simple_text_article.json[]
 ----
 ====
 
@@ -1812,25 +1825,25 @@ include::includes/examples/1.7/004_simple_text_article.json[]
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/005_complex_text_article.json[]
+include::includes/examples/3.3/005_complex_text_article.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 [source,json]
 ----
-include::includes/examples/2.3/005_complex_text_article.json[]
+include::includes/examples/2.4/005_complex_text_article.json[]
 ----
 
-ninjs 1.7::
+ninjs 1.8::
 +
 [source,json]
 ----
-include::includes/examples/1.7/005_complex_text_article.json[]
+include::includes/examples/1.8/005_complex_text_article.json[]
 ----
 ====
 
@@ -1853,25 +1866,25 @@ Key features:
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/006_photo_only.json[]
+include::includes/examples/3.3/006_photo_only.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 [source,json]
 ----
-include::includes/examples/2.3/006_photo_only.json[]
+include::includes/examples/2.4/006_photo_only.json[]
 ----
 
-ninjs 1.7::
+ninjs 1.8::
 +
 [source,json]
 ----
-include::includes/examples/1.7/006_photo_only.json[]
+include::includes/examples/1.8/006_photo_only.json[]
 ----
 
 ====
@@ -1888,25 +1901,25 @@ The ninjs object includes:
 
 [tabs]
 ====
-ninjs 3.2::
+ninjs 3.3::
 +
 [source,json]
 ----
-include::includes/examples/3.2/007_multimedia.json[]
+include::includes/examples/3.3/007_multimedia.json[]
 ----
 
-ninjs 2.3::
+ninjs 2.4::
 +
 [source,json]
 ----
-include::includes/examples/2.3/007_multimedia.json[]
+include::includes/examples/2.4/007_multimedia.json[]
 ----
 
-ninjs 1.7::
+ninjs 1.8::
 +
 [source,json]
 ----
-include::includes/examples/1.7/007_multimedia.json[]
+include::includes/examples/1.8/007_multimedia.json[]
 ----
 
 ====
@@ -1937,12 +1950,12 @@ should) copy and extend the IPTC ninjs schema.
 To do this, do the following:
 
 . make a copy of the schema file
-. change the URL of the "id" property of IPTC's ninjs 3.2 ...
+. change the URL of the "id" property of IPTC's ninjs 3.3 ...
 +
 [source,json]
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_3.2.json#",
+  "id" : "http://www.iptc.org/std/ninjs/ninjs-schema_3.3.json#",
   "type" : "object",
   ...
 +
@@ -2019,7 +2032,7 @@ maintains schemas for each version of the ninjs standard. These schemas can be
 used to validate ninjs documents. 
 
 The latest IPTC ninjs schema is available for download at
-https://iptc.org/std/ninjs/ninjs-schema_3.2.json
+https://iptc.org/std/ninjs/ninjs-schema_3.3.json
 
 === Sample Code
 
@@ -2030,7 +2043,7 @@ https://github.com/iptc/newsinjson[IPTC newsinjson github repository].
 === Online "ninjs generator" tool
 
 The IPTC has created a simple form-based tool that can be used to generate
-sample ninjs documents. It supports ninjs versions 1.7, 2.3 and 3.2, so it
+sample ninjs documents. It supports ninjs versions 1.8, 2.4 and 3.3, so it
 is also a handy way to see the differences between each schema version.
 
 The tool can be accessed at https://iptc.org/std/ninjs/generator/.
@@ -2203,6 +2216,18 @@ https://iptc.org/std/ninjs/ninjs-schema_2.3.json[Version 2.3] and
 https://iptc.org/std/ninjs/ninjs-schema_1.7.json[Version 1.7] of the ninjs schema were approved by the IPTC Standards Committee in October 2025 and made available in November 2025.
 
 All three versions were updated to add a new section within <<renditions>> called <<resources>>. This allows providers to specify components within a media item, such as different audio or subtitle tracks within a video stream or video file.
+
+=== ninjs 3.3, 2.4 and 1.8
+
+The IPTC Standards Committee approved
+https://iptc.org/std/ninjs/ninjs-schema_3.3.json[version 3.3],
+https://iptc.org/std/ninjs/ninjs-schema_2.4.json[version 2.4] and
+https://iptc.org/std/ninjs/ninjs-schema_1.8.json[version 1.8] of the ninjs schema in October 2026.
+
+All three versions add two properties:
+
+* <<contentDigitised,`contentDigitised`>> (`contentdigitised` in 1.8 and 2.4) records when the content became digital. An example is the date of the scan of an old photo. <<contentCreated,`contentCreated`>> still records when the original content was made.
+* <<extensions,`extensions`>> on a rendition carries provider-specific string values, such as a mirror URL or a checksum.
 
 == Additional Resources
 
