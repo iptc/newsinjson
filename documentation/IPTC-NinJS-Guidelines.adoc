@@ -141,8 +141,8 @@ is 3.3), the 2.x branch (where the latest version is 2.4) and the 1.x branch
 
 The 1.x series continues the version of ninjs that started with ninjs 1.0 in
 2013, adding new features in a way that is fully backwards-compatible. The
-latest release in this series is 1.8. It adds the <<contentDigitised>> property
-and the <<extensions>> property of <<renditions>>.
+latest release in this series is 1.8. It adds the <<contentDigitised,`contentDigitised`>> property
+and the <<extensions,`extensions`>> property of <<renditions,`renditions`>>.
 
 The 2.x series fixes some issues that made the 1.x series tricky for some
 developers to work with. The main change is that ninjs 2.x avoids the use of
@@ -521,7 +521,7 @@ One of: +
 [[contentDigitised]]
 |`contentDigitised`
 |`contentdigitised`
-|The date and time when the content of this ninjs object was digitised. For example, the date when an old photo was scanned. This is not the date when the original content was made. Use <<contentCreated>> for that date. (Added in ninjs 3.3, 2.4 and 1.8)
+|The date and time when the content of this ninjs object was digitised. For example, the date when an old photo was scanned. This is not the date when the original content was made. Use <<contentCreated,`contentCreated`>> for that date. (Added in ninjs 3.3, 2.4 and 1.8)
 |date-time
 
 [[embargoed]]
@@ -1469,7 +1469,7 @@ This property is an array of <<Recurrence Rules,Recurrence Rule>> objects.
 |object
 |===
 
-The above date object can be used for <<eventDetails/dates>> and <<plannedCoverage/dates>>.
+The above date object can be used for <<eventDetails/dates,`eventDetails`/`dates`>> and <<plannedCoverage/dates,`plannedCoverage`/`dates`>>.
 
 ==== Truncated DateTime
 
@@ -1527,6 +1527,7 @@ follows the iCalendar specification.
 
 |===
 
+[[renditions]]
 == Renditions
 
 The `renditions` property is a wrapper for different renditions of content of the news object, such as articles, images, videos or PDF documents.
@@ -2215,7 +2216,7 @@ https://iptc.org/std/ninjs/ninjs-schema_3.2.json[Version 3.2],
 https://iptc.org/std/ninjs/ninjs-schema_2.3.json[Version 2.3] and
 https://iptc.org/std/ninjs/ninjs-schema_1.7.json[Version 1.7] of the ninjs schema were approved by the IPTC Standards Committee in October 2025 and made available in November 2025.
 
-All three versions were updated to add a new section within <<renditions>> called <<resources>>. This allows providers to specify components within a media item, such as different audio or subtitle tracks within a video stream or video file.
+All three versions were updated to add a new section within <<renditions,`renditions`>> called <<resources,`resources`>>. This allows providers to specify components within a media item, such as different audio or subtitle tracks within a video stream or video file.
 
 === ninjs 3.3, 2.4 and 1.8
 

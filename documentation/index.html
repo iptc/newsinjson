@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.26">
+<meta name="generator" content="Asciidoctor 2.0.24">
 <meta name="author" content="IPTC News in JSON Working Group">
 <title>NinJS User Guide</title>
 <style>
@@ -587,7 +587,7 @@ body.book.toc2.toc-left #header #toc.toc2 ul.sectlevel2 li a {font-weight: norma
 <li><a href="#dates-structure">4.3. Dates for Events and Planning</a></li>
 </ul>
 </li>
-<li><a href="#_renditions">5. Renditions</a>
+<li><a href="#renditions">5. Renditions</a>
 <ul class="sectlevel2">
 <li><a href="#_properties_of_renditions">5.1. Properties of renditions</a></li>
 <li><a href="#_renditions_examples">5.2. Renditions examples</a></li>
@@ -868,8 +868,8 @@ is 3.3), the 2.x branch (where the latest version is 2.4) and the 1.x branch
 <div class="paragraph">
 <p>The 1.x series continues the version of ninjs that started with ninjs 1.0 in
 2013, adding new features in a way that is fully backwards-compatible. The
-latest release in this series is 1.8. It adds the <a href="#contentDigitised">[contentDigitised]</a> property
-and the <a href="#extensions">[extensions]</a> property of <a href="#renditions">[renditions]</a>.</p>
+latest release in this series is 1.8. It adds the <a href="#contentDigitised"><code>contentDigitised</code></a> property
+and the <a href="#extensions"><code>extensions</code></a> property of <a href="#renditions"><code>renditions</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>The 2.x series fixes some issues that made the 1.x series tricky for some
@@ -1434,7 +1434,7 @@ NOTE: in ninjs 1.x, the allowed values are <code>complete</code> and <code>incom
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentDigitised</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentdigitised</code></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The date and time when the content of this ninjs object was digitised. For example, the date when an old photo was scanned. This is not the date when the original content was made. Use <a href="#contentCreated">[contentCreated]</a> for that date. (Added in ninjs 3.3, 2.4 and 1.8)</p>
+<p>The date and time when the content of this ninjs object was digitised. For example, the date when an old photo was scanned. This is not the date when the original content was made. Use <a href="#contentCreated"><code>contentCreated</code></a> for that date. (Added in ninjs 3.3, 2.4 and 1.8)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p>
 <p class="tableblock"><a id="embargoed"></a></p></td>
@@ -3044,7 +3044,7 @@ This property is an array of <a href="#_recurrence_rules">Recurrence Rule</a> ob
 </tbody>
 </table>
 <div class="paragraph">
-<p>The above date object can be used for <a href="#eventDetails/dates">[eventDetails/dates]</a> and <a href="#plannedCoverage/dates">[plannedCoverage/dates]</a>.</p>
+<p>The above date object can be used for <a href="#eventDetails/dates"><code>eventDetails</code>/<code>dates</code></a> and <a href="#plannedCoverage/dates"><code>plannedCoverage</code>/<code>dates</code></a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_truncated_datetime"><a class="anchor" href="#_truncated_datetime"></a>4.3.1. Truncated DateTime</h4>
@@ -3149,7 +3149,7 @@ follows the iCalendar specification.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_renditions"><a class="anchor" href="#_renditions"></a>5. Renditions</h2>
+<h2 id="renditions"><a class="anchor" href="#renditions"></a>5. Renditions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>renditions</code> property is a wrapper for different renditions of content of the news object, such as articles, images, videos or PDF documents.</p>
@@ -5628,7 +5628,7 @@ Architecture</a>, so they share many properties.</p>
 <a href="https://iptc.org/std/ninjs/ninjs-schema_1.7.json">Version 1.7</a> of the ninjs schema were approved by the IPTC Standards Committee in October 2025 and made available in November 2025.</p>
 </div>
 <div class="paragraph">
-<p>All three versions were updated to add a new section within <a href="#renditions">[renditions]</a> called <a href="#resources">[resources]</a>. This allows providers to specify components within a media item, such as different audio or subtitle tracks within a video stream or video file.</p>
+<p>All three versions were updated to add a new section within <a href="#renditions"><code>renditions</code></a> called <a href="#resources"><code>resources</code></a>. This allows providers to specify components within a media item, such as different audio or subtitle tracks within a video stream or video file.</p>
 </div>
 </div>
 <div class="sect2">
