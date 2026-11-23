@@ -1,9 +1,0 @@
-{
-    "uri": "urn:005_altids.json",
-    "headline_main": "my new article",
-    "altids": {
-        "imySystem": "A12345",
-        "anything": "any id",
-        "there are no restrictions": "on what roles and values we can use"
-    }
-}
