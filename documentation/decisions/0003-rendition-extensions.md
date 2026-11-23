@@ -1,6 +1,6 @@
 # 0003. Add an extensions property to the rendition object
 
-- Status: Proposed
+- Status: Accepted
 - Date: 2026-09-18
 - Pull request: #250
 - Branches: 1.x, 2.x, 3.x
@@ -90,4 +90,7 @@ inside the `patternProperties` rendition object.
 
 ## Committee outcome
 
-Not yet decided.
+- Date: 2026-10-26
+- Decision: Accepted. The committee approved rendition extensions for the
+  1.x, 2.x and 3.x branches.
+- Release: ninjs 1.8, 2.4 and 3.3.
