@@ -104,18 +104,6 @@ Additionaly the same unit test suite can be run via Javascript with the followin
     npm install
     npm test
 
-Dev schema
-----------
-
-"Development" versions of the 1.x schema and 2.x schemas are available
-in the `specification` folder and at 
-http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.1_v2.0.json
-http://www.iptc.org/std-dev/ninjs/ninjs-schema-dev_0.2_v1.4.json
-
-The dev schema is used to test possible additions to future versions of ninjs.
-It is not guaranteed to be maintained and is subject to change at any time.
-Please do not create production projects based on this schema.
-
 ninjs Generator
 ---------------
 
